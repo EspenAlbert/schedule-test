@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     name: tests-output-of-atlas-cloud-env
     env:
-      atlas_cloud_env: ${{ inputs.atlas_cloud_env || github.event.schedule == '0 * 2-31 * 1-6' && 'qa' || 'dev' }}
+      atlas_cloud_env: ${{ inputs.atlas_cloud_env || github.event.schedule == '9,14,19,24,29 * * * *' && 'qa' || 'dev' }}
     steps:
       - run: |
           echo $atlas_cloud_env
