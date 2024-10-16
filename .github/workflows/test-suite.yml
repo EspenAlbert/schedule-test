@@ -8,11 +8,16 @@ on:
         description: 'Atlas cloud environment used, can be either `dev` or `qa`, empty for `dev`'     
         type: string
         required: false
-
+  workflow_call:
+    inputs:
+        atlas_cloud_env:
+          description: 'Atlas cloud environment used, can be either `dev` or `qa`, empty for `dev`'     
+          type: string
+          required: false
   schedule:
     # https://crontab.guru/#0_0_2-31_*_0
-    - cron: "0 * 2-31 * 1-6" # expecting qa
-    - cron: "1 * 2-31 * 1-6" # expecting dev
+    - cron: "10 * 2-31 * 1-6" # expecting qa
+    - cron: "11 * 2-31 * 1-6" # expecting dev
    
 
 jobs:
