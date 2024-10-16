@@ -1,6 +1,5 @@
 name: 'Test Suite'
 
-# Runs acceptance and migrations tests with a set of terraform versions and provider versions (used for migration tests). This worflow is scheduled daily except Saturdays, but can also be run manually.
 on:
   workflow_dispatch:
     inputs:
@@ -16,8 +15,8 @@ on:
           required: false
   schedule:
     # https://crontab.guru/#0_0_2-31_*_0
-    - cron: "10 * 2-31 * 1-6" # expecting qa
-    - cron: "11 * 2-31 * 1-6" # expecting dev
+    - cron: "* * 2-31 * 1-6" # expecting qa
+    - cron: "* * 2-31 * 1-6" # expecting dev
    
 
 jobs:
