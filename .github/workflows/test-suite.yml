@@ -15,8 +15,8 @@ on:
         required: false
   schedule:
     # https://crontab.guru/#0_0_2-31_*_0
-    - cron: "9,14,19,24,29 * * * *" # expecting qa
-    - cron: "5,10,15,20,25 * 2-31 * 1-6" # expecting dev
+    - cron: "9,14,19,24,29 1 * 1 *" # expecting qa
+    - cron: "5,10,15,20,25 1 2-31 1 1-6" # expecting dev
    
 
 jobs:
