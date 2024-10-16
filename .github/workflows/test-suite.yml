@@ -11,8 +11,8 @@ on:
 
   schedule:
     # https://crontab.guru/#0_0_2-31_*_0
-    - cron: "53 10 2-31 * 1-6" # expecting qa
-    - cron: "54 10 2-31 * 1-6" # expecting dev
+    - cron: "53 9 2-31 * 1-6" # expecting qa
+    - cron: "54 9 2-31 * 1-6" # expecting dev
    
 
 jobs:
@@ -20,6 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     name: tests-output-of-atlas-cloud-env
     env:
-      atlas_cloud_env: ${{ inputs.atlas_cloud_env || github.event.schedule == '53 10 2-31 * 1-6' && 'qa' || 'dev' }}
+      atlas_cloud_env: ${{ inputs.atlas_cloud_env || github.event.schedule == '53 9 2-31 * 1-6' && 'qa' || 'dev' }}
     steps:
       - run: echo $atlas_cloud_env
