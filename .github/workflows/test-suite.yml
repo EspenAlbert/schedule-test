@@ -29,6 +29,7 @@ jobs:
         id: set_day
         run: |
           echo "day=$(date +'%d')"
+          echo "workflow=${{ github.workflow}}"
           echo "day=$(date +'%d')" >> $GITHUB_OUTPUT
 
 
