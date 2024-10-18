@@ -31,7 +31,16 @@ jobs:
           echo "day=$(date +'%d')"
           echo "workflow=${{ github.workflow}}"
           echo "day=$(date +'%d')" >> $GITHUB_OUTPUT
-
+  before_tests:
+    runs-on: ubuntu-latest
+    needs: day_of_month
+    if : ${{ needs.day_of_month.outputs.first_day_of_month != '18' }}
+    name: Before Tests
+    env:
+      atlas_cloud_env: ${{ inputs.atlas_cloud_env || github.event.schedule == '9,14,19,24,29 * * * *' && 'qa' || 'dev' }}
+    steps:
+      - run: |
+          echo "cleaning up tests"
 
   tests:
     runs-on: ubuntu-latest
@@ -57,3 +66,9 @@ jobs:
           echo day_of_month=${{ needs.day_of_month.outputs.first_day_of_month }}
           echo $atlas_cloud_env
           echo ${{ github.event.schedule }}
+  tests3:
+    needs: before_tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "running tests"
