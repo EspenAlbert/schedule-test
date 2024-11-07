@@ -17,7 +17,7 @@ jobs:
           with:
             filters: |
                 advanced_cluster:
-                - '@(internal/service/advancedcluster/*.go, internal/service/advancedcluster/*_test.go)'
+                - 'internal/service/advancedcluster/!(*_test).go'
                 advanced_cluster_tpf:
                 - 'internal/service/advancedclustertpf/*.go'
                 - 'internal/service/advancedcluster/*_test.go'
