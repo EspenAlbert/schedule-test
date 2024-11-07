@@ -1,0 +1,40 @@
+name: 'Acceptance Tests Execution'
+on:
+    push:
+      branches:
+        - "*"
+jobs:
+    change-detection:
+        runs-on: ubuntu-latest
+        permissions: {}
+        outputs: # ensure resources are sorted alphabetically
+            advanced_cluster: ${{ steps.filter.outputs.advanced_cluster == 'true' }}
+            advanced_cluster_tpf: ${{ steps.filter.outputs.advanced_cluster_tpf == 'true' }}
+        steps:
+        - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36
+          id: filter
+          with:
+            filters: |
+                advanced_cluster:
+                - 'internal/service/advancedcluster/*.go'
+                advanced_cluster_tpf:
+                - 'internal/service/advancedclustertpf/*.go'
+    advanced_cluster:
+        needs: [ change-detection ]
+        if: ${{ needs.change-detection.outputs.advanced_cluster == 'true'}}
+        runs-on: ubuntu-latest
+        permissions: {}
+        steps:
+        - name: echo
+          run: |
+            echo "RUNNING ADVANCED CLUSTER TESTS"
+    advanced_cluster_tpf:
+        needs: [ change-detection ]
+        if: ${{ needs.change-detection.outputs.advanced_cluster_tpf == 'true'}}
+        runs-on: ubuntu-latest
+        permissions: {}
+        steps:
+        - name: echo
+          run: |
+            echo "RUNNING ADVANCED CLUSTER TESTS"
