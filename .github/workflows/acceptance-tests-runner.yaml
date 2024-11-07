@@ -6,7 +6,6 @@ on:
 jobs:
     change-detection:
         runs-on: ubuntu-latest
-        permissions: {}
         outputs: # ensure resources are sorted alphabetically
             advanced_cluster: ${{ steps.filter.outputs.advanced_cluster == 'true' }}
             advanced_cluster_tpf: ${{ steps.filter.outputs.advanced_cluster_tpf == 'true' }}
