@@ -37,4 +37,4 @@ jobs:
         steps:
         - name: echo
           run: |
-            echo "RUNNING ADVANCED CLUSTER TESTS"
+            echo "RUNNING ADVANCED CLUSTER TPF TESTS"
