@@ -1,0 +1,9 @@
+/* .md-content {
+    flex-grow: 1;
+    min-width: auto; */
+/* /} */
+.md-grid {
+    flex-grow: 1;
+    max-width: 200rem;
+
+}
