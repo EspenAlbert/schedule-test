@@ -30,6 +30,9 @@ nav:
 
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js
+  - javascript/tablefilter-init.js
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -51,3 +54,4 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - tables
