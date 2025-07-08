@@ -1,0 +1,617 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>stream/streamprocessor/TestAccStreamProcessor_withOptions Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#streamstreamprocessortestaccstreamprocessor_withoptions-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              stream/streamprocessor/TestAccStreamProcessor_withOptions Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="streamstreamprocessortestaccstreamprocessor_withoptions-test-details">stream/streamprocessor/TestAccStreamProcessor_withOptions Test Details</h1>
+<h1 id="found-10-testruns-in-dev-qa-from-2025-07-01-to-2025-07-08-from-master-branch-1-unique-tests-passx-8-failx-2">Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL(x 2)</h1>
+<p>Success rate: 80.00%</p>
+<h2 id="timeline">Timeline</h2>
+<h3 id="2025-07-01">2025-07-01</h3>
+<h4 id="pass-8-minutes">PASS 8 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-01T08:50:28.2734651Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-01T08:50:28.2735599Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-6444803593168021600
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-01T08:50:28.2736447Z 2025/07/01 08:33:51 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-01T08:50:28.2737106Z 2025/07/01 08:36:52 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-01T08:50:28.2737736Z 2025/07/01 08:37:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-01T08:50:28.2738366Z 2025/07/01 08:38:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-01T08:50:28.2738977Z 2025/07/01 08:39:03 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-01T08:50:28.2739587Z 2025/07/01 08:39:13 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-01T08:50:28.2740227Z 2025/07/01 08:40:13 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-01T08:50:28.2740850Z 2025/07/01 08:40:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-01T08:50:28.2741472Z 2025/07/01 08:41:24 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-01T08:50:28.2742105Z 2025/07/01 08:41:34 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-01T08:50:28.2836117Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-01T08:50:28.2855107Z --- PASS: TestAccStreamProcessor_withOptions (534.03s)
+</code></pre></div>
+<h4 id="pass-8-minutes_1">PASS 8 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-01T12:50:20.6074188Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-01T12:50:20.6074681Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-3786857106469482011
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-01T12:50:20.6075138Z 2025/07/01 12:35:12 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-01T12:50:20.6075507Z 2025/07/01 12:38:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-07-01T12:50:20.6075849Z 2025/07/01 12:39:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-07-01T12:50:20.6076185Z 2025/07/01 12:39:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-07-01T12:50:20.6076514Z 2025/07/01 12:40:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-07-01T12:50:20.6076842Z 2025/07/01 12:40:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-07-01T12:50:20.6077168Z 2025/07/01 12:41:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-07-01T12:50:20.6077500Z 2025/07/01 12:41:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-07-01T12:50:20.6077985Z 2025/07/01 12:42:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-07-01T12:50:20.6078338Z 2025/07/01 12:42:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-07-01T12:50:20.6126777Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-07-01T12:50:20.6136401Z --- PASS: TestAccStreamProcessor_withOptions (529.88s)
+</code></pre></div>
+<h4 id="pass-8-minutes_2">PASS 8 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-01T17:50:24.3485320Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-01T17:50:24.3486234Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-9135282385753856451
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-01T17:50:24.3487035Z 2025/07/01 17:36:23 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-07-01T17:50:24.3487735Z 2025/07/01 17:39:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-07-01T17:50:24.3488338Z 2025/07/01 17:40:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-07-01T17:50:24.3488941Z 2025/07/01 17:40:34 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-07-01T17:50:24.3489532Z 2025/07/01 17:41:34 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-07-01T17:50:24.3490128Z 2025/07/01 17:41:44 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-07-01T17:50:24.3490721Z 2025/07/01 17:42:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-07-01T17:50:24.3491306Z 2025/07/01 17:42:55 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-07-01T17:50:24.3492090Z 2025/07/01 17:43:55 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-07-01T17:50:24.3492669Z 2025/07/01 17:44:05 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-07-01T17:50:24.3582011Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-07-01T17:50:24.3599134Z --- PASS: TestAccStreamProcessor_withOptions (532.60s)
+</code></pre></div>
+<h3 id="2025-07-02">2025-07-02</h3>
+<h4 id="fail-10-minutes">FAIL 10 minutes</h4>
+<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.921000+00:00-TestAccStreamProcessor_withOptions',confidence=1.0,ts_when='5 days ago')
+API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-02T00:46:31.9210930Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-02T00:46:31.9212414Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-6681606862726743189
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-02T00:46:31.9213254Z 2025/07/02 00:28:55 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-02T00:46:31.9213921Z 2025/07/02 00:31:55 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-02T00:46:31.9214513Z 2025/07/02 00:32:55 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-02T00:46:31.9215092Z 2025/07/02 00:33:05 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-02T00:46:31.9215685Z 2025/07/02 00:34:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-02T00:46:31.9216253Z 2025/07/02 00:34:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-02T00:46:31.9216824Z 2025/07/02 00:35:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-02T00:46:31.9217406Z 2025/07/02 00:35:26 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-02T00:46:31.9218008Z 2025/07/02 00:36:26 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-02T00:46:31.9218609Z 2025/07/02 00:36:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-02T00:46:31.9219220Z 2025/07/02 00:37:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-02T00:46:31.9219856Z 2025/07/02 00:37:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-02T00:46:31.9220550Z 2025/07/02 00:38:47 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-02T00:46:31.9331172Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-02T00:46:31.9489047Z === NAME  TestAccStreamProcessor_withOptions
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-02T00:46:31.9489517Z     resource_test.go:102: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-07-02T00:46:31.9489873Z         
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-07-02T00:46:31.9490136Z         Error: error creating resource
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-07-02T00:46:31.9490398Z         
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-07-02T00:46:31.9490749Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-07-02T00:46:31.9491429Z           on terraform_plugin_test.tf line 60, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2025-07-02T00:46:31.9492348Z           60:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2025-07-02T00:46:31.9492680Z         
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2025-07-02T00:46:31.9493423Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1409803510237471698/processor
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2025-07-02T00:46:31.9494237Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2025-07-02T00:46:31.9494875Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2025-07-02T00:46:31.9495539Z         failed to acquire resources for stream processor validation: internal error
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2025-07-02T00:46:31.9496159Z         while provisioning resource from global resource manager. Reason: Bad
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2025-07-02T00:46:31.9496761Z         Request. Params: [new-processor failed to acquire resources for stream
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2025-07-02T00:46:31.9497407Z         processor validation: internal error while provisioning resource from global
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>2025-07-02T00:46:31.9497896Z         resource manager], BadRequestDetail: 
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>2025-07-02T00:46:31.9519707Z   
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>2025-07-02T00:46:31.9520167Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>2025-07-02T00:46:31.9520598Z         
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>2025-07-02T00:46:31.9520863Z         Error: error deleting resource
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>2025-07-02T00:46:31.9521123Z         
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>2025-07-02T00:46:31.9522080Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1409803510237471698/connections/KafkaConnectionDest
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>2025-07-02T00:46:31.9522962Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>2025-07-02T00:46:31.9523502Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>2025-07-02T00:46:31.9524124Z         name test-acc-tf-1409803510237471698 has active processors, and cannot be
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>2025-07-02T00:46:31.9524734Z         changed. Reason: Forbidden. Params: [test-acc-tf-1409803510237471698],
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>2025-07-02T00:46:31.9525139Z         BadRequestDetail: 
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>2025-07-02T00:46:31.9525376Z         
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>2025-07-02T00:46:31.9525643Z         Error: error deleting resource
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>2025-07-02T00:46:31.9525905Z         
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>2025-07-02T00:46:31.9526769Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1409803510237471698/connections/ClusterConnectionSrc
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>2025-07-02T00:46:31.9527537Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>2025-07-02T00:46:31.9528064Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>2025-07-02T00:46:31.9528680Z         name test-acc-tf-1409803510237471698 has active processors, and cannot be
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>2025-07-02T00:46:31.9529274Z         changed. Reason: Forbidden. Params: [test-acc-tf-1409803510237471698],
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>2025-07-02T00:46:31.9529681Z         BadRequestDetail: 
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>2025-07-02T00:46:31.9529987Z --- FAIL: TestAccStreamProcessor_withOptions (634.10s)
+</code></pre></div></p>
+<h3 id="2025-07-03">2025-07-03</h3>
+<h4 id="pass-10-minutes">PASS 10 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-03T00:46:39.9542511Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-03T00:46:39.9543293Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-6661317215715319465
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-03T00:46:39.9544164Z 2025/07/03 00:29:40 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-07-03T00:46:39.9544614Z 2025/07/03 00:32:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-07-03T00:46:39.9544968Z 2025/07/03 00:33:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-07-03T00:46:39.9545524Z 2025/07/03 00:33:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-07-03T00:46:39.9545867Z 2025/07/03 00:34:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-07-03T00:46:39.9546203Z 2025/07/03 00:35:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-07-03T00:46:39.9546545Z 2025/07/03 00:36:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-07-03T00:46:39.9546886Z 2025/07/03 00:36:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-07-03T00:46:39.9547222Z 2025/07/03 00:37:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-07-03T00:46:39.9547554Z 2025/07/03 00:37:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-07-03T00:46:39.9547898Z 2025/07/03 00:38:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-07-03T00:46:39.9548239Z 2025/07/03 00:38:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-07-03T00:46:39.9793439Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-07-03T00:46:39.9803405Z --- PASS: TestAccStreamProcessor_withOptions (610.24s)
+</code></pre></div>
+<h3 id="2025-07-04">2025-07-04</h3>
+<h4 id="pass-7-minutes">PASS 7 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-04T00:51:07.7055649Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-04T00:51:07.7056643Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-3287679127615181865
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-04T00:51:07.7057531Z 2025/07/04 00:29:02 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-07-04T00:51:07.7058487Z 2025/07/04 00:32:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-07-04T00:51:07.7059159Z 2025/07/04 00:33:02 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-07-04T00:51:07.7059823Z 2025/07/04 00:33:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-07-04T00:51:07.7060487Z 2025/07/04 00:34:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-07-04T00:51:07.7060976Z 2025/07/04 00:34:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-07-04T00:51:07.7061420Z 2025/07/04 00:35:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-07-04T00:51:07.7061927Z 2025/07/04 00:35:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-07-04T00:51:07.7213008Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-07-04T00:51:07.7223547Z --- PASS: TestAccStreamProcessor_withOptions (458.61s)
+</code></pre></div>
+<h3 id="2025-07-05">2025-07-05</h3>
+<h4 id="pass-8-minutes_3">PASS 8 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-05T00:44:07.5871226Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-05T00:44:07.5872106Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-2286538213274754724
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-05T00:44:07.5872899Z 2025/07/05 00:28:13 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-07-05T00:44:07.5873531Z 2025/07/05 00:31:13 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-07-05T00:44:07.5874297Z 2025/07/05 00:32:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-07-05T00:44:07.5874901Z 2025/07/05 00:32:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-07-05T00:44:07.5875485Z 2025/07/05 00:33:24 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-07-05T00:44:07.5876073Z 2025/07/05 00:33:34 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-07-05T00:44:07.5876660Z 2025/07/05 00:34:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-07-05T00:44:07.5877240Z 2025/07/05 00:34:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-07-05T00:44:07.5877821Z 2025/07/05 00:35:45 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-07-05T00:44:07.5878399Z 2025/07/05 00:35:55 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-07-05T00:44:07.6141616Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-07-05T00:44:07.6151338Z --- PASS: TestAccStreamProcessor_withOptions (531.86s)
+</code></pre></div>
+<h3 id="2025-07-06">2025-07-06</h3>
+<h4 id="fail-10-minutes_1">FAIL 10 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-06T00:48:43.0079374Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-06T00:48:43.0079867Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-442322529755478697
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-06T00:48:43.0080316Z 2025/07/06 00:32:14 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-07-06T00:48:43.0080687Z 2025/07/06 00:35:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-07-06T00:48:43.0081045Z 2025/07/06 00:36:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-07-06T00:48:43.0081390Z 2025/07/06 00:36:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-07-06T00:48:43.0081725Z 2025/07/06 00:37:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-07-06T00:48:43.0082059Z 2025/07/06 00:37:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-07-06T00:48:43.0082391Z 2025/07/06 00:38:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-07-06T00:48:43.0082727Z 2025/07/06 00:38:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-07-06T00:48:43.0083053Z 2025/07/06 00:39:45 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-07-06T00:48:43.0083390Z 2025/07/06 00:39:55 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-07-06T00:48:43.0083715Z 2025/07/06 00:40:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-07-06T00:48:43.0084041Z 2025/07/06 00:41:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-07-06T00:48:43.0084366Z 2025/07/06 00:42:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-07-06T00:48:43.0302143Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-07-06T00:48:43.0328580Z === NAME  TestAccStreamProcessor_withOptions
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-07-06T00:48:43.0329047Z     resource_test.go:102: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2025-07-06T00:48:43.0329404Z         
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2025-07-06T00:48:43.0329666Z         Error: error creating resource
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>2025-07-06T00:48:43.0329924Z         
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>2025-07-06T00:48:43.0330269Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>2025-07-06T00:48:43.0330944Z           on terraform_plugin_test.tf line 60, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>2025-07-06T00:48:43.0331570Z           60:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>2025-07-06T00:48:43.0331888Z         
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>2025-07-06T00:48:43.0332610Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40b690ae45e168bd561/streams/test-acc-tf-5437463184009355335/processor
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>2025-07-06T00:48:43.0333404Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>2025-07-06T00:48:43.0334033Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>2025-07-06T00:48:43.0341109Z         failed to acquire resources for stream processor validation: internal error
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>2025-07-06T00:48:43.0341837Z         while provisioning resource from global resource manager. Reason: Bad
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>2025-07-06T00:48:43.0342465Z         Request. Params: [new-processor failed to acquire resources for stream
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>2025-07-06T00:48:43.0343123Z         processor validation: internal error while provisioning resource from global
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>2025-07-06T00:48:43.0343620Z         resource manager], BadRequestDetail: 
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>2025-07-06T00:48:43.0365184Z   
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>2025-07-06T00:48:43.0365668Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>2025-07-06T00:48:43.0366101Z         
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>2025-07-06T00:48:43.0366383Z         Error: error deleting resource
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>2025-07-06T00:48:43.0366647Z         
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>2025-07-06T00:48:43.0367815Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40b690ae45e168bd561/streams/test-acc-tf-5437463184009355335/connections/ClusterConnectionSrc
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>2025-07-06T00:48:43.0368596Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>2025-07-06T00:48:43.0369116Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>2025-07-06T00:48:43.0369724Z         name test-acc-tf-5437463184009355335 has active processors, and cannot be
+<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>2025-07-06T00:48:43.0370316Z         changed. Reason: Forbidden. Params: [test-acc-tf-5437463184009355335],
+<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>2025-07-06T00:48:43.0370729Z         BadRequestDetail: 
+<a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>2025-07-06T00:48:43.0370964Z         
+<a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>2025-07-06T00:48:43.0371368Z         Error: error deleting resource
+<a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>2025-07-06T00:48:43.0371639Z         
+<a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>2025-07-06T00:48:43.0372482Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40b690ae45e168bd561/streams/test-acc-tf-5437463184009355335/connections/KafkaConnectionDest
+<a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>2025-07-06T00:48:43.0373224Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>2025-07-06T00:48:43.0373738Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a>2025-07-06T00:48:43.0374347Z         name test-acc-tf-5437463184009355335 has active processors, and cannot be
+<a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a>2025-07-06T00:48:43.0374931Z         changed. Reason: Forbidden. Params: [test-acc-tf-5437463184009355335],
+<a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a>2025-07-06T00:48:43.0375328Z         BadRequestDetail: 
+<a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a>2025-07-06T00:48:43.0375628Z --- FAIL: TestAccStreamProcessor_withOptions (634.95s)
+</code></pre></div>
+<h3 id="2025-07-07">2025-07-07</h3>
+<h4 id="pass-10-minutes_1">PASS 10 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-07-07T00:48:05.7812547Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-07-07T00:48:05.7813035Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-391132233592282694
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-07-07T00:48:05.7813491Z 2025/07/07 00:31:41 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-07-07T00:48:05.7813865Z 2025/07/07 00:34:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-07-07T00:48:05.7814209Z 2025/07/07 00:35:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-07-07T00:48:05.7814547Z 2025/07/07 00:35:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-07-07T00:48:05.7814877Z 2025/07/07 00:36:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-07-07T00:48:05.7815212Z 2025/07/07 00:37:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-07-07T00:48:05.7815551Z 2025/07/07 00:38:02 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-07-07T00:48:05.7816051Z 2025/07/07 00:38:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-07-07T00:48:05.7816387Z 2025/07/07 00:39:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-07-07T00:48:05.7816713Z 2025/07/07 00:39:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-07-07T00:48:05.7817037Z 2025/07/07 00:40:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-07-07T00:48:05.7817369Z 2025/07/07 00:40:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-07-07T00:48:05.8094376Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-07-07T00:48:05.8104810Z --- PASS: TestAccStreamProcessor_withOptions (602.29s)
+</code></pre></div>
+<h3 id="2025-07-08">2025-07-08</h3>
+<h4 id="pass-8-minutes_4">PASS 8 minutes</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-07-08T00:45:56.1167327Z === RUN   TestAccStreamProcessor_withOptions
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-07-08T00:45:56.1168246Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-7139045443622962844
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-07-08T00:45:56.1169056Z 2025/07/08 00:29:30 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-07-08T00:45:56.1169703Z 2025/07/08 00:32:30 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-07-08T00:45:56.1170343Z 2025/07/08 00:33:31 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-07-08T00:45:56.1170957Z 2025/07/08 00:33:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-07-08T00:45:56.1171559Z 2025/07/08 00:34:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-07-08T00:45:56.1172161Z 2025/07/08 00:34:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-07-08T00:45:56.1172746Z 2025/07/08 00:35:51 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-07-08T00:45:56.1173343Z 2025/07/08 00:36:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-07-08T00:45:56.1173920Z 2025/07/08 00:37:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-07-08T00:45:56.1174513Z 2025/07/08 00:37:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-07-08T00:45:56.1509420Z === CONT  TestAccStreamProcessor_withOptions
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-07-08T00:45:56.1526938Z --- PASS: TestAccStreamProcessor_withOptions (529.67s)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
