@@ -1,30 +1,14 @@
 # stream/streamprocessor/TestAccStreamProcessor_JSONWhiteSpaceFormat Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 9) FAIL
-Success rate: 90.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL
+Success rate: 88.89%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 7 seconds
-```
-2025-07-01T08:50:28.2733373Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-01T08:50:28.2836672Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-01T08:50:28.2854397Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (7.42s)
-```
 #### PASS 5 seconds
-```
-2025-07-01T12:50:20.6073507Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-01T12:50:20.6127103Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-01T12:50:20.6136015Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (5.25s)
-```
 #### PASS 6 seconds
-```
-2025-07-01T17:50:24.3484112Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-01T17:50:24.3583739Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-01T17:50:24.3598442Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (6.50s)
-```
 ### 2025-07-02
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestAccStreamProcessor_JSONWhiteSpaceFormat',confidence=1.0,ts_when='5 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestAccStreamProcessor_JSONWhiteSpaceFormat',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-02T00:46:31.9209678Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
@@ -62,45 +46,13 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-03
 #### PASS 8 seconds
-```
-2025-07-03T00:46:39.9541810Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-03T00:46:39.9794689Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-03T00:46:39.9796950Z   diagnostic_detail=
-2025-07-03T00:46:39.9798954Z    diagnostic_severity=ERROR diagnostic_summary="Invalid JSON String Value" diagnostic_attribute="AttributeName(\"pipeline\")"
-2025-07-03T00:46:39.9802671Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (8.91s)
-```
 ### 2025-07-04
 #### PASS 5 seconds
-```
-2025-07-04T00:51:07.7054252Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-04T00:51:07.7213358Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-04T00:51:07.7223141Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (5.45s)
-```
 ### 2025-07-05
 #### PASS 7 seconds
-```
-2025-07-05T00:44:07.5870016Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-05T00:44:07.6142554Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-05T00:44:07.6150934Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (7.30s)
-```
 ### 2025-07-06
 #### PASS 6 seconds
-```
-2025-07-06T00:48:43.0078677Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-06T00:48:43.0302878Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-06T00:48:43.0311492Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (6.32s)
-```
 ### 2025-07-07
 #### PASS 5 seconds
-```
-2025-07-07T00:48:05.7811857Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-07T00:48:05.8095323Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-07T00:48:05.8103763Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (5.67s)
-```
 ### 2025-07-08
 #### PASS 5 seconds
-```
-2025-07-08T00:45:56.1166120Z === RUN   TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-08T00:45:56.1511050Z === CONT  TestAccStreamProcessor_JSONWhiteSpaceFormat
-2025-07-08T00:45:56.1526262Z --- PASS: TestAccStreamProcessor_JSONWhiteSpaceFormat (5.87s)
-```

@@ -1,43 +1,17 @@
 # config/projectapikey/TestAccProjectAPIKey_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 10 seconds
-```
-2025-07-01T08:35:29.4684853Z === RUN   TestAccProjectAPIKey_basic
-2025-07-01T08:35:29.4699041Z === CONT  TestAccProjectAPIKey_basic
-2025-07-01T08:35:29.4714327Z --- PASS: TestAccProjectAPIKey_basic (10.33s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 9 seconds
-```
-2025-07-02T00:30:40.8685084Z === RUN   TestAccProjectAPIKey_basic
-2025-07-02T00:30:40.8693173Z === CONT  TestAccProjectAPIKey_basic
-2025-07-02T00:30:40.8701832Z --- PASS: TestAccProjectAPIKey_basic (9.28s)
-```
 ### 2025-07-03
 #### PASS 15 seconds
-```
-2025-07-03T00:31:32.1136799Z === RUN   TestAccProjectAPIKey_basic
-2025-07-03T00:31:32.1152285Z === CONT  TestAccProjectAPIKey_basic
-2025-07-03T00:31:32.1161544Z --- PASS: TestAccProjectAPIKey_basic (15.34s)
-```
 ### 2025-07-04
 #### PASS 9 seconds
-```
-2025-07-04T00:30:47.2509559Z === RUN   TestAccProjectAPIKey_basic
-2025-07-04T00:30:47.2522285Z === CONT  TestAccProjectAPIKey_basic
-2025-07-04T00:30:47.2536251Z --- PASS: TestAccProjectAPIKey_basic (9.82s)
-```
 ### 2025-07-05
 #### PASS 18 seconds
-```
-2025-07-05T00:30:14.7936485Z === RUN   TestAccProjectAPIKey_basic
-2025-07-05T00:30:14.7947843Z === CONT  TestAccProjectAPIKey_basic
-2025-07-05T00:30:14.7956567Z --- PASS: TestAccProjectAPIKey_basic (18.21s)
-```
 ### 2025-07-06
 #### FAIL 2 seconds
 ```
@@ -61,15 +35,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 8 seconds
-```
-2025-07-07T00:33:18.3673988Z === RUN   TestAccProjectAPIKey_basic
-2025-07-07T00:33:18.3692797Z === CONT  TestAccProjectAPIKey_basic
-2025-07-07T00:33:18.3725797Z --- PASS: TestAccProjectAPIKey_basic (8.84s)
-```
 ### 2025-07-08
 #### PASS 18 seconds
-```
-2025-07-08T00:31:37.4381496Z === RUN   TestAccProjectAPIKey_basic
-2025-07-08T00:31:37.4396145Z === CONT  TestAccProjectAPIKey_basic
-2025-07-08T00:31:37.4411785Z --- PASS: TestAccProjectAPIKey_basic (18.16s)
-```

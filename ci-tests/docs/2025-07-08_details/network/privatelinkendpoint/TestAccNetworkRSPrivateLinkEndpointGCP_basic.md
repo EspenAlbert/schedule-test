@@ -1,32 +1,16 @@
 # network/privatelinkendpoint/TestAccNetworkRSPrivateLinkEndpointGCP_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 4) FAIL(x 4)
-Success rate: 50.00%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, FAIL(x 4) PASS(x 3)
+Success rate: 42.86%
 
 ## Timeline
-### 2025-07-01
-#### PASS 9 minutes
-```
-2025-07-01T08:45:58.4607274Z === RUN   TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-01T08:45:58.4608418Z === CONT  TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-01T08:45:58.4611214Z --- PASS: TestAccNetworkRSPrivateLinkEndpointGCP_basic (567.89s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 8 minutes
-```
-2025-07-02T00:41:12.3606878Z === RUN   TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-02T00:41:12.3609594Z === CONT  TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-02T00:41:12.3613479Z --- PASS: TestAccNetworkRSPrivateLinkEndpointGCP_basic (535.93s)
-```
 ### 2025-07-03
 #### PASS 10 minutes
-```
-2025-07-03T00:41:46.0967932Z === RUN   TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-03T00:41:46.0969523Z === CONT  TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-03T00:41:46.0971754Z --- PASS: TestAccNetworkRSPrivateLinkEndpointGCP_basic (625.90s)
-```
 ### 2025-07-04
 #### FAIL an hour
-GoTestErrorClassification(error_class='timeout',author='human',run_id='2025-07-04T01:28:53.168000+00:00-TestAccNetworkRSPrivateLinkEndpointGCP_basic',confidence=1.0,ts_when='3 days ago')
+GoTestErrorClassification(error_class='timeout',author='human',run_id='2025-07-04T01:28:53.168000+00:00-TestAccNetworkRSPrivateLinkEndpointGCP_basic',confidence=1.0,ts_when='4 days ago')
 
 ```
 2025-07-04T01:28:53.1683953Z === RUN   TestAccNetworkRSPrivateLinkEndpointGCP_basic
@@ -135,8 +119,3 @@ GoTestErrorClassification(error_class='timeout',author='human',run_id='2025-07-0
 ```
 ### 2025-07-08
 #### PASS 8 minutes
-```
-2025-07-08T00:41:50.6698040Z === RUN   TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-08T00:41:50.6700010Z === CONT  TestAccNetworkRSPrivateLinkEndpointGCP_basic
-2025-07-08T00:41:50.6701835Z --- PASS: TestAccNetworkRSPrivateLinkEndpointGCP_basic (530.39s)
-```

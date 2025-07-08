@@ -1,38 +1,13 @@
 # stream/streamprocessor/TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL(x 3)
-Success rate: 70.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL(x 3)
+Success rate: 66.67%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 14 seconds
-```
-2025-07-01T08:50:28.2783708Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-01T08:50:28.2785271Z     resource_test.go:209: Testing: Verifies that a processor in STARTED state can be updated while remaining in a derived STARTED state from empty state
-2025-07-01T08:50:28.2793273Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-01T08:50:28.2796248Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState (14.03s)
-```
 #### PASS 11 seconds
-```
-2025-07-01T12:50:20.6099609Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-01T12:50:20.6100402Z     resource_test.go:209: Testing: Verifies that a processor in STARTED state can be updated while remaining in a derived STARTED state from empty state
-2025-07-01T12:50:20.6104480Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-01T12:50:20.6106625Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState (11.54s)
-```
 #### PASS 13 seconds
-```
-2025-07-01T17:50:24.3532024Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-01T17:50:24.3533558Z     resource_test.go:209: Testing: Verifies that a processor in STARTED state can be updated while remaining in a derived STARTED state from empty state
-2025-07-01T17:50:24.3541163Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-01T17:50:24.3545288Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState (13.66s)
-```
 ### 2025-07-02
 #### PASS 11 seconds
-```
-2025-07-02T00:46:31.9257406Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-02T00:46:31.9258239Z     resource_test.go:209: Testing: Verifies that a processor in STARTED state can be updated while remaining in a derived STARTED state from empty state
-2025-07-02T00:46:31.9262790Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-02T00:46:31.9265002Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState (11.56s)
-```
 ### 2025-07-03
 #### FAIL 31 seconds
 GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-03T00:46:39.957000+00:00-TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState',confidence=1.0,ts_when='5 days ago')
@@ -73,22 +48,8 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-04
 #### PASS 11 seconds
-```
-2025-07-04T00:51:07.7087051Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-04T00:51:07.7087894Z     resource_test.go:209: Testing: Verifies that a processor in STARTED state can be updated while remaining in a derived STARTED state from empty state
-2025-07-04T00:51:07.7092250Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-04T00:51:07.7110622Z   
-2025-07-04T00:51:07.7140937Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState (11.77s)
-```
 ### 2025-07-05
 #### PASS 14 seconds
-```
-2025-07-05T00:44:07.5917426Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-05T00:44:07.5918927Z     resource_test.go:209: Testing: Verifies that a processor in STARTED state can be updated while remaining in a derived STARTED state from empty state
-2025-07-05T00:44:07.5926413Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-05T00:44:07.5955100Z    test_terraform_path=/home/runner/work/_temp/503c00e9-2f1d-4f06-8735-86b25f02f37b/terraform test_name=TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState test_working_directory=/tmp/plugintest611322819 test_step_number=1
-2025-07-05T00:44:07.6008295Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState (14.08s)
-```
 ### 2025-07-06
 #### FAIL 30 seconds
 ```
@@ -151,10 +112,3 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-08
 #### PASS 11 seconds
-```
-2025-07-08T00:45:56.1213543Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-08T00:45:56.1215184Z     resource_test.go:209: Testing: Verifies that a processor in STARTED state can be updated while remaining in a derived STARTED state from empty state
-2025-07-08T00:45:56.1222478Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
-2025-07-08T00:45:56.1251836Z    test_name=TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState test_terraform_path=/home/runner/work/_temp/1fd0e57d-d705-4557-8dc9-2e57738caee5/terraform test_working_directory=/tmp/plugintest2853600670 test_step_number=1
-2025-07-08T00:45:56.1309667Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState (11.91s)
-```

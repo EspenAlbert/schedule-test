@@ -1,63 +1,14 @@
 # stream/streamprocessor/TestAccStreamProcessor_withOptions Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL(x 2)
-Success rate: 80.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL(x 2)
+Success rate: 77.78%
 
 ## Timeline
 ### 2025-07-01
 #### PASS 8 minutes
-```
-2025-07-01T08:50:28.2734651Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-01T08:50:28.2735599Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-6444803593168021600
-2025-07-01T08:50:28.2736447Z 2025/07/01 08:33:51 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-01T08:50:28.2737106Z 2025/07/01 08:36:52 [TRACE] Waiting 1m0s before next try
-2025-07-01T08:50:28.2737736Z 2025/07/01 08:37:52 [TRACE] Waiting 10s before next try
-2025-07-01T08:50:28.2738366Z 2025/07/01 08:38:02 [TRACE] Waiting 1m0s before next try
-2025-07-01T08:50:28.2738977Z 2025/07/01 08:39:03 [TRACE] Waiting 10s before next try
-2025-07-01T08:50:28.2739587Z 2025/07/01 08:39:13 [TRACE] Waiting 1m0s before next try
-2025-07-01T08:50:28.2740227Z 2025/07/01 08:40:13 [TRACE] Waiting 10s before next try
-2025-07-01T08:50:28.2740850Z 2025/07/01 08:40:23 [TRACE] Waiting 1m0s before next try
-2025-07-01T08:50:28.2741472Z 2025/07/01 08:41:24 [TRACE] Waiting 10s before next try
-2025-07-01T08:50:28.2742105Z 2025/07/01 08:41:34 [TRACE] Waiting 1m0s before next try
-2025-07-01T08:50:28.2836117Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-01T08:50:28.2855107Z --- PASS: TestAccStreamProcessor_withOptions (534.03s)
-```
 #### PASS 8 minutes
-```
-2025-07-01T12:50:20.6074188Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-01T12:50:20.6074681Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-3786857106469482011
-2025-07-01T12:50:20.6075138Z 2025/07/01 12:35:12 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-01T12:50:20.6075507Z 2025/07/01 12:38:12 [TRACE] Waiting 1m0s before next try
-2025-07-01T12:50:20.6075849Z 2025/07/01 12:39:12 [TRACE] Waiting 10s before next try
-2025-07-01T12:50:20.6076185Z 2025/07/01 12:39:22 [TRACE] Waiting 1m0s before next try
-2025-07-01T12:50:20.6076514Z 2025/07/01 12:40:23 [TRACE] Waiting 10s before next try
-2025-07-01T12:50:20.6076842Z 2025/07/01 12:40:33 [TRACE] Waiting 1m0s before next try
-2025-07-01T12:50:20.6077168Z 2025/07/01 12:41:33 [TRACE] Waiting 10s before next try
-2025-07-01T12:50:20.6077500Z 2025/07/01 12:41:43 [TRACE] Waiting 1m0s before next try
-2025-07-01T12:50:20.6077985Z 2025/07/01 12:42:43 [TRACE] Waiting 10s before next try
-2025-07-01T12:50:20.6078338Z 2025/07/01 12:42:53 [TRACE] Waiting 1m0s before next try
-2025-07-01T12:50:20.6126777Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-01T12:50:20.6136401Z --- PASS: TestAccStreamProcessor_withOptions (529.88s)
-```
-#### PASS 8 minutes
-```
-2025-07-01T17:50:24.3485320Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-01T17:50:24.3486234Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-9135282385753856451
-2025-07-01T17:50:24.3487035Z 2025/07/01 17:36:23 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-01T17:50:24.3487735Z 2025/07/01 17:39:23 [TRACE] Waiting 1m0s before next try
-2025-07-01T17:50:24.3488338Z 2025/07/01 17:40:23 [TRACE] Waiting 10s before next try
-2025-07-01T17:50:24.3488941Z 2025/07/01 17:40:34 [TRACE] Waiting 1m0s before next try
-2025-07-01T17:50:24.3489532Z 2025/07/01 17:41:34 [TRACE] Waiting 10s before next try
-2025-07-01T17:50:24.3490128Z 2025/07/01 17:41:44 [TRACE] Waiting 1m0s before next try
-2025-07-01T17:50:24.3490721Z 2025/07/01 17:42:44 [TRACE] Waiting 10s before next try
-2025-07-01T17:50:24.3491306Z 2025/07/01 17:42:55 [TRACE] Waiting 1m0s before next try
-2025-07-01T17:50:24.3492090Z 2025/07/01 17:43:55 [TRACE] Waiting 10s before next try
-2025-07-01T17:50:24.3492669Z 2025/07/01 17:44:05 [TRACE] Waiting 1m0s before next try
-2025-07-01T17:50:24.3582011Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-01T17:50:24.3599134Z --- PASS: TestAccStreamProcessor_withOptions (532.60s)
-```
 ### 2025-07-02
 #### FAIL 10 minutes
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.921000+00:00-TestAccStreamProcessor_withOptions',confidence=1.0,ts_when='5 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.921000+00:00-TestAccStreamProcessor_withOptions',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-02T00:46:31.9210930Z === RUN   TestAccStreamProcessor_withOptions
@@ -117,58 +68,10 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-03
 #### PASS 10 minutes
-```
-2025-07-03T00:46:39.9542511Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-03T00:46:39.9543293Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-6661317215715319465
-2025-07-03T00:46:39.9544164Z 2025/07/03 00:29:40 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-03T00:46:39.9544614Z 2025/07/03 00:32:40 [TRACE] Waiting 1m0s before next try
-2025-07-03T00:46:39.9544968Z 2025/07/03 00:33:40 [TRACE] Waiting 10s before next try
-2025-07-03T00:46:39.9545524Z 2025/07/03 00:33:50 [TRACE] Waiting 1m0s before next try
-2025-07-03T00:46:39.9545867Z 2025/07/03 00:34:50 [TRACE] Waiting 10s before next try
-2025-07-03T00:46:39.9546203Z 2025/07/03 00:35:01 [TRACE] Waiting 1m0s before next try
-2025-07-03T00:46:39.9546545Z 2025/07/03 00:36:01 [TRACE] Waiting 10s before next try
-2025-07-03T00:46:39.9546886Z 2025/07/03 00:36:11 [TRACE] Waiting 1m0s before next try
-2025-07-03T00:46:39.9547222Z 2025/07/03 00:37:11 [TRACE] Waiting 10s before next try
-2025-07-03T00:46:39.9547554Z 2025/07/03 00:37:21 [TRACE] Waiting 1m0s before next try
-2025-07-03T00:46:39.9547898Z 2025/07/03 00:38:21 [TRACE] Waiting 10s before next try
-2025-07-03T00:46:39.9548239Z 2025/07/03 00:38:31 [TRACE] Waiting 1m0s before next try
-2025-07-03T00:46:39.9793439Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-03T00:46:39.9803405Z --- PASS: TestAccStreamProcessor_withOptions (610.24s)
-```
 ### 2025-07-04
 #### PASS 7 minutes
-```
-2025-07-04T00:51:07.7055649Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-04T00:51:07.7056643Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-3287679127615181865
-2025-07-04T00:51:07.7057531Z 2025/07/04 00:29:02 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-04T00:51:07.7058487Z 2025/07/04 00:32:02 [TRACE] Waiting 1m0s before next try
-2025-07-04T00:51:07.7059159Z 2025/07/04 00:33:02 [TRACE] Waiting 10s before next try
-2025-07-04T00:51:07.7059823Z 2025/07/04 00:33:12 [TRACE] Waiting 1m0s before next try
-2025-07-04T00:51:07.7060487Z 2025/07/04 00:34:12 [TRACE] Waiting 10s before next try
-2025-07-04T00:51:07.7060976Z 2025/07/04 00:34:22 [TRACE] Waiting 1m0s before next try
-2025-07-04T00:51:07.7061420Z 2025/07/04 00:35:22 [TRACE] Waiting 10s before next try
-2025-07-04T00:51:07.7061927Z 2025/07/04 00:35:32 [TRACE] Waiting 1m0s before next try
-2025-07-04T00:51:07.7213008Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-04T00:51:07.7223547Z --- PASS: TestAccStreamProcessor_withOptions (458.61s)
-```
 ### 2025-07-05
 #### PASS 8 minutes
-```
-2025-07-05T00:44:07.5871226Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-05T00:44:07.5872106Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-2286538213274754724
-2025-07-05T00:44:07.5872899Z 2025/07/05 00:28:13 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-05T00:44:07.5873531Z 2025/07/05 00:31:13 [TRACE] Waiting 1m0s before next try
-2025-07-05T00:44:07.5874297Z 2025/07/05 00:32:14 [TRACE] Waiting 10s before next try
-2025-07-05T00:44:07.5874901Z 2025/07/05 00:32:24 [TRACE] Waiting 1m0s before next try
-2025-07-05T00:44:07.5875485Z 2025/07/05 00:33:24 [TRACE] Waiting 10s before next try
-2025-07-05T00:44:07.5876073Z 2025/07/05 00:33:34 [TRACE] Waiting 1m0s before next try
-2025-07-05T00:44:07.5876660Z 2025/07/05 00:34:35 [TRACE] Waiting 10s before next try
-2025-07-05T00:44:07.5877240Z 2025/07/05 00:34:45 [TRACE] Waiting 1m0s before next try
-2025-07-05T00:44:07.5877821Z 2025/07/05 00:35:45 [TRACE] Waiting 10s before next try
-2025-07-05T00:44:07.5878399Z 2025/07/05 00:35:55 [TRACE] Waiting 1m0s before next try
-2025-07-05T00:44:07.6141616Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-05T00:44:07.6151338Z --- PASS: TestAccStreamProcessor_withOptions (531.86s)
-```
 ### 2025-07-06
 #### FAIL 10 minutes
 ```
@@ -229,39 +132,5 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-07
 #### PASS 10 minutes
-```
-2025-07-07T00:48:05.7812547Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-07T00:48:05.7813035Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-391132233592282694
-2025-07-07T00:48:05.7813491Z 2025/07/07 00:31:41 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-07T00:48:05.7813865Z 2025/07/07 00:34:41 [TRACE] Waiting 1m0s before next try
-2025-07-07T00:48:05.7814209Z 2025/07/07 00:35:41 [TRACE] Waiting 10s before next try
-2025-07-07T00:48:05.7814547Z 2025/07/07 00:35:51 [TRACE] Waiting 1m0s before next try
-2025-07-07T00:48:05.7814877Z 2025/07/07 00:36:52 [TRACE] Waiting 10s before next try
-2025-07-07T00:48:05.7815212Z 2025/07/07 00:37:02 [TRACE] Waiting 1m0s before next try
-2025-07-07T00:48:05.7815551Z 2025/07/07 00:38:02 [TRACE] Waiting 10s before next try
-2025-07-07T00:48:05.7816051Z 2025/07/07 00:38:12 [TRACE] Waiting 1m0s before next try
-2025-07-07T00:48:05.7816387Z 2025/07/07 00:39:12 [TRACE] Waiting 10s before next try
-2025-07-07T00:48:05.7816713Z 2025/07/07 00:39:22 [TRACE] Waiting 1m0s before next try
-2025-07-07T00:48:05.7817037Z 2025/07/07 00:40:22 [TRACE] Waiting 10s before next try
-2025-07-07T00:48:05.7817369Z 2025/07/07 00:40:33 [TRACE] Waiting 1m0s before next try
-2025-07-07T00:48:05.8094376Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-07T00:48:05.8104810Z --- PASS: TestAccStreamProcessor_withOptions (602.29s)
-```
 ### 2025-07-08
 #### PASS 8 minutes
-```
-2025-07-08T00:45:56.1167327Z === RUN   TestAccStreamProcessor_withOptions
-2025-07-08T00:45:56.1168246Z     resource_test.go:95: Creating execution cluster: test-acc-tf-c-7139045443622962844
-2025-07-08T00:45:56.1169056Z 2025/07/08 00:29:30 [DEBUG] Waiting for state to become: [IDLE]
-2025-07-08T00:45:56.1169703Z 2025/07/08 00:32:30 [TRACE] Waiting 1m0s before next try
-2025-07-08T00:45:56.1170343Z 2025/07/08 00:33:31 [TRACE] Waiting 10s before next try
-2025-07-08T00:45:56.1170957Z 2025/07/08 00:33:41 [TRACE] Waiting 1m0s before next try
-2025-07-08T00:45:56.1171559Z 2025/07/08 00:34:41 [TRACE] Waiting 10s before next try
-2025-07-08T00:45:56.1172161Z 2025/07/08 00:34:51 [TRACE] Waiting 1m0s before next try
-2025-07-08T00:45:56.1172746Z 2025/07/08 00:35:51 [TRACE] Waiting 10s before next try
-2025-07-08T00:45:56.1173343Z 2025/07/08 00:36:01 [TRACE] Waiting 1m0s before next try
-2025-07-08T00:45:56.1173920Z 2025/07/08 00:37:01 [TRACE] Waiting 10s before next try
-2025-07-08T00:45:56.1174513Z 2025/07/08 00:37:11 [TRACE] Waiting 1m0s before next try
-2025-07-08T00:45:56.1509420Z === CONT  TestAccStreamProcessor_withOptions
-2025-07-08T00:45:56.1526938Z --- PASS: TestAccStreamProcessor_withOptions (529.67s)
-```

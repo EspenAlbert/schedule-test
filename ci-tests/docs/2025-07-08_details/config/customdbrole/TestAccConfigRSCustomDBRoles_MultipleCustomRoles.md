@@ -1,43 +1,17 @@
 # config/customdbrole/TestAccConfigRSCustomDBRoles_MultipleCustomRoles Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 28 seconds
-```
-2025-07-01T08:35:29.4568972Z === RUN   TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-01T08:35:29.4570803Z === CONT  TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-01T08:35:29.4572931Z --- PASS: TestAccConfigRSCustomDBRoles_MultipleCustomRoles (28.30s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 28 seconds
-```
-2025-07-02T00:30:40.8595735Z === RUN   TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-02T00:30:40.8597574Z === CONT  TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-02T00:30:40.8599687Z --- PASS: TestAccConfigRSCustomDBRoles_MultipleCustomRoles (28.28s)
-```
 ### 2025-07-03
 #### PASS 32 seconds
-```
-2025-07-03T00:31:22.4203578Z === RUN   TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-03T00:31:22.4206874Z === CONT  TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-03T00:31:22.4212151Z --- PASS: TestAccConfigRSCustomDBRoles_MultipleCustomRoles (32.75s)
-```
 ### 2025-07-04
 #### PASS 28 seconds
-```
-2025-07-04T00:30:47.2381415Z === RUN   TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-04T00:30:47.2384473Z === CONT  TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-04T00:30:47.2386131Z --- PASS: TestAccConfigRSCustomDBRoles_MultipleCustomRoles (28.43s)
-```
 ### 2025-07-05
 #### PASS 34 seconds
-```
-2025-07-05T00:29:58.2600987Z === RUN   TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-05T00:29:58.2602939Z === CONT  TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-05T00:29:58.2605071Z --- PASS: TestAccConfigRSCustomDBRoles_MultipleCustomRoles (34.24s)
-```
 ### 2025-07-06
 #### FAIL 55 seconds
 ```
@@ -63,15 +37,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 28 seconds
-```
-2025-07-07T00:33:18.3424084Z === RUN   TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-07T00:33:18.3427303Z === CONT  TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-07T00:33:18.3431110Z --- PASS: TestAccConfigRSCustomDBRoles_MultipleCustomRoles (28.07s)
-```
 ### 2025-07-08
 #### PASS 35 seconds
-```
-2025-07-08T00:31:20.9916806Z === RUN   TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-08T00:31:20.9918766Z === CONT  TestAccConfigRSCustomDBRoles_MultipleCustomRoles
-2025-07-08T00:31:20.9921639Z --- PASS: TestAccConfigRSCustomDBRoles_MultipleCustomRoles (35.31s)
-```

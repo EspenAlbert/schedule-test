@@ -1,33 +1,14 @@
 # stream/streamprocessor/TestMigStreamProcessor_basic Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL(x 2)
-Success rate: 80.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL(x 2)
+Success rate: 77.78%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 16 seconds
-```
-2025-07-01T08:50:28.2729731Z === RUN   TestMigStreamProcessor_basic
-2025-07-01T08:50:28.2730745Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-6455120340503680040
-2025-07-01T08:50:28.2835605Z === CONT  TestMigStreamProcessor_basic
-2025-07-01T08:50:28.2855756Z --- PASS: TestMigStreamProcessor_basic (16.76s)
-```
 #### PASS 10 seconds
-```
-2025-07-01T12:50:20.6071645Z === RUN   TestMigStreamProcessor_basic
-2025-07-01T12:50:20.6072186Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-5239256197598282775
-2025-07-01T12:50:20.6126476Z === CONT  TestMigStreamProcessor_basic
-2025-07-01T12:50:20.6136745Z --- PASS: TestMigStreamProcessor_basic (10.09s)
-```
 #### PASS 13 seconds
-```
-2025-07-01T17:50:24.3480616Z === RUN   TestMigStreamProcessor_basic
-2025-07-01T17:50:24.3481596Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-9019735662383270141
-2025-07-01T17:50:24.3581332Z === CONT  TestMigStreamProcessor_basic
-2025-07-01T17:50:24.3600317Z --- PASS: TestMigStreamProcessor_basic (13.78s)
-```
 ### 2025-07-02
 #### FAIL 34 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestMigStreamProcessor_basic',confidence=1.0,ts_when='5 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestMigStreamProcessor_basic',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-02T00:46:31.9206236Z === RUN   TestMigStreamProcessor_basic
@@ -65,28 +46,10 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-03
 #### PASS 12 seconds
-```
-2025-07-03T00:46:39.9539869Z === RUN   TestMigStreamProcessor_basic
-2025-07-03T00:46:39.9540421Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-8583842408881811517
-2025-07-03T00:46:39.9793138Z === CONT  TestMigStreamProcessor_basic
-2025-07-03T00:46:39.9803047Z --- PASS: TestMigStreamProcessor_basic (12.18s)
-```
 ### 2025-07-04
 #### PASS 24 seconds
-```
-2025-07-04T00:51:07.7049665Z === RUN   TestMigStreamProcessor_basic
-2025-07-04T00:51:07.7051075Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-8198124604156082223
-2025-07-04T00:51:07.7212686Z === CONT  TestMigStreamProcessor_basic
-2025-07-04T00:51:07.7224620Z --- PASS: TestMigStreamProcessor_basic (24.74s)
-```
 ### 2025-07-05
 #### PASS 14 seconds
-```
-2025-07-05T00:44:07.5866567Z === RUN   TestMigStreamProcessor_basic
-2025-07-05T00:44:07.5867521Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-7838024867408675840
-2025-07-05T00:44:07.6141324Z === CONT  TestMigStreamProcessor_basic
-2025-07-05T00:44:07.6152001Z --- PASS: TestMigStreamProcessor_basic (14.83s)
-```
 ### 2025-07-06
 #### FAIL 36 seconds
 ```
@@ -125,17 +88,5 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-07
 #### PASS 11 seconds
-```
-2025-07-07T00:48:05.7809846Z === RUN   TestMigStreamProcessor_basic
-2025-07-07T00:48:05.7810387Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-2946717767474413480
-2025-07-07T00:48:05.8094072Z === CONT  TestMigStreamProcessor_basic
-2025-07-07T00:48:05.8104463Z --- PASS: TestMigStreamProcessor_basic (11.38s)
-```
 ### 2025-07-08
 #### PASS 11 seconds
-```
-2025-07-08T00:45:56.1162096Z === RUN   TestMigStreamProcessor_basic
-2025-07-08T00:45:56.1163196Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-8035210403101676368
-2025-07-08T00:45:56.1508910Z === CONT  TestMigStreamProcessor_basic
-2025-07-08T00:45:56.1527525Z --- PASS: TestMigStreamProcessor_basic (11.03s)
-```

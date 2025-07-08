@@ -292,95 +292,47 @@
 
 
 <h1 id="flex_clusterflexclustertestaccflexclusterrs_basic-test-details">flex_cluster/flexcluster/TestAccFlexClusterRS_basic Test Details</h1>
-<h1 id="found-8-testruns-in-dev-qa-from-2025-07-01-to-2025-07-08-from-master-branch-1-unique-tests-passx-6-failx-2">Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL(x 2)</h1>
-<p>Success rate: 75.00%</p>
+<h1 id="found-7-testruns-in-dev-qa-from-2025-07-02-to-2025-07-08-from-master-branch-1-unique-tests-passx-6-fail">Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL</h1>
+<p>Success rate: 85.71%</p>
 <h2 id="timeline">Timeline</h2>
-<h3 id="2025-07-01">2025-07-01</h3>
-<h4 id="fail-13-seconds">FAIL 13 seconds</h4>
-<p>GoTestErrorClassification(error_class='flaky_check',author='human',run_id='2025-07-01T08:33:36.548000+00:00-TestAccFlexClusterRS_basic',confidence=1.0,ts_when='6 days ago')
-API Error ATLAS_GENERAL_ERROR /api/atlas/v2/groups/{groupId}/flexClusters/{name}
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-01T08:33:36.5488657Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-01T08:33:36.5491305Z     resource_test.go:19: Creating execution project: test-acc-tf-p-1785466340546726613
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-01T08:33:50.2902976Z   
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-01T08:33:50.2905106Z     resource_test.go:21: Step 1/3 error: Check failed: Check 6/39 error: mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-01T08:33:50.2907425Z         Check 18/39 error: data.mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-01T08:33:50.2909203Z         Check 30/39 error: data.mongodbatlas_flex_clusters.test: Attribute &#39;results.0.connection_strings.standard&#39; expected to be set
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-01T08:33:50.5135500Z   
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-01T08:33:50.5136033Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-01T08:33:50.5136466Z         
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-01T08:33:50.5137001Z         Error: error deleting a flex cluster (68639d6090ed24487dfd467a): test-acc-tf-7054316069849528213
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-01T08:33:50.5137719Z         
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-01T08:33:50.5138420Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68639d6090ed24487dfd467a/flexClusters/test-acc-tf-7054316069849528213
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-01T08:33:50.5139196Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-01T08:33:50.5139795Z         Reason: Cannot terminate cluster test-acc-tf-7054316069849528213 in group
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-01T08:33:50.5140421Z         68639d6090ed24487dfd467a because termination protection is enabled. Disable
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-01T08:33:50.5141056Z         termination protection and try again.. Reason: Bad Request. Params: [Cannot
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-01T08:33:50.5141609Z         terminate cluster test-acc-tf-7054316069849528213 in group
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-07-01T08:33:50.5142177Z         68639d6090ed24487dfd467a because termination protection is enabled. Disable
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-07-01T08:33:50.5142940Z         termination protection and try again.], BadRequestDetail: 
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-07-01T08:33:50.5143311Z --- FAIL: TestAccFlexClusterRS_basic (13.96s)
-</code></pre></div></p>
+<p>2025-07-01: MISSING</p>
 <h3 id="2025-07-02">2025-07-02</h3>
 <h4 id="pass-a-minute">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-02T00:28:54.1883968Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-02T00:28:54.1886582Z     resource_test.go:19: Creating execution project: test-acc-tf-p-8933973087770858713
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-02T00:29:57.3871285Z --- PASS: TestAccFlexClusterRS_basic (63.20s)
-</code></pre></div>
 <h3 id="2025-07-03">2025-07-03</h3>
 <h4 id="pass-a-minute_1">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-03T00:29:28.0495906Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-03T00:29:28.0498443Z     resource_test.go:19: Creating execution project: test-acc-tf-p-5890119917693301870
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-03T00:30:39.3808498Z --- PASS: TestAccFlexClusterRS_basic (71.33s)
-</code></pre></div>
 <h3 id="2025-07-04">2025-07-04</h3>
 <h4 id="fail-24-seconds">FAIL 24 seconds</h4>
-<p>GoTestErrorClassification(error_class='flaky_check',author='similar',run_id='2025-07-04T00:29:00.962000+00:00-TestAccFlexClusterRS_basic',confidence=1.0,ts_when='3 days ago')
+<p>GoTestErrorClassification(error_class='flaky_check',author='similar',run_id='2025-07-04T00:29:00.962000+00:00-TestAccFlexClusterRS_basic',confidence=1.0,ts_when='4 days ago')
 API Error ATLAS_GENERAL_ERROR /api/atlas/v2/groups/{groupId}/flexClusters/{name}
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-04T00:29:00.9624978Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-04T00:29:00.9626317Z     resource_test.go:19: Creating execution project: test-acc-tf-p-3285181739207567139
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-04T00:29:25.1992871Z   
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-04T00:29:25.1994646Z     resource_test.go:21: Step 1/3 error: Check failed: Check 6/39 error: mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-04T00:29:25.1995855Z         Check 18/39 error: data.mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-04T00:29:25.1996847Z         Check 30/39 error: data.mongodbatlas_flex_clusters.test: Attribute &#39;results.0.connection_strings.standard&#39; expected to be set
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-04T00:29:25.5713396Z    test_name=TestAccFlexClusterRS_basic
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-04T00:29:25.5714569Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-04T00:29:25.5715375Z         
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-04T00:29:25.5716466Z         Error: error deleting a flex cluster (6867204d579d4c1b1e7acbac): test-acc-tf-6033897913351790890
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-04T00:29:25.5717236Z         
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-04T00:29:25.5718524Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6867204d579d4c1b1e7acbac/flexClusters/test-acc-tf-6033897913351790890
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-04T00:29:25.5719950Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-04T00:29:25.5721020Z         Reason: Cannot terminate cluster test-acc-tf-6033897913351790890 in group
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-04T00:29:25.5722176Z         6867204d579d4c1b1e7acbac because termination protection is enabled. Disable
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-04T00:29:25.5723488Z         termination protection and try again.. Reason: Bad Request. Params: [Cannot
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-04T00:29:25.5724514Z         terminate cluster test-acc-tf-6033897913351790890 in group
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-04T00:29:25.5725560Z         6867204d579d4c1b1e7acbac because termination protection is enabled. Disable
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-07-04T00:29:25.5726855Z         termination protection and try again.], BadRequestDetail: 
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-07-04T00:29:25.5727533Z --- FAIL: TestAccFlexClusterRS_basic (24.61s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-04T00:29:00.9624978Z === RUN   TestAccFlexClusterRS_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-04T00:29:00.9626317Z     resource_test.go:19: Creating execution project: test-acc-tf-p-3285181739207567139
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-04T00:29:25.1992871Z   
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-04T00:29:25.1994646Z     resource_test.go:21: Step 1/3 error: Check failed: Check 6/39 error: mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-04T00:29:25.1995855Z         Check 18/39 error: data.mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-04T00:29:25.1996847Z         Check 30/39 error: data.mongodbatlas_flex_clusters.test: Attribute &#39;results.0.connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-04T00:29:25.5713396Z    test_name=TestAccFlexClusterRS_basic
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-04T00:29:25.5714569Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-04T00:29:25.5715375Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-04T00:29:25.5716466Z         Error: error deleting a flex cluster (6867204d579d4c1b1e7acbac): test-acc-tf-6033897913351790890
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-04T00:29:25.5717236Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-04T00:29:25.5718524Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6867204d579d4c1b1e7acbac/flexClusters/test-acc-tf-6033897913351790890
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-04T00:29:25.5719950Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-04T00:29:25.5721020Z         Reason: Cannot terminate cluster test-acc-tf-6033897913351790890 in group
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-04T00:29:25.5722176Z         6867204d579d4c1b1e7acbac because termination protection is enabled. Disable
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-04T00:29:25.5723488Z         termination protection and try again.. Reason: Bad Request. Params: [Cannot
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-04T00:29:25.5724514Z         terminate cluster test-acc-tf-6033897913351790890 in group
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-07-04T00:29:25.5725560Z         6867204d579d4c1b1e7acbac because termination protection is enabled. Disable
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-07-04T00:29:25.5726855Z         termination protection and try again.], BadRequestDetail: 
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-07-04T00:29:25.5727533Z --- FAIL: TestAccFlexClusterRS_basic (24.61s)
 </code></pre></div></p>
 <h3 id="2025-07-05">2025-07-05</h3>
 <h4 id="pass-a-minute_2">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-05T00:27:59.3582227Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-05T00:27:59.3583448Z     resource_test.go:19: Creating execution project: test-acc-tf-p-6214406683342953159
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-05T00:29:00.1242416Z --- PASS: TestAccFlexClusterRS_basic (60.77s)
-</code></pre></div>
 <h3 id="2025-07-06">2025-07-06</h3>
 <h4 id="pass-59-seconds">PASS 59 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-06T00:32:03.2107000Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-06T00:32:03.2109110Z     resource_test.go:19: Creating execution project: test-acc-tf-p-56772956102152591
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-06T00:33:02.4136237Z --- PASS: TestAccFlexClusterRS_basic (59.20s)
-</code></pre></div>
 <h3 id="2025-07-07">2025-07-07</h3>
 <h4 id="pass-59-seconds_1">PASS 59 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-07T00:31:29.5092647Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-07T00:31:29.5094859Z     resource_test.go:19: Creating execution project: test-acc-tf-p-3925604862678727989
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-07T00:32:29.2723987Z --- PASS: TestAccFlexClusterRS_basic (59.76s)
-</code></pre></div>
 <h3 id="2025-07-08">2025-07-08</h3>
 <h4 id="pass-58-seconds">PASS 58 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-08T00:29:17.5845831Z === RUN   TestAccFlexClusterRS_basic
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-08T00:29:17.5847347Z     resource_test.go:19: Creating execution project: test-acc-tf-p-1015109397922070894
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-08T00:30:16.5761935Z --- PASS: TestAccFlexClusterRS_basic (58.99s)
-</code></pre></div>
 
 
 

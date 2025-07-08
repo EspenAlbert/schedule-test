@@ -1,43 +1,17 @@
 # cluster/cluster/TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 21 minutes
-```
-2025-07-01T08:33:37.0088753Z === RUN   TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-01T08:33:37.0090829Z === CONT  TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-01T08:55:35.4991112Z --- PASS: TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade (1318.49s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 21 minutes
-```
-2025-07-02T00:28:55.2449995Z === RUN   TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-02T00:28:55.2451863Z === CONT  TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-02T00:50:45.5721962Z --- PASS: TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade (1310.33s)
-```
 ### 2025-07-03
 #### PASS 22 minutes
-```
-2025-07-03T00:29:32.3598688Z === RUN   TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-03T00:29:32.3601802Z === CONT  TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-03T00:52:23.7869224Z --- PASS: TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade (1371.43s)
-```
 ### 2025-07-04
 #### PASS 22 minutes
-```
-2025-07-04T00:28:53.1088805Z === RUN   TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-04T00:28:53.1091037Z === CONT  TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-04T00:51:09.7271889Z --- PASS: TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade (1336.62s)
-```
 ### 2025-07-05
 #### PASS 20 minutes
-```
-2025-07-05T00:28:09.1112928Z === RUN   TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-05T00:28:09.1115368Z === CONT  TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-05T00:49:05.1448777Z --- PASS: TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade (1256.04s)
-```
 ### 2025-07-06
 #### FAIL 35 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 22 minutes
-```
-2025-07-07T00:31:36.2399771Z === RUN   TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-07T00:31:36.2479373Z === CONT  TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-07T00:54:26.3672398Z --- PASS: TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade (1370.13s)
-```
 ### 2025-07-08
 #### PASS 22 minutes
-```
-2025-07-08T00:29:14.7595433Z === RUN   TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-08T00:29:14.7605603Z === CONT  TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade
-2025-07-08T00:51:25.6300876Z --- PASS: TestAccCluster_pinnedFCVWithVersionUpgradeAndDowngrade (1330.87s)
-```

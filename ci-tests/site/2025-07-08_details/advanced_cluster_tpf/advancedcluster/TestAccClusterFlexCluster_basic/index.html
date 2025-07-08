@@ -292,72 +292,38 @@
 
 
 <h1 id="advanced_cluster_tpfadvancedclustertestaccclusterflexcluster_basic-test-details">advanced_cluster_tpf/advancedcluster/TestAccClusterFlexCluster_basic Test Details</h1>
-<h1 id="found-8-testruns-in-dev-qa-from-2025-07-01-to-2025-07-08-from-master-branch-1-unique-tests-passx-6-failx-2">Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL(x 2)</h1>
-<p>Success rate: 75.00%</p>
+<h1 id="found-7-testruns-in-dev-qa-from-2025-07-02-to-2025-07-08-from-master-branch-1-unique-tests-passx-6-fail">Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL</h1>
+<p>Success rate: 85.71%</p>
 <h2 id="timeline">Timeline</h2>
-<h3 id="2025-07-01">2025-07-01</h3>
-<h4 id="fail-a-minute">FAIL a minute</h4>
-<p>GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-01T08:20:46.774000+00:00-TestAccClusterFlexCluster_basic',confidence=1.0,ts_when='6 days ago')
-CheckFailure for advanced_cluster.test at Step: 1 Checks: 10,11
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-01T08:20:46.7745269Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-01T08:20:46.7745847Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-6429725285775341751
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-01T08:20:46.7749720Z    test_name=TestAccClusterFlexCluster_basic test_working_directory=/tmp/plugintest22775248 test_step_number=1
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-01T08:20:46.7750834Z     resource_advanced_cluster_test.go:3276: Step 1/4 error: Check failed: Check 10/74 error: mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-01T08:20:46.7753120Z         Check 11/74 error: mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard_srv&#39; expected to be set
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-01T08:20:46.7753690Z --- FAIL: TestAccClusterFlexCluster_basic (85.92s)
-</code></pre></div></p>
+<p>2025-07-01: MISSING</p>
 <h3 id="2025-07-02">2025-07-02</h3>
 <h4 id="pass-a-minute">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-02T01:46:50.6535016Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-02T01:46:50.6535762Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-3844223313285506704
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-02T01:46:50.6539125Z --- PASS: TestAccClusterFlexCluster_basic (91.10s)
-</code></pre></div>
 <h3 id="2025-07-03">2025-07-03</h3>
 <h4 id="pass-a-minute_1">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-03T01:45:42.2331123Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-03T01:45:42.2332139Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-5526360378203903998
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-03T01:45:42.2338274Z --- PASS: TestAccClusterFlexCluster_basic (86.80s)
-</code></pre></div>
 <h3 id="2025-07-04">2025-07-04</h3>
 <h4 id="pass-a-minute_2">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-04T04:07:06.1344682Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-04T04:07:06.1345248Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-8961655605791168850
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-04T04:07:06.1348813Z --- PASS: TestAccClusterFlexCluster_basic (91.52s)
-</code></pre></div>
 <h3 id="2025-07-05">2025-07-05</h3>
 <h4 id="pass-a-minute_3">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-05T03:55:54.4265932Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-05T03:55:54.4266506Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-1283974697960478882
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-05T03:55:54.4269851Z --- PASS: TestAccClusterFlexCluster_basic (103.08s)
-</code></pre></div>
 <h3 id="2025-07-06">2025-07-06</h3>
 <h4 id="pass-a-minute_4">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-06T01:46:53.5895867Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-06T01:46:53.5896442Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-4246520070685210227
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-06T01:46:53.5900143Z --- PASS: TestAccClusterFlexCluster_basic (90.54s)
-</code></pre></div>
 <h3 id="2025-07-07">2025-07-07</h3>
 <h4 id="pass-a-minute_5">PASS a minute</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-07T03:58:24.8971385Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-07T03:58:24.8971953Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-6126823875771549047
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-07T03:58:24.8975671Z --- PASS: TestAccClusterFlexCluster_basic (90.77s)
-</code></pre></div>
 <h3 id="2025-07-08">2025-07-08</h3>
-<h4 id="fail-a-minute_1">FAIL a minute</h4>
-<p>GoTestErrorClassification(error_class='flaky_check',author='human',run_id='2025-07-08T02:00:19.279000+00:00-TestAccClusterFlexCluster_basic',confidence=1.0,ts_when='an hour ago')
+<h4 id="fail-a-minute">FAIL a minute</h4>
+<p>GoTestErrorClassification(error_class='flaky_check',author='human',run_id='2025-07-08T02:00:19.279000+00:00-TestAccClusterFlexCluster_basic',confidence=1.0,ts_when='3 hours ago')
 CheckFailure for advanced_cluster.test at Step: 1 Checks: 10,11,25,26,40,41,52,66
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-08T02:00:19.2793517Z === RUN   TestAccClusterFlexCluster_basic
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-08T02:00:19.2794095Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-2244068737802333665
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-08T02:00:19.2802730Z    test_name=TestAccClusterFlexCluster_basic test_terraform_path=/home/runner/work/_temp/e7f81ebf-5722-4b8f-a32c-55cda675ccba/terraform test_working_directory=/tmp/plugintest1385279846 test_step_number=1
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-07-08T02:00:19.2804144Z     resource_advanced_cluster_test.go:3276: Step 1/4 error: Check failed: Check 10/74 error: mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-07-08T02:00:19.2805288Z         Check 11/74 error: mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard_srv&#39; expected to be set
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-07-08T02:00:19.2806232Z         Check 25/74 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-07-08T02:00:19.2807199Z         Check 26/74 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard_srv&#39; expected to be set
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-07-08T02:00:19.2808216Z         Check 40/74 error: data.mongodbatlas_advanced_clusters.test: Attribute &#39;results.0.connection_strings.standard&#39; expected to be set
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-07-08T02:00:19.2809276Z         Check 41/74 error: data.mongodbatlas_advanced_clusters.test: Attribute &#39;results.0.connection_strings.standard_srv&#39; expected to be set
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-07-08T02:00:19.2810363Z         Check 52/74 error: data.mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-07-08T02:00:19.2811335Z         Check 66/74 error: data.mongodbatlas_flex_clusters.test: Attribute &#39;results.0.connection_strings.standard&#39; expected to be set
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-07-08T02:00:19.2812053Z --- FAIL: TestAccClusterFlexCluster_basic (84.23s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-08T02:00:19.2793517Z === RUN   TestAccClusterFlexCluster_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-08T02:00:19.2794095Z     resource_advanced_cluster_test.go:3273: Creating execution project: test-acc-tf-p-2244068737802333665
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-08T02:00:19.2802730Z    test_name=TestAccClusterFlexCluster_basic test_terraform_path=/home/runner/work/_temp/e7f81ebf-5722-4b8f-a32c-55cda675ccba/terraform test_working_directory=/tmp/plugintest1385279846 test_step_number=1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-08T02:00:19.2804144Z     resource_advanced_cluster_test.go:3276: Step 1/4 error: Check failed: Check 10/74 error: mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-08T02:00:19.2805288Z         Check 11/74 error: mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard_srv&#39; expected to be set
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-08T02:00:19.2806232Z         Check 25/74 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-08T02:00:19.2807199Z         Check 26/74 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;connection_strings.standard_srv&#39; expected to be set
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-08T02:00:19.2808216Z         Check 40/74 error: data.mongodbatlas_advanced_clusters.test: Attribute &#39;results.0.connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-08T02:00:19.2809276Z         Check 41/74 error: data.mongodbatlas_advanced_clusters.test: Attribute &#39;results.0.connection_strings.standard_srv&#39; expected to be set
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-08T02:00:19.2810363Z         Check 52/74 error: data.mongodbatlas_flex_cluster.test: Attribute &#39;connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-08T02:00:19.2811335Z         Check 66/74 error: data.mongodbatlas_flex_clusters.test: Attribute &#39;results.0.connection_strings.standard&#39; expected to be set
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-08T02:00:19.2812053Z --- FAIL: TestAccClusterFlexCluster_basic (84.23s)
 </code></pre></div></p>
 
 

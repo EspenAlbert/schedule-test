@@ -1,29 +1,13 @@
 # cluster/cluster/TestAccCluster_basicGCP Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 5) FAIL(x 3)
-Success rate: 62.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 4) FAIL(x 3)
+Success rate: 57.14%
 
 ## Timeline
-### 2025-07-01
-#### PASS 26 minutes
-```
-2025-07-01T08:33:33.2107126Z === RUN   TestAccCluster_basicGCP
-2025-07-01T08:33:37.0295014Z === CONT  TestAccCluster_basicGCP
-2025-07-01T08:59:38.0148358Z --- PASS: TestAccCluster_basicGCP (1560.99s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 15 minutes
-```
-2025-07-02T00:28:47.5979281Z === RUN   TestAccCluster_basicGCP
-2025-07-02T00:28:55.2478404Z === CONT  TestAccCluster_basicGCP
-2025-07-02T00:44:11.6342894Z --- PASS: TestAccCluster_basicGCP (916.39s)
-```
 ### 2025-07-03
 #### PASS 17 minutes
-```
-2025-07-03T00:29:26.0743997Z === RUN   TestAccCluster_basicGCP
-2025-07-03T00:29:32.3639884Z === CONT  TestAccCluster_basicGCP
-2025-07-03T00:46:47.6758316Z --- PASS: TestAccCluster_basicGCP (1035.31s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -58,11 +42,6 @@ Success rate: 62.50%
 ```
 ### 2025-07-06
 #### PASS 15 minutes
-```
-2025-07-06T00:32:00.8630180Z === RUN   TestAccCluster_basicGCP
-2025-07-06T00:32:04.2363488Z === CONT  TestAccCluster_basicGCP
-2025-07-06T00:47:36.8882562Z --- PASS: TestAccCluster_basicGCP (932.67s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -81,8 +60,3 @@ Success rate: 62.50%
 ```
 ### 2025-07-08
 #### PASS 17 minutes
-```
-2025-07-08T00:29:11.7937600Z === RUN   TestAccCluster_basicGCP
-2025-07-08T00:29:14.7708403Z === CONT  TestAccCluster_basicGCP
-2025-07-08T00:47:06.6086168Z --- PASS: TestAccCluster_basicGCP (1071.84s)
-```

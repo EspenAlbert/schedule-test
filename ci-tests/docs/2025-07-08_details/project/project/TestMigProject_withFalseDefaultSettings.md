@@ -1,38 +1,17 @@
 # project/project/TestMigProject_withFalseDefaultSettings Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 8 seconds
-```
-2025-07-01T08:36:27.6778503Z === RUN   TestMigProject_withFalseDefaultSettings
-2025-07-01T08:36:27.6778949Z --- PASS: TestMigProject_withFalseDefaultSettings (8.65s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 10 seconds
-```
-2025-07-02T00:32:47.2494555Z === RUN   TestMigProject_withFalseDefaultSettings
-2025-07-02T00:32:47.2495384Z --- PASS: TestMigProject_withFalseDefaultSettings (10.79s)
-```
 ### 2025-07-03
 #### PASS 7 seconds
-```
-2025-07-03T00:32:13.2676272Z === RUN   TestMigProject_withFalseDefaultSettings
-2025-07-03T00:32:13.2676658Z --- PASS: TestMigProject_withFalseDefaultSettings (7.41s)
-```
 ### 2025-07-04
 #### PASS 7 seconds
-```
-2025-07-04T00:31:54.7075948Z === RUN   TestMigProject_withFalseDefaultSettings
-2025-07-04T00:31:54.7076548Z --- PASS: TestMigProject_withFalseDefaultSettings (7.88s)
-```
 ### 2025-07-05
 #### PASS 6 seconds
-```
-2025-07-05T00:30:58.9934071Z === RUN   TestMigProject_withFalseDefaultSettings
-2025-07-05T00:30:58.9934698Z --- PASS: TestMigProject_withFalseDefaultSettings (6.68s)
-```
 ### 2025-07-06
 #### FAIL 35 seconds
 ```
@@ -56,13 +35,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 8 seconds
-```
-2025-07-07T00:34:47.5642594Z === RUN   TestMigProject_withFalseDefaultSettings
-2025-07-07T00:34:47.5643229Z --- PASS: TestMigProject_withFalseDefaultSettings (8.06s)
-```
 ### 2025-07-08
 #### PASS 7 seconds
-```
-2025-07-08T00:32:04.0789302Z === RUN   TestMigProject_withFalseDefaultSettings
-2025-07-08T00:32:04.0789942Z --- PASS: TestMigProject_withFalseDefaultSettings (7.52s)
-```

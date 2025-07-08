@@ -1,62 +1,19 @@
 # stream/streamprocessor/TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 9) FAIL
-Success rate: 90.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL
+Success rate: 88.89%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 14 seconds
-```
-2025-07-01T08:50:28.2754637Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-01T08:50:28.2756108Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-01T08:50:28.2766277Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-01T08:50:28.2775772Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (14.63s)
-```
 #### PASS 12 seconds
-```
-2025-07-01T12:50:20.6084652Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-01T12:50:20.6085348Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-01T12:50:20.6090619Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-01T12:50:20.6095999Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (12.20s)
-```
 #### PASS 14 seconds
-```
-2025-07-01T17:50:24.3504495Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-01T17:50:24.3505813Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-01T17:50:24.3515376Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-01T17:50:24.3525597Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (14.06s)
-```
 ### 2025-07-02
 #### PASS 11 seconds
-```
-2025-07-02T00:46:31.9233380Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-02T00:46:31.9234734Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-02T00:46:31.9244592Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-02T00:46:31.9253837Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (11.86s)
-```
 ### 2025-07-03
 #### PASS 12 seconds
-```
-2025-07-03T00:46:39.9554914Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-03T00:46:39.9556145Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-03T00:46:39.9564003Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-03T00:46:39.9569190Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (12.63s)
-```
 ### 2025-07-04
 #### PASS 12 seconds
-```
-2025-07-04T00:51:07.7069520Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-04T00:51:07.7070676Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-04T00:51:07.7077502Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-04T00:51:07.7083439Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (12.07s)
-```
 ### 2025-07-05
 #### PASS 14 seconds
-```
-2025-07-05T00:44:07.5889806Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-05T00:44:07.5891248Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-05T00:44:07.5900588Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-05T00:44:07.5910939Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (14.48s)
-```
 ### 2025-07-06
 #### FAIL 31 seconds
 ```
@@ -81,17 +38,5 @@ Success rate: 90.00%
 ```
 ### 2025-07-07
 #### PASS 12 seconds
-```
-2025-07-07T00:48:05.7823799Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-07T00:48:05.7824500Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-07T00:48:05.7830002Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-07T00:48:05.7836890Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (12.34s)
-```
 ### 2025-07-08
 #### PASS 12 seconds
-```
-2025-07-08T00:45:56.1186185Z === RUN   TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-08T00:45:56.1187661Z     resource_test.go:171: Testing: Verifies a processor in STARTED state can be updated while remaining in STARTED state
-2025-07-08T00:45:56.1197044Z === CONT  TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted
-2025-07-08T00:45:56.1207335Z     --- PASS: TestAccStreamProcessor_StateTransitionsUpdates/StartedToStarted (12.57s)
-```

@@ -1,33 +1,14 @@
 # stream/streamprocessor/TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, FAIL(x 6) PASS(x 4)
-Success rate: 40.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, FAIL(x 6) PASS(x 3)
+Success rate: 33.33%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 9 seconds
-```
-2025-07-01T08:50:28.2806410Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-01T08:50:28.2807684Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STARTED to CREATED state
-2025-07-01T08:50:28.2810801Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-01T08:50:28.2830853Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated (9.03s)
-```
 #### PASS 7 seconds
-```
-2025-07-01T12:50:20.6111448Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-01T12:50:20.6112100Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STARTED to CREATED state
-2025-07-01T12:50:20.6113714Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-01T12:50:20.6123976Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated (7.26s)
-```
 #### PASS 8 seconds
-```
-2025-07-01T17:50:24.3553918Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-01T17:50:24.3555148Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STARTED to CREATED state
-2025-07-01T17:50:24.3558132Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-01T17:50:24.3576846Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated (8.78s)
-```
 ### 2025-07-02
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.926000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated',confidence=1.0,ts_when='5 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.926000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-02T00:46:31.9269863Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
@@ -105,7 +86,7 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-04
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-04T00:51:07.714000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated',confidence=1.0,ts_when='3 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-04T00:51:07.714000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated',confidence=1.0,ts_when='4 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-04T00:51:07.7146470Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
@@ -181,12 +162,6 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-06
 #### PASS 13 seconds
-```
-2025-07-06T00:48:43.0286553Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-06T00:48:43.0287219Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STARTED to CREATED state
-2025-07-06T00:48:43.0289006Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
-2025-07-06T00:48:43.0299444Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated (13.64s)
-```
 ### 2025-07-07
 #### FAIL 31 seconds
 ```
@@ -227,7 +202,7 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-08
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-08T00:45:56.131000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated',confidence=1.0,ts_when='an hour ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-08T00:45:56.131000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated',confidence=1.0,ts_when='3 hours ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-08T00:45:56.1319529Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated

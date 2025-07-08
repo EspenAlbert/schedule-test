@@ -1,29 +1,13 @@
 # advanced_cluster_tpf/advancedcluster/TestAccClusterAdvancedCluster_replicaSetMultiCloud Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 5) FAIL(x 3)
-Success rate: 62.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 4) FAIL(x 3)
+Success rate: 57.14%
 
 ## Timeline
-### 2025-07-01
-#### PASS 35 minutes
-```
-2025-07-01T08:20:46.7696843Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-01T08:20:46.7773320Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-01T08:20:46.7897576Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2151.35s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 32 minutes
-```
-2025-07-02T01:46:50.6491781Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:46:50.6543590Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:46:50.6706419Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (1976.75s)
-```
 ### 2025-07-03
 #### PASS 33 minutes
-```
-2025-07-03T01:45:42.2255594Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:45:42.2346051Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:45:42.2502822Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2008.02s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -88,11 +72,6 @@ Success rate: 62.50%
 ```
 ### 2025-07-06
 #### PASS 31 minutes
-```
-2025-07-06T01:46:53.5847461Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-06T01:46:53.5905313Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-06T01:46:53.6116330Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (1886.90s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -125,8 +104,3 @@ Success rate: 62.50%
 ```
 ### 2025-07-08
 #### PASS 43 minutes
-```
-2025-07-08T02:00:19.2748853Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-08T02:00:19.2820273Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-08T02:00:19.2972963Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2580.28s)
-```

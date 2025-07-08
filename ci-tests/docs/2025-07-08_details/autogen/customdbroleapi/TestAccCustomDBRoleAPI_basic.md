@@ -1,43 +1,17 @@
 # autogen/customdbroleapi/TestAccCustomDBRoleAPI_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 12 seconds
-```
-2025-07-01T09:00:04.3518167Z === RUN   TestAccCustomDBRoleAPI_basic
-2025-07-01T09:00:04.3518995Z === CONT  TestAccCustomDBRoleAPI_basic
-2025-07-01T09:00:04.3519684Z --- PASS: TestAccCustomDBRoleAPI_basic (12.45s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 6 seconds
-```
-2025-07-02T00:52:43.3790092Z === RUN   TestAccCustomDBRoleAPI_basic
-2025-07-02T00:52:43.3790683Z === CONT  TestAccCustomDBRoleAPI_basic
-2025-07-02T00:52:43.3790993Z --- PASS: TestAccCustomDBRoleAPI_basic (6.78s)
-```
 ### 2025-07-03
 #### PASS 9 seconds
-```
-2025-07-03T00:54:41.3288714Z === RUN   TestAccCustomDBRoleAPI_basic
-2025-07-03T00:54:41.3289312Z === CONT  TestAccCustomDBRoleAPI_basic
-2025-07-03T00:54:41.3289614Z --- PASS: TestAccCustomDBRoleAPI_basic (9.80s)
-```
 ### 2025-07-04
 #### PASS 12 seconds
-```
-2025-07-04T01:01:11.2088545Z === RUN   TestAccCustomDBRoleAPI_basic
-2025-07-04T01:01:11.2089356Z === CONT  TestAccCustomDBRoleAPI_basic
-2025-07-04T01:01:11.2089792Z --- PASS: TestAccCustomDBRoleAPI_basic (12.17s)
-```
 ### 2025-07-05
 #### PASS 7 seconds
-```
-2025-07-05T00:53:13.1014696Z === RUN   TestAccCustomDBRoleAPI_basic
-2025-07-05T00:53:13.1015271Z === CONT  TestAccCustomDBRoleAPI_basic
-2025-07-05T00:53:13.1015583Z --- PASS: TestAccCustomDBRoleAPI_basic (7.82s)
-```
 ### 2025-07-06
 #### FAIL 35 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 7 seconds
-```
-2025-07-07T00:54:14.6919610Z === RUN   TestAccCustomDBRoleAPI_basic
-2025-07-07T00:54:14.6920196Z === CONT  TestAccCustomDBRoleAPI_basic
-2025-07-07T00:54:14.6920499Z --- PASS: TestAccCustomDBRoleAPI_basic (7.13s)
-```
 ### 2025-07-08
 #### PASS 8 seconds
-```
-2025-07-08T00:55:27.6875206Z === RUN   TestAccCustomDBRoleAPI_basic
-2025-07-08T00:55:27.6876063Z === CONT  TestAccCustomDBRoleAPI_basic
-2025-07-08T00:55:27.6876440Z --- PASS: TestAccCustomDBRoleAPI_basic (8.35s)
-```

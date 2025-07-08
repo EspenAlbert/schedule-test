@@ -292,104 +292,61 @@
 
 
 <h1 id="streamstreamprocessortestaccstreamprocessor_clustertype-test-details">stream/streamprocessor/TestAccStreamProcessor_clusterType Test Details</h1>
-<h1 id="found-10-testruns-in-dev-qa-from-2025-07-01-to-2025-07-08-from-master-branch-1-unique-tests-passx-9-fail">Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 9) FAIL</h1>
-<p>Success rate: 90.00%</p>
+<h1 id="found-9-testruns-in-dev-qa-from-2025-07-01-to-2025-07-08-from-master-branch-1-unique-tests-passx-8-fail">Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL</h1>
+<p>Success rate: 88.89%</p>
 <h2 id="timeline">Timeline</h2>
 <h3 id="2025-07-01">2025-07-01</h3>
-<h4 id="pass-14-seconds">PASS 14 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-01T08:50:28.2833376Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-01T08:50:28.2838351Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-01T08:50:28.2844126Z   diagnostic_detail=
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-01T08:50:28.2847766Z   
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-01T08:50:28.2856950Z --- PASS: TestAccStreamProcessor_clusterType (14.09s)
-</code></pre></div>
 <h4 id="pass-12-seconds">PASS 12 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-01T12:50:20.6125115Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-01T12:50:20.6128192Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-01T12:50:20.6129530Z   diagnostic_detail=
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-01T12:50:20.6131923Z    diagnostic_severity=ERROR tf_resource_type=mongodbatlas_stream_processor tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas diagnostic_summary=&quot;Invalid JSON String Value&quot; diagnostic_attribute=&quot;AttributeName(\&quot;pipeline\&quot;)&quot;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-07-01T12:50:20.6137404Z --- PASS: TestAccStreamProcessor_clusterType (12.83s)
-</code></pre></div>
 <h4 id="pass-13-seconds">PASS 13 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-01T17:50:24.3578936Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-01T17:50:24.3583139Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-01T17:50:24.3600882Z --- PASS: TestAccStreamProcessor_clusterType (13.12s)
-</code></pre></div>
 <h3 id="2025-07-02">2025-07-02</h3>
 <h4 id="fail-31-seconds">FAIL 31 seconds</h4>
-<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.932000+00:00-TestAccStreamProcessor_clusterType',confidence=1.0,ts_when='5 days ago')
+<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.932000+00:00-TestAccStreamProcessor_clusterType',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-02T00:46:31.9329604Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-02T00:46:31.9332039Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-02T00:46:31.9408537Z === NAME  TestAccStreamProcessor_clusterType
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-02T00:46:31.9409001Z     resource_test.go:264: Step 1/1 error: Error running apply: exit status 1
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-02T00:46:31.9409354Z         
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-02T00:46:31.9409618Z         Error: error creating resource
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-02T00:46:31.9409880Z         
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-02T00:46:31.9410224Z           with mongodbatlas_stream_processor.processor,
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-02T00:46:31.9410905Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-02T00:46:31.9411657Z           40:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-02T00:46:31.9412108Z         
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-02T00:46:31.9412849Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1836014474039390574/processor
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-02T00:46:31.9413662Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-02T00:46:31.9414309Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-02T00:46:31.9414984Z         failed to acquire resources for stream processor validation: internal error
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-02T00:46:31.9415607Z         while provisioning resource from global resource manager. Reason: Bad
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-02T00:46:31.9416214Z         Request. Params: [new-processor failed to acquire resources for stream
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-02T00:46:31.9416855Z         processor validation: internal error while provisioning resource from global
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-07-02T00:46:31.9417347Z         resource manager], BadRequestDetail: 
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-07-02T00:46:31.9429965Z   
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-07-02T00:46:31.9466885Z === NAME  TestAccStreamProcessor_clusterType
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-07-02T00:46:31.9467448Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-07-02T00:46:31.9467877Z         
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2025-07-02T00:46:31.9468141Z         Error: error deleting resource
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2025-07-02T00:46:31.9468399Z         
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2025-07-02T00:46:31.9469274Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1836014474039390574/connections/ClusterConnectionSrc
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2025-07-02T00:46:31.9470046Z         DELETE: HTTP 403 Forbidden (Error code:
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2025-07-02T00:46:31.9470573Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2025-07-02T00:46:31.9471226Z         name test-acc-tf-1836014474039390574 has active processors, and cannot be
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2025-07-02T00:46:31.9471934Z         changed. Reason: Forbidden. Params: [test-acc-tf-1836014474039390574],
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2025-07-02T00:46:31.9472341Z         BadRequestDetail: 
-<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2025-07-02T00:46:31.9472637Z --- FAIL: TestAccStreamProcessor_clusterType (31.44s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-02T00:46:31.9329604Z === RUN   TestAccStreamProcessor_clusterType
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-02T00:46:31.9332039Z === CONT  TestAccStreamProcessor_clusterType
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-02T00:46:31.9408537Z === NAME  TestAccStreamProcessor_clusterType
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-02T00:46:31.9409001Z     resource_test.go:264: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-02T00:46:31.9409354Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-02T00:46:31.9409618Z         Error: error creating resource
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-02T00:46:31.9409880Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-02T00:46:31.9410224Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-02T00:46:31.9410905Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-02T00:46:31.9411657Z           40:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-02T00:46:31.9412108Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-02T00:46:31.9412849Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1836014474039390574/processor
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-02T00:46:31.9413662Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-02T00:46:31.9414309Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-02T00:46:31.9414984Z         failed to acquire resources for stream processor validation: internal error
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-02T00:46:31.9415607Z         while provisioning resource from global resource manager. Reason: Bad
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-02T00:46:31.9416214Z         Request. Params: [new-processor failed to acquire resources for stream
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-07-02T00:46:31.9416855Z         processor validation: internal error while provisioning resource from global
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-07-02T00:46:31.9417347Z         resource manager], BadRequestDetail: 
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-07-02T00:46:31.9429965Z   
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2025-07-02T00:46:31.9466885Z === NAME  TestAccStreamProcessor_clusterType
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2025-07-02T00:46:31.9467448Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2025-07-02T00:46:31.9467877Z         
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2025-07-02T00:46:31.9468141Z         Error: error deleting resource
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2025-07-02T00:46:31.9468399Z         
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2025-07-02T00:46:31.9469274Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1836014474039390574/connections/ClusterConnectionSrc
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2025-07-02T00:46:31.9470046Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2025-07-02T00:46:31.9470573Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2025-07-02T00:46:31.9471226Z         name test-acc-tf-1836014474039390574 has active processors, and cannot be
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2025-07-02T00:46:31.9471934Z         changed. Reason: Forbidden. Params: [test-acc-tf-1836014474039390574],
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2025-07-02T00:46:31.9472341Z         BadRequestDetail: 
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2025-07-02T00:46:31.9472637Z --- FAIL: TestAccStreamProcessor_clusterType (31.44s)
 </code></pre></div></p>
 <h3 id="2025-07-03">2025-07-03</h3>
 <h4 id="pass-26-seconds">PASS 26 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-03T00:46:39.9791736Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-03T00:46:39.9794351Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-03T00:46:39.9804094Z --- PASS: TestAccStreamProcessor_clusterType (26.82s)
-</code></pre></div>
 <h3 id="2025-07-04">2025-07-04</h3>
 <h4 id="pass-11-seconds">PASS 11 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-04T00:51:07.7211261Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-04T00:51:07.7214035Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-04T00:51:07.7224264Z --- PASS: TestAccStreamProcessor_clusterType (11.68s)
-</code></pre></div>
 <h3 id="2025-07-05">2025-07-05</h3>
-<h4 id="pass-14-seconds_1">PASS 14 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-05T00:44:07.6140099Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-05T00:44:07.6142222Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-05T00:44:07.6152332Z --- PASS: TestAccStreamProcessor_clusterType (14.82s)
-</code></pre></div>
+<h4 id="pass-14-seconds">PASS 14 seconds</h4>
 <h3 id="2025-07-06">2025-07-06</h3>
 <h4 id="pass-12-seconds_1">PASS 12 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-06T00:48:43.0300585Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-06T00:48:43.0303525Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-06T00:48:43.0305032Z   diagnostic_detail=
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-07-06T00:48:43.0307503Z    diagnostic_summary=&quot;Invalid JSON String Value&quot; tf_req_id=9acae79e-700c-bccd-e1cc-5308ad0a8dcf tf_resource_type=mongodbatlas_stream_processor diagnostic_severity=ERROR diagnostic_attribute=&quot;AttributeName(\&quot;pipeline\&quot;)&quot;
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-07-06T00:48:43.0312212Z --- PASS: TestAccStreamProcessor_clusterType (12.07s)
-</code></pre></div>
 <h3 id="2025-07-07">2025-07-07</h3>
 <h4 id="pass-12-seconds_2">PASS 12 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-07-07T00:48:05.8092834Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-07-07T00:48:05.8094993Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-07-07T00:48:05.8105174Z --- PASS: TestAccStreamProcessor_clusterType (12.27s)
-</code></pre></div>
 <h3 id="2025-07-08">2025-07-08</h3>
 <h4 id="pass-15-seconds">PASS 15 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-07-08T00:45:56.1506786Z === RUN   TestAccStreamProcessor_clusterType
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-07-08T00:45:56.1510479Z === CONT  TestAccStreamProcessor_clusterType
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-07-08T00:45:56.1528688Z --- PASS: TestAccStreamProcessor_clusterType (15.21s)
-</code></pre></div>
 
 
 

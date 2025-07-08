@@ -1,43 +1,17 @@
 # federated/federateddatabaseinstance/TestAccFederatedDatabaseInstance_s3bucket Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS a minute
-```
-2025-07-01T08:46:24.2984689Z === RUN   TestAccFederatedDatabaseInstance_s3bucket
-2025-07-01T08:46:24.2989035Z === CONT  TestAccFederatedDatabaseInstance_s3bucket
-2025-07-01T08:46:24.3008572Z --- PASS: TestAccFederatedDatabaseInstance_s3bucket (65.01s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS a minute
-```
-2025-07-02T00:41:47.8799570Z === RUN   TestAccFederatedDatabaseInstance_s3bucket
-2025-07-02T00:41:47.8808120Z === CONT  TestAccFederatedDatabaseInstance_s3bucket
-2025-07-02T00:41:47.8834686Z --- PASS: TestAccFederatedDatabaseInstance_s3bucket (64.23s)
-```
 ### 2025-07-03
 #### PASS a minute
-```
-2025-07-03T00:43:17.6276654Z === RUN   TestAccFederatedDatabaseInstance_s3bucket
-2025-07-03T00:43:17.6281948Z === CONT  TestAccFederatedDatabaseInstance_s3bucket
-2025-07-03T00:43:17.6296814Z --- PASS: TestAccFederatedDatabaseInstance_s3bucket (67.29s)
-```
 ### 2025-07-04
 #### PASS a minute
-```
-2025-07-04T00:42:31.4232929Z === RUN   TestAccFederatedDatabaseInstance_s3bucket
-2025-07-04T00:42:31.4240985Z === CONT  TestAccFederatedDatabaseInstance_s3bucket
-2025-07-04T00:42:31.4268924Z --- PASS: TestAccFederatedDatabaseInstance_s3bucket (67.25s)
-```
 ### 2025-07-05
 #### PASS a minute
-```
-2025-07-05T00:40:35.5951789Z === RUN   TestAccFederatedDatabaseInstance_s3bucket
-2025-07-05T00:40:35.5956772Z === CONT  TestAccFederatedDatabaseInstance_s3bucket
-2025-07-05T00:40:35.5974303Z --- PASS: TestAccFederatedDatabaseInstance_s3bucket (67.81s)
-```
 ### 2025-07-06
 #### FAIL 2 minutes
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS a minute
-```
-2025-07-07T00:45:41.9631386Z === RUN   TestAccFederatedDatabaseInstance_s3bucket
-2025-07-07T00:45:41.9637056Z === CONT  TestAccFederatedDatabaseInstance_s3bucket
-2025-07-07T00:45:41.9652582Z --- PASS: TestAccFederatedDatabaseInstance_s3bucket (64.17s)
-```
 ### 2025-07-08
 #### PASS a minute
-```
-2025-07-08T00:43:40.0038652Z === RUN   TestAccFederatedDatabaseInstance_s3bucket
-2025-07-08T00:43:40.0046397Z === CONT  TestAccFederatedDatabaseInstance_s3bucket
-2025-07-08T00:43:40.0071319Z --- PASS: TestAccFederatedDatabaseInstance_s3bucket (65.75s)
-```

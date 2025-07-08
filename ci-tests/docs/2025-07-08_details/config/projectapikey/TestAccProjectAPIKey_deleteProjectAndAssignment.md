@@ -1,43 +1,17 @@
 # config/projectapikey/TestAccProjectAPIKey_deleteProjectAndAssignment Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 11 seconds
-```
-2025-07-01T08:35:29.4692454Z === RUN   TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-01T08:35:29.4696392Z === CONT  TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-01T08:35:29.4714999Z --- PASS: TestAccProjectAPIKey_deleteProjectAndAssignment (11.12s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 11 seconds
-```
-2025-07-02T00:30:40.8689219Z === RUN   TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-02T00:30:40.8691475Z === CONT  TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-02T00:30:40.8702220Z --- PASS: TestAccProjectAPIKey_deleteProjectAndAssignment (11.04s)
-```
 ### 2025-07-03
 #### PASS 14 seconds
-```
-2025-07-03T00:31:32.1146801Z === RUN   TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-03T00:31:32.1151114Z === CONT  TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-03T00:31:32.1161116Z --- PASS: TestAccProjectAPIKey_deleteProjectAndAssignment (14.67s)
-```
 ### 2025-07-04
 #### PASS 12 seconds
-```
-2025-07-04T00:30:47.2515897Z === RUN   TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-04T00:30:47.2519592Z === CONT  TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-04T00:30:47.2536884Z --- PASS: TestAccProjectAPIKey_deleteProjectAndAssignment (12.14s)
-```
 ### 2025-07-05
 #### PASS 14 seconds
-```
-2025-07-05T00:30:14.7943739Z === RUN   TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-05T00:30:14.7946076Z === CONT  TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-05T00:30:14.7956170Z --- PASS: TestAccProjectAPIKey_deleteProjectAndAssignment (14.41s)
-```
 ### 2025-07-06
 #### FAIL 33 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 9 seconds
-```
-2025-07-07T00:33:18.3683736Z === RUN   TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-07T00:33:18.3690820Z === CONT  TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-07T00:33:18.3726461Z --- PASS: TestAccProjectAPIKey_deleteProjectAndAssignment (9.25s)
-```
 ### 2025-07-08
 #### PASS 15 seconds
-```
-2025-07-08T00:31:37.4388847Z === RUN   TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-08T00:31:37.4393067Z === CONT  TestAccProjectAPIKey_deleteProjectAndAssignment
-2025-07-08T00:31:37.4411085Z --- PASS: TestAccProjectAPIKey_deleteProjectAndAssignment (15.33s)
-```

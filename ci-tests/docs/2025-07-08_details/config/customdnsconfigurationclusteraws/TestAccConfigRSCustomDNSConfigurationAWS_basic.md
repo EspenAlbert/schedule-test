@@ -1,43 +1,17 @@
 # config/customdnsconfigurationclusteraws/TestAccConfigRSCustomDNSConfigurationAWS_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 9 seconds
-```
-2025-07-01T08:35:29.4577549Z === RUN   TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-01T08:35:29.4579022Z === CONT  TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-01T08:35:29.4580446Z --- PASS: TestAccConfigRSCustomDNSConfigurationAWS_basic (9.70s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 10 seconds
-```
-2025-07-02T00:30:40.8604325Z === RUN   TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-02T00:30:40.8605477Z === CONT  TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-02T00:30:40.8606729Z --- PASS: TestAccConfigRSCustomDNSConfigurationAWS_basic (10.28s)
-```
 ### 2025-07-03
 #### PASS 19 seconds
-```
-2025-07-03T00:31:22.4220275Z === RUN   TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-03T00:31:22.4222334Z === CONT  TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-03T00:31:22.4224583Z --- PASS: TestAccConfigRSCustomDNSConfigurationAWS_basic (19.01s)
-```
 ### 2025-07-04
 #### PASS 13 seconds
-```
-2025-07-04T00:30:47.2390687Z === RUN   TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-04T00:30:47.2391871Z === CONT  TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-04T00:30:47.2393160Z --- PASS: TestAccConfigRSCustomDNSConfigurationAWS_basic (13.05s)
-```
 ### 2025-07-05
 #### PASS 24 seconds
-```
-2025-07-05T00:29:58.2609614Z === RUN   TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-05T00:29:58.2610764Z === CONT  TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-05T00:29:58.2612586Z --- PASS: TestAccConfigRSCustomDNSConfigurationAWS_basic (24.19s)
-```
 ### 2025-07-06
 #### FAIL 36 seconds
 ```
@@ -63,15 +37,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 10 seconds
-```
-2025-07-07T00:33:18.3438757Z === RUN   TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-07T00:33:18.3441196Z === CONT  TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-07T00:33:18.3443576Z --- PASS: TestAccConfigRSCustomDNSConfigurationAWS_basic (10.79s)
-```
 ### 2025-07-08
 #### PASS 22 seconds
-```
-2025-07-08T00:31:20.9925752Z === RUN   TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-08T00:31:20.9927042Z === CONT  TestAccConfigRSCustomDNSConfigurationAWS_basic
-2025-07-08T00:31:20.9928925Z --- PASS: TestAccConfigRSCustomDNSConfigurationAWS_basic (22.90s)
-```

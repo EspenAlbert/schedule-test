@@ -1,39 +1,18 @@
 # stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingVPC Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 5) FAIL(x 5)
-Success rate: 50.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, FAIL(x 5) PASS(x 4)
+Success rate: 44.44%
 
 ## Timeline
 ### 2025-07-01
 #### PASS 2 minutes
-```
-2025-07-01T08:50:28.2674776Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
-2025-07-01T08:50:28.2675609Z --- PASS: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (178.15s)
-```
 #### PASS 2 minutes
-```
-2025-07-01T12:50:20.6041215Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
-2025-07-01T12:50:20.6041659Z --- PASS: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (164.13s)
-```
-#### PASS 2 minutes
-```
-2025-07-01T17:50:24.3404142Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
-2025-07-01T17:50:24.3404949Z --- PASS: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (166.10s)
-```
 ### 2025-07-02
 #### PASS 2 minutes
-```
-2025-07-02T00:46:31.9152277Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
-2025-07-02T00:46:31.9153097Z --- PASS: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (163.66s)
-```
 ### 2025-07-03
 #### PASS 2 minutes
-```
-2025-07-03T00:46:39.9507449Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
-2025-07-03T00:46:39.9508296Z --- PASS: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (165.07s)
-```
 ### 2025-07-04
 #### FAIL 2 minutes
-GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-04T00:45:55.541000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='3 days ago')
+GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-04T00:45:55.541000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='4 days ago')
 
 ```
 2025-07-04T00:45:55.5414087Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
@@ -117,7 +96,7 @@ GoTestErrorClassification(error_class='real_test_failure',author='human',run_id=
 ```
 ### 2025-07-08
 #### FAIL 2 minutes
-GoTestErrorClassification(error_class='unknown',author='human',run_id='2025-07-08T00:45:56.107000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='an hour ago')
+GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-08T00:45:56.107000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='3 hours ago')
 
 ```
 2025-07-08T00:45:56.1072861Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC

@@ -1,43 +1,17 @@
 # config/customdbrole/TestAccCustomDBRoles_Basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 16 seconds
-```
-2025-07-01T08:35:29.4567382Z === RUN   TestAccCustomDBRoles_Basic
-2025-07-01T08:35:29.4571879Z === CONT  TestAccCustomDBRoles_Basic
-2025-07-01T08:35:29.4572177Z --- PASS: TestAccCustomDBRoles_Basic (16.90s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 16 seconds
-```
-2025-07-02T00:30:40.8594331Z === RUN   TestAccCustomDBRoles_Basic
-2025-07-02T00:30:40.8598650Z === CONT  TestAccCustomDBRoles_Basic
-2025-07-02T00:30:40.8598948Z --- PASS: TestAccCustomDBRoles_Basic (16.56s)
-```
 ### 2025-07-03
 #### PASS 18 seconds
-```
-2025-07-03T00:31:22.4201090Z === RUN   TestAccCustomDBRoles_Basic
-2025-07-03T00:31:22.4210288Z === CONT  TestAccCustomDBRoles_Basic
-2025-07-03T00:31:22.4210815Z --- PASS: TestAccCustomDBRoles_Basic (18.25s)
-```
 ### 2025-07-04
 #### PASS 17 seconds
-```
-2025-07-04T00:30:47.2379155Z === RUN   TestAccCustomDBRoles_Basic
-2025-07-04T00:30:47.2383721Z === CONT  TestAccCustomDBRoles_Basic
-2025-07-04T00:30:47.2384848Z --- PASS: TestAccCustomDBRoles_Basic (17.46s)
-```
 ### 2025-07-05
 #### PASS 20 seconds
-```
-2025-07-05T00:29:58.2599591Z === RUN   TestAccCustomDBRoles_Basic
-2025-07-05T00:29:58.2604025Z === CONT  TestAccCustomDBRoles_Basic
-2025-07-05T00:29:58.2604677Z --- PASS: TestAccCustomDBRoles_Basic (20.09s)
-```
 ### 2025-07-06
 #### FAIL 14 seconds
 ```
@@ -56,15 +30,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 16 seconds
-```
-2025-07-07T00:33:18.3421690Z === RUN   TestAccCustomDBRoles_Basic
-2025-07-07T00:33:18.3429335Z === CONT  TestAccCustomDBRoles_Basic
-2025-07-07T00:33:18.3429838Z --- PASS: TestAccCustomDBRoles_Basic (16.36s)
-```
 ### 2025-07-08
 #### PASS 19 seconds
-```
-2025-07-08T00:31:20.9914945Z === RUN   TestAccCustomDBRoles_Basic
-2025-07-08T00:31:20.9919860Z === CONT  TestAccCustomDBRoles_Basic
-2025-07-08T00:31:20.9920396Z --- PASS: TestAccCustomDBRoles_Basic (19.60s)
-```

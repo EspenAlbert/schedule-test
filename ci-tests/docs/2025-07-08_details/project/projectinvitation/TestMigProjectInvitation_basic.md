@@ -1,38 +1,17 @@
 # project/projectinvitation/TestMigProjectInvitation_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 9 seconds
-```
-2025-07-01T08:36:27.6837368Z === RUN   TestMigProjectInvitation_basic
-2025-07-01T08:36:27.6837688Z --- PASS: TestMigProjectInvitation_basic (9.59s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 12 seconds
-```
-2025-07-02T00:32:47.2557328Z === RUN   TestMigProjectInvitation_basic
-2025-07-02T00:32:47.2557644Z --- PASS: TestMigProjectInvitation_basic (12.63s)
-```
 ### 2025-07-03
 #### PASS 9 seconds
-```
-2025-07-03T00:32:13.2731757Z === RUN   TestMigProjectInvitation_basic
-2025-07-03T00:32:13.2732077Z --- PASS: TestMigProjectInvitation_basic (9.33s)
-```
 ### 2025-07-04
 #### PASS 8 seconds
-```
-2025-07-04T00:31:54.7140034Z === RUN   TestMigProjectInvitation_basic
-2025-07-04T00:31:54.7140356Z --- PASS: TestMigProjectInvitation_basic (8.92s)
-```
 ### 2025-07-05
 #### PASS 8 seconds
-```
-2025-07-05T00:30:58.9993044Z === RUN   TestMigProjectInvitation_basic
-2025-07-05T00:30:58.9993365Z --- PASS: TestMigProjectInvitation_basic (8.81s)
-```
 ### 2025-07-06
 #### FAIL 33 seconds
 ```
@@ -56,13 +35,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 8 seconds
-```
-2025-07-07T00:34:47.5699782Z === RUN   TestMigProjectInvitation_basic
-2025-07-07T00:34:47.5700093Z --- PASS: TestMigProjectInvitation_basic (8.69s)
-```
 ### 2025-07-08
 #### PASS 10 seconds
-```
-2025-07-08T00:32:04.0844853Z === RUN   TestMigProjectInvitation_basic
-2025-07-08T00:32:04.0845170Z --- PASS: TestMigProjectInvitation_basic (10.60s)
-```

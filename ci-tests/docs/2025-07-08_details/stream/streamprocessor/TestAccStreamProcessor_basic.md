@@ -1,32 +1,14 @@
 # stream/streamprocessor/TestAccStreamProcessor_basic Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 9) FAIL
-Success rate: 90.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL
+Success rate: 88.89%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 13 seconds
-```
-2025-07-01T08:50:28.2732117Z === RUN   TestAccStreamProcessor_basic
-2025-07-01T08:50:28.2837246Z === CONT  TestAccStreamProcessor_basic
-2025-07-01T08:50:28.2856350Z --- PASS: TestAccStreamProcessor_basic (13.62s)
-```
 #### PASS 8 seconds
-```
-2025-07-01T12:50:20.6072913Z === RUN   TestAccStreamProcessor_basic
-2025-07-01T12:50:20.6127422Z === CONT  TestAccStreamProcessor_basic
-2025-07-01T12:50:20.6137072Z --- PASS: TestAccStreamProcessor_basic (8.96s)
-```
 #### PASS 11 seconds
-```
-2025-07-01T17:50:24.3483046Z === RUN   TestAccStreamProcessor_basic
-2025-07-01T17:50:24.3584310Z === CONT  TestAccStreamProcessor_basic
-2025-07-01T17:50:24.3588001Z   diagnostic_detail=
-2025-07-01T17:50:24.3591456Z    tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas tf_proto_version=6.9 tf_resource_type=mongodbatlas_stream_processor
-2025-07-01T17:50:24.3599756Z --- PASS: TestAccStreamProcessor_basic (11.00s)
-```
 ### 2025-07-02
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestAccStreamProcessor_basic',confidence=1.0,ts_when='5 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestAccStreamProcessor_basic',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-02T00:46:31.9208602Z === RUN   TestAccStreamProcessor_basic
@@ -66,51 +48,13 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-03
 #### PASS 20 seconds
-```
-2025-07-03T00:46:39.9541177Z === RUN   TestAccStreamProcessor_basic
-2025-07-03T00:46:39.9794045Z === CONT  TestAccStreamProcessor_basic
-2025-07-03T00:46:39.9803753Z --- PASS: TestAccStreamProcessor_basic (20.93s)
-```
 ### 2025-07-04
 #### PASS 8 seconds
-```
-2025-07-04T00:51:07.7052809Z === RUN   TestAccStreamProcessor_basic
-2025-07-04T00:51:07.7214348Z === CONT  TestAccStreamProcessor_basic
-2025-07-04T00:51:07.7217424Z   diagnostic_detail=
-2025-07-04T00:51:07.7219480Z   
-2025-07-04T00:51:07.7223906Z --- PASS: TestAccStreamProcessor_basic (8.99s)
-```
 ### 2025-07-05
 #### PASS 12 seconds
-```
-2025-07-05T00:44:07.5868975Z === RUN   TestAccStreamProcessor_basic
-2025-07-05T00:44:07.6142878Z === CONT  TestAccStreamProcessor_basic
-2025-07-05T00:44:07.6144458Z   diagnostic_detail=
-2025-07-05T00:44:07.6146877Z    tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas diagnostic_severity=ERROR diagnostic_summary="Invalid JSON String Value" diagnostic_attribute="AttributeName(\"pipeline\")" tf_req_id=45a604cc-1323-271f-6558-6df91d7a4dfc
-2025-07-05T00:44:07.6151681Z --- PASS: TestAccStreamProcessor_basic (12.29s)
-```
 ### 2025-07-06
 #### PASS 11 seconds
-```
-2025-07-06T00:48:43.0077951Z === RUN   TestAccStreamProcessor_basic
-2025-07-06T00:48:43.0302559Z === CONT  TestAccStreamProcessor_basic
-2025-07-06T00:48:43.0311871Z --- PASS: TestAccStreamProcessor_basic (11.15s)
-```
 ### 2025-07-07
 #### PASS 9 seconds
-```
-2025-07-07T00:48:05.7811246Z === RUN   TestAccStreamProcessor_basic
-2025-07-07T00:48:05.8095800Z === CONT  TestAccStreamProcessor_basic
-2025-07-07T00:48:05.8097571Z   diagnostic_detail=
-2025-07-07T00:48:05.8099838Z    diagnostic_severity=ERROR tf_rpc=ValidateResourceConfig diagnostic_summary="Invalid JSON String Value" tf_resource_type=mongodbatlas_stream_processor tf_req_id=1e28f3c4-1f15-3cd6-59c1-e3650605c5a4
-2025-07-07T00:48:05.8104136Z --- PASS: TestAccStreamProcessor_basic (9.12s)
-```
 ### 2025-07-08
 #### PASS 9 seconds
-```
-2025-07-08T00:45:56.1164768Z === RUN   TestAccStreamProcessor_basic
-2025-07-08T00:45:56.1511610Z === CONT  TestAccStreamProcessor_basic
-2025-07-08T00:45:56.1517076Z   diagnostic_detail=
-2025-07-08T00:45:56.1519883Z   
-2025-07-08T00:45:56.1528096Z --- PASS: TestAccStreamProcessor_basic (9.38s)
-```

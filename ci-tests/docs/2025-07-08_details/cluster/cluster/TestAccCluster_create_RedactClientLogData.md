@@ -1,43 +1,17 @@
 # cluster/cluster/TestAccCluster_create_RedactClientLogData Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 15 minutes
-```
-2025-07-01T08:33:37.0087451Z === RUN   TestAccCluster_create_RedactClientLogData
-2025-07-01T08:33:37.0092789Z === CONT  TestAccCluster_create_RedactClientLogData
-2025-07-01T08:49:07.9029225Z --- PASS: TestAccCluster_create_RedactClientLogData (930.90s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 16 minutes
-```
-2025-07-02T00:28:55.2448837Z === RUN   TestAccCluster_create_RedactClientLogData
-2025-07-02T00:28:55.2452482Z === CONT  TestAccCluster_create_RedactClientLogData
-2025-07-02T00:45:38.1234274Z --- PASS: TestAccCluster_create_RedactClientLogData (1002.88s)
-```
 ### 2025-07-03
 #### PASS 17 minutes
-```
-2025-07-03T00:29:32.3597512Z === RUN   TestAccCluster_create_RedactClientLogData
-2025-07-03T00:29:32.3739305Z === CONT  TestAccCluster_create_RedactClientLogData
-2025-07-03T00:46:56.0063683Z --- PASS: TestAccCluster_create_RedactClientLogData (1043.63s)
-```
 ### 2025-07-04
 #### PASS 16 minutes
-```
-2025-07-04T00:28:53.1087518Z === RUN   TestAccCluster_create_RedactClientLogData
-2025-07-04T00:28:53.1092141Z === CONT  TestAccCluster_create_RedactClientLogData
-2025-07-04T00:44:54.9593139Z --- PASS: TestAccCluster_create_RedactClientLogData (961.85s)
-```
 ### 2025-07-05
 #### PASS 14 minutes
-```
-2025-07-05T00:28:09.1111542Z === RUN   TestAccCluster_create_RedactClientLogData
-2025-07-05T00:28:09.1116692Z === CONT  TestAccCluster_create_RedactClientLogData
-2025-07-05T00:42:54.5417293Z --- PASS: TestAccCluster_create_RedactClientLogData (885.44s)
-```
 ### 2025-07-06
 #### FAIL 36 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 14 minutes
-```
-2025-07-07T00:31:36.2398478Z === RUN   TestAccCluster_create_RedactClientLogData
-2025-07-07T00:31:36.2480037Z === CONT  TestAccCluster_create_RedactClientLogData
-2025-07-07T00:45:55.1502677Z --- PASS: TestAccCluster_create_RedactClientLogData (858.91s)
-```
 ### 2025-07-08
 #### PASS 15 minutes
-```
-2025-07-08T00:29:14.7594230Z === RUN   TestAccCluster_create_RedactClientLogData
-2025-07-08T00:29:14.7610417Z === CONT  TestAccCluster_create_RedactClientLogData
-2025-07-08T00:44:39.6623456Z --- PASS: TestAccCluster_create_RedactClientLogData (924.90s)
-```

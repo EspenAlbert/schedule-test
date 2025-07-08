@@ -1,15 +1,9 @@
 # advanced_cluster_tpf/advancedcluster/TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 16 minutes
-```
-2025-07-01T08:20:46.7725850Z === RUN   TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-01T08:20:46.7755351Z === CONT  TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-01T08:20:46.7881908Z --- PASS: TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema (1005.37s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### FAIL 5 seconds
 ```
@@ -33,43 +27,13 @@ Success rate: 87.50%
 ```
 ### 2025-07-03
 #### PASS 15 minutes
-```
-2025-07-03T01:45:42.2299593Z === RUN   TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-03T01:45:42.2354520Z === CONT  TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-03T01:45:42.2485106Z --- PASS: TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema (921.81s)
-```
 ### 2025-07-04
 #### PASS 20 minutes
-```
-2025-07-04T04:07:06.1327143Z === RUN   TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-04T04:07:06.1358956Z === CONT  TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-04T04:07:06.1555708Z --- PASS: TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema (1227.41s)
-```
 ### 2025-07-05
 #### PASS 18 minutes
-```
-2025-07-05T03:55:54.4247795Z === RUN   TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-05T03:55:54.4289561Z === CONT  TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-05T03:55:54.4400973Z --- PASS: TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema (1106.77s)
-```
 ### 2025-07-06
 #### PASS 16 minutes
-```
-2025-07-06T01:46:53.5873398Z === RUN   TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-06T01:46:53.5917342Z === CONT  TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-06T01:46:53.6100356Z --- PASS: TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema (1012.07s)
-```
 ### 2025-07-07
 #### PASS 14 minutes
-```
-2025-07-07T03:58:24.8953230Z === RUN   TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-07T03:58:24.8991407Z === CONT  TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-07T03:58:24.9101436Z --- PASS: TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema (863.13s)
-```
 ### 2025-07-08
 #### PASS 15 minutes
-```
-2025-07-08T02:00:19.2775422Z === RUN   TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-08T02:00:19.2826728Z === CONT  TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema
-2025-07-08T02:00:19.2951223Z --- PASS: TestAccClusterAdvancedClusterConfig_shardedTransitionFromOldToNewSchema (953.30s)
-```

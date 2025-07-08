@@ -1,43 +1,17 @@
 # config/maintenancewindow/TestAccConfigRSMaintenanceWindow_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 16 seconds
-```
-2025-07-01T08:35:29.4637882Z === RUN   TestAccConfigRSMaintenanceWindow_basic
-2025-07-01T08:35:29.4642610Z === CONT  TestAccConfigRSMaintenanceWindow_basic
-2025-07-01T08:35:29.4645920Z --- PASS: TestAccConfigRSMaintenanceWindow_basic (16.48s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 15 seconds
-```
-2025-07-02T00:30:40.8656262Z === RUN   TestAccConfigRSMaintenanceWindow_basic
-2025-07-02T00:30:40.8659743Z === CONT  TestAccConfigRSMaintenanceWindow_basic
-2025-07-02T00:30:40.8662081Z --- PASS: TestAccConfigRSMaintenanceWindow_basic (15.55s)
-```
 ### 2025-07-03
 #### PASS 27 seconds
-```
-2025-07-03T00:31:22.4280929Z === RUN   TestAccConfigRSMaintenanceWindow_basic
-2025-07-03T00:31:22.4287164Z === CONT  TestAccConfigRSMaintenanceWindow_basic
-2025-07-03T00:31:22.4291788Z --- PASS: TestAccConfigRSMaintenanceWindow_basic (27.56s)
-```
 ### 2025-07-04
 #### PASS 20 seconds
-```
-2025-07-04T00:30:47.2465060Z === RUN   TestAccConfigRSMaintenanceWindow_basic
-2025-07-04T00:30:47.2470694Z === CONT  TestAccConfigRSMaintenanceWindow_basic
-2025-07-04T00:30:47.2474460Z --- PASS: TestAccConfigRSMaintenanceWindow_basic (20.56s)
-```
 ### 2025-07-05
 #### PASS 29 seconds
-```
-2025-07-05T00:29:58.2643621Z === RUN   TestAccConfigRSMaintenanceWindow_basic
-2025-07-05T00:29:58.2646758Z === CONT  TestAccConfigRSMaintenanceWindow_basic
-2025-07-05T00:29:58.2649547Z --- PASS: TestAccConfigRSMaintenanceWindow_basic (29.85s)
-```
 ### 2025-07-06
 #### FAIL 46 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 25 seconds
-```
-2025-07-07T00:33:18.3604249Z === RUN   TestAccConfigRSMaintenanceWindow_basic
-2025-07-07T00:33:18.3611013Z === CONT  TestAccConfigRSMaintenanceWindow_basic
-2025-07-07T00:33:18.3616013Z --- PASS: TestAccConfigRSMaintenanceWindow_basic (25.92s)
-```
 ### 2025-07-08
 #### PASS 30 seconds
-```
-2025-07-08T00:31:21.0008328Z === RUN   TestAccConfigRSMaintenanceWindow_basic
-2025-07-08T00:31:21.0014861Z === CONT  TestAccConfigRSMaintenanceWindow_basic
-2025-07-08T00:31:21.0019195Z --- PASS: TestAccConfigRSMaintenanceWindow_basic (30.86s)
-```

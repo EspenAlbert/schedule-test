@@ -6,18 +6,8 @@ Success rate: 42.86%
 2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 38 minutes
-```
-2025-07-02T00:59:45.2903040Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:01:14.4477549Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:39:23.6198549Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2289.20s)
-```
 ### 2025-07-03
 #### PASS 33 minutes
-```
-2025-07-03T00:58:58.3139877Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:00:24.5889848Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:33:26.1368670Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (1981.55s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -122,8 +112,3 @@ Success rate: 42.86%
 ```
 ### 2025-07-08
 #### PASS 35 minutes
-```
-2025-07-08T00:59:16.7947544Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-08T01:00:20.8955314Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-2025-07-08T01:35:24.9513101Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2104.06s)
-```

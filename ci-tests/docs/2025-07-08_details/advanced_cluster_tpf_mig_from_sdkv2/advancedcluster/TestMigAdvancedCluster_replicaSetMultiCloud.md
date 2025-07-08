@@ -1,39 +1,14 @@
 # advanced_cluster_tpf_mig_from_sdkv2/advancedcluster/TestMigAdvancedCluster_replicaSetMultiCloud Test Details
-# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL(x 3)
-Success rate: 66.67%
+# Found 8 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 5) FAIL(x 3)
+Success rate: 62.50%
 
 ## Timeline
-### 2025-07-01
-#### PASS 17 minutes
-```
-2025-07-01T08:33:45.5384525Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-01T08:33:45.5386020Z     resource_advanced_cluster_migration_test.go:22: Running test SDKv2 to TPF
-2025-07-01T08:33:46.8960159Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-01T08:51:36.3670369Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1069.48s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 16 minutes
-```
-2025-07-02T00:29:04.4142704Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T00:29:04.4143495Z     resource_advanced_cluster_migration_test.go:22: Running test SDKv2 to TPF
-2025-07-02T00:29:06.7120097Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T00:45:06.9459177Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (960.24s)
-```
 #### PASS 15 minutes
-```
-2025-07-02T13:36:11.3011441Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T13:36:11.3012413Z     resource_advanced_cluster_migration_test.go:22: Running test SDKv2 to TPF
-2025-07-02T13:36:13.4449074Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T13:51:32.4322017Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (918.99s)
-```
 ### 2025-07-03
 #### PASS 17 minutes
-```
-2025-07-03T00:29:40.5645443Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-03T00:29:40.5646600Z     resource_advanced_cluster_migration_test.go:22: Running test SDKv2 to TPF
-2025-07-03T00:29:42.6786957Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-03T00:46:56.5175165Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1033.84s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -91,12 +66,6 @@ Success rate: 66.67%
 ```
 ### 2025-07-06
 #### PASS 17 minutes
-```
-2025-07-06T00:32:14.0541483Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-06T00:32:14.0542490Z     resource_advanced_cluster_migration_test.go:22: Running test SDKv2 to TPF
-2025-07-06T00:32:16.1564182Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-06T00:49:26.1943185Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1030.04s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -126,9 +95,3 @@ Success rate: 66.67%
 ```
 ### 2025-07-08
 #### PASS 17 minutes
-```
-2025-07-08T00:29:32.5403113Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-08T00:29:32.5404176Z     resource_advanced_cluster_migration_test.go:22: Running test SDKv2 to TPF
-2025-07-08T00:29:35.0355086Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-08T00:47:24.8680658Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1069.84s)
-```

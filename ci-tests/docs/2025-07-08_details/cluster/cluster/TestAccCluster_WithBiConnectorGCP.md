@@ -1,29 +1,13 @@
 # cluster/cluster/TestAccCluster_WithBiConnectorGCP Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 5) FAIL(x 3)
-Success rate: 62.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 4) FAIL(x 3)
+Success rate: 57.14%
 
 ## Timeline
-### 2025-07-01
-#### PASS 17 minutes
-```
-2025-07-01T08:33:33.2107671Z === RUN   TestAccCluster_WithBiConnectorGCP
-2025-07-01T08:33:37.0295496Z === CONT  TestAccCluster_WithBiConnectorGCP
-2025-07-01T08:50:54.7146013Z --- PASS: TestAccCluster_WithBiConnectorGCP (1039.64s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 18 minutes
-```
-2025-07-02T00:28:47.5980245Z === RUN   TestAccCluster_WithBiConnectorGCP
-2025-07-02T00:28:55.2468909Z === CONT  TestAccCluster_WithBiConnectorGCP
-2025-07-02T00:46:53.2455002Z --- PASS: TestAccCluster_WithBiConnectorGCP (1082.24s)
-```
 ### 2025-07-03
 #### PASS 16 minutes
-```
-2025-07-03T00:29:26.0744520Z === RUN   TestAccCluster_WithBiConnectorGCP
-2025-07-03T00:29:32.3638822Z === CONT  TestAccCluster_WithBiConnectorGCP
-2025-07-03T00:46:17.8010708Z --- PASS: TestAccCluster_WithBiConnectorGCP (1009.89s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -58,11 +42,6 @@ Success rate: 62.50%
 ```
 ### 2025-07-06
 #### PASS 14 minutes
-```
-2025-07-06T00:32:00.8630726Z === RUN   TestAccCluster_WithBiConnectorGCP
-2025-07-06T00:32:04.2356455Z === CONT  TestAccCluster_WithBiConnectorGCP
-2025-07-06T00:46:55.9525056Z --- PASS: TestAccCluster_WithBiConnectorGCP (893.33s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -81,8 +60,3 @@ Success rate: 62.50%
 ```
 ### 2025-07-08
 #### PASS 18 minutes
-```
-2025-07-08T00:29:11.7938140Z === RUN   TestAccCluster_WithBiConnectorGCP
-2025-07-08T00:29:14.7600629Z === CONT  TestAccCluster_WithBiConnectorGCP
-2025-07-08T00:47:36.7944343Z --- PASS: TestAccCluster_WithBiConnectorGCP (1103.30s)
-```

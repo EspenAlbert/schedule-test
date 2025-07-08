@@ -1,43 +1,17 @@
 # assume_role/provider/TestAccSTSAssumeRole_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 6 seconds
-```
-2025-07-01T08:33:36.3165402Z === RUN   TestAccSTSAssumeRole_basic
-2025-07-01T08:33:36.3167720Z === CONT  TestAccSTSAssumeRole_basic
-2025-07-01T08:33:43.2191717Z --- PASS: TestAccSTSAssumeRole_basic (6.90s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 12 seconds
-```
-2025-07-02T00:28:47.9064241Z === RUN   TestAccSTSAssumeRole_basic
-2025-07-02T00:28:47.9072513Z === CONT  TestAccSTSAssumeRole_basic
-2025-07-02T00:28:59.9152835Z --- PASS: TestAccSTSAssumeRole_basic (12.01s)
-```
 ### 2025-07-03
 #### PASS 11 seconds
-```
-2025-07-03T00:29:27.5070468Z === RUN   TestAccSTSAssumeRole_basic
-2025-07-03T00:29:27.5071811Z === CONT  TestAccSTSAssumeRole_basic
-2025-07-03T00:29:38.7999398Z --- PASS: TestAccSTSAssumeRole_basic (11.29s)
-```
 ### 2025-07-04
 #### PASS 11 seconds
-```
-2025-07-04T00:28:53.5079880Z === RUN   TestAccSTSAssumeRole_basic
-2025-07-04T00:28:53.5081058Z === CONT  TestAccSTSAssumeRole_basic
-2025-07-04T00:29:04.8854289Z --- PASS: TestAccSTSAssumeRole_basic (11.38s)
-```
 ### 2025-07-05
 #### PASS 6 seconds
-```
-2025-07-05T00:27:54.8074569Z === RUN   TestAccSTSAssumeRole_basic
-2025-07-05T00:27:54.8075434Z === CONT  TestAccSTSAssumeRole_basic
-2025-07-05T00:28:00.9670732Z --- PASS: TestAccSTSAssumeRole_basic (6.16s)
-```
 ### 2025-07-06
 #### FAIL 35 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 6 seconds
-```
-2025-07-07T00:31:27.6750860Z === RUN   TestAccSTSAssumeRole_basic
-2025-07-07T00:31:27.6752030Z === CONT  TestAccSTSAssumeRole_basic
-2025-07-07T00:31:34.0482919Z --- PASS: TestAccSTSAssumeRole_basic (6.37s)
-```
 ### 2025-07-08
 #### PASS 10 seconds
-```
-2025-07-08T00:29:17.0196249Z === RUN   TestAccSTSAssumeRole_basic
-2025-07-08T00:29:17.0197942Z === CONT  TestAccSTSAssumeRole_basic
-2025-07-08T00:29:27.2824949Z --- PASS: TestAccSTSAssumeRole_basic (10.26s)
-```

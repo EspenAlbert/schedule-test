@@ -1,38 +1,13 @@
 # stream/streamprocessor/TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL(x 3)
-Success rate: 70.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL(x 3)
+Success rate: 66.67%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 7 seconds
-```
-2025-07-01T08:50:28.2799202Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-01T08:50:28.2800531Z     resource_test.go:250: Testing: Verifies a processor cannot transition from CREATED to STOPPED state
-2025-07-01T08:50:28.2809787Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-01T08:50:28.2829550Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped (7.21s)
-```
 #### PASS 5 seconds
-```
-2025-07-01T12:50:20.6107577Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-01T12:50:20.6108445Z     resource_test.go:250: Testing: Verifies a processor cannot transition from CREATED to STOPPED state
-2025-07-01T12:50:20.6113199Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-01T12:50:20.6123315Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped (5.08s)
-```
 #### PASS 6 seconds
-```
-2025-07-01T17:50:24.3546997Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-01T17:50:24.3548212Z     resource_test.go:250: Testing: Verifies a processor cannot transition from CREATED to STOPPED state
-2025-07-01T17:50:24.3557169Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-01T17:50:24.3575610Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped (6.40s)
-```
 ### 2025-07-02
 #### PASS 5 seconds
-```
-2025-07-02T00:46:31.9265980Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-02T00:46:31.9266697Z     resource_test.go:250: Testing: Verifies a processor cannot transition from CREATED to STOPPED state
-2025-07-02T00:46:31.9271858Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-02T00:46:31.9327726Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped (5.21s)
-```
 ### 2025-07-03
 #### FAIL 31 seconds
 GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-03T00:46:39.964000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped',confidence=1.0,ts_when='5 days ago')
@@ -74,28 +49,10 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-04
 #### PASS 30 seconds
-```
-2025-07-04T00:51:07.7142574Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-04T00:51:07.7143430Z     resource_test.go:250: Testing: Verifies a processor cannot transition from CREATED to STOPPED state
-2025-07-04T00:51:07.7148530Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-04T00:51:07.7209228Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped (30.81s)
-```
 ### 2025-07-05
 #### PASS 31 seconds
-```
-2025-07-05T00:44:07.6011101Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-05T00:44:07.6012335Z     resource_test.go:250: Testing: Verifies a processor cannot transition from CREATED to STOPPED state
-2025-07-05T00:44:07.6021152Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-05T00:44:07.6139516Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped (31.80s)
-```
 ### 2025-07-06
 #### PASS 11 seconds
-```
-2025-07-06T00:48:43.0282932Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-06T00:48:43.0283627Z     resource_test.go:250: Testing: Verifies a processor cannot transition from CREATED to STOPPED state
-2025-07-06T00:48:43.0288477Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped
-2025-07-06T00:48:43.0298755Z     --- PASS: TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped (11.11s)
-```
 ### 2025-07-07
 #### FAIL 31 seconds
 ```
@@ -136,7 +93,7 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-08
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-08T00:45:56.131000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped',confidence=1.0,ts_when='an hour ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-08T00:45:56.131000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped',confidence=1.0,ts_when='3 hours ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-08T00:45:56.1312673Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped

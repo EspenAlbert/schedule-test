@@ -1,43 +1,17 @@
 # config/maintenancewindow/TestMigConfigMaintenanceWindow_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 16 seconds
-```
-2025-07-01T08:35:29.4636738Z === RUN   TestMigConfigMaintenanceWindow_basic
-2025-07-01T08:35:29.4642936Z === CONT  TestMigConfigMaintenanceWindow_basic
-2025-07-01T08:35:29.4645210Z --- PASS: TestMigConfigMaintenanceWindow_basic (16.27s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 14 seconds
-```
-2025-07-02T00:30:40.8655615Z === RUN   TestMigConfigMaintenanceWindow_basic
-2025-07-02T00:30:40.8660065Z === CONT  TestMigConfigMaintenanceWindow_basic
-2025-07-02T00:30:40.8661711Z --- PASS: TestMigConfigMaintenanceWindow_basic (14.16s)
-```
 ### 2025-07-03
 #### PASS 26 seconds
-```
-2025-07-03T00:31:22.4279770Z === RUN   TestMigConfigMaintenanceWindow_basic
-2025-07-03T00:31:22.4287798Z === CONT  TestMigConfigMaintenanceWindow_basic
-2025-07-03T00:31:22.4291105Z --- PASS: TestMigConfigMaintenanceWindow_basic (26.04s)
-```
 ### 2025-07-04
 #### PASS 18 seconds
-```
-2025-07-04T00:30:47.2464039Z === RUN   TestMigConfigMaintenanceWindow_basic
-2025-07-04T00:30:47.2471208Z === CONT  TestMigConfigMaintenanceWindow_basic
-2025-07-04T00:30:47.2473873Z --- PASS: TestMigConfigMaintenanceWindow_basic (18.56s)
-```
 ### 2025-07-05
 #### PASS 25 seconds
-```
-2025-07-05T00:29:58.2642967Z === RUN   TestMigConfigMaintenanceWindow_basic
-2025-07-05T00:29:58.2647492Z === CONT  TestMigConfigMaintenanceWindow_basic
-2025-07-05T00:29:58.2649167Z --- PASS: TestMigConfigMaintenanceWindow_basic (25.83s)
-```
 ### 2025-07-06
 #### FAIL 34 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 22 seconds
-```
-2025-07-07T00:33:18.3601793Z === RUN   TestMigConfigMaintenanceWindow_basic
-2025-07-07T00:33:18.3611594Z === CONT  TestMigConfigMaintenanceWindow_basic
-2025-07-07T00:33:18.3615355Z --- PASS: TestMigConfigMaintenanceWindow_basic (22.45s)
-```
 ### 2025-07-08
 #### PASS 26 seconds
-```
-2025-07-08T00:31:21.0007155Z === RUN   TestMigConfigMaintenanceWindow_basic
-2025-07-08T00:31:21.0015454Z === CONT  TestMigConfigMaintenanceWindow_basic
-2025-07-08T00:31:21.0018497Z --- PASS: TestMigConfigMaintenanceWindow_basic (26.61s)
-```

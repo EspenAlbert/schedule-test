@@ -1,29 +1,13 @@
 # cluster/cluster/TestAccCluster_basicGCPRegionNameWesternUS Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 5) FAIL(x 3)
-Success rate: 62.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 4) FAIL(x 3)
+Success rate: 57.14%
 
 ## Timeline
-### 2025-07-01
-#### PASS 15 minutes
-```
-2025-07-01T08:33:37.0079855Z === RUN   TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-01T08:33:37.0135998Z === CONT  TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-01T08:48:49.1859350Z --- PASS: TestAccCluster_basicGCPRegionNameWesternUS (912.17s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 12 minutes
-```
-2025-07-02T00:28:55.2434169Z === RUN   TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-02T00:28:55.2453434Z === CONT  TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-02T00:41:36.0113865Z --- PASS: TestAccCluster_basicGCPRegionNameWesternUS (760.77s)
-```
 ### 2025-07-03
 #### PASS 15 minutes
-```
-2025-07-03T00:29:32.3590362Z === RUN   TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-03T00:29:32.3604394Z === CONT  TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-03T00:44:42.3348080Z --- PASS: TestAccCluster_basicGCPRegionNameWesternUS (909.97s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -58,11 +42,6 @@ Success rate: 62.50%
 ```
 ### 2025-07-06
 #### PASS 12 minutes
-```
-2025-07-06T00:32:04.2074385Z === RUN   TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-06T00:32:04.2366267Z === CONT  TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-06T00:44:41.9758447Z --- PASS: TestAccCluster_basicGCPRegionNameWesternUS (757.75s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -81,8 +60,3 @@ Success rate: 62.50%
 ```
 ### 2025-07-08
 #### PASS 14 minutes
-```
-2025-07-08T00:29:14.7587154Z === RUN   TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-08T00:29:14.7606301Z === CONT  TestAccCluster_basicGCPRegionNameWesternUS
-2025-07-08T00:43:42.7097815Z --- PASS: TestAccCluster_basicGCPRegionNameWesternUS (867.95s)
-```

@@ -6,22 +6,10 @@ Success rate: 57.14%
 2025-07-01: MISSING
 ### 2025-07-02
 #### PASS a minute
-```
-2025-07-02T00:59:55.0957292Z === RUN   TestAccClusterFlexCluster_basic
-2025-07-02T01:01:14.4168860Z --- PASS: TestAccClusterFlexCluster_basic (79.32s)
-```
 ### 2025-07-03
 #### PASS a minute
-```
-2025-07-03T00:59:08.7565292Z === RUN   TestAccClusterFlexCluster_basic
-2025-07-03T01:00:24.5865494Z --- PASS: TestAccClusterFlexCluster_basic (75.83s)
-```
 ### 2025-07-04
 #### PASS a minute
-```
-2025-07-04T00:59:35.2745694Z === RUN   TestAccClusterFlexCluster_basic
-2025-07-04T01:00:51.5863252Z --- PASS: TestAccClusterFlexCluster_basic (76.31s)
-```
 ### 2025-07-05
 #### FAIL 50 seconds
 ```
@@ -39,10 +27,6 @@ Success rate: 57.14%
 ```
 ### 2025-07-06
 #### PASS a minute
-```
-2025-07-06T01:01:24.2966874Z === RUN   TestAccClusterFlexCluster_basic
-2025-07-06T01:02:29.7990298Z --- PASS: TestAccClusterFlexCluster_basic (65.50s)
-```
 ### 2025-07-07
 #### FAIL 41 seconds
 ```
@@ -56,7 +40,7 @@ Success rate: 57.14%
 ```
 ### 2025-07-08
 #### FAIL 51 seconds
-GoTestErrorClassification(error_class='flaky_check',author='human',run_id='2025-07-08T00:59:29.904000+00:00-TestAccClusterFlexCluster_basic',confidence=1.0,ts_when='an hour ago')
+GoTestErrorClassification(error_class='flaky_check',author='human',run_id='2025-07-08T00:59:29.904000+00:00-TestAccClusterFlexCluster_basic',confidence=1.0,ts_when='3 hours ago')
 CheckFailure for advanced_cluster.test at Step: 1 Checks: 10,11,25,26,40,41,52,66
 ```
 2025-07-08T00:59:29.0904105Z === RUN   TestAccClusterFlexCluster_basic

@@ -1,49 +1,18 @@
 # stream/streamprocessor/TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL(x 3)
-Success rate: 70.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL(x 3)
+Success rate: 66.67%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 8 seconds
-```
-2025-07-01T08:50:28.2779761Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-01T08:50:28.2781351Z     resource_test.go:209: Testing: Verifies that a processor in CREATED state can be updated while remaining in a derived CREATED state from empty state
-2025-07-01T08:50:28.2791364Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-01T08:50:28.2795102Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState (8.91s)
-```
 #### PASS 5 seconds
-```
-2025-07-01T12:50:20.6097463Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-01T12:50:20.6098455Z     resource_test.go:209: Testing: Verifies that a processor in CREATED state can be updated while remaining in a derived CREATED state from empty state
-2025-07-01T12:50:20.6103453Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-01T12:50:20.6105430Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState (5.94s)
-```
 #### PASS 7 seconds
-```
-2025-07-01T17:50:24.3528282Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-01T17:50:24.3529816Z     resource_test.go:209: Testing: Verifies that a processor in CREATED state can be updated while remaining in a derived CREATED state from empty state
-2025-07-01T17:50:24.3539276Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-01T17:50:24.3543072Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState (7.42s)
-```
 ### 2025-07-02
 #### PASS 5 seconds
-```
-2025-07-02T00:46:31.9255357Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-02T00:46:31.9256223Z     resource_test.go:209: Testing: Verifies that a processor in CREATED state can be updated while remaining in a derived CREATED state from empty state
-2025-07-02T00:46:31.9261596Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-02T00:46:31.9263763Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState (5.94s)
-```
 ### 2025-07-03
 #### PASS 6 seconds
-```
-2025-07-03T00:46:39.9571326Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-03T00:46:39.9572169Z     resource_test.go:209: Testing: Verifies that a processor in CREATED state can be updated while remaining in a derived CREATED state from empty state
-2025-07-03T00:46:39.9577666Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-03T00:46:39.9640934Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState (6.69s)
-```
 ### 2025-07-04
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-04T00:51:07.708000+00:00-TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState',confidence=1.0,ts_when='3 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-04T00:51:07.708000+00:00-TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState',confidence=1.0,ts_when='4 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-04T00:51:07.7084999Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
@@ -148,17 +117,5 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-07
 #### PASS 6 seconds
-```
-2025-07-07T00:48:05.7838587Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-07T00:48:05.7839537Z     resource_test.go:209: Testing: Verifies that a processor in CREATED state can be updated while remaining in a derived CREATED state from empty state
-2025-07-07T00:48:05.7845411Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-07T00:48:05.7941922Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState (6.04s)
-```
 ### 2025-07-08
 #### PASS 6 seconds
-```
-2025-07-08T00:45:56.1209970Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-08T00:45:56.1211502Z     resource_test.go:209: Testing: Verifies that a processor in CREATED state can be updated while remaining in a derived CREATED state from empty state
-2025-07-08T00:45:56.1220792Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState
-2025-07-08T00:45:56.1308534Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/CreatedToEmptyState (6.35s)
-```

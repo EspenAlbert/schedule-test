@@ -1,55 +1,19 @@
 # stream/streaminstance/TestAccStreamDSStreamInstances_withPageConfig Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 9) FAIL
-Success rate: 90.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL
+Success rate: 88.89%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 3 seconds
-```
-2025-07-01T08:50:28.2713413Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-01T08:50:28.2719947Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-01T08:50:28.2724278Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (3.49s)
-```
 #### PASS 2 seconds
-```
-2025-07-01T12:50:20.6062663Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-01T12:50:20.6066803Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-01T12:50:20.6068193Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.47s)
-```
 #### PASS 2 seconds
-```
-2025-07-01T17:50:24.3464892Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-01T17:50:24.3471093Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-01T17:50:24.3473953Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.51s)
-```
 ### 2025-07-02
 #### PASS 2 seconds
-```
-2025-07-02T00:46:31.9189741Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-02T00:46:31.9197431Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-02T00:46:31.9198742Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.28s)
-```
 ### 2025-07-03
 #### PASS 2 seconds
-```
-2025-07-03T00:46:39.9530757Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-03T00:46:39.9535604Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-03T00:46:39.9536024Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.46s)
-```
 ### 2025-07-04
 #### PASS 2 seconds
-```
-2025-07-04T00:45:55.5459148Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-04T00:45:55.5462842Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-04T00:45:55.5464397Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.21s)
-```
 ### 2025-07-05
 #### PASS 2 seconds
-```
-2025-07-05T00:44:07.5851145Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-05T00:44:07.5858043Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-05T00:44:07.5860539Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.83s)
-```
 ### 2025-07-06
 #### FAIL 30 seconds
 ```
@@ -72,15 +36,5 @@ Success rate: 90.00%
 ```
 ### 2025-07-07
 #### PASS 2 seconds
-```
-2025-07-07T00:48:05.7800926Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-07T00:48:05.7804460Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-07T00:48:05.7806518Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.39s)
-```
 ### 2025-07-08
 #### PASS 2 seconds
-```
-2025-07-08T00:45:56.1146862Z === RUN   TestAccStreamDSStreamInstances_withPageConfig
-2025-07-08T00:45:56.1152874Z === CONT  TestAccStreamDSStreamInstances_withPageConfig
-2025-07-08T00:45:56.1155499Z --- PASS: TestAccStreamDSStreamInstances_withPageConfig (2.33s)
-```

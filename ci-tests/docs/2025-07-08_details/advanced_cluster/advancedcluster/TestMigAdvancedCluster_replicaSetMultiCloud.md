@@ -6,18 +6,8 @@ Success rate: 57.14%
 2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 21 minutes
-```
-2025-07-02T00:29:00.8853540Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:01:14.4682099Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:23:00.3143405Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1305.88s)
-```
 ### 2025-07-03
 #### PASS 19 minutes
-```
-2025-07-03T00:29:44.5390952Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:00:24.5926765Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:19:50.4817615Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1165.89s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -72,11 +62,6 @@ Success rate: 57.14%
 ```
 ### 2025-07-06
 #### PASS 21 minutes
-```
-2025-07-06T00:32:22.1859820Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-06T01:02:29.8169143Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-06T01:23:30.2286002Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1260.42s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -106,8 +91,3 @@ Success rate: 57.14%
 ```
 ### 2025-07-08
 #### PASS 19 minutes
-```
-2025-07-08T00:29:32.2679866Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-08T01:00:20.9279627Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-08T01:19:40.4169023Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1159.50s)
-```

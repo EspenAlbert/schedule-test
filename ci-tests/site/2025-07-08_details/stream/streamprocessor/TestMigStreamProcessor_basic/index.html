@@ -292,135 +292,94 @@
 
 
 <h1 id="streamstreamprocessortestmigstreamprocessor_basic-test-details">stream/streamprocessor/TestMigStreamProcessor_basic Test Details</h1>
-<h1 id="found-10-testruns-in-dev-qa-from-2025-07-01-to-2025-07-08-from-master-branch-1-unique-tests-passx-8-failx-2">Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL(x 2)</h1>
-<p>Success rate: 80.00%</p>
+<h1 id="found-9-testruns-in-dev-qa-from-2025-07-01-to-2025-07-08-from-master-branch-1-unique-tests-passx-7-failx-2">Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL(x 2)</h1>
+<p>Success rate: 77.78%</p>
 <h2 id="timeline">Timeline</h2>
 <h3 id="2025-07-01">2025-07-01</h3>
-<h4 id="pass-16-seconds">PASS 16 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-01T08:50:28.2729731Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-01T08:50:28.2730745Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-6455120340503680040
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-01T08:50:28.2835605Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-01T08:50:28.2855756Z --- PASS: TestMigStreamProcessor_basic (16.76s)
-</code></pre></div>
 <h4 id="pass-10-seconds">PASS 10 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-01T12:50:20.6071645Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-01T12:50:20.6072186Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-5239256197598282775
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-01T12:50:20.6126476Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-01T12:50:20.6136745Z --- PASS: TestMigStreamProcessor_basic (10.09s)
-</code></pre></div>
 <h4 id="pass-13-seconds">PASS 13 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-01T17:50:24.3480616Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-01T17:50:24.3481596Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-9019735662383270141
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-01T17:50:24.3581332Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-07-01T17:50:24.3600317Z --- PASS: TestMigStreamProcessor_basic (13.78s)
-</code></pre></div>
 <h3 id="2025-07-02">2025-07-02</h3>
 <h4 id="fail-34-seconds">FAIL 34 seconds</h4>
-<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestMigStreamProcessor_basic',confidence=1.0,ts_when='5 days ago')
+<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.920000+00:00-TestMigStreamProcessor_basic',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-02T00:46:31.9206236Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-02T00:46:31.9207255Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-3752186971444699683
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-02T00:46:31.9330864Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-02T00:46:31.9539974Z === NAME  TestMigStreamProcessor_basic
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-02T00:46:31.9540470Z     resource_migration_test.go:11: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-02T00:46:31.9540857Z         
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-02T00:46:31.9541121Z         Error: error creating resource
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-02T00:46:31.9541381Z         
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-02T00:46:31.9541859Z           with mongodbatlas_stream_processor.processor,
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-02T00:46:31.9542552Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-02T00:46:31.9543183Z           37:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-02T00:46:31.9543505Z         
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-02T00:46:31.9544241Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1937701611748670836/processor
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-02T00:46:31.9545057Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-02T00:46:31.9545834Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-02T00:46:31.9546491Z         failed to acquire resources for stream processor validation: internal error
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-02T00:46:31.9547115Z         while provisioning resource from global resource manager. Reason: Bad
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-02T00:46:31.9547723Z         Request. Params: [new-processor failed to acquire resources for stream
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-07-02T00:46:31.9548365Z         processor validation: internal error while provisioning resource from global
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-07-02T00:46:31.9548855Z         resource manager], BadRequestDetail: 
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-07-02T00:46:31.9555115Z    test_name=TestMigStreamProcessor_basic test_terraform_path=/home/runner/work/_temp/562e13ef-6059-4fe1-8ce4-2da40aa0a837/terraform test_working_directory=/tmp/plugintest2168144767
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-07-02T00:46:31.9556132Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-07-02T00:46:31.9556560Z         
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2025-07-02T00:46:31.9556824Z         Error: error deleting resource
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2025-07-02T00:46:31.9557085Z         
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2025-07-02T00:46:31.9557951Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1937701611748670836/connections/sample_stream_solar
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2025-07-02T00:46:31.9558901Z         DELETE: HTTP 403 Forbidden (Error code:
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2025-07-02T00:46:31.9559529Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2025-07-02T00:46:31.9560436Z         name test-acc-tf-1937701611748670836 has active processors, and cannot be
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2025-07-02T00:46:31.9561179Z         changed. Reason: Forbidden. Params: [test-acc-tf-1937701611748670836],
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2025-07-02T00:46:31.9561891Z         BadRequestDetail: 
-<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2025-07-02T00:46:31.9562278Z --- FAIL: TestMigStreamProcessor_basic (34.66s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-02T00:46:31.9206236Z === RUN   TestMigStreamProcessor_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-02T00:46:31.9207255Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-3752186971444699683
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-02T00:46:31.9330864Z === CONT  TestMigStreamProcessor_basic
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-02T00:46:31.9539974Z === NAME  TestMigStreamProcessor_basic
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-02T00:46:31.9540470Z     resource_migration_test.go:11: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-02T00:46:31.9540857Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-02T00:46:31.9541121Z         Error: error creating resource
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-02T00:46:31.9541381Z         
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-02T00:46:31.9541859Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-02T00:46:31.9542552Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-02T00:46:31.9543183Z           37:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-02T00:46:31.9543505Z         
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-02T00:46:31.9544241Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1937701611748670836/processor
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-02T00:46:31.9545057Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-02T00:46:31.9545834Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-02T00:46:31.9546491Z         failed to acquire resources for stream processor validation: internal error
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-02T00:46:31.9547115Z         while provisioning resource from global resource manager. Reason: Bad
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-07-02T00:46:31.9547723Z         Request. Params: [new-processor failed to acquire resources for stream
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-07-02T00:46:31.9548365Z         processor validation: internal error while provisioning resource from global
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-07-02T00:46:31.9548855Z         resource manager], BadRequestDetail: 
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2025-07-02T00:46:31.9555115Z    test_name=TestMigStreamProcessor_basic test_terraform_path=/home/runner/work/_temp/562e13ef-6059-4fe1-8ce4-2da40aa0a837/terraform test_working_directory=/tmp/plugintest2168144767
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2025-07-02T00:46:31.9556132Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2025-07-02T00:46:31.9556560Z         
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2025-07-02T00:46:31.9556824Z         Error: error deleting resource
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2025-07-02T00:46:31.9557085Z         
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2025-07-02T00:46:31.9557951Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68647d45ef5b3c2f1ae5eb8b/streams/test-acc-tf-1937701611748670836/connections/sample_stream_solar
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2025-07-02T00:46:31.9558901Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2025-07-02T00:46:31.9559529Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2025-07-02T00:46:31.9560436Z         name test-acc-tf-1937701611748670836 has active processors, and cannot be
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2025-07-02T00:46:31.9561179Z         changed. Reason: Forbidden. Params: [test-acc-tf-1937701611748670836],
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2025-07-02T00:46:31.9561891Z         BadRequestDetail: 
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2025-07-02T00:46:31.9562278Z --- FAIL: TestMigStreamProcessor_basic (34.66s)
 </code></pre></div></p>
 <h3 id="2025-07-03">2025-07-03</h3>
 <h4 id="pass-12-seconds">PASS 12 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-03T00:46:39.9539869Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-03T00:46:39.9540421Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-8583842408881811517
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-03T00:46:39.9793138Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-07-03T00:46:39.9803047Z --- PASS: TestMigStreamProcessor_basic (12.18s)
-</code></pre></div>
 <h3 id="2025-07-04">2025-07-04</h3>
 <h4 id="pass-24-seconds">PASS 24 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-04T00:51:07.7049665Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-04T00:51:07.7051075Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-8198124604156082223
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-04T00:51:07.7212686Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-07-04T00:51:07.7224620Z --- PASS: TestMigStreamProcessor_basic (24.74s)
-</code></pre></div>
 <h3 id="2025-07-05">2025-07-05</h3>
 <h4 id="pass-14-seconds">PASS 14 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-05T00:44:07.5866567Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-05T00:44:07.5867521Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-7838024867408675840
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-05T00:44:07.6141324Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-07-05T00:44:07.6152001Z --- PASS: TestMigStreamProcessor_basic (14.83s)
-</code></pre></div>
 <h3 id="2025-07-06">2025-07-06</h3>
 <h4 id="fail-36-seconds">FAIL 36 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-06T00:48:43.0076571Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-06T00:48:43.0077107Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-7477380993420125797
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-06T00:48:43.0301842Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-07-06T00:48:43.0385169Z === NAME  TestMigStreamProcessor_basic
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-07-06T00:48:43.0385662Z     resource_migration_test.go:11: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-07-06T00:48:43.0386044Z         
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-07-06T00:48:43.0386302Z         Error: error creating resource
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-07-06T00:48:43.0386558Z         
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-07-06T00:48:43.0386900Z           with mongodbatlas_stream_processor.processor,
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-07-06T00:48:43.0387685Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-07-06T00:48:43.0388306Z           37:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-07-06T00:48:43.0388624Z         
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-07-06T00:48:43.0389339Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40b690ae45e168bd561/streams/test-acc-tf-2853761433766751037/processor
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-07-06T00:48:43.0390134Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-07-06T00:48:43.0390765Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-07-06T00:48:43.0391396Z         failed to acquire resources for stream processor validation: internal error
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-07-06T00:48:43.0392002Z         while provisioning resource from global resource manager. Reason: Bad
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-07-06T00:48:43.0392605Z         Request. Params: [new-processor failed to acquire resources for stream
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2025-07-06T00:48:43.0393249Z         processor validation: internal error while provisioning resource from global
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2025-07-06T00:48:43.0393850Z         resource manager], BadRequestDetail: 
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>2025-07-06T00:48:43.0400166Z    test_name=TestMigStreamProcessor_basic test_terraform_path=/home/runner/work/_temp/571f2434-2bee-44d0-b41d-cfc3e67d82b8/terraform
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>2025-07-06T00:48:43.0400989Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>2025-07-06T00:48:43.0401540Z         
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>2025-07-06T00:48:43.0401809Z         Error: error deleting resource
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>2025-07-06T00:48:43.0402071Z         
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>2025-07-06T00:48:43.0402916Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40b690ae45e168bd561/streams/test-acc-tf-2853761433766751037/connections/sample_stream_solar
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>2025-07-06T00:48:43.0403672Z         DELETE: HTTP 403 Forbidden (Error code:
-<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>2025-07-06T00:48:43.0404202Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
-<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>2025-07-06T00:48:43.0404810Z         name test-acc-tf-2853761433766751037 has active processors, and cannot be
-<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>2025-07-06T00:48:43.0405409Z         changed. Reason: Forbidden. Params: [test-acc-tf-2853761433766751037],
-<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>2025-07-06T00:48:43.0405812Z         BadRequestDetail: 
-<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>2025-07-06T00:48:43.0406089Z --- FAIL: TestMigStreamProcessor_basic (36.16s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-06T00:48:43.0076571Z === RUN   TestMigStreamProcessor_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-06T00:48:43.0077107Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-7477380993420125797
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-06T00:48:43.0301842Z === CONT  TestMigStreamProcessor_basic
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-06T00:48:43.0385169Z === NAME  TestMigStreamProcessor_basic
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-07-06T00:48:43.0385662Z     resource_migration_test.go:11: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-07-06T00:48:43.0386044Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-07-06T00:48:43.0386302Z         Error: error creating resource
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-07-06T00:48:43.0386558Z         
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-07-06T00:48:43.0386900Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-07-06T00:48:43.0387685Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-07-06T00:48:43.0388306Z           37:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-07-06T00:48:43.0388624Z         
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-07-06T00:48:43.0389339Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40b690ae45e168bd561/streams/test-acc-tf-2853761433766751037/processor
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-07-06T00:48:43.0390134Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-07-06T00:48:43.0390765Z         Detail: Streams Processor with this name (new-processor) had a problem occur:
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-07-06T00:48:43.0391396Z         failed to acquire resources for stream processor validation: internal error
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-07-06T00:48:43.0392002Z         while provisioning resource from global resource manager. Reason: Bad
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-07-06T00:48:43.0392605Z         Request. Params: [new-processor failed to acquire resources for stream
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-07-06T00:48:43.0393249Z         processor validation: internal error while provisioning resource from global
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-07-06T00:48:43.0393850Z         resource manager], BadRequestDetail: 
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2025-07-06T00:48:43.0400166Z    test_name=TestMigStreamProcessor_basic test_terraform_path=/home/runner/work/_temp/571f2434-2bee-44d0-b41d-cfc3e67d82b8/terraform
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2025-07-06T00:48:43.0400989Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2025-07-06T00:48:43.0401540Z         
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>2025-07-06T00:48:43.0401809Z         Error: error deleting resource
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>2025-07-06T00:48:43.0402071Z         
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>2025-07-06T00:48:43.0402916Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40b690ae45e168bd561/streams/test-acc-tf-2853761433766751037/connections/sample_stream_solar
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>2025-07-06T00:48:43.0403672Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>2025-07-06T00:48:43.0404202Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>2025-07-06T00:48:43.0404810Z         name test-acc-tf-2853761433766751037 has active processors, and cannot be
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>2025-07-06T00:48:43.0405409Z         changed. Reason: Forbidden. Params: [test-acc-tf-2853761433766751037],
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>2025-07-06T00:48:43.0405812Z         BadRequestDetail: 
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>2025-07-06T00:48:43.0406089Z --- FAIL: TestMigStreamProcessor_basic (36.16s)
 </code></pre></div>
 <h3 id="2025-07-07">2025-07-07</h3>
 <h4 id="pass-11-seconds">PASS 11 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-07-07T00:48:05.7809846Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-07-07T00:48:05.7810387Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-2946717767474413480
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-07-07T00:48:05.8094072Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-07-07T00:48:05.8104463Z --- PASS: TestMigStreamProcessor_basic (11.38s)
-</code></pre></div>
 <h3 id="2025-07-08">2025-07-08</h3>
 <h4 id="pass-11-seconds_1">PASS 11 seconds</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-07-08T00:45:56.1162096Z === RUN   TestMigStreamProcessor_basic
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-07-08T00:45:56.1163196Z     resource_migration_test.go:11: Creating execution project: test-acc-tf-p-8035210403101676368
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-07-08T00:45:56.1508910Z === CONT  TestMigStreamProcessor_basic
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-07-08T00:45:56.1527525Z --- PASS: TestMigStreamProcessor_basic (11.03s)
-</code></pre></div>
 
 
 

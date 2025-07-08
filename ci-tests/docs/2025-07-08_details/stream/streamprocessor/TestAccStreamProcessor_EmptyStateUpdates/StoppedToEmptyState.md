@@ -1,62 +1,19 @@
 # stream/streamprocessor/TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL(x 3)
-Success rate: 70.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL(x 3)
+Success rate: 66.67%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 14 seconds
-```
-2025-07-01T08:50:28.2787430Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-01T08:50:28.2788993Z     resource_test.go:209: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
-2025-07-01T08:50:28.2792247Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-01T08:50:28.2797407Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (14.62s)
-```
 #### PASS 10 seconds
-```
-2025-07-01T12:50:20.6101539Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-01T12:50:20.6102330Z     resource_test.go:209: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
-2025-07-01T12:50:20.6104025Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-01T12:50:20.6106032Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.43s)
-```
 #### PASS 13 seconds
-```
-2025-07-01T17:50:24.3535645Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-01T17:50:24.3537158Z     resource_test.go:209: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
-2025-07-01T17:50:24.3540312Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-01T17:50:24.3544187Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (13.22s)
-```
 ### 2025-07-02
 #### PASS 10 seconds
-```
-2025-07-02T00:46:31.9259560Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-02T00:46:31.9260414Z     resource_test.go:209: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
-2025-07-02T00:46:31.9262320Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-02T00:46:31.9264388Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.47s)
-```
 ### 2025-07-03
 #### PASS 11 seconds
-```
-2025-07-03T00:46:39.9575493Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-03T00:46:39.9576492Z     resource_test.go:209: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
-2025-07-03T00:46:39.9578131Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-03T00:46:39.9641569Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (11.23s)
-```
 ### 2025-07-04
 #### PASS 10 seconds
-```
-2025-07-04T00:51:07.7089252Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-04T00:51:07.7090092Z     resource_test.go:209: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
-2025-07-04T00:51:07.7091778Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-04T00:51:07.7140295Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.26s)
-```
 ### 2025-07-05
 #### PASS 14 seconds
-```
-2025-07-05T00:44:07.5920999Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-05T00:44:07.5922489Z     resource_test.go:209: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
-2025-07-05T00:44:07.5925586Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
-2025-07-05T00:44:07.6007179Z     --- PASS: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (14.06s)
-```
 ### 2025-07-06
 #### FAIL 31 seconds
 ```
@@ -119,7 +76,7 @@ Success rate: 70.00%
 ```
 ### 2025-07-08
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-08T00:45:56.121000+00:00-TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState',confidence=1.0,ts_when='an hour ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-08T00:45:56.121000+00:00-TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState',confidence=1.0,ts_when='3 hours ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-08T00:45:56.1217193Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState

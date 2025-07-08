@@ -1,43 +1,17 @@
 # config/maintenancewindow/TestAccConfigDSMaintenanceWindow_basic Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 8 seconds
-```
-2025-07-01T08:35:29.4635572Z === RUN   TestAccConfigDSMaintenanceWindow_basic
-2025-07-01T08:35:29.4641194Z === CONT  TestAccConfigDSMaintenanceWindow_basic
-2025-07-01T08:35:29.4643751Z --- PASS: TestAccConfigDSMaintenanceWindow_basic (8.31s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 8 seconds
-```
-2025-07-02T00:30:40.8654935Z === RUN   TestAccConfigDSMaintenanceWindow_basic
-2025-07-02T00:30:40.8658507Z === CONT  TestAccConfigDSMaintenanceWindow_basic
-2025-07-02T00:30:40.8661341Z --- PASS: TestAccConfigDSMaintenanceWindow_basic (8.09s)
-```
 ### 2025-07-03
 #### PASS 12 seconds
-```
-2025-07-03T00:31:22.4278567Z === RUN   TestAccConfigDSMaintenanceWindow_basic
-2025-07-03T00:31:22.4284989Z === CONT  TestAccConfigDSMaintenanceWindow_basic
-2025-07-03T00:31:22.4289523Z --- PASS: TestAccConfigDSMaintenanceWindow_basic (12.00s)
-```
 ### 2025-07-04
 #### PASS 10 seconds
-```
-2025-07-04T00:30:47.2462991Z === RUN   TestAccConfigDSMaintenanceWindow_basic
-2025-07-04T00:30:47.2468781Z === CONT  TestAccConfigDSMaintenanceWindow_basic
-2025-07-04T00:30:47.2473278Z --- PASS: TestAccConfigDSMaintenanceWindow_basic (10.17s)
-```
 ### 2025-07-05
 #### PASS 13 seconds
-```
-2025-07-05T00:29:58.2642278Z === RUN   TestAccConfigDSMaintenanceWindow_basic
-2025-07-05T00:29:58.2645874Z === CONT  TestAccConfigDSMaintenanceWindow_basic
-2025-07-05T00:29:58.2648789Z --- PASS: TestAccConfigDSMaintenanceWindow_basic (13.08s)
-```
 ### 2025-07-06
 #### FAIL 39 seconds
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 9 seconds
-```
-2025-07-07T00:33:18.3600543Z === RUN   TestAccConfigDSMaintenanceWindow_basic
-2025-07-07T00:33:18.3609308Z === CONT  TestAccConfigDSMaintenanceWindow_basic
-2025-07-07T00:33:18.3614710Z --- PASS: TestAccConfigDSMaintenanceWindow_basic (9.10s)
-```
 ### 2025-07-08
 #### PASS 14 seconds
-```
-2025-07-08T00:31:21.0005917Z === RUN   TestAccConfigDSMaintenanceWindow_basic
-2025-07-08T00:31:21.0012647Z === CONT  TestAccConfigDSMaintenanceWindow_basic
-2025-07-08T00:31:21.0017799Z --- PASS: TestAccConfigDSMaintenanceWindow_basic (14.31s)
-```

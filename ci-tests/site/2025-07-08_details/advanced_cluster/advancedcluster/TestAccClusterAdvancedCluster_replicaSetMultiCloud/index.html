@@ -298,120 +298,108 @@
 <p>2025-07-01: MISSING</p>
 <h3 id="2025-07-02">2025-07-02</h3>
 <h4 id="pass-38-minutes">PASS 38 minutes</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-02T00:59:45.2903040Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-02T01:01:14.4477549Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-02T01:39:23.6198549Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2289.20s)
-</code></pre></div>
 <h3 id="2025-07-03">2025-07-03</h3>
 <h4 id="pass-33-minutes">PASS 33 minutes</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-03T00:58:58.3139877Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-03T01:00:24.5889848Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-03T01:33:26.1368670Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (1981.55s)
-</code></pre></div>
 <h3 id="2025-07-04">2025-07-04</h3>
 <h4 id="fail-3-hours">FAIL 3 hours</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-04T00:59:21.7074965Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-04T01:00:51.6165844Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-04T04:01:01.3055855Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-07-04T04:01:01.3057001Z     resource_advanced_cluster_test.go:248: Step 1/3 error: Error running apply: exit status 1
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-07-04T04:01:01.3057923Z         
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-07-04T04:01:01.3059056Z         Error: error creating advanced cluster: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 3h0m0s)
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-07-04T04:01:01.3059876Z         
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-07-04T04:01:01.3060320Z           with mongodbatlas_advanced_cluster.test,
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-07-04T04:01:01.3061337Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-07-04T04:01:01.3062090Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-07-04T04:01:01.3062440Z         
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-07-04T04:01:01.8919788Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-07-04T04:01:01.8920417Z         
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-07-04T04:01:01.8920798Z         Error: error when destroying resource
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-07-04T04:01:01.8921104Z         
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-07-04T04:01:01.8921470Z         error deleting project (686727c88263f52e03e796c9):
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-07-04T04:01:01.8922114Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686727c88263f52e03e796c9
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-07-04T04:01:01.8922656Z         DELETE: HTTP 409 Conflict (Error code:
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-07-04T04:01:01.8923484Z         &quot;CANNOT_CLOSE_GROUP_ACTIVE_ATLAS_CLUSTERS&quot;) Detail: Cannot close group while
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2025-07-04T04:01:01.8924197Z         it has active clusters; please terminate all clusters. Reason: Conflict.
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2025-07-04T04:01:01.8924694Z         Params: [], BadRequestDetail: 
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>2025-07-04T04:01:01.8925142Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (10810.30s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-04T00:59:21.7074965Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-04T01:00:51.6165844Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-04T04:01:01.3055855Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-04T04:01:01.3057001Z     resource_advanced_cluster_test.go:248: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-04T04:01:01.3057923Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-04T04:01:01.3059056Z         Error: error creating advanced cluster: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-04T04:01:01.3059876Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-04T04:01:01.3060320Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-04T04:01:01.3061337Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-04T04:01:01.3062090Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-04T04:01:01.3062440Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-04T04:01:01.8919788Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-04T04:01:01.8920417Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-04T04:01:01.8920798Z         Error: error when destroying resource
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-04T04:01:01.8921104Z         
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-04T04:01:01.8921470Z         error deleting project (686727c88263f52e03e796c9):
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-04T04:01:01.8922114Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686727c88263f52e03e796c9
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-07-04T04:01:01.8922656Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-07-04T04:01:01.8923484Z         &quot;CANNOT_CLOSE_GROUP_ACTIVE_ATLAS_CLUSTERS&quot;) Detail: Cannot close group while
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-07-04T04:01:01.8924197Z         it has active clusters; please terminate all clusters. Reason: Conflict.
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2025-07-04T04:01:01.8924694Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2025-07-04T04:01:01.8925142Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (10810.30s)
 </code></pre></div>
 <h3 id="2025-07-05">2025-07-05</h3>
 <h4 id="fail-3-hours_1">FAIL 3 hours</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-05T00:56:08.1191357Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-05T00:57:08.5707839Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-05T03:57:16.8090565Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-05T03:57:16.8091632Z     resource_advanced_cluster_test.go:248: Step 1/3 error: Error running apply: exit status 1
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-05T03:57:16.8092370Z         
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-05T03:57:16.8093654Z         Error: error creating advanced cluster: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 3h0m0s)
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-05T03:57:16.8094622Z         
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-05T03:57:16.8095167Z           with mongodbatlas_advanced_cluster.test,
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-05T03:57:16.8096185Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-05T03:57:16.8096770Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-05T03:57:16.8097388Z         
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-05T03:57:17.1063695Z    test_name=TestAccClusterAdvancedCluster_replicaSetMultiCloud test_terraform_path=/home/runner/work/_temp/8bcf1b9b-6d48-42c3-b220-84c8698ad33a/terraform test_working_directory=/tmp/plugintest2670600188
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-05T03:57:17.1064996Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-05T03:57:17.1065483Z         
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-05T03:57:17.1066026Z         Error: error when destroying resource
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-05T03:57:17.1066314Z         
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-05T03:57:17.1066656Z         error deleting project (6868786921e3e31abeebbe98):
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-05T03:57:17.1067257Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6868786921e3e31abeebbe98
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-07-05T03:57:17.1067764Z         DELETE: HTTP 409 Conflict (Error code:
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-07-05T03:57:17.1073384Z         &quot;CANNOT_CLOSE_GROUP_ACTIVE_ATLAS_CLUSTERS&quot;) Detail: Cannot close group while
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-07-05T03:57:17.1074259Z         it has active clusters; please terminate all clusters. Reason: Conflict.
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-07-05T03:57:17.1074747Z         Params: [], BadRequestDetail: 
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-07-05T03:57:17.1075174Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (10808.54s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-05T00:56:08.1191357Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-05T00:57:08.5707839Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-05T03:57:16.8090565Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-05T03:57:16.8091632Z     resource_advanced_cluster_test.go:248: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-07-05T03:57:16.8092370Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-07-05T03:57:16.8093654Z         Error: error creating advanced cluster: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-07-05T03:57:16.8094622Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-07-05T03:57:16.8095167Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-07-05T03:57:16.8096185Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-07-05T03:57:16.8096770Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-07-05T03:57:16.8097388Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-07-05T03:57:17.1063695Z    test_name=TestAccClusterAdvancedCluster_replicaSetMultiCloud test_terraform_path=/home/runner/work/_temp/8bcf1b9b-6d48-42c3-b220-84c8698ad33a/terraform test_working_directory=/tmp/plugintest2670600188
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-07-05T03:57:17.1064996Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-07-05T03:57:17.1065483Z         
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-07-05T03:57:17.1066026Z         Error: error when destroying resource
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-07-05T03:57:17.1066314Z         
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-07-05T03:57:17.1066656Z         error deleting project (6868786921e3e31abeebbe98):
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-07-05T03:57:17.1067257Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6868786921e3e31abeebbe98
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-07-05T03:57:17.1067764Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-07-05T03:57:17.1073384Z         &quot;CANNOT_CLOSE_GROUP_ACTIVE_ATLAS_CLUSTERS&quot;) Detail: Cannot close group while
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2025-07-05T03:57:17.1074259Z         it has active clusters; please terminate all clusters. Reason: Conflict.
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2025-07-05T03:57:17.1074747Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2025-07-05T03:57:17.1075174Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (10808.54s)
 </code></pre></div>
 <h3 id="2025-07-06">2025-07-06</h3>
 <h4 id="fail-37-minutes">FAIL 37 minutes</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-06T01:01:15.1411017Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-06T01:02:29.8166681Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-06T01:37:18.2259451Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-07-06T01:37:18.2260226Z     resource_advanced_cluster_test.go:248: Step 2/3 error: Error running post-apply refresh plan: exit status 1
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-07-06T01:37:18.2260701Z         
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-07-06T01:37:18.2261151Z         Error: error when getting project properties after create
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-07-06T01:37:18.2261466Z         
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-07-06T01:37:18.2261889Z           with mongodbatlas_project.cluster_project,
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-07-06T01:37:18.2262668Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot;:
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-07-06T01:37:18.2263364Z           12:      resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot; {
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-07-06T01:37:18.2263667Z         
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-07-06T01:37:18.2264090Z         error getting project (6869cb2a690ae45e168c0038): error getting project&#39;s
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-07-06T01:37:18.2265016Z         limits (6869cb2a690ae45e168c0038):
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-07-06T01:37:18.2265570Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869cb2a690ae45e168c0038/limits
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-07-06T01:37:18.2266220Z         GET: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-07-06T01:37:18.2266782Z         Unexpected error. Reason: Internal Server Error. Params: [],
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-07-06T01:37:18.2267152Z         BadRequestDetail: 
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-07-06T01:40:11.6326948Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2261.83s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-06T01:01:15.1411017Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-06T01:02:29.8166681Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-06T01:37:18.2259451Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-07-06T01:37:18.2260226Z     resource_advanced_cluster_test.go:248: Step 2/3 error: Error running post-apply refresh plan: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-07-06T01:37:18.2260701Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-07-06T01:37:18.2261151Z         Error: error when getting project properties after create
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-07-06T01:37:18.2261466Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-07-06T01:37:18.2261889Z           with mongodbatlas_project.cluster_project,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-07-06T01:37:18.2262668Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-07-06T01:37:18.2263364Z           12:      resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-07-06T01:37:18.2263667Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-07-06T01:37:18.2264090Z         error getting project (6869cb2a690ae45e168c0038): error getting project&#39;s
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-07-06T01:37:18.2265016Z         limits (6869cb2a690ae45e168c0038):
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-07-06T01:37:18.2265570Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869cb2a690ae45e168c0038/limits
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-07-06T01:37:18.2266220Z         GET: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-07-06T01:37:18.2266782Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-07-06T01:37:18.2267152Z         BadRequestDetail: 
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-07-06T01:40:11.6326948Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2261.83s)
 </code></pre></div>
 <h3 id="2025-07-07">2025-07-07</h3>
 <h4 id="fail-3-hours_2">FAIL 3 hours</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-07T01:01:25.9416348Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-07T01:02:17.8642865Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-07T04:02:25.9033999Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-07-07T04:02:25.9034748Z     resource_advanced_cluster_test.go:248: Step 1/3 error: Error running apply: exit status 1
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-07-07T04:02:25.9035165Z         
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-07-07T04:02:25.9036012Z         Error: error creating advanced cluster: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 3h0m0s)
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-07-07T04:02:25.9036692Z         
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-07-07T04:02:25.9037104Z           with mongodbatlas_advanced_cluster.test,
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-07-07T04:02:25.9037781Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-07-07T04:02:25.9038690Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-07-07T04:02:25.9039008Z         
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-07-07T04:02:26.3654761Z    test_terraform_path=/home/runner/work/_temp/a9abdc25-77fa-4537-b3de-dbc49e28950c/terraform test_working_directory=/tmp/plugintest1477947791 test_step_number=1 test_name=TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-07-07T04:02:26.3655896Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-07-07T04:02:26.3656326Z         
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-07-07T04:02:26.3656612Z         Error: error when destroying resource
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-07-07T04:02:26.3656880Z         
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-07-07T04:02:26.3657212Z         error deleting project (686b1c9e0aabd25fc85de3d0):
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-07-07T04:02:26.3657785Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686b1c9e0aabd25fc85de3d0
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2025-07-07T04:02:26.3658270Z         DELETE: HTTP 409 Conflict (Error code:
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2025-07-07T04:02:26.3658790Z         &quot;CANNOT_CLOSE_GROUP_ACTIVE_ATLAS_CLUSTERS&quot;) Detail: Cannot close group while
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2025-07-07T04:02:26.3659394Z         it has active clusters; please terminate all clusters. Reason: Conflict.
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>2025-07-07T04:02:26.3660002Z         Params: [], BadRequestDetail: 
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>2025-07-07T04:02:26.3660398Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (10808.52s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-07T01:01:25.9416348Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-07T01:02:17.8642865Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-07T04:02:25.9033999Z === NAME  TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-07T04:02:25.9034748Z     resource_advanced_cluster_test.go:248: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-07T04:02:25.9035165Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-07T04:02:25.9036012Z         Error: error creating advanced cluster: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-07T04:02:25.9036692Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-07T04:02:25.9037104Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-07T04:02:25.9037781Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-07T04:02:25.9038690Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-07T04:02:25.9039008Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-07T04:02:26.3654761Z    test_terraform_path=/home/runner/work/_temp/a9abdc25-77fa-4537-b3de-dbc49e28950c/terraform test_working_directory=/tmp/plugintest1477947791 test_step_number=1 test_name=TestAccClusterAdvancedCluster_replicaSetMultiCloud
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-07T04:02:26.3655896Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-07T04:02:26.3656326Z         
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-07T04:02:26.3656612Z         Error: error when destroying resource
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-07T04:02:26.3656880Z         
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-07T04:02:26.3657212Z         error deleting project (686b1c9e0aabd25fc85de3d0):
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-07T04:02:26.3657785Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686b1c9e0aabd25fc85de3d0
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-07-07T04:02:26.3658270Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-07-07T04:02:26.3658790Z         &quot;CANNOT_CLOSE_GROUP_ACTIVE_ATLAS_CLUSTERS&quot;) Detail: Cannot close group while
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-07-07T04:02:26.3659394Z         it has active clusters; please terminate all clusters. Reason: Conflict.
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-07-07T04:02:26.3660002Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-07-07T04:02:26.3660398Z --- FAIL: TestAccClusterAdvancedCluster_replicaSetMultiCloud (10808.52s)
 </code></pre></div>
 <h3 id="2025-07-08">2025-07-08</h3>
 <h4 id="pass-35-minutes">PASS 35 minutes</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-08T00:59:16.7947544Z === RUN   TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-08T01:00:20.8955314Z === CONT  TestAccClusterAdvancedCluster_replicaSetMultiCloud
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-08T01:35:24.9513101Z --- PASS: TestAccClusterAdvancedCluster_replicaSetMultiCloud (2104.06s)
-</code></pre></div>
 
 
 

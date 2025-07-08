@@ -6,32 +6,12 @@ Success rate: 85.71%
 2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 29 minutes
-```
-2025-07-02T00:59:52.6746934Z === RUN   TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-02T01:01:14.4755435Z === CONT  TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-02T01:30:20.4104787Z --- PASS: TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData (1745.96s)
-```
 ### 2025-07-03
 #### PASS 30 minutes
-```
-2025-07-03T00:59:05.7138803Z === RUN   TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-03T01:00:24.5874348Z === CONT  TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-03T01:31:04.9914549Z --- PASS: TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData (1840.41s)
-```
 ### 2025-07-04
 #### PASS 29 minutes
-```
-2025-07-04T00:59:30.9320393Z === RUN   TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-04T01:00:51.5866216Z === CONT  TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-04T01:29:54.6862957Z --- PASS: TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData (1743.10s)
-```
 ### 2025-07-05
 #### PASS 30 minutes
-```
-2025-07-05T00:56:16.4288882Z === RUN   TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-05T00:57:08.5812364Z === CONT  TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-05T01:27:41.5661347Z --- PASS: TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData (1832.99s)
-```
 ### 2025-07-06
 #### FAIL 22 minutes
 ```
@@ -56,15 +36,5 @@ Success rate: 85.71%
 ```
 ### 2025-07-07
 #### PASS 28 minutes
-```
-2025-07-07T01:01:34.7119585Z === RUN   TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-07T01:02:17.8818850Z === CONT  TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-07T01:30:22.8328477Z --- PASS: TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData (1684.97s)
-```
 ### 2025-07-08
 #### PASS 29 minutes
-```
-2025-07-08T00:59:27.0895303Z === RUN   TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-08T01:00:20.8817514Z === CONT  TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
-2025-07-08T01:29:46.9505361Z --- PASS: TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData (1766.07s)
-```

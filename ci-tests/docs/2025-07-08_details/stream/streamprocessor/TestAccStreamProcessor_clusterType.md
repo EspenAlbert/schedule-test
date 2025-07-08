@@ -1,34 +1,14 @@
 # stream/streamprocessor/TestAccStreamProcessor_clusterType Test Details
-# Found 10 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 9) FAIL
-Success rate: 90.00%
+# Found 9 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 8) FAIL
+Success rate: 88.89%
 
 ## Timeline
 ### 2025-07-01
-#### PASS 14 seconds
-```
-2025-07-01T08:50:28.2833376Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-01T08:50:28.2838351Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-01T08:50:28.2844126Z   diagnostic_detail=
-2025-07-01T08:50:28.2847766Z   
-2025-07-01T08:50:28.2856950Z --- PASS: TestAccStreamProcessor_clusterType (14.09s)
-```
 #### PASS 12 seconds
-```
-2025-07-01T12:50:20.6125115Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-01T12:50:20.6128192Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-01T12:50:20.6129530Z   diagnostic_detail=
-2025-07-01T12:50:20.6131923Z    diagnostic_severity=ERROR tf_resource_type=mongodbatlas_stream_processor tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas diagnostic_summary="Invalid JSON String Value" diagnostic_attribute="AttributeName(\"pipeline\")"
-2025-07-01T12:50:20.6137404Z --- PASS: TestAccStreamProcessor_clusterType (12.83s)
-```
 #### PASS 13 seconds
-```
-2025-07-01T17:50:24.3578936Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-01T17:50:24.3583139Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-01T17:50:24.3600882Z --- PASS: TestAccStreamProcessor_clusterType (13.12s)
-```
 ### 2025-07-02
 #### FAIL 31 seconds
-GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.932000+00:00-TestAccStreamProcessor_clusterType',confidence=1.0,ts_when='5 days ago')
+GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-02T00:46:31.932000+00:00-TestAccStreamProcessor_clusterType',confidence=1.0,ts_when='6 days ago')
 API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
 ```
 2025-07-02T00:46:31.9329604Z === RUN   TestAccStreamProcessor_clusterType
@@ -66,45 +46,13 @@ API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/
 ```
 ### 2025-07-03
 #### PASS 26 seconds
-```
-2025-07-03T00:46:39.9791736Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-03T00:46:39.9794351Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-03T00:46:39.9804094Z --- PASS: TestAccStreamProcessor_clusterType (26.82s)
-```
 ### 2025-07-04
 #### PASS 11 seconds
-```
-2025-07-04T00:51:07.7211261Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-04T00:51:07.7214035Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-04T00:51:07.7224264Z --- PASS: TestAccStreamProcessor_clusterType (11.68s)
-```
 ### 2025-07-05
 #### PASS 14 seconds
-```
-2025-07-05T00:44:07.6140099Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-05T00:44:07.6142222Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-05T00:44:07.6152332Z --- PASS: TestAccStreamProcessor_clusterType (14.82s)
-```
 ### 2025-07-06
 #### PASS 12 seconds
-```
-2025-07-06T00:48:43.0300585Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-06T00:48:43.0303525Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-06T00:48:43.0305032Z   diagnostic_detail=
-2025-07-06T00:48:43.0307503Z    diagnostic_summary="Invalid JSON String Value" tf_req_id=9acae79e-700c-bccd-e1cc-5308ad0a8dcf tf_resource_type=mongodbatlas_stream_processor diagnostic_severity=ERROR diagnostic_attribute="AttributeName(\"pipeline\")"
-2025-07-06T00:48:43.0312212Z --- PASS: TestAccStreamProcessor_clusterType (12.07s)
-```
 ### 2025-07-07
 #### PASS 12 seconds
-```
-2025-07-07T00:48:05.8092834Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-07T00:48:05.8094993Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-07T00:48:05.8105174Z --- PASS: TestAccStreamProcessor_clusterType (12.27s)
-```
 ### 2025-07-08
 #### PASS 15 seconds
-```
-2025-07-08T00:45:56.1506786Z === RUN   TestAccStreamProcessor_clusterType
-2025-07-08T00:45:56.1510479Z === CONT  TestAccStreamProcessor_clusterType
-2025-07-08T00:45:56.1528688Z --- PASS: TestAccStreamProcessor_clusterType (15.21s)
-```

@@ -1,43 +1,17 @@
 # generic/backupcompliancepolicy/TestAccBackupCompliancePolicy_update Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS a minute
-```
-2025-07-01T08:46:21.8496411Z === RUN   TestAccBackupCompliancePolicy_update
-2025-07-01T08:46:21.8506668Z === CONT  TestAccBackupCompliancePolicy_update
-2025-07-01T08:46:21.8511678Z --- PASS: TestAccBackupCompliancePolicy_update (67.30s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS a minute
-```
-2025-07-02T00:42:41.6682170Z === RUN   TestAccBackupCompliancePolicy_update
-2025-07-02T00:42:41.6689046Z === CONT  TestAccBackupCompliancePolicy_update
-2025-07-02T00:42:41.6693240Z --- PASS: TestAccBackupCompliancePolicy_update (72.52s)
-```
 ### 2025-07-03
 #### PASS a minute
-```
-2025-07-03T00:43:41.3458815Z === RUN   TestAccBackupCompliancePolicy_update
-2025-07-03T00:43:41.3473314Z === CONT  TestAccBackupCompliancePolicy_update
-2025-07-03T00:43:41.3476334Z --- PASS: TestAccBackupCompliancePolicy_update (70.33s)
-```
 ### 2025-07-04
 #### PASS a minute
-```
-2025-07-04T00:45:35.9907485Z === RUN   TestAccBackupCompliancePolicy_update
-2025-07-04T00:45:35.9917838Z === CONT  TestAccBackupCompliancePolicy_update
-2025-07-04T00:45:35.9924124Z --- PASS: TestAccBackupCompliancePolicy_update (72.70s)
-```
 ### 2025-07-05
 #### PASS a minute
-```
-2025-07-05T00:38:37.6783549Z === RUN   TestAccBackupCompliancePolicy_update
-2025-07-05T00:38:37.6794546Z === CONT  TestAccBackupCompliancePolicy_update
-2025-07-05T00:38:37.6799418Z --- PASS: TestAccBackupCompliancePolicy_update (67.59s)
-```
 ### 2025-07-06
 #### FAIL a minute
 ```
@@ -62,15 +36,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS a minute
-```
-2025-07-07T00:43:47.0840089Z === RUN   TestAccBackupCompliancePolicy_update
-2025-07-07T00:43:47.0845446Z === CONT  TestAccBackupCompliancePolicy_update
-2025-07-07T00:43:47.0849329Z --- PASS: TestAccBackupCompliancePolicy_update (67.60s)
-```
 ### 2025-07-08
 #### PASS a minute
-```
-2025-07-08T00:43:11.4292363Z === RUN   TestAccBackupCompliancePolicy_update
-2025-07-08T00:43:11.4303480Z === CONT  TestAccBackupCompliancePolicy_update
-2025-07-08T00:43:11.4308547Z --- PASS: TestAccBackupCompliancePolicy_update (73.85s)
-```

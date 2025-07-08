@@ -1,29 +1,13 @@
 # advanced_cluster_tpf/advancedcluster/TestMigAdvancedCluster_replicaSetMultiCloud Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 5) FAIL(x 3)
-Success rate: 62.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 4) FAIL(x 3)
+Success rate: 57.14%
 
 ## Timeline
-### 2025-07-01
-#### PASS 19 minutes
-```
-2025-07-01T08:20:46.7640546Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-01T08:20:46.7763827Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-01T08:20:46.7886162Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1156.18s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 18 minutes
-```
-2025-07-02T01:46:50.6462182Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:46:50.6555457Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-02T01:46:50.6692258Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1104.26s)
-```
 ### 2025-07-03
 #### PASS 16 minutes
-```
-2025-07-03T01:45:42.2206332Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:45:42.2362005Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-03T01:45:42.2487459Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1012.95s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -88,11 +72,6 @@ Success rate: 62.50%
 ```
 ### 2025-07-06
 #### PASS 18 minutes
-```
-2025-07-06T01:46:53.5814347Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-06T01:46:53.5914582Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-06T01:46:53.6102882Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1087.95s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -125,8 +104,3 @@ Success rate: 62.50%
 ```
 ### 2025-07-08
 #### PASS 22 minutes
-```
-2025-07-08T02:00:19.2720499Z === RUN   TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-08T02:00:19.2832169Z === CONT  TestMigAdvancedCluster_replicaSetMultiCloud
-2025-07-08T02:00:19.2957565Z --- PASS: TestMigAdvancedCluster_replicaSetMultiCloud (1346.31s)
-```

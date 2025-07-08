@@ -1,38 +1,17 @@
 # project/project/TestMigProject_withTeams Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 9 seconds
-```
-2025-07-01T08:36:27.6777872Z === RUN   TestMigProject_withTeams
-2025-07-01T08:36:27.6778169Z --- PASS: TestMigProject_withTeams (9.18s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### PASS 12 seconds
-```
-2025-07-02T00:32:47.2493874Z === RUN   TestMigProject_withTeams
-2025-07-02T00:32:47.2494177Z --- PASS: TestMigProject_withTeams (12.31s)
-```
 ### 2025-07-03
 #### PASS 9 seconds
-```
-2025-07-03T00:32:13.2675644Z === RUN   TestMigProject_withTeams
-2025-07-03T00:32:13.2675940Z --- PASS: TestMigProject_withTeams (9.82s)
-```
 ### 2025-07-04
 #### PASS 10 seconds
-```
-2025-07-04T00:31:54.7075319Z === RUN   TestMigProject_withTeams
-2025-07-04T00:31:54.7075617Z --- PASS: TestMigProject_withTeams (10.26s)
-```
 ### 2025-07-05
 #### PASS 10 seconds
-```
-2025-07-05T00:30:58.9932989Z === RUN   TestMigProject_withTeams
-2025-07-05T00:30:58.9933512Z --- PASS: TestMigProject_withTeams (10.33s)
-```
 ### 2025-07-06
 #### FAIL 33 seconds
 ```
@@ -56,13 +35,5 @@ Success rate: 87.50%
 ```
 ### 2025-07-07
 #### PASS 8 seconds
-```
-2025-07-07T00:34:47.5641351Z === RUN   TestMigProject_withTeams
-2025-07-07T00:34:47.5641889Z --- PASS: TestMigProject_withTeams (8.83s)
-```
 ### 2025-07-08
 #### PASS 9 seconds
-```
-2025-07-08T00:32:04.0788354Z === RUN   TestMigProject_withTeams
-2025-07-08T00:32:04.0788725Z --- PASS: TestMigProject_withTeams (9.87s)
-```

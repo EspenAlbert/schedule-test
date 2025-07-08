@@ -1,15 +1,9 @@
 # cluster/cluster/TestAccCluster_basicGCPRegionNameUSWest2 Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 4) FAIL(x 4)
-Success rate: 50.00%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, FAIL(x 4) PASS(x 3)
+Success rate: 42.86%
 
 ## Timeline
-### 2025-07-01
-#### PASS 12 minutes
-```
-2025-07-01T08:33:37.0081342Z === RUN   TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-01T08:33:37.0092206Z === CONT  TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-01T08:46:18.0395220Z --- PASS: TestAccCluster_basicGCPRegionNameUSWest2 (761.03s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### FAIL 2 seconds
 ```
@@ -28,11 +22,6 @@ Success rate: 50.00%
 ```
 ### 2025-07-03
 #### PASS 13 minutes
-```
-2025-07-03T00:29:32.3591541Z === RUN   TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-03T00:29:32.3645879Z === CONT  TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-03T00:42:52.3376569Z --- PASS: TestAccCluster_basicGCPRegionNameUSWest2 (799.97s)
-```
 ### 2025-07-04
 #### FAIL 3 hours
 ```
@@ -68,11 +57,6 @@ Success rate: 50.00%
 ```
 ### 2025-07-06
 #### PASS 12 minutes
-```
-2025-07-06T00:32:04.2075652Z === RUN   TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-06T00:32:04.2114051Z === CONT  TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-06T00:44:42.2416483Z --- PASS: TestAccCluster_basicGCPRegionNameUSWest2 (758.03s)
-```
 ### 2025-07-07
 #### FAIL 3 hours
 ```
@@ -91,8 +75,3 @@ Success rate: 50.00%
 ```
 ### 2025-07-08
 #### PASS 13 minutes
-```
-2025-07-08T00:29:14.7588303Z === RUN   TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-08T00:29:14.7604902Z === CONT  TestAccCluster_basicGCPRegionNameUSWest2
-2025-07-08T00:43:12.4741700Z --- PASS: TestAccCluster_basicGCPRegionNameUSWest2 (837.71s)
-```

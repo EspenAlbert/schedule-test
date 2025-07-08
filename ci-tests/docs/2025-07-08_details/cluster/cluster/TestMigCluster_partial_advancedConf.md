@@ -1,20 +1,12 @@
 # cluster/cluster/TestMigCluster_partial_advancedConf Test Details
-# Found 8 TestRuns in dev, qa from 2025-07-01 to 2025-07-08 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 7 TestRuns in dev, qa from 2025-07-02 to 2025-07-08 from master branch: 1 unique tests, PASS(x 6) FAIL
+Success rate: 85.71%
 
 ## Timeline
-### 2025-07-01
-#### PASS 15 minutes
-```
-2025-07-01T08:33:33.2085875Z === RUN   TestMigCluster_partial_advancedConf
-2025-07-01T08:33:37.0293981Z === CONT  TestMigCluster_partial_advancedConf
-2025-07-01T08:34:27.0192727Z === NAME  TestMigCluster_partial_advancedConf
-2025-07-01T08:34:27.0193826Z     pre_check.go:40: Time before creating cluster: 2025-07-01T08:34:27.019005787Z, ProjectID: 68639d5b90ed24487dfd40c8, Cluster name: test-acc-tf-c-104762429490543699
-2025-07-01T08:49:12.5488414Z --- PASS: TestMigCluster_partial_advancedConf (935.53s)
-```
+2025-07-01: MISSING
 ### 2025-07-02
 #### FAIL 5 minutes
-GoTestErrorClassification(error_class='unclassified',author='human',run_id='2025-07-02T00:28:47.595000+00:00-TestMigCluster_partial_advancedConf',confidence=1.0,ts_when='5 days ago')
+GoTestErrorClassification(error_class='unclassified',author='human',run_id='2025-07-02T00:28:47.595000+00:00-TestMigCluster_partial_advancedConf',confidence=1.0,ts_when='6 days ago')
 
 ```
 2025-07-02T00:28:47.5959695Z === RUN   TestMigCluster_partial_advancedConf
@@ -35,56 +27,13 @@ GoTestErrorClassification(error_class='unclassified',author='human',run_id='2025
 ```
 ### 2025-07-03
 #### PASS 13 minutes
-```
-2025-07-03T00:29:26.0724279Z === RUN   TestMigCluster_partial_advancedConf
-2025-07-03T00:29:32.3636727Z === CONT  TestMigCluster_partial_advancedConf
-2025-07-03T00:30:07.3663222Z === NAME  TestMigCluster_partial_advancedConf
-2025-07-03T00:30:07.3665291Z     pre_check.go:40: Time before creating cluster: 2025-07-03T00:30:07.366055304Z, ProjectID: 6865cee4699daf2aab4cb693, Cluster name: test-acc-tf-c-1375019509460050987
-2025-07-03T00:43:19.8931261Z --- PASS: TestMigCluster_partial_advancedConf (827.53s)
-```
 ### 2025-07-04
 #### PASS 22 minutes
-```
-2025-07-04T00:28:48.5903374Z === RUN   TestMigCluster_partial_advancedConf
-2025-07-04T00:28:53.1252328Z === CONT  TestMigCluster_partial_advancedConf
-2025-07-04T00:29:53.1289963Z === NAME  TestMigCluster_partial_advancedConf
-2025-07-04T00:29:53.1291870Z     pre_check.go:40: Time before creating cluster: 2025-07-04T00:29:53.128744858Z, ProjectID: 6867203d8263f52e03e763a4, Cluster name: test-acc-tf-c-3352499517841245433
-2025-07-04T00:51:07.1226064Z --- PASS: TestMigCluster_partial_advancedConf (1334.00s)
-```
 ### 2025-07-05
 #### PASS 11 minutes
-```
-2025-07-05T00:28:03.0624952Z === RUN   TestMigCluster_partial_advancedConf
-2025-07-05T00:28:09.1133054Z === CONT  TestMigCluster_partial_advancedConf
-2025-07-05T00:28:44.1163852Z === NAME  TestMigCluster_partial_advancedConf
-2025-07-05T00:28:44.1164929Z     pre_check.go:40: Time before creating cluster: 2025-07-05T00:28:44.116116912Z, ProjectID: 6868718c21e3e31abeeb8626, Cluster name: test-acc-tf-c-3094431984236517918
-2025-07-05T00:39:31.2917155Z --- PASS: TestMigCluster_partial_advancedConf (682.18s)
-```
 ### 2025-07-06
 #### PASS 10 minutes
-```
-2025-07-06T00:32:00.8611994Z === RUN   TestMigCluster_partial_advancedConf
-2025-07-06T00:32:04.2359928Z === CONT  TestMigCluster_partial_advancedConf
-2025-07-06T00:32:39.2148507Z === NAME  TestMigCluster_partial_advancedConf
-2025-07-06T00:32:39.2150192Z     pre_check.go:40: Time before creating cluster: 2025-07-06T00:32:39.214560239Z, ProjectID: 6869c3ff690ae45e168bcbaf, Cluster name: test-acc-tf-c-5289314962182406547
-2025-07-06T00:32:39.5964793Z    test_step_number=1
-2025-07-06T00:42:36.2046892Z --- PASS: TestMigCluster_partial_advancedConf (631.99s)
-```
 ### 2025-07-07
 #### PASS 13 minutes
-```
-2025-07-07T00:31:31.6842296Z === RUN   TestMigCluster_partial_advancedConf
-2025-07-07T00:31:36.2478062Z === CONT  TestMigCluster_partial_advancedConf
-2025-07-07T00:32:01.2446875Z === NAME  TestMigCluster_partial_advancedConf
-2025-07-07T00:32:01.2448484Z     pre_check.go:40: Time before creating cluster: 2025-07-07T00:32:01.244372109Z, ProjectID: 686b1560ffed0c5c678b232d, Cluster name: test-acc-tf-c-2528304245303338070
-2025-07-07T00:45:13.8569889Z --- PASS: TestMigCluster_partial_advancedConf (817.62s)
-```
 ### 2025-07-08
 #### PASS 14 minutes
-```
-2025-07-08T00:29:11.7917027Z === RUN   TestMigCluster_partial_advancedConf
-2025-07-08T00:29:14.7599669Z === CONT  TestMigCluster_partial_advancedConf
-2025-07-08T00:29:54.7697582Z === NAME  TestMigCluster_partial_advancedConf
-2025-07-08T00:29:54.7699732Z     pre_check.go:40: Time before creating cluster: 2025-07-08T00:29:54.769426815Z, ProjectID: 686c6655cf503214420ec2a7, Cluster name: test-acc-tf-c-891320150776907881
-2025-07-08T00:43:30.7810993Z --- PASS: TestMigCluster_partial_advancedConf (856.02s)
-```
