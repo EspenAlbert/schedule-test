@@ -1,0 +1,847 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>encryption/encryptionatrest/TestAccEncryptionAtRest_basicAWS Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#encryptionencryptionatresttestaccencryptionatrest_basicaws-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              encryption/encryptionatrest/TestAccEncryptionAtRest_basicAWS Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="encryptionencryptionatresttestaccencryptionatrest_basicaws-test-details">encryption/encryptionatrest/TestAccEncryptionAtRest_basicAWS Test Details</h1>
+<h1 id="found-113-testruns-in-dev-qa-from-2025-04-11-to-2025-07-09-from-master-branch-1-unique-tests-passx-103-failx-10">Found 113 TestRuns in dev, qa from 2025-04-11 to 2025-07-09 from master branch: 1 unique tests, PASS(x 103) FAIL(x 10)</h1>
+<p>Success rate: 91.15%</p>
+<h1 id="error-table">#  Error Table</h1>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025-04-19 00:25</td>
+<td>dev</td>
+<td>1.06s</td>
+</tr>
+<tr>
+<td>2025-04-22 00:27</td>
+<td>dev</td>
+<td>1.03s</td>
+</tr>
+<tr>
+<td>2025-05-11 00:30</td>
+<td>qa</td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td>2025-05-25 00:31</td>
+<td>qa</td>
+<td>1.02s</td>
+</tr>
+<tr>
+<td>2025-06-06 00:30</td>
+<td>dev</td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td>2025-06-07 00:29</td>
+<td>dev</td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td>2025-06-09 00:31</td>
+<td>dev</td>
+<td>0.05s</td>
+</tr>
+<tr>
+<td>2025-06-10 00:38</td>
+<td>dev</td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td>2025-06-11 00:29</td>
+<td>dev</td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td>2025-06-12 00:28</td>
+<td>dev</td>
+<td>0.04s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<p>2025-03-11: MISSING
+2025-03-12: MISSING
+2025-03-13: MISSING
+2025-03-14: MISSING
+2025-03-15: MISSING
+2025-03-16: MISSING
+2025-03-17: MISSING
+2025-03-18: MISSING
+2025-03-19: MISSING
+2025-03-20: MISSING
+2025-03-21: MISSING
+2025-03-22: MISSING
+2025-03-23: MISSING
+2025-03-24: MISSING
+2025-03-25: MISSING
+2025-03-26: MISSING
+2025-03-27: MISSING
+2025-03-28: MISSING
+2025-03-29: MISSING
+2025-03-30: MISSING
+2025-03-31: MISSING
+2025-04-01: MISSING
+2025-04-02: MISSING
+2025-04-03: MISSING
+2025-04-04: MISSING
+2025-04-05: MISSING
+2025-04-06: MISSING
+2025-04-07: MISSING
+2025-04-08: MISSING
+2025-04-09: MISSING
+2025-04-10: MISSING</p>
+<h3 id="2025-04-11">2025-04-11</h3>
+<h4 id="pass-4-seconds">PASS 4 seconds</h4>
+<h3 id="2025-04-12">2025-04-12</h3>
+<h4 id="pass-3-seconds">PASS 3 seconds</h4>
+<h3 id="2025-04-13">2025-04-13</h3>
+<h4 id="pass-3-seconds_1">PASS 3 seconds</h4>
+<h3 id="2025-04-14">2025-04-14</h3>
+<h4 id="pass-7-seconds">PASS 7 seconds</h4>
+<h3 id="2025-04-15">2025-04-15</h3>
+<h4 id="pass-7-seconds_1">PASS 7 seconds</h4>
+<h3 id="2025-04-16">2025-04-16</h3>
+<h4 id="pass-4-seconds_1">PASS 4 seconds</h4>
+<h4 id="pass-7-seconds_2">PASS 7 seconds</h4>
+<h3 id="2025-04-17">2025-04-17</h3>
+<h4 id="pass-3-seconds_2">PASS 3 seconds</h4>
+<h3 id="2025-04-18">2025-04-18</h3>
+<h4 id="pass-4-seconds_2">PASS 4 seconds</h4>
+<h3 id="2025-04-19">2025-04-19</h3>
+<h4 id="fail-a-second">FAIL a second</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-04-19T00:25:59.7755023Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-04-19T00:25:59.7772936Z    test_name=TestAccEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/90662eee-ea10-4ea4-8aa3-ca7d80e74fe5/terraform test_working_directory=/tmp/plugintest3676925348 test_step_number=1
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-04-19T00:25:59.7774109Z     resource_test.go:53: Step 1/4 error: After applying this test step, the refresh plan was not empty.
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-04-19T00:25:59.7774634Z         stdout
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-04-19T00:25:59.7774890Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-04-19T00:25:59.7775645Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-04-19T00:25:59.7776308Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-04-19T00:25:59.7776956Z           ~ update in-place
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-04-19T00:25:59.7777323Z          &lt;= read (data resources)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-04-19T00:25:59.7777617Z         
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-04-19T00:25:59.7778000Z         Terraform will perform the following actions:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-04-19T00:25:59.7778340Z         
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-04-19T00:25:59.7778862Z           # data.mongodbatlas_encryption_at_rest.test will be read during apply
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-04-19T00:25:59.7779506Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-04-19T00:25:59.7780042Z          &lt;= data &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-04-19T00:25:59.7780608Z               + aws_kms_config           = (known after apply)
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-04-19T00:25:59.7781166Z               + azure_key_vault_config   = (known after apply)
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-04-19T00:25:59.7781857Z               + enabled_for_search_nodes = (known after apply)
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-04-19T00:25:59.7782416Z               + google_cloud_kms_config  = (known after apply)
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-04-19T00:25:59.7782952Z               + id                       = (known after apply)
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2025-04-19T00:25:59.7783513Z               + project_id               = &quot;6790e57a9b41416f5c216fee&quot;
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2025-04-19T00:25:59.7783886Z             }
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2025-04-19T00:25:59.7784136Z         
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2025-04-19T00:25:59.7784628Z           # mongodbatlas_encryption_at_rest.test will be updated in-place
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2025-04-19T00:25:59.7785221Z           ~ resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2025-04-19T00:25:59.7785831Z                 id                       = &quot;6790e57a9b41416f5c216fee&quot;
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2025-04-19T00:25:59.7786349Z                 # (2 unchanged attributes hidden)
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2025-04-19T00:25:59.7787498Z         
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2025-04-19T00:25:59.7787837Z               ~ aws_kms_config {
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2025-04-19T00:25:59.7788405Z                   + customer_master_key_id     = (sensitive value)
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2025-04-19T00:25:59.7789005Z                   ~ enabled                    = false -&gt; true
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2025-04-19T00:25:59.7789647Z                   + role_id                    = &quot;679243c15ec3be271d1d7952&quot;
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>2025-04-19T00:25:59.7790324Z                   ~ valid                      = false -&gt; (known after apply)
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>2025-04-19T00:25:59.7790898Z                     # (2 unchanged attributes hidden)
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>2025-04-19T00:25:59.7791255Z                 }
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>2025-04-19T00:25:59.7791523Z             }
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>2025-04-19T00:25:59.7791770Z         
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>2025-04-19T00:25:59.7792128Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>2025-04-19T00:25:59.7792520Z --- FAIL: TestAccEncryptionAtRest_basicAWS (1.62s)
+</code></pre></div>
+<h3 id="2025-04-20">2025-04-20</h3>
+<h4 id="pass-7-seconds_3">PASS 7 seconds</h4>
+<h3 id="2025-04-21">2025-04-21</h3>
+<h4 id="pass-4-seconds_3">PASS 4 seconds</h4>
+<h3 id="2025-04-22">2025-04-22</h3>
+<h4 id="fail-a-second_1">FAIL a second</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-04-22T00:27:26.2588544Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-04-22T00:27:26.2597783Z   
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-04-22T00:27:26.2598655Z     resource_test.go:53: Step 1/4 error: Check failed: Check 9/9 error: Check 2/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.valid&#39; expected &quot;true&quot;, got &quot;false&quot;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-04-22T00:27:26.2599855Z         Check 3/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.enabled&#39; expected &quot;true&quot;, got &quot;false&quot;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-04-22T00:27:26.2600881Z         Check 4/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.region&#39; expected &quot;US_EAST_1&quot;, got &quot;&quot;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-04-22T00:27:26.2602053Z         Check 5/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.role_id&#39; not found
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-04-22T00:27:26.2603435Z         Check 6/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.customer_master_key_id&#39; expected &quot;***&quot;, got &quot;&quot;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-04-22T00:27:26.2604082Z --- FAIL: TestAccEncryptionAtRest_basicAWS (1.35s)
+</code></pre></div>
+<h3 id="2025-04-23">2025-04-23</h3>
+<h4 id="pass-4-seconds_4">PASS 4 seconds</h4>
+<h3 id="2025-04-24">2025-04-24</h3>
+<h4 id="pass-7-seconds_4">PASS 7 seconds</h4>
+<h3 id="2025-04-25">2025-04-25</h3>
+<h4 id="pass-3-seconds_3">PASS 3 seconds</h4>
+<h3 id="2025-04-26">2025-04-26</h3>
+<h4 id="pass-7-seconds_5">PASS 7 seconds</h4>
+<h3 id="2025-04-27">2025-04-27</h3>
+<h4 id="pass-4-seconds_5">PASS 4 seconds</h4>
+<h3 id="2025-04-28">2025-04-28</h3>
+<h4 id="pass-7-seconds_6">PASS 7 seconds</h4>
+<h3 id="2025-04-29">2025-04-29</h3>
+<h4 id="pass-3-seconds_4">PASS 3 seconds</h4>
+<h3 id="2025-04-30">2025-04-30</h3>
+<h4 id="pass-3-seconds_5">PASS 3 seconds</h4>
+<h4 id="pass-4-seconds_6">PASS 4 seconds</h4>
+<h3 id="2025-05-01">2025-05-01</h3>
+<h4 id="pass-7-seconds_7">PASS 7 seconds</h4>
+<h4 id="pass-3-seconds_6">PASS 3 seconds</h4>
+<h4 id="pass-7-seconds_8">PASS 7 seconds</h4>
+<h4 id="pass-3-seconds_7">PASS 3 seconds</h4>
+<h4 id="pass-6-seconds">PASS 6 seconds</h4>
+<h4 id="pass-3-seconds_8">PASS 3 seconds</h4>
+<h4 id="pass-6-seconds_1">PASS 6 seconds</h4>
+<h3 id="2025-05-02">2025-05-02</h3>
+<h4 id="pass-5-seconds">PASS 5 seconds</h4>
+<h3 id="2025-05-03">2025-05-03</h3>
+<h4 id="pass-6-seconds_2">PASS 6 seconds</h4>
+<h3 id="2025-05-04">2025-05-04</h3>
+<h4 id="pass-4-seconds_7">PASS 4 seconds</h4>
+<h3 id="2025-05-05">2025-05-05</h3>
+<h4 id="pass-7-seconds_9">PASS 7 seconds</h4>
+<h3 id="2025-05-06">2025-05-06</h3>
+<h4 id="pass-3-seconds_9">PASS 3 seconds</h4>
+<h3 id="2025-05-07">2025-05-07</h3>
+<h4 id="pass-3-seconds_10">PASS 3 seconds</h4>
+<h3 id="2025-05-08">2025-05-08</h3>
+<h4 id="pass-7-seconds_10">PASS 7 seconds</h4>
+<h3 id="2025-05-09">2025-05-09</h3>
+<h4 id="pass-3-seconds_11">PASS 3 seconds</h4>
+<h3 id="2025-05-10">2025-05-10</h3>
+<h4 id="pass-4-seconds_8">PASS 4 seconds</h4>
+<h3 id="2025-05-11">2025-05-11</h3>
+<h4 id="fail-a-moment">FAIL a moment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-05-11T00:30:02.0093127Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-05-11T00:30:02.0103594Z   
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-05-11T00:30:02.0104005Z     resource_test.go:53: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-05-11T00:30:02.0104393Z         
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-05-11T00:30:02.0104836Z         Error: error creating Encryption At Rest: 67978809c57f200e59f19f6a
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-05-11T00:30:02.0105209Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-05-11T00:30:02.0105574Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-05-11T00:30:02.0106271Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-05-11T00:30:02.0106924Z           12:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-05-11T00:30:02.0107264Z         
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-05-11T00:30:02.0107948Z         (503 Service Unavailable) failed to decode response body: undefined response
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-05-11T00:30:02.0108381Z         type
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-05-11T00:30:02.0108671Z --- FAIL: TestAccEncryptionAtRest_basicAWS (0.44s)
+</code></pre></div>
+<h3 id="2025-05-12">2025-05-12</h3>
+<h4 id="pass-6-seconds_3">PASS 6 seconds</h4>
+<h3 id="2025-05-13">2025-05-13</h3>
+<h4 id="pass-7-seconds_11">PASS 7 seconds</h4>
+<h4 id="pass-3-seconds_12">PASS 3 seconds</h4>
+<h3 id="2025-05-14">2025-05-14</h3>
+<h4 id="pass-4-seconds_9">PASS 4 seconds</h4>
+<h3 id="2025-05-15">2025-05-15</h3>
+<h4 id="pass-4-seconds_10">PASS 4 seconds</h4>
+<h3 id="2025-05-16">2025-05-16</h3>
+<h4 id="pass-5-seconds_1">PASS 5 seconds</h4>
+<h3 id="2025-05-17">2025-05-17</h3>
+<h4 id="pass-3-seconds_13">PASS 3 seconds</h4>
+<h3 id="2025-05-18">2025-05-18</h3>
+<h4 id="pass-3-seconds_14">PASS 3 seconds</h4>
+<h3 id="2025-05-19">2025-05-19</h3>
+<h4 id="pass-4-seconds_11">PASS 4 seconds</h4>
+<h3 id="2025-05-20">2025-05-20</h3>
+<h4 id="pass-5-seconds_2">PASS 5 seconds</h4>
+<h3 id="2025-05-21">2025-05-21</h3>
+<h4 id="pass-7-seconds_12">PASS 7 seconds</h4>
+<h3 id="2025-05-22">2025-05-22</h3>
+<h4 id="pass-5-seconds_3">PASS 5 seconds</h4>
+<h3 id="2025-05-23">2025-05-23</h3>
+<h4 id="pass-7-seconds_13">PASS 7 seconds</h4>
+<h3 id="2025-05-24">2025-05-24</h3>
+<h4 id="pass-4-seconds_12">PASS 4 seconds</h4>
+<h3 id="2025-05-25">2025-05-25</h3>
+<h4 id="fail-a-second_2">FAIL a second</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-05-25T00:31:32.2652503Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-05-25T00:31:32.2666214Z   
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-05-25T00:31:32.2667877Z     resource_test.go:53: Step 1/4 error: Check failed: Check 9/9 error: Check 1/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.enabled&#39; expected &quot;true&quot;, got &quot;false&quot;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-05-25T00:31:32.2670252Z         Check 2/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.region&#39; expected &quot;US_EAST_1&quot;, got &quot;&quot;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-05-25T00:31:32.2672369Z         Check 3/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.role_id&#39; not found
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-05-25T00:31:32.2674282Z         Check 4/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.customer_master_key_id&#39; expected &quot;***&quot;, got &quot;&quot;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-05-25T00:31:32.2675405Z         Check 6/6 error: data.mongodbatlas_encryption_at_rest.test: Attribute &#39;aws_kms_config.valid&#39; expected &quot;true&quot;, got &quot;false&quot;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-05-25T00:31:32.2676024Z --- FAIL: TestAccEncryptionAtRest_basicAWS (1.18s)
+</code></pre></div>
+<h3 id="2025-05-26">2025-05-26</h3>
+<h4 id="pass-4-seconds_13">PASS 4 seconds</h4>
+<h3 id="2025-05-27">2025-05-27</h3>
+<h4 id="pass-5-seconds_4">PASS 5 seconds</h4>
+<h3 id="2025-05-28">2025-05-28</h3>
+<h4 id="pass-3-seconds_15">PASS 3 seconds</h4>
+<h4 id="pass-3-seconds_16">PASS 3 seconds</h4>
+<h3 id="2025-05-29">2025-05-29</h3>
+<h4 id="pass-5-seconds_5">PASS 5 seconds</h4>
+<h3 id="2025-05-30">2025-05-30</h3>
+<h4 id="pass-4-seconds_14">PASS 4 seconds</h4>
+<h3 id="2025-05-31">2025-05-31</h3>
+<h4 id="pass-5-seconds_6">PASS 5 seconds</h4>
+<h3 id="2025-06-01">2025-06-01</h3>
+<h4 id="pass-4-seconds_15">PASS 4 seconds</h4>
+<h4 id="pass-3-seconds_17">PASS 3 seconds</h4>
+<h4 id="pass-4-seconds_16">PASS 4 seconds</h4>
+<h4 id="pass-4-seconds_17">PASS 4 seconds</h4>
+<h4 id="pass-3-seconds_18">PASS 3 seconds</h4>
+<h4 id="pass-7-seconds_14">PASS 7 seconds</h4>
+<h3 id="2025-06-02">2025-06-02</h3>
+<h4 id="pass-7-seconds_15">PASS 7 seconds</h4>
+<h4 id="pass-3-seconds_19">PASS 3 seconds</h4>
+<h4 id="pass-4-seconds_18">PASS 4 seconds</h4>
+<h3 id="2025-06-03">2025-06-03</h3>
+<h4 id="pass-4-seconds_19">PASS 4 seconds</h4>
+<h3 id="2025-06-04">2025-06-04</h3>
+<h4 id="pass-7-seconds_16">PASS 7 seconds</h4>
+<h3 id="2025-06-05">2025-06-05</h3>
+<h4 id="pass-7-seconds_17">PASS 7 seconds</h4>
+<h3 id="2025-06-06">2025-06-06</h3>
+<h4 id="fail-a-moment_1">FAIL a moment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-06-06T00:30:27.5384300Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-06-06T00:30:27.5410514Z   
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-06-06T00:30:27.5411403Z     resource_test.go:53: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-06-06T00:30:27.5412062Z         
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-06-06T00:30:27.5412834Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-06-06T00:30:27.5413470Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-06-06T00:30:27.5414094Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-06-06T00:30:27.5415485Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-06-06T00:30:27.5416625Z           12:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-06-06T00:30:27.5417213Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-06-06T00:30:27.5418233Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-06-06T00:30:27.5419260Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-06-06T00:30:27.5420431Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-06-06T00:30:27.5421901Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-06-06T00:30:27.5423060Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-06-06T00:30:27.5424165Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-06-06T00:30:27.5424944Z         BadRequestDetail: 
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-06-06T00:30:27.5425496Z --- FAIL: TestAccEncryptionAtRest_basicAWS (0.40s)
+</code></pre></div>
+<h3 id="2025-06-07">2025-06-07</h3>
+<h4 id="fail-a-moment_2">FAIL a moment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-06-07T00:29:08.7330667Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-06-07T00:29:08.7347856Z    test_step_number=1 test_name=TestAccEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/06a0f4ae-f3dc-40b5-9553-6ac9b0b7480d/terraform test_working_directory=/tmp/plugintest413564793
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-06-07T00:29:08.7348934Z     resource_test.go:53: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-06-07T00:29:08.7349599Z         
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-06-07T00:29:08.7370377Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-06-07T00:29:08.7370979Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-06-07T00:29:08.7371705Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-06-07T00:29:08.7373204Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-06-07T00:29:08.7373935Z           12:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-06-07T00:29:08.7374345Z         
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-06-07T00:29:08.7374997Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-06-07T00:29:08.7375650Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-06-07T00:29:08.7376374Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-06-07T00:29:08.7377167Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-06-07T00:29:08.7377885Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-06-07T00:29:08.7378575Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-06-07T00:29:08.7379072Z         BadRequestDetail: 
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-06-07T00:29:08.7379636Z --- FAIL: TestAccEncryptionAtRest_basicAWS (0.42s)
+</code></pre></div>
+<h3 id="2025-06-08">2025-06-08</h3>
+<h4 id="pass-5-seconds_7">PASS 5 seconds</h4>
+<h3 id="2025-06-09">2025-06-09</h3>
+<h4 id="fail-a-moment_3">FAIL a moment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-06-09T00:31:34.5025730Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-06-09T00:31:34.5043056Z    test_working_directory=/tmp/plugintest4005387235 test_step_number=1 test_name=TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-06-09T00:31:34.5043933Z     resource_test.go:53: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-06-09T00:31:34.5044340Z         
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-06-09T00:31:34.5044785Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-06-09T00:31:34.5045169Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-06-09T00:31:34.5045539Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-06-09T00:31:34.5046493Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-06-09T00:31:34.5047142Z           12:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-06-09T00:31:34.5047492Z         
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-06-09T00:31:34.5048086Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-06-09T00:31:34.5048688Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-06-09T00:31:34.5049348Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-06-09T00:31:34.5050249Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-06-09T00:31:34.5050921Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-06-09T00:31:34.5051556Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-06-09T00:31:34.5052014Z         BadRequestDetail: 
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-06-09T00:31:34.5052493Z --- FAIL: TestAccEncryptionAtRest_basicAWS (0.49s)
+</code></pre></div>
+<h3 id="2025-06-10">2025-06-10</h3>
+<h4 id="fail-a-moment_4">FAIL a moment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-06-10T00:38:08.6534667Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-06-10T00:38:08.6548965Z    test_name=TestAccEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/57c73f63-ecc2-4b98-b6f0-743232347351/terraform test_working_directory=/tmp/plugintest2327634986
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-06-10T00:38:08.6549924Z     resource_test.go:53: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-06-10T00:38:08.6550309Z         
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-06-10T00:38:08.6550736Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-06-10T00:38:08.6551105Z         
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-06-10T00:38:08.6551461Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-06-10T00:38:08.6552319Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-06-10T00:38:08.6552954Z           12:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-06-10T00:38:08.6553283Z         
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-06-10T00:38:08.6553854Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-06-10T00:38:08.6554437Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-06-10T00:38:08.6555083Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-06-10T00:38:08.6555816Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-06-10T00:38:08.6556471Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-06-10T00:38:08.6557086Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-06-10T00:38:08.6557526Z         BadRequestDetail: 
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-06-10T00:38:08.6558072Z --- FAIL: TestAccEncryptionAtRest_basicAWS (0.43s)
+</code></pre></div>
+<h3 id="2025-06-11">2025-06-11</h3>
+<h4 id="fail-a-moment_5">FAIL a moment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-06-11T00:29:03.2165689Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-06-11T00:29:03.2180254Z    test_name=TestAccEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/1384a036-623a-46ad-8451-77d6c5d0803e/terraform
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-06-11T00:29:03.2181040Z     resource_test.go:53: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-06-11T00:29:03.2181420Z         
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-06-11T00:29:03.2181855Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-06-11T00:29:03.2182218Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-06-11T00:29:03.2182583Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-06-11T00:29:03.2183276Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-06-11T00:29:03.2183918Z           12:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-06-11T00:29:03.2184252Z         
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-06-11T00:29:03.2184832Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-06-11T00:29:03.2185422Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-06-11T00:29:03.2186080Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-06-11T00:29:03.2186805Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-06-11T00:29:03.2187454Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-06-11T00:29:03.2188064Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-06-11T00:29:03.2188492Z         BadRequestDetail: 
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-06-11T00:29:03.2189243Z --- FAIL: TestAccEncryptionAtRest_basicAWS (0.38s)
+</code></pre></div>
+<h4 id="pass-5-seconds_8">PASS 5 seconds</h4>
+<h3 id="2025-06-12">2025-06-12</h3>
+<h4 id="fail-a-moment_6">FAIL a moment</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-06-12T00:28:46.9514145Z === RUN   TestAccEncryptionAtRest_basicAWS
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-06-12T00:28:46.9529231Z   
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-06-12T00:28:46.9529638Z     resource_test.go:53: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-06-12T00:28:46.9530201Z         
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-06-12T00:28:46.9530718Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-06-12T00:28:46.9531106Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-06-12T00:28:46.9531466Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-06-12T00:28:46.9532160Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-06-12T00:28:46.9532809Z           12:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-06-12T00:28:46.9533147Z         
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-06-12T00:28:46.9533736Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-06-12T00:28:46.9534325Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-06-12T00:28:46.9534982Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-06-12T00:28:46.9535724Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-06-12T00:28:46.9536386Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-06-12T00:28:46.9537017Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2025-06-12T00:28:46.9537598Z         BadRequestDetail: 
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2025-06-12T00:28:46.9538012Z --- FAIL: TestAccEncryptionAtRest_basicAWS (0.45s)
+</code></pre></div>
+<h3 id="2025-06-13">2025-06-13</h3>
+<h4 id="pass-7-seconds_18">PASS 7 seconds</h4>
+<h3 id="2025-06-14">2025-06-14</h3>
+<h4 id="pass-4-seconds_20">PASS 4 seconds</h4>
+<h3 id="2025-06-15">2025-06-15</h3>
+<h4 id="pass-5-seconds_9">PASS 5 seconds</h4>
+<h3 id="2025-06-16">2025-06-16</h3>
+<h4 id="pass-4-seconds_21">PASS 4 seconds</h4>
+<h3 id="2025-06-17">2025-06-17</h3>
+<h4 id="pass-7-seconds_19">PASS 7 seconds</h4>
+<h3 id="2025-06-18">2025-06-18</h3>
+<h4 id="pass-3-seconds_20">PASS 3 seconds</h4>
+<h3 id="2025-06-19">2025-06-19</h3>
+<h4 id="pass-7-seconds_20">PASS 7 seconds</h4>
+<h3 id="2025-06-20">2025-06-20</h3>
+<h4 id="pass-4-seconds_22">PASS 4 seconds</h4>
+<h3 id="2025-06-21">2025-06-21</h3>
+<h4 id="pass-4-seconds_23">PASS 4 seconds</h4>
+<h3 id="2025-06-22">2025-06-22</h3>
+<h4 id="pass-3-seconds_21">PASS 3 seconds</h4>
+<h3 id="2025-06-23">2025-06-23</h3>
+<h4 id="pass-7-seconds_21">PASS 7 seconds</h4>
+<h3 id="2025-06-24">2025-06-24</h3>
+<h4 id="pass-4-seconds_24">PASS 4 seconds</h4>
+<h3 id="2025-06-25">2025-06-25</h3>
+<h4 id="pass-5-seconds_10">PASS 5 seconds</h4>
+<h3 id="2025-06-26">2025-06-26</h3>
+<h4 id="pass-3-seconds_22">PASS 3 seconds</h4>
+<h3 id="2025-06-27">2025-06-27</h3>
+<h4 id="pass-4-seconds_25">PASS 4 seconds</h4>
+<h3 id="2025-06-28">2025-06-28</h3>
+<h4 id="pass-7-seconds_22">PASS 7 seconds</h4>
+<h3 id="2025-06-29">2025-06-29</h3>
+<h4 id="pass-6-seconds_4">PASS 6 seconds</h4>
+<h3 id="2025-06-30">2025-06-30</h3>
+<h4 id="pass-7-seconds_23">PASS 7 seconds</h4>
+<h3 id="2025-07-01">2025-07-01</h3>
+<h4 id="pass-4-seconds_26">PASS 4 seconds</h4>
+<h4 id="pass-4-seconds_27">PASS 4 seconds</h4>
+<h4 id="pass-5-seconds_11">PASS 5 seconds</h4>
+<h4 id="pass-6-seconds_5">PASS 6 seconds</h4>
+<h4 id="pass-7-seconds_24">PASS 7 seconds</h4>
+<h4 id="pass-3-seconds_23">PASS 3 seconds</h4>
+<h3 id="2025-07-02">2025-07-02</h3>
+<h4 id="pass-4-seconds_28">PASS 4 seconds</h4>
+<h3 id="2025-07-03">2025-07-03</h3>
+<h4 id="pass-3-seconds_24">PASS 3 seconds</h4>
+<h3 id="2025-07-04">2025-07-04</h3>
+<h4 id="pass-3-seconds_25">PASS 3 seconds</h4>
+<h3 id="2025-07-05">2025-07-05</h3>
+<h4 id="pass-4-seconds_29">PASS 4 seconds</h4>
+<h3 id="2025-07-06">2025-07-06</h3>
+<h4 id="pass-3-seconds_26">PASS 3 seconds</h4>
+<h3 id="2025-07-07">2025-07-07</h3>
+<h4 id="pass-4-seconds_30">PASS 4 seconds</h4>
+<h3 id="2025-07-08">2025-07-08</h3>
+<h4 id="pass-4-seconds_31">PASS 4 seconds</h4>
+<h3 id="2025-07-09">2025-07-09</h3>
+<h4 id="pass-5-seconds_12">PASS 5 seconds</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

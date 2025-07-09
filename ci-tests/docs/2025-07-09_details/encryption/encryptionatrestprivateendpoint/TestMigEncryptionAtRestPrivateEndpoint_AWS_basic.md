@@ -1,0 +1,386 @@
+# encryption/encryptionatrestprivateendpoint/TestMigEncryptionAtRestPrivateEndpoint_AWS_basic Test Details
+# Found 113 TestRuns in dev, qa from 2025-04-11 to 2025-07-09 from master branch: 1 unique tests, PASS(x 106) FAIL(x 7)
+Success rate: 93.81%
+
+# #  Error Table
+
+Date | Env | Runtime
+--- | --- | ---
+2025-05-11 00:30 | qa | 2.08s
+2025-06-06 00:30 | dev | 1.06s
+2025-06-07 00:29 | dev | 1.09s
+2025-06-09 00:31 | dev | 3.00s
+2025-06-10 00:38 | dev | 1.05s
+2025-06-11 00:29 | dev | 1.06s
+2025-06-12 00:28 | dev | 1.06s
+
+## Timeline
+2025-03-11: MISSING
+2025-03-12: MISSING
+2025-03-13: MISSING
+2025-03-14: MISSING
+2025-03-15: MISSING
+2025-03-16: MISSING
+2025-03-17: MISSING
+2025-03-18: MISSING
+2025-03-19: MISSING
+2025-03-20: MISSING
+2025-03-21: MISSING
+2025-03-22: MISSING
+2025-03-23: MISSING
+2025-03-24: MISSING
+2025-03-25: MISSING
+2025-03-26: MISSING
+2025-03-27: MISSING
+2025-03-28: MISSING
+2025-03-29: MISSING
+2025-03-30: MISSING
+2025-03-31: MISSING
+2025-04-01: MISSING
+2025-04-02: MISSING
+2025-04-03: MISSING
+2025-04-04: MISSING
+2025-04-05: MISSING
+2025-04-06: MISSING
+2025-04-07: MISSING
+2025-04-08: MISSING
+2025-04-09: MISSING
+2025-04-10: MISSING
+### 2025-04-11
+#### PASS 4 seconds
+### 2025-04-12
+#### PASS 4 seconds
+### 2025-04-13
+#### PASS 4 seconds
+### 2025-04-14
+#### PASS 6 seconds
+### 2025-04-15
+#### PASS 6 seconds
+### 2025-04-16
+#### PASS 4 seconds
+#### PASS 6 seconds
+### 2025-04-17
+#### PASS 4 seconds
+### 2025-04-18
+#### PASS 4 seconds
+### 2025-04-19
+#### PASS 4 seconds
+### 2025-04-20
+#### PASS 6 seconds
+### 2025-04-21
+#### PASS 4 seconds
+### 2025-04-22
+#### PASS 4 seconds
+### 2025-04-23
+#### PASS 4 seconds
+### 2025-04-24
+#### PASS 6 seconds
+### 2025-04-25
+#### PASS 4 seconds
+### 2025-04-26
+#### PASS 7 seconds
+### 2025-04-27
+#### PASS 4 seconds
+### 2025-04-28
+#### PASS 6 seconds
+### 2025-04-29
+#### PASS 4 seconds
+### 2025-04-30
+#### PASS 4 seconds
+#### PASS 4 seconds
+### 2025-05-01
+#### PASS 6 seconds
+#### PASS 4 seconds
+#### PASS 5 seconds
+#### PASS 4 seconds
+#### PASS 5 seconds
+#### PASS 4 seconds
+#### PASS 8 seconds
+### 2025-05-02
+#### PASS 5 seconds
+### 2025-05-03
+#### PASS 6 seconds
+### 2025-05-04
+#### PASS 4 seconds
+### 2025-05-05
+#### PASS 6 seconds
+### 2025-05-06
+#### PASS 4 seconds
+### 2025-05-07
+#### PASS 4 seconds
+### 2025-05-08
+#### PASS 6 seconds
+### 2025-05-09
+#### PASS 4 seconds
+### 2025-05-10
+#### PASS 4 seconds
+### 2025-05-11
+#### FAIL 2 seconds
+```
+2025-05-11T00:30:05.5006644Z === RUN   TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-05-11T00:30:05.5017616Z   
+2025-05-11T00:30:05.5018579Z     resource_migration_test.go:18: Step 1/2 error: Error running apply: exit status 1
+2025-05-11T00:30:05.5019311Z         
+2025-05-11T00:30:05.5020078Z         Error: error creating Encryption At Rest: 67978809c57f200e59f19f6a
+2025-05-11T00:30:05.5020727Z         
+2025-05-11T00:30:05.5021353Z           with mongodbatlas_encryption_at_rest.test,
+2025-05-11T00:30:05.5022770Z           on terraform_plugin_test.tf line 14, in resource "mongodbatlas_encryption_at_rest" "test":
+2025-05-11T00:30:05.5023926Z           14: 		resource "mongodbatlas_encryption_at_rest" "test" {
+2025-05-11T00:30:05.5024515Z         
+2025-05-11T00:30:05.5025366Z         (503 Service Unavailable) failed to decode response body: undefined response
+2025-05-11T00:30:05.5026093Z         type
+2025-05-11T00:30:05.5026689Z --- FAIL: TestMigEncryptionAtRestPrivateEndpoint_AWS_basic (2.85s)
+```
+### 2025-05-12
+#### PASS 6 seconds
+### 2025-05-13
+#### PASS 6 seconds
+#### PASS 4 seconds
+### 2025-05-14
+#### PASS 4 seconds
+### 2025-05-15
+#### PASS 4 seconds
+### 2025-05-16
+#### PASS 5 seconds
+### 2025-05-17
+#### PASS 4 seconds
+### 2025-05-18
+#### PASS 4 seconds
+### 2025-05-19
+#### PASS 4 seconds
+### 2025-05-20
+#### PASS 5 seconds
+### 2025-05-21
+#### PASS 6 seconds
+### 2025-05-22
+#### PASS 5 seconds
+### 2025-05-23
+#### PASS 6 seconds
+### 2025-05-24
+#### PASS 4 seconds
+### 2025-05-25
+#### PASS 5 seconds
+### 2025-05-26
+#### PASS 4 seconds
+### 2025-05-27
+#### PASS 5 seconds
+### 2025-05-28
+#### PASS 4 seconds
+#### PASS 4 seconds
+### 2025-05-29
+#### PASS 5 seconds
+### 2025-05-30
+#### PASS 4 seconds
+### 2025-05-31
+#### PASS 5 seconds
+### 2025-06-01
+#### PASS 4 seconds
+#### PASS 4 seconds
+#### PASS 4 seconds
+#### PASS 4 seconds
+#### PASS 4 seconds
+#### PASS 6 seconds
+### 2025-06-02
+#### PASS 5 seconds
+#### PASS 4 seconds
+#### PASS 7 seconds
+### 2025-06-03
+#### PASS 4 seconds
+### 2025-06-04
+#### PASS 6 seconds
+### 2025-06-05
+#### PASS 6 seconds
+### 2025-06-06
+#### FAIL a second
+```
+2025-06-06T00:30:27.5467481Z === RUN   TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-06-06T00:30:27.5482798Z    test_name=TestMigEncryptionAtRestPrivateEndpoint_AWS_basic test_terraform_path=/home/runner/work/_temp/7db9c9d1-cd42-48f9-9aa7-2a0c5a3f762f/terraform test_working_directory=/tmp/plugintest4241827640 test_step_number=1
+2025-06-06T00:30:27.5484272Z     resource_migration_test.go:18: Step 1/2 error: Error running apply: exit status 1
+2025-06-06T00:30:27.5484755Z         
+2025-06-06T00:30:27.5485258Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+2025-06-06T00:30:27.5485681Z         
+2025-06-06T00:30:27.5486095Z           with mongodbatlas_encryption_at_rest.test,
+2025-06-06T00:30:27.5486875Z           on terraform_plugin_test.tf line 14, in resource "mongodbatlas_encryption_at_rest" "test":
+2025-06-06T00:30:27.5487599Z           14: 		resource "mongodbatlas_encryption_at_rest" "test" {
+2025-06-06T00:30:27.5487981Z         
+2025-06-06T00:30:27.5488760Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+2025-06-06T00:30:27.5489426Z         PATCH: HTTP 400 Bad Request (Error code:
+2025-06-06T00:30:27.5490173Z         "CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST")
+2025-06-06T00:30:27.5491285Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+2025-06-06T00:30:27.5492044Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+2025-06-06T00:30:27.5492759Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+2025-06-06T00:30:27.5493265Z         BadRequestDetail: 
+2025-06-06T00:30:27.5493896Z --- FAIL: TestMigEncryptionAtRestPrivateEndpoint_AWS_basic (1.61s)
+```
+### 2025-06-07
+#### FAIL a second
+```
+2025-06-07T00:29:08.7406471Z === RUN   TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-06-07T00:29:08.7416407Z    test_step_number=1 test_terraform_path=/home/runner/work/_temp/06a0f4ae-f3dc-40b5-9553-6ac9b0b7480d/terraform
+2025-06-07T00:29:08.7417204Z     resource_migration_test.go:18: Step 1/2 error: Error running apply: exit status 1
+2025-06-07T00:29:08.7417675Z         
+2025-06-07T00:29:08.7418157Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+2025-06-07T00:29:08.7418577Z         
+2025-06-07T00:29:08.7418988Z           with mongodbatlas_encryption_at_rest.test,
+2025-06-07T00:29:08.7419724Z           on terraform_plugin_test.tf line 14, in resource "mongodbatlas_encryption_at_rest" "test":
+2025-06-07T00:29:08.7420413Z           14: 		resource "mongodbatlas_encryption_at_rest" "test" {
+2025-06-07T00:29:08.7420802Z         
+2025-06-07T00:29:08.7421434Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+2025-06-07T00:29:08.7422305Z         PATCH: HTTP 400 Bad Request (Error code:
+2025-06-07T00:29:08.7423021Z         "CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST")
+2025-06-07T00:29:08.7423814Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+2025-06-07T00:29:08.7424531Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+2025-06-07T00:29:08.7425210Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+2025-06-07T00:29:08.7425707Z         BadRequestDetail: 
+2025-06-07T00:29:08.7426149Z --- FAIL: TestMigEncryptionAtRestPrivateEndpoint_AWS_basic (1.93s)
+```
+### 2025-06-08
+#### PASS 5 seconds
+### 2025-06-09
+#### FAIL 3 seconds
+```
+2025-06-09T00:31:34.5076629Z === RUN   TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-06-09T00:31:34.5086312Z   
+2025-06-09T00:31:34.5086766Z     resource_migration_test.go:18: Step 1/2 error: Error running apply: exit status 1
+2025-06-09T00:31:34.5087191Z         
+2025-06-09T00:31:34.5087637Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+2025-06-09T00:31:34.5088017Z         
+2025-06-09T00:31:34.5088389Z           with mongodbatlas_encryption_at_rest.test,
+2025-06-09T00:31:34.5089076Z           on terraform_plugin_test.tf line 14, in resource "mongodbatlas_encryption_at_rest" "test":
+2025-06-09T00:31:34.5089719Z           14: 		resource "mongodbatlas_encryption_at_rest" "test" {
+2025-06-09T00:31:34.5090069Z         
+2025-06-09T00:31:34.5090659Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+2025-06-09T00:31:34.5091259Z         PATCH: HTTP 400 Bad Request (Error code:
+2025-06-09T00:31:34.5091925Z         "CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST")
+2025-06-09T00:31:34.5092673Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+2025-06-09T00:31:34.5093337Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+2025-06-09T00:31:34.5093970Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+2025-06-09T00:31:34.5094433Z         BadRequestDetail: 
+2025-06-09T00:31:34.5094834Z --- FAIL: TestMigEncryptionAtRestPrivateEndpoint_AWS_basic (3.03s)
+```
+### 2025-06-10
+#### FAIL a second
+```
+2025-06-10T00:38:08.6598475Z === RUN   TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-06-10T00:38:08.6607608Z    test_name=TestMigEncryptionAtRestPrivateEndpoint_AWS_basic test_terraform_path=/home/runner/work/_temp/57c73f63-ecc2-4b98-b6f0-743232347351/terraform test_working_directory=/tmp/plugintest3704229424 test_step_number=1
+2025-06-10T00:38:08.6608750Z     resource_migration_test.go:18: Step 1/2 error: Error running apply: exit status 1
+2025-06-10T00:38:08.6609173Z         
+2025-06-10T00:38:08.6609616Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+2025-06-10T00:38:08.6609993Z         
+2025-06-10T00:38:08.6610368Z           with mongodbatlas_encryption_at_rest.test,
+2025-06-10T00:38:08.6611049Z           on terraform_plugin_test.tf line 14, in resource "mongodbatlas_encryption_at_rest" "test":
+2025-06-10T00:38:08.6611680Z           14: 		resource "mongodbatlas_encryption_at_rest" "test" {
+2025-06-10T00:38:08.6612210Z         
+2025-06-10T00:38:08.6612791Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+2025-06-10T00:38:08.6613383Z         PATCH: HTTP 400 Bad Request (Error code:
+2025-06-10T00:38:08.6614042Z         "CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST")
+2025-06-10T00:38:08.6614785Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+2025-06-10T00:38:08.6615446Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+2025-06-10T00:38:08.6616087Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+2025-06-10T00:38:08.6616549Z         BadRequestDetail: 
+2025-06-10T00:38:08.6616951Z --- FAIL: TestMigEncryptionAtRestPrivateEndpoint_AWS_basic (1.55s)
+```
+### 2025-06-11
+#### FAIL a second
+```
+2025-06-11T00:29:03.2213908Z === RUN   TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-06-11T00:29:03.2241142Z    test_terraform_path=/home/runner/work/_temp/1384a036-623a-46ad-8451-77d6c5d0803e/terraform test_working_directory=/tmp/plugintest1130200138 test_step_number=1 test_name=TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-06-11T00:29:03.2242264Z     resource_migration_test.go:18: Step 1/2 error: Error running apply: exit status 1
+2025-06-11T00:29:03.2242683Z         
+2025-06-11T00:29:03.2243123Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+2025-06-11T00:29:03.2243490Z         
+2025-06-11T00:29:03.2243864Z           with mongodbatlas_encryption_at_rest.test,
+2025-06-11T00:29:03.2244571Z           on terraform_plugin_test.tf line 14, in resource "mongodbatlas_encryption_at_rest" "test":
+2025-06-11T00:29:03.2245204Z           14: 		resource "mongodbatlas_encryption_at_rest" "test" {
+2025-06-11T00:29:03.2245532Z         
+2025-06-11T00:29:03.2246120Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+2025-06-11T00:29:03.2246700Z         PATCH: HTTP 400 Bad Request (Error code:
+2025-06-11T00:29:03.2247353Z         "CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST")
+2025-06-11T00:29:03.2248103Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+2025-06-11T00:29:03.2248763Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+2025-06-11T00:29:03.2249588Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+2025-06-11T00:29:03.2250037Z         BadRequestDetail: 
+2025-06-11T00:29:03.2250424Z --- FAIL: TestMigEncryptionAtRestPrivateEndpoint_AWS_basic (1.60s)
+```
+#### PASS 5 seconds
+### 2025-06-12
+#### FAIL a second
+```
+2025-06-12T00:28:46.9561564Z === RUN   TestMigEncryptionAtRestPrivateEndpoint_AWS_basic
+2025-06-12T00:28:46.9570146Z    test_name=TestMigEncryptionAtRestPrivateEndpoint_AWS_basic test_terraform_path=/home/runner/work/_temp/584807c8-6e22-475a-9784-e49e71f9fb14/terraform test_working_directory=/tmp/plugintest1396293028 test_step_number=1
+2025-06-12T00:28:46.9571274Z     resource_migration_test.go:18: Step 1/2 error: Error running apply: exit status 1
+2025-06-12T00:28:46.9571690Z         
+2025-06-12T00:28:46.9572134Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+2025-06-12T00:28:46.9572506Z         
+2025-06-12T00:28:46.9572874Z           with mongodbatlas_encryption_at_rest.test,
+2025-06-12T00:28:46.9573559Z           on terraform_plugin_test.tf line 14, in resource "mongodbatlas_encryption_at_rest" "test":
+2025-06-12T00:28:46.9574202Z           14: 		resource "mongodbatlas_encryption_at_rest" "test" {
+2025-06-12T00:28:46.9574541Z         
+2025-06-12T00:28:46.9575128Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+2025-06-12T00:28:46.9575725Z         PATCH: HTTP 400 Bad Request (Error code:
+2025-06-12T00:28:46.9576384Z         "CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST")
+2025-06-12T00:28:46.9577122Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+2025-06-12T00:28:46.9577782Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+2025-06-12T00:28:46.9578413Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+2025-06-12T00:28:46.9578860Z         BadRequestDetail: 
+2025-06-12T00:28:46.9579243Z --- FAIL: TestMigEncryptionAtRestPrivateEndpoint_AWS_basic (1.57s)
+```
+### 2025-06-13
+#### PASS 6 seconds
+### 2025-06-14
+#### PASS 5 seconds
+### 2025-06-15
+#### PASS 5 seconds
+### 2025-06-16
+#### PASS 4 seconds
+### 2025-06-17
+#### PASS 5 seconds
+### 2025-06-18
+#### PASS 4 seconds
+### 2025-06-19
+#### PASS 7 seconds
+### 2025-06-20
+#### PASS 4 seconds
+### 2025-06-21
+#### PASS 4 seconds
+### 2025-06-22
+#### PASS 4 seconds
+### 2025-06-23
+#### PASS 6 seconds
+### 2025-06-24
+#### PASS 5 seconds
+### 2025-06-25
+#### PASS 4 seconds
+### 2025-06-26
+#### PASS 4 seconds
+### 2025-06-27
+#### PASS 4 seconds
+### 2025-06-28
+#### PASS 6 seconds
+### 2025-06-29
+#### PASS 6 seconds
+### 2025-06-30
+#### PASS 6 seconds
+### 2025-07-01
+#### PASS 4 seconds
+#### PASS 4 seconds
+#### PASS 5 seconds
+#### PASS 6 seconds
+#### PASS 6 seconds
+#### PASS 4 seconds
+### 2025-07-02
+#### PASS 4 seconds
+### 2025-07-03
+#### PASS 4 seconds
+### 2025-07-04
+#### PASS 3 seconds
+### 2025-07-05
+#### PASS 4 seconds
+### 2025-07-06
+#### PASS 4 seconds
+### 2025-07-07
+#### PASS 4 seconds
+### 2025-07-08
+#### PASS 4 seconds
+### 2025-07-09
+#### PASS 5 seconds
