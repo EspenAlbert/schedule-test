@@ -1,0 +1,1024 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>generic/auditing/TestMigGenericAuditing_basic Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#genericauditingtestmiggenericauditing_basic-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              generic/auditing/TestMigGenericAuditing_basic Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="genericauditingtestmiggenericauditing_basic-test-details">generic/auditing/TestMigGenericAuditing_basic Test Details</h1>
+<h1 id="found-116-testruns-in-dev-qa-from-2025-04-12-to-2025-07-10-from-master-branch-1-unique-tests-passx-98-failx-12-skipx-6">Found 116 TestRuns in dev, qa from 2025-04-12 to 2025-07-10 from master branch: 1 unique tests, PASS(x 98) FAIL(x 12) SKIP(x 6)</h1>
+<p>Success rate: 89.09%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-05-01t0028490000">2025-05-01 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>8.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-01t0200100000">2025-05-01 02:00</a></td>
+<td></td>
+<td>dev</td>
+<td>8.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-01t0327130000">2025-05-01 03:27</a></td>
+<td></td>
+<td>dev</td>
+<td>5.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-01t0452070000">2025-05-01 04:52</a></td>
+<td></td>
+<td>dev</td>
+<td>8.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-01t0619550000">2025-05-01 06:19</a></td>
+<td></td>
+<td>dev</td>
+<td>9.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-01t0743540000">2025-05-01 07:43</a></td>
+<td></td>
+<td>dev</td>
+<td>8.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-01t0908270000">2025-05-01 09:08</a></td>
+<td></td>
+<td>dev</td>
+<td>9.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-02t0027510000">2025-05-02 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td>8.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-03t0027200000">2025-05-03 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td>7.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-04t0031110000">2025-05-04 00:31</a></td>
+<td></td>
+<td>qa</td>
+<td>8.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-05t0030020000">2025-05-05 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td>9.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-05-11t0029490000">2025-05-11 00:29</a></td>
+<td></td>
+<td>qa</td>
+<td>0.03s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-04-11: MISSING</li>
+<li>2025-04-12 PASS 10 seconds</li>
+<li>2025-04-13 PASS 12 seconds</li>
+<li>2025-04-14 PASS 9 seconds</li>
+<li>2025-04-15 PASS 13 seconds</li>
+<li>2025-04-16</li>
+<li>PASS 11 seconds</li>
+<li>PASS 11 seconds</li>
+<li>2025-04-17 PASS 12 seconds</li>
+<li>2025-04-18 PASS 11 seconds</li>
+<li>2025-04-19 PASS 10 seconds</li>
+<li>2025-04-20 PASS 10 seconds</li>
+<li>2025-04-21 PASS 10 seconds</li>
+<li>2025-04-22 PASS 9 seconds</li>
+<li>2025-04-23 PASS 8 seconds</li>
+<li>2025-04-24 PASS 9 seconds</li>
+<li>2025-04-25 PASS 13 seconds</li>
+<li>2025-04-26 SKIP unknown</li>
+<li>2025-04-27 SKIP unknown</li>
+<li>2025-04-28 SKIP unknown</li>
+<li>2025-04-29 SKIP unknown</li>
+<li>2025-04-30</li>
+<li>SKIP unknown</li>
+<li>SKIP unknown</li>
+<li>2025-05-01</li>
+<li>FAIL 8 seconds</li>
+</ul>
+<h3 id="error-2025-05-01t0028490000">Error 2025-05-01T00:28:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-05-01T00:28:49.9489859Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-05-01T00:28:49.9491144Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-7343516782927865301
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-05-01T00:28:49.9517511Z    test_name=TestMigGenericAuditing_basic
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-05-01T00:28:49.9518950Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-05-01T00:28:49.9520027Z         stdout:
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-05-01T00:28:49.9520554Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-05-01T00:28:49.9551393Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-05-01T00:28:49.9552659Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-05-01T00:28:49.9553522Z           ~ update in-place
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-05-01T00:28:49.9554182Z          &lt;= read (data resources)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-05-01T00:28:49.9554753Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-05-01T00:28:49.9555443Z         Terraform will perform the following actions:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-05-01T00:28:49.9556292Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-05-01T00:28:49.9557154Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-05-01T00:28:49.9558282Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-05-01T00:28:49.9559191Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-05-01T00:28:49.9560227Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-05-01T00:28:49.9561328Z               + audit_filter                = (known after apply)
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-05-01T00:28:49.9562431Z               + configuration_type          = (known after apply)
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-05-01T00:28:49.9563470Z               + enabled                     = (known after apply)
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2025-05-01T00:28:49.9564504Z               + id                          = (known after apply)
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2025-05-01T00:28:49.9565626Z               + project_id                  = &quot;6812c033e6fd086dacbd32bd&quot;
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2025-05-01T00:28:49.9566526Z             }
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2025-05-01T00:28:49.9567028Z         
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2025-05-01T00:28:49.9567836Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2025-05-01T00:28:49.9568859Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2025-05-01T00:28:49.9569803Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2025-05-01T00:28:49.9571736Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2025-05-01T00:28:49.9572727Z                 EOT
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2025-05-01T00:28:49.9573912Z                 id                          = &quot;6812c033e6fd086dacbd32bd&quot;
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2025-05-01T00:28:49.9574914Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2025-05-01T00:28:49.9575559Z             }
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>2025-05-01T00:28:49.9576022Z         
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>2025-05-01T00:28:49.9576918Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>2025-05-01T00:28:49.9577649Z --- FAIL: TestMigGenericAuditing_basic (8.28s)
+</code></pre></div>
+<ul>
+<li>FAIL 8 seconds</li>
+</ul>
+<h3 id="error-2025-05-01t0200100000">Error 2025-05-01T02:00:10+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-05-01T02:00:10.2596572Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-05-01T02:00:10.2598016Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-4771871027279841436
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-05-01T02:00:10.2652432Z   
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-05-01T02:00:10.2653173Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-05-01T02:00:10.2653808Z         stdout:
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-05-01T02:00:10.2654096Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-05-01T02:00:10.2654908Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-05-01T02:00:10.2655597Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-05-01T02:00:10.2656465Z           ~ update in-place
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-05-01T02:00:10.2656861Z          &lt;= read (data resources)
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-05-01T02:00:10.2657189Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-05-01T02:00:10.2657594Z         Terraform will perform the following actions:
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-05-01T02:00:10.2657969Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-05-01T02:00:10.2658455Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-05-01T02:00:10.2659084Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-05-01T02:00:10.2659600Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-05-01T02:00:10.2660194Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-05-01T02:00:10.2660794Z               + audit_filter                = (known after apply)
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-05-01T02:00:10.2661384Z               + configuration_type          = (known after apply)
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-05-01T02:00:10.2661967Z               + enabled                     = (known after apply)
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2025-05-01T02:00:10.2662520Z               + id                          = (known after apply)
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2025-05-01T02:00:10.2663122Z               + project_id                  = &quot;6812d59ce6fd086dacbd7221&quot;
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2025-05-01T02:00:10.2663533Z             }
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>2025-05-01T02:00:10.2663810Z         
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>2025-05-01T02:00:10.2664294Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>2025-05-01T02:00:10.2665110Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>2025-05-01T02:00:10.2665643Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>2025-05-01T02:00:10.2666951Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>2025-05-01T02:00:10.2667504Z                 EOT
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>2025-05-01T02:00:10.2668389Z                 id                          = &quot;6812d59ce6fd086dacbd7221&quot;
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>2025-05-01T02:00:10.2668947Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>2025-05-01T02:00:10.2669313Z             }
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>2025-05-01T02:00:10.2669583Z         
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>2025-05-01T02:00:10.2669965Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>2025-05-01T02:00:10.2670373Z --- FAIL: TestMigGenericAuditing_basic (8.32s)
+</code></pre></div>
+<ul>
+<li>FAIL 5 seconds</li>
+</ul>
+<h3 id="error-2025-05-01t0327130000">Error 2025-05-01T03:27:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-05-01T03:27:13.0971115Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-05-01T03:27:13.0979617Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-6955002310918244256
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-05-01T03:27:13.0998081Z   
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-05-01T03:27:13.0998766Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-05-01T03:27:13.0999376Z         stdout:
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-05-01T03:27:13.0999649Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-05-01T03:27:13.1000420Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-05-01T03:27:13.1001094Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-05-01T03:27:13.1001580Z           ~ update in-place
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-05-01T03:27:13.1001950Z          &lt;= read (data resources)
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-05-01T03:27:13.1002268Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-05-01T03:27:13.1002656Z         Terraform will perform the following actions:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-05-01T03:27:13.1003019Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-05-01T03:27:13.1003492Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-05-01T03:27:13.1004114Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-05-01T03:27:13.1004621Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-05-01T03:27:13.1005210Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-05-01T03:27:13.1005804Z               + audit_filter                = (known after apply)
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-05-01T03:27:13.1006556Z               + configuration_type          = (known after apply)
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2025-05-01T03:27:13.1007147Z               + enabled                     = (known after apply)
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2025-05-01T03:27:13.1007737Z               + id                          = (known after apply)
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>2025-05-01T03:27:13.1008667Z               + project_id                  = &quot;6812ea06ed10397068f807e3&quot;
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>2025-05-01T03:27:13.1009226Z             }
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>2025-05-01T03:27:13.1009495Z         
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>2025-05-01T03:27:13.1009949Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>2025-05-01T03:27:13.1010484Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>2025-05-01T03:27:13.1010997Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>2025-05-01T03:27:13.1012021Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>2025-05-01T03:27:13.1012574Z                 EOT
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>2025-05-01T03:27:13.1013272Z                 id                          = &quot;6812ea06ed10397068f807e3&quot;
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>2025-05-01T03:27:13.1013807Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>2025-05-01T03:27:13.1014167Z             }
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>2025-05-01T03:27:13.1014428Z         
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>2025-05-01T03:27:13.1014801Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>2025-05-01T03:27:13.1015197Z --- FAIL: TestMigGenericAuditing_basic (5.60s)
+</code></pre></div>
+<ul>
+<li>FAIL 8 seconds</li>
+</ul>
+<h3 id="error-2025-05-01t0452070000">Error 2025-05-01T04:52:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-05-01T04:52:07.4875157Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-05-01T04:52:07.4876741Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-4960006649650598225
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-05-01T04:52:07.4904840Z    test_terraform_path=/home/runner/work/_temp/ab6a3535-a93d-4fed-b81f-2da50902d55a/terraform test_name=TestMigGenericAuditing_basic test_working_directory=/tmp/plugintest489709636
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-05-01T04:52:07.4907043Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-05-01T04:52:07.4908143Z         stdout:
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-05-01T04:52:07.4908643Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-05-01T04:52:07.4910035Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-05-01T04:52:07.4911237Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-05-01T04:52:07.4912096Z           ~ update in-place
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-05-01T04:52:07.4912766Z          &lt;= read (data resources)
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-05-01T04:52:07.4939230Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-05-01T04:52:07.4940019Z         Terraform will perform the following actions:
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-05-01T04:52:07.4940712Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-05-01T04:52:07.4941582Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-05-01T04:52:07.4942696Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-05-01T04:52:07.4943628Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-05-01T04:52:07.4944835Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-05-01T04:52:07.4945944Z               + audit_filter                = (known after apply)
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-05-01T04:52:07.4947003Z               + configuration_type          = (known after apply)
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-05-01T04:52:07.4948058Z               + enabled                     = (known after apply)
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-05-01T04:52:07.4949073Z               + id                          = (known after apply)
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-05-01T04:52:07.4950153Z               + project_id                  = &quot;6812fdeced10397068f84c9a&quot;
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-05-01T04:52:07.4950889Z             }
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2025-05-01T04:52:07.4951381Z         
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2025-05-01T04:52:07.4952187Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2025-05-01T04:52:07.4953136Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2025-05-01T04:52:07.4954196Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2025-05-01T04:52:07.4956042Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2025-05-01T04:52:07.4957040Z                 EOT
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2025-05-01T04:52:07.4958193Z                 id                          = &quot;6812fdeced10397068f84c9a&quot;
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2025-05-01T04:52:07.4959152Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2025-05-01T04:52:07.4959813Z             }
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>2025-05-01T04:52:07.4960302Z         
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>2025-05-01T04:52:07.4960976Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>2025-05-01T04:52:07.4961695Z --- FAIL: TestMigGenericAuditing_basic (8.28s)
+</code></pre></div>
+<ul>
+<li>FAIL 9 seconds</li>
+</ul>
+<h3 id="error-2025-05-01t0619550000">Error 2025-05-01T06:19:55+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-05-01T06:19:55.0424387Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-05-01T06:19:55.0425779Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-5182642610986347076
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-05-01T06:19:55.0450699Z   
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-05-01T06:19:55.0451855Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-05-01T06:19:55.0452922Z         stdout:
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-05-01T06:19:55.0453215Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-05-01T06:19:55.0454002Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-05-01T06:19:55.0454685Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-05-01T06:19:55.0455170Z           ~ update in-place
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-05-01T06:19:55.0455546Z          &lt;= read (data resources)
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-05-01T06:19:55.0455871Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-05-01T06:19:55.0456266Z         Terraform will perform the following actions:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-05-01T06:19:55.0456625Z         
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-05-01T06:19:55.0457108Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-05-01T06:19:55.0457940Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-05-01T06:19:55.0458451Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-05-01T06:19:55.0459033Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-05-01T06:19:55.0459628Z               + audit_filter                = (known after apply)
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2025-05-01T06:19:55.0460213Z               + configuration_type          = (known after apply)
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2025-05-01T06:19:55.0460786Z               + enabled                     = (known after apply)
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2025-05-01T06:19:55.0461337Z               + id                          = (known after apply)
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>2025-05-01T06:19:55.0461948Z               + project_id                  = &quot;6813127ced10397068f8a4d1&quot;
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>2025-05-01T06:19:55.0462344Z             }
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>2025-05-01T06:19:55.0462614Z         
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>2025-05-01T06:19:55.0463066Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>2025-05-01T06:19:55.0463606Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>2025-05-01T06:19:55.0464125Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>2025-05-01T06:19:55.0465163Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>2025-05-01T06:19:55.0465730Z                 EOT
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>2025-05-01T06:19:55.0466452Z                 id                          = &quot;6813127ced10397068f8a4d1&quot;
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>2025-05-01T06:19:55.0466994Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>2025-05-01T06:19:55.0467363Z             }
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>2025-05-01T06:19:55.0467867Z         
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>2025-05-01T06:19:55.0468262Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>2025-05-01T06:19:55.0468670Z --- FAIL: TestMigGenericAuditing_basic (9.92s)
+</code></pre></div>
+<ul>
+<li>FAIL 8 seconds</li>
+</ul>
+<h3 id="error-2025-05-01t0743540000">Error 2025-05-01T07:43:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-05-01T07:43:54.5817619Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-05-01T07:43:54.5819031Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-1317889817092857310
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-05-01T07:43:54.5842134Z    test_step_number=1 test_name=TestMigGenericAuditing_basic test_terraform_path=/home/runner/work/_temp/c1e8423b-fb47-496d-bf89-ddce022e9afa/terraform
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-05-01T07:43:54.5843727Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-05-01T07:43:54.5844484Z         stdout:
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-05-01T07:43:54.5874390Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-05-01T07:43:54.5875992Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-05-01T07:43:54.5877105Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-05-01T07:43:54.5877934Z           ~ update in-place
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-05-01T07:43:54.5878566Z          &lt;= read (data resources)
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-05-01T07:43:54.5879109Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-05-01T07:43:54.5879755Z         Terraform will perform the following actions:
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-05-01T07:43:54.5880346Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-05-01T07:43:54.5880958Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-05-01T07:43:54.5881607Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-05-01T07:43:54.5882132Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-05-01T07:43:54.5882939Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-05-01T07:43:54.5883876Z               + audit_filter                = (known after apply)
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2025-05-01T07:43:54.5884493Z               + configuration_type          = (known after apply)
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2025-05-01T07:43:54.5885074Z               + enabled                     = (known after apply)
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2025-05-01T07:43:54.5885628Z               + id                          = (known after apply)
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>2025-05-01T07:43:54.5886225Z               + project_id                  = &quot;6813262c13d6b32170ff4a0b&quot;
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>2025-05-01T07:43:54.5886625Z             }
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>2025-05-01T07:43:54.5886897Z         
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>2025-05-01T07:43:54.5887351Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>2025-05-01T07:43:54.5887901Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>2025-05-01T07:43:54.5888434Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>2025-05-01T07:43:54.5889466Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>2025-05-01T07:43:54.5890023Z                 EOT
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>2025-05-01T07:43:54.5890782Z                 id                          = &quot;6813262c13d6b32170ff4a0b&quot;
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>2025-05-01T07:43:54.5891332Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>2025-05-01T07:43:54.5891712Z             }
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>2025-05-01T07:43:54.5891983Z         
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>2025-05-01T07:43:54.5892605Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>2025-05-01T07:43:54.5893030Z --- FAIL: TestMigGenericAuditing_basic (8.13s)
+</code></pre></div>
+<ul>
+<li>FAIL 9 seconds</li>
+</ul>
+<h3 id="error-2025-05-01t0908270000">Error 2025-05-01T09:08:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-05-01T09:08:27.1973138Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-05-01T09:08:27.1980937Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-2288628601582799411
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-05-01T09:08:27.2019192Z    test_working_directory=/tmp/plugintest4218237457 test_step_number=1 test_name=TestMigGenericAuditing_basic
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-05-01T09:08:27.2020973Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-05-01T09:08:27.2022042Z         stdout:
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-05-01T09:08:27.2022491Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-05-01T09:08:27.2023847Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-05-01T09:08:27.2025227Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-05-01T09:08:27.2026074Z           ~ update in-place
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-05-01T09:08:27.2026710Z          &lt;= read (data resources)
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-05-01T09:08:27.2027235Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-05-01T09:08:27.2027923Z         Terraform will perform the following actions:
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-05-01T09:08:27.2028637Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-05-01T09:08:27.2056831Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-05-01T09:08:27.2057987Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-05-01T09:08:27.2058902Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-05-01T09:08:27.2059957Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-05-01T09:08:27.2061049Z               + audit_filter                = (known after apply)
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2025-05-01T09:08:27.2062120Z               + configuration_type          = (known after apply)
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2025-05-01T09:08:27.2063170Z               + enabled                     = (known after apply)
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>2025-05-01T09:08:27.2064352Z               + id                          = (known after apply)
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>2025-05-01T09:08:27.2065455Z               + project_id                  = &quot;681339fef7db2d257067de63&quot;
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>2025-05-01T09:08:27.2066135Z             }
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>2025-05-01T09:08:27.2066576Z         
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>2025-05-01T09:08:27.2067380Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>2025-05-01T09:08:27.2068328Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>2025-05-01T09:08:27.2069255Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>2025-05-01T09:08:27.2071197Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>2025-05-01T09:08:27.2072158Z                 EOT
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>2025-05-01T09:08:27.2073363Z                 id                          = &quot;681339fef7db2d257067de63&quot;
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>2025-05-01T09:08:27.2074487Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>2025-05-01T09:08:27.2075110Z             }
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>2025-05-01T09:08:27.2075550Z         
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>2025-05-01T09:08:27.2076185Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>2025-05-01T09:08:27.2076850Z --- FAIL: TestMigGenericAuditing_basic (9.63s)
+</code></pre></div>
+<ul>
+<li>2025-05-02</li>
+</ul>
+<h3 id="error-2025-05-02t0027510000">Error 2025-05-02T00:27:51+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-05-02T00:27:51.7668300Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-05-02T00:27:51.7669310Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-6995327284020439726
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-05-02T00:27:51.7695779Z    test_working_directory=/tmp/plugintest1446963679 test_name=TestMigGenericAuditing_basic
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-05-02T00:27:51.7697214Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-05-02T00:27:51.7698356Z         stdout:
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-05-02T00:27:51.7698662Z         
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-05-02T00:27:51.7699480Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-05-02T00:27:51.7700190Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-05-02T00:27:51.7700912Z           ~ update in-place
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-05-02T00:27:51.7701312Z          &lt;= read (data resources)
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-05-02T00:27:51.7701652Z         
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-05-02T00:27:51.7702064Z         Terraform will perform the following actions:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-05-02T00:27:51.7721155Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-05-02T00:27:51.7722087Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-05-02T00:27:51.7723343Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-05-02T00:27:51.7724327Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-05-02T00:27:51.7725220Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-05-02T00:27:51.7725872Z               + audit_filter                = (known after apply)
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2025-05-02T00:27:51.7726503Z               + configuration_type          = (known after apply)
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2025-05-02T00:27:51.7727116Z               + enabled                     = (known after apply)
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>2025-05-02T00:27:51.7727696Z               + id                          = (known after apply)
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>2025-05-02T00:27:51.7728330Z               + project_id                  = &quot;6814117be5d1950b80d83832&quot;
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>2025-05-02T00:27:51.7728755Z             }
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>2025-05-02T00:27:51.7729053Z         
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>2025-05-02T00:27:51.7729532Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>2025-05-02T00:27:51.7730105Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>2025-05-02T00:27:51.7730910Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>2025-05-02T00:27:51.7731991Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>2025-05-02T00:27:51.7732573Z                 EOT
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>2025-05-02T00:27:51.7733335Z                 id                          = &quot;6814117be5d1950b80d83832&quot;
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>2025-05-02T00:27:51.7733906Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>2025-05-02T00:27:51.7734293Z             }
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>2025-05-02T00:27:51.7734578Z         
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>2025-05-02T00:27:51.7734975Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>2025-05-02T00:27:51.7735403Z --- FAIL: TestMigGenericAuditing_basic (8.59s)
+</code></pre></div>
+<ul>
+<li>2025-05-03</li>
+</ul>
+<h3 id="error-2025-05-03t0027200000">Error 2025-05-03T00:27:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-05-03T00:27:20.8915283Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-05-03T00:27:20.8916503Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-2488451325405250734
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-05-03T00:27:20.8966615Z   
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-05-03T00:27:20.8967359Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-05-03T00:27:20.8968004Z         stdout:
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-05-03T00:27:20.8968299Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-05-03T00:27:20.8969330Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-05-03T00:27:20.8970035Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-05-03T00:27:20.8970540Z           ~ update in-place
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-05-03T00:27:20.8970940Z          &lt;= read (data resources)
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-05-03T00:27:20.8971283Z         
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-05-03T00:27:20.8971696Z         Terraform will perform the following actions:
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-05-03T00:27:20.8972089Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-05-03T00:27:20.8972596Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-05-03T00:27:20.8973242Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-05-03T00:27:20.8973777Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-05-03T00:27:20.8974387Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-05-03T00:27:20.8975010Z               + audit_filter                = (known after apply)
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2025-05-03T00:27:20.8975620Z               + configuration_type          = (known after apply)
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>2025-05-03T00:27:20.8976223Z               + enabled                     = (known after apply)
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>2025-05-03T00:27:20.8976801Z               + id                          = (known after apply)
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>2025-05-03T00:27:20.8977436Z               + project_id                  = &quot;681562ddf5ab983d4a7634ff&quot;
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>2025-05-03T00:27:20.8977853Z             }
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>2025-05-03T00:27:20.8978140Z         
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>2025-05-03T00:27:20.8978762Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>2025-05-03T00:27:20.8979324Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>2025-05-03T00:27:20.8979864Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>2025-05-03T00:27:20.8980922Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>2025-05-03T00:27:20.8981507Z                 EOT
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>2025-05-03T00:27:20.8982241Z                 id                          = &quot;681562ddf5ab983d4a7634ff&quot;
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>2025-05-03T00:27:20.8982804Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>2025-05-03T00:27:20.8983191Z             }
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>2025-05-03T00:27:20.8983474Z         
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>2025-05-03T00:27:20.8983866Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>2025-05-03T00:27:20.8984293Z --- FAIL: TestMigGenericAuditing_basic (7.04s)
+</code></pre></div>
+<ul>
+<li>2025-05-04</li>
+</ul>
+<h3 id="error-2025-05-04t0031110000">Error 2025-05-04T00:31:11+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-05-04T00:31:11.7066327Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-05-04T00:31:11.7068707Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-2016991390216005965
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-05-04T00:31:11.7102157Z   
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-05-04T00:31:11.7103350Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-05-04T00:31:11.7104409Z         stdout:
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-05-04T00:31:11.7132540Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-05-04T00:31:11.7134061Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-05-04T00:31:11.7135325Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-05-04T00:31:11.7136239Z           ~ update in-place
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-05-04T00:31:11.7137078Z          &lt;= read (data resources)
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-05-04T00:31:11.7137670Z         
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-05-04T00:31:11.7138387Z         Terraform will perform the following actions:
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-05-04T00:31:11.7139060Z         
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-05-04T00:31:11.7139950Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-05-04T00:31:11.7141111Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-05-04T00:31:11.7142052Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2025-05-04T00:31:11.7143144Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2025-05-04T00:31:11.7144274Z               + audit_filter                = (known after apply)
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2025-05-04T00:31:11.7145388Z               + configuration_type          = (known after apply)
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>2025-05-04T00:31:11.7146478Z               + enabled                     = (known after apply)
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>2025-05-04T00:31:11.7147846Z               + id                          = (known after apply)
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>2025-05-04T00:31:11.7148978Z               + project_id                  = &quot;6816b540081f2c5b7945b605&quot;
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>2025-05-04T00:31:11.7149691Z             }
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>2025-05-04T00:31:11.7150154Z         
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>2025-05-04T00:31:11.7150976Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>2025-05-04T00:31:11.7151961Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>2025-05-04T00:31:11.7152917Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>2025-05-04T00:31:11.7154907Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>2025-05-04T00:31:11.7155917Z                 EOT
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>2025-05-04T00:31:11.7157555Z                 id                          = &quot;6816b540081f2c5b7945b605&quot;
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>2025-05-04T00:31:11.7158567Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>2025-05-04T00:31:11.7159212Z             }
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>2025-05-04T00:31:11.7159673Z         
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>2025-05-04T00:31:11.7160341Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>2025-05-04T00:31:11.7161046Z --- FAIL: TestMigGenericAuditing_basic (8.10s)
+</code></pre></div>
+<ul>
+<li>2025-05-05</li>
+</ul>
+<h3 id="error-2025-05-05t0030020000">Error 2025-05-05T00:30:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-05-05T00:30:02.8751834Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-05-05T00:30:02.8753391Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-9025238284088448262
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-05-05T00:30:02.8776913Z    test_terraform_path=/home/runner/work/_temp/4523e18a-5365-4f47-9b16-a8fcfa63d406/terraform
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-05-05T00:30:02.8778424Z     resource_auditing_migration_test.go:20: Step 1/2 error: After applying this test step, the non-refresh plan was not empty.
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-05-05T00:30:02.8779238Z         stdout:
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-05-05T00:30:02.8779617Z         
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-05-05T00:30:02.8802916Z         Terraform used the selected providers to generate the following execution
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-05-05T00:30:02.8803649Z         plan. Resource actions are indicated with the following symbols:
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-05-05T00:30:02.8804142Z           ~ update in-place
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-05-05T00:30:02.8804545Z          &lt;= read (data resources)
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-05-05T00:30:02.8804970Z         
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-05-05T00:30:02.8805488Z         Terraform will perform the following actions:
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-05-05T00:30:02.8806182Z         
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-05-05T00:30:02.8806770Z           # data.mongodbatlas_auditing.test will be read during apply
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-05-05T00:30:02.8807528Z           # (depends on a resource or a module with changes pending)
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2025-05-05T00:30:02.8808321Z          &lt;= data &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2025-05-05T00:30:02.8809105Z               + audit_authorization_success = (known after apply)
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2025-05-05T00:30:02.8809906Z               + audit_filter                = (known after apply)
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2025-05-05T00:30:02.8810639Z               + configuration_type          = (known after apply)
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>2025-05-05T00:30:02.8811389Z               + enabled                     = (known after apply)
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>2025-05-05T00:30:02.8812057Z               + id                          = (known after apply)
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>2025-05-05T00:30:02.8812731Z               + project_id                  = &quot;6818067d815eb7429e02a82b&quot;
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>2025-05-05T00:30:02.8813165Z             }
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>2025-05-05T00:30:02.8813480Z         
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>2025-05-05T00:30:02.8813999Z           # mongodbatlas_auditing.test will be updated in-place
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>2025-05-05T00:30:02.8814636Z           ~ resource &quot;mongodbatlas_auditing&quot; &quot;test&quot; {
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>2025-05-05T00:30:02.8815251Z               ~ audit_filter                = &lt;&lt;-EOT
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>2025-05-05T00:30:02.8816388Z                     { &#39;atype&#39;: &#39;authenticate&#39;, &#39;param&#39;: {   &#39;user&#39;: &#39;auditAdmin&#39;,   &#39;db&#39;: &#39;admin&#39;,   &#39;mechanism&#39;: &#39;SCRAM-SHA-1&#39; }}
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>2025-05-05T00:30:02.8817035Z                 EOT
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>2025-05-05T00:30:02.8818029Z                 id                          = &quot;6818067d815eb7429e02a82b&quot;
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>2025-05-05T00:30:02.8818710Z                 # (4 unchanged attributes hidden)
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>2025-05-05T00:30:02.8819114Z             }
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>2025-05-05T00:30:02.8819438Z         
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>2025-05-05T00:30:02.8819886Z         Plan: 0 to add, 1 to change, 0 to destroy.
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>2025-05-05T00:30:02.8820384Z --- FAIL: TestMigGenericAuditing_basic (9.54s)
+</code></pre></div>
+<ul>
+<li>2025-05-06 PASS 8 seconds</li>
+<li>2025-05-07 PASS 9 seconds</li>
+<li>2025-05-08 PASS 8 seconds</li>
+<li>2025-05-09 PASS 10 seconds</li>
+<li>2025-05-10 PASS 11 seconds</li>
+<li>2025-05-11</li>
+</ul>
+<h3 id="error-2025-05-11t0029490000">Error 2025-05-11T00:29:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-05-11T00:29:49.3542559Z === RUN   TestMigGenericAuditing_basic
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-05-11T00:29:49.3544002Z     resource_auditing_migration_test.go:14: Creating execution project: test-acc-tf-p-7100172099539844461
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-05-11T00:29:49.3546040Z     resource_auditing_migration_test.go:14: 
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-05-11T00:29:49.3547721Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:22
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-05-11T00:29:49.3550960Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:65
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-05-11T00:29:49.3554369Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/auditing/resource_auditing_migration_test.go:14
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-05-11T00:29:49.3555907Z            Error:          Received unexpected error:
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-05-11T00:29:49.3557486Z                            (503 Service Unavailable) failed to decode response body: undefined response type
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-05-11T00:29:49.3558834Z            Test:           TestMigGenericAuditing_basic
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-05-11T00:29:49.3560647Z            Messages:       Project creation failed: test-acc-tf-p-7100172099539844461, err: (503 Service Unavailable) failed to decode response body: undefined response type
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-05-11T00:29:49.3562006Z --- FAIL: TestMigGenericAuditing_basic (0.30s)
+</code></pre></div>
+<ul>
+<li>2025-05-12 PASS 8 seconds</li>
+<li>2025-05-13</li>
+<li>PASS 8 seconds</li>
+<li>PASS 9 seconds</li>
+<li>2025-05-14 PASS 11 seconds</li>
+<li>2025-05-15 PASS 9 seconds</li>
+<li>2025-05-16 PASS 8 seconds</li>
+<li>2025-05-17 PASS 6 seconds</li>
+<li>2025-05-18 PASS 11 seconds</li>
+<li>2025-05-19 PASS 10 seconds</li>
+<li>2025-05-20 PASS 10 seconds</li>
+<li>2025-05-21 PASS 8 seconds</li>
+<li>2025-05-22 PASS 10 seconds</li>
+<li>2025-05-23 PASS 10 seconds</li>
+<li>2025-05-24 PASS 10 seconds</li>
+<li>2025-05-25 PASS 8 seconds</li>
+<li>2025-05-26 PASS 10 seconds</li>
+<li>2025-05-27</li>
+<li>PASS 9 seconds</li>
+<li>PASS 9 seconds</li>
+<li>2025-05-28</li>
+<li>PASS 9 seconds</li>
+<li>PASS 10 seconds</li>
+<li>PASS 10 seconds</li>
+<li>2025-05-29</li>
+<li>PASS 9 seconds</li>
+<li>PASS 9 seconds</li>
+<li>2025-05-30 PASS 10 seconds</li>
+<li>2025-05-31 PASS 10 seconds</li>
+<li>2025-06-01</li>
+<li>PASS 8 seconds</li>
+<li>PASS 9 seconds</li>
+<li>PASS 8 seconds</li>
+<li>PASS 10 seconds</li>
+<li>PASS 7 seconds</li>
+<li>PASS 7 seconds</li>
+<li>2025-06-02</li>
+<li>PASS 12 seconds</li>
+<li>PASS 9 seconds</li>
+<li>PASS 14 seconds</li>
+<li>2025-06-03 PASS 10 seconds</li>
+<li>2025-06-04 PASS 11 seconds</li>
+<li>2025-06-05 PASS 8 seconds</li>
+<li>2025-06-06 PASS 8 seconds</li>
+<li>2025-06-07 PASS 7 seconds</li>
+<li>2025-06-08 PASS 11 seconds</li>
+<li>2025-06-09 PASS 9 seconds</li>
+<li>2025-06-10 PASS 9 seconds</li>
+<li>2025-06-11</li>
+<li>PASS 10 seconds</li>
+<li>PASS 11 seconds</li>
+<li>2025-06-12 PASS 8 seconds</li>
+<li>2025-06-13 PASS 11 seconds</li>
+<li>2025-06-14 PASS 7 seconds</li>
+<li>2025-06-15 PASS 6 seconds</li>
+<li>2025-06-16 PASS 9 seconds</li>
+<li>2025-06-17 PASS 8 seconds</li>
+<li>2025-06-18 PASS 8 seconds</li>
+<li>2025-06-19 PASS 9 seconds</li>
+<li>2025-06-20 PASS 9 seconds</li>
+<li>2025-06-21 PASS 10 seconds</li>
+<li>2025-06-22 PASS 6 seconds</li>
+<li>2025-06-23 PASS 8 seconds</li>
+<li>2025-06-24 PASS 8 seconds</li>
+<li>2025-06-25 PASS 8 seconds</li>
+<li>2025-06-26 PASS 9 seconds</li>
+<li>2025-06-27 PASS 10 seconds</li>
+<li>2025-06-28 PASS 8 seconds</li>
+<li>2025-06-29 PASS 10 seconds</li>
+<li>2025-06-30 PASS 10 seconds</li>
+<li>2025-07-01</li>
+<li>PASS 7 seconds</li>
+<li>PASS 8 seconds</li>
+<li>PASS 10 seconds</li>
+<li>PASS 9 seconds</li>
+<li>PASS 10 seconds</li>
+<li>PASS 7 seconds</li>
+<li>2025-07-02 PASS 11 seconds</li>
+<li>2025-07-03 PASS 9 seconds</li>
+<li>2025-07-04 PASS 9 seconds</li>
+<li>2025-07-05 PASS 7 seconds</li>
+<li>2025-07-06 PASS 9 seconds</li>
+<li>2025-07-07 PASS 9 seconds</li>
+<li>2025-07-08 PASS 10 seconds</li>
+<li>2025-07-09 PASS 7 seconds</li>
+<li>2025-07-10 PASS 6 seconds</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

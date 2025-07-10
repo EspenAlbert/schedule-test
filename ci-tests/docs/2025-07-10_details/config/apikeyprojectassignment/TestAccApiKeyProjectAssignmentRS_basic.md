@@ -1,0 +1,112 @@
+# config/apikeyprojectassignment/TestAccApiKeyProjectAssignmentRS_basic Test Details
+# Found 1 TestRuns in dev on 2025-07-10 from master branch: 1 unique tests, FAIL
+Success rate: 0.00%
+
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2025-07-10 00:31](#error-2025-07-10t0031000000) | CheckFailure for api_key_project_assignments.plural at Step: 2 Checks: 10 | dev | dangling_resource | 8.04s
+
+## Timeline
+- 2025-04-11: MISSING
+- 2025-04-12: MISSING
+- 2025-04-13: MISSING
+- 2025-04-14: MISSING
+- 2025-04-15: MISSING
+- 2025-04-16: MISSING
+- 2025-04-17: MISSING
+- 2025-04-18: MISSING
+- 2025-04-19: MISSING
+- 2025-04-20: MISSING
+- 2025-04-21: MISSING
+- 2025-04-22: MISSING
+- 2025-04-23: MISSING
+- 2025-04-24: MISSING
+- 2025-04-25: MISSING
+- 2025-04-26: MISSING
+- 2025-04-27: MISSING
+- 2025-04-28: MISSING
+- 2025-04-29: MISSING
+- 2025-04-30: MISSING
+- 2025-05-01: MISSING
+- 2025-05-02: MISSING
+- 2025-05-03: MISSING
+- 2025-05-04: MISSING
+- 2025-05-05: MISSING
+- 2025-05-06: MISSING
+- 2025-05-07: MISSING
+- 2025-05-08: MISSING
+- 2025-05-09: MISSING
+- 2025-05-10: MISSING
+- 2025-05-11: MISSING
+- 2025-05-12: MISSING
+- 2025-05-13: MISSING
+- 2025-05-14: MISSING
+- 2025-05-15: MISSING
+- 2025-05-16: MISSING
+- 2025-05-17: MISSING
+- 2025-05-18: MISSING
+- 2025-05-19: MISSING
+- 2025-05-20: MISSING
+- 2025-05-21: MISSING
+- 2025-05-22: MISSING
+- 2025-05-23: MISSING
+- 2025-05-24: MISSING
+- 2025-05-25: MISSING
+- 2025-05-26: MISSING
+- 2025-05-27: MISSING
+- 2025-05-28: MISSING
+- 2025-05-29: MISSING
+- 2025-05-30: MISSING
+- 2025-05-31: MISSING
+- 2025-06-01: MISSING
+- 2025-06-02: MISSING
+- 2025-06-03: MISSING
+- 2025-06-04: MISSING
+- 2025-06-05: MISSING
+- 2025-06-06: MISSING
+- 2025-06-07: MISSING
+- 2025-06-08: MISSING
+- 2025-06-09: MISSING
+- 2025-06-10: MISSING
+- 2025-06-11: MISSING
+- 2025-06-12: MISSING
+- 2025-06-13: MISSING
+- 2025-06-14: MISSING
+- 2025-06-15: MISSING
+- 2025-06-16: MISSING
+- 2025-06-17: MISSING
+- 2025-06-18: MISSING
+- 2025-06-19: MISSING
+- 2025-06-20: MISSING
+- 2025-06-21: MISSING
+- 2025-06-22: MISSING
+- 2025-06-23: MISSING
+- 2025-06-24: MISSING
+- 2025-06-25: MISSING
+- 2025-06-26: MISSING
+- 2025-06-27: MISSING
+- 2025-06-28: MISSING
+- 2025-06-29: MISSING
+- 2025-06-30: MISSING
+- 2025-07-01: MISSING
+- 2025-07-02: MISSING
+- 2025-07-03: MISSING
+- 2025-07-04: MISSING
+- 2025-07-05: MISSING
+- 2025-07-06: MISSING
+- 2025-07-07: MISSING
+- 2025-07-08: MISSING
+- 2025-07-09: MISSING
+- 2025-07-10
+
+### Error 2025-07-10T00:31:00+00:00
+GoTestErrorClassification(error_class='dangling_resource',author='human',run_id='2025-07-10T00:31:00.234000+00:00-TestAccApiKeyProjectAssignmentRS_basic',confidence=1.0,ts_when='an hour ago')
+CheckFailure for api_key_project_assignments.plural at Step: 2 Checks: 10
+```
+2025-07-10T00:31:00.2342001Z === RUN   TestAccApiKeyProjectAssignmentRS_basic
+2025-07-10T00:31:00.2343185Z === CONT  TestAccApiKeyProjectAssignmentRS_basic
+2025-07-10T00:31:00.2347994Z     resource_test.go:29: Step 2/3 error: Check failed: Check 10/13 error: data.mongodbatlas_api_key_project_assignments.plural: Attribute 'results.0.roles.0' expected "GROUP_READ_ONLY", got "GROUP_OWNER"
+2025-07-10T00:31:00.2348802Z --- FAIL: TestAccApiKeyProjectAssignmentRS_basic (8.40s)
+```

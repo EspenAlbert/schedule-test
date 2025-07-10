@@ -1,0 +1,154 @@
+# config/team/TestAccConfigDSTeam_basic Test Details
+# Found 115 TestRuns in dev, qa from 2025-04-12 to 2025-07-10 from master branch: 1 unique tests, PASS(x 114) FAIL
+Success rate: 99.13%
+
+## Error Table
+
+Date | Details | Env | Runtime
+--- | --- | --- | ---
+[2025-05-11 00:30](#error-2025-05-11t0030140000) |  | qa | 0.08s
+
+## Timeline
+- 2025-04-11: MISSING
+- 2025-04-12 PASS 3 seconds
+- 2025-04-13 PASS 2 seconds
+- 2025-04-14 PASS 2 seconds
+- 2025-04-15 PASS 2 seconds
+- 2025-04-16
+  - PASS 3 seconds
+  - PASS 2 seconds
+- 2025-04-17 PASS 3 seconds
+- 2025-04-18 PASS 3 seconds
+- 2025-04-19 PASS 3 seconds
+- 2025-04-20 PASS 2 seconds
+- 2025-04-21 PASS 4 seconds
+- 2025-04-22 PASS 3 seconds
+- 2025-04-23 PASS 3 seconds
+- 2025-04-24 PASS 3 seconds
+- 2025-04-25 PASS 3 seconds
+- 2025-04-26 PASS 14 seconds
+- 2025-04-27 PASS 4 seconds
+- 2025-04-28 PASS 4 seconds
+- 2025-04-29 PASS 3 seconds
+- 2025-04-30
+  - PASS 3 seconds
+  - PASS 3 seconds
+- 2025-05-01
+  - PASS 3 seconds
+  - PASS 4 seconds
+  - PASS 2 seconds
+  - PASS 3 seconds
+  - PASS 2 seconds
+  - PASS 4 seconds
+  - PASS 3 seconds
+- 2025-05-02 PASS 3 seconds
+- 2025-05-03 PASS 2 seconds
+- 2025-05-04 PASS 3 seconds
+- 2025-05-05 PASS 4 seconds
+- 2025-05-06 PASS 3 seconds
+- 2025-05-07 PASS 2 seconds
+- 2025-05-08 PASS 3 seconds
+- 2025-05-09 PASS 4 seconds
+- 2025-05-10 PASS 3 seconds
+- 2025-05-11
+
+### Error 2025-05-11T00:30:14+00:00
+```
+2025-05-11T00:30:14.4627107Z === RUN   TestAccConfigDSTeam_basic
+2025-05-11T00:30:14.4646211Z === CONT  TestAccConfigDSTeam_basic
+2025-05-11T00:30:14.4671199Z === NAME  TestAccConfigDSTeam_basic
+2025-05-11T00:30:14.4671915Z     data_source_team_test.go:20: Step 1/1 error: Error running apply: exit status 1
+2025-05-11T00:30:14.4672334Z         
+2025-05-11T00:30:14.4673150Z         Error: error creating Team information: (503 Service Unavailable) failed to decode response body: undefined response type
+2025-05-11T00:30:14.4673694Z         
+2025-05-11T00:30:14.4674004Z           with mongodbatlas_team.test,
+2025-05-11T00:30:14.4674598Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_team" "test":
+2025-05-11T00:30:14.4675173Z           12: 		resource "mongodbatlas_team" "test" {
+2025-05-11T00:30:14.4675483Z         
+2025-05-11T00:30:14.4715210Z --- FAIL: TestAccConfigDSTeam_basic (0.78s)
+```
+
+- 2025-05-12 PASS 3 seconds
+- 2025-05-13
+  - PASS 4 seconds
+  - PASS 3 seconds
+- 2025-05-14 PASS 3 seconds
+- 2025-05-15 PASS 3 seconds
+- 2025-05-16 PASS 3 seconds
+- 2025-05-17 PASS 2 seconds
+- 2025-05-18 PASS 3 seconds
+- 2025-05-19 PASS 3 seconds
+- 2025-05-20 PASS 2 seconds
+- 2025-05-21 PASS 3 seconds
+- 2025-05-22 PASS 2 seconds
+- 2025-05-23 PASS 3 seconds
+- 2025-05-24 PASS 3 seconds
+- 2025-05-25 PASS 3 seconds
+- 2025-05-26 PASS 3 seconds
+- 2025-05-27 PASS 3 seconds
+- 2025-05-28
+  - PASS 4 seconds
+  - PASS 2 seconds
+  - PASS 3 seconds
+- 2025-05-29 PASS 3 seconds
+- 2025-05-30 PASS 3 seconds
+- 2025-05-31 PASS 4 seconds
+- 2025-06-01
+  - PASS 3 seconds
+  - PASS 3 seconds
+  - PASS 3 seconds
+  - PASS 3 seconds
+  - PASS 3 seconds
+  - PASS 3 seconds
+- 2025-06-02
+  - PASS 2 seconds
+  - PASS 3 seconds
+  - PASS 5 seconds
+- 2025-06-03 PASS 3 seconds
+- 2025-06-04 PASS 3 seconds
+- 2025-06-05 PASS 4 seconds
+- 2025-06-06 PASS 3 seconds
+- 2025-06-07 PASS 4 seconds
+- 2025-06-08 PASS 2 seconds
+- 2025-06-09 PASS 3 seconds
+- 2025-06-10 PASS 4 seconds
+- 2025-06-11
+  - PASS 4 seconds
+  - PASS 2 seconds
+- 2025-06-12 PASS 3 seconds
+- 2025-06-13 PASS 2 seconds
+- 2025-06-14 PASS 2 seconds
+- 2025-06-15 PASS 2 seconds
+- 2025-06-16 PASS 4 seconds
+- 2025-06-17 PASS 4 seconds
+- 2025-06-18
+  - PASS 3 seconds
+  - PASS 3 seconds
+- 2025-06-19 PASS 2 seconds
+- 2025-06-20 PASS 4 seconds
+- 2025-06-21 PASS 3 seconds
+- 2025-06-22 PASS 2 seconds
+- 2025-06-23 PASS 4 seconds
+- 2025-06-24 PASS 2 seconds
+- 2025-06-25 PASS 3 seconds
+- 2025-06-26 PASS 2 seconds
+- 2025-06-27 PASS 4 seconds
+- 2025-06-28 PASS 2 seconds
+- 2025-06-29 PASS 2 seconds
+- 2025-06-30 PASS 3 seconds
+- 2025-07-01
+  - PASS 3 seconds
+  - PASS 3 seconds
+  - PASS 4 seconds
+  - PASS 3 seconds
+  - PASS 4 seconds
+  - PASS 3 seconds
+- 2025-07-02 PASS 3 seconds
+- 2025-07-03 PASS 3 seconds
+- 2025-07-04 PASS 2 seconds
+- 2025-07-05 PASS 4 seconds
+- 2025-07-06 PASS 2 seconds
+- 2025-07-07 PASS 2 seconds
+- 2025-07-08 PASS 4 seconds
+- 2025-07-09 PASS 4 seconds
+- 2025-07-10 PASS 2 seconds
