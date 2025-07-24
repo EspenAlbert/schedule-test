@@ -1,0 +1,723 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingVPC Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#streamstreamconnectiontestaccstreamrsstreamconnection_kafkanetworkingvpc-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingVPC Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="streamstreamconnectiontestaccstreamrsstreamconnection_kafkanetworkingvpc-test-details">stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingVPC Test Details</h1>
+<h1 id="found-41-testruns-in-dev-qa-from-2025-06-25-to-2025-07-24-from-master-branch-1-unique-tests-passx-31-failx-10">Found 41 TestRuns in dev, qa from 2025-06-25 to 2025-07-24 from master branch: 1 unique tests, PASS(x 31) FAIL(x 10)</h1>
+<p>Success rate: 75.61%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-07-04t0045550000">2025-07-04 00:45</a></td>
+<td></td>
+<td>dev</td>
+<td>real_test_failure</td>
+<td>172.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-05t0044070000">2025-07-05 00:44</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>165.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-06t0048420000">2025-07-06 00:48</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/6869c40a690ae45e168bd44e/streams</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>161.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-07t0048050000">2025-07-07 00:48</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>172.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-08t0045560000">2025-07-08 00:45</a></td>
+<td></td>
+<td>dev</td>
+<td>real_test_failure</td>
+<td>162.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-09t0100070000">2025-07-09 01:00</a></td>
+<td></td>
+<td>dev</td>
+<td>real_test_failure</td>
+<td>172.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-10t0043190000">2025-07-10 00:43</a></td>
+<td></td>
+<td>dev</td>
+<td>real_test_failure</td>
+<td>176.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-11t0128090000">2025-07-11 01:28</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>163.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-13t0052140000">2025-07-13 00:52</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/6872fe95006d8d55bbaa28b2/streams/test-acc-tf-3021213904466828823/connections/test-acc-tf-3021213904466828823</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>191.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-14t0402140000">2025-07-14 04:02</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>1800.06s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-06-24: MISSING</li>
+<li>2025-06-25</li>
+<li>PASS 3 minutes</li>
+<li>PASS 3 minutes</li>
+<li>2025-06-26</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2025-06-27 PASS 2 minutes</li>
+<li>2025-06-28 PASS 2 minutes</li>
+<li>2025-06-29 PASS 3 minutes</li>
+<li>2025-06-30 PASS 3 minutes</li>
+<li>2025-07-01</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2025-07-02 PASS 2 minutes</li>
+<li>2025-07-03 PASS 2 minutes</li>
+<li>2025-07-04</li>
+</ul>
+<h3 id="error-2025-07-04t0045550000">Error 2025-07-04T00:45:55+00:00</h3>
+<p>GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-04T00:45:55.541000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='20 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-04T00:45:55.5414087Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-04T00:45:55.5429247Z    test_terraform_path=/home/runner/work/_temp/c3d41cd1-2970-494b-9abe-ad1b88c82e94/terraform test_working_directory=/tmp/plugintest1841757214 test_step_number=2
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-04T00:45:55.5430193Z     resource_stream_connection_test.go:86: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-04T00:45:55.5430634Z         
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-04T00:45:55.5430927Z         Error: error updating resource
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-04T00:45:55.5431210Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-04T00:45:55.5431558Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-04T00:45:55.5432243Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-04T00:45:55.5432861Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-04T00:45:55.5433181Z         
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-04T00:45:55.5434125Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6867204a579d4c1b1e7ac945/streams/test-acc-tf-6690252890074077348/connections/test-acc-tf-6690252890074077348
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-04T00:45:55.5434960Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-04T00:45:55.5435529Z         &quot;STREAM_NETWORKING_ACCESS_TYPE_CANNOT_BE_MODIFIED&quot;) Detail: Stream networking
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-04T00:45:55.5436133Z         access type cannot be modified. Reason: Bad Request. Params:
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-04T00:45:55.5436702Z         [test-acc-tf-6690252890074077348 test-acc-tf-6690252890074077348],
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-04T00:45:55.5437111Z         BadRequestDetail: 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-04T00:45:55.5437483Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (172.67s)
+</code></pre></div>
+<ul>
+<li>2025-07-05</li>
+</ul>
+<h3 id="error-2025-07-05t0044070000">Error 2025-07-05T00:44:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-05T00:44:07.5777514Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-05T00:44:07.5802083Z   
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-05T00:44:07.5802877Z     resource_stream_connection_test.go:86: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-05T00:44:07.5803600Z         
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-07-05T00:44:07.5804232Z         Error: error updating resource
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-07-05T00:44:07.5804686Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-07-05T00:44:07.5805266Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-07-05T00:44:07.5806414Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-07-05T00:44:07.5807464Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-07-05T00:44:07.5808041Z         
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-07-05T00:44:07.5809722Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6868719a37c6036ffcf44bad/streams/test-acc-tf-4266725352564933304/connections/test-acc-tf-4266725352564933304
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-07-05T00:44:07.5811167Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-07-05T00:44:07.5812134Z         &quot;STREAM_NETWORKING_ACCESS_TYPE_CANNOT_BE_MODIFIED&quot;) Detail: Stream networking
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-07-05T00:44:07.5813153Z         access type cannot be modified. Reason: Bad Request. Params:
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-07-05T00:44:07.5814244Z         [test-acc-tf-4266725352564933304 test-acc-tf-4266725352564933304],
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-07-05T00:44:07.5814921Z         BadRequestDetail: 
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-07-05T00:44:07.5815551Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (165.15s)
+</code></pre></div>
+<ul>
+<li>2025-07-06</li>
+</ul>
+<h3 id="error-2025-07-06t0048420000">Error 2025-07-06T00:48:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-06T00:48:42.9980179Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-06T00:48:42.9991176Z    test_step_number=1 test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-06T00:48:42.9991850Z     resource_stream_connection_test.go:86: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-07-06T00:48:42.9992263Z         
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-07-06T00:48:42.9992536Z         Error: error creating resource
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-07-06T00:48:42.9992799Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-07-06T00:48:42.9993112Z           with mongodbatlas_stream_instance.test,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-07-06T00:48:42.9993727Z           on terraform_plugin_test.tf line 30, in resource &quot;mongodbatlas_stream_instance&quot; &quot;test&quot;:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-07-06T00:48:42.9994303Z           30:      resource &quot;mongodbatlas_stream_instance&quot; &quot;test&quot; {
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-07-06T00:48:42.9994603Z         
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-07-06T00:48:42.9995102Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6869c40a690ae45e168bd44e/streams
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-07-06T00:48:42.9995770Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-07-06T00:48:42.9996344Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-07-06T00:48:42.9996731Z         BadRequestDetail: 
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-07-06T00:48:42.9997091Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (161.65s)
+</code></pre></div>
+<ul>
+<li>2025-07-07</li>
+</ul>
+<h3 id="error-2025-07-07t0048050000">Error 2025-07-07T00:48:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-07T00:48:05.7758600Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-07T00:48:05.7772721Z   
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-07T00:48:05.7773194Z     resource_stream_connection_test.go:86: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-07T00:48:05.7773614Z         
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-07T00:48:05.7773886Z         Error: error updating resource
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-07T00:48:05.7774158Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-07T00:48:05.7774485Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-07T00:48:05.7775124Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-07T00:48:05.7775892Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-07T00:48:05.7776205Z         
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-07T00:48:05.7777125Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686b156a0aabd25fc85daf7c/streams/test-acc-tf-1445924918452045189/connections/test-acc-tf-1445924918452045189
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-07T00:48:05.7777927Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-07T00:48:05.7778478Z         &quot;STREAM_NETWORKING_ACCESS_TYPE_CANNOT_BE_MODIFIED&quot;) Detail: Stream networking
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-07T00:48:05.7779055Z         access type cannot be modified. Reason: Bad Request. Params:
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-07T00:48:05.7779596Z         [test-acc-tf-1445924918452045189 test-acc-tf-1445924918452045189],
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-07T00:48:05.7779992Z         BadRequestDetail: 
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-07T00:48:05.7780363Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (172.89s)
+</code></pre></div>
+<ul>
+<li>2025-07-08</li>
+</ul>
+<h3 id="error-2025-07-08t0045560000">Error 2025-07-08T00:45:56+00:00</h3>
+<p>GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-08T00:45:56.107000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='16 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-08T00:45:56.1072861Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-08T00:45:56.1097128Z    test_terraform_path=/home/runner/work/_temp/1fd0e57d-d705-4557-8dc9-2e57738caee5/terraform
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-08T00:45:56.1098342Z     resource_stream_connection_test.go:86: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-07-08T00:45:56.1099070Z         
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-07-08T00:45:56.1099549Z         Error: error updating resource
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-07-08T00:45:56.1099999Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-07-08T00:45:56.1100603Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-07-08T00:45:56.1101779Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-07-08T00:45:56.1102854Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-07-08T00:45:56.1103401Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-07-08T00:45:56.1105284Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686c6667cf503214420ed053/streams/test-acc-tf-4080142503108633912/connections/test-acc-tf-4080142503108633912
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-07-08T00:45:56.1106771Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-07-08T00:45:56.1107788Z         &quot;STREAM_NETWORKING_ACCESS_TYPE_CANNOT_BE_MODIFIED&quot;) Detail: Stream networking
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-07-08T00:45:56.1108851Z         access type cannot be modified. Reason: Bad Request. Params:
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-07-08T00:45:56.1109835Z         [test-acc-tf-4080142503108633912 test-acc-tf-4080142503108633912],
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-07-08T00:45:56.1110528Z         BadRequestDetail: 
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-07-08T00:45:56.1111179Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (162.91s)
+</code></pre></div>
+<ul>
+<li>2025-07-09</li>
+</ul>
+<h3 id="error-2025-07-09t0100070000">Error 2025-07-09T01:00:07+00:00</h3>
+<p>GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-09T01:00:07.374000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='15 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-09T01:00:07.3741956Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-09T01:00:07.3756463Z   
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-09T01:00:07.3756913Z     resource_stream_connection_test.go:86: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-07-09T01:00:07.3757335Z         
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-07-09T01:00:07.3757742Z         Error: error updating resource
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-07-09T01:00:07.3758013Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-07-09T01:00:07.3758342Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-07-09T01:00:07.3758979Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-07-09T01:00:07.3759574Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-07-09T01:00:07.3759877Z         
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-07-09T01:00:07.3760776Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686db7fe72415e231233c4b4/streams/test-acc-tf-413253756483961652/connections/test-acc-tf-413253756483961652
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-07-09T01:00:07.3761568Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-07-09T01:00:07.3762118Z         &quot;STREAM_NETWORKING_ACCESS_TYPE_CANNOT_BE_MODIFIED&quot;) Detail: Stream networking
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-07-09T01:00:07.3762701Z         access type cannot be modified. Reason: Bad Request. Params:
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-07-09T01:00:07.3763228Z         [test-acc-tf-413253756483961652 test-acc-tf-413253756483961652],
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-07-09T01:00:07.3763619Z         BadRequestDetail: 
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-07-09T01:00:07.3763978Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (172.77s)
+</code></pre></div>
+<ul>
+<li>2025-07-10</li>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-07-10t0043190000">Error 2025-07-10T00:43:19+00:00</h3>
+<p>GoTestErrorClassification(error_class='real_test_failure',author='human',run_id='2025-07-10T00:43:19.368000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='14 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-10T00:43:19.3688321Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-10T00:43:19.3702801Z   
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-10T00:43:19.3703279Z     resource_stream_connection_test.go:86: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-07-10T00:43:19.3703713Z         
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-07-10T00:43:19.3703994Z         Error: error updating resource
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-07-10T00:43:19.3704261Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-07-10T00:43:19.3704600Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-07-10T00:43:19.3705266Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-07-10T00:43:19.3705881Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-07-10T00:43:19.3706198Z         
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-07-10T00:43:19.3707381Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686f09697e468865807981f0/streams/test-acc-tf-7382148404574086884/connections/test-acc-tf-7382148404574086884
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-07-10T00:43:19.3708189Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-07-10T00:43:19.3708745Z         &quot;STREAM_NETWORKING_ACCESS_TYPE_CANNOT_BE_MODIFIED&quot;) Detail: Stream networking
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-07-10T00:43:19.3709352Z         access type cannot be modified. Reason: Bad Request. Params:
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-07-10T00:43:19.3709911Z         [test-acc-tf-7382148404574086884 test-acc-tf-7382148404574086884],
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-07-10T00:43:19.3710316Z         BadRequestDetail: 
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-07-10T00:43:19.3710691Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (176.46s)
+</code></pre></div>
+<ul>
+<li>PASS 3 minutes</li>
+<li>2025-07-11</li>
+</ul>
+<h3 id="error-2025-07-11t0128090000">Error 2025-07-11T01:28:09+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-11T01:28:09.2374115Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-11T01:28:09.2388032Z   
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-11T01:28:09.2388488Z     resource_stream_connection_test.go:86: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-07-11T01:28:09.2388909Z         
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-07-11T01:28:09.2389182Z         Error: error updating resource
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-07-11T01:28:09.2389443Z         
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-07-11T01:28:09.2389987Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-07-11T01:28:09.2390696Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-07-11T01:28:09.2391308Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-07-11T01:28:09.2391625Z         
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-07-11T01:28:09.2392548Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68705aff0642f25f3ba0860a/streams/test-acc-tf-2634518760261428328/connections/test-acc-tf-2634518760261428328
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-07-11T01:28:09.2393349Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-07-11T01:28:09.2393902Z         &quot;STREAM_NETWORKING_ACCESS_TYPE_CANNOT_BE_MODIFIED&quot;) Detail: Stream networking
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-07-11T01:28:09.2394484Z         access type cannot be modified. Reason: Bad Request. Params:
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-07-11T01:28:09.2395025Z         [test-acc-tf-2634518760261428328 test-acc-tf-2634518760261428328],
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-07-11T01:28:09.2395423Z         BadRequestDetail: 
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-07-11T01:28:09.2395791Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (163.60s)
+</code></pre></div>
+<ul>
+<li>2025-07-12 PASS 2 minutes</li>
+<li>2025-07-13</li>
+</ul>
+<h3 id="error-2025-07-13t0052140000">Error 2025-07-13T00:52:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-07-13T00:52:14.2604891Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-07-13T00:52:14.2617402Z   
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-07-13T00:52:14.2617930Z     resource_stream_connection_test.go:87: Step 1/2 error: Error running post-apply refresh plan: exit status 1
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-07-13T00:52:14.2618395Z         
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-07-13T00:52:14.2618680Z         Error: error fetching resource
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-07-13T00:52:14.2618952Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-07-13T00:52:14.2619286Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-07-13T00:52:14.2619949Z           on terraform_plugin_test.tf line 40, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-07-13T00:52:14.2620569Z           40:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-07-13T00:52:14.2620887Z         
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-07-13T00:52:14.2622044Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6872fe95006d8d55bbaa28b2/streams/test-acc-tf-3021213904466828823/connections/test-acc-tf-3021213904466828823
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-07-13T00:52:14.2623001Z         GET: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-07-13T00:52:14.2623585Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-07-13T00:52:14.2623971Z         BadRequestDetail: 
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-07-13T00:52:14.2634904Z   
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-07-13T00:52:14.2635396Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-07-13T00:52:14.2635827Z         
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-07-13T00:52:14.2636099Z         Error: error deleting resource
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2025-07-13T00:52:14.2636365Z         
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>2025-07-13T00:52:14.2637301Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6872fe95006d8d55bbaa28b2/streams/test-acc-tf-3021213904466828823/connections/test-acc-tf-3021213904466828823
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>2025-07-13T00:52:14.2638247Z         DELETE: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;)
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>2025-07-13T00:52:14.2638847Z         Detail: Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>2025-07-13T00:52:14.2639390Z         BadRequestDetail: 
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>2025-07-13T00:52:14.2639762Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (191.73s)
+</code></pre></div>
+<ul>
+<li>2025-07-14</li>
+</ul>
+<h3 id="error-2025-07-14t0402140000">Error 2025-07-14T04:02:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-07-14T04:02:14.0948920Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-07-14T04:02:14.0963456Z   
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-07-14T04:02:14.0964241Z     resource_stream_connection_test.go:87: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-07-14T04:02:14.0964970Z         
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-07-14T04:02:14.0965855Z         Error: error creating MongoDB Network Peering Connection: context deadline exceeded
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-07-14T04:02:14.0966564Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-07-14T04:02:14.0967132Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-07-14T04:02:14.0968264Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-07-14T04:02:14.0969302Z           19:  resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-07-14T04:02:14.0969823Z         
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-07-14T04:02:14.1000661Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-07-14T04:02:14.1001397Z         
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-07-14T04:02:14.1002615Z         Error: error deleting MongoDB Network Peering Container (68746c01d81a2d4bb4ea6365): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-07-14T04:02:14.1003724Z         
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-07-14T04:02:14.1004519Z         Error: error deleting resource
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-07-14T04:02:14.1004967Z         
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2025-07-14T04:02:14.1006657Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68744fded81a2d4bb4ea4a0d/streams/test-acc-tf-6907915060401848420/connections/test-acc-tf-6907915060401848420
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2025-07-14T04:02:14.1008100Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2025-07-14T04:02:14.1009026Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>2025-07-14T04:02:14.1010133Z         test-acc-tf-6907915060401848420 is currently deploying. Please retry the
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>2025-07-14T04:02:14.1011270Z         request later. Reason: Conflict. Params: [test-acc-tf-6907915060401848420],
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>2025-07-14T04:02:14.1012002Z         BadRequestDetail: 
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>2025-07-14T04:02:14.1012648Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (1800.57s)
+</code></pre></div>
+<ul>
+<li>2025-07-15 PASS 2 minutes</li>
+<li>2025-07-16 PASS 3 minutes</li>
+<li>2025-07-17 PASS 2 minutes</li>
+<li>2025-07-18 PASS 2 minutes</li>
+<li>2025-07-19 PASS 3 minutes</li>
+<li>2025-07-20 PASS 2 minutes</li>
+<li>2025-07-21 PASS 2 minutes</li>
+<li>2025-07-22 PASS 2 minutes</li>
+<li>2025-07-23</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2025-07-24 PASS 2 minutes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

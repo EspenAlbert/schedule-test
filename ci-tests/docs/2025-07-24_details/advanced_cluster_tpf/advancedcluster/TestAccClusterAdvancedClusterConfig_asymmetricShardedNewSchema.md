@@ -1,0 +1,102 @@
+# advanced_cluster_tpf/advancedcluster/TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema Test Details
+# Found 37 TestRuns in dev, qa from 2025-06-25 to 2025-07-24 from master branch: 1 unique tests, PASS(x 35) FAIL(x 2)
+Success rate: 94.59%
+
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2025-07-10 14:35](#error-2025-07-10t1435500000) | UNEXPECTED_ERROR /api/atlas/v2/groups/686fc0f0fd583001f9eee8e1/limits | qa | flaky_500 | 37.09s
+[2025-07-13 02:11](#error-2025-07-13t0211000000) | UNEXPECTED_ERROR /api/atlas/v2/groups/6873058a006d8d55bbaa4ff5/limits | qa | flaky_500 | 37.02s
+
+## Timeline
+- 2025-06-24: MISSING
+- 2025-06-25 PASS 13 minutes
+- 2025-06-26
+  - PASS 19 minutes
+  - PASS 13 minutes
+- 2025-06-27 PASS 13 minutes
+- 2025-06-28 PASS 15 minutes
+- 2025-06-29 PASS 16 minutes
+- 2025-06-30 PASS 16 minutes
+- 2025-07-01
+  - PASS 16 minutes
+  - PASS 13 minutes
+  - PASS 14 minutes
+  - PASS 14 minutes
+  - PASS 14 minutes
+- 2025-07-02 PASS 13 minutes
+- 2025-07-03 PASS 13 minutes
+- 2025-07-04 PASS 19 minutes
+- 2025-07-05 PASS 15 minutes
+- 2025-07-06 PASS 12 minutes
+- 2025-07-07 PASS 15 minutes
+- 2025-07-08 PASS 16 minutes
+- 2025-07-09 PASS 12 minutes
+- 2025-07-10
+  - PASS 14 minutes
+  - FAIL 37 seconds
+
+### Error 2025-07-10T14:35:50+00:00
+```
+2025-07-10T14:35:50.7766562Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+2025-07-10T14:35:50.7810935Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+2025-07-10T14:35:50.8015304Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+2025-07-10T14:35:50.8016102Z     resource_advanced_cluster_test.go:885: Step 1/2 error: Error running apply: exit status 1
+2025-07-10T14:35:50.8016515Z         
+2025-07-10T14:35:50.8016971Z         Error: error when getting project properties after create
+2025-07-10T14:35:50.8017296Z         
+2025-07-10T14:35:50.8017626Z           with mongodbatlas_project.cluster_project,
+2025-07-10T14:35:50.8018260Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_project" "cluster_project":
+2025-07-10T14:35:50.8018840Z           12: resource "mongodbatlas_project" "cluster_project" {
+2025-07-10T14:35:50.8019136Z         
+2025-07-10T14:35:50.8019559Z         error getting project (686fc0f0fd583001f9eee8e1): error getting project's
+2025-07-10T14:35:50.8019992Z         limits (686fc0f0fd583001f9eee8e1):
+2025-07-10T14:35:50.8020544Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/686fc0f0fd583001f9eee8e1/limits
+2025-07-10T14:35:50.8021189Z         GET: HTTP 500 Internal Server Error (Error code: "UNEXPECTED_ERROR") Detail:
+2025-07-10T14:35:50.8021749Z         Unexpected error. Reason: Internal Server Error. Params: [],
+2025-07-10T14:35:50.8022115Z         BadRequestDetail: 
+2025-07-10T14:35:50.8022511Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (37.93s)
+```
+
+- 2025-07-11: MISSING
+- 2025-07-12 PASS 16 minutes
+- 2025-07-13
+
+### Error 2025-07-13T02:11:00+00:00
+```
+2025-07-13T02:11:00.2204585Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+2025-07-13T02:11:00.2270323Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+2025-07-13T02:11:00.2418820Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+2025-07-13T02:11:00.2419640Z     resource_advanced_cluster_test.go:885: Step 1/2 error: Error running apply: exit status 1
+2025-07-13T02:11:00.2420036Z         
+2025-07-13T02:11:00.2420413Z         Error: error when getting project properties after create
+2025-07-13T02:11:00.2420725Z         
+2025-07-13T02:11:00.2421044Z           with mongodbatlas_project.cluster_project,
+2025-07-13T02:11:00.2421673Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_project" "cluster_project":
+2025-07-13T02:11:00.2422251Z           12: resource "mongodbatlas_project" "cluster_project" {
+2025-07-13T02:11:00.2422549Z         
+2025-07-13T02:11:00.2422968Z         error getting project (6873058a006d8d55bbaa4ff5): error getting project's
+2025-07-13T02:11:00.2423399Z         limits (6873058a006d8d55bbaa4ff5):
+2025-07-13T02:11:00.2424077Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6873058a006d8d55bbaa4ff5/limits
+2025-07-13T02:11:00.2424727Z         GET: HTTP 500 Internal Server Error (Error code: "UNEXPECTED_ERROR") Detail:
+2025-07-13T02:11:00.2425287Z         Unexpected error. Reason: Internal Server Error. Params: [],
+2025-07-13T02:11:00.2425656Z         BadRequestDetail: 
+2025-07-13T02:11:00.2446107Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (37.24s)
+```
+
+- 2025-07-14: MISSING
+- 2025-07-15 PASS 17 minutes
+- 2025-07-16 PASS 13 minutes
+- 2025-07-17 PASS 15 minutes
+- 2025-07-18 PASS 18 minutes
+- 2025-07-19 PASS 12 minutes
+- 2025-07-20 PASS 15 minutes
+- 2025-07-21 PASS 13 minutes
+- 2025-07-22 PASS 13 minutes
+- 2025-07-23
+  - PASS 13 minutes
+  - PASS 13 minutes
+  - PASS 15 minutes
+  - PASS 18 minutes
+- 2025-07-24 PASS 13 minutes

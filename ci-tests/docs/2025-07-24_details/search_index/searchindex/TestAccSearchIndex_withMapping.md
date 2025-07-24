@@ -1,0 +1,162 @@
+# search_index/searchindex/TestAccSearchIndex_withMapping Test Details
+# Found 37 TestRuns in dev, qa from 2025-06-25 to 2025-07-24 from master branch: 1 unique tests, PASS(x 36) TIMEOUT
+Success rate: 100.00%
+
+## Error Table
+
+Date | Details | Env | Runtime
+--- | --- | --- | ---
+[2025-07-14 04:30](#error-2025-07-14t0430590000) |  | dev | 212455.00s
+
+## Timeline
+- 2025-06-24: MISSING
+- 2025-06-25 PASS 5 seconds
+- 2025-06-26 PASS 5 seconds
+- 2025-06-27 PASS 6 seconds
+- 2025-06-28 PASS 5 seconds
+- 2025-06-29 PASS 7 seconds
+- 2025-06-30 PASS 7 seconds
+- 2025-07-01
+  - PASS 7 seconds
+  - PASS 6 seconds
+  - PASS 8 seconds
+  - PASS 8 seconds
+  - PASS 6 seconds
+  - PASS 7 seconds
+- 2025-07-02 PASS 7 seconds
+- 2025-07-03 PASS 5 seconds
+- 2025-07-04 PASS 6 seconds
+- 2025-07-05 PASS 5 seconds
+- 2025-07-06 PASS 7 seconds
+- 2025-07-07 PASS 5 seconds
+- 2025-07-08 PASS 6 seconds
+- 2025-07-09 PASS 7 seconds
+- 2025-07-10
+  - PASS 7 seconds
+  - PASS 7 seconds
+- 2025-07-11 PASS 7 seconds
+- 2025-07-12 PASS 9 seconds
+- 2025-07-13 PASS 6 seconds
+- 2025-07-14
+
+### Error 2025-07-14T04:30:59+00:00
+```
+2025-07-14T04:30:59.1392180Z === RUN   TestAccSearchIndex_withMapping
+2025-07-14T04:30:59.1392781Z     resource_search_index_test.go:39: Creating execution cluster: test-acc-tf-c-3267552764569836046
+2025-07-14T04:30:59.8309127Z 2025/07/14 04:30:59 [DEBUG] Waiting for state to become: [IDLE]
+2025-07-14T04:34:00.1047729Z 2025/07/14 04:34:00 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:35:00.2511368Z 2025/07/14 04:35:00 [TRACE] Waiting 10s before next try
+2025-07-14T04:35:10.3574481Z 2025/07/14 04:35:10 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:36:10.5314432Z 2025/07/14 04:36:10 [TRACE] Waiting 10s before next try
+2025-07-14T04:36:20.6372181Z 2025/07/14 04:36:20 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:37:21.0712515Z 2025/07/14 04:37:21 [TRACE] Waiting 10s before next try
+2025-07-14T04:37:31.1753660Z 2025/07/14 04:37:31 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:38:31.3146509Z 2025/07/14 04:38:31 [TRACE] Waiting 10s before next try
+2025-07-14T04:38:41.4202118Z 2025/07/14 04:38:41 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:39:41.6075487Z 2025/07/14 04:39:41 [TRACE] Waiting 10s before next try
+2025-07-14T04:39:51.7354890Z 2025/07/14 04:39:51 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:40:51.9399471Z 2025/07/14 04:40:51 [TRACE] Waiting 10s before next try
+2025-07-14T04:41:02.0611056Z 2025/07/14 04:41:02 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:42:02.2477828Z 2025/07/14 04:42:02 [TRACE] Waiting 10s before next try
+2025-07-14T04:42:12.3687229Z 2025/07/14 04:42:12 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:43:12.6004452Z 2025/07/14 04:43:12 [TRACE] Waiting 10s before next try
+2025-07-14T04:43:22.7068414Z 2025/07/14 04:43:22 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:44:22.8749509Z 2025/07/14 04:44:22 [TRACE] Waiting 10s before next try
+2025-07-14T04:44:32.9823315Z 2025/07/14 04:44:32 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:45:33.1298731Z 2025/07/14 04:45:33 [TRACE] Waiting 10s before next try
+2025-07-14T04:45:43.2968541Z 2025/07/14 04:45:43 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:46:43.4407788Z 2025/07/14 04:46:43 [TRACE] Waiting 10s before next try
+2025-07-14T04:46:53.5510316Z 2025/07/14 04:46:53 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:47:53.7148162Z 2025/07/14 04:47:53 [TRACE] Waiting 10s before next try
+2025-07-14T04:48:03.8193485Z 2025/07/14 04:48:03 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:49:04.0811445Z 2025/07/14 04:49:04 [TRACE] Waiting 10s before next try
+2025-07-14T04:49:14.1960885Z 2025/07/14 04:49:14 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:50:14.4009136Z 2025/07/14 04:50:14 [TRACE] Waiting 10s before next try
+2025-07-14T04:50:24.4984196Z 2025/07/14 04:50:24 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:51:24.6441049Z 2025/07/14 04:51:24 [TRACE] Waiting 10s before next try
+2025-07-14T04:51:34.7574080Z 2025/07/14 04:51:34 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:52:34.9071443Z 2025/07/14 04:52:34 [TRACE] Waiting 10s before next try
+2025-07-14T04:52:45.0181058Z 2025/07/14 04:52:45 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:53:45.1767497Z 2025/07/14 04:53:45 [TRACE] Waiting 10s before next try
+2025-07-14T04:53:55.2933398Z 2025/07/14 04:53:55 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:54:55.4365822Z 2025/07/14 04:54:55 [TRACE] Waiting 10s before next try
+2025-07-14T04:55:05.5525727Z 2025/07/14 04:55:05 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:56:05.7685979Z 2025/07/14 04:56:05 [TRACE] Waiting 10s before next try
+2025-07-14T04:56:15.8584163Z 2025/07/14 04:56:15 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:57:16.0172230Z 2025/07/14 04:57:16 [TRACE] Waiting 10s before next try
+2025-07-14T04:57:26.1383515Z 2025/07/14 04:57:26 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:58:26.3440570Z 2025/07/14 04:58:26 [TRACE] Waiting 10s before next try
+2025-07-14T04:58:36.4467342Z 2025/07/14 04:58:36 [TRACE] Waiting 1m0s before next try
+2025-07-14T04:59:36.6261415Z 2025/07/14 04:59:36 [TRACE] Waiting 10s before next try
+2025-07-14T04:59:46.7234611Z 2025/07/14 04:59:46 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:00:46.8744393Z 2025/07/14 05:00:46 [TRACE] Waiting 10s before next try
+2025-07-14T05:00:56.9954087Z 2025/07/14 05:00:56 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:01:57.1445025Z 2025/07/14 05:01:57 [TRACE] Waiting 10s before next try
+2025-07-14T05:02:07.3858989Z 2025/07/14 05:02:07 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:03:07.5514587Z 2025/07/14 05:03:07 [TRACE] Waiting 10s before next try
+2025-07-14T05:03:17.6771010Z 2025/07/14 05:03:17 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:04:17.8033693Z 2025/07/14 05:04:17 [TRACE] Waiting 10s before next try
+2025-07-14T05:04:27.9107729Z 2025/07/14 05:04:27 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:05:28.1020270Z 2025/07/14 05:05:28 [TRACE] Waiting 10s before next try
+2025-07-14T05:05:38.2189376Z 2025/07/14 05:05:38 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:06:38.4559878Z 2025/07/14 05:06:38 [TRACE] Waiting 10s before next try
+2025-07-14T05:06:48.5660278Z 2025/07/14 05:06:48 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:07:48.6984727Z 2025/07/14 05:07:48 [TRACE] Waiting 10s before next try
+2025-07-14T05:07:58.8204357Z 2025/07/14 05:07:58 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:08:58.9537772Z 2025/07/14 05:08:58 [TRACE] Waiting 10s before next try
+2025-07-14T05:09:09.0591714Z 2025/07/14 05:09:09 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:10:09.1745172Z 2025/07/14 05:10:09 [TRACE] Waiting 10s before next try
+2025-07-14T05:10:19.2799964Z 2025/07/14 05:10:19 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:11:19.4392106Z 2025/07/14 05:11:19 [TRACE] Waiting 10s before next try
+2025-07-14T05:11:29.5702294Z 2025/07/14 05:11:29 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:12:29.7798190Z 2025/07/14 05:12:29 [TRACE] Waiting 10s before next try
+2025-07-14T05:12:39.8804363Z 2025/07/14 05:12:39 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:13:40.0735281Z 2025/07/14 05:13:40 [TRACE] Waiting 10s before next try
+2025-07-14T05:13:50.1938404Z 2025/07/14 05:13:50 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:14:50.3230999Z 2025/07/14 05:14:50 [TRACE] Waiting 10s before next try
+2025-07-14T05:15:00.4284957Z 2025/07/14 05:15:00 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:16:00.6460751Z 2025/07/14 05:16:00 [TRACE] Waiting 10s before next try
+2025-07-14T05:16:10.7391594Z 2025/07/14 05:16:10 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:17:10.8741904Z 2025/07/14 05:17:10 [TRACE] Waiting 10s before next try
+2025-07-14T05:17:20.9880584Z 2025/07/14 05:17:20 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:18:21.2453378Z 2025/07/14 05:18:21 [TRACE] Waiting 10s before next try
+2025-07-14T05:18:31.3644216Z 2025/07/14 05:18:31 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:19:31.5425084Z 2025/07/14 05:19:31 [TRACE] Waiting 10s before next try
+2025-07-14T05:19:41.6948659Z 2025/07/14 05:19:41 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:20:41.8879092Z 2025/07/14 05:20:41 [TRACE] Waiting 10s before next try
+2025-07-14T05:20:52.0120388Z 2025/07/14 05:20:52 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:21:52.2315226Z 2025/07/14 05:21:52 [TRACE] Waiting 10s before next try
+2025-07-14T05:22:02.3355907Z 2025/07/14 05:22:02 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:23:02.5664198Z 2025/07/14 05:23:02 [TRACE] Waiting 10s before next try
+2025-07-14T05:23:12.6697363Z 2025/07/14 05:23:12 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:24:12.8377147Z 2025/07/14 05:24:12 [TRACE] Waiting 10s before next try
+2025-07-14T05:24:22.9431927Z 2025/07/14 05:24:22 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:25:23.1210720Z 2025/07/14 05:25:23 [TRACE] Waiting 10s before next try
+2025-07-14T05:25:33.2264528Z 2025/07/14 05:25:33 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:26:33.3913041Z 2025/07/14 05:26:33 [TRACE] Waiting 10s before next try
+2025-07-14T05:26:43.5053123Z 2025/07/14 05:26:43 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:27:43.7745520Z 2025/07/14 05:27:43 [TRACE] Waiting 10s before next try
+2025-07-14T05:27:53.8841704Z 2025/07/14 05:27:53 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:28:54.0241419Z 2025/07/14 05:28:54 [TRACE] Waiting 10s before next try
+2025-07-14T05:29:04.1461026Z 2025/07/14 05:29:04 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:30:04.3236142Z 2025/07/14 05:30:04 [TRACE] Waiting 10s before next try
+2025-07-14T05:30:14.4258425Z 2025/07/14 05:30:14 [TRACE] Waiting 1m0s before next try
+2025-07-14T05:30:54.1497283Z panic: test timed out after 5h0m0s
+2025-07-14T05:30:54.1498856Z 	running tests:
+2025-07-14T05:30:54.1497283Z panic: test timed out after 5h0m0s
+2025-07-14T05:30:54.1498856Z 	running tests:
+2025-07-14T05:30:54.1499826Z 		TestAccSearchIndex_withMapping (59m55s)
+```
+
+- 2025-07-15 PASS 6 seconds
+- 2025-07-16 PASS 7 seconds
+- 2025-07-17 PASS 8 seconds
+- 2025-07-18 PASS 6 seconds
+- 2025-07-19 PASS 8 seconds
+- 2025-07-20 PASS 7 seconds
+- 2025-07-21 PASS 7 seconds
+- 2025-07-22 PASS 5 seconds
+- 2025-07-23
+  - PASS 5 seconds
+  - PASS 8 seconds
+- 2025-07-24 PASS 5 seconds
