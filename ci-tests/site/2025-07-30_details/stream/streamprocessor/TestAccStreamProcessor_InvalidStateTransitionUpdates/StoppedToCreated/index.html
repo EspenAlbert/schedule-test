@@ -1,0 +1,833 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>stream/streamprocessor/TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#streamstreamprocessortestaccstreamprocessor_invalidstatetransitionupdatesstoppedtocreated-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              stream/streamprocessor/TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="streamstreamprocessortestaccstreamprocessor_invalidstatetransitionupdatesstoppedtocreated-test-details">stream/streamprocessor/TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated Test Details</h1>
+<h1 id="found-39-testruns-in-dev-qa-from-2025-07-01-to-2025-07-30-from-master-branch-1-unique-tests-passx-30-failx-9">Found 39 TestRuns in dev, qa from 2025-07-01 to 2025-07-30 from master branch: 1 unique tests, PASS(x 30) FAIL(x 9)</h1>
+<p>Success rate: 76.92%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-07-03t0046390000">2025-07-03 00:46</a></td>
+<td>API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor</td>
+<td>dev</td>
+<td>flaky_400</td>
+<td>31.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-05t0044070000">2025-07-05 00:44</a></td>
+<td>STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/6868719b37c6036ffcf44dbd/streams/test-acc-tf-5167471963251347488-STARTED-STOPPED-CREATED/processor</td>
+<td>dev</td>
+<td></td>
+<td>31.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-07t0048050000">2025-07-07 00:48</a></td>
+<td>STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/686b156affed0c5c678b2a5a/streams/test-acc-tf-6313782029487882125-STARTED-STOPPED-CREATED/processor</td>
+<td>dev</td>
+<td></td>
+<td>31.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-09t0100420000">2025-07-09 01:00</a></td>
+<td>API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor</td>
+<td>dev</td>
+<td>flaky_400</td>
+<td>31.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-10t0043190000">2025-07-10 00:43</a></td>
+<td>API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor</td>
+<td>dev</td>
+<td>flaky_400</td>
+<td>31.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-11t0231570000">2025-07-11 02:31</a></td>
+<td>STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/68705b004f431f68780bdce6/streams/test-acc-tf-7633430293460688275-STARTED-STOPPED-CREATED/processor</td>
+<td>dev</td>
+<td></td>
+<td>32.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-12t0048120000">2025-07-12 00:48</a></td>
+<td>STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/6871ac5247d9ab465fd0f148/streams/test-acc-tf-5781398686518972894-STARTED-STOPPED-CREATED/processor</td>
+<td>dev</td>
+<td></td>
+<td>31.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-14t0402140000">2025-07-14 04:02</a></td>
+<td>STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/68744fdf52cba864e5f10a3b/streams/test-acc-tf-3190265013517760957-STARTED-STOPPED-CREATED/processor</td>
+<td>dev</td>
+<td></td>
+<td>31.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-20t0053030000">2025-07-20 00:53</a></td>
+<td>STREAM_TENANT_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/687c393e823af9166ef91845/streams/test-acc-tf-s-9049831376135069608/processor</td>
+<td>qa</td>
+<td></td>
+<td>0.05s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-06-30: MISSING</li>
+<li>2025-07-01</li>
+<li>PASS 13 seconds</li>
+<li>PASS 10 seconds</li>
+<li>PASS 12 seconds</li>
+<li>PASS 9 seconds</li>
+<li>PASS 13 seconds</li>
+<li>PASS 12 seconds</li>
+<li>PASS 9 seconds</li>
+<li>PASS 11 seconds</li>
+<li>2025-07-02 PASS 9 seconds</li>
+<li>2025-07-03</li>
+</ul>
+<h3 id="error-2025-07-03t0046390000">Error 2025-07-03T00:46:39+00:00</h3>
+<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-03T00:46:39.964000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated',confidence=1.0,ts_when='27 days ago')
+API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-03T00:46:39.9644999Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-03T00:46:39.9645897Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-03T00:46:39.9650011Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-03T00:46:39.9673938Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-03T00:46:39.9720776Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-03T00:46:39.9721348Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-03T00:46:39.9721706Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-03T00:46:39.9721977Z         Error: error creating resource
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-03T00:46:39.9722241Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-03T00:46:39.9722587Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-03T00:46:39.9723260Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-03T00:46:39.9723889Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-03T00:46:39.9724205Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-03T00:46:39.9725066Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6865cef1699daf2aab4cc130/streams/test-acc-tf-8481121546760680612-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-03T00:46:39.9726182Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-03T00:46:39.9726814Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-03T00:46:39.9727458Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-07-03T00:46:39.9728077Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-07-03T00:46:39.9728705Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-07-03T00:46:39.9729352Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2025-07-03T00:46:39.9729915Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2025-07-03T00:46:39.9743796Z   
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2025-07-03T00:46:39.9744257Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2025-07-03T00:46:39.9744684Z         
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2025-07-03T00:46:39.9744949Z         Error: error deleting resource
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2025-07-03T00:46:39.9745405Z         
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2025-07-03T00:46:39.9746413Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6865cef1699daf2aab4cc130/streams/test-acc-tf-8481121546760680612-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2025-07-03T00:46:39.9747261Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2025-07-03T00:46:39.9747790Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2025-07-03T00:46:39.9748396Z         name test-acc-tf-8481121546760680612-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2025-07-03T00:46:39.9748976Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2025-07-03T00:46:39.9749621Z         [test-acc-tf-8481121546760680612-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>2025-07-03T00:46:39.9762354Z    test_step_number=1 test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>2025-07-03T00:46:39.9789886Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (31.27s)
+</code></pre></div></p>
+<ul>
+<li>2025-07-04 PASS 33 seconds</li>
+<li>2025-07-05</li>
+</ul>
+<h3 id="error-2025-07-05t0044070000">Error 2025-07-05T00:44:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-05T00:44:07.6014686Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-05T00:44:07.6015928Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-05T00:44:07.6023056Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-05T00:44:07.6058537Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-07-05T00:44:07.6088454Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-07-05T00:44:07.6089046Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-07-05T00:44:07.6089395Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-07-05T00:44:07.6089658Z         Error: error creating resource
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-07-05T00:44:07.6089920Z         
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-07-05T00:44:07.6090261Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-07-05T00:44:07.6091057Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-07-05T00:44:07.6091678Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-07-05T00:44:07.6091991Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-07-05T00:44:07.6092855Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6868719b37c6036ffcf44dbd/streams/test-acc-tf-5167471963251347488-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-07-05T00:44:07.6093864Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-07-05T00:44:07.6094501Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-07-05T00:44:07.6095145Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-07-05T00:44:07.6095909Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-07-05T00:44:07.6096538Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-07-05T00:44:07.6097180Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2025-07-05T00:44:07.6097736Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2025-07-05T00:44:07.6110372Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated test_working_directory=/tmp/plugintest1867201844
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2025-07-05T00:44:07.6130689Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>2025-07-05T00:44:07.6131686Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>2025-07-05T00:44:07.6132157Z         
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>2025-07-05T00:44:07.6132433Z         Error: error deleting resource
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>2025-07-05T00:44:07.6132701Z         
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>2025-07-05T00:44:07.6133698Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6868719b37c6036ffcf44dbd/streams/test-acc-tf-5167471963251347488-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>2025-07-05T00:44:07.6134683Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>2025-07-05T00:44:07.6135199Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>2025-07-05T00:44:07.6135812Z         name test-acc-tf-5167471963251347488-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>2025-07-05T00:44:07.6136376Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>2025-07-05T00:44:07.6136983Z         [test-acc-tf-5167471963251347488-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>2025-07-05T00:44:07.6138835Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (31.51s)
+</code></pre></div>
+<ul>
+<li>2025-07-06 PASS 16 seconds</li>
+<li>2025-07-07</li>
+</ul>
+<h3 id="error-2025-07-07t0048050000">Error 2025-07-07T00:48:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-07T00:48:05.7946244Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-07T00:48:05.7946920Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-07T00:48:05.7950864Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-07-07T00:48:05.7967451Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped test_terraform_path=/home/runner/work/_temp/c51b1342-8f8b-48f5-80bd-084902e39212/terraform test_working_directory=/tmp/plugintest1881823664
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-07-07T00:48:05.8021827Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-07-07T00:48:05.8022394Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-07-07T00:48:05.8022737Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-07-07T00:48:05.8022997Z         Error: error creating resource
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-07-07T00:48:05.8023249Z         
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-07-07T00:48:05.8023592Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-07-07T00:48:05.8024257Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-07-07T00:48:05.8024876Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-07-07T00:48:05.8025304Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-07-07T00:48:05.8026337Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686b156affed0c5c678b2a5a/streams/test-acc-tf-6313782029487882125-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-07-07T00:48:05.8027238Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-07-07T00:48:05.8027875Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-07-07T00:48:05.8028525Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-07-07T00:48:05.8029147Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-07-07T00:48:05.8029771Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2025-07-07T00:48:05.8030414Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2025-07-07T00:48:05.8030978Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>2025-07-07T00:48:05.8044130Z   
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>2025-07-07T00:48:05.8083802Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>2025-07-07T00:48:05.8084474Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>2025-07-07T00:48:05.8084893Z         
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>2025-07-07T00:48:05.8085155Z         Error: error deleting resource
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>2025-07-07T00:48:05.8085424Z         
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>2025-07-07T00:48:05.8086570Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686b156affed0c5c678b2a5a/streams/test-acc-tf-6313782029487882125-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>2025-07-07T00:48:05.8087419Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>2025-07-07T00:48:05.8087942Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>2025-07-07T00:48:05.8088540Z         name test-acc-tf-6313782029487882125-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>2025-07-07T00:48:05.8089228Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>2025-07-07T00:48:05.8089844Z         [test-acc-tf-6313782029487882125-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>2025-07-07T00:48:05.8092371Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (31.24s)
+</code></pre></div>
+<ul>
+<li>2025-07-08 PASS 35 seconds</li>
+<li>2025-07-09</li>
+</ul>
+<h3 id="error-2025-07-09t0100420000">Error 2025-07-09T01:00:42+00:00</h3>
+<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-09T01:00:42.625000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated',confidence=1.0,ts_when='21 days ago')
+API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-09T01:00:42.6257840Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-09T01:00:42.6258528Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-09T01:00:42.6262610Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-09T01:00:42.6279930Z   
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-09T01:00:42.6335230Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-09T01:00:42.6335802Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-09T01:00:42.6336150Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-09T01:00:42.6336407Z         Error: error creating resource
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-09T01:00:42.6336662Z         
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-09T01:00:42.6336999Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-09T01:00:42.6337828Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-09T01:00:42.6338452Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-09T01:00:42.6338764Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-09T01:00:42.6339642Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686db7ff725a79527bea68dc/streams/test-acc-tf-9116325427461559586-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-09T01:00:42.6340543Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-09T01:00:42.6341176Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-09T01:00:42.6341820Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-09T01:00:42.6342431Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-07-09T01:00:42.6343144Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-07-09T01:00:42.6343804Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-07-09T01:00:42.6344379Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-07-09T01:00:42.6364856Z   
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-07-09T01:00:42.6372129Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated test_terraform_path=/home/runner/work/_temp/ac271bf9-f112-4694-97db-53a9fe244f9d/terraform test_working_directory=/tmp/plugintest738403838
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2025-07-09T01:00:42.6380077Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2025-07-09T01:00:42.6380740Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2025-07-09T01:00:42.6381162Z         
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2025-07-09T01:00:42.6381419Z         Error: error deleting resource
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2025-07-09T01:00:42.6381671Z         
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2025-07-09T01:00:42.6382655Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686db7ff725a79527bea68dc/streams/test-acc-tf-9116325427461559586-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2025-07-09T01:00:42.6383630Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2025-07-09T01:00:42.6384139Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2025-07-09T01:00:42.6384611Z         name sample_stream_solar in stream instance
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>2025-07-09T01:00:42.6385111Z         test-acc-tf-9116325427461559586-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>2025-07-09T01:00:42.6385662Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>2025-07-09T01:00:42.6386051Z         [sample_stream_solar
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>2025-07-09T01:00:42.6386568Z         test-acc-tf-9116325427461559586-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>2025-07-09T01:00:42.6399982Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated test_terraform_path=/home/runner/work/_temp/ac271bf9-f112-4694-97db-53a9fe244f9d/terraform test_working_directory=/tmp/plugintest1531726185
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>2025-07-09T01:00:42.6409188Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (31.18s)
+</code></pre></div></p>
+<ul>
+<li>2025-07-10</li>
+<li>FAIL 31 seconds</li>
+</ul>
+<h3 id="error-2025-07-10t0043190000">Error 2025-07-10T00:43:19+00:00</h3>
+<p>GoTestErrorClassification(error_class='flaky_400',author='similar',run_id='2025-07-10T00:43:19.378000+00:00-TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated',confidence=1.0,ts_when='20 days ago')
+API Error STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/{groupId}/streams/{tenantName}/processor
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-10T00:43:19.3780784Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-10T00:43:19.3781475Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-10T00:43:19.3785711Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-07-10T00:43:19.3802831Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated test_terraform_path=/home/runner/work/_temp/f29cbc8a-ca73-47a9-ae39-889e2f729155/terraform test_working_directory=/tmp/plugintest142669367 test_step_number=1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-07-10T00:43:19.3803990Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-07-10T00:43:19.3804358Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-07-10T00:43:19.3804633Z         Error: error creating resource
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-07-10T00:43:19.3804898Z         
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-07-10T00:43:19.3805259Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-07-10T00:43:19.3805956Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-07-10T00:43:19.3806827Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-07-10T00:43:19.3807163Z         
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-07-10T00:43:19.3808071Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686f096a964afc762c202930/streams/test-acc-tf-8911499951727269164-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-07-10T00:43:19.3808995Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-07-10T00:43:19.3809805Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-07-10T00:43:19.3810476Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-07-10T00:43:19.3811115Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-07-10T00:43:19.3811767Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2025-07-10T00:43:19.3812431Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2025-07-10T00:43:19.3813016Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2025-07-10T00:43:19.3829844Z    test_step_number=1 test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated test_terraform_path=/home/runner/work/_temp/f29cbc8a-ca73-47a9-ae39-889e2f729155/terraform
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>2025-07-10T00:43:19.3882501Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>2025-07-10T00:43:19.3883185Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>2025-07-10T00:43:19.3883614Z         
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>2025-07-10T00:43:19.3883883Z         Error: error deleting resource
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>2025-07-10T00:43:19.3884155Z         
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>2025-07-10T00:43:19.3885172Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/686f096a964afc762c202930/streams/test-acc-tf-8911499951727269164-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>2025-07-10T00:43:19.3886045Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>2025-07-10T00:43:19.3886814Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>2025-07-10T00:43:19.3887326Z         name sample_stream_solar in stream instance
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>2025-07-10T00:43:19.3887852Z         test-acc-tf-8911499951727269164-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>2025-07-10T00:43:19.3888437Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>2025-07-10T00:43:19.3888830Z         [sample_stream_solar
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>2025-07-10T00:43:19.3889366Z         test-acc-tf-8911499951727269164-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>2025-07-10T00:43:19.3903008Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated test_terraform_path=/home/runner/work/_temp/f29cbc8a-ca73-47a9-ae39-889e2f729155/terraform test_working_directory=/tmp/plugintest1383144642
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>2025-07-10T00:43:19.3933019Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (31.75s)
+</code></pre></div></p>
+<ul>
+<li>PASS 10 seconds</li>
+<li>2025-07-11</li>
+</ul>
+<h3 id="error-2025-07-11t0231570000">Error 2025-07-11T02:31:57+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-11T02:31:57.1506236Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-11T02:31:57.1507610Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-11T02:31:57.1514895Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-07-11T02:31:57.1544744Z    test_step_number=1 test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated test_terraform_path=/home/runner/work/_temp/6369477f-582e-4c02-bb93-54d3b949efda/terraform
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-07-11T02:31:57.1631198Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-07-11T02:31:57.1632230Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-07-11T02:31:57.1632854Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-07-11T02:31:57.1633323Z         Error: error creating resource
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-07-11T02:31:57.1633831Z         
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-07-11T02:31:57.1634444Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-07-11T02:31:57.1635868Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-07-11T02:31:57.1637012Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-07-11T02:31:57.1637579Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-07-11T02:31:57.1639192Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68705b004f431f68780bdce6/streams/test-acc-tf-7633430293460688275-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-07-11T02:31:57.1641007Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-07-11T02:31:57.1642178Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-07-11T02:31:57.1643364Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-07-11T02:31:57.1644498Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2025-07-11T02:31:57.1645662Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2025-07-11T02:31:57.1646850Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2025-07-11T02:31:57.1647878Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>2025-07-11T02:31:57.1672381Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated test_terraform_path=/home/runner/work/_temp/6369477f-582e-4c02-bb93-54d3b949efda/terraform test_working_directory=/tmp/plugintest1584012136 test_step_number=1
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>2025-07-11T02:31:57.1673967Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>2025-07-11T02:31:57.1674498Z         
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>2025-07-11T02:31:57.1674824Z         Error: error deleting resource
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>2025-07-11T02:31:57.1675150Z         
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>2025-07-11T02:31:57.1676406Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68705b004f431f68780bdce6/streams/test-acc-tf-7633430293460688275-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>2025-07-11T02:31:57.1677687Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>2025-07-11T02:31:57.1678344Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>2025-07-11T02:31:57.1678949Z         name sample_stream_solar in stream instance
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>2025-07-11T02:31:57.1679576Z         test-acc-tf-7633430293460688275-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>2025-07-11T02:31:57.1680511Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>2025-07-11T02:31:57.1680984Z         [sample_stream_solar
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>2025-07-11T02:31:57.1681532Z         test-acc-tf-7633430293460688275-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>2025-07-11T02:31:57.1699237Z   
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>2025-07-11T02:31:57.1731351Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (32.55s)
+</code></pre></div>
+<ul>
+<li>2025-07-12</li>
+</ul>
+<h3 id="error-2025-07-12t0048120000">Error 2025-07-12T00:48:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-12T00:48:12.3562047Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-12T00:48:12.3562733Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-12T00:48:12.3566979Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-07-12T00:48:12.3586556Z   
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-07-12T00:48:12.3586941Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-07-12T00:48:12.3587312Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-07-12T00:48:12.3587587Z         Error: error creating resource
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-07-12T00:48:12.3587860Z         
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-07-12T00:48:12.3588213Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-07-12T00:48:12.3588892Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-07-12T00:48:12.3589532Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-07-12T00:48:12.3589863Z         
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-07-12T00:48:12.3590728Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6871ac5247d9ab465fd0f148/streams/test-acc-tf-5781398686518972894-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-07-12T00:48:12.3591631Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-07-12T00:48:12.3592275Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-07-12T00:48:12.3592934Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-07-12T00:48:12.3593560Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-07-12T00:48:12.3594195Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2025-07-12T00:48:12.3594846Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2025-07-12T00:48:12.3595616Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>2025-07-12T00:48:12.3614093Z   
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>2025-07-12T00:48:12.3684395Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>2025-07-12T00:48:12.3685073Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>2025-07-12T00:48:12.3685714Z         
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>2025-07-12T00:48:12.3685989Z         Error: error deleting resource
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>2025-07-12T00:48:12.3686260Z         
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>2025-07-12T00:48:12.3687239Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6871ac5247d9ab465fd0f148/streams/test-acc-tf-5781398686518972894-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>2025-07-12T00:48:12.3688098Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>2025-07-12T00:48:12.3688622Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>2025-07-12T00:48:12.3689114Z         name sample_stream_solar in stream instance
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>2025-07-12T00:48:12.3689633Z         test-acc-tf-5781398686518972894-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>2025-07-12T00:48:12.3690198Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>2025-07-12T00:48:12.3690591Z         [sample_stream_solar
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>2025-07-12T00:48:12.3691106Z         test-acc-tf-5781398686518972894-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>2025-07-12T00:48:12.3711600Z   
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>2025-07-12T00:48:12.3734463Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (31.20s)
+</code></pre></div>
+<ul>
+<li>2025-07-13 PASS 35 seconds</li>
+<li>2025-07-14</li>
+</ul>
+<h3 id="error-2025-07-14t0402140000">Error 2025-07-14T04:02:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-14T04:02:14.1301164Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-14T04:02:14.1301946Z     resource_test.go:250: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-14T04:02:14.1307382Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-07-14T04:02:14.1333904Z    test_working_directory=/tmp/plugintest2508787338 test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/CreatedToStopped test_terraform_path=/home/runner/work/_temp/a5da4b3c-7f27-4c7f-a536-72a9efc4bb70/terraform test_step_number=1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-07-14T04:02:14.1390276Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-07-14T04:02:14.1390861Z     resource_test.go:251: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-07-14T04:02:14.1391218Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-07-14T04:02:14.1391489Z         Error: error creating resource
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-07-14T04:02:14.1391750Z         
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-07-14T04:02:14.1392101Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-07-14T04:02:14.1392794Z           on terraform_plugin_test.tf line 31, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-07-14T04:02:14.1393655Z           31:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-07-14T04:02:14.1393982Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-07-14T04:02:14.1394860Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68744fdf52cba864e5f10a3b/streams/test-acc-tf-3190265013517760957-STARTED-STOPPED-CREATED/processor
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-07-14T04:02:14.1395893Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-07-14T04:02:14.1396532Z         Detail: Streams Processor with this name (processor-stopped-to-created) had a
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-07-14T04:02:14.1397189Z         problem occur: failed to acquire resources for stream processor validation:
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-07-14T04:02:14.1397809Z         internal error while provisioning resource from global resource manager.
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2025-07-14T04:02:14.1398449Z         Reason: Bad Request. Params: [processor-stopped-to-created failed to acquire
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2025-07-14T04:02:14.1399103Z         resources for stream processor validation: internal error while provisioning
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>2025-07-14T04:02:14.1399675Z         resource from global resource manager], BadRequestDetail: 
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>2025-07-14T04:02:14.1419219Z    test_name=TestAccStreamProcessor_InvalidStateTransitionUpdates/StartedToCreated test_terraform_path=/home/runner/work/_temp/a5da4b3c-7f27-4c7f-a536-72a9efc4bb70/terraform test_working_directory=/tmp/plugintest235449572
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>2025-07-14T04:02:14.1456644Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>2025-07-14T04:02:14.1457308Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>2025-07-14T04:02:14.1457741Z         
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>2025-07-14T04:02:14.1458014Z         Error: error deleting resource
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>2025-07-14T04:02:14.1458287Z         
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>2025-07-14T04:02:14.1459284Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68744fdf52cba864e5f10a3b/streams/test-acc-tf-3190265013517760957-STARTED-STOPPED-CREATED/connections/sample_stream_solar
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>2025-07-14T04:02:14.1460258Z         DELETE: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>2025-07-14T04:02:14.1460783Z         &quot;STREAM_CONNECTION_HAS_STREAM_PROCESSORS&quot;) Detail: Stream connection with
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>2025-07-14T04:02:14.1461265Z         name sample_stream_solar in stream instance
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>2025-07-14T04:02:14.1461786Z         test-acc-tf-3190265013517760957-STARTED-STOPPED-CREATED has active
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>2025-07-14T04:02:14.1462348Z         processors, and cannot be changed. Reason: Forbidden. Params:
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>2025-07-14T04:02:14.1462740Z         [sample_stream_solar
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>2025-07-14T04:02:14.1463374Z         test-acc-tf-3190265013517760957-STARTED-STOPPED-CREATED], BadRequestDetail: 
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>2025-07-14T04:02:14.1465942Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (31.17s)
+</code></pre></div>
+<ul>
+<li>2025-07-15 PASS 8 seconds</li>
+<li>2025-07-16 PASS 9 seconds</li>
+<li>2025-07-17 PASS 6 seconds</li>
+<li>2025-07-18 PASS 9 seconds</li>
+<li>2025-07-19 PASS 8 seconds</li>
+<li>2025-07-20</li>
+</ul>
+<h3 id="error-2025-07-20t0053030000">Error 2025-07-20T00:53:03+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-07-20T00:53:03.7208598Z === RUN   TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-07-20T00:53:03.7209274Z     resource_test.go:258: Testing: Verifies a processor cannot transition from STOPPED to CREATED state
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-07-20T00:53:03.7213388Z === CONT  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-07-20T00:53:03.7227395Z   
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-07-20T00:53:03.7290691Z === NAME  TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-07-20T00:53:03.7291754Z     resource_test.go:259: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-07-20T00:53:03.7292424Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-07-20T00:53:03.7292922Z         Error: error creating resource
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-07-20T00:53:03.7314047Z         
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-07-20T00:53:03.7314472Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-07-20T00:53:03.7315180Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-07-20T00:53:03.7316185Z           12:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-07-20T00:53:03.7316535Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-07-20T00:53:03.7317296Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/687c393e823af9166ef91845/streams/test-acc-tf-s-9049831376135069608/processor
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-07-20T00:53:03.7318119Z         POST: HTTP 404 Not Found (Error code: &quot;STREAM_TENANT_NOT_FOUND_FOR_NAME&quot;)
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-07-20T00:53:03.7318697Z         Detail: Stream instance for project 687c393e823af9166ef91845 and name
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-07-20T00:53:03.7319291Z         test-acc-tf-s-9049831376135069608 not found. Reason: Not Found. Params:
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-07-20T00:53:03.7319842Z         [687c393e823af9166ef91845 test-acc-tf-s-9049831376135069608],
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2025-07-20T00:53:03.7320219Z         BadRequestDetail: 
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>2025-07-20T00:53:03.7322563Z     --- FAIL: TestAccStreamProcessor_InvalidStateTransitionUpdates/StoppedToCreated (0.49s)
+</code></pre></div>
+<ul>
+<li>2025-07-21 PASS 9 seconds</li>
+<li>2025-07-22 PASS 8 seconds</li>
+<li>2025-07-23</li>
+<li>PASS 8 seconds</li>
+<li>PASS 8 seconds</li>
+<li>2025-07-24 PASS 8 seconds</li>
+<li>2025-07-25 PASS 9 seconds</li>
+<li>2025-07-26 PASS 8 seconds</li>
+<li>2025-07-27 PASS 7 seconds</li>
+<li>2025-07-28 PASS 8 seconds</li>
+<li>2025-07-29 PASS 7 seconds</li>
+<li>2025-07-30 PASS 8 seconds</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
