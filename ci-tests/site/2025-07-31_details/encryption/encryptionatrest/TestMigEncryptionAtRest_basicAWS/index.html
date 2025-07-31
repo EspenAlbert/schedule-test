@@ -1,0 +1,824 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>encryption/encryptionatrest/TestMigEncryptionAtRest_basicAWS Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#encryptionencryptionatresttestmigencryptionatrest_basicaws-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              encryption/encryptionatrest/TestMigEncryptionAtRest_basicAWS Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="encryptionencryptionatresttestmigencryptionatrest_basicaws-test-details">encryption/encryptionatrest/TestMigEncryptionAtRest_basicAWS Test Details</h1>
+<h1 id="found-34-testruns-in-dev-qa-from-2025-07-02-to-2025-07-31-from-master-branch-1-unique-tests-passx-20-failx-14">Found 34 TestRuns in dev, qa from 2025-07-02 to 2025-07-31 from master branch: 1 unique tests, PASS(x 20) FAIL(x 14)</h1>
+<p>Success rate: 58.82%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-07-15t0030210000">2025-07-15 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-16t0030020000">2025-07-16 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-17t0030350000">2025-07-17 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-18t0030110000">2025-07-18 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-19t0029240000">2025-07-19 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-21t0032470000">2025-07-21 00:32</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-23t1403040000">2025-07-23 14:03</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-24t0031040000">2025-07-24 00:31</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-25t0031070000">2025-07-25 00:31</a></td>
+<td></td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>2.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-26t0030020000">2025-07-26 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-28t0033010000">2025-07-28 00:33</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-29t0033290000">2025-07-29 00:33</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-30t0031100000">2025-07-30 00:31</a></td>
+<td></td>
+<td>dev</td>
+<td>dangling_resource</td>
+<td>2.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-07-31t0031010000">2025-07-31 00:31</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>3.08s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-07-01: MISSING</li>
+<li>2025-07-02 PASS 6 seconds</li>
+<li>2025-07-03 PASS 5 seconds</li>
+<li>2025-07-04 PASS 5 seconds</li>
+<li>2025-07-05 PASS 5 seconds</li>
+<li>2025-07-06 PASS 5 seconds</li>
+<li>2025-07-07 PASS 5 seconds</li>
+<li>2025-07-08 PASS 5 seconds</li>
+<li>2025-07-09 PASS 8 seconds</li>
+<li>2025-07-10</li>
+<li>PASS 5 seconds</li>
+<li>PASS 7 seconds</li>
+<li>2025-07-11 PASS 6 seconds</li>
+<li>2025-07-12 PASS 5 seconds</li>
+<li>2025-07-13 PASS 6 seconds</li>
+<li>2025-07-14 PASS 5 seconds</li>
+<li>2025-07-15</li>
+</ul>
+<h3 id="error-2025-07-15t0030210000">Error 2025-07-15T00:30:21+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-07-15T00:30:21.0602308Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-07-15T00:30:21.0617773Z   
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-07-15T00:30:21.0618681Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-07-15T00:30:21.0620327Z         
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-07-15T00:30:21.0621114Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-07-15T00:30:21.0621758Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-07-15T00:30:21.0622401Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-07-15T00:30:21.0623596Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-07-15T00:30:21.0624755Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-07-15T00:30:21.0625362Z         
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-07-15T00:30:21.0626379Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-07-15T00:30:21.0627416Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-07-15T00:30:21.0628618Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-07-15T00:30:21.0629662Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-07-15T00:30:21.0630350Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-07-15T00:30:21.0630982Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-07-15T00:30:21.0631483Z         BadRequestDetail: 
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-07-15T00:30:21.0631821Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.52s)
+</code></pre></div>
+<ul>
+<li>2025-07-16</li>
+</ul>
+<h3 id="error-2025-07-16t0030020000">Error 2025-07-16T00:30:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-07-16T00:30:02.6211315Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-07-16T00:30:02.6227891Z   
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-07-16T00:30:02.6228583Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-07-16T00:30:02.6229141Z         
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-07-16T00:30:02.6229736Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-07-16T00:30:02.6230279Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-07-16T00:30:02.6230757Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-07-16T00:30:02.6231556Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-07-16T00:30:02.6232308Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-07-16T00:30:02.6232660Z         
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-07-16T00:30:02.6233356Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-07-16T00:30:02.6234061Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-07-16T00:30:02.6234829Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-07-16T00:30:02.6235684Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-07-16T00:30:02.6236466Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-07-16T00:30:02.6237219Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-07-16T00:30:02.6237674Z         BadRequestDetail: 
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-07-16T00:30:02.6238113Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.40s)
+</code></pre></div>
+<ul>
+<li>2025-07-17</li>
+</ul>
+<h3 id="error-2025-07-17t0030350000">Error 2025-07-17T00:30:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-07-17T00:30:35.5997080Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-07-17T00:30:35.6015984Z   
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-07-17T00:30:35.6016555Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-07-17T00:30:35.6017270Z         
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-07-17T00:30:35.6018088Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-07-17T00:30:35.6018746Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-07-17T00:30:35.6019392Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-07-17T00:30:35.6020636Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-07-17T00:30:35.6021390Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-07-17T00:30:35.6021841Z         
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-07-17T00:30:35.6022540Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-07-17T00:30:35.6023258Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-07-17T00:30:35.6024031Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-07-17T00:30:35.6024882Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-07-17T00:30:35.6025671Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-07-17T00:30:35.6026393Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-07-17T00:30:35.6027032Z         BadRequestDetail: 
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-07-17T00:30:35.6027423Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.23s)
+</code></pre></div>
+<ul>
+<li>2025-07-18</li>
+</ul>
+<h3 id="error-2025-07-18t0030110000">Error 2025-07-18T00:30:11+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-07-18T00:30:11.1952161Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-07-18T00:30:11.1967322Z    test_name=TestMigEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/613949e7-b3b4-4a83-bdbb-8a489b91e39a/terraform test_working_directory=/tmp/plugintest2227301239
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-07-18T00:30:11.1969314Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-07-18T00:30:11.1969754Z         
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-07-18T00:30:11.1970541Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-07-18T00:30:11.1971197Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-07-18T00:30:11.1971859Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-07-18T00:30:11.1973087Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-07-18T00:30:11.1974227Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-07-18T00:30:11.1974825Z         
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-07-18T00:30:11.1975518Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-07-18T00:30:11.1976593Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-07-18T00:30:11.1977768Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-07-18T00:30:11.1979220Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-07-18T00:30:11.1980393Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-07-18T00:30:11.1981133Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-07-18T00:30:11.1981915Z         BadRequestDetail: 
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-07-18T00:30:11.1982495Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.53s)
+</code></pre></div>
+<ul>
+<li>2025-07-19</li>
+</ul>
+<h3 id="error-2025-07-19t0029240000">Error 2025-07-19T00:29:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-07-19T00:29:24.4821328Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-07-19T00:29:24.4839057Z   
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-07-19T00:29:24.4839924Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-07-19T00:29:24.4840906Z         
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-07-19T00:29:24.4841740Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-07-19T00:29:24.4842411Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-07-19T00:29:24.4843051Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-07-19T00:29:24.4844295Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-07-19T00:29:24.4845452Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-07-19T00:29:24.4846088Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-07-19T00:29:24.4847163Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-07-19T00:29:24.4848222Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-07-19T00:29:24.4849408Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-07-19T00:29:24.4851102Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-07-19T00:29:24.4852351Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-07-19T00:29:24.4853552Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-07-19T00:29:24.4854382Z         BadRequestDetail: 
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-07-19T00:29:24.4854960Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.69s)
+</code></pre></div>
+<ul>
+<li>2025-07-20 PASS 8 seconds</li>
+<li>2025-07-21</li>
+<li>FAIL 2 seconds</li>
+</ul>
+<h3 id="error-2025-07-21t0032470000">Error 2025-07-21T00:32:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-07-21T00:32:47.0653943Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-07-21T00:32:47.0667674Z    test_name=TestMigEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/5340e9ef-531b-4ca6-a5fd-cbdff69ad5ec/terraform
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-07-21T00:32:47.0668556Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-07-21T00:32:47.0668988Z         
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-07-21T00:32:47.0669429Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-07-21T00:32:47.0669816Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-07-21T00:32:47.0670188Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-07-21T00:32:47.0670882Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-07-21T00:32:47.0671522Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-07-21T00:32:47.0671869Z         
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-07-21T00:32:47.0672452Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-07-21T00:32:47.0673054Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-07-21T00:32:47.0673712Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-07-21T00:32:47.0674454Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-07-21T00:32:47.0675119Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-07-21T00:32:47.0675765Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-07-21T00:32:47.0676220Z         BadRequestDetail: 
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-07-21T00:32:47.0676763Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.05s)
+</code></pre></div>
+<ul>
+<li>PASS 6 seconds</li>
+<li>2025-07-22 PASS 5 seconds</li>
+<li>2025-07-23</li>
+<li>PASS 5 seconds</li>
+<li>PASS 5 seconds</li>
+<li>FAIL 2 seconds</li>
+</ul>
+<h3 id="error-2025-07-23t1403040000">Error 2025-07-23T14:03:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-07-23T14:03:04.5435776Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-07-23T14:03:04.5448040Z   
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-07-23T14:03:04.5448590Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-07-23T14:03:04.5449021Z         
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-07-23T14:03:04.5449463Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-07-23T14:03:04.5449836Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-07-23T14:03:04.5450191Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-07-23T14:03:04.5452915Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-07-23T14:03:04.5453556Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-07-23T14:03:04.5453902Z         
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-07-23T14:03:04.5454493Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-07-23T14:03:04.5455081Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-07-23T14:03:04.5455727Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-07-23T14:03:04.5456461Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-07-23T14:03:04.5457127Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-07-23T14:03:04.5457798Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-07-23T14:03:04.5458253Z         BadRequestDetail: 
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-07-23T14:03:04.5458594Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.37s)
+</code></pre></div>
+<ul>
+<li>2025-07-24</li>
+</ul>
+<h3 id="error-2025-07-24t0031040000">Error 2025-07-24T00:31:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-07-24T00:31:04.9857111Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-07-24T00:31:04.9868021Z    test_terraform_path=/home/runner/work/_temp/66c90480-bd73-4878-893b-343a425a6884/terraform
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-07-24T00:31:04.9868740Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-07-24T00:31:04.9869177Z         
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-07-24T00:31:04.9869613Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-07-24T00:31:04.9869992Z         
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-07-24T00:31:04.9870355Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-07-24T00:31:04.9871058Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-07-24T00:31:04.9871694Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-07-24T00:31:04.9872034Z         
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-07-24T00:31:04.9872610Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-07-24T00:31:04.9873204Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-07-24T00:31:04.9873855Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-07-24T00:31:04.9874613Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-07-24T00:31:04.9875278Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-07-24T00:31:04.9875908Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-07-24T00:31:04.9876524Z         BadRequestDetail: 
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-07-24T00:31:04.9876865Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.12s)
+</code></pre></div>
+<ul>
+<li>2025-07-25</li>
+</ul>
+<h3 id="error-2025-07-25t0031070000">Error 2025-07-25T00:31:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-07-25T00:31:07.7030350Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-07-25T00:31:07.7048086Z    test_name=TestMigEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/5000daac-ea34-4be0-a5df-11dd88691586/terraform
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-07-25T00:31:07.7049781Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-07-25T00:31:07.7050597Z         
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-07-25T00:31:07.7051452Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-07-25T00:31:07.7052170Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-07-25T00:31:07.7052601Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-07-25T00:31:07.7053307Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-07-25T00:31:07.7054303Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-07-25T00:31:07.7054703Z         
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-07-25T00:31:07.7055311Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-07-25T00:31:07.7055918Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-07-25T00:31:07.7056572Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-07-25T00:31:07.7057309Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-07-25T00:31:07.7058012Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-07-25T00:31:07.7058638Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-07-25T00:31:07.7059087Z         BadRequestDetail: 
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-07-25T00:31:07.7059410Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.55s)
+</code></pre></div>
+<ul>
+<li>2025-07-26</li>
+</ul>
+<h3 id="error-2025-07-26t0030020000">Error 2025-07-26T00:30:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-07-26T00:30:02.8931002Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-07-26T00:30:02.8945934Z    test_terraform_path=/home/runner/work/_temp/0c161764-9dcc-48ca-9bb7-d36fd2747812/terraform test_step_number=1 test_working_directory=/tmp/plugintest1175954789 test_name=TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-07-26T00:30:02.8947106Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-07-26T00:30:02.8947554Z         
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-07-26T00:30:02.8948011Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-07-26T00:30:02.8948393Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-07-26T00:30:02.8948761Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-07-26T00:30:02.8949473Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-07-26T00:30:02.8950138Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-07-26T00:30:02.8950490Z         
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-07-26T00:30:02.8951088Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-07-26T00:30:02.8951696Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-07-26T00:30:02.8952378Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-07-26T00:30:02.8953136Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-07-26T00:30:02.8953797Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-07-26T00:30:02.8954430Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2025-07-26T00:30:02.8954911Z         BadRequestDetail: 
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2025-07-26T00:30:02.8955236Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.54s)
+</code></pre></div>
+<ul>
+<li>2025-07-27 PASS 8 seconds</li>
+<li>2025-07-28</li>
+</ul>
+<h3 id="error-2025-07-28t0033010000">Error 2025-07-28T00:33:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-07-28T00:33:01.2567765Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-07-28T00:33:01.2579802Z    test_working_directory=/tmp/plugintest3049926088 test_step_number=1
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-07-28T00:33:01.2580527Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-07-28T00:33:01.2580953Z         
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-07-28T00:33:01.2581390Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-07-28T00:33:01.2581765Z         
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-07-28T00:33:01.2582439Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-07-28T00:33:01.2583118Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-07-28T00:33:01.2583756Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-07-28T00:33:01.2584090Z         
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-07-28T00:33:01.2584667Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-07-28T00:33:01.2585254Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-07-28T00:33:01.2585899Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-07-28T00:33:01.2586633Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-07-28T00:33:01.2587286Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2025-07-28T00:33:01.2587906Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2025-07-28T00:33:01.2588350Z         BadRequestDetail: 
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2025-07-28T00:33:01.2588675Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.32s)
+</code></pre></div>
+<ul>
+<li>2025-07-29</li>
+</ul>
+<h3 id="error-2025-07-29t0033290000">Error 2025-07-29T00:33:29+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-07-29T00:33:29.2155906Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-07-29T00:33:29.2176576Z   
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-07-29T00:33:29.2177504Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-07-29T00:33:29.2178302Z         
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-07-29T00:33:29.2179142Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-07-29T00:33:29.2179868Z         
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-07-29T00:33:29.2180568Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-07-29T00:33:29.2181860Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-07-29T00:33:29.2183046Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-07-29T00:33:29.2183695Z         
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-07-29T00:33:29.2184778Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-07-29T00:33:29.2185872Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-07-29T00:33:29.2187290Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2025-07-29T00:33:29.2188672Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2025-07-29T00:33:29.2189915Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>2025-07-29T00:33:29.2191125Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>2025-07-29T00:33:29.2191967Z         BadRequestDetail: 
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>2025-07-29T00:33:29.2192545Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.82s)
+</code></pre></div>
+<ul>
+<li>2025-07-30</li>
+</ul>
+<h3 id="error-2025-07-30t0031100000">Error 2025-07-30T00:31:10+00:00</h3>
+<p>GoTestErrorClassification(error_class='dangling_resource',author='human',run_id='2025-07-30T00:31:10.582000+00:00-TestMigEncryptionAtRest_basicAWS',confidence=1.0,ts_when='a day ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-07-30T00:31:10.5822730Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-07-30T00:31:10.5839900Z    test_name=TestMigEncryptionAtRest_basicAWS test_terraform_path=/home/runner/work/_temp/efe19311-5afb-4b87-84cb-33f8d6851dfa/terraform test_working_directory=/tmp/plugintest329910460 test_step_number=1
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-07-30T00:31:10.5842234Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-07-30T00:31:10.5843022Z         
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-07-30T00:31:10.5843817Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-07-30T00:31:10.5844521Z         
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-07-30T00:31:10.5845220Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-07-30T00:31:10.5846703Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-07-30T00:31:10.5847877Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-07-30T00:31:10.5848495Z         
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-07-30T00:31:10.5849239Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-07-30T00:31:10.5849859Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-07-30T00:31:10.5850535Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>2025-07-30T00:31:10.5851284Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>2025-07-30T00:31:10.5851950Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>2025-07-30T00:31:10.5852615Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>2025-07-30T00:31:10.5853069Z         BadRequestDetail: 
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>2025-07-30T00:31:10.5853398Z --- FAIL: TestMigEncryptionAtRest_basicAWS (2.56s)
+</code></pre></div>
+<ul>
+<li>2025-07-31</li>
+</ul>
+<h3 id="error-2025-07-31t0031010000">Error 2025-07-31T00:31:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-07-31T00:31:01.4435328Z === RUN   TestMigEncryptionAtRest_basicAWS
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-07-31T00:31:01.4448322Z   
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-07-31T00:31:01.4449158Z     resource_migration_test.go:33: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-07-31T00:31:01.4449943Z         
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-07-31T00:31:01.4450815Z         Error: error creating Encryption At Rest: 6790e57a9b41416f5c216fee
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-07-31T00:31:01.4451549Z         
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-07-31T00:31:01.4452080Z           with mongodbatlas_encryption_at_rest.test,
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-07-31T00:31:01.4452807Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot;:
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-07-31T00:31:01.4453462Z           14:      resource &quot;mongodbatlas_encryption_at_rest&quot; &quot;test&quot; {
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-07-31T00:31:01.4453830Z         
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-07-31T00:31:01.4454446Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6790e57a9b41416f5c216fee/encryptionAtRest
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-07-31T00:31:01.4455059Z         PATCH: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2025-07-31T00:31:01.4455735Z         &quot;CANNOT_DISABLE_ENCRYPTION_AT_REST_REQUIRE_PRIVATE_NETWORKING_WHILE_PRIVATE_ENDPOINTS_EXIST&quot;)
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>2025-07-31T00:31:01.4456523Z         Detail: Cannot disable requirePrivateNetworking field when there are private
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>2025-07-31T00:31:01.4457505Z         endpoints. Remove private endpoints in region(s) US_EAST_1 to disable
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>2025-07-31T00:31:01.4458162Z         requirePrivateNetworking. Reason: Bad Request. Params: [US_EAST_1],
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>2025-07-31T00:31:01.4458656Z         BadRequestDetail: 
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>2025-07-31T00:31:01.4458998Z --- FAIL: TestMigEncryptionAtRest_basicAWS (3.75s)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
