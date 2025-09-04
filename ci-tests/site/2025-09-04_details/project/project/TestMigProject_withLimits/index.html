@@ -1,0 +1,563 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>project/project/TestMigProject_withLimits Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projectprojecttestmigproject_withlimits-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              project/project/TestMigProject_withLimits Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="projectprojecttestmigproject_withlimits-test-details">project/project/TestMigProject_withLimits Test Details</h1>
+<h1 id="found-39-testruns-in-dev-qa-from-2025-08-06-to-2025-09-04-from-master-branch-1-unique-tests-passx-34-failx-5">Found 39 TestRuns in dev, qa from 2025-08-06 to 2025-09-04 from master branch: 1 unique tests, PASS(x 34) FAIL(x 5)</h1>
+<p>Success rate: 87.18%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-08-10t0039430000">2025-08-10 00:39</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/6897e8f0dacc1950586dd7da/limits</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>44.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-20t1414130000">2025-08-20 14:14</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/68a5d4dff98188003c99bdb1/limits</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>67.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-24t0042090000">2025-08-24 00:42</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/68aa5d9f9bbb8c4ee1f85899/limits</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>35.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-31t0045030000">2025-08-31 00:45</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/68b397cd7e07f9709daef1d1/limits</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>67.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0034530000">2025-09-01 00:34</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>1.10s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-08-05: MISSING</li>
+<li>2025-08-06 PASS 27 seconds</li>
+<li>2025-08-07 PASS 2 minutes</li>
+<li>2025-08-08 PASS 13 seconds</li>
+<li>2025-08-09 PASS 11 seconds</li>
+<li>2025-08-10</li>
+</ul>
+<h3 id="error-2025-08-10t0039430000">Error 2025-08-10T00:39:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-08-10T00:39:43.8575862Z === RUN   TestMigProject_withLimits
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-08-10T00:39:43.8592618Z    test_terraform_path=/home/runner/work/_temp/ed68cf79-8601-4a87-a3c6-962c5011f100/terraform test_step_number=2
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-08-10T00:39:43.8593465Z     resource_project_migration_test.go:124: Step 2/2 error: Error running pre-apply plan: exit status 1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-08-10T00:39:43.8594107Z         
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-08-10T00:39:43.8594440Z         Error: error when getting project properties
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-08-10T00:39:43.8594734Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-08-10T00:39:43.8595042Z           with data.mongodbatlas_project.test,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-08-10T00:39:43.8595616Z           on terraform_plugin_test.tf line 29, in data &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-08-10T00:39:43.8596130Z           29:      data &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-08-10T00:39:43.8596408Z         
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-08-10T00:39:43.8596843Z         error getting project (6897e8f0dacc1950586dd7da): error getting project&#39;s
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-08-10T00:39:43.8597294Z         limits (6897e8f0dacc1950586dd7da):
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-08-10T00:39:43.8597877Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6897e8f0dacc1950586dd7da/limits
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-08-10T00:39:43.8598733Z         GET: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-08-10T00:39:43.8599307Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-08-10T00:39:43.8599700Z         BadRequestDetail: 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-08-10T00:39:43.8599975Z --- FAIL: TestMigProject_withLimits (44.42s)
+</code></pre></div>
+<ul>
+<li>2025-08-11 PASS 21 seconds</li>
+<li>2025-08-12</li>
+<li>PASS 22 seconds</li>
+<li>PASS 12 seconds</li>
+<li>2025-08-13 PASS 10 seconds</li>
+<li>2025-08-14 PASS 11 seconds</li>
+<li>2025-08-15 PASS 17 seconds</li>
+<li>2025-08-16 PASS 12 seconds</li>
+<li>2025-08-17 PASS 13 seconds</li>
+<li>2025-08-18 PASS 14 seconds</li>
+<li>2025-08-19 PASS 20 seconds</li>
+<li>2025-08-20</li>
+<li>PASS 14 seconds</li>
+<li>FAIL a minute</li>
+</ul>
+<h3 id="error-2025-08-20t1414130000">Error 2025-08-20T14:14:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-08-20T14:14:13.0473363Z === RUN   TestMigProject_withLimits
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-08-20T14:14:13.0485037Z    test_step_number=2 test_name=TestMigProject_withLimits test_terraform_path=/home/runner/work/_temp/b1e24623-9099-4574-a360-53a74d38537b/terraform test_working_directory=/tmp/plugintest4246939277
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-08-20T14:14:13.0486131Z     resource_project_migration_test.go:124: Step 2/2 error: Error running pre-apply plan: exit status 1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-08-20T14:14:13.0486579Z         
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-08-20T14:14:13.0487032Z         Error: error when getting project properties
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-08-20T14:14:13.0487337Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-08-20T14:14:13.0487655Z           with data.mongodbatlas_project.test,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-08-20T14:14:13.0488231Z           on terraform_plugin_test.tf line 29, in data &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-08-20T14:14:13.0488740Z           29:      data &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-08-20T14:14:13.0489015Z         
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-08-20T14:14:13.0489459Z         error getting project (68a5d4dff98188003c99bdb1): error getting project&#39;s
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-08-20T14:14:13.0489910Z         limits (68a5d4dff98188003c99bdb1):
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-08-20T14:14:13.0490474Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68a5d4dff98188003c99bdb1/limits
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-08-20T14:14:13.0491138Z         GET: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-08-20T14:14:13.0491709Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-08-20T14:14:13.0492128Z         BadRequestDetail: 
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-08-20T14:14:13.0492398Z --- FAIL: TestMigProject_withLimits (67.82s)
+</code></pre></div>
+<ul>
+<li>2025-08-21 PASS 18 seconds</li>
+<li>2025-08-22 PASS 12 seconds</li>
+<li>2025-08-23 PASS 13 seconds</li>
+<li>2025-08-24</li>
+</ul>
+<h3 id="error-2025-08-24t0042090000">Error 2025-08-24T00:42:09+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-08-24T00:42:09.0444887Z === RUN   TestMigProject_withLimits
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-08-24T00:42:09.0452150Z    test_terraform_path=/home/runner/work/_temp/1a92612f-a7bd-43c8-9b02-683bcfefdfca/terraform test_working_directory=/tmp/plugintest607399717
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-08-24T00:42:09.0453027Z     resource_project_migration_test.go:124: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-08-24T00:42:09.0453451Z         
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-08-24T00:42:09.0453835Z         Error: error when getting project properties after create
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-08-24T00:42:09.0454167Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-08-24T00:42:09.0454469Z           with mongodbatlas_project.test,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-08-24T00:42:09.0455063Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-08-24T00:42:09.0455612Z           14:      resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-08-24T00:42:09.0455901Z         
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-08-24T00:42:09.0456632Z         error getting project (68aa5d9f9bbb8c4ee1f85899): error getting project&#39;s
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-08-24T00:42:09.0457139Z         limits (68aa5d9f9bbb8c4ee1f85899):
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-08-24T00:42:09.0457746Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68aa5d9f9bbb8c4ee1f85899/limits
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-08-24T00:42:09.0458428Z         GET: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-08-24T00:42:09.0459007Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-08-24T00:42:09.0459401Z         BadRequestDetail: 
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-08-24T00:42:09.0459687Z --- FAIL: TestMigProject_withLimits (35.72s)
+</code></pre></div>
+<ul>
+<li>2025-08-25 PASS 16 seconds</li>
+<li>2025-08-26 PASS 20 seconds</li>
+<li>2025-08-27 PASS 18 seconds</li>
+<li>2025-08-28 PASS 20 seconds</li>
+<li>2025-08-29 PASS 11 seconds</li>
+<li>2025-08-30 PASS 11 seconds</li>
+<li>2025-08-31</li>
+</ul>
+<h3 id="error-2025-08-31t0045030000">Error 2025-08-31T00:45:03+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-08-31T00:45:03.7503682Z === RUN   TestMigProject_withLimits
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-08-31T00:45:03.7516213Z    test_name=TestMigProject_withLimits test_terraform_path=/home/runner/work/_temp/19bede8d-e9f3-4e59-9c28-03b9edc97393/terraform test_working_directory=/tmp/plugintest1986643378 test_step_number=2
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-08-31T00:45:03.7517361Z     resource_project_migration_test.go:124: Step 2/2 error: Error running post-apply non-refresh plan: exit status 1
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-08-31T00:45:03.7517837Z         
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-08-31T00:45:03.7518155Z         Error: error when getting project properties
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-08-31T00:45:03.7518452Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-08-31T00:45:03.7518768Z           with data.mongodbatlas_project.test,
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-08-31T00:45:03.7519338Z           on terraform_plugin_test.tf line 29, in data &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-08-31T00:45:03.7520047Z           29:      data &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-08-31T00:45:03.7520330Z         
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-08-31T00:45:03.7520865Z         error getting project (68b397cd7e07f9709daef1d1): error getting project&#39;s
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-08-31T00:45:03.7521384Z         limits (68b397cd7e07f9709daef1d1):
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-08-31T00:45:03.7521979Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68b397cd7e07f9709daef1d1/limits
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-08-31T00:45:03.7522783Z         GET: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-08-31T00:45:03.7523366Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-08-31T00:45:03.7523754Z         BadRequestDetail: 
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-08-31T00:45:03.7524024Z --- FAIL: TestMigProject_withLimits (67.60s)
+</code></pre></div>
+<ul>
+<li>2025-09-01</li>
+<li>FAIL a second</li>
+</ul>
+<h3 id="error-2025-09-01t0034530000">Error 2025-09-01T00:34:53+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-09-01T00:34:53.2437477Z === RUN   TestMigProject_withLimits
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-09-01T00:34:53.2444845Z   
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-09-01T00:34:53.2445299Z     resource_project_migration_test.go:124: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-09-01T00:34:53.2445751Z         
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-09-01T00:34:53.2446151Z         Error: error creating project: test-acc-tf-p-6021531025836767296
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-09-01T00:34:53.2446498Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-09-01T00:34:53.2446791Z           with mongodbatlas_project.test,
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-09-01T00:34:53.2447374Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-09-01T00:34:53.2447901Z           14:      resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-09-01T00:34:53.2448192Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-09-01T00:34:53.2448666Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-09-01T00:34:53.2449298Z         (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-09-01T00:34:53.2449905Z         per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-09-01T00:34:53.2450628Z         add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c],
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-09-01T00:34:53.2451244Z         BadRequestDetail: 
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-09-01T00:34:53.2451533Z --- FAIL: TestMigProject_withLimits (1.98s)
+</code></pre></div>
+<ul>
+<li>PASS 20 seconds</li>
+<li>PASS 21 seconds</li>
+<li>PASS 19 seconds</li>
+<li>PASS 11 seconds</li>
+<li>PASS 12 seconds</li>
+<li>PASS 20 seconds</li>
+<li>PASS 12 seconds</li>
+<li>2025-09-02 PASS 24 seconds</li>
+<li>2025-09-03 PASS 11 seconds</li>
+<li>2025-09-04 PASS 12 seconds</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,994 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccadvancedcluster_basictenant_flexupgrade_dedicatedupgrade-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccadvancedcluster_basictenant_flexupgrade_dedicatedupgrade-test-details">advanced_cluster/advancedcluster/TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade Test Details</h1>
+<h1 id="found-36-testruns-in-dev-qa-from-2025-08-06-to-2025-09-04-from-master-branch-1-unique-tests-failx-21-passx-15">Found 36 TestRuns in dev, qa from 2025-08-06 to 2025-09-04 from master branch: 1 unique tests, FAIL(x 21) PASS(x 15)</h1>
+<p>Success rate: 41.67%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-08-07t0031490000">2025-08-07 00:31</a></td>
+<td>API Error ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED /api/atlas/v2/groups/{groupId}/clusters</td>
+<td>dev</td>
+<td>real_test_failure</td>
+<td>53.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-08t0031050000">2025-08-08 00:31</a></td>
+<td>API Error CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/{groupId}/clusters</td>
+<td>dev</td>
+<td>real_test_failure</td>
+<td>35.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-09t0028490000">2025-08-09 00:28</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/6896963eda77bc53077053e4/clusters</td>
+<td>dev</td>
+<td></td>
+<td>70.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-10t0033230000">2025-08-10 00:33</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/6897e8d2dacc1950586dbf43/clusters</td>
+<td>qa</td>
+<td></td>
+<td>65.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-11t0032270000">2025-08-11 00:32</a></td>
+<td>ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED /api/atlas/v2/groups/68993a1609b64000724cc4bc/clusters</td>
+<td>dev</td>
+<td></td>
+<td>11.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-12t0028430000">2025-08-12 00:28</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/689a8ab833922b33437be816/clusters</td>
+<td>dev</td>
+<td></td>
+<td>75.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-14t0029080000">2025-08-14 00:29</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/689d2dd2ef833d45fb6d14f8/clusters</td>
+<td>dev</td>
+<td></td>
+<td>25.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-16t0027550000">2025-08-16 00:27</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/689fd089abb59e7daa2c9ddb/clusters</td>
+<td>dev</td>
+<td></td>
+<td>75.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-17t0031370000">2025-08-17 00:31</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/68a122e6f746882a383c9cf9/clusters</td>
+<td>qa</td>
+<td></td>
+<td>15.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-18t0031350000">2025-08-18 00:31</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/68a2746520e441390d885bef/clusters</td>
+<td>dev</td>
+<td></td>
+<td>60.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-20t0027250000">2025-08-20 00:27</a></td>
+<td>CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API /api/atlas/v2/groups/68a5166c552c1710e1fb279c/clusters/test-acc-tf-c-7673890514674051713</td>
+<td>dev</td>
+<td></td>
+<td>1011.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-21t0027210000">2025-08-21 00:27</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/68a667e60ed8ff152ac7ecb0/clusters</td>
+<td>dev</td>
+<td></td>
+<td>70.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-23t0027120000">2025-08-23 00:27</a></td>
+<td>CANNOT_USE_NON_FLEX_CLUSTER_IN_FLEX_API /api/atlas/v2/groups/68a90adead47257586c2719a/flexClusters/test-acc-tf-c-8562903472110406600</td>
+<td>dev</td>
+<td>timeout</td>
+<td>11072.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-24t0030560000">2025-08-24 00:30</a></td>
+<td>CANNOT_USE_NON_FLEX_CLUSTER_IN_FLEX_API /api/atlas/v2/groups/68aa5d3e4192cd1cc589d457/flexClusters/test-acc-tf-c-1632814535287999201</td>
+<td>qa</td>
+<td>timeout</td>
+<td>11065.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-25t0029120000">2025-08-25 00:29</a></td>
+<td>CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API /api/atlas/v2/groups/68abae5616afe76254e87890/clusters/test-acc-tf-c-435979405823425513</td>
+<td>dev</td>
+<td></td>
+<td>1483.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-27t0027410000">2025-08-27 00:27</a></td>
+<td>CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API /api/atlas/v2/groups/68ae50fbaa49ce49aab88100/clusters/test-acc-tf-c-6270177215151737472</td>
+<td>dev</td>
+<td></td>
+<td>2397.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-28t0027310000">2025-08-28 00:27</a></td>
+<td>CANNOT_USE_NON_FLEX_CLUSTER_IN_FLEX_API /api/atlas/v2/groups/68afa270e2173c2b10934a86/flexClusters/test-acc-tf-c-6413423957953149982</td>
+<td>dev</td>
+<td>timeout</td>
+<td>11075.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0030410000">2025-09-01 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10821.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t1342020000">2025-09-01 13:42</a></td>
+<td>CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API /api/atlas/v2/groups/68b5a2a9172c126611872132/clusters/test-acc-tf-c-6474566299923793398</td>
+<td>dev</td>
+<td></td>
+<td>1496.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-03t0026180000">2025-09-03 00:26</a></td>
+<td>CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API /api/atlas/v2/groups/68b78b28a89cf4184d26f099/clusters/test-acc-tf-c-5599210234147744779</td>
+<td>dev</td>
+<td></td>
+<td>976.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-04t0026290000">2025-09-04 00:26</a></td>
+<td>CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API /api/atlas/v2/groups/68b8dcb3d8b60049b936d6c0/clusters/test-acc-tf-c-1554695614228743002</td>
+<td>dev</td>
+<td></td>
+<td>1522.00s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-08-05: MISSING</li>
+<li>2025-08-06 PASS 50 minutes</li>
+<li>2025-08-07</li>
+</ul>
+<h3 id="error-2025-08-07t0031490000">Error 2025-08-07T00:31:49+00:00</h3>
+<p>GoTestErrorClassification(error_class='real_test_failure',author='similar',run_id='2025-08-07T00:31:49.251000+00:00-TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade',confidence=1.0,ts_when='28 days ago')
+API Error ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED /api/atlas/v2/groups/{groupId}/clusters
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-08-07T00:31:49.2514733Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-08-07T00:35:02.1556145Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-08-07T00:35:52.1612539Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-08-07T00:35:52.1613861Z     pre_check.go:40: Time before creating cluster: 2025-08-07T00:35:52.161006229Z, ProjectID: 6893f3f09c9cc040e192f9b7, Cluster name: test-acc-tf-c-2277062507928687525
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-08-07T00:35:55.9605597Z   
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-08-07T00:35:55.9606151Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-08-07T00:35:55.9606645Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-08-07T00:35:55.9609884Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6893f3f09c9cc040e192f9b7/clusters POST: HTTP 403 Forbidden (Error code: &quot;ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED&quot;) Detail: Invalid Configuration. Contains selections that are unavailable due to your organization&#39;s resource policies. Reason: Forbidden. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-08-07T00:35:55.9611365Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-08-07T00:35:55.9611684Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-08-07T00:35:55.9612294Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-08-07T00:35:55.9613168Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-08-07T00:35:55.9613478Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-08-07T00:35:56.0140964Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (53.86s)
+</code></pre></div></p>
+<ul>
+<li>2025-08-08</li>
+</ul>
+<h3 id="error-2025-08-08t0031050000">Error 2025-08-08T00:31:05+00:00</h3>
+<p>GoTestErrorClassification(error_class='real_test_failure',author='similar',run_id='2025-08-08T00:31:05.523000+00:00-TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade',confidence=1.0,ts_when='27 days ago')
+API Error CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/{groupId}/clusters
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-08-08T00:31:05.5231073Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-08-08T00:31:59.3115621Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-08-08T00:32:34.3148918Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-08-08T00:32:34.3150406Z     pre_check.go:40: Time before creating cluster: 2025-08-08T00:32:34.314632302Z, ProjectID: 6895454713642126f901ef43, Cluster name: test-acc-tf-c-129182051018124096
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-08-08T00:32:34.6836314Z   
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-08-08T00:32:34.6836961Z     resource_advanced_cluster_test.go:155: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-08-08T00:32:34.6837467Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-08-08T00:32:34.6840402Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6895454713642126f901ef43/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-08-08T00:32:34.6842255Z         
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-08-08T00:32:34.6842577Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-08-08T00:32:34.6843226Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-08-08T00:32:34.6843822Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-08-08T00:32:34.6844127Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-08-08T00:32:34.7300215Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (35.42s)
+</code></pre></div></p>
+<ul>
+<li>2025-08-09</li>
+</ul>
+<h3 id="error-2025-08-09t0028490000">Error 2025-08-09T00:28:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-08-09T00:28:49.4180513Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-08-09T00:29:58.3237875Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-08-09T00:31:08.3153188Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-08-09T00:31:08.3154381Z     pre_check.go:40: Time before creating cluster: 2025-08-09T00:31:08.315078881Z, ProjectID: 6896963eda77bc53077053e4, Cluster name: test-acc-tf-c-1212648281991988137
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-08-09T00:31:08.6563687Z    test_step_number=1 test_working_directory=/tmp/plugintest2055061813 test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade test_terraform_path=/home/runner/work/_temp/629b98a5-3243-4292-bf57-3b1de8060bd5/terraform
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-08-09T00:31:08.6565336Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-08-09T00:31:08.6565763Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-08-09T00:31:08.6568611Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6896963eda77bc53077053e4/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-08-09T00:31:08.6570310Z         
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-08-09T00:31:08.6570633Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-08-09T00:31:08.6571257Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-08-09T00:31:08.6571829Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-08-09T00:31:08.6572137Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-08-09T00:31:08.6988595Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (70.38s)
+</code></pre></div>
+<ul>
+<li>2025-08-10</li>
+</ul>
+<h3 id="error-2025-08-10t0033230000">Error 2025-08-10T00:33:23+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-08-10T00:33:23.8202119Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-08-10T00:34:27.0096704Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-08-10T00:35:32.0044601Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-08-10T00:35:32.0046599Z     pre_check.go:40: Time before creating cluster: 2025-08-10T00:35:32.004128983Z, ProjectID: 6897e8d2dacc1950586dbf43, Cluster name: test-acc-tf-c-4397637439382210554
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-08-10T00:35:32.3847643Z   
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-08-10T00:35:32.3848205Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-08-10T00:35:32.3848730Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-08-10T00:35:32.3851512Z         Error: error creating advanced cluster: https://cloud-qa.mongodb.com/api/atlas/v2/groups/6897e8d2dacc1950586dbf43/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-08-10T00:35:32.3853726Z         
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-08-10T00:35:32.3854050Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-08-10T00:35:32.3854677Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-08-10T00:35:32.3855247Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-08-10T00:35:32.3855545Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-08-10T00:35:32.4283194Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (65.42s)
+</code></pre></div>
+<ul>
+<li>2025-08-11</li>
+</ul>
+<h3 id="error-2025-08-11t0032270000">Error 2025-08-11T00:32:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-08-11T00:32:27.1022712Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-08-11T00:33:33.3882743Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-08-11T00:33:43.3900881Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-08-11T00:33:43.3902544Z     pre_check.go:40: Time before creating cluster: 2025-08-11T00:33:43.389797741Z, ProjectID: 68993a1609b64000724cc4bc, Cluster name: test-acc-tf-c-3737890766272966609
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-08-11T00:33:43.7662245Z   
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-08-11T00:33:44.3580409Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-08-11T00:33:44.3581498Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-08-11T00:33:44.3582196Z         
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-08-11T00:33:44.3585943Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68993a1609b64000724cc4bc/clusters POST: HTTP 403 Forbidden (Error code: &quot;ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED&quot;) Detail: Invalid Configuration. Contains selections that are unavailable due to your organization&#39;s resource policies. Reason: Forbidden. Params: [], BadRequestDetail: 
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-08-11T00:33:44.3587757Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-08-11T00:33:44.3588097Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-08-11T00:33:44.3588771Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-08-11T00:33:44.3589390Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-08-11T00:33:44.3589708Z         
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-08-11T00:33:44.4038694Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (11.02s)
+</code></pre></div>
+<ul>
+<li>2025-08-12</li>
+<li>FAIL a minute</li>
+</ul>
+<h3 id="error-2025-08-12t0028430000">Error 2025-08-12T00:28:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-08-12T00:28:43.1579691Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-08-12T00:29:43.1305228Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-08-12T00:30:58.0847804Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-08-12T00:30:58.0850177Z     pre_check.go:40: Time before creating cluster: 2025-08-12T00:30:58.084440554Z, ProjectID: 689a8ab833922b33437be816, Cluster name: test-acc-tf-c-3929976312886214935
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-08-12T00:30:58.5485349Z    test_step_number=1 test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-08-12T00:30:58.5486191Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-08-12T00:30:58.5486707Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-08-12T00:30:58.5489486Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/689a8ab833922b33437be816/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-08-12T00:30:58.5491067Z         
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-08-12T00:30:58.5491406Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-08-12T00:30:58.5492067Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-08-12T00:30:58.5492860Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-08-12T00:30:58.5493174Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-08-12T00:30:58.5947362Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (75.49s)
+</code></pre></div>
+<ul>
+<li>PASS 29 minutes</li>
+<li>2025-08-13 PASS 37 minutes</li>
+<li>2025-08-14</li>
+</ul>
+<h3 id="error-2025-08-14t0029080000">Error 2025-08-14T00:29:08+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-08-14T00:29:08.8592770Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-08-14T00:30:18.4059682Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-08-14T00:30:43.4066842Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-08-14T00:30:43.4068746Z     pre_check.go:40: Time before creating cluster: 2025-08-14T00:30:43.406344435Z, ProjectID: 689d2dd2ef833d45fb6d14f8, Cluster name: test-acc-tf-c-5959030630815501478
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-08-14T00:30:43.8826023Z    test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade test_terraform_path=/home/runner/work/_temp/6ed6bb8a-5c87-4267-96a4-118e18a375e3/terraform test_step_number=1
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-08-14T00:30:43.8827732Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-08-14T00:30:43.8828456Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-08-14T00:30:43.8832853Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/689d2dd2ef833d45fb6d14f8/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-08-14T00:30:43.8835918Z         
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-08-14T00:30:43.8836445Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-08-14T00:30:43.8837638Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-08-14T00:30:43.8838683Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-08-14T00:30:43.8865270Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-08-14T00:30:43.9303346Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (25.53s)
+</code></pre></div>
+<ul>
+<li>2025-08-15: MISSING</li>
+<li>2025-08-16</li>
+</ul>
+<h3 id="error-2025-08-16t0027550000">Error 2025-08-16T00:27:55+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-08-16T00:27:55.5242967Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-08-16T00:29:12.9313783Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-08-16T00:30:27.9154459Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-08-16T00:30:27.9156542Z     pre_check.go:40: Time before creating cluster: 2025-08-16T00:30:27.915200335Z, ProjectID: 689fd089abb59e7daa2c9ddb, Cluster name: test-acc-tf-c-1709178605207775733
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-08-16T00:30:28.2659133Z   
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-08-16T00:30:28.2659935Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-08-16T00:30:28.2660673Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-08-16T00:30:28.2664419Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/689fd089abb59e7daa2c9ddb/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-08-16T00:30:28.2666482Z         
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-08-16T00:30:28.2666961Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-08-16T00:30:28.2667914Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-08-16T00:30:28.2668834Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-08-16T00:30:28.2669152Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-08-16T00:30:28.3225572Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (75.40s)
+</code></pre></div>
+<ul>
+<li>2025-08-17</li>
+</ul>
+<h3 id="error-2025-08-17t0031370000">Error 2025-08-17T00:31:37+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-08-17T00:31:37.3759608Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-08-17T00:32:50.8942650Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-08-17T00:33:05.8878885Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-08-17T00:33:05.8880241Z     pre_check.go:40: Time before creating cluster: 2025-08-17T00:33:05.887602469Z, ProjectID: 68a122e6f746882a383c9cf9, Cluster name: test-acc-tf-c-8465877440013702956
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-08-17T00:33:06.2052710Z   
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-08-17T00:33:06.2053180Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-08-17T00:33:06.2053607Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-08-17T00:33:06.2056887Z         Error: error creating advanced cluster: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68a122e6f746882a383c9cf9/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-08-17T00:33:06.2058496Z         
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-08-17T00:33:06.2058817Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-08-17T00:33:06.2059445Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-08-17T00:33:06.2060018Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-08-17T00:33:06.2060316Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-08-17T00:33:06.2566887Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (15.37s)
+</code></pre></div>
+<ul>
+<li>2025-08-18</li>
+</ul>
+<h3 id="error-2025-08-18t0031350000">Error 2025-08-18T00:31:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-08-18T00:31:35.0282475Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-08-18T00:32:45.8152495Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-08-18T00:33:45.7673600Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-08-18T00:33:45.7677132Z     pre_check.go:40: Time before creating cluster: 2025-08-18T00:33:45.767014435Z, ProjectID: 68a2746520e441390d885bef, Cluster name: test-acc-tf-c-2096562620862841632
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-08-18T00:33:46.1327842Z    test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade test_terraform_path=/home/runner/work/_temp/7300829b-3103-48a8-ad0e-d61e0997548a/terraform test_working_directory=/tmp/plugintest3538244102 test_step_number=1
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-08-18T00:33:46.1329930Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-08-18T00:33:46.1330525Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-08-18T00:33:46.1333780Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a2746520e441390d885bef/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-08-18T00:33:46.1335754Z         
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-08-18T00:33:46.1336086Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-08-18T00:33:46.1336778Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-08-18T00:33:46.1337398Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-08-18T00:33:46.1337714Z         
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-08-18T00:33:46.1801560Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (60.41s)
+</code></pre></div>
+<ul>
+<li>2025-08-19 PASS 39 minutes</li>
+<li>2025-08-20</li>
+<li>FAIL 16 minutes</li>
+</ul>
+<h3 id="error-2025-08-20t0027250000">Error 2025-08-20T00:27:25+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-08-20T00:27:25.8136941Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-08-20T00:28:29.0305199Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-08-20T00:28:39.0266755Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-08-20T00:28:39.0268505Z     pre_check.go:40: Time before creating cluster: 2025-08-20T00:28:39.026381932Z, ProjectID: 68a5166c552c1710e1fb279c, Cluster name: test-acc-tf-c-7673890514674051713
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-08-20T00:45:19.8422647Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-08-20T00:45:19.8423435Z     resource_advanced_cluster_test.go:157: Step 3/3 error: Error running apply: exit status 1
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-08-20T00:45:19.8423979Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-08-20T00:45:19.8424771Z         Error: error updating advanced cluster (test-acc-tf-c-7673890514674051713): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-08-20T00:45:19.8425398Z         
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-08-20T00:45:19.8425943Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-08-20T00:45:19.8426616Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-08-20T00:45:19.8427271Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-08-20T00:45:19.8427667Z         
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-08-20T00:45:20.0743279Z    test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade test_terraform_path=/home/runner/work/_temp/3ecf3243-c170-407b-a20d-8f7a7a535dc8/terraform test_step_number=3
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-08-20T00:45:20.0745498Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2025-08-20T00:45:20.0746451Z         
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2025-08-20T00:45:20.0750744Z         Error: error deleting advanced cluster (test-acc-tf-c-7673890514674051713): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a5166c552c1710e1fb279c/clusters/test-acc-tf-c-7673890514674051713 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster test-acc-tf-c-7673890514674051713 cannot be used in the Cluster API. Reason: Bad Request. Params: [test-acc-tf-c-7673890514674051713], BadRequestDetail: 
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2025-08-20T00:45:20.0753582Z         
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2025-08-20T00:45:20.0754220Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (1011.05s)
+</code></pre></div>
+<ul>
+<li>PASS 31 minutes</li>
+<li>2025-08-21</li>
+</ul>
+<h3 id="error-2025-08-21t0027210000">Error 2025-08-21T00:27:21+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-08-21T00:27:21.2316951Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-08-21T00:28:16.0647871Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-08-21T00:29:26.0373506Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-08-21T00:29:26.0375196Z     pre_check.go:40: Time before creating cluster: 2025-08-21T00:29:26.037005452Z, ProjectID: 68a667e60ed8ff152ac7ecb0, Cluster name: test-acc-tf-c-8335559737354581742
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-08-21T00:29:26.4310234Z   
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-08-21T00:29:26.4310835Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-08-21T00:29:26.4311265Z         
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-08-21T00:29:26.4314120Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a667e60ed8ff152ac7ecb0/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-08-21T00:29:26.4315708Z         
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-08-21T00:29:26.4316038Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-08-21T00:29:26.4316681Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-08-21T00:29:26.4317278Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-08-21T00:29:26.4337712Z         
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2025-08-21T00:29:26.4818562Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (70.42s)
+</code></pre></div>
+<ul>
+<li>2025-08-22: MISSING</li>
+<li>2025-08-23</li>
+</ul>
+<h3 id="error-2025-08-23t0027120000">Error 2025-08-23T00:27:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-08-23T00:27:12.6308344Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-08-23T00:28:26.3071107Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-08-23T00:29:36.2976173Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-08-23T00:29:36.2978047Z     pre_check.go:40: Time before creating cluster: 2025-08-23T00:29:36.297286886Z, ProjectID: 68a90adead47257586c2719a, Cluster name: test-acc-tf-c-8562903472110406600
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-08-23T03:32:58.1955903Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-08-23T03:32:58.1956774Z     resource_advanced_cluster_test.go:157: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-08-23T03:32:58.1957273Z         
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-08-23T03:32:58.1958346Z         Error: error updating advanced cluster (test-acc-tf-c-8562903472110406600): timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-08-23T03:32:58.1959300Z         
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-08-23T03:32:58.1959628Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-08-23T03:32:58.1960491Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-08-23T03:32:58.1961081Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-08-23T03:32:58.1961386Z         
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>2025-08-23T03:32:58.5200618Z    test_terraform_path=/home/runner/work/_temp/4cb0e8d4-60a5-44f0-ae1c-b013ca1c85e7/terraform test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>2025-08-23T03:32:58.5201744Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>2025-08-23T03:32:58.5202192Z         
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>2025-08-23T03:32:58.5204519Z         Error: error deleting a flex cluster (test-acc-tf-c-8562903472110406600): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a90adead47257586c2719a/flexClusters/test-acc-tf-c-8562903472110406600 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_NON_FLEX_CLUSTER_IN_FLEX_API&quot;) Detail: Cannot use non-flex cluster test-acc-tf-c-8562903472110406600 in the flex API. Reason: Bad Request. Params: [test-acc-tf-c-8562903472110406600], BadRequestDetail: 
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>2025-08-23T03:32:58.5206073Z         
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>2025-08-23T03:32:58.5206435Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (11072.21s)
+</code></pre></div>
+<ul>
+<li>2025-08-24</li>
+</ul>
+<h3 id="error-2025-08-24t0030560000">Error 2025-08-24T00:30:56+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-08-24T00:30:56.3149954Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-08-24T00:32:02.0861107Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-08-24T00:33:17.0074042Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-08-24T00:33:17.0075412Z     pre_check.go:40: Time before creating cluster: 2025-08-24T00:33:17.007134852Z, ProjectID: 68aa5d3e4192cd1cc589d457, Cluster name: test-acc-tf-c-1632814535287999201
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-08-24T03:36:27.4174326Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-08-24T03:36:27.4175089Z     resource_advanced_cluster_test.go:157: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-08-24T03:36:27.4175576Z         
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-08-24T03:36:27.4176972Z         Error: error updating advanced cluster (test-acc-tf-c-1632814535287999201): timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-08-24T03:36:27.4177832Z         
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-08-24T03:36:27.4178271Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-08-24T03:36:27.4178960Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-08-24T03:36:27.4179603Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2025-08-24T03:36:27.4179999Z         
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>2025-08-24T03:36:27.6115405Z    test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>2025-08-24T03:36:27.6116098Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>2025-08-24T03:36:27.6116519Z         
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>2025-08-24T03:36:27.6118802Z         Error: error deleting a flex cluster (test-acc-tf-c-1632814535287999201): https://cloud-qa.mongodb.com/api/atlas/v2/groups/68aa5d3e4192cd1cc589d457/flexClusters/test-acc-tf-c-1632814535287999201 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_NON_FLEX_CLUSTER_IN_FLEX_API&quot;) Detail: Cannot use non-flex cluster test-acc-tf-c-1632814535287999201 in the flex API. Reason: Bad Request. Params: [test-acc-tf-c-1632814535287999201], BadRequestDetail: 
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>2025-08-24T03:36:27.6120296Z         
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>2025-08-24T03:36:27.6120647Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (11065.59s)
+</code></pre></div>
+<ul>
+<li>2025-08-25</li>
+</ul>
+<h3 id="error-2025-08-25t0029120000">Error 2025-08-25T00:29:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2025-08-25T00:29:12.8939657Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2025-08-25T00:30:27.1275946Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2025-08-25T00:31:57.1389773Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2025-08-25T00:31:57.1391031Z     pre_check.go:40: Time before creating cluster: 2025-08-25T00:31:57.138668881Z, ProjectID: 68abae5616afe76254e87890, Cluster name: test-acc-tf-c-435979405823425513
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2025-08-25T00:55:10.6171109Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2025-08-25T00:55:10.6172464Z     resource_advanced_cluster_test.go:157: Step 3/3 error: Error running apply: exit status 1
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2025-08-25T00:55:10.6173138Z         
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2025-08-25T00:55:10.6174090Z         Error: error updating advanced cluster (test-acc-tf-c-435979405823425513): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2025-08-25T00:55:10.6174801Z         
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2025-08-25T00:55:10.6175153Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2025-08-25T00:55:10.6175932Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2025-08-25T00:55:10.6176620Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2025-08-25T00:55:10.6177007Z         
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2025-08-25T00:55:10.8176004Z    test_working_directory=/tmp/plugintest3709996150 test_step_number=3 test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade test_terraform_path=/home/runner/work/_temp/4397621d-dd5e-4287-b6ed-d0f9cac6856f/terraform
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>2025-08-25T00:55:10.8177225Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>2025-08-25T00:55:10.8177651Z         
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>2025-08-25T00:55:10.8180138Z         Error: error deleting advanced cluster (test-acc-tf-c-435979405823425513): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68abae5616afe76254e87890/clusters/test-acc-tf-c-435979405823425513 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster test-acc-tf-c-435979405823425513 cannot be used in the Cluster API. Reason: Bad Request. Params: [test-acc-tf-c-435979405823425513], BadRequestDetail: 
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>2025-08-25T00:55:10.8181662Z         
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>2025-08-25T00:55:10.8182005Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (1483.69s)
+</code></pre></div>
+<ul>
+<li>2025-08-26 PASS 50 minutes</li>
+<li>2025-08-27</li>
+</ul>
+<h3 id="error-2025-08-27t0027410000">Error 2025-08-27T00:27:41+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2025-08-27T00:27:41.7740256Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2025-08-27T00:28:59.6996415Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2025-08-27T00:30:14.6643496Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2025-08-27T00:30:14.6645115Z     pre_check.go:40: Time before creating cluster: 2025-08-27T00:30:14.664091269Z, ProjectID: 68ae50fbaa49ce49aab88100, Cluster name: test-acc-tf-c-6270177215151737472
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2025-08-27T01:08:56.7247747Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2025-08-27T01:08:56.7248536Z     resource_advanced_cluster_test.go:157: Step 3/3 error: Error running apply: exit status 1
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2025-08-27T01:08:56.7248971Z         
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2025-08-27T01:08:56.7249757Z         Error: error updating advanced cluster (test-acc-tf-c-6270177215151737472): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2025-08-27T01:08:56.7250347Z         
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2025-08-27T01:08:56.7250804Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2025-08-27T01:08:56.7251466Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2025-08-27T01:08:56.7252137Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>2025-08-27T01:08:56.7252440Z         
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>2025-08-27T01:08:56.9133828Z    test_working_directory=/tmp/plugintest4267755388
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>2025-08-27T01:08:56.9134440Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>2025-08-27T01:08:56.9134861Z         
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>2025-08-27T01:08:56.9137180Z         Error: error deleting advanced cluster (test-acc-tf-c-6270177215151737472): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68ae50fbaa49ce49aab88100/clusters/test-acc-tf-c-6270177215151737472 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster test-acc-tf-c-6270177215151737472 cannot be used in the Cluster API. Reason: Bad Request. Params: [test-acc-tf-c-6270177215151737472], BadRequestDetail: 
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>2025-08-27T01:08:56.9138723Z         
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>2025-08-27T01:08:56.9139073Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (2397.21s)
+</code></pre></div>
+<ul>
+<li>2025-08-28</li>
+</ul>
+<h3 id="error-2025-08-28t0027310000">Error 2025-08-28T00:27:31+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2025-08-28T00:27:31.9131654Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2025-08-28T00:28:33.8942494Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2025-08-28T00:28:58.8639058Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2025-08-28T00:28:58.8641565Z     pre_check.go:40: Time before creating cluster: 2025-08-28T00:28:58.863559795Z, ProjectID: 68afa270e2173c2b10934a86, Cluster name: test-acc-tf-c-6413423957953149982
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2025-08-28T03:33:08.9019455Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2025-08-28T03:33:08.9020893Z     resource_advanced_cluster_test.go:157: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2025-08-28T03:33:08.9021604Z         
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2025-08-28T03:33:08.9022523Z         Error: error updating advanced cluster (test-acc-tf-c-6413423957953149982): timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>2025-08-28T03:33:08.9023337Z         
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>2025-08-28T03:33:08.9023912Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>2025-08-28T03:33:08.9024671Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>2025-08-28T03:33:08.9025286Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>2025-08-28T03:33:08.9025600Z         
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>2025-08-28T03:33:09.1147288Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>2025-08-28T03:33:09.1147740Z         
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>2025-08-28T03:33:09.1150368Z         Error: error deleting a flex cluster (test-acc-tf-c-6413423957953149982): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68afa270e2173c2b10934a86/flexClusters/test-acc-tf-c-6413423957953149982 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_NON_FLEX_CLUSTER_IN_FLEX_API&quot;) Detail: Cannot use non-flex cluster test-acc-tf-c-6413423957953149982 in the flex API. Reason: Bad Request. Params: [test-acc-tf-c-6413423957953149982], BadRequestDetail: 
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>2025-08-28T03:33:09.1152015Z         
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>2025-08-28T03:33:09.1152396Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (11075.24s)
+</code></pre></div>
+<ul>
+<li>2025-08-29: MISSING</li>
+<li>2025-08-30 PASS 39 minutes</li>
+<li>2025-08-31 PASS 35 minutes</li>
+<li>2025-09-01</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-09-01t0030410000">Error 2025-09-01T00:30:41+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2025-09-01T00:30:41.5977971Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>2025-09-01T00:30:44.5148749Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2025-09-01T00:31:04.5067256Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>2025-09-01T00:31:04.5068566Z     pre_check.go:40: Time before creating cluster: 2025-09-01T00:31:04.506419056Z, ProjectID: 68b4e92e46ef690a79d70c0c, Cluster name: test-acc-tf-c-747000210672378264
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>2025-09-01T03:31:05.4662456Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2025-09-01T03:31:05.4663306Z     resource_advanced_cluster_test.go:157: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2025-09-01T03:31:05.4663874Z         
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>2025-09-01T03:31:05.4664799Z         Error: error creating advanced cluster: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>2025-09-01T03:31:05.4665563Z         
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>2025-09-01T03:31:05.4665901Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2025-09-01T03:31:05.4666660Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>2025-09-01T03:31:05.4667355Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>2025-09-01T03:31:05.4667688Z         
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>2025-09-01T03:31:05.5109776Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (10821.01s)
+</code></pre></div>
+<ul>
+<li>PASS 52 minutes</li>
+<li>PASS an hour</li>
+<li>PASS 34 minutes</li>
+<li>PASS 38 minutes</li>
+<li>FAIL 24 minutes</li>
+</ul>
+<h3 id="error-2025-09-01t1342020000">Error 2025-09-01T13:42:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>2025-09-01T13:42:02.6461097Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2025-09-01T13:43:28.2631623Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>2025-09-01T13:43:58.2537188Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2025-09-01T13:43:58.2539334Z     pre_check.go:40: Time before creating cluster: 2025-09-01T13:43:58.25336207Z, ProjectID: 68b5a2a9172c126611872132, Cluster name: test-acc-tf-c-6474566299923793398
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>2025-09-01T14:08:24.3460228Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2025-09-01T14:08:24.3460984Z     resource_advanced_cluster_test.go:157: Step 3/3 error: Error running apply: exit status 1
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>2025-09-01T14:08:24.3461560Z         
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>2025-09-01T14:08:24.3462348Z         Error: error updating advanced cluster (test-acc-tf-c-6474566299923793398): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>2025-09-01T14:08:24.3463058Z         
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>2025-09-01T14:08:24.3463434Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>2025-09-01T14:08:24.3464121Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>2025-09-01T14:08:24.3464937Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>2025-09-01T14:08:24.3465337Z         
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>2025-09-01T14:08:24.6475279Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>2025-09-01T14:08:24.6475712Z         
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>2025-09-01T14:08:24.6478009Z         Error: error deleting advanced cluster (test-acc-tf-c-6474566299923793398): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b5a2a9172c126611872132/clusters/test-acc-tf-c-6474566299923793398 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster test-acc-tf-c-6474566299923793398 cannot be used in the Cluster API. Reason: Bad Request. Params: [test-acc-tf-c-6474566299923793398], BadRequestDetail: 
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>2025-09-01T14:08:24.6479535Z         
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>2025-09-01T14:08:24.6479882Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (1496.40s)
+</code></pre></div>
+<ul>
+<li>PASS 35 minutes</li>
+<li>PASS 37 minutes</li>
+<li>2025-09-02 PASS 55 minutes</li>
+<li>2025-09-03</li>
+</ul>
+<h3 id="error-2025-09-03t0026180000">Error 2025-09-03T00:26:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>2025-09-03T00:26:18.4103567Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>2025-09-03T00:27:34.8528423Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>2025-09-03T00:27:44.8542253Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>2025-09-03T00:27:44.8544706Z     pre_check.go:40: Time before creating cluster: 2025-09-03T00:27:44.853885274Z, ProjectID: 68b78b28a89cf4184d26f099, Cluster name: test-acc-tf-c-5599210234147744779
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>2025-09-03T00:43:51.0023466Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>2025-09-03T00:43:51.0024299Z     resource_advanced_cluster_test.go:157: Step 3/3 error: Error running apply: exit status 1
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>2025-09-03T00:43:51.0024963Z         
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>2025-09-03T00:43:51.0025963Z         Error: error updating advanced cluster (test-acc-tf-c-5599210234147744779): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>2025-09-03T00:43:51.0026787Z         
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>2025-09-03T00:43:51.0027186Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>2025-09-03T00:43:51.0028071Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>2025-09-03T00:43:51.0028904Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>2025-09-03T00:43:51.0029616Z         
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>2025-09-03T00:43:51.2441402Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>2025-09-03T00:43:51.2441907Z         
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>2025-09-03T00:43:51.2444670Z         Error: error deleting advanced cluster (test-acc-tf-c-5599210234147744779): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b78b28a89cf4184d26f099/clusters/test-acc-tf-c-5599210234147744779 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster test-acc-tf-c-5599210234147744779 cannot be used in the Cluster API. Reason: Bad Request. Params: [test-acc-tf-c-5599210234147744779], BadRequestDetail: 
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>2025-09-03T00:43:51.2446449Z         
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>2025-09-03T00:43:51.2446825Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (976.39s)
+</code></pre></div>
+<ul>
+<li>2025-09-04</li>
+</ul>
+<h3 id="error-2025-09-04t0026290000">Error 2025-09-04T00:26:29+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>2025-09-04T00:26:29.6542609Z === RUN   TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>2025-09-04T00:27:48.8146112Z === CONT  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>2025-09-04T00:28:58.7894607Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>2025-09-04T00:28:58.7896934Z     pre_check.go:40: Time before creating cluster: 2025-09-04T00:28:58.789186829Z, ProjectID: 68b8dcb3d8b60049b936d6c0, Cluster name: test-acc-tf-c-1554695614228743002
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>2025-09-04T00:53:10.6212708Z === NAME  TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>2025-09-04T00:53:10.6213559Z     resource_advanced_cluster_test.go:157: Step 3/3 error: Error running apply: exit status 1
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>2025-09-04T00:53:10.6214021Z         
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>2025-09-04T00:53:10.6214796Z         Error: error updating advanced cluster (test-acc-tf-c-1554695614228743002): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>2025-09-04T00:53:10.6215414Z         
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>2025-09-04T00:53:10.6215755Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>2025-09-04T00:53:10.6216515Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>2025-09-04T00:53:10.6217219Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>2025-09-04T00:53:10.6217637Z         
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>2025-09-04T00:53:10.8395481Z    test_name=TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade test_terraform_path=/home/runner/work/_temp/427a7b05-237d-46dc-80b1-f08d939a1e60/terraform test_working_directory=/tmp/plugintest4075298172
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>2025-09-04T00:53:10.8396671Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>2025-09-04T00:53:10.8397118Z         
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>2025-09-04T00:53:10.8399459Z         Error: error deleting advanced cluster (test-acc-tf-c-1554695614228743002): https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b8dcb3d8b60049b936d6c0/clusters/test-acc-tf-c-1554695614228743002 DELETE: HTTP 400 Bad Request (Error code: &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster test-acc-tf-c-1554695614228743002 cannot be used in the Cluster API. Reason: Bad Request. Params: [test-acc-tf-c-1554695614228743002], BadRequestDetail: 
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>2025-09-04T00:53:10.8401039Z         
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>2025-09-04T00:53:10.8401602Z --- FAIL: TestAccAdvancedCluster_basicTenant_flexUpgrade_dedicatedUpgrade (1522.04s)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,854 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccMockableAdvancedCluster_tenantUpgrade Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccmockableadvancedcluster_tenantupgrade-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccMockableAdvancedCluster_tenantUpgrade Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccmockableadvancedcluster_tenantupgrade-test-details">advanced_cluster/advancedcluster/TestAccMockableAdvancedCluster_tenantUpgrade Test Details</h1>
+<h1 id="found-36-testruns-in-dev-qa-from-2025-08-06-to-2025-09-04-from-master-branch-1-unique-tests-passx-19-failx-16-timeout">Found 36 TestRuns in dev, qa from 2025-08-06 to 2025-09-04 from master branch: 1 unique tests, PASS(x 19) FAIL(x 16) TIMEOUT</h1>
+<p>Success rate: 54.29%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-08-06t0031120000">2025-08-06 00:31</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/6892a24e2e7dcc2aaecb6865/clusters</td>
+<td>dev</td>
+<td></td>
+<td>60.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-07t0031490000">2025-08-07 00:31</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>dev</td>
+<td>flaky_check</td>
+<td>3966.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-12t0807200000">2025-08-12 08:07</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/689af63563141409ee3d8998/clusters</td>
+<td>dev</td>
+<td></td>
+<td>86.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-13t0029190000">2025-08-13 00:29</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/689bdc5c230cf52517c886ff/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>20.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-19t0028500000">2025-08-19 00:28</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/68a3c53fc1be074b83c5b98c/clusters</td>
+<td>dev</td>
+<td></td>
+<td>80.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-20t0027250000">2025-08-20 00:27</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/68a5166c552c1710e1fb279c/clusters</td>
+<td>dev</td>
+<td></td>
+<td>95.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-20t1358510000">2025-08-20 13:58</a></td>
+<td>CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API /api/atlas/v2/groups/68a5d49af98188003c9999c9/clusters</td>
+<td>qa</td>
+<td></td>
+<td>70.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-21t0027210000">2025-08-21 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>17935.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-24t0030560000">2025-08-24 00:30</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>qa</td>
+<td></td>
+<td>4026.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-25t0029120000">2025-08-25 00:29</a></td>
+<td>ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED /api/atlas/v2/groups/68abae58cd8afb23a27a63fd/clusters</td>
+<td>dev</td>
+<td></td>
+<td>88.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-26t0027390000">2025-08-26 00:27</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>dev</td>
+<td></td>
+<td>4058.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-27t0027410000">2025-08-27 00:27</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>dev</td>
+<td></td>
+<td>4133.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-28t0027310000">2025-08-28 00:27</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>dev</td>
+<td></td>
+<td>3221.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0030410000">2025-09-01 00:30</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>0.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0757390000">2025-09-01 07:57</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>dev</td>
+<td></td>
+<td>4056.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-03t0026180000">2025-09-03 00:26</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>dev</td>
+<td></td>
+<td>2617.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-04t0026290000">2025-09-04 00:26</a></td>
+<td>CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6</td>
+<td>dev</td>
+<td></td>
+<td>2434.05s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-08-05: MISSING</li>
+<li>2025-08-06</li>
+</ul>
+<h3 id="error-2025-08-06t0031120000">Error 2025-08-06T00:31:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-08-06T00:31:12.7783077Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-08-06T00:31:12.7784151Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-08-06T00:32:25.7140802Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-08-06T00:33:25.7181795Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-08-06T00:33:25.7182925Z     pre_check.go:40: Time before creating cluster: 2025-08-06T00:33:25.717928073Z, ProjectID: 6892a24e2e7dcc2aaecb6865, Cluster name: test-acc-tf-c-6379991982691082771
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-08-06T00:33:26.0607763Z    test_terraform_path=/home/runner/work/_temp/8f89a198-6402-408d-b486-e76e64814049/terraform
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-08-06T00:33:26.0608640Z     resource_advanced_cluster_test.go:168: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-08-06T00:33:26.0609360Z         
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-08-06T00:33:26.0612063Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6892a24e2e7dcc2aaecb6865/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-08-06T00:33:26.0613671Z         
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-08-06T00:33:26.0613994Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-08-06T00:33:26.0614635Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-08-06T00:33:26.0615214Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-08-06T00:33:26.0615510Z         
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-08-06T00:33:26.1088578Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (60.40s)
+</code></pre></div>
+<ul>
+<li>2025-08-07</li>
+</ul>
+<h3 id="error-2025-08-07t0031490000">Error 2025-08-07T00:31:49+00:00</h3>
+<p>GoTestErrorClassification(error_class='flaky_check',author='similar',run_id='2025-08-07T00:31:49.251000+00:00-TestAccMockableAdvancedCluster_tenantUpgrade',confidence=1.0,ts_when='28 days ago')
+CheckFailure for advanced_cluster.test at Step: 2 Checks: 1,2,3,4,5,6
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-08-07T00:31:49.2517581Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-08-07T00:31:49.2520663Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-08-07T00:35:02.1559332Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-08-07T00:36:07.1633146Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-08-07T00:36:07.1634629Z     pre_check.go:40: Time before creating cluster: 2025-08-07T00:36:07.16313991Z, ProjectID: 6893f3f09c9cc040e192f9b7, Cluster name: test-acc-tf-c-6773794599357929860
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-08-07T01:36:30.2997570Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-08-07T01:36:30.2998766Z     resource_advanced_cluster_test.go:168: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-08-07T01:36:30.3000918Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-08-07T01:36:30.3002172Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-08-07T01:36:30.3003369Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-08-07T01:36:30.3004864Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-08-07T01:36:30.3006208Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-08-07T01:36:33.0731646Z   
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-08-07T01:41:08.3237217Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (3966.17s)
+</code></pre></div></p>
+<ul>
+<li>2025-08-08 PASS 39 minutes</li>
+<li>2025-08-09 PASS 36 minutes</li>
+<li>2025-08-10 PASS 40 minutes</li>
+<li>2025-08-11 PASS an hour</li>
+<li>2025-08-12</li>
+<li>PASS 32 minutes</li>
+<li>FAIL a minute</li>
+</ul>
+<h3 id="error-2025-08-12t0807200000">Error 2025-08-12T08:07:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-08-12T08:07:20.2612082Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-08-12T08:07:20.2613264Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-08-12T08:08:38.7507161Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-08-12T08:10:04.4528238Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-08-12T08:10:04.4530321Z     pre_check.go:40: Time before creating cluster: 2025-08-12T08:10:04.45241401Z, ProjectID: 689af63563141409ee3d8998, Cluster name: test-acc-tf-c-3137509996556273173
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-08-12T08:10:04.8754290Z    test_name=TestAccMockableAdvancedCluster_tenantUpgrade test_terraform_path=/home/runner/work/_temp/1070e8a3-3614-4426-af73-0807029eac14/terraform
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-08-12T08:10:04.8755280Z     resource_advanced_cluster_test.go:168: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-08-12T08:10:04.8755988Z         
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-08-12T08:10:04.8758920Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/689af63563141409ee3d8998/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-08-12T08:10:04.8760844Z         
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-08-12T08:10:04.8761176Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-08-12T08:10:04.8761830Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-08-12T08:10:04.8762443Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-08-12T08:10:04.8762756Z         
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-08-12T08:10:04.9240332Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (86.17s)
+</code></pre></div>
+<ul>
+<li>2025-08-13</li>
+</ul>
+<h3 id="error-2025-08-13t0029190000">Error 2025-08-13T00:29:19+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-08-13T00:29:19.1993094Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-08-13T00:29:19.1994810Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-08-13T00:30:20.8465841Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-08-13T00:30:40.8497978Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-08-13T00:30:40.8500140Z     pre_check.go:40: Time before creating cluster: 2025-08-13T00:30:40.84948968Z, ProjectID: 689bdc5c230cf52517c886ff, Cluster name: test-acc-tf-c-407494987129614087
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-08-13T00:30:41.2010711Z    test_terraform_path=/home/runner/work/_temp/169965c2-2bae-4fea-b86d-bc5bf6601a84/terraform test_working_directory=/tmp/plugintest2363184387 test_name=TestAccMockableAdvancedCluster_tenantUpgrade test_step_number=1
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-08-13T00:30:41.2012013Z     resource_advanced_cluster_test.go:168: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-08-13T00:30:41.2012527Z         
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-08-13T00:30:41.2015725Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/689bdc5c230cf52517c886ff/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-08-13T00:30:41.2017308Z         
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-08-13T00:30:41.2017627Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-08-13T00:30:41.2018252Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-08-13T00:30:41.2018836Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-08-13T00:30:41.2019135Z         
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-08-13T00:30:41.2462367Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (20.40s)
+</code></pre></div>
+<ul>
+<li>2025-08-14 PASS 36 minutes</li>
+<li>2025-08-15: MISSING</li>
+<li>2025-08-16 PASS an hour</li>
+<li>2025-08-17 PASS 47 minutes</li>
+<li>2025-08-18 PASS 33 minutes</li>
+<li>2025-08-19</li>
+</ul>
+<h3 id="error-2025-08-19t0028500000">Error 2025-08-19T00:28:50+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-08-19T00:28:50.7129768Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-08-19T00:28:50.7130992Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-08-19T00:29:44.1762811Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-08-19T00:31:04.1425535Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-08-19T00:31:04.1428248Z     pre_check.go:40: Time before creating cluster: 2025-08-19T00:31:04.14224436Z, ProjectID: 68a3c53fc1be074b83c5b98c, Cluster name: test-acc-tf-c-3523111903552908535
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-08-19T00:31:04.5086589Z    test_name=TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-08-19T00:31:04.5087784Z     resource_advanced_cluster_test.go:168: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-08-19T00:31:04.5088203Z         
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-08-19T00:31:04.5091090Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a3c53fc1be074b83c5b98c/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-08-19T00:31:04.5092687Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-08-19T00:31:04.5093016Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-08-19T00:31:04.5093660Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-08-19T00:31:04.5094237Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-08-19T00:31:04.5094536Z         
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-08-19T00:31:04.5508991Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (80.39s)
+</code></pre></div>
+<ul>
+<li>2025-08-20</li>
+<li>FAIL a minute</li>
+</ul>
+<h3 id="error-2025-08-20t0027250000">Error 2025-08-20T00:27:25+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-08-20T00:27:25.8139912Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-08-20T00:27:25.8141333Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-08-20T00:28:29.0404650Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-08-20T00:30:04.0393843Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-08-20T00:30:04.0396167Z     pre_check.go:40: Time before creating cluster: 2025-08-20T00:30:04.039068748Z, ProjectID: 68a5166c552c1710e1fb279c, Cluster name: test-acc-tf-c-2069194349288963450
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-08-20T00:30:04.4409651Z    test_name=TestAccMockableAdvancedCluster_tenantUpgrade test_terraform_path=/home/runner/work/_temp/3ecf3243-c170-407b-a20d-8f7a7a535dc8/terraform test_working_directory=/tmp/plugintest1841194550
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-08-20T00:30:04.4411021Z     resource_advanced_cluster_test.go:168: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-08-20T00:30:04.4411477Z         
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-08-20T00:30:04.4414221Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a5166c552c1710e1fb279c/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-08-20T00:30:04.4416334Z         
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-08-20T00:30:04.4416671Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-08-20T00:30:04.4417309Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-08-20T00:30:04.4417902Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-08-20T00:30:04.4418202Z         
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-08-20T00:30:04.4830851Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (95.46s)
+</code></pre></div>
+<ul>
+<li>FAIL a minute</li>
+</ul>
+<h3 id="error-2025-08-20t1358510000">Error 2025-08-20T13:58:51+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-08-20T13:58:51.8636474Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-08-20T13:58:51.8637984Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-08-20T14:00:09.6456360Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-08-20T14:01:19.6391615Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-08-20T14:01:19.6393057Z     pre_check.go:40: Time before creating cluster: 2025-08-20T14:01:19.638853046Z, ProjectID: 68a5d49af98188003c9999c9, Cluster name: test-acc-tf-c-4305469167143403699
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-08-20T14:01:19.9594649Z    test_working_directory=/tmp/plugintest692814980 test_step_number=1
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-08-20T14:01:19.9595693Z     resource_advanced_cluster_test.go:168: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-08-20T14:01:19.9596368Z         
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-08-20T14:01:19.9600399Z         Error: error creating advanced cluster: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68a5d49af98188003c9999c9/clusters POST: HTTP 400 Bad Request (Error code: &quot;CANNOT_CREATE_FREE_CLUSTER_VIA_PUBLIC_API&quot;) Detail: Cannot create a cluster with instance size M0 via the public api: This project has reached the limit for the number of free clusters. Reason: Bad Request. Params: [This project has reached the limit for the number of free clusters], BadRequestDetail: 
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-08-20T14:01:19.9603426Z         
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-08-20T14:01:19.9603968Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-08-20T14:01:19.9605050Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-08-20T14:01:19.9606059Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-08-20T14:01:19.9606562Z         
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-08-20T14:01:20.0174529Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (70.38s)
+</code></pre></div>
+<ul>
+<li>2025-08-21</li>
+</ul>
+<h3 id="error-2025-08-21t0027210000">Error 2025-08-21T00:27:21+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-08-21T00:27:21.2320140Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-08-21T00:27:21.2321441Z     resource_advanced_cluster_test.go:168: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-08-21T00:28:16.0645265Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-08-21T00:29:16.0358943Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-08-21T00:29:16.0360656Z     pre_check.go:40: Time before creating cluster: 2025-08-21T00:29:16.035536034Z, ProjectID: 68a667e60ed8ff152ac7ecb0, Cluster name: test-acc-tf-c-3276941678344236643
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-08-21T03:32:29.5129530Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-08-21T03:32:29.5130349Z     resource_advanced_cluster_test.go:168: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-08-21T03:32:29.5130974Z         
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-08-21T03:32:29.5131984Z         Error: error updating advanced cluster (test-acc-tf-c-3276941678344236643): timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-08-21T03:32:29.5132749Z         
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-08-21T03:32:29.5133199Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-08-21T03:32:29.5134028Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-08-21T03:32:29.5134872Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-08-21T03:32:29.5135203Z         
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-08-21T03:32:33.3345751Z    test_terraform_path=/home/runner/work/_temp/c6e6ff24-2805-43b7-823c-d13bd22bdc44/terraform test_working_directory=/tmp/plugintest3531995527 test_step_number=2 test_name=TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-08-21T05:27:10.6082491Z panic: test timed out after 5h0m0s
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-08-21T05:27:10.6083105Z    running tests:
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-08-21T05:27:10.6083787Z        TestAccMockableAdvancedCluster_tenantUpgrade (4h58m55s)
+</code></pre></div>
+<ul>
+<li>2025-08-22: MISSING</li>
+<li>2025-08-23 PASS 39 minutes</li>
+<li>2025-08-24</li>
+</ul>
+<h3 id="error-2025-08-24t0030560000">Error 2025-08-24T00:30:56+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-08-24T00:30:56.3152342Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-08-24T00:30:58.3526596Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-08-24T00:32:02.0859793Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-08-24T00:33:07.0063593Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-08-24T00:33:07.0064781Z     pre_check.go:40: Time before creating cluster: 2025-08-24T00:33:07.006107398Z, ProjectID: 68aa5d409bbb8c4ee1f838a0, Cluster name: test-acc-tf-c-6598084478227700817
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-08-24T01:38:05.8864226Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-08-24T01:38:05.8865327Z     resource_advanced_cluster_test.go:169: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-08-24T01:38:05.8866943Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-08-24T01:38:05.8868824Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-08-24T01:38:05.8870683Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-08-24T01:38:05.8872299Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-08-24T01:38:05.8873801Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-08-24T01:39:06.5386853Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (4026.56s)
+</code></pre></div>
+<ul>
+<li>2025-08-25</li>
+</ul>
+<h3 id="error-2025-08-25t0029120000">Error 2025-08-25T00:29:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-08-25T00:29:12.8942374Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-08-25T00:29:15.8245709Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-08-25T00:30:27.1654366Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-08-25T00:31:52.1378930Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-08-25T00:31:52.1380597Z     pre_check.go:40: Time before creating cluster: 2025-08-25T00:31:52.137584972Z, ProjectID: 68abae58cd8afb23a27a63fd, Cluster name: test-acc-tf-c-3426161381896876610
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-08-25T00:31:53.1325276Z   
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-08-25T00:31:53.1325898Z     resource_advanced_cluster_test.go:169: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-08-25T00:31:53.1326320Z         
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-08-25T00:31:53.1328449Z         Error: error creating advanced cluster: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68abae58cd8afb23a27a63fd/clusters POST: HTTP 403 Forbidden (Error code: &quot;ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED&quot;) Detail: Invalid Configuration. Contains selections that are unavailable due to your organization&#39;s resource policies. Reason: Forbidden. Params: [], BadRequestDetail: 
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-08-25T00:31:53.1330466Z         
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-08-25T00:31:53.1330797Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-08-25T00:31:53.1331442Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-08-25T00:31:53.1332270Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-08-25T00:31:53.1332593Z         
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-08-25T00:31:53.1765115Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (88.95s)
+</code></pre></div>
+<ul>
+<li>2025-08-26</li>
+</ul>
+<h3 id="error-2025-08-26t0027390000">Error 2025-08-26T00:27:39+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-08-26T00:27:39.1158170Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-08-26T00:27:41.1801932Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-08-26T00:28:49.1697948Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-08-26T00:29:54.1639495Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-08-26T00:29:54.1641565Z     pre_check.go:40: Time before creating cluster: 2025-08-26T00:29:54.163686416Z, ProjectID: 68acff7b52781c2812d00502, Cluster name: test-acc-tf-c-4490838404529246217
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-08-26T01:34:54.8526975Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-08-26T01:34:54.8528387Z     resource_advanced_cluster_test.go:169: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-08-26T01:34:54.8530194Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-08-26T01:34:54.8531515Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-08-26T01:34:54.8532834Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-08-26T01:34:54.8534476Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-08-26T01:34:54.8535819Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-08-26T01:36:25.6498116Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (4058.55s)
+</code></pre></div>
+<ul>
+<li>2025-08-27</li>
+</ul>
+<h3 id="error-2025-08-27t0027410000">Error 2025-08-27T00:27:41+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-08-27T00:27:41.7742854Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-08-27T00:27:44.0524017Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-08-27T00:28:59.6988574Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-08-27T00:29:49.6605145Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-08-27T00:29:49.6607296Z     pre_check.go:40: Time before creating cluster: 2025-08-27T00:29:49.660204088Z, ProjectID: 68ae50fd8c9e474c785b9035, Cluster name: test-acc-tf-c-6291174628137974495
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-08-27T01:36:49.9685127Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-08-27T01:36:49.9686421Z     resource_advanced_cluster_test.go:169: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-08-27T01:36:49.9687920Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-08-27T01:36:49.9689140Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-08-27T01:36:49.9690410Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-08-27T01:36:49.9691946Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-08-27T01:36:49.9693213Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-08-27T01:37:50.6394527Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (4133.22s)
+</code></pre></div>
+<ul>
+<li>2025-08-28</li>
+</ul>
+<h3 id="error-2025-08-28t0027310000">Error 2025-08-28T00:27:31+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-08-28T00:27:31.9134090Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-08-28T00:27:33.8013198Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-08-28T00:28:33.9030040Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-08-28T00:29:48.8708632Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-08-28T00:29:48.8710329Z     pre_check.go:40: Time before creating cluster: 2025-08-28T00:29:48.870564463Z, ProjectID: 68afa27372e5d2472952fca8, Cluster name: test-acc-tf-c-720193885532770232
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-08-28T01:21:12.3672684Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-08-28T01:21:12.3674354Z     resource_advanced_cluster_test.go:169: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-08-28T01:21:12.3676465Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-08-28T01:21:12.3677796Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-08-28T01:21:12.3679120Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-08-28T01:21:12.3680737Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-08-28T01:21:12.3682072Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-08-28T01:22:13.0834541Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (3221.09s)
+</code></pre></div>
+<ul>
+<li>2025-08-29: MISSING</li>
+<li>2025-08-30 PASS 36 minutes</li>
+<li>2025-08-31 PASS 29 minutes</li>
+<li>2025-09-01</li>
+<li>FAIL a moment</li>
+</ul>
+<h3 id="error-2025-09-01t0030410000">Error 2025-09-01T00:30:41+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-09-01T00:30:41.5981299Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-09-01T00:30:41.7207625Z     shared_resource.go:93: 
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-09-01T00:30:41.7209870Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:22
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-09-01T00:30:41.7213673Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:93
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-09-01T00:30:41.7216080Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:212
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-09-01T00:30:41.7218108Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:92
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-09-01T00:30:41.7220425Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/advancedcluster/resource_advanced_cluster_test.go:166
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-09-01T00:30:41.7221839Z                                        /opt/hostedtoolcache/go/1.24.6/x64/src/runtime/asm_amd64.s:1700
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-09-01T00:30:41.7222377Z            Error:          Received unexpected error:
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-09-01T00:30:41.7225548Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-09-01T00:30:41.7226883Z            Test:           TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-09-01T00:30:41.7229165Z            Messages:       Project creation failed: test-acc-tf-p-8924450026832631059, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2025-09-01T00:30:41.7230645Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (0.12s)
+</code></pre></div>
+<ul>
+<li>PASS 39 minutes</li>
+<li>FAIL an hour</li>
+</ul>
+<h3 id="error-2025-09-01t0757390000">Error 2025-09-01T07:57:39+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2025-09-01T07:57:39.2817027Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2025-09-01T07:57:41.4086745Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2025-09-01T07:59:40.0936155Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2025-09-01T08:01:10.0593828Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2025-09-01T08:01:10.0595529Z     pre_check.go:40: Time before creating cluster: 2025-09-01T08:01:10.059097256Z, ProjectID: 68b551f3e551ff23b4097438, Cluster name: test-acc-tf-c-5375144219216176422
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2025-09-01T09:02:19.9909699Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2025-09-01T09:02:19.9911118Z     resource_advanced_cluster_test.go:169: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2025-09-01T09:02:19.9912932Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2025-09-01T09:02:19.9914207Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2025-09-01T09:02:19.9915475Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2025-09-01T09:02:19.9917082Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2025-09-01T09:02:19.9918430Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2025-09-01T09:05:02.0878136Z 2025/09/01 09:05:02 error setting `oplog_size_mb` for MongoDB Cluster (): 0
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2025-09-01T09:07:13.9857769Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (4056.06s)
+</code></pre></div>
+<ul>
+<li>PASS 35 minutes</li>
+<li>PASS 34 minutes</li>
+<li>PASS 42 minutes</li>
+<li>PASS 25 minutes</li>
+<li>PASS 29 minutes</li>
+<li>2025-09-02 PASS 37 minutes</li>
+<li>2025-09-03</li>
+</ul>
+<h3 id="error-2025-09-03t0026180000">Error 2025-09-03T00:26:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2025-09-03T00:26:18.4106065Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2025-09-03T00:26:19.8994020Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2025-09-03T00:27:34.8677957Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2025-09-03T00:28:49.8620517Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2025-09-03T00:28:49.8622520Z     pre_check.go:40: Time before creating cluster: 2025-09-03T00:28:49.861689382Z, ProjectID: 68b78b2aa89cf4184d27026c, Cluster name: test-acc-tf-c-2004844932621161400
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2025-09-03T01:05:38.6095548Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2025-09-03T01:05:38.6097039Z     resource_advanced_cluster_test.go:169: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2025-09-03T01:05:38.6098632Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2025-09-03T01:05:38.6100165Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2025-09-03T01:05:38.6101572Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2025-09-03T01:05:38.6102923Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2025-09-03T01:05:38.6104204Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>2025-09-03T01:05:39.8967056Z 2025/09/03 01:05:39 error setting `oplog_size_mb` for MongoDB Cluster (): 0
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>2025-09-03T01:11:11.1765232Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (2617.80s)
+</code></pre></div>
+<ul>
+<li>2025-09-04</li>
+</ul>
+<h3 id="error-2025-09-04t0026290000">Error 2025-09-04T00:26:29+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2025-09-04T00:26:29.6545397Z === RUN   TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2025-09-04T00:26:32.1407452Z     resource_advanced_cluster_test.go:169: Neither HTTP_MOCKER_CAPTURE nor HTTP_MOCKER_REPLAY is set, running test case without modifications
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2025-09-04T00:27:48.8144600Z === CONT  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2025-09-04T00:28:48.7885314Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2025-09-04T00:28:48.7886967Z     pre_check.go:40: Time before creating cluster: 2025-09-04T00:28:48.788020509Z, ProjectID: 68b8dcb5ef2c35484d65b4c3, Cluster name: test-acc-tf-c-7844548682256176548
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2025-09-04T01:06:09.5684064Z === NAME  TestAccMockableAdvancedCluster_tenantUpgrade
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2025-09-04T01:06:09.5686140Z     resource_advanced_cluster_test.go:169: Step 2/3 error: Check failed: Check 1/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2025-09-04T01:06:09.5688829Z         Check 2/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>2025-09-04T01:06:09.5691251Z         Check 3/8 error: mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>2025-09-04T01:06:09.5693832Z         Check 4/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.node_count&#39; expected &quot;3&quot;, got &quot;0&quot;
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>2025-09-04T01:06:09.5696276Z         Check 5/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.electable_specs.0.instance_size&#39; expected &quot;M10&quot;, got &quot;M0&quot;
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>2025-09-04T01:06:09.5698651Z         Check 6/8 error: data.mongodbatlas_advanced_cluster.test: Attribute &#39;replication_specs.0.region_configs.0.provider_name&#39; expected &quot;AWS&quot;, got &quot;TENANT&quot;
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>2025-09-04T01:08:20.8601786Z --- FAIL: TestAccMockableAdvancedCluster_tenantUpgrade (2434.55s)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

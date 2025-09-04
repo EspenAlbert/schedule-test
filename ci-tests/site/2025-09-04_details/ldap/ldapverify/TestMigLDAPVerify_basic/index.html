@@ -1,0 +1,599 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>ldap/ldapverify/TestMigLDAPVerify_basic Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ldapldapverifytestmigldapverify_basic-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ldap/ldapverify/TestMigLDAPVerify_basic Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ldapldapverifytestmigldapverify_basic-test-details">ldap/ldapverify/TestMigLDAPVerify_basic Test Details</h1>
+<h1 id="found-38-testruns-in-dev-qa-from-2025-08-06-to-2025-09-04-from-master-branch-1-unique-tests-passx-35-failx-3">Found 38 TestRuns in dev, qa from 2025-08-06 to 2025-09-04 from master branch: 1 unique tests, PASS(x 35) FAIL(x 3)</h1>
+<p>Success rate: 92.11%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-08-20t0100170000">2025-08-20 01:00</a></td>
+<td></td>
+<td>dev</td>
+<td>flaky_client</td>
+<td>318.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0030220000">2025-09-01 00:30</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>0.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0721330000">2025-09-01 07:21</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>3603.09s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-08-05: MISSING</li>
+<li>2025-08-06 PASS 14 minutes</li>
+<li>2025-08-07 PASS 16 minutes</li>
+<li>2025-08-08 PASS 15 minutes</li>
+<li>2025-08-09 PASS 15 minutes</li>
+<li>2025-08-10 PASS 20 minutes</li>
+<li>2025-08-11 PASS 31 minutes</li>
+<li>2025-08-12 PASS 14 minutes</li>
+<li>2025-08-13 PASS 15 minutes</li>
+<li>2025-08-14 PASS 13 minutes</li>
+<li>2025-08-15 PASS 11 minutes</li>
+<li>2025-08-16 PASS 37 minutes</li>
+<li>2025-08-17 PASS 24 minutes</li>
+<li>2025-08-18 PASS 14 minutes</li>
+<li>2025-08-19 PASS 14 minutes</li>
+<li>2025-08-20</li>
+<li>FAIL 5 minutes</li>
+</ul>
+<h3 id="error-2025-08-20t0100170000">Error 2025-08-20T01:00:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-08-20T01:00:17.0177309Z === RUN   TestMigLDAPVerify_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-08-20T01:00:17.0179539Z     resource_ldap_verify_migration_test.go:10: Creating execution project: test-acc-tf-p-8294552845777601007
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-08-20T01:00:17.0181137Z     resource_ldap_verify_migration_test.go:10: Creating execution cluster: test-acc-tf-c-6412828381987224492
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-08-20T01:00:17.0182200Z 2025/08/20 00:27:01 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-08-20T01:00:17.0182971Z 2025/08/20 00:30:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-08-20T01:00:17.0183744Z 2025/08/20 00:31:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-08-20T01:00:17.0184487Z 2025/08/20 00:31:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-08-20T01:00:17.0185589Z     resource_ldap_verify_migration_test.go:10: 
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-08-20T01:00:17.0187407Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:48
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-08-20T01:00:17.0190731Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:123
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-08-20T01:00:17.0194450Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_test.go:68
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-08-20T01:00:17.0198863Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_migration_test.go:10
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-08-20T01:00:17.0200438Z            Error:          Received unexpected error:
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-08-20T01:00:17.0203576Z                            Get &quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a51652552c1710e1fa78f9/clusters/test-acc-tf-c-6412828381987224492&quot;: dial tcp: lookup cloud-dev.mongodb.com: i/o timeout
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-08-20T01:00:17.0205408Z            Test:           TestMigLDAPVerify_basic
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-08-20T01:00:17.0208278Z            Messages:       Cluster creation failed: test-acc-tf-c-6412828381987224492, err: Get &quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a51652552c1710e1fa78f9/clusters/test-acc-tf-c-6412828381987224492&quot;: dial tcp: lookup cloud-dev.mongodb.com: i/o timeout
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-08-20T01:00:17.0210257Z --- FAIL: TestMigLDAPVerify_basic (318.70s)
+</code></pre></div>
+<ul>
+<li>PASS 17 minutes</li>
+<li>2025-08-21 PASS 13 minutes</li>
+<li>2025-08-22 PASS 11 minutes</li>
+<li>2025-08-23 PASS 14 minutes</li>
+<li>2025-08-24 PASS 12 minutes</li>
+<li>2025-08-25 PASS 13 minutes</li>
+<li>2025-08-26 PASS 18 minutes</li>
+<li>2025-08-27 PASS 28 minutes</li>
+<li>2025-08-28 PASS 14 minutes</li>
+<li>2025-08-29 PASS 23 minutes</li>
+<li>2025-08-30 PASS 13 minutes</li>
+<li>2025-08-31 PASS 13 minutes</li>
+<li>2025-09-01</li>
+<li>FAIL a moment</li>
+</ul>
+<h3 id="error-2025-09-01t0030220000">Error 2025-09-01T00:30:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-09-01T00:30:22.1705959Z === RUN   TestMigLDAPVerify_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-09-01T00:30:22.1708340Z     resource_ldap_verify_migration_test.go:10: Creating execution project: test-acc-tf-p-3109280175467170684
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-09-01T00:30:22.1709947Z     resource_ldap_verify_migration_test.go:10: 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-09-01T00:30:22.1712171Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:22
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-09-01T00:30:22.1716149Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:77
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-09-01T00:30:22.1720248Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:120
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-09-01T00:30:22.1724566Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_test.go:68
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-09-01T00:30:22.1729307Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_migration_test.go:10
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-09-01T00:30:22.1732207Z                                        /opt/hostedtoolcache/go/1.24.6/x64/src/runtime/asm_amd64.s:1700
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-09-01T00:30:22.1733456Z            Error:          Received unexpected error:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-09-01T00:30:22.1739623Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-09-01T00:30:22.1742218Z            Test:           TestMigLDAPVerify_basic
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-09-01T00:30:22.1746543Z            Messages:       Project creation failed: test-acc-tf-p-3109280175467170684, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-09-01T00:30:22.1749657Z --- FAIL: TestMigLDAPVerify_basic (0.21s)
+</code></pre></div>
+<ul>
+<li>FAIL an hour</li>
+</ul>
+<h3 id="error-2025-09-01t0721330000">Error 2025-09-01T07:21:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-09-01T07:21:33.7497777Z === RUN   TestMigLDAPVerify_basic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-09-01T07:21:33.7499242Z     resource_ldap_verify_migration_test.go:10: Creating execution project: test-acc-tf-p-3713056826462535998
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-09-01T07:21:33.7500882Z     resource_ldap_verify_migration_test.go:10: Creating execution cluster: test-acc-tf-c-4281678521184732406
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-09-01T07:21:33.7502059Z 2025/09/01 05:58:14 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-09-01T07:21:33.7502881Z 2025/09/01 06:01:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-09-01T07:21:33.7503669Z 2025/09/01 06:02:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-09-01T07:21:33.7504443Z 2025/09/01 06:02:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-09-01T07:21:33.7505418Z 2025/09/01 06:03:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-09-01T07:21:33.7506192Z 2025/09/01 06:03:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-09-01T07:21:33.7506992Z 2025/09/01 06:04:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-09-01T07:21:33.7508124Z 2025/09/01 06:04:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-09-01T07:21:33.7508901Z 2025/09/01 06:05:45 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-09-01T07:21:33.7509685Z 2025/09/01 06:05:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-09-01T07:21:33.7510443Z 2025/09/01 06:06:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-09-01T07:21:33.7511204Z 2025/09/01 06:07:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-09-01T07:21:33.7511949Z 2025/09/01 06:08:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-09-01T07:21:33.7512699Z 2025/09/01 06:08:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-09-01T07:21:33.7513446Z 2025/09/01 06:09:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-09-01T07:21:33.7514194Z 2025/09/01 06:09:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2025-09-01T07:21:33.7515148Z 2025/09/01 06:10:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2025-09-01T07:21:33.7515952Z 2025/09/01 06:10:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>2025-09-01T07:21:33.7516728Z 2025/09/01 06:11:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>2025-09-01T07:21:33.7517493Z 2025/09/01 06:11:47 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>2025-09-01T07:21:33.7518249Z 2025/09/01 06:12:48 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>2025-09-01T07:21:33.7519006Z 2025/09/01 06:12:58 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>2025-09-01T07:21:33.7519755Z 2025/09/01 06:13:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>2025-09-01T07:21:33.7520507Z 2025/09/01 06:14:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>2025-09-01T07:21:33.7521258Z 2025/09/01 06:15:08 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>2025-09-01T07:21:33.7522009Z 2025/09/01 06:15:18 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>2025-09-01T07:21:33.7523342Z 2025/09/01 06:16:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>2025-09-01T07:21:33.7524131Z 2025/09/01 06:16:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>2025-09-01T07:21:33.7525129Z 2025/09/01 06:17:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>2025-09-01T07:21:33.7525876Z 2025/09/01 06:17:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>2025-09-01T07:21:33.7526629Z 2025/09/01 06:18:39 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>2025-09-01T07:21:33.7527377Z 2025/09/01 06:18:49 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>2025-09-01T07:21:33.7528126Z 2025/09/01 06:19:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>2025-09-01T07:21:33.7528910Z 2025/09/01 06:20:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>2025-09-01T07:21:33.7529651Z 2025/09/01 06:21:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>2025-09-01T07:21:33.7530389Z 2025/09/01 06:21:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>2025-09-01T07:21:33.7531122Z 2025/09/01 06:22:10 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>2025-09-01T07:21:33.7531873Z 2025/09/01 06:22:20 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>2025-09-01T07:21:33.7533004Z 2025/09/01 06:23:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>2025-09-01T07:21:33.7533801Z 2025/09/01 06:23:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>2025-09-01T07:21:33.7534908Z 2025/09/01 06:24:31 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>2025-09-01T07:21:33.7535712Z 2025/09/01 06:24:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>2025-09-01T07:21:33.7536720Z 2025/09/01 06:25:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>2025-09-01T07:21:33.7537495Z 2025/09/01 06:25:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>2025-09-01T07:21:33.7538261Z 2025/09/01 06:26:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>2025-09-01T07:21:33.7539016Z 2025/09/01 06:27:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>2025-09-01T07:21:33.7539775Z 2025/09/01 06:28:02 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>2025-09-01T07:21:33.7540517Z 2025/09/01 06:28:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>2025-09-01T07:21:33.7541264Z 2025/09/01 06:29:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>2025-09-01T07:21:33.7542006Z 2025/09/01 06:29:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>2025-09-01T07:21:33.7542748Z 2025/09/01 06:30:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>2025-09-01T07:21:33.7543487Z 2025/09/01 06:30:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>2025-09-01T07:21:33.7544236Z 2025/09/01 06:31:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>2025-09-01T07:21:33.7545155Z 2025/09/01 06:31:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>2025-09-01T07:21:33.7545897Z 2025/09/01 06:32:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>2025-09-01T07:21:33.7546792Z 2025/09/01 06:32:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>2025-09-01T07:21:33.7547523Z 2025/09/01 06:33:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>2025-09-01T07:21:33.7548266Z 2025/09/01 06:34:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>2025-09-01T07:21:33.7549017Z 2025/09/01 06:35:04 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>2025-09-01T07:21:33.7549762Z 2025/09/01 06:35:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>2025-09-01T07:21:33.7550515Z 2025/09/01 06:36:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>2025-09-01T07:21:33.7551256Z 2025/09/01 06:36:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>2025-09-01T07:21:33.7552003Z 2025/09/01 06:37:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>2025-09-01T07:21:33.7552744Z 2025/09/01 06:37:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>2025-09-01T07:21:33.7553485Z 2025/09/01 06:38:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>2025-09-01T07:21:33.7554223Z 2025/09/01 06:38:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>2025-09-01T07:21:33.7555148Z 2025/09/01 06:39:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>2025-09-01T07:21:33.7555916Z 2025/09/01 06:39:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>2025-09-01T07:21:33.7556661Z 2025/09/01 06:40:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>2025-09-01T07:21:33.7557406Z 2025/09/01 06:41:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>2025-09-01T07:21:33.7558144Z 2025/09/01 06:42:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>2025-09-01T07:21:33.7558879Z 2025/09/01 06:42:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>2025-09-01T07:21:33.7559622Z 2025/09/01 06:43:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>2025-09-01T07:21:33.7560360Z 2025/09/01 06:43:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>2025-09-01T07:21:33.7561108Z 2025/09/01 06:44:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>2025-09-01T07:21:33.7561855Z 2025/09/01 06:44:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>2025-09-01T07:21:33.7562597Z 2025/09/01 06:45:38 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>2025-09-01T07:21:33.7563336Z 2025/09/01 06:45:48 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>2025-09-01T07:21:33.7564077Z 2025/09/01 06:46:48 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>2025-09-01T07:21:33.7565002Z 2025/09/01 06:46:58 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>2025-09-01T07:21:33.7565748Z 2025/09/01 06:47:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>2025-09-01T07:21:33.7566488Z 2025/09/01 06:48:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>2025-09-01T07:21:33.7567225Z 2025/09/01 06:49:09 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>2025-09-01T07:21:33.7567960Z 2025/09/01 06:49:19 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>2025-09-01T07:21:33.7568704Z 2025/09/01 06:50:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>2025-09-01T07:21:33.7569442Z 2025/09/01 06:50:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>2025-09-01T07:21:33.7570190Z 2025/09/01 06:51:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a>2025-09-01T07:21:33.7570927Z 2025/09/01 06:51:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a>2025-09-01T07:21:33.7571665Z 2025/09/01 06:52:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a>2025-09-01T07:21:33.7572416Z 2025/09/01 06:52:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a>2025-09-01T07:21:33.7573340Z 2025/09/01 06:53:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a>2025-09-01T07:21:33.7574102Z 2025/09/01 06:54:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a>2025-09-01T07:21:33.7575017Z 2025/09/01 06:55:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a>2025-09-01T07:21:33.7575787Z 2025/09/01 06:55:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a>2025-09-01T07:21:33.7576552Z 2025/09/01 06:56:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-99" name="__codelineno-2-99" href="#__codelineno-2-99"></a>2025-09-01T07:21:33.7577302Z 2025/09/01 06:56:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-100" name="__codelineno-2-100" href="#__codelineno-2-100"></a>2025-09-01T07:21:33.7578051Z 2025/09/01 06:57:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-101" name="__codelineno-2-101" href="#__codelineno-2-101"></a>2025-09-01T07:21:33.7578798Z 2025/09/01 06:57:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-102" name="__codelineno-2-102" href="#__codelineno-2-102"></a>2025-09-01T07:21:33.7579584Z 2025/09/01 06:58:14 [WARN] WaitForState timeout after 1h0m0s
+<a id="__codelineno-2-103" name="__codelineno-2-103" href="#__codelineno-2-103"></a>2025-09-01T07:21:33.7580461Z 2025/09/01 06:58:14 [WARN] WaitForState starting 30s refresh grace period
+<a id="__codelineno-2-104" name="__codelineno-2-104" href="#__codelineno-2-104"></a>2025-09-01T07:21:33.7581402Z     resource_ldap_verify_migration_test.go:10: 
+<a id="__codelineno-2-105" name="__codelineno-2-105" href="#__codelineno-2-105"></a>2025-09-01T07:21:33.7583418Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:48
+<a id="__codelineno-2-106" name="__codelineno-2-106" href="#__codelineno-2-106"></a>2025-09-01T07:21:33.7587279Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:130
+<a id="__codelineno-2-107" name="__codelineno-2-107" href="#__codelineno-2-107"></a>2025-09-01T07:21:33.7591126Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_test.go:68
+<a id="__codelineno-2-108" name="__codelineno-2-108" href="#__codelineno-2-108"></a>2025-09-01T07:21:33.7595346Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_migration_test.go:10
+<a id="__codelineno-2-109" name="__codelineno-2-109" href="#__codelineno-2-109"></a>2025-09-01T07:21:33.7597035Z            Error:          Received unexpected error:
+<a id="__codelineno-2-110" name="__codelineno-2-110" href="#__codelineno-2-110"></a>2025-09-01T07:21:33.7598920Z                            timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 1h0m0s)
+<a id="__codelineno-2-111" name="__codelineno-2-111" href="#__codelineno-2-111"></a>2025-09-01T07:21:33.7600018Z            Test:           TestMigLDAPVerify_basic
+<a id="__codelineno-2-112" name="__codelineno-2-112" href="#__codelineno-2-112"></a>2025-09-01T07:21:33.7602085Z            Messages:       Cluster creation failed: test-acc-tf-c-4281678521184732406, err: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 1h0m0s)
+<a id="__codelineno-2-113" name="__codelineno-2-113" href="#__codelineno-2-113"></a>2025-09-01T07:21:33.7603504Z --- FAIL: TestMigLDAPVerify_basic (3603.86s)
+</code></pre></div>
+<ul>
+<li>PASS 21 minutes</li>
+<li>PASS 14 minutes</li>
+<li>PASS 14 minutes</li>
+<li>PASS 11 minutes</li>
+<li>PASS 14 minutes</li>
+<li>PASS 14 minutes</li>
+<li>2025-09-02 PASS 15 minutes</li>
+<li>2025-09-03 PASS 20 minutes</li>
+<li>2025-09-04 PASS 14 minutes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

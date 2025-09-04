@@ -1,0 +1,636 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>search_index/searchindex/TestAccSearchIndex_withSearchType Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#search_indexsearchindextestaccsearchindex_withsearchtype-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              search_index/searchindex/TestAccSearchIndex_withSearchType Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="search_indexsearchindextestaccsearchindex_withsearchtype-test-details">search_index/searchindex/TestAccSearchIndex_withSearchType Test Details</h1>
+<h1 id="found-38-testruns-in-dev-qa-from-2025-08-06-to-2025-09-04-from-master-branch-1-unique-tests-passx-33-failx-5">Found 38 TestRuns in dev, qa from 2025-08-06 to 2025-09-04 from master branch: 1 unique tests, PASS(x 33) FAIL(x 5)</h1>
+<p>Success rate: 86.84%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-08-23t0052420000">2025-08-23 00:52</a></td>
+<td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/68a90abdad47257586c1b441/clusters/test-acc-tf-c-7034909334575573742/search/indexes</td>
+<td>dev</td>
+<td></td>
+<td>4.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-25t0056060000">2025-08-25 00:56</a></td>
+<td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/68abae4116afe76254e7d22d/clusters/test-acc-tf-c-8912540277759118768/search/indexes</td>
+<td>dev</td>
+<td></td>
+<td>3.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-28t0052100000">2025-08-28 00:52</a></td>
+<td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/68afa26272e5d24729529738/clusters/test-acc-tf-c-7583358268424389764/search/indexes</td>
+<td>dev</td>
+<td></td>
+<td>4.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0330190000">2025-09-01 03:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>3600.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0830140000">2025-09-01 08:30</a></td>
+<td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/68b551d57af6b0372e9a25c6/clusters/test-acc-tf-c-1264585706881872893/search/indexes</td>
+<td>dev</td>
+<td></td>
+<td>4.08s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-08-05: MISSING</li>
+<li>2025-08-06 PASS 7 seconds</li>
+<li>2025-08-07 PASS 52 seconds</li>
+<li>2025-08-08 PASS 7 seconds</li>
+<li>2025-08-09 PASS 6 seconds</li>
+<li>2025-08-10 PASS 5 seconds</li>
+<li>2025-08-11 PASS 6 seconds</li>
+<li>2025-08-12 PASS 7 seconds</li>
+<li>2025-08-13 PASS 7 seconds</li>
+<li>2025-08-14 PASS 7 seconds</li>
+<li>2025-08-15 PASS 6 seconds</li>
+<li>2025-08-16 PASS 6 seconds</li>
+<li>2025-08-17 PASS 7 seconds</li>
+<li>2025-08-18 PASS 7 seconds</li>
+<li>2025-08-19 PASS 10 seconds</li>
+<li>2025-08-20</li>
+<li>PASS 7 seconds</li>
+<li>PASS 6 seconds</li>
+<li>2025-08-21 PASS 8 seconds</li>
+<li>2025-08-22 PASS 5 seconds</li>
+<li>2025-08-23</li>
+</ul>
+<h3 id="error-2025-08-23t0052420000">Error 2025-08-23T00:52:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-08-23T00:52:42.2161792Z === RUN   TestAccSearchIndex_withSearchType
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-08-23T00:52:42.2181054Z === CONT  TestAccSearchIndex_withSearchType
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-08-23T00:52:46.7161232Z === NAME  TestAccSearchIndex_withSearchType
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-08-23T00:52:46.7162159Z     resource_search_index_test.go:24: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-08-23T00:52:46.7163101Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-08-23T00:52:46.7166843Z         Error: error creating index: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a90abdad47257586c1b441/clusters/test-acc-tf-c-7034909334575573742/search/indexes POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;) Detail: Collection listingsAndReviews was not found. Reason: Bad Request. Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-08-23T00:52:46.7169207Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-08-23T00:52:46.7169738Z           with mongodbatlas_search_index.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-08-23T00:52:46.7170829Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-08-23T00:52:46.7171831Z           12:      resource &quot;mongodbatlas_search_index&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-08-23T00:52:46.7172350Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-08-23T00:52:46.7626608Z --- FAIL: TestAccSearchIndex_withSearchType (4.55s)
+</code></pre></div>
+<ul>
+<li>2025-08-24 PASS 7 seconds</li>
+<li>2025-08-25</li>
+</ul>
+<h3 id="error-2025-08-25t0056060000">Error 2025-08-25T00:56:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-08-25T00:56:06.3216151Z === RUN   TestAccSearchIndex_withSearchType
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-08-25T00:56:06.3366585Z === CONT  TestAccSearchIndex_withSearchType
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-08-25T00:56:09.5269184Z === NAME  TestAccSearchIndex_withSearchType
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-08-25T00:56:09.5269850Z     resource_search_index_test.go:24: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-08-25T00:56:09.5270384Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-08-25T00:56:09.5272614Z         Error: error creating index: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68abae4116afe76254e7d22d/clusters/test-acc-tf-c-8912540277759118768/search/indexes POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;) Detail: Collection listingsAndReviews was not found. Reason: Bad Request. Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-08-25T00:56:09.5275186Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-08-25T00:56:09.5275694Z           with mongodbatlas_search_index.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-08-25T00:56:09.5276551Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-08-25T00:56:09.5277337Z           12:      resource &quot;mongodbatlas_search_index&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-08-25T00:56:09.5277638Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-08-25T00:56:09.5731977Z --- FAIL: TestAccSearchIndex_withSearchType (3.25s)
+</code></pre></div>
+<ul>
+<li>2025-08-26 PASS 7 seconds</li>
+<li>2025-08-27 PASS 5 seconds</li>
+<li>2025-08-28</li>
+</ul>
+<h3 id="error-2025-08-28t0052100000">Error 2025-08-28T00:52:10+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-08-28T00:52:10.3734181Z === RUN   TestAccSearchIndex_withSearchType
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-08-28T00:52:10.3776278Z === CONT  TestAccSearchIndex_withSearchType
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-08-28T00:52:14.7758043Z === NAME  TestAccSearchIndex_withSearchType
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-08-28T00:52:14.7758773Z     resource_search_index_test.go:24: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-08-28T00:52:14.7759318Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-08-28T00:52:14.7761958Z         Error: error creating index: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68afa26272e5d24729529738/clusters/test-acc-tf-c-7583358268424389764/search/indexes POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;) Detail: Collection listingsAndReviews was not found. Reason: Bad Request. Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-08-28T00:52:14.7763637Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-08-28T00:52:14.7764030Z           with mongodbatlas_search_index.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-08-28T00:52:14.7764646Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-08-28T00:52:14.7765421Z           12:      resource &quot;mongodbatlas_search_index&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-08-28T00:52:14.7765720Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-08-28T00:52:14.8308461Z --- FAIL: TestAccSearchIndex_withSearchType (4.46s)
+</code></pre></div>
+<ul>
+<li>2025-08-29 PASS 8 seconds</li>
+<li>2025-08-30 PASS 5 seconds</li>
+<li>2025-08-31 PASS 4 seconds</li>
+<li>2025-09-01</li>
+<li>FAIL an hour</li>
+</ul>
+<h3 id="error-2025-09-01t0330190000">Error 2025-09-01T03:30:19+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-09-01T03:30:19.8593723Z === RUN   TestAccSearchIndex_withSearchType
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-09-01T03:30:19.8594398Z     resource_search_index_test.go:21: Creating execution cluster: test-acc-tf-c-1540311476937088305
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-09-01T03:30:20.4751380Z 2025/09/01 03:30:20 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-09-01T03:33:20.7117574Z 2025/09/01 03:33:20 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-09-01T03:34:20.8800401Z 2025/09/01 03:34:20 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-09-01T03:34:31.0263221Z 2025/09/01 03:34:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-09-01T03:35:31.3069090Z 2025/09/01 03:35:31 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-09-01T03:35:41.4439278Z 2025/09/01 03:35:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-09-01T03:36:41.7381184Z 2025/09/01 03:36:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-09-01T03:36:51.8673529Z 2025/09/01 03:36:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-09-01T03:37:52.1023539Z 2025/09/01 03:37:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-09-01T03:38:02.2341635Z 2025/09/01 03:38:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-09-01T03:39:02.5004457Z 2025/09/01 03:39:02 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-09-01T03:39:12.6433529Z 2025/09/01 03:39:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-09-01T03:40:12.9381534Z 2025/09/01 03:40:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-09-01T03:40:23.0727221Z 2025/09/01 03:40:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-09-01T03:41:23.2757600Z 2025/09/01 03:41:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-09-01T03:41:33.4079449Z 2025/09/01 03:41:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-09-01T03:42:33.6742269Z 2025/09/01 03:42:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-09-01T03:42:43.8100820Z 2025/09/01 03:42:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-09-01T03:43:44.0783265Z 2025/09/01 03:43:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2025-09-01T03:43:54.2119848Z 2025/09/01 03:43:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2025-09-01T03:44:54.4142439Z 2025/09/01 03:44:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2025-09-01T03:45:04.5699665Z 2025/09/01 03:45:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2025-09-01T03:46:04.7649276Z 2025/09/01 03:46:04 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2025-09-01T03:46:14.9103322Z 2025/09/01 03:46:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2025-09-01T03:47:15.1287875Z 2025/09/01 03:47:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2025-09-01T03:47:25.2743953Z 2025/09/01 03:47:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2025-09-01T03:48:25.4573980Z 2025/09/01 03:48:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2025-09-01T03:48:35.6007187Z 2025/09/01 03:48:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2025-09-01T03:49:35.8132910Z 2025/09/01 03:49:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2025-09-01T03:49:45.9539960Z 2025/09/01 03:49:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>2025-09-01T03:50:46.1803415Z 2025/09/01 03:50:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>2025-09-01T03:50:56.3204580Z 2025/09/01 03:50:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>2025-09-01T03:51:56.6076911Z 2025/09/01 03:51:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>2025-09-01T03:52:06.7529999Z 2025/09/01 03:52:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>2025-09-01T03:53:06.9799718Z 2025/09/01 03:53:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>2025-09-01T03:53:17.1138947Z 2025/09/01 03:53:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>2025-09-01T03:54:17.3476315Z 2025/09/01 03:54:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>2025-09-01T03:54:27.4838189Z 2025/09/01 03:54:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>2025-09-01T03:55:27.6618155Z 2025/09/01 03:55:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>2025-09-01T03:55:37.7831383Z 2025/09/01 03:55:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>2025-09-01T03:56:37.9937394Z 2025/09/01 03:56:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>2025-09-01T03:56:48.1359468Z 2025/09/01 03:56:48 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>2025-09-01T03:57:48.3810573Z 2025/09/01 03:57:48 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>2025-09-01T03:57:58.5152788Z 2025/09/01 03:57:58 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>2025-09-01T03:58:58.7262309Z 2025/09/01 03:58:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>2025-09-01T03:59:08.8453359Z 2025/09/01 03:59:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>2025-09-01T04:00:09.0347901Z 2025/09/01 04:00:09 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>2025-09-01T04:00:19.1865135Z 2025/09/01 04:00:19 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>2025-09-01T04:01:19.3848108Z 2025/09/01 04:01:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>2025-09-01T04:01:29.5265457Z 2025/09/01 04:01:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>2025-09-01T04:02:29.7128047Z 2025/09/01 04:02:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>2025-09-01T04:02:39.8409341Z 2025/09/01 04:02:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>2025-09-01T04:03:40.0839597Z 2025/09/01 04:03:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>2025-09-01T04:03:50.2313401Z 2025/09/01 04:03:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>2025-09-01T04:04:50.5145719Z 2025/09/01 04:04:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>2025-09-01T04:05:00.6599055Z 2025/09/01 04:05:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>2025-09-01T04:06:00.9015039Z 2025/09/01 04:06:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>2025-09-01T04:06:11.0614834Z 2025/09/01 04:06:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>2025-09-01T04:07:11.2817546Z 2025/09/01 04:07:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>2025-09-01T04:07:21.4389753Z 2025/09/01 04:07:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>2025-09-01T04:08:21.5957682Z 2025/09/01 04:08:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>2025-09-01T04:08:31.7519172Z 2025/09/01 04:08:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>2025-09-01T04:09:31.9601662Z 2025/09/01 04:09:31 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>2025-09-01T04:09:42.0923467Z 2025/09/01 04:09:42 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>2025-09-01T04:10:42.3550385Z 2025/09/01 04:10:42 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>2025-09-01T04:10:52.4834430Z 2025/09/01 04:10:52 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>2025-09-01T04:11:52.6692686Z 2025/09/01 04:11:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>2025-09-01T04:12:02.8402790Z 2025/09/01 04:12:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>2025-09-01T04:13:03.0430047Z 2025/09/01 04:13:03 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>2025-09-01T04:13:13.1651844Z 2025/09/01 04:13:13 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>2025-09-01T04:14:13.3606929Z 2025/09/01 04:14:13 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>2025-09-01T04:14:23.4854678Z 2025/09/01 04:14:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>2025-09-01T04:15:23.7742793Z 2025/09/01 04:15:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>2025-09-01T04:15:33.9243108Z 2025/09/01 04:15:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>2025-09-01T04:16:34.1569063Z 2025/09/01 04:16:34 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>2025-09-01T04:16:44.3114308Z 2025/09/01 04:16:44 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>2025-09-01T04:17:44.5126063Z 2025/09/01 04:17:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>2025-09-01T04:17:54.6415236Z 2025/09/01 04:17:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>2025-09-01T04:18:54.8174824Z 2025/09/01 04:18:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>2025-09-01T04:19:04.9654539Z 2025/09/01 04:19:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>2025-09-01T04:20:05.3345153Z 2025/09/01 04:20:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>2025-09-01T04:20:15.4784349Z 2025/09/01 04:20:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>2025-09-01T04:21:15.7954649Z 2025/09/01 04:21:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>2025-09-01T04:21:25.9499820Z 2025/09/01 04:21:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>2025-09-01T04:22:26.1357218Z 2025/09/01 04:22:26 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>2025-09-01T04:22:36.2713679Z 2025/09/01 04:22:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>2025-09-01T04:23:36.4733888Z 2025/09/01 04:23:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>2025-09-01T04:23:46.6121961Z 2025/09/01 04:23:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>2025-09-01T04:24:46.8212796Z 2025/09/01 04:24:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a>2025-09-01T04:24:56.9536626Z 2025/09/01 04:24:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a>2025-09-01T04:25:57.1795365Z 2025/09/01 04:25:57 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a>2025-09-01T04:26:07.3195458Z 2025/09/01 04:26:07 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a>2025-09-01T04:27:07.5822837Z 2025/09/01 04:27:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a>2025-09-01T04:27:17.7186045Z 2025/09/01 04:27:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>2025-09-01T04:28:17.9622446Z 2025/09/01 04:28:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a>2025-09-01T04:28:28.1064092Z 2025/09/01 04:28:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a>2025-09-01T04:29:28.3032424Z 2025/09/01 04:29:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a>2025-09-01T04:29:38.4433931Z 2025/09/01 04:29:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a>2025-09-01T04:30:20.4755959Z 2025/09/01 04:30:20 [WARN] WaitForState timeout after 1h0m0s
+<a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a>2025-09-01T04:30:20.4760840Z 2025/09/01 04:30:20 [WARN] WaitForState starting 30s refresh grace period
+<a id="__codelineno-3-103" name="__codelineno-3-103" href="#__codelineno-3-103"></a>2025-09-01T04:30:20.4764224Z     resource_search_index_test.go:21: 
+<a id="__codelineno-3-104" name="__codelineno-3-104" href="#__codelineno-3-104"></a>2025-09-01T04:30:20.4766744Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:48
+<a id="__codelineno-3-105" name="__codelineno-3-105" href="#__codelineno-3-105"></a>2025-09-01T04:30:20.4770638Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:130
+<a id="__codelineno-3-106" name="__codelineno-3-106" href="#__codelineno-3-106"></a>2025-09-01T04:30:20.4774482Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/searchindex/resource_search_index_test.go:21
+<a id="__codelineno-3-107" name="__codelineno-3-107" href="#__codelineno-3-107"></a>2025-09-01T04:30:20.4775601Z            Error:          Received unexpected error:
+<a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a>2025-09-01T04:30:20.4776641Z                            timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 1h0m0s)
+<a id="__codelineno-3-109" name="__codelineno-3-109" href="#__codelineno-3-109"></a>2025-09-01T04:30:20.4777323Z            Test:           TestAccSearchIndex_withSearchType
+<a id="__codelineno-3-110" name="__codelineno-3-110" href="#__codelineno-3-110"></a>2025-09-01T04:30:20.4778486Z            Messages:       Cluster creation failed: test-acc-tf-c-1540311476937088305, err: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 1h0m0s)
+<a id="__codelineno-3-111" name="__codelineno-3-111" href="#__codelineno-3-111"></a>2025-09-01T04:30:20.4779300Z --- FAIL: TestAccSearchIndex_withSearchType (3600.62s)
+</code></pre></div>
+<ul>
+<li>PASS 6 seconds</li>
+<li>FAIL 4 seconds</li>
+</ul>
+<h3 id="error-2025-09-01t0830140000">Error 2025-09-01T08:30:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-09-01T08:30:14.8777344Z === RUN   TestAccSearchIndex_withSearchType
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-09-01T08:30:14.8881159Z === CONT  TestAccSearchIndex_withSearchType
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-09-01T08:30:19.6112702Z === NAME  TestAccSearchIndex_withSearchType
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-09-01T08:30:19.6113568Z     resource_search_index_test.go:24: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-09-01T08:30:19.6114259Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-09-01T08:30:19.6117698Z         Error: error creating index: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b551d57af6b0372e9a25c6/clusters/test-acc-tf-c-1264585706881872893/search/indexes POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;) Detail: Collection listingsAndReviews was not found. Reason: Bad Request. Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-09-01T08:30:19.6120154Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-09-01T08:30:19.6121144Z           with mongodbatlas_search_index.test,
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-09-01T08:30:19.6122279Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index&quot; &quot;test&quot;:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-09-01T08:30:19.6123260Z           12:      resource &quot;mongodbatlas_search_index&quot; &quot;test&quot; {
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-09-01T08:30:19.6123780Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-09-01T08:30:19.6689918Z --- FAIL: TestAccSearchIndex_withSearchType (4.79s)
+</code></pre></div>
+<ul>
+<li>PASS 7 seconds</li>
+<li>PASS 7 seconds</li>
+<li>PASS 7 seconds</li>
+<li>PASS 8 seconds</li>
+<li>PASS 7 seconds</li>
+<li>2025-09-02 PASS 8 seconds</li>
+<li>2025-09-03 PASS 7 seconds</li>
+<li>2025-09-04 PASS 5 seconds</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

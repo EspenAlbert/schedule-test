@@ -1,0 +1,1044 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingVPC Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#streamstreamconnectiontestaccstreamrsstreamconnection_kafkanetworkingvpc-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingVPC Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="streamstreamconnectiontestaccstreamrsstreamconnection_kafkanetworkingvpc-test-details">stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingVPC Test Details</h1>
+<h1 id="found-43-testruns-in-dev-qa-from-2025-08-06-to-2025-09-04-from-master-branch-1-unique-tests-failx-26-passx-17">Found 43 TestRuns in dev, qa from 2025-08-06 to 2025-09-04 from master branch: 1 unique tests, FAIL(x 26) PASS(x 17)</h1>
+<p>Success rate: 39.53%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-08-06t0108080000">2025-08-06 01:08</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>653.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-07t1430180000">2025-08-07 14:30</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>645.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-08t0103170000">2025-08-08 01:03</a></td>
+<td></td>
+<td>dev</td>
+<td>flaky_400</td>
+<td>652.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-09t0105240000">2025-08-09 01:05</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>642.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-10t0115050000">2025-08-10 01:15</a></td>
+<td></td>
+<td>qa</td>
+<td></td>
+<td>654.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-11t0157150000">2025-08-11 01:57</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>1044.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-12t1755440000">2025-08-12 17:55</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>642.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-15t0056450000">2025-08-15 00:56</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>642.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-15t1417060000">2025-08-15 14:17</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>646.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-17t0118020000">2025-08-17 01:18</a></td>
+<td></td>
+<td>qa</td>
+<td></td>
+<td>640.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-18t1609420000">2025-08-18 16:09</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>652.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-19t0103590000">2025-08-19 01:03</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>654.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-20t0100160000">2025-08-20 01:00</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>644.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-23t0100140000">2025-08-23 01:00</a></td>
+<td></td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>642.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-24t0052470000">2025-08-24 00:52</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/68aa5d369bbb8c4ee1f82dfd/streams/test-acc-tf-s-3344321080932301602/connections</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>162.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-08-25t0102540000">2025-08-25 01:02</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>652.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0030380000">2025-09-01 00:30</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>0.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0726310000">2025-09-01 07:26</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>652.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t0908350000">2025-09-01 09:08</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>1800.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t1139190000">2025-09-01 11:39</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>641.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t1251520000">2025-09-01 12:51</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>644.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t1534240000">2025-09-01 15:34</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>642.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-01t1641530000">2025-09-01 16:41</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>652.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-02t0104140000">2025-09-02 01:04</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>643.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-03t0107170000">2025-09-03 01:07</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>642.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-04t0104350000">2025-09-04 01:04</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>642.06s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-08-05: MISSING</li>
+<li>2025-08-06</li>
+</ul>
+<h3 id="error-2025-08-06t0108080000">Error 2025-08-06T01:08:08+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-08-06T01:08:08.0693152Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-08-06T01:08:08.0712373Z    test_working_directory=/tmp/plugintest4100165205 test_step_number=2 test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC test_terraform_path=/home/runner/work/_temp/50a44653-d68c-4d05-805b-47f1e08fed7a/terraform
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-08-06T01:08:08.0714134Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-08-06T01:08:08.0715370Z         
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-08-06T01:08:08.0715909Z         Error: error deleting resource
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-08-06T01:08:08.0716414Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-08-06T01:08:08.0717597Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6892a2402e7dcc2aaecb2a22/streams/test-acc-tf-s-6055968332067243449/connections/kafka-conn-vpc
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-08-06T01:08:08.0718580Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-08-06T01:08:08.0719132Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-08-06T01:08:08.0719772Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-08-06T01:08:08.0720373Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-08-06T01:08:08.0720848Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (653.20s)
+</code></pre></div>
+<ul>
+<li>2025-08-07</li>
+<li>PASS 4 minutes</li>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-08-07t1430180000">Error 2025-08-07T14:30:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-08-07T14:30:18.9556494Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-08-07T14:30:18.9577910Z   
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-08-07T14:30:18.9578996Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-08-07T14:30:18.9579970Z         
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-08-07T14:30:18.9580463Z         Error: error deleting resource
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-08-07T14:30:18.9581095Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-08-07T14:30:18.9582679Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6894b2aae641e667c06c1ab1/streams/test-acc-tf-s-2149325750254560365/connections/kafka-conn-vpc
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-08-07T14:30:18.9584041Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-08-07T14:30:18.9585201Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-08-07T14:30:18.9586307Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-08-07T14:30:18.9587340Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-08-07T14:30:18.9588182Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (645.65s)
+</code></pre></div>
+<ul>
+<li>2025-08-08</li>
+</ul>
+<h3 id="error-2025-08-08t0103170000">Error 2025-08-08T01:03:17+00:00</h3>
+<p>GoTestErrorClassification(error_class='flaky_400',author='human',run_id='2025-08-08T01:03:17.737000+00:00-TestAccStreamRSStreamConnection_kafkaNetworkingVPC',confidence=1.0,ts_when='27 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-08-08T01:03:17.0737950Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-08-08T01:03:17.0760027Z   
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-08-08T01:03:17.0761219Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-08-08T01:03:17.0762180Z         
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-08-08T01:03:17.0762694Z         Error: error deleting resource
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-08-08T01:03:17.0763197Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-08-08T01:03:17.0764773Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/689545427ffcc5766e4534c4/streams/test-acc-tf-s-7716988025242141365/connections/kafka-conn-vpc
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-08-08T01:03:17.0766173Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-08-08T01:03:17.0767151Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-08-08T01:03:17.0768466Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-08-08T01:03:17.0769495Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-08-08T01:03:17.0770342Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (652.79s)
+</code></pre></div>
+<ul>
+<li>2025-08-09</li>
+</ul>
+<h3 id="error-2025-08-09t0105240000">Error 2025-08-09T01:05:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-08-09T01:05:24.4587978Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-08-09T01:05:24.4608277Z    test_step_number=2 test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC test_terraform_path=/home/runner/work/_temp/8b336469-d729-4593-a410-b4d5cdfab771/terraform test_working_directory=/tmp/plugintest3304624389
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-08-09T01:05:24.4610652Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-08-09T01:05:24.4611558Z         
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-08-09T01:05:24.4612042Z         Error: error deleting resource
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-08-09T01:05:24.4612498Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-08-09T01:05:24.4614043Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6896963518106a5d9025959d/streams/test-acc-tf-s-8487051486197621647/connections/kafka-conn-vpc
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-08-09T01:05:24.4615731Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-08-09T01:05:24.4616675Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-08-09T01:05:24.4617768Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-08-09T01:05:24.4618786Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-08-09T01:05:24.4619634Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (642.04s)
+</code></pre></div>
+<ul>
+<li>2025-08-10</li>
+</ul>
+<h3 id="error-2025-08-10t0115050000">Error 2025-08-10T01:15:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-08-10T01:15:05.6142139Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-08-10T01:15:05.6163729Z   
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-08-10T01:15:05.6164789Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-08-10T01:15:05.6165685Z         
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-08-10T01:15:05.6166163Z         Error: error deleting resource
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-08-10T01:15:05.6166617Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-08-10T01:15:05.6168182Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6897e8cd39cf8e2817e3c9dc/streams/test-acc-tf-s-2539241424947313573/connections/kafka-conn-vpc
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-08-10T01:15:05.6169676Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-08-10T01:15:05.6170619Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-08-10T01:15:05.6171702Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-08-10T01:15:05.6172716Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-08-10T01:15:05.6173541Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (654.32s)
+</code></pre></div>
+<ul>
+<li>2025-08-11</li>
+</ul>
+<h3 id="error-2025-08-11t0157150000">Error 2025-08-11T01:57:15+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-08-11T01:57:15.0191127Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-08-11T01:57:15.0203322Z   
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-08-11T01:57:15.0204195Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-08-11T01:57:15.0204723Z         
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-08-11T01:57:15.0204998Z         Error: error deleting resource
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-08-11T01:57:15.0205259Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-08-11T01:57:15.0206127Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68993a0bf3d97116eb6405f0/streams/test-acc-tf-s-5239790866324550752/connections/kafka-conn-vpc
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-08-11T01:57:15.0206874Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-08-11T01:57:15.0207546Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-08-11T01:57:15.0208166Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-08-11T01:57:15.0208735Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-08-11T01:57:15.0209210Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (1044.52s)
+</code></pre></div>
+<ul>
+<li>2025-08-12</li>
+<li>PASS 2 minutes</li>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-08-12t1755440000">Error 2025-08-12T17:55:44+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-08-12T17:55:44.9628559Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-08-12T17:55:44.9641371Z   
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-08-12T17:55:44.9641952Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-08-12T17:55:44.9642460Z         
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-08-12T17:55:44.9642733Z         Error: error deleting resource
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-08-12T17:55:44.9642995Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-08-12T17:55:44.9644010Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/689b79ee230cf52517c4d364/streams/test-acc-tf-s-7144854503107158277/connections/kafka-conn-vpc
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-08-12T17:55:44.9644740Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-08-12T17:55:44.9645245Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-08-12T17:55:44.9645832Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-08-12T17:55:44.9646386Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-08-12T17:55:44.9646856Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (642.17s)
+</code></pre></div>
+<ul>
+<li>2025-08-13 PASS 4 minutes</li>
+<li>2025-08-14 PASS 2 minutes</li>
+<li>2025-08-15</li>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-08-15t0056450000">Error 2025-08-15T00:56:45+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-08-15T00:56:45.7768811Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-08-15T00:56:45.7781171Z    test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC test_terraform_path=/home/runner/work/_temp/341f9c08-1026-4a55-91a8-e243fc6ad0a3/terraform test_working_directory=/tmp/plugintest4179858748 test_step_number=2
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-08-15T00:56:45.7782443Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-08-15T00:56:45.7782953Z         
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-08-15T00:56:45.7783221Z         Error: error deleting resource
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-08-15T00:56:45.7783479Z         
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-08-15T00:56:45.7784333Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/689e7f9835dc4c7be8091d8e/streams/test-acc-tf-s-927666963108030799/connections/kafka-conn-vpc
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-08-15T00:56:45.7785063Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-08-15T00:56:45.7785570Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-08-15T00:56:45.7786162Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-08-15T00:56:45.7786718Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-08-15T00:56:45.7787179Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (642.83s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-08-15t1417060000">Error 2025-08-15T14:17:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-08-15T14:17:06.6991572Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-08-15T14:17:06.6993552Z     resource_stream_connection_test.go:112: Creating execution project: test-acc-tf-p-2825312394774114306
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-08-15T14:17:06.6996165Z     resource_stream_connection_test.go:112: Creating execution stream instance: test-acc-tf-s-3062318505156577257
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-08-15T14:17:06.7018214Z    test_working_directory=/tmp/plugintest1670931214 test_step_number=2
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-08-15T14:17:06.7019101Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-08-15T14:17:06.7019697Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-08-15T14:17:06.7020007Z         Error: error deleting resource
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-08-15T14:17:06.7020301Z         
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-08-15T14:17:06.7021284Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/689f3edbc65c381123aa7823/streams/test-acc-tf-s-3062318505156577257/connections/kafka-conn-vpc
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-08-15T14:17:06.7022138Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-08-15T14:17:06.7022678Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-08-15T14:17:06.7023301Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-08-15T14:17:06.7023900Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-08-15T14:17:06.7024383Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (646.92s)
+</code></pre></div>
+<ul>
+<li>2025-08-16 PASS 3 minutes</li>
+<li>2025-08-17</li>
+</ul>
+<h3 id="error-2025-08-17t0118020000">Error 2025-08-17T01:18:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-08-17T01:18:02.6232247Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-08-17T01:18:02.6253946Z   
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-08-17T01:18:02.6255012Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-08-17T01:18:02.6255936Z         
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-08-17T01:18:02.6256412Z         Error: error deleting resource
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-08-17T01:18:02.6256873Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-08-17T01:18:02.6258436Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68a122d8aafa9a76ca8bc085/streams/test-acc-tf-s-6508215644362021561/connections/kafka-conn-vpc
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-08-17T01:18:02.6259931Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-08-17T01:18:02.6260882Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-08-17T01:18:02.6261984Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-08-17T01:18:02.6263029Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-08-17T01:18:02.6263862Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (640.82s)
+</code></pre></div>
+<ul>
+<li>2025-08-18</li>
+<li>PASS 2 minutes</li>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-08-18t1609420000">Error 2025-08-18T16:09:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-08-18T16:09:42.7412061Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-08-18T16:09:42.7423451Z    test_working_directory=/tmp/plugintest2171813821 test_step_number=2 test_terraform_path=/home/runner/work/_temp/3944c132-00fe-4177-90e9-184159e70e50/terraform test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-08-18T16:09:42.7424685Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-08-18T16:09:42.7425193Z         
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-08-18T16:09:42.7425457Z         Error: error deleting resource
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-08-18T16:09:42.7425716Z         
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-08-18T16:09:42.7426539Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a34a49464054378f63e840/streams/test-acc-tf-s-179467121378619019/connections/kafka-conn-vpc
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-08-18T16:09:42.7427264Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-08-18T16:09:42.7427769Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-08-18T16:09:42.7428360Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-08-18T16:09:42.7429054Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-08-18T16:09:42.7429512Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (652.09s)
+</code></pre></div>
+<ul>
+<li>2025-08-19</li>
+</ul>
+<h3 id="error-2025-08-19t0103590000">Error 2025-08-19T01:03:59+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-08-19T01:03:59.0860135Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-08-19T01:03:59.0881061Z    test_step_number=2 test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC test_terraform_path=/home/runner/work/_temp/b2a725bc-04b3-4234-9289-9b0f9b9b89ba/terraform test_working_directory=/tmp/plugintest514712706
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-08-19T01:03:59.0883573Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-08-19T01:03:59.0884816Z         
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-08-19T01:03:59.0885601Z         Error: error deleting resource
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-08-19T01:03:59.0885977Z         
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-08-19T01:03:59.0886860Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a3c53507498377103b6315/streams/test-acc-tf-s-6793275448132987697/connections/kafka-conn-vpc
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-08-19T01:03:59.0887632Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-08-19T01:03:59.0888173Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-08-19T01:03:59.0888782Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-08-19T01:03:59.0889357Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-08-19T01:03:59.0889834Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (654.10s)
+</code></pre></div>
+<ul>
+<li>2025-08-20</li>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-08-20t0100160000">Error 2025-08-20T01:00:16+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-08-20T01:00:16.5044578Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-08-20T01:00:16.5065664Z    test_working_directory=/tmp/plugintest1112577744 test_step_number=2
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-08-20T01:00:16.5067389Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-08-20T01:00:16.5068504Z         
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-08-20T01:00:16.5069020Z         Error: error deleting resource
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-08-20T01:00:16.5069567Z         
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-08-20T01:00:16.5071202Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a516648c0d724731cbacf4/streams/test-acc-tf-s-4175994658656719539/connections/kafka-conn-vpc
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-08-20T01:00:16.5072618Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-08-20T01:00:16.5073467Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-08-20T01:00:16.5074084Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-08-20T01:00:16.5074664Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-08-20T01:00:16.5075144Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (644.06s)
+</code></pre></div>
+<ul>
+<li>PASS 3 minutes</li>
+<li>2025-08-21 PASS 3 minutes</li>
+<li>2025-08-22 PASS 5 minutes</li>
+<li>2025-08-23</li>
+</ul>
+<h3 id="error-2025-08-23t0100140000">Error 2025-08-23T01:00:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-08-23T01:00:14.1430526Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-08-23T01:00:14.1450821Z    test_terraform_path=/home/runner/work/_temp/18c31d9a-2ab3-4952-867e-1a19432b4980/terraform test_working_directory=/tmp/plugintest2279878393 test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-08-23T01:00:14.1453135Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-08-23T01:00:14.1454052Z         
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-08-23T01:00:14.1454541Z         Error: error deleting resource
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-08-23T01:00:14.1455004Z         
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-08-23T01:00:14.1456709Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68a90aceb4cd9f3d80a3118f/streams/test-acc-tf-s-2002163263808771961/connections/kafka-conn-vpc
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-08-23T01:00:14.1458286Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-08-23T01:00:14.1459236Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-08-23T01:00:14.1460338Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-08-23T01:00:14.1461386Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-08-23T01:00:14.1462229Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (642.55s)
+</code></pre></div>
+<ul>
+<li>2025-08-24</li>
+</ul>
+<h3 id="error-2025-08-24t0052470000">Error 2025-08-24T00:52:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2025-08-24T00:52:47.5467186Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2025-08-24T00:52:47.5488485Z    test_working_directory=/tmp/plugintest163071829 test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC test_terraform_path=/home/runner/work/_temp/d2bdc5ff-67dd-4337-933f-9f535c8e715a/terraform
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2025-08-24T00:52:47.5490614Z     resource_stream_connection_test.go:122: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2025-08-24T00:52:47.5491429Z         
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2025-08-24T00:52:47.5491978Z         Error: error creating resource
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2025-08-24T00:52:47.5492511Z         
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2025-08-24T00:52:47.5493159Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2025-08-24T00:52:47.5494933Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2025-08-24T00:52:47.5496281Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2025-08-24T00:52:47.5496833Z         
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2025-08-24T00:52:47.5498032Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68aa5d369bbb8c4ee1f82dfd/streams/test-acc-tf-s-3344321080932301602/connections
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2025-08-24T00:52:47.5498979Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2025-08-24T00:52:47.5499611Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2025-08-24T00:52:47.5500023Z         BadRequestDetail: 
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>2025-08-24T00:52:47.5500412Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (162.40s)
+</code></pre></div>
+<ul>
+<li>2025-08-25</li>
+</ul>
+<h3 id="error-2025-08-25t0102540000">Error 2025-08-25T01:02:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2025-08-25T01:02:54.2380024Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2025-08-25T01:02:54.2401626Z   
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2025-08-25T01:02:54.2402725Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2025-08-25T01:02:54.2403639Z         
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2025-08-25T01:02:54.2404139Z         Error: error deleting resource
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2025-08-25T01:02:54.2404608Z         
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2025-08-25T01:02:54.2406192Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68abae4fcd8afb23a27a2e54/streams/test-acc-tf-s-9135092100345411028/connections/kafka-conn-vpc
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2025-08-25T01:02:54.2407961Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2025-08-25T01:02:54.2408941Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2025-08-25T01:02:54.2410064Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2025-08-25T01:02:54.2411110Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2025-08-25T01:02:54.2411946Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (652.53s)
+</code></pre></div>
+<ul>
+<li>2025-08-26 PASS 5 minutes</li>
+<li>2025-08-27 PASS 11 minutes</li>
+<li>2025-08-28 PASS 4 minutes</li>
+<li>2025-08-29</li>
+<li>PASS 6 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2025-08-30 PASS 2 minutes</li>
+<li>2025-08-31 PASS 5 minutes</li>
+<li>2025-09-01</li>
+<li>FAIL a moment</li>
+</ul>
+<h3 id="error-2025-09-01t0030380000">Error 2025-09-01T00:30:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2025-09-01T00:30:38.8530735Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2025-09-01T00:30:38.8531848Z     resource_stream_connection_test.go:112: Creating execution project: test-acc-tf-p-9185028600355356518
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2025-09-01T00:30:38.8532774Z     resource_stream_connection_test.go:112: 
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2025-09-01T00:30:38.8534354Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:22
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2025-09-01T00:30:38.8537552Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:77
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2025-09-01T00:30:38.8540654Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:150
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2025-09-01T00:30:38.8544198Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/streamconnection/resource_stream_connection_test.go:112
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2025-09-01T00:30:38.8545660Z            Error:          Received unexpected error:
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>2025-09-01T00:30:38.8550607Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>2025-09-01T00:30:38.8553137Z            Test:           TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>2025-09-01T00:30:38.8557592Z            Messages:       Project creation failed: test-acc-tf-p-9185028600355356518, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>2025-09-01T00:30:38.8560391Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (0.16s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-09-01t0726310000">Error 2025-09-01T07:26:31+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2025-09-01T07:26:31.9652301Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>2025-09-01T07:26:31.9664438Z    test_step_number=2
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2025-09-01T07:26:31.9665043Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>2025-09-01T07:26:31.9665545Z         
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>2025-09-01T07:26:31.9665811Z         Error: error deleting resource
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2025-09-01T07:26:31.9666075Z         
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2025-09-01T07:26:31.9673172Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b535f946ef690a79da5cc6/streams/test-acc-tf-s-1665667189611421299/connections/kafka-conn-vpc
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>2025-09-01T07:26:31.9673987Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>2025-09-01T07:26:31.9674523Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>2025-09-01T07:26:31.9675125Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2025-09-01T07:26:31.9675690Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>2025-09-01T07:26:31.9676173Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (652.58s)
+</code></pre></div>
+<ul>
+<li>FAIL 30 minutes</li>
+</ul>
+<h3 id="error-2025-09-01t0908350000">Error 2025-09-01T09:08:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>2025-09-01T09:08:35.9701849Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2025-09-01T09:08:35.9716075Z   
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>2025-09-01T09:08:35.9717022Z     resource_stream_connection_test.go:122: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2025-09-01T09:08:35.9717744Z         
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>2025-09-01T09:08:35.9718614Z         Error: error creating MongoDB Network Peering Connection: context deadline exceeded
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2025-09-01T09:08:35.9719301Z         
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>2025-09-01T09:08:35.9719849Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>2025-09-01T09:08:35.9720958Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>2025-09-01T09:08:35.9722125Z           19:  resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>2025-09-01T09:08:35.9722632Z         
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>2025-09-01T09:08:35.9759684Z     panic.go:636: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>2025-09-01T09:08:35.9760625Z         
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>2025-09-01T09:08:35.9762018Z         Error: error deleting MongoDB Network Peering Container (68b556bfe551ff23b40a89da): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>2025-09-01T09:08:35.9762917Z         
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>2025-09-01T09:08:35.9763706Z         Error: error deleting resource
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>2025-09-01T09:08:35.9764155Z         
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>2025-09-01T09:08:35.9765662Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b551e7e551ff23b409296b/streams/test-acc-tf-s-8830201793938651764/connections/kafka-conn-vpc
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>2025-09-01T09:08:35.9766958Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>2025-09-01T09:08:35.9767871Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>2025-09-01T09:08:35.9768936Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>2025-09-01T09:08:35.9769949Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>2025-09-01T09:08:35.9770762Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (1800.65s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-09-01t1139190000">Error 2025-09-01T11:39:19+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>2025-09-01T11:39:19.3138620Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>2025-09-01T11:39:19.3159707Z   
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>2025-09-01T11:39:19.3160859Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>2025-09-01T11:39:19.3161930Z         
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>2025-09-01T11:39:19.3162410Z         Error: error deleting resource
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>2025-09-01T11:39:19.3162870Z         
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>2025-09-01T11:39:19.3164398Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b57e6a29f7e16965d87eeb/streams/test-acc-tf-s-1091877936775166363/connections/kafka-conn-vpc
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>2025-09-01T11:39:19.3165935Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>2025-09-01T11:39:19.3166862Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>2025-09-01T11:39:19.3167938Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>2025-09-01T11:39:19.3168945Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>2025-09-01T11:39:19.3169754Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (641.97s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-09-01t1251520000">Error 2025-09-01T12:51:52+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>2025-09-01T12:51:52.2609871Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>2025-09-01T12:51:52.2630731Z    test_working_directory=/tmp/plugintest2826809552 test_step_number=2
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>2025-09-01T12:51:52.2632159Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>2025-09-01T12:51:52.2633304Z         
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>2025-09-01T12:51:52.2633788Z         Error: error deleting resource
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>2025-09-01T12:51:52.2634258Z         
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>2025-09-01T12:51:52.2635788Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b5902a72698f11ba723880/streams/test-acc-tf-s-4424039129333110000/connections/kafka-conn-vpc
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>2025-09-01T12:51:52.2637114Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>2025-09-01T12:51:52.2638044Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>2025-09-01T12:51:52.2639132Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>2025-09-01T12:51:52.2640339Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>2025-09-01T12:51:52.2641156Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (644.13s)
+</code></pre></div>
+<ul>
+<li>PASS 2 minutes</li>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-09-01t1534240000">Error 2025-09-01T15:34:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>2025-09-01T15:34:24.0862185Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>2025-09-01T15:34:24.0876550Z   
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>2025-09-01T15:34:24.0877539Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>2025-09-01T15:34:24.0878531Z         
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>2025-09-01T15:34:24.0879026Z         Error: error deleting resource
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>2025-09-01T15:34:24.0879296Z         
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>2025-09-01T15:34:24.0880144Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b5b54760c05d1e5a76fc69/streams/test-acc-tf-s-2825861141491935015/connections/kafka-conn-vpc
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>2025-09-01T15:34:24.0881087Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>2025-09-01T15:34:24.0881608Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>2025-09-01T15:34:24.0882211Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>2025-09-01T15:34:24.0882779Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>2025-09-01T15:34:24.0883584Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (642.07s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 minutes</li>
+</ul>
+<h3 id="error-2025-09-01t1641530000">Error 2025-09-01T16:41:53+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>2025-09-01T16:41:53.0553416Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>2025-09-01T16:41:53.0567284Z   
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>2025-09-01T16:41:53.0567977Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>2025-09-01T16:41:53.0568603Z         
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>2025-09-01T16:41:53.0569120Z         Error: error deleting resource
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>2025-09-01T16:41:53.0569397Z         
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>2025-09-01T16:41:53.0570405Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b5c5892fc5f0455fbb40dd/streams/test-acc-tf-s-5650615940605726396/connections/kafka-conn-vpc
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>2025-09-01T16:41:53.0571506Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>2025-09-01T16:41:53.0572092Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>2025-09-01T16:41:53.0572757Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>2025-09-01T16:41:53.0573455Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>2025-09-01T16:41:53.0574023Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (652.07s)
+</code></pre></div>
+<ul>
+<li>2025-09-02</li>
+</ul>
+<h3 id="error-2025-09-02t0104140000">Error 2025-09-02T01:04:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>2025-09-02T01:04:14.7311823Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>2025-09-02T01:04:14.7332427Z    test_name=TestAccStreamRSStreamConnection_kafkaNetworkingVPC test_terraform_path=/home/runner/work/_temp/f0e16fac-b274-4569-a410-b1c2b30a06cc/terraform
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>2025-09-02T01:04:14.7334418Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>2025-09-02T01:04:14.7335527Z         
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>2025-09-02T01:04:14.7336003Z         Error: error deleting resource
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>2025-09-02T01:04:14.7336616Z         
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>2025-09-02T01:04:14.7338155Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b639f86f465849b5a45558/streams/test-acc-tf-s-4343616034261322912/connections/kafka-conn-vpc
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>2025-09-02T01:04:14.7339489Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>2025-09-02T01:04:14.7340417Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>2025-09-02T01:04:14.7341494Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>2025-09-02T01:04:14.7342503Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>2025-09-02T01:04:14.7343324Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (643.48s)
+</code></pre></div>
+<ul>
+<li>2025-09-03</li>
+</ul>
+<h3 id="error-2025-09-03t0107170000">Error 2025-09-03T01:07:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>2025-09-03T01:07:17.5140535Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>2025-09-03T01:07:17.5154521Z   
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>2025-09-03T01:07:17.5155246Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>2025-09-03T01:07:17.5155846Z         
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>2025-09-03T01:07:17.5156127Z         Error: error deleting resource
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>2025-09-03T01:07:17.5156394Z         
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>2025-09-03T01:07:17.5157442Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b78b17a89cf4184d26a570/streams/test-acc-tf-s-916771907590080583/connections/kafka-conn-vpc
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>2025-09-03T01:07:17.5158439Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>2025-09-03T01:07:17.5159021Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>2025-09-03T01:07:17.5159744Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>2025-09-03T01:07:17.5160436Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>2025-09-03T01:07:17.5161013Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (642.16s)
+</code></pre></div>
+<ul>
+<li>2025-09-04</li>
+</ul>
+<h3 id="error-2025-09-04t0104350000">Error 2025-09-04T01:04:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>2025-09-04T01:04:35.7954156Z === RUN   TestAccStreamRSStreamConnection_kafkaNetworkingVPC
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>2025-09-04T01:04:35.7966994Z   
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>2025-09-04T01:04:35.7968012Z     resource_stream_connection_test.go:122: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>2025-09-04T01:04:35.7969201Z         
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>2025-09-04T01:04:35.7969681Z         Error: error deleting resource
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>2025-09-04T01:04:35.7969958Z         
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>2025-09-04T01:04:35.7970801Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68b8dca6ef2c35484d6574d5/streams/test-acc-tf-s-483973998516831434/connections/kafka-conn-vpc
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>2025-09-04T01:04:35.7971541Z         DELETE: HTTP 409 Conflict (Error code:
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>2025-09-04T01:04:35.7972053Z         &quot;STREAM_KAFKA_CONNECTION_IS_DEPLOYING&quot;) Detail: Stream Kafka connection
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>2025-09-04T01:04:35.7972648Z         kafka-conn-vpc is currently deploying. Please retry the request later.
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>2025-09-04T01:04:35.7973217Z         Reason: Conflict. Params: [kafka-conn-vpc], BadRequestDetail: 
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>2025-09-04T01:04:35.7973682Z --- FAIL: TestAccStreamRSStreamConnection_kafkaNetworkingVPC (642.63s)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
