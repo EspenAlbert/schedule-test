@@ -1,0 +1,52 @@
+# cluster/cluster/TestAccCluster_ProviderRegionName Test Details
+# Found 42 TestRuns in dev, qa from 2025-09-03 to 2025-10-02 from master branch: 1 unique tests, PASS(x 42)
+Success rate: 100.00%
+
+## Timeline
+- 2025-09-02: MISSING
+- 2025-09-03 PASS 49 minutes
+- 2025-09-04 PASS 42 minutes
+- 2025-09-05 PASS 31 minutes
+- 2025-09-06 PASS 40 minutes
+- 2025-09-07 PASS 37 minutes
+- 2025-09-08
+  - PASS 43 minutes
+  - PASS 37 minutes
+  - PASS 39 minutes
+- 2025-09-09 PASS 42 minutes
+- 2025-09-10 PASS 40 minutes
+- 2025-09-11 PASS 32 minutes
+- 2025-09-12 PASS 28 minutes
+- 2025-09-13 PASS 37 minutes
+- 2025-09-14 PASS 24 minutes
+- 2025-09-15
+  - PASS 25 minutes
+  - PASS 23 minutes
+- 2025-09-16 PASS 31 minutes
+- 2025-09-17 PASS 31 minutes
+- 2025-09-18 PASS 39 minutes
+- 2025-09-19 PASS 30 minutes
+- 2025-09-20 PASS 28 minutes
+- 2025-09-21 PASS 29 minutes
+- 2025-09-22 PASS 26 minutes
+- 2025-09-23 PASS 29 minutes
+- 2025-09-24 PASS 29 minutes
+- 2025-09-25 PASS 31 minutes
+- 2025-09-26 PASS 30 minutes
+- 2025-09-27 PASS 30 minutes
+- 2025-09-28 PASS 29 minutes
+- 2025-09-29 PASS 40 minutes
+- 2025-09-30
+  - PASS 29 minutes
+  - PASS 29 minutes
+  - PASS 28 minutes
+- 2025-10-01
+  - PASS 31 minutes
+  - PASS 25 minutes
+  - PASS 27 minutes
+  - PASS 24 minutes
+  - PASS 44 minutes
+  - PASS 27 minutes
+  - PASS 36 minutes
+  - PASS 27 minutes
+- 2025-10-02 PASS 2 hours

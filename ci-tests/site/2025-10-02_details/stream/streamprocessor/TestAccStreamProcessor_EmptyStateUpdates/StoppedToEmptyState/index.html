@@ -1,0 +1,963 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>stream/streamprocessor/TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#streamstreamprocessortestaccstreamprocessor_emptystateupdatesstoppedtoemptystate-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              stream/streamprocessor/TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="streamstreamprocessortestaccstreamprocessor_emptystateupdatesstoppedtoemptystate-test-details">stream/streamprocessor/TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState Test Details</h1>
+<h1 id="found-47-testruns-in-dev-qa-from-2025-09-03-to-2025-10-02-from-master-branch-1-unique-tests-passx-27-failx-20">Found 47 TestRuns in dev, qa from 2025-09-03 to 2025-10-02 from master branch: 1 unique tests, PASS(x 27) FAIL(x 20)</h1>
+<p>Success rate: 57.45%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-09-07t0103050000">2025-09-07 01:03</a></td>
+<td>STREAM_PROCESSOR_GENERIC_ERROR /api/atlas/v2/groups/68bcd1d68704811492b53e30/streams/test-acc-tf-s-8008636377946794826/processor</td>
+<td>qa</td>
+<td>2.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-14t0045380000">2025-09-14 00:45</a></td>
+<td>STREAM_TENANT_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/68c60c441411d835e95b3b17/streams/test-acc-tf-s-840900351291093345/processor</td>
+<td>qa</td>
+<td>0.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-15t0636280000">2025-09-15 06:36</a></td>
+<td>STREAM_TENANT_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/68c7b04cd444485797b5e4d7/streams/test-acc-tf-s-571760720051378464/processor</td>
+<td>qa</td>
+<td>0.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-25t0139080000">2025-09-25 01:39</a></td>
+<td></td>
+<td>dev</td>
+<td>10.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-26t0048160000">2025-09-26 00:48</a></td>
+<td></td>
+<td>dev</td>
+<td>9.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-27t0051060000">2025-09-27 00:51</a></td>
+<td></td>
+<td>dev</td>
+<td>10.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-29t0053320000">2025-09-29 00:53</a></td>
+<td></td>
+<td>dev</td>
+<td>10.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-29t0727480000">2025-09-29 07:27</a></td>
+<td></td>
+<td>dev</td>
+<td>10.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0048540000">2025-09-30 00:48</a></td>
+<td></td>
+<td>dev</td>
+<td>10.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0747480000">2025-09-30 07:47</a></td>
+<td></td>
+<td>dev</td>
+<td>9.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0931010000">2025-09-30 09:31</a></td>
+<td></td>
+<td>dev</td>
+<td>10.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0053570000">2025-10-01 00:53</a></td>
+<td></td>
+<td>dev</td>
+<td>10.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0348330000">2025-10-01 03:48</a></td>
+<td></td>
+<td>dev</td>
+<td>8.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0606220000">2025-10-01 06:06</a></td>
+<td></td>
+<td>dev</td>
+<td>9.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0809330000">2025-10-01 08:09</a></td>
+<td></td>
+<td>dev</td>
+<td>9.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0931040000">2025-10-01 09:31</a></td>
+<td></td>
+<td>dev</td>
+<td>10.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t1101220000">2025-10-01 11:01</a></td>
+<td></td>
+<td>dev</td>
+<td>10.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t1209040000">2025-10-01 12:09</a></td>
+<td></td>
+<td>dev</td>
+<td>10.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t1454100000">2025-10-01 14:54</a></td>
+<td></td>
+<td>dev</td>
+<td>10.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-02t0134200000">2025-10-02 01:34</a></td>
+<td></td>
+<td>dev</td>
+<td>9.04s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-09-02: MISSING</li>
+<li>2025-09-03 PASS 9 seconds</li>
+<li>2025-09-04 PASS 9 seconds</li>
+<li>2025-09-05 PASS 10 seconds</li>
+<li>2025-09-06 PASS 9 seconds</li>
+<li>2025-09-07</li>
+</ul>
+<h3 id="error-2025-09-07t0103050000">Error 2025-09-07T01:03:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-09-07T01:03:05.2635372Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-09-07T01:03:05.2636430Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-09-07T01:03:05.2638076Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-09-07T01:03:05.2708393Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-09-07T01:03:05.2709230Z     resource_test.go:218: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-09-07T01:03:05.2709603Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-09-07T01:03:05.2709989Z         Error: error creating resource
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-09-07T01:03:05.2710270Z         
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-09-07T01:03:05.2710743Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-09-07T01:03:05.2711559Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-09-07T01:03:05.2712313Z           12:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-09-07T01:03:05.2712654Z         
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-09-07T01:03:05.2713529Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68bcd1d68704811492b53e30/streams/test-acc-tf-s-8008636377946794826/processor
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-09-07T01:03:05.2714495Z         POST: HTTP 400 Bad Request (Error code: &quot;STREAM_PROCESSOR_GENERIC_ERROR&quot;)
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-09-07T01:03:05.2715232Z         Detail: Streams Processor with this name (processor-stopped-to-) had a
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-09-07T01:03:05.2716111Z         problem occur: connection named sample_stream_solar does not exist. Check
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-09-07T01:03:05.2716880Z         sp.listConnections() for available connections. Reason: Bad Request. Params:
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-09-07T01:03:05.2717676Z         [processor-stopped-to- connection named sample_stream_solar does not exist.
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-09-07T01:03:05.2718444Z         Check sp.listConnections() for available connections], BadRequestDetail: 
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-09-07T01:03:05.2721066Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (2.16s)
+</code></pre></div>
+<ul>
+<li>2025-09-08</li>
+<li>PASS 10 seconds</li>
+<li>PASS 50 seconds</li>
+<li>PASS 8 seconds</li>
+<li>2025-09-09 PASS 8 seconds</li>
+<li>2025-09-10 PASS 9 seconds</li>
+<li>2025-09-11 PASS 9 seconds</li>
+<li>2025-09-12</li>
+<li>PASS 9 seconds</li>
+<li>PASS 9 seconds</li>
+<li>2025-09-13 PASS 11 seconds</li>
+<li>2025-09-14</li>
+</ul>
+<h3 id="error-2025-09-14t0045380000">Error 2025-09-14T00:45:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-09-14T00:45:38.8351703Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-09-14T00:45:38.8352684Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-09-14T00:45:38.8354594Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-09-14T00:45:38.8379201Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-09-14T00:45:38.8379911Z     resource_test.go:218: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-09-14T00:45:38.8380395Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-09-14T00:45:38.8380679Z         Error: error creating resource
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-09-14T00:45:38.8381021Z         
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-09-14T00:45:38.8381449Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-09-14T00:45:38.8382269Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-09-14T00:45:38.8383024Z           12:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-09-14T00:45:38.8383375Z         
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-09-14T00:45:38.8384254Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68c60c441411d835e95b3b17/streams/test-acc-tf-s-840900351291093345/processor
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-09-14T00:45:38.8385304Z         POST: HTTP 404 Not Found (Error code: &quot;STREAM_TENANT_NOT_FOUND_FOR_NAME&quot;)
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-09-14T00:45:38.8385974Z         Detail: Stream instance for project 68c60c441411d835e95b3b17 and name
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-09-14T00:45:38.8386625Z         test-acc-tf-s-840900351291093345 not found. Reason: Not Found. Params:
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-09-14T00:45:38.8387294Z         [68c60c441411d835e95b3b17 test-acc-tf-s-840900351291093345],
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-09-14T00:45:38.8387793Z         BadRequestDetail: 
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-09-14T00:45:38.8403363Z    test_working_directory=/tmp/plugintest1112148999 test_step_number=1 test_name=TestAccStreamProcessor_EmptyStateUpdates/StartedToEmptyState
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-09-14T00:45:38.8438677Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (0.46s)
+</code></pre></div>
+<ul>
+<li>2025-09-15</li>
+<li>PASS 9 seconds</li>
+<li>PASS 10 seconds</li>
+<li>FAIL a moment</li>
+</ul>
+<h3 id="error-2025-09-15t0636280000">Error 2025-09-15T06:36:28+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-09-15T06:36:28.0581422Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-09-15T06:36:28.0582274Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-09-15T06:36:28.0583950Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-09-15T06:36:28.0643374Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-09-15T06:36:28.0643950Z     resource_test.go:218: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-09-15T06:36:28.0644359Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-09-15T06:36:28.0644651Z         Error: error creating resource
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-09-15T06:36:28.0644924Z         
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-09-15T06:36:28.0645292Z           with mongodbatlas_stream_processor.processor,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-09-15T06:36:28.0646120Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot;:
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-09-15T06:36:28.0646776Z           12:      resource &quot;mongodbatlas_stream_processor&quot; &quot;processor&quot; {
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-09-15T06:36:28.0647130Z         
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-09-15T06:36:28.0647892Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68c7b04cd444485797b5e4d7/streams/test-acc-tf-s-571760720051378464/processor
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-09-15T06:36:28.0648726Z         POST: HTTP 404 Not Found (Error code: &quot;STREAM_TENANT_NOT_FOUND_FOR_NAME&quot;)
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-09-15T06:36:28.0649330Z         Detail: Stream instance for project 68c7b04cd444485797b5e4d7 and name
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-09-15T06:36:28.0649948Z         test-acc-tf-s-571760720051378464 not found. Reason: Not Found. Params:
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-09-15T06:36:28.0650515Z         [68c7b04cd444485797b5e4d7 test-acc-tf-s-571760720051378464],
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-09-15T06:36:28.0650908Z         BadRequestDetail: 
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-09-15T06:36:28.0653059Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (0.53s)
+</code></pre></div>
+<ul>
+<li>2025-09-16 PASS 8 seconds</li>
+<li>2025-09-17 PASS 10 seconds</li>
+<li>2025-09-18 PASS 10 seconds</li>
+<li>2025-09-19 PASS 9 seconds</li>
+<li>2025-09-20 PASS 8 seconds</li>
+<li>2025-09-21 PASS 31 seconds</li>
+<li>2025-09-22 PASS 10 seconds</li>
+<li>2025-09-23 PASS 9 seconds</li>
+<li>2025-09-24 PASS 8 seconds</li>
+<li>2025-09-25</li>
+</ul>
+<h3 id="error-2025-09-25t0139080000">Error 2025-09-25T01:39:08+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-09-25T01:39:08.8482267Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-09-25T01:39:08.8483108Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-09-25T01:39:08.8484949Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-09-25T01:39:08.8502225Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-09-25T01:39:08.8502806Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-09-25T01:39:08.8503178Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-09-25T01:39:08.8503559Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-09-25T01:39:08.8504111Z         
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-09-25T01:39:08.8504588Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-09-25T01:39:08.8505246Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-09-25T01:39:08.8505853Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-09-25T01:39:08.8506271Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-09-25T01:39:08.8506523Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-09-25T01:39:08.8506974Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-09-25T01:39:08.8507380Z         issue tracker.
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-09-25T01:39:08.8508856Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.50s)
+</code></pre></div>
+<ul>
+<li>2025-09-26</li>
+</ul>
+<h3 id="error-2025-09-26t0048160000">Error 2025-09-26T00:48:16+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-09-26T00:48:16.2378990Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-09-26T00:48:16.2379877Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-09-26T00:48:16.2381531Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-09-26T00:48:16.2388899Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-09-26T00:48:16.2389474Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-09-26T00:48:16.2389829Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-09-26T00:48:16.2390249Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-09-26T00:48:16.2390577Z         
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-09-26T00:48:16.2391095Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-09-26T00:48:16.2391790Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-09-26T00:48:16.2392433Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-09-26T00:48:16.2392869Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-09-26T00:48:16.2393120Z         
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-09-26T00:48:16.2393622Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-09-26T00:48:16.2394031Z         issue tracker.
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-09-26T00:48:16.2395554Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (9.48s)
+</code></pre></div>
+<ul>
+<li>2025-09-27</li>
+</ul>
+<h3 id="error-2025-09-27t0051060000">Error 2025-09-27T00:51:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-09-27T00:51:06.5816158Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-09-27T00:51:06.5816987Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-09-27T00:51:06.5818598Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-09-27T00:51:06.5825890Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-09-27T00:51:06.5826430Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-09-27T00:51:06.5826774Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-09-27T00:51:06.5827137Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-09-27T00:51:06.5827454Z         
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-09-27T00:51:06.5827904Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-09-27T00:51:06.5828531Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-09-27T00:51:06.5829111Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-09-27T00:51:06.5829528Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-09-27T00:51:06.5829773Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-09-27T00:51:06.5830206Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-09-27T00:51:06.5830606Z         issue tracker.
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-09-27T00:51:06.5832085Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.29s)
+</code></pre></div>
+<ul>
+<li>2025-09-28 PASS 9 seconds</li>
+<li>2025-09-29</li>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-09-29t0053320000">Error 2025-09-29T00:53:32+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-09-29T00:53:32.4827017Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-09-29T00:53:32.4827841Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-09-29T00:53:32.4829583Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-09-29T00:53:32.4836809Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-09-29T00:53:32.4837459Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-09-29T00:53:32.4837937Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-09-29T00:53:32.4838323Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-09-29T00:53:32.4838853Z         
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-09-29T00:53:32.4839383Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-09-29T00:53:32.4840076Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-09-29T00:53:32.4840808Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-09-29T00:53:32.4841340Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-09-29T00:53:32.4841596Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-09-29T00:53:32.4842183Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-09-29T00:53:32.4842612Z         issue tracker.
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-09-29T00:53:32.4844373Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.78s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-09-29t0727480000">Error 2025-09-29T07:27:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-09-29T07:27:48.1362066Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-09-29T07:27:48.1362892Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-09-29T07:27:48.1364613Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-09-29T07:27:48.1372004Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-09-29T07:27:48.1372554Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-09-29T07:27:48.1372912Z         
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-09-29T07:27:48.1373282Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-09-29T07:27:48.1373604Z         
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-09-29T07:27:48.1374063Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-09-29T07:27:48.1374701Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-09-29T07:27:48.1375288Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-09-29T07:27:48.1375698Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-09-29T07:27:48.1375957Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-09-29T07:27:48.1376395Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-09-29T07:27:48.1376792Z         issue tracker.
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-09-29T07:27:48.1378484Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.86s)
+</code></pre></div>
+<ul>
+<li>2025-09-30</li>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t0048540000">Error 2025-09-30T00:48:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-09-30T00:48:54.4414870Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-09-30T00:48:54.4415776Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-09-30T00:48:54.4417430Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-09-30T00:48:54.4425030Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-09-30T00:48:54.4425616Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-09-30T00:48:54.4425978Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-09-30T00:48:54.4426402Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-09-30T00:48:54.4426730Z         
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-09-30T00:48:54.4427266Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-09-30T00:48:54.4427983Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-09-30T00:48:54.4428638Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-09-30T00:48:54.4429081Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-09-30T00:48:54.4429338Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-09-30T00:48:54.4429860Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-09-30T00:48:54.4430474Z         issue tracker.
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-09-30T00:48:54.4432189Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.12s)
+</code></pre></div>
+<ul>
+<li>FAIL 9 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t0747480000">Error 2025-09-30T07:47:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-09-30T07:47:48.1810386Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-09-30T07:47:48.1811239Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-09-30T07:47:48.1813048Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-09-30T07:47:48.1820237Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-09-30T07:47:48.1820802Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-09-30T07:47:48.1821161Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-09-30T07:47:48.1821536Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-09-30T07:47:48.1821866Z         
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-09-30T07:47:48.1822323Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-09-30T07:47:48.1822964Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-09-30T07:47:48.1823549Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-09-30T07:47:48.1823969Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-09-30T07:47:48.1824223Z         
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-09-30T07:47:48.1824672Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-09-30T07:47:48.1825077Z         issue tracker.
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-09-30T07:47:48.1826535Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (9.36s)
+</code></pre></div>
+<ul>
+<li>PASS 9 seconds</li>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t0931010000">Error 2025-09-30T09:31:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-09-30T09:31:01.6387809Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-09-30T09:31:01.6388677Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-09-30T09:31:01.6390328Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-09-30T09:31:01.6397943Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-09-30T09:31:01.6398499Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-09-30T09:31:01.6398865Z         
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-09-30T09:31:01.6399368Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-09-30T09:31:01.6399708Z         
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-09-30T09:31:01.6400166Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-09-30T09:31:01.6400807Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-09-30T09:31:01.6401397Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-09-30T09:31:01.6401816Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-09-30T09:31:01.6402072Z         
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-09-30T09:31:01.6402510Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-09-30T09:31:01.6402917Z         issue tracker.
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2025-09-30T09:31:01.6404700Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.05s)
+</code></pre></div>
+<ul>
+<li>PASS 10 seconds</li>
+<li>2025-10-01</li>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0053570000">Error 2025-10-01T00:53:57+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-10-01T00:53:57.3092781Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-10-01T00:53:57.3093621Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-10-01T00:53:57.3095279Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-10-01T00:53:57.3102791Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-10-01T00:53:57.3103348Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-10-01T00:53:57.3103714Z         
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-10-01T00:53:57.3104226Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-10-01T00:53:57.3104575Z         
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-10-01T00:53:57.3105047Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-10-01T00:53:57.3105692Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-10-01T00:53:57.3106296Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-10-01T00:53:57.3106720Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-10-01T00:53:57.3107100Z         
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2025-10-01T00:53:57.3107558Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2025-10-01T00:53:57.3107971Z         issue tracker.
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>2025-10-01T00:53:57.3109475Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.25s)
+</code></pre></div>
+<ul>
+<li>FAIL 8 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0348330000">Error 2025-10-01T03:48:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-10-01T03:48:33.3956027Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-10-01T03:48:33.3956867Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-10-01T03:48:33.3958748Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-10-01T03:48:33.3966097Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-10-01T03:48:33.3966652Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-10-01T03:48:33.3967008Z         
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-10-01T03:48:33.3967384Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-10-01T03:48:33.3967714Z         
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-10-01T03:48:33.3968358Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-10-01T03:48:33.3968998Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-10-01T03:48:33.3969590Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-10-01T03:48:33.3970175Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-10-01T03:48:33.3970526Z         
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>2025-10-01T03:48:33.3971222Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>2025-10-01T03:48:33.3971926Z         issue tracker.
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>2025-10-01T03:48:33.3973780Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (8.26s)
+</code></pre></div>
+<ul>
+<li>FAIL 9 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0606220000">Error 2025-10-01T06:06:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-10-01T06:06:22.2229245Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-10-01T06:06:22.2230071Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-10-01T06:06:22.2231710Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-10-01T06:06:22.2242886Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-10-01T06:06:22.2243470Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-10-01T06:06:22.2244225Z         
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-10-01T06:06:22.2244665Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-10-01T06:06:22.2245008Z         
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-10-01T06:06:22.2245484Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-10-01T06:06:22.2246135Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-10-01T06:06:22.2246734Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-10-01T06:06:22.2247164Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2025-10-01T06:06:22.2247423Z         
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>2025-10-01T06:06:22.2247883Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>2025-10-01T06:06:22.2248287Z         issue tracker.
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>2025-10-01T06:06:22.2249894Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (9.82s)
+</code></pre></div>
+<ul>
+<li>FAIL 9 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0809330000">Error 2025-10-01T08:09:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2025-10-01T08:09:33.9194922Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2025-10-01T08:09:33.9195761Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2025-10-01T08:09:33.9197652Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2025-10-01T08:09:33.9204839Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2025-10-01T08:09:33.9205406Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2025-10-01T08:09:33.9205768Z         
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2025-10-01T08:09:33.9206534Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2025-10-01T08:09:33.9206902Z         
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2025-10-01T08:09:33.9207387Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2025-10-01T08:09:33.9208057Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2025-10-01T08:09:33.9208670Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2025-10-01T08:09:33.9209105Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2025-10-01T08:09:33.9209366Z         
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2025-10-01T08:09:33.9209829Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>2025-10-01T08:09:33.9210248Z         issue tracker.
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>2025-10-01T08:09:33.9211866Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (9.87s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0931040000">Error 2025-10-01T09:31:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2025-10-01T09:31:04.5493460Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2025-10-01T09:31:04.5494539Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2025-10-01T09:31:04.5496214Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2025-10-01T09:31:04.5503834Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2025-10-01T09:31:04.5504952Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2025-10-01T09:31:04.5505558Z         
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2025-10-01T09:31:04.5505963Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2025-10-01T09:31:04.5506298Z         
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2025-10-01T09:31:04.5506768Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2025-10-01T09:31:04.5507429Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2025-10-01T09:31:04.5508036Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2025-10-01T09:31:04.5508468Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>2025-10-01T09:31:04.5508724Z         
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>2025-10-01T09:31:04.5509181Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>2025-10-01T09:31:04.5509794Z         issue tracker.
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>2025-10-01T09:31:04.5511320Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.34s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t1101220000">Error 2025-10-01T11:01:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2025-10-01T11:01:22.8189635Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2025-10-01T11:01:22.8190618Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2025-10-01T11:01:22.8192327Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2025-10-01T11:01:22.8199781Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2025-10-01T11:01:22.8200339Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2025-10-01T11:01:22.8200705Z         
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2025-10-01T11:01:22.8201090Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2025-10-01T11:01:22.8201421Z         
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>2025-10-01T11:01:22.8201899Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>2025-10-01T11:01:22.8202549Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>2025-10-01T11:01:22.8203154Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>2025-10-01T11:01:22.8203755Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>2025-10-01T11:01:22.8204018Z         
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>2025-10-01T11:01:22.8204479Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>2025-10-01T11:01:22.8204889Z         issue tracker.
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>2025-10-01T11:01:22.8206394Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.06s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t1209040000">Error 2025-10-01T12:09:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2025-10-01T12:09:04.2507157Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>2025-10-01T12:09:04.2508040Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2025-10-01T12:09:04.2509814Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>2025-10-01T12:09:04.2517753Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>2025-10-01T12:09:04.2518346Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2025-10-01T12:09:04.2518730Z         
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2025-10-01T12:09:04.2519130Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>2025-10-01T12:09:04.2519483Z         
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>2025-10-01T12:09:04.2519972Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>2025-10-01T12:09:04.2520815Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2025-10-01T12:09:04.2521461Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>2025-10-01T12:09:04.2521906Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>2025-10-01T12:09:04.2522190Z         
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>2025-10-01T12:09:04.2522674Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>2025-10-01T12:09:04.2523114Z         issue tracker.
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>2025-10-01T12:09:04.2524855Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.13s)
+</code></pre></div>
+<ul>
+<li>FAIL 10 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t1454100000">Error 2025-10-01T14:54:10+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>2025-10-01T14:54:10.8723811Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2025-10-01T14:54:10.8724825Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>2025-10-01T14:54:10.8726633Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2025-10-01T14:54:10.8734687Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>2025-10-01T14:54:10.8735303Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2025-10-01T14:54:10.8735673Z         
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>2025-10-01T14:54:10.8736116Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>2025-10-01T14:54:10.8736436Z         
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>2025-10-01T14:54:10.8736982Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>2025-10-01T14:54:10.8737685Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>2025-10-01T14:54:10.8738330Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>2025-10-01T14:54:10.8738735Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>2025-10-01T14:54:10.8739048Z         
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>2025-10-01T14:54:10.8739569Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>2025-10-01T14:54:10.8740036Z         issue tracker.
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>2025-10-01T14:54:10.8741626Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (10.42s)
+</code></pre></div>
+<ul>
+<li>2025-10-02</li>
+</ul>
+<h3 id="error-2025-10-02t0134200000">Error 2025-10-02T01:34:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>2025-10-02T01:34:20.1155776Z === RUN   TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>2025-10-02T01:34:20.1156615Z     resource_test.go:217: Testing: Verifies that a processor in STOPPED state can be updated while remaining in a derived STOPPED state from empty state
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>2025-10-02T01:34:20.1158276Z === CONT  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>2025-10-02T01:34:20.1165761Z === NAME  TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>2025-10-02T01:34:20.1166318Z     resource_test.go:218: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>2025-10-02T01:34:20.1166689Z         
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>2025-10-02T01:34:20.1167461Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>2025-10-02T01:34:20.1167857Z         
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>2025-10-02T01:34:20.1168341Z         When applying changes to mongodbatlas_stream_processor.processor, provider
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>2025-10-02T01:34:20.1169159Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>2025-10-02T01:34:20.1169771Z         unexpected new value: .state: was cty.StringVal(&quot;STOPPED&quot;), but now
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>2025-10-02T01:34:20.1170192Z         cty.StringVal(&quot;CREATED&quot;).
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>2025-10-02T01:34:20.1170588Z         
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>2025-10-02T01:34:20.1171048Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>2025-10-02T01:34:20.1171460Z         issue tracker.
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>2025-10-02T01:34:20.1172946Z     --- FAIL: TestAccStreamProcessor_EmptyStateUpdates/StoppedToEmptyState (9.37s)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,52 @@
+# search_deployment/searchdeployment/TestAccSearchDeployment_timeoutTest Test Details
+# Found 42 TestRuns in dev, qa from 2025-09-03 to 2025-10-02 from master branch: 1 unique tests, PASS(x 42)
+Success rate: 100.00%
+
+## Timeline
+- 2025-09-02: MISSING
+- 2025-09-03 PASS an hour
+- 2025-09-04 PASS 55 minutes
+- 2025-09-05 PASS 45 minutes
+- 2025-09-06 PASS 51 minutes
+- 2025-09-07 PASS an hour
+- 2025-09-08
+  - PASS 55 minutes
+  - PASS 45 minutes
+  - PASS 49 minutes
+- 2025-09-09 PASS 54 minutes
+- 2025-09-10 PASS an hour
+- 2025-09-11 PASS 52 minutes
+- 2025-09-12 PASS 49 minutes
+- 2025-09-13 PASS 51 minutes
+- 2025-09-14 PASS 43 minutes
+- 2025-09-15
+  - PASS 45 minutes
+  - PASS 41 minutes
+- 2025-09-16 PASS an hour
+- 2025-09-17 PASS 59 minutes
+- 2025-09-18 PASS an hour
+- 2025-09-19 PASS 47 minutes
+- 2025-09-20 PASS 46 minutes
+- 2025-09-21 PASS 43 minutes
+- 2025-09-22 PASS 44 minutes
+- 2025-09-23 PASS 47 minutes
+- 2025-09-24 PASS 49 minutes
+- 2025-09-25 PASS 51 minutes
+- 2025-09-26 PASS 50 minutes
+- 2025-09-27 PASS 50 minutes
+- 2025-09-28 PASS 51 minutes
+- 2025-09-29 PASS 57 minutes
+- 2025-09-30
+  - PASS 50 minutes
+  - PASS 51 minutes
+  - PASS 47 minutes
+- 2025-10-01
+  - PASS 48 minutes
+  - PASS an hour
+  - PASS 46 minutes
+  - PASS an hour
+  - PASS 48 minutes
+  - PASS 46 minutes
+  - PASS 50 minutes
+  - PASS 43 minutes
+- 2025-10-02 PASS an hour

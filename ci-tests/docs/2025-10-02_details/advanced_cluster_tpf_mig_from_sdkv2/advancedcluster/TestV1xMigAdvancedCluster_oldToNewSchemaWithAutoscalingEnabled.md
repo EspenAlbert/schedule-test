@@ -1,0 +1,77 @@
+# advanced_cluster_tpf_mig_from_sdkv2/advancedcluster/TestV1xMigAdvancedCluster_oldToNewSchemaWithAutoscalingEnabled Test Details
+# Found 23 TestRuns in dev, qa from 2025-09-19 to 2025-10-02 from master branch: 1 unique tests, PASS(x 22) FAIL
+Success rate: 95.65%
+
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2025-10-01 04:54](#error-2025-10-01t0454580000) |  | dev | flaky_500 | 1169.04s
+
+## Timeline
+- 2025-09-02: MISSING
+- 2025-09-03: MISSING
+- 2025-09-04: MISSING
+- 2025-09-05: MISSING
+- 2025-09-06: MISSING
+- 2025-09-07: MISSING
+- 2025-09-08: MISSING
+- 2025-09-09: MISSING
+- 2025-09-10: MISSING
+- 2025-09-11: MISSING
+- 2025-09-12: MISSING
+- 2025-09-13: MISSING
+- 2025-09-14: MISSING
+- 2025-09-15: MISSING
+- 2025-09-16: MISSING
+- 2025-09-17: MISSING
+- 2025-09-18: MISSING
+- 2025-09-19 PASS 29 minutes
+- 2025-09-20 PASS 27 minutes
+- 2025-09-21 PASS 28 minutes
+- 2025-09-22 PASS 27 minutes
+- 2025-09-23 PASS 29 minutes
+- 2025-09-24 PASS 30 minutes
+- 2025-09-25 PASS 29 minutes
+- 2025-09-26 PASS 29 minutes
+- 2025-09-27 PASS 24 minutes
+- 2025-09-28 PASS 21 minutes
+- 2025-09-29 PASS 24 minutes
+- 2025-09-30
+  - PASS 25 minutes
+  - PASS 22 minutes
+  - PASS 21 minutes
+- 2025-10-01
+  - PASS 19 minutes
+  - PASS 18 minutes
+  - FAIL 19 minutes
+
+### Error 2025-10-01T04:54:58+00:00
+```
+2025-10-01T04:54:58.5849258Z === RUN   TestV1xMigAdvancedCluster_oldToNewSchemaWithAutoscalingEnabled
+2025-10-01T04:55:01.4967261Z === CONT  TestV1xMigAdvancedCluster_oldToNewSchemaWithAutoscalingEnabled
+2025-10-01T05:10:49.6780494Z    test_name=TestV1xMigAdvancedCluster_replicaSetAWSProvider
+2025-10-01T05:10:55.9118499Z === NAME  TestV1xMigAdvancedCluster_oldToNewSchemaWithAutoscalingEnabled
+2025-10-01T05:10:55.9119427Z     resource_migration_v1x_test.go:127: Step 1/5 error: Error running apply: exit status 1
+2025-10-01T05:10:55.9120143Z         
+2025-10-01T05:10:55.9121126Z         Error: error reading  advanced cluster (test-acc-tf-c-7703789765603959126): undefined response type
+2025-10-01T05:10:55.9121586Z         
+2025-10-01T05:10:55.9121932Z           with data.mongodbatlas_advanced_cluster.test,
+2025-10-01T05:10:55.9122786Z           on terraform_plugin_test.tf line 49, in data "mongodbatlas_advanced_cluster" "test":
+2025-10-01T05:10:55.9123344Z           49: 	data "mongodbatlas_advanced_cluster" "test" {
+2025-10-01T05:10:55.9123635Z         
+2025-10-01T05:10:55.9124678Z         Error: error reading advanced cluster list for project(68dcb4205a2f9645002034a6): (503 Service Unavailable) failed to decode response body: undefined response type
+2025-10-01T05:10:55.9125300Z         
+2025-10-01T05:10:55.9125642Z           with data.mongodbatlas_advanced_clusters.test,
+2025-10-01T05:10:55.9126260Z           on terraform_plugin_test.tf line 55, in data "mongodbatlas_advanced_clusters" "test":
+2025-10-01T05:10:55.9126815Z           55: 	data "mongodbatlas_advanced_clusters" "test" {
+2025-10-01T05:10:55.9127426Z         
+2025-10-01T05:14:30.9180325Z --- FAIL: TestV1xMigAdvancedCluster_oldToNewSchemaWithAutoscalingEnabled (1169.43s)
+```
+
+  - PASS 19 minutes
+  - PASS 18 minutes
+  - PASS 21 minutes
+  - PASS 22 minutes
+  - PASS 18 minutes
+- 2025-10-02 PASS 25 minutes
