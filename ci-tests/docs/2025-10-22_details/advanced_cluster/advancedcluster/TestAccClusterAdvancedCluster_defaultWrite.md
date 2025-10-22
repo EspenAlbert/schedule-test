@@ -1,0 +1,55 @@
+# advanced_cluster/advancedcluster/TestAccClusterAdvancedCluster_defaultWrite Test Details
+# Found 44 TestRuns in dev, qa from 2025-09-23 to 2025-10-22 from master branch: 1 unique tests, PASS(x 44)
+Success rate: 100.00%
+
+## Timeline
+- 2025-09-22: MISSING
+- 2025-09-23 PASS 34 minutes
+- 2025-09-24 PASS 35 minutes
+- 2025-09-25 PASS 38 minutes
+- 2025-09-26 PASS 39 minutes
+- 2025-09-27 PASS 31 minutes
+- 2025-09-28 PASS 29 minutes
+- 2025-09-29
+  - PASS 48 minutes
+  - PASS 26 minutes
+- 2025-09-30
+  - PASS 31 minutes
+  - PASS 27 minutes
+  - PASS 33 minutes
+  - PASS 29 minutes
+  - PASS 26 minutes
+- 2025-10-01
+  - PASS 33 minutes
+  - PASS 29 minutes
+  - PASS 27 minutes
+  - PASS 26 minutes
+  - PASS 36 minutes
+  - PASS 31 minutes
+  - PASS 39 minutes
+  - PASS 28 minutes
+- 2025-10-02 PASS 39 minutes
+- 2025-10-03 PASS 29 minutes
+- 2025-10-04 PASS 33 minutes
+- 2025-10-05 PASS 27 minutes
+- 2025-10-06 PASS 27 minutes
+- 2025-10-07 PASS 31 minutes
+- 2025-10-08 PASS 30 minutes
+- 2025-10-09 PASS 3 hours
+- 2025-10-10 PASS 37 minutes
+- 2025-10-11 PASS an hour
+- 2025-10-12 PASS 2 hours
+- 2025-10-13 PASS 49 minutes
+- 2025-10-14 PASS 33 minutes
+- 2025-10-15 PASS 29 minutes
+- 2025-10-16 PASS 55 minutes
+- 2025-10-17 PASS 34 minutes
+- 2025-10-18 PASS 30 minutes
+- 2025-10-19 PASS 29 minutes
+- 2025-10-20
+  - PASS 41 minutes
+  - PASS 26 minutes
+- 2025-10-21 PASS 28 minutes
+- 2025-10-22
+  - PASS 37 minutes
+  - PASS 28 minutes

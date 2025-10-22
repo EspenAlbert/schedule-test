@@ -1,0 +1,963 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>stream/streamconnection/TestAccStreamRSStreamConnection_kafkaSSL Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#streamstreamconnectiontestaccstreamrsstreamconnection_kafkassl-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              stream/streamconnection/TestAccStreamRSStreamConnection_kafkaSSL Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="streamstreamconnectiontestaccstreamrsstreamconnection_kafkassl-test-details">stream/streamconnection/TestAccStreamRSStreamConnection_kafkaSSL Test Details</h1>
+<h1 id="found-44-testruns-in-dev-qa-from-2025-09-23-to-2025-10-22-from-master-branch-1-unique-tests-passx-25-failx-19">Found 44 TestRuns in dev, qa from 2025-09-23 to 2025-10-22 from master branch: 1 unique tests, PASS(x 25) FAIL(x 19)</h1>
+<p>Success rate: 56.82%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-09-23t0046570000">2025-09-23 00:46</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68d1e95ea895df0d27e694dc/streams/test-acc-tf-s-2429861209096068710/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>164.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-24t0048490000">2025-09-24 00:48</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68d33ad5f1337d3c4efe8a30/streams/test-acc-tf-s-4994766804749352644/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>174.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-25t0139080000">2025-09-25 01:39</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68d48c54ac285026f1fd092c/streams/test-acc-tf-s-7249668804199471548/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>166.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-26t0048160000">2025-09-26 00:48</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68d5ddddf8df4c6a73fc333b/streams/test-acc-tf-s-8113659077103869597/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>185.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-27t0051060000">2025-09-27 00:51</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68d72f3be7030775ece20355/streams/test-acc-tf-s-8658604451623586714/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>167.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-28t0053000000">2025-09-28 00:53</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68d88187ca428e2ad3dbbb00/streams/test-acc-tf-s-2508984362356056008/connections/kafka-conn-ssl</td>
+<td>qa</td>
+<td></td>
+<td>175.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-29t0053320000">2025-09-29 00:53</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68d9d2d097534351000fd020/streams/test-acc-tf-s-8168174255387156915/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>166.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-29t0727480000">2025-09-29 07:27</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68da30d49ae0ff3b55cf3d0c/streams/test-acc-tf-s-5428533652522328334/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>167.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0048540000">2025-09-30 00:48</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68db23fdac96227c18dcc25c/streams/test-acc-tf-s-2405848501451643190/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>166.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0747480000">2025-09-30 07:47</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68db86dec882bb707c96bc71/streams/test-acc-tf-s-2656607281265535769/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>164.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0804490000">2025-09-30 08:04</a></td>
+<td>VALIDATION_ERROR /api/atlas/v2/groups/68db89cbbb7b8c0d70349d74/streams/test-acc-tf-s-9097683267964206690/connections/kafka-conn-ssl</td>
+<td>qa</td>
+<td></td>
+<td>167.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-02t0134200000">2025-10-02 01:34</a></td>
+<td>STREAM_CONNECTION_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/68ddc6a2d2c00355743c1ebe/streams/test-acc-tf-s-9153079988273370027/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>1.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-07t0328020000">2025-10-07 03:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>3724.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-09t0251320000">2025-10-09 02:51</a></td>
+<td>CONTAINER_ALREADY_EXISTS /api/atlas/v2/groups/68e70164c2a3cd1693043b7b/containers</td>
+<td>dev</td>
+<td></td>
+<td>4.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-11t0047430000">2025-10-11 00:47</a></td>
+<td>STREAM_CONNECTION_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/68e9a412e5f7141b76c016c6/streams/test-acc-tf-s-6205360719618264765/connections/kafka-conn-ssl</td>
+<td>dev</td>
+<td></td>
+<td>2.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-12t0246540000">2025-10-12 02:46</a></td>
+<td>CONTAINER_ALREADY_EXISTS /api/atlas/v2/groups/68eaf645bae6807c7549827a/containers</td>
+<td>qa</td>
+<td></td>
+<td>31.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-13t0100440000">2025-10-13 01:00</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>300.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-19t0050120000">2025-10-19 00:50</a></td>
+<td>STREAM_TENANT_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/68f43174353f113dafd15147/streams/test-acc-tf-s-3100645711005476142/connections</td>
+<td>qa</td>
+<td></td>
+<td>1.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-20t1049140000">2025-10-20 10:49</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>418.06s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-09-22: MISSING</li>
+<li>2025-09-23</li>
+</ul>
+<h3 id="error-2025-09-23t0046570000">Error 2025-09-23T00:46:57+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-09-23T00:46:57.4276084Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-09-23T00:46:57.4283189Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-09-23T00:46:57.4323223Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-09-23T00:46:57.4324011Z     resource_stream_connection_test.go:192: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-09-23T00:46:57.4342034Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-09-23T00:46:57.4342517Z         Error: error updating resource
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-09-23T00:46:57.4342981Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-09-23T00:46:57.4343526Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-09-23T00:46:57.4344543Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-09-23T00:46:57.4345405Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-09-23T00:46:57.4345733Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-09-23T00:46:57.4346601Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d1e95ea895df0d27e694dc/streams/test-acc-tf-s-2429861209096068710/connections/kafka-conn-ssl
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-09-23T00:46:57.4347496Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-09-23T00:46:57.4348206Z         request content produced the validation error: The project id
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-09-23T00:46:57.4348809Z         68d1e95ea895df0d27e694dc and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-09-23T00:46:57.4349366Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-09-23T00:46:57.4349934Z         68d1e95ea895df0d27e694dc and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-09-23T00:46:57.4350389Z         connection], BadRequestDetail: 
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-09-23T00:46:57.4350758Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (164.73s)
+</code></pre></div>
+<ul>
+<li>2025-09-24</li>
+</ul>
+<h3 id="error-2025-09-24t0048490000">Error 2025-09-24T00:48:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-09-24T00:48:49.7262492Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-09-24T00:48:49.7274753Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-09-24T00:48:49.7344503Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-09-24T00:48:49.7345809Z     resource_stream_connection_test.go:192: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-09-24T00:48:49.7346752Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-09-24T00:48:49.7347485Z         Error: error updating resource
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-09-24T00:48:49.7347945Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-09-24T00:48:49.7348729Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-09-24T00:48:49.7349947Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-09-24T00:48:49.7351055Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-09-24T00:48:49.7351594Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-09-24T00:48:49.7353150Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d33ad5f1337d3c4efe8a30/streams/test-acc-tf-s-4994766804749352644/connections/kafka-conn-ssl
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-09-24T00:48:49.7354936Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-09-24T00:48:49.7355955Z         request content produced the validation error: The project id
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-09-24T00:48:49.7357215Z         68d33ad5f1337d3c4efe8a30 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-09-24T00:48:49.7358238Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-09-24T00:48:49.7359328Z         68d33ad5f1337d3c4efe8a30 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-09-24T00:48:49.7360160Z         connection], BadRequestDetail: 
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-09-24T00:48:49.7360791Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (174.96s)
+</code></pre></div>
+<ul>
+<li>2025-09-25</li>
+</ul>
+<h3 id="error-2025-09-25t0139080000">Error 2025-09-25T01:39:08+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-09-25T01:39:08.8296340Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-09-25T01:39:08.8308111Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-09-25T01:39:08.8379214Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-09-25T01:39:08.8380528Z     resource_stream_connection_test.go:192: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-09-25T01:39:08.8381468Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-09-25T01:39:08.8381949Z         Error: error updating resource
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-09-25T01:39:08.8382413Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-09-25T01:39:08.8383184Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-09-25T01:39:08.8384594Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-09-25T01:39:08.8385709Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-09-25T01:39:08.8386449Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-09-25T01:39:08.8388032Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d48c54ac285026f1fd092c/streams/test-acc-tf-s-7249668804199471548/connections/kafka-conn-ssl
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-09-25T01:39:08.8389649Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-09-25T01:39:08.8390674Z         request content produced the validation error: The project id
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-09-25T01:39:08.8391769Z         68d48c54ac285026f1fd092c and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-09-25T01:39:08.8392779Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-09-25T01:39:08.8393986Z         68d48c54ac285026f1fd092c and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-09-25T01:39:08.8394813Z         connection], BadRequestDetail: 
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-09-25T01:39:08.8395442Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (166.40s)
+</code></pre></div>
+<ul>
+<li>2025-09-26</li>
+</ul>
+<h3 id="error-2025-09-26t0048160000">Error 2025-09-26T00:48:16+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-09-26T00:48:16.2209884Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-09-26T00:48:16.2216731Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-09-26T00:48:16.2283392Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-09-26T00:48:16.2284153Z     resource_stream_connection_test.go:192: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-09-26T00:48:16.2284672Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-09-26T00:48:16.2284970Z         Error: error updating resource
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-09-26T00:48:16.2285232Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-09-26T00:48:16.2285602Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-09-26T00:48:16.2286538Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-09-26T00:48:16.2287217Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-09-26T00:48:16.2287534Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-09-26T00:48:16.2288692Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d5ddddf8df4c6a73fc333b/streams/test-acc-tf-s-8113659077103869597/connections/kafka-conn-ssl
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-09-26T00:48:16.2289940Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-09-26T00:48:16.2290555Z         request content produced the validation error: The project id
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-09-26T00:48:16.2291216Z         68d5ddddf8df4c6a73fc333b and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-09-26T00:48:16.2291825Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-09-26T00:48:16.2292456Z         68d5ddddf8df4c6a73fc333b and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-09-26T00:48:16.2292937Z         connection], BadRequestDetail: 
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-09-26T00:48:16.2293304Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (185.15s)
+</code></pre></div>
+<ul>
+<li>2025-09-27</li>
+</ul>
+<h3 id="error-2025-09-27t0051060000">Error 2025-09-27T00:51:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-09-27T00:51:06.5699591Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-09-27T00:51:06.5706070Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-09-27T00:51:06.5725885Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-09-27T00:51:06.5726821Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-09-27T00:51:06.5727348Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-09-27T00:51:06.5727616Z         Error: error updating resource
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-09-27T00:51:06.5727880Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-09-27T00:51:06.5728200Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-09-27T00:51:06.5728950Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-09-27T00:51:06.5729545Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-09-27T00:51:06.5729847Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-09-27T00:51:06.5730684Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d72f3be7030775ece20355/streams/test-acc-tf-s-8658604451623586714/connections/kafka-conn-ssl
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-09-27T00:51:06.5731551Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-09-27T00:51:06.5732106Z         request content produced the validation error: The project id
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-09-27T00:51:06.5732697Z         68d72f3be7030775ece20355 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-09-27T00:51:06.5733239Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-09-27T00:51:06.5733793Z         68d72f3be7030775ece20355 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-09-27T00:51:06.5734424Z         connection], BadRequestDetail: 
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2025-09-27T00:51:06.5734788Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (167.06s)
+</code></pre></div>
+<ul>
+<li>2025-09-28</li>
+</ul>
+<h3 id="error-2025-09-28t0053000000">Error 2025-09-28T00:53:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-09-28T00:53:00.9231861Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-09-28T00:53:00.9239130Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-09-28T00:53:00.9262904Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-09-28T00:53:00.9263836Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-09-28T00:53:00.9264396Z         
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-09-28T00:53:00.9264688Z         Error: error updating resource
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-09-28T00:53:00.9264967Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-09-28T00:53:00.9265308Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-09-28T00:53:00.9265974Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-09-28T00:53:00.9266590Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-09-28T00:53:00.9266917Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-09-28T00:53:00.9267781Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68d88187ca428e2ad3dbbb00/streams/test-acc-tf-s-2508984362356056008/connections/kafka-conn-ssl
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-09-28T00:53:00.9268942Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-09-28T00:53:00.9269518Z         request content produced the validation error: The project id
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-09-28T00:53:00.9270129Z         68d88187ca428e2ad3dbbb00 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-09-28T00:53:00.9270695Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-09-28T00:53:00.9271278Z         68d88187ca428e2ad3dbbb00 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-09-28T00:53:00.9271750Z         connection], BadRequestDetail: 
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2025-09-28T00:53:00.9272133Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (175.41s)
+</code></pre></div>
+<ul>
+<li>2025-09-29</li>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-09-29t0053320000">Error 2025-09-29T00:53:32+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-09-29T00:53:32.4707168Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-09-29T00:53:32.4717002Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-09-29T00:53:32.4735655Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-09-29T00:53:32.4736765Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-09-29T00:53:32.4737313Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-09-29T00:53:32.4737592Z         Error: error updating resource
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-09-29T00:53:32.4737854Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-09-29T00:53:32.4738184Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-09-29T00:53:32.4739066Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-09-29T00:53:32.4739810Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-09-29T00:53:32.4740116Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-09-29T00:53:32.4740964Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d9d2d097534351000fd020/streams/test-acc-tf-s-8168174255387156915/connections/kafka-conn-ssl
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-09-29T00:53:32.4741852Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-09-29T00:53:32.4742413Z         request content produced the validation error: The project id
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-09-29T00:53:32.4743009Z         68d9d2d097534351000fd020 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-09-29T00:53:32.4743564Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-09-29T00:53:32.4744129Z         68d9d2d097534351000fd020 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-09-29T00:53:32.4744578Z         connection], BadRequestDetail: 
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2025-09-29T00:53:32.4744937Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (166.51s)
+</code></pre></div>
+<ul>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-09-29t0727480000">Error 2025-09-29T07:27:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-09-29T07:27:48.1242369Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-09-29T07:27:48.1248647Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-09-29T07:27:48.1269456Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-09-29T07:27:48.1270172Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-09-29T07:27:48.1270823Z         
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-09-29T07:27:48.1271107Z         Error: error updating resource
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-09-29T07:27:48.1271369Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-09-29T07:27:48.1271697Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-09-29T07:27:48.1272494Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-09-29T07:27:48.1273101Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-09-29T07:27:48.1273404Z         
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-09-29T07:27:48.1274254Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68da30d49ae0ff3b55cf3d0c/streams/test-acc-tf-s-5428533652522328334/connections/kafka-conn-ssl
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-09-29T07:27:48.1275233Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-09-29T07:27:48.1275805Z         request content produced the validation error: The project id
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-09-29T07:27:48.1276397Z         68da30d49ae0ff3b55cf3d0c and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-09-29T07:27:48.1276945Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-09-29T07:27:48.1277636Z         68da30d49ae0ff3b55cf3d0c and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-09-29T07:27:48.1278099Z         connection], BadRequestDetail: 
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2025-09-29T07:27:48.1278460Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (167.96s)
+</code></pre></div>
+<ul>
+<li>2025-09-30</li>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-09-30t0048540000">Error 2025-09-30T00:48:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-09-30T00:48:54.4290767Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-09-30T00:48:54.4297832Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-09-30T00:48:54.4317809Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-09-30T00:48:54.4318612Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-09-30T00:48:54.4319143Z         
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-09-30T00:48:54.4319552Z         Error: error updating resource
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-09-30T00:48:54.4319978Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-09-30T00:48:54.4320574Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-09-30T00:48:54.4321344Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-09-30T00:48:54.4322013Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-09-30T00:48:54.4322328Z         
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-09-30T00:48:54.4323319Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68db23fdac96227c18dcc25c/streams/test-acc-tf-s-2405848501451643190/connections/kafka-conn-ssl
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-09-30T00:48:54.4324287Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-09-30T00:48:54.4325039Z         request content produced the validation error: The project id
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-09-30T00:48:54.4325704Z         68db23fdac96227c18dcc25c and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-09-30T00:48:54.4326315Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-09-30T00:48:54.4326967Z         68db23fdac96227c18dcc25c and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-09-30T00:48:54.4327454Z         connection], BadRequestDetail: 
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2025-09-30T00:48:54.4327815Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (166.35s)
+</code></pre></div>
+<ul>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-09-30t0747480000">Error 2025-09-30T07:47:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-09-30T07:47:48.1673609Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-09-30T07:47:48.1681166Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-09-30T07:47:48.1699277Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-09-30T07:47:48.1700402Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-09-30T07:47:48.1701293Z         
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-09-30T07:47:48.1701583Z         Error: error updating resource
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-09-30T07:47:48.1702023Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-09-30T07:47:48.1702362Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-09-30T07:47:48.1703014Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-09-30T07:47:48.1703617Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-09-30T07:47:48.1703924Z         
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-09-30T07:47:48.1704770Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68db86dec882bb707c96bc71/streams/test-acc-tf-s-2656607281265535769/connections/kafka-conn-ssl
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-09-30T07:47:48.1705654Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-09-30T07:47:48.1706338Z         request content produced the validation error: The project id
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-09-30T07:47:48.1706929Z         68db86dec882bb707c96bc71 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-09-30T07:47:48.1707479Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2025-09-30T07:47:48.1708369Z         68db86dec882bb707c96bc71 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2025-09-30T07:47:48.1708828Z         connection], BadRequestDetail: 
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2025-09-30T07:47:48.1709187Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (164.22s)
+</code></pre></div>
+<ul>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-09-30t0804490000">Error 2025-09-30T08:04:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-09-30T08:04:49.7758737Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-09-30T08:04:49.7765335Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-09-30T08:04:49.7784757Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-09-30T08:04:49.7785471Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-09-30T08:04:49.7785983Z         
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-09-30T08:04:49.7786266Z         Error: error updating resource
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-09-30T08:04:49.7786661Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-09-30T08:04:49.7786998Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-09-30T08:04:49.7787647Z           on terraform_plugin_test.tf line 29, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-09-30T08:04:49.7788242Z           29:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-09-30T08:04:49.7788547Z         
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-09-30T08:04:49.7789389Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68db89cbbb7b8c0d70349d74/streams/test-acc-tf-s-9097683267964206690/connections/kafka-conn-ssl
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-09-30T08:04:49.7790363Z         PATCH: HTTP 400 Bad Request (Error code: &quot;VALIDATION_ERROR&quot;) Detail: The
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-09-30T08:04:49.7790920Z         request content produced the validation error: The project id
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-09-30T08:04:49.7791735Z         68db89cbbb7b8c0d70349d74 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2025-09-30T08:04:49.7792294Z         connection. Reason: Bad Request. Params: [The project id
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2025-09-30T08:04:49.7792870Z         68db89cbbb7b8c0d70349d74 and region US_EAST_1 does not have a VPC Peering
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2025-09-30T08:04:49.7793316Z         connection], BadRequestDetail: 
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2025-09-30T08:04:49.7793706Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (167.07s)
+</code></pre></div>
+<ul>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2025-10-01</li>
+<li>PASS 2 minutes</li>
+<li>PASS 9 minutes</li>
+<li>PASS 54 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>PASS 3 minutes</li>
+<li>PASS 3 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2025-10-02</li>
+</ul>
+<h3 id="error-2025-10-02t0134200000">Error 2025-10-02T01:34:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-10-02T01:34:20.1012070Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-10-02T01:34:20.1025908Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-10-02T01:34:20.1041264Z   
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-10-02T01:34:20.1041740Z     resource_stream_connection_test.go:153: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-10-02T01:34:20.1042172Z         
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-10-02T01:34:20.1042464Z         Error: error fetching resource
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-10-02T01:34:20.1042739Z         
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-10-02T01:34:20.1043113Z           with data.mongodbatlas_stream_connection.test,
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-10-02T01:34:20.1043757Z           on terraform_plugin_test.tf line 39, in data &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-10-02T01:34:20.1044338Z           39: data &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-10-02T01:34:20.1044648Z         
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-10-02T01:34:20.1045516Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68ddc6a2d2c00355743c1ebe/streams/test-acc-tf-s-9153079988273370027/connections/kafka-conn-ssl
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-10-02T01:34:20.1046426Z         GET: HTTP 404 Not Found (Error code: &quot;STREAM_CONNECTION_NOT_FOUND_FOR_NAME&quot;)
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2025-10-02T01:34:20.1047011Z         Detail: Stream connection with name kafka-conn-ssl for project
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2025-10-02T01:34:20.1047610Z         68ddc6a2d2c00355743c1ebe and name test-acc-tf-s-9153079988273370027 not
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>2025-10-02T01:34:20.1048380Z         found. Reason: Not Found. Params: [kafka-conn-ssl 68ddc6a2d2c00355743c1ebe
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>2025-10-02T01:34:20.1048939Z         test-acc-tf-s-9153079988273370027], BadRequestDetail: 
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>2025-10-02T01:34:20.1049520Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (1.42s)
+</code></pre></div>
+<ul>
+<li>2025-10-03 PASS 9 minutes</li>
+<li>2025-10-04 PASS 6 minutes</li>
+<li>2025-10-05 PASS 2 minutes</li>
+<li>2025-10-06 PASS 5 minutes</li>
+<li>2025-10-07</li>
+</ul>
+<h3 id="error-2025-10-07t0328020000">Error 2025-10-07T03:28:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-10-07T03:28:02.2692162Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-10-07T03:28:02.2701602Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-10-07T03:28:02.2723774Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-10-07T03:28:02.2724555Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-10-07T03:28:02.2725328Z         
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-10-07T03:28:02.2726376Z         Error: error creating MongoDB Network Peering Connection: timeout while waiting for state to become &#39;FAILED, AVAILABLE, PENDING_ACCEPTANCE&#39; (last state: &#39;INITIATING&#39;, timeout: 1h0m0s)
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-10-07T03:28:02.2727764Z         will run cleanup because delete_on_create_timeout is true. If you suspect a transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-10-07T03:28:02.2728397Z         
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-10-07T03:28:02.2728782Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-10-07T03:28:02.2729473Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-10-07T03:28:02.2730110Z           19:  resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-10-07T03:28:02.2730473Z         
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-10-07T03:28:02.2730806Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (3724.68s)
+</code></pre></div>
+<ul>
+<li>2025-10-08 PASS 4 minutes</li>
+<li>2025-10-09</li>
+</ul>
+<h3 id="error-2025-10-09t0251320000">Error 2025-10-09T02:51:32+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-10-09T02:51:32.9787897Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-10-09T02:51:32.9794280Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-10-09T02:51:32.9812420Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-10-09T02:51:32.9813171Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-10-09T02:51:32.9813762Z         
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-10-09T02:51:32.9815598Z         Error: error creating MongoDB Network Peering Container: https://cloud-dev.mongodb.com/api/atlas/v2/groups/68e70164c2a3cd1693043b7b/containers POST: HTTP 409 Conflict (Error code: &quot;CONTAINER_ALREADY_EXISTS&quot;) Detail: A container already exists for group 68e70164c2a3cd1693043b7b. Reason: Conflict. Params: [68e70164c2a3cd1693043b7b], BadRequestDetail: 
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-10-09T02:51:32.9816877Z         
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-10-09T02:51:32.9817233Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-10-09T02:51:32.9817890Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-10-09T02:51:32.9818501Z           12:  resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-10-09T02:51:32.9818828Z         
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-10-09T02:51:32.9819121Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (4.57s)
+</code></pre></div>
+<ul>
+<li>2025-10-10 PASS 4 minutes</li>
+<li>2025-10-11</li>
+</ul>
+<h3 id="error-2025-10-11t0047430000">Error 2025-10-11T00:47:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2025-10-11T00:47:43.3000834Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2025-10-11T00:47:43.3012867Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2025-10-11T00:47:43.3041785Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2025-10-11T00:47:43.3043026Z     resource_stream_connection_test.go:153: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2025-10-11T00:47:43.3043822Z         
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2025-10-11T00:47:43.3044342Z         Error: error fetching resource
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2025-10-11T00:47:43.3044832Z         
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2025-10-11T00:47:43.3045503Z           with data.mongodbatlas_stream_connection.test,
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2025-10-11T00:47:43.3046892Z           on terraform_plugin_test.tf line 39, in data &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2025-10-11T00:47:43.3047978Z           39: data &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2025-10-11T00:47:43.3048530Z         
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2025-10-11T00:47:43.3050135Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68e9a412e5f7141b76c016c6/streams/test-acc-tf-s-6205360719618264765/connections/kafka-conn-ssl
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2025-10-11T00:47:43.3051984Z         GET: HTTP 404 Not Found (Error code: &quot;STREAM_CONNECTION_NOT_FOUND_FOR_NAME&quot;)
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2025-10-11T00:47:43.3053232Z         Detail: Stream connection with name kafka-conn-ssl for project
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>2025-10-11T00:47:43.3054330Z         68e9a412e5f7141b76c016c6 and name test-acc-tf-s-6205360719618264765 not
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>2025-10-11T00:47:43.3055489Z         found. Reason: Not Found. Params: [kafka-conn-ssl 68e9a412e5f7141b76c016c6
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>2025-10-11T00:47:43.3056466Z         test-acc-tf-s-6205360719618264765], BadRequestDetail: 
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>2025-10-11T00:47:43.3057188Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (2.06s)
+</code></pre></div>
+<ul>
+<li>2025-10-12</li>
+</ul>
+<h3 id="error-2025-10-12t0246540000">Error 2025-10-12T02:46:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2025-10-12T02:46:54.3460148Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2025-10-12T02:46:54.3468531Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2025-10-12T02:46:54.3480137Z    test_name=TestAccStreamRSStreamConnection_kafkaPlaintext test_terraform_path=/home/runner/work/_temp/70fb9e8d-1575-45bc-ad16-1e16fa65f090/terraform test_working_directory=/tmp/plugintest221540032 test_step_number=1
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2025-10-12T02:46:54.3519541Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2025-10-12T02:46:54.3520276Z     resource_stream_connection_test.go:153: Step 2/3, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2025-10-12T02:46:54.3520822Z         
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2025-10-12T02:46:54.3523162Z         Error: error creating MongoDB Network Peering Container: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68eaf645bae6807c7549827a/containers POST: HTTP 409 Conflict (Error code: &quot;CONTAINER_ALREADY_EXISTS&quot;) Detail: A container already exists for group 68eaf645bae6807c7549827a. Reason: Conflict. Params: [68eaf645bae6807c7549827a], BadRequestDetail: 
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2025-10-12T02:46:54.3524882Z         
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2025-10-12T02:46:54.3525311Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2025-10-12T02:46:54.3525998Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2025-10-12T02:46:54.3526635Z           12:  resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2025-10-12T02:46:54.3526970Z         
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>2025-10-12T02:46:54.3527271Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (31.65s)
+</code></pre></div>
+<ul>
+<li>2025-10-13</li>
+</ul>
+<h3 id="error-2025-10-13t0100440000">Error 2025-10-13T01:00:44+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2025-10-13T01:00:44.5430896Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2025-10-13T01:00:44.5437262Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2025-10-13T01:00:44.5466740Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2025-10-13T01:00:44.5467373Z     resource_stream_connection_test.go:153: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2025-10-13T01:00:44.5467819Z         
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2025-10-13T01:00:44.5468142Z         Error: error creating resource
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2025-10-13T01:00:44.5468613Z         
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2025-10-13T01:00:44.5469020Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>2025-10-13T01:00:44.5469788Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>2025-10-13T01:00:44.5470486Z           12:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>2025-10-13T01:00:44.5470818Z         
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>2025-10-13T01:00:44.5471373Z         (504 Gateway Timeout) failed to decode response body: undefined response type
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>2025-10-13T01:00:44.5472316Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (300.81s)
+</code></pre></div>
+<ul>
+<li>2025-10-14 PASS 4 minutes</li>
+<li>2025-10-15 PASS 3 minutes</li>
+<li>2025-10-16 PASS 2 minutes</li>
+<li>2025-10-17 PASS 3 minutes</li>
+<li>2025-10-18 PASS 2 minutes</li>
+<li>2025-10-19</li>
+</ul>
+<h3 id="error-2025-10-19t0050120000">Error 2025-10-19T00:50:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2025-10-19T00:50:12.1472420Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>2025-10-19T00:50:12.1480247Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2025-10-19T00:50:12.1553725Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>2025-10-19T00:50:12.1554313Z     resource_stream_connection_test.go:256: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>2025-10-19T00:50:12.1554737Z         
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2025-10-19T00:50:12.1555019Z         Error: error creating resource
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2025-10-19T00:50:12.1555286Z         
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>2025-10-19T00:50:12.1555627Z           with mongodbatlas_stream_connection.test,
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>2025-10-19T00:50:12.1556276Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot;:
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>2025-10-19T00:50:12.1557226Z           12:      resource &quot;mongodbatlas_stream_connection&quot; &quot;test&quot; {
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2025-10-19T00:50:12.1557546Z         
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>2025-10-19T00:50:12.1558316Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68f43174353f113dafd15147/streams/test-acc-tf-s-3100645711005476142/connections
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>2025-10-19T00:50:12.1559142Z         POST: HTTP 404 Not Found (Error code: &quot;STREAM_TENANT_NOT_FOUND_FOR_NAME&quot;)
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>2025-10-19T00:50:12.1559746Z         Detail: Stream instance for project 68f43174353f113dafd15147 and name
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>2025-10-19T00:50:12.1560354Z         test-acc-tf-s-3100645711005476142 not found. Reason: Not Found. Params:
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>2025-10-19T00:50:12.1560924Z         [68f43174353f113dafd15147 test-acc-tf-s-3100645711005476142],
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>2025-10-19T00:50:12.1561317Z         BadRequestDetail: 
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>2025-10-19T00:50:12.1569519Z   
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>2025-10-19T00:50:12.1632279Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (1.53s)
+</code></pre></div>
+<ul>
+<li>2025-10-20</li>
+<li>PASS 2 minutes</li>
+<li>FAIL 6 minutes</li>
+</ul>
+<h3 id="error-2025-10-20t1049140000">Error 2025-10-20T10:49:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>2025-10-20T10:49:14.1997937Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2025-10-20T10:49:14.2018335Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>2025-10-20T10:49:14.2079706Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2025-10-20T10:49:14.2081127Z     resource_stream_connection_test.go:256: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>2025-10-20T10:49:14.2082023Z         
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2025-10-20T10:49:14.2083247Z         Error: error deleting MongoDB Network Peering Container (68f6117cde46041f566ad4d2): couldn&#39;t find resource (21 retries)
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>2025-10-20T10:49:14.2084188Z         
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>2025-10-20T10:49:14.2084690Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (418.64s)
+</code></pre></div>
+<ul>
+<li>2025-10-21 PASS 2 minutes</li>
+<li>2025-10-22</li>
+<li>PASS 2 minutes</li>
+<li>PASS 3 minutes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

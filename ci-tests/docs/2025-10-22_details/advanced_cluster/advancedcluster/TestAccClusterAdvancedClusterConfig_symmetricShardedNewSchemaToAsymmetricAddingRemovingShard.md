@@ -1,0 +1,55 @@
+# advanced_cluster/advancedcluster/TestAccClusterAdvancedClusterConfig_symmetricShardedNewSchemaToAsymmetricAddingRemovingShard Test Details
+# Found 44 TestRuns in dev, qa from 2025-09-23 to 2025-10-22 from master branch: 1 unique tests, PASS(x 44)
+Success rate: 100.00%
+
+## Timeline
+- 2025-09-22: MISSING
+- 2025-09-23 PASS 53 minutes
+- 2025-09-24 PASS 54 minutes
+- 2025-09-25 PASS 54 minutes
+- 2025-09-26 PASS 55 minutes
+- 2025-09-27 PASS 47 minutes
+- 2025-09-28 PASS 47 minutes
+- 2025-09-29
+  - PASS an hour
+  - PASS 44 minutes
+- 2025-09-30
+  - PASS 44 minutes
+  - PASS 42 minutes
+  - PASS 47 minutes
+  - PASS 44 minutes
+  - PASS 44 minutes
+- 2025-10-01
+  - PASS 47 minutes
+  - PASS 42 minutes
+  - PASS 59 minutes
+  - PASS 43 minutes
+  - PASS an hour
+  - PASS 42 minutes
+  - PASS 52 minutes
+  - PASS 44 minutes
+- 2025-10-02 PASS 56 minutes
+- 2025-10-03 PASS 46 minutes
+- 2025-10-04 PASS 49 minutes
+- 2025-10-05 PASS 43 minutes
+- 2025-10-06 PASS 57 minutes
+- 2025-10-07 PASS 55 minutes
+- 2025-10-08 PASS 51 minutes
+- 2025-10-09 PASS 3 hours
+- 2025-10-10 PASS 52 minutes
+- 2025-10-11 PASS 53 minutes
+- 2025-10-12 PASS 2 hours
+- 2025-10-13 PASS 55 minutes
+- 2025-10-14 PASS 48 minutes
+- 2025-10-15 PASS 50 minutes
+- 2025-10-16 PASS an hour
+- 2025-10-17 PASS 49 minutes
+- 2025-10-18 PASS 49 minutes
+- 2025-10-19 PASS 51 minutes
+- 2025-10-20
+  - PASS 48 minutes
+  - PASS 44 minutes
+- 2025-10-21 PASS 48 minutes
+- 2025-10-22
+  - PASS 50 minutes
+  - PASS 52 minutes

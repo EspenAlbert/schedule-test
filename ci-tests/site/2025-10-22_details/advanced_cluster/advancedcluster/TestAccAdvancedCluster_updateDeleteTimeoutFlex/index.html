@@ -1,0 +1,1029 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccAdvancedCluster_updateDeleteTimeoutFlex Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccadvancedcluster_updatedeletetimeoutflex-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccAdvancedCluster_updateDeleteTimeoutFlex Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccadvancedcluster_updatedeletetimeoutflex-test-details">advanced_cluster/advancedcluster/TestAccAdvancedCluster_updateDeleteTimeoutFlex Test Details</h1>
+<h1 id="found-44-testruns-in-dev-qa-from-2025-09-23-to-2025-10-22-from-master-branch-1-unique-tests-passx-25-failx-19">Found 44 TestRuns in dev, qa from 2025-09-23 to 2025-10-22 from master branch: 1 unique tests, PASS(x 25) FAIL(x 19)</h1>
+<p>Success rate: 56.82%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-09-23t0029040000">2025-09-23 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>19.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-24t0029070000">2025-09-24 00:29</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68d33ae9f1337d3c4efef982/flexClusters/test-acc-tf-1079068236688390093</td>
+<td>dev</td>
+<td>timeout</td>
+<td>20.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-25t0028330000">2025-09-25 00:28</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68d48c5982566875200506fb/flexClusters/test-acc-tf-2862852587231070769</td>
+<td>dev</td>
+<td>timeout</td>
+<td>19.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-26t0028500000">2025-09-26 00:28</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68d5ddea14f56c035e3737ee/flexClusters/test-acc-tf-1896775946036458904</td>
+<td>dev</td>
+<td>timeout</td>
+<td>29.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-27t0028040000">2025-09-27 00:28</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68d72f425ed71157b434545a/flexClusters/test-acc-tf-3705508254660325584</td>
+<td>dev</td>
+<td>timeout</td>
+<td>19.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-28t0031320000">2025-09-28 00:31</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68d88191e664a15fb5ae8fba/flexClusters/test-acc-tf-5706802194857857782</td>
+<td>qa</td>
+<td>timeout</td>
+<td>20.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-29t0030210000">2025-09-29 00:30</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68d9d2d497534351000fe34d/flexClusters/test-acc-tf-9032700843261008610</td>
+<td>dev</td>
+<td>timeout</td>
+<td>19.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-29t0711540000">2025-09-29 07:11</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68da30da9ae0ff3b55cf580b/flexClusters/test-acc-tf-6041718471757345987</td>
+<td>dev</td>
+<td>timeout</td>
+<td>20.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0029310000">2025-09-30 00:29</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68db2402ff1f6011517a7e2f/flexClusters/test-acc-tf-5896570181382843580</td>
+<td>dev</td>
+<td>timeout</td>
+<td>19.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0731220000">2025-09-30 07:31</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68db86ecf2e0c5381c1202de/flexClusters/test-acc-tf-3624604560633559585</td>
+<td>dev</td>
+<td>timeout</td>
+<td>19.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0743410000">2025-09-30 07:43</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68db89d6bb7b8c0d7034aa99/flexClusters/test-acc-tf-7120995244835794743</td>
+<td>qa</td>
+<td>timeout</td>
+<td>21.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t0911270000">2025-09-30 09:11</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68db9e59f2e0c5381c1330c1/flexClusters/test-acc-tf-7808478731773462451</td>
+<td>dev</td>
+<td>timeout</td>
+<td>18.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t1508020000">2025-09-30 15:08</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68dbf200ce185e38b70f0d81/flexClusters/test-acc-tf-4026581415522354496</td>
+<td>qa</td>
+<td>timeout</td>
+<td>19.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0030010000">2025-10-01 00:30</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68dc75b40c72c45ec9a90b26/flexClusters/test-acc-tf-6840828070108141604</td>
+<td>dev</td>
+<td>timeout</td>
+<td>18.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0323590000">2025-10-01 03:23</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>18.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0456430000">2025-10-01 04:56</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68dcb42d5a2f96450020b4cb/flexClusters/test-acc-tf-2004656689855192247</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>19.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0730000000">2025-10-01 07:30</a></td>
+<td>ATLAS_GENERAL_ERROR /api/atlas/v2/groups/68dcd8215b2d552e98f9bb7c/flexClusters/test-acc-tf-1038707880225857862</td>
+<td>dev</td>
+<td>timeout</td>
+<td>22.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t1421470000">2025-10-01 14:21</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>19.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-05t0031260000">2025-10-05 00:31</a></td>
+<td></td>
+<td>qa</td>
+<td></td>
+<td>4.05s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-09-22: MISSING</li>
+<li>2025-09-23</li>
+</ul>
+<h3 id="error-2025-09-23t0029040000">Error 2025-09-23T00:29:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-09-23T00:29:04.2269472Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-09-23T00:29:04.2767560Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-09-23T00:29:22.4389083Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-09-23T00:29:22.4390077Z     resource_test.go:2894: Step 2/4, expected an error but got none
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-09-23T00:29:24.0313410Z    test_working_directory=/tmp/plugintest2923122857 test_step_number=2 test_name=TestAccAdvancedCluster_updateDeleteTimeoutFlex test_terraform_path=/home/runner/work/_temp/bc12ce55-01ec-4fcd-86d4-b55b5775a209/terraform
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-09-23T00:29:24.0315311Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-09-23T00:29:24.0316371Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-09-23T00:29:24.0316831Z         Error: Error in flex delete
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-09-23T00:29:24.0317266Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-09-23T00:29:24.0317827Z         cluster name: test-acc-tf-6925494853873653424, API error details: timeout
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-09-23T00:29:24.0318575Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-09-23T00:29:24.0319028Z         1s)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-09-23T00:29:24.0319383Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.80s)
+</code></pre></div>
+<ul>
+<li>2025-09-24</li>
+</ul>
+<h3 id="error-2025-09-24t0029070000">Error 2025-09-24T00:29:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-09-24T00:29:07.3640677Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-09-24T00:29:07.3664438Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-09-24T00:29:27.2837748Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-09-24T00:29:27.2838671Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-09-24T00:29:27.2839406Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-09-24T00:29:27.2839752Z         Error: Error in flex delete
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-09-24T00:29:27.2840126Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-09-24T00:29:27.2840673Z         cluster name: test-acc-tf-1079068236688390093, API error details: timeout
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-09-24T00:29:27.2841460Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-09-24T00:29:27.2841892Z         1s)
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-09-24T00:29:27.6860921Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-09-24T00:29:27.6861624Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-09-24T00:29:27.6862125Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-09-24T00:29:27.6862409Z         Error: Error in flex delete
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-09-24T00:29:27.6862695Z         
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-09-24T00:29:27.6863140Z         cluster name: test-acc-tf-1079068236688390093, API error details:
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-09-24T00:29:27.6864157Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d33ae9f1337d3c4efef982/flexClusters/test-acc-tf-1079068236688390093
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-09-24T00:29:27.6865267Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-09-24T00:29:27.6865982Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-09-24T00:29:27.6866642Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2025-09-24T00:29:27.6867156Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (20.32s)
+</code></pre></div>
+<ul>
+<li>2025-09-25</li>
+</ul>
+<h3 id="error-2025-09-25t0028330000">Error 2025-09-25T00:28:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-09-25T00:28:33.9842418Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-09-25T00:28:33.9949157Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-09-25T00:28:53.0221528Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-09-25T00:28:53.0222449Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-09-25T00:28:53.0223076Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-09-25T00:28:53.0223424Z         Error: Error in flex delete
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-09-25T00:28:53.0223685Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-09-25T00:28:53.0224351Z         cluster name: test-acc-tf-2862852587231070769, API error details: timeout
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-09-25T00:28:53.0225418Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-09-25T00:28:53.0226088Z         1s)
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-09-25T00:28:53.3062270Z    test_terraform_path=/home/runner/work/_temp/0237f545-6758-4e06-85c6-853b206110d7/terraform test_working_directory=/tmp/plugintest2122623731
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-09-25T00:28:53.3063344Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-09-25T00:28:53.3063777Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-09-25T00:28:53.3064035Z         Error: Error in flex delete
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-09-25T00:28:53.3064287Z         
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-09-25T00:28:53.3064681Z         cluster name: test-acc-tf-2862852587231070769, API error details:
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-09-25T00:28:53.3065546Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d48c5982566875200506fb/flexClusters/test-acc-tf-2862852587231070769
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-09-25T00:28:53.3066312Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-09-25T00:28:53.3066931Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2025-09-25T00:28:53.3067498Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2025-09-25T00:28:53.3067931Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.32s)
+</code></pre></div>
+<ul>
+<li>2025-09-26</li>
+</ul>
+<h3 id="error-2025-09-26t0028500000">Error 2025-09-26T00:28:50+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-09-26T00:28:50.9785062Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-09-26T00:28:50.9838957Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-09-26T00:29:19.7263760Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-09-26T00:29:19.7264984Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-09-26T00:29:19.7266049Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-09-26T00:29:19.7266518Z         Error: Error in flex delete
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-09-26T00:29:19.7266819Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-09-26T00:29:19.7267268Z         cluster name: test-acc-tf-1896775946036458904, API error details: timeout
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-09-26T00:29:19.7267902Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-09-26T00:29:19.7268400Z         1s)
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-09-26T00:29:20.0576291Z    test_working_directory=/tmp/plugintest4023161784 test_step_number=3 test_name=TestAccAdvancedCluster_updateDeleteTimeoutFlex test_terraform_path=/home/runner/work/_temp/5e9fd989-fbdf-4391-bea5-8b2a71aedad0/terraform
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-09-26T00:29:20.0577445Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-09-26T00:29:20.0577870Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-09-26T00:29:20.0578128Z         Error: Error in flex delete
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-09-26T00:29:20.0578388Z         
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-09-26T00:29:20.0578781Z         cluster name: test-acc-tf-1896775946036458904, API error details:
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-09-26T00:29:20.0579670Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d5ddea14f56c035e3737ee/flexClusters/test-acc-tf-1896775946036458904
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-09-26T00:29:20.0580465Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-09-26T00:29:20.0581096Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-09-26T00:29:20.0581682Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2025-09-26T00:29:20.0582133Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (29.08s)
+</code></pre></div>
+<ul>
+<li>2025-09-27</li>
+</ul>
+<h3 id="error-2025-09-27t0028040000">Error 2025-09-27T00:28:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-09-27T00:28:04.6014015Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-09-27T00:28:04.6026242Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-09-27T00:28:23.6017158Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-09-27T00:28:23.6018321Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-09-27T00:28:23.6019126Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-09-27T00:28:23.6019569Z         Error: Error in flex delete
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-09-27T00:28:23.6020028Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-09-27T00:28:23.6020773Z         cluster name: test-acc-tf-3705508254660325584, API error details: timeout
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-09-27T00:28:23.6021637Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-09-27T00:28:23.6022127Z         1s)
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-09-27T00:28:23.9162870Z    test_step_number=3
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-09-27T00:28:23.9163385Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-09-27T00:28:23.9163816Z         
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-09-27T00:28:23.9164077Z         Error: Error in flex delete
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-09-27T00:28:23.9164326Z         
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-09-27T00:28:23.9164711Z         cluster name: test-acc-tf-3705508254660325584, API error details:
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-09-27T00:28:23.9165564Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d72f425ed71157b434545a/flexClusters/test-acc-tf-3705508254660325584
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-09-27T00:28:23.9166348Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2025-09-27T00:28:23.9167202Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2025-09-27T00:28:23.9167989Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2025-09-27T00:28:23.9168435Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.31s)
+</code></pre></div>
+<ul>
+<li>2025-09-28</li>
+</ul>
+<h3 id="error-2025-09-28t0031320000">Error 2025-09-28T00:31:32+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-09-28T00:31:32.0948184Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-09-28T00:31:32.1011264Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-09-28T00:31:52.1575662Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-09-28T00:31:52.1576810Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-09-28T00:31:52.1577616Z         
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-09-28T00:31:52.1578081Z         Error: Error in flex delete
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-09-28T00:31:52.1578526Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-09-28T00:31:52.1579320Z         cluster name: test-acc-tf-5706802194857857782, API error details: timeout
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-09-28T00:31:52.1580379Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-09-28T00:31:52.1581089Z         1s)
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-09-28T00:31:52.5669282Z   
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-09-28T00:31:52.5669779Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-09-28T00:31:52.5670233Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-09-28T00:31:52.5670491Z         Error: Error in flex delete
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-09-28T00:31:52.5671006Z         
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-09-28T00:31:52.5671424Z         cluster name: test-acc-tf-5706802194857857782, API error details:
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-09-28T00:31:52.5672317Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68d88191e664a15fb5ae8fba/flexClusters/test-acc-tf-5706802194857857782
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-09-28T00:31:52.5673109Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2025-09-28T00:31:52.5673733Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2025-09-28T00:31:52.5674308Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2025-09-28T00:31:52.5674741Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (20.47s)
+</code></pre></div>
+<ul>
+<li>2025-09-29</li>
+<li>FAIL 19 seconds</li>
+</ul>
+<h3 id="error-2025-09-29t0030210000">Error 2025-09-29T00:30:21+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-09-29T00:30:21.7034039Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-09-29T00:30:21.7573133Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-09-29T00:30:41.0038254Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-09-29T00:30:41.0040678Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-09-29T00:30:41.0041440Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-09-29T00:30:41.0041858Z         Error: Error in flex delete
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-09-29T00:30:41.0042275Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-09-29T00:30:41.0042987Z         cluster name: test-acc-tf-9032700843261008610, API error details: timeout
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-09-29T00:30:41.0044125Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-09-29T00:30:41.0044527Z         1s)
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-09-29T00:30:41.3041972Z   
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-09-29T00:30:41.3042460Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-09-29T00:30:41.3042880Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-09-29T00:30:41.3043141Z         Error: Error in flex delete
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-09-29T00:30:41.3043391Z         
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-09-29T00:30:41.3044044Z         cluster name: test-acc-tf-9032700843261008610, API error details:
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-09-29T00:30:41.3044934Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68d9d2d497534351000fe34d/flexClusters/test-acc-tf-9032700843261008610
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-09-29T00:30:41.3045723Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2025-09-29T00:30:41.3046341Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2025-09-29T00:30:41.3046912Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>2025-09-29T00:30:41.3047354Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.59s)
+</code></pre></div>
+<ul>
+<li>FAIL 20 seconds</li>
+</ul>
+<h3 id="error-2025-09-29t0711540000">Error 2025-09-29T07:11:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-09-29T07:11:54.8039904Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-09-29T07:11:54.8043943Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-09-29T07:12:15.0151752Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-09-29T07:12:15.0153155Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-09-29T07:12:15.0153994Z         
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-09-29T07:12:15.0154475Z         Error: Error in flex delete
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-09-29T07:12:15.0154953Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-09-29T07:12:15.0155753Z         cluster name: test-acc-tf-6041718471757345987, API error details: timeout
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-09-29T07:12:15.0156900Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-09-29T07:12:15.0157609Z         1s)
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-09-29T07:12:15.4259261Z   
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-09-29T07:12:15.4259755Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-09-29T07:12:15.4260210Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-09-29T07:12:15.4260484Z         Error: Error in flex delete
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-09-29T07:12:15.4260748Z         
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-09-29T07:12:15.4261155Z         cluster name: test-acc-tf-6041718471757345987, API error details:
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-09-29T07:12:15.4262279Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68da30da9ae0ff3b55cf580b/flexClusters/test-acc-tf-6041718471757345987
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-09-29T07:12:15.4263088Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2025-09-29T07:12:15.4263716Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2025-09-29T07:12:15.4264299Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>2025-09-29T07:12:15.4264745Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (20.62s)
+</code></pre></div>
+<ul>
+<li>2025-09-30</li>
+<li>FAIL 19 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t0029310000">Error 2025-09-30T00:29:31+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-09-30T00:29:31.8546753Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-09-30T00:29:31.8813716Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-09-30T00:29:50.7282123Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-09-30T00:29:50.7283446Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-09-30T00:29:50.7284286Z         
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-09-30T00:29:50.7284745Z         Error: Error in flex delete
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-09-30T00:29:50.7285144Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-09-30T00:29:50.7285729Z         cluster name: test-acc-tf-5896570181382843580, API error details: timeout
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-09-30T00:29:50.7286488Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-09-30T00:29:50.7286923Z         1s)
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-09-30T00:29:51.0060121Z    test_terraform_path=/home/runner/work/_temp/0bbcefcd-82b4-418c-b7b7-b980a1f9d0f5/terraform test_name=TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-09-30T00:29:51.0061188Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-09-30T00:29:51.0061621Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-09-30T00:29:51.0061881Z         Error: Error in flex delete
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-09-30T00:29:51.0062131Z         
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-09-30T00:29:51.0063084Z         cluster name: test-acc-tf-5896570181382843580, API error details:
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-09-30T00:29:51.0063985Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68db2402ff1f6011517a7e2f/flexClusters/test-acc-tf-5896570181382843580
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-09-30T00:29:51.0064771Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2025-09-30T00:29:51.0065411Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>2025-09-30T00:29:51.0065995Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>2025-09-30T00:29:51.0066431Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.15s)
+</code></pre></div>
+<ul>
+<li>FAIL 19 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t0731220000">Error 2025-09-30T07:31:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-09-30T07:31:22.1007402Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-09-30T07:31:22.1134146Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-09-30T07:31:41.1264546Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-09-30T07:31:41.1265819Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-09-30T07:31:41.1266865Z         
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-09-30T07:31:41.1267322Z         Error: Error in flex delete
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-09-30T07:31:41.1267741Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-09-30T07:31:41.1268243Z         cluster name: test-acc-tf-3624604560633559585, API error details: timeout
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-09-30T07:31:41.1268956Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-09-30T07:31:41.1269422Z         1s)
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-09-30T07:31:41.5041593Z   
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-09-30T07:31:41.5042081Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-09-30T07:31:41.5042516Z         
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-09-30T07:31:41.5042782Z         Error: Error in flex delete
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-09-30T07:31:41.5043043Z         
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-09-30T07:31:41.5043447Z         cluster name: test-acc-tf-3624604560633559585, API error details:
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2025-09-30T07:31:41.5044315Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68db86ecf2e0c5381c1202de/flexClusters/test-acc-tf-3624604560633559585
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2025-09-30T07:31:41.5045113Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2025-09-30T07:31:41.5045747Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>2025-09-30T07:31:41.5046331Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>2025-09-30T07:31:41.5047046Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.39s)
+</code></pre></div>
+<ul>
+<li>FAIL 21 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t0743410000">Error 2025-09-30T07:43:41+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-09-30T07:43:41.5070609Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-09-30T07:43:41.5309169Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-09-30T07:44:02.9001348Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-09-30T07:44:02.9002202Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-09-30T07:44:02.9002913Z         
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-09-30T07:44:02.9003252Z         Error: Error in flex delete
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-09-30T07:44:02.9003562Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-09-30T07:44:02.9004028Z         cluster name: test-acc-tf-7120995244835794743, API error details: timeout
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-09-30T07:44:02.9004716Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-09-30T07:44:02.9005194Z         1s)
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-09-30T07:44:03.4331618Z    test_working_directory=/tmp/plugintest2014207463 test_step_number=3 test_name=TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-09-30T07:44:03.4332497Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-09-30T07:44:03.4332936Z         
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-09-30T07:44:03.4333198Z         Error: Error in flex delete
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-09-30T07:44:03.4333456Z         
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2025-09-30T07:44:03.4333855Z         cluster name: test-acc-tf-7120995244835794743, API error details:
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2025-09-30T07:44:03.4334735Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68db89d6bb7b8c0d7034aa99/flexClusters/test-acc-tf-7120995244835794743
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2025-09-30T07:44:03.4335520Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2025-09-30T07:44:03.4336402Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>2025-09-30T07:44:03.4337018Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>2025-09-30T07:44:03.4337467Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (21.90s)
+</code></pre></div>
+<ul>
+<li>FAIL 18 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t0911270000">Error 2025-09-30T09:11:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-09-30T09:11:27.4751580Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-09-30T09:11:27.4982237Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-09-30T09:11:45.9531641Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-09-30T09:11:45.9532660Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-09-30T09:11:45.9533363Z         
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-09-30T09:11:45.9533711Z         Error: Error in flex delete
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-09-30T09:11:45.9533995Z         
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-09-30T09:11:45.9534459Z         cluster name: test-acc-tf-7808478731773462451, API error details: timeout
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-09-30T09:11:45.9535230Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-09-30T09:11:45.9535688Z         1s)
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-09-30T09:11:46.2747818Z    test_working_directory=/tmp/plugintest786019688 test_step_number=3 test_name=TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-09-30T09:11:46.2748867Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-09-30T09:11:46.2749306Z         
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2025-09-30T09:11:46.2749564Z         Error: Error in flex delete
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2025-09-30T09:11:46.2749818Z         
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>2025-09-30T09:11:46.2750218Z         cluster name: test-acc-tf-7808478731773462451, API error details:
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>2025-09-30T09:11:46.2751108Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68db9e59f2e0c5381c1330c1/flexClusters/test-acc-tf-7808478731773462451
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>2025-09-30T09:11:46.2752475Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>2025-09-30T09:11:46.2753128Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>2025-09-30T09:11:46.2753720Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>2025-09-30T09:11:46.2754174Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (18.79s)
+</code></pre></div>
+<ul>
+<li>FAIL 19 seconds</li>
+</ul>
+<h3 id="error-2025-09-30t1508020000">Error 2025-09-30T15:08:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-09-30T15:08:02.5601710Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-09-30T15:08:02.5678737Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-09-30T15:08:21.3467673Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-09-30T15:08:21.3468493Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-09-30T15:08:21.3469179Z         
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-09-30T15:08:21.3469443Z         Error: Error in flex delete
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-09-30T15:08:21.3469796Z         
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-09-30T15:08:21.3470341Z         cluster name: test-acc-tf-4026581415522354496, API error details: timeout
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-09-30T15:08:21.3471407Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-09-30T15:08:21.3471804Z         1s)
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-09-30T15:08:21.6790725Z    test_terraform_path=/home/runner/work/_temp/ea63cb1b-093e-438d-9c0c-23475ed11321/terraform test_working_directory=/tmp/plugintest375829589 test_step_number=3 test_name=TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-09-30T15:08:21.6792290Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-09-30T15:08:21.6792722Z         
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>2025-09-30T15:08:21.6792979Z         Error: Error in flex delete
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>2025-09-30T15:08:21.6793226Z         
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>2025-09-30T15:08:21.6793624Z         cluster name: test-acc-tf-4026581415522354496, API error details:
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>2025-09-30T15:08:21.6794692Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68dbf200ce185e38b70f0d81/flexClusters/test-acc-tf-4026581415522354496
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>2025-09-30T15:08:21.6795474Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>2025-09-30T15:08:21.6796108Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>2025-09-30T15:08:21.6796684Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>2025-09-30T15:08:21.6797120Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.12s)
+</code></pre></div>
+<ul>
+<li>2025-10-01</li>
+<li>FAIL 18 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0030010000">Error 2025-10-01T00:30:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-10-01T00:30:01.0205138Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-10-01T00:30:01.0307033Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-10-01T00:30:19.5862783Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-10-01T00:30:19.5864118Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-10-01T00:30:19.5865133Z         
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-10-01T00:30:19.5865602Z         Error: Error in flex delete
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-10-01T00:30:19.5865870Z         
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-10-01T00:30:19.5866438Z         cluster name: test-acc-tf-6840828070108141604, API error details: timeout
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-10-01T00:30:19.5867191Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-10-01T00:30:19.5867582Z         1s)
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-10-01T00:30:19.8808510Z   
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-10-01T00:30:19.8809029Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2025-10-01T00:30:19.8809456Z         
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>2025-10-01T00:30:19.8809716Z         Error: Error in flex delete
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>2025-10-01T00:30:19.8809969Z         
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>2025-10-01T00:30:19.8810373Z         cluster name: test-acc-tf-6840828070108141604, API error details:
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>2025-10-01T00:30:19.8811261Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68dc75b40c72c45ec9a90b26/flexClusters/test-acc-tf-6840828070108141604
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>2025-10-01T00:30:19.8812055Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>2025-10-01T00:30:19.8812706Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>2025-10-01T00:30:19.8813282Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>2025-10-01T00:30:19.8813723Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (18.85s)
+</code></pre></div>
+<ul>
+<li>FAIL 18 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0323590000">Error 2025-10-01T03:23:59+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2025-10-01T03:23:59.4793133Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2025-10-01T03:23:59.4914942Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2025-10-01T03:24:16.0286730Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2025-10-01T03:24:16.0287585Z     resource_test.go:2894: Step 2/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2025-10-01T03:24:16.0288159Z         
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2025-10-01T03:24:16.0288586Z         Error: error updating flex cluster: test-acc-tf-6204249610793280964
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2025-10-01T03:24:16.0289056Z         
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2025-10-01T03:24:16.0289384Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2025-10-01T03:24:16.0290175Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2025-10-01T03:24:16.0290900Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2025-10-01T03:24:16.0291257Z         
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2025-10-01T03:24:16.0292058Z         unexpected state &#39;CREATING&#39;, wanted target &#39;IDLE&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2025-10-01T03:24:17.6437292Z   
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2025-10-01T03:24:17.6438112Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>2025-10-01T03:24:17.6438827Z         
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>2025-10-01T03:24:17.6439242Z         Error: Error in flex delete
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>2025-10-01T03:24:17.6439648Z         
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>2025-10-01T03:24:17.6440920Z         cluster name: test-acc-tf-6204249610793280964, API error details: timeout
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>2025-10-01T03:24:17.6442191Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>2025-10-01T03:24:17.6442818Z         1s)
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>2025-10-01T03:24:17.6443301Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (18.16s)
+</code></pre></div>
+<ul>
+<li>FAIL 19 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0456430000">Error 2025-10-01T04:56:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2025-10-01T04:56:43.0197561Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2025-10-01T04:56:43.0295647Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2025-10-01T04:57:02.0088548Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2025-10-01T04:57:02.0089760Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2025-10-01T04:57:02.0090606Z         
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2025-10-01T04:57:02.0091047Z         Error: Error in flex delete
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2025-10-01T04:57:02.0091425Z         
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2025-10-01T04:57:02.0091864Z         cluster name: test-acc-tf-2004656689855192247, API error details: timeout
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2025-10-01T04:57:02.0092658Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2025-10-01T04:57:02.0093190Z         1s)
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2025-10-01T04:57:02.3250027Z   
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2025-10-01T04:57:02.3250720Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>2025-10-01T04:57:02.3251159Z         
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>2025-10-01T04:57:02.3251429Z         Error: Error in flex delete
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>2025-10-01T04:57:02.3251687Z         
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>2025-10-01T04:57:02.3252091Z         cluster name: test-acc-tf-2004656689855192247, API error details:
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>2025-10-01T04:57:02.3252974Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68dcb42d5a2f96450020b4cb/flexClusters/test-acc-tf-2004656689855192247
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>2025-10-01T04:57:02.3254111Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>2025-10-01T04:57:02.3254759Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>2025-10-01T04:57:02.3255338Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>2025-10-01T04:57:02.3255781Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.30s)
+</code></pre></div>
+<ul>
+<li>FAIL 22 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t0730000000">Error 2025-10-01T07:30:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2025-10-01T07:30:00.8525560Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2025-10-01T07:30:00.8668614Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2025-10-01T07:30:22.5753052Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2025-10-01T07:30:22.5754284Z     resource_test.go:2894: Step 3/4, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2025-10-01T07:30:22.5754997Z         
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2025-10-01T07:30:22.5755277Z         Error: Error in flex delete
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2025-10-01T07:30:22.5755548Z         
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2025-10-01T07:30:22.5756106Z         cluster name: test-acc-tf-1038707880225857862, API error details: timeout
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>2025-10-01T07:30:22.5756864Z         while waiting for state to become &#39;DELETED&#39; (last state: &#39;DELETING&#39;, timeout:
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>2025-10-01T07:30:22.5757325Z         1s)
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>2025-10-01T07:30:23.1315859Z    test_step_number=3 test_name=TestAccAdvancedCluster_updateDeleteTimeoutFlex test_terraform_path=/home/runner/work/_temp/fac34d8f-e8a1-4d27-bbca-54dc189c82a4/terraform test_working_directory=/tmp/plugintest286521140
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>2025-10-01T07:30:23.1317467Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>2025-10-01T07:30:23.1317992Z         
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>2025-10-01T07:30:23.1318300Z         Error: Error in flex delete
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>2025-10-01T07:30:23.1318606Z         
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>2025-10-01T07:30:23.1319089Z         cluster name: test-acc-tf-1038707880225857862, API error details:
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>2025-10-01T07:30:23.1320179Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68dcd8215b2d552e98f9bb7c/flexClusters/test-acc-tf-1038707880225857862
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>2025-10-01T07:30:23.1321126Z         DELETE: HTTP 400 Bad Request (Error code: &quot;ATLAS_GENERAL_ERROR&quot;) Detail:
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>2025-10-01T07:30:23.1321768Z         Reason: Cluster already requested to be deleted. Reason: Bad Request. Params:
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>2025-10-01T07:30:23.1322360Z         [Cluster already requested to be deleted], BadRequestDetail: 
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>2025-10-01T07:30:23.1322818Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (22.27s)
+</code></pre></div>
+<ul>
+<li>PASS 21 seconds</li>
+<li>PASS 21 seconds</li>
+<li>PASS 20 seconds</li>
+<li>FAIL 19 seconds</li>
+</ul>
+<h3 id="error-2025-10-01t1421470000">Error 2025-10-01T14:21:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2025-10-01T14:21:47.1168461Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>2025-10-01T14:21:47.1230467Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2025-10-01T14:22:06.8022940Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>2025-10-01T14:22:06.8023813Z     resource_test.go:2896: Step 4/4 error: Error running pre-apply plan: exit status 1
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>2025-10-01T14:22:06.8024329Z         
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2025-10-01T14:22:06.8024747Z         Error: Unsupported block type
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2025-10-01T14:22:06.8025017Z         
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>2025-10-01T14:22:06.8025729Z           on terraform_plugin_test.tf line 12:
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>2025-10-01T14:22:06.8026052Z           12:      removed {
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>2025-10-01T14:22:06.8026351Z         
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2025-10-01T14:22:06.8026779Z         Blocks of type &quot;removed&quot; are not expected here. Did you mean &quot;moved&quot;?
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>2025-10-01T14:22:06.8278538Z   
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>2025-10-01T14:22:06.8278999Z     panic.go:615: Error retrieving state, there may be dangling resources: exit status 1
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>2025-10-01T14:22:06.8279401Z         
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>2025-10-01T14:22:06.8279675Z         Error: Unsupported block type
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>2025-10-01T14:22:06.8279941Z         
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>2025-10-01T14:22:06.8280243Z           on terraform_plugin_test.tf line 12:
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>2025-10-01T14:22:06.8280563Z           12:      removed {
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>2025-10-01T14:22:06.8280788Z         
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>2025-10-01T14:22:06.8281199Z         Blocks of type &quot;removed&quot; are not expected here. Did you mean &quot;moved&quot;?
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>2025-10-01T14:22:06.8281660Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (19.71s)
+</code></pre></div>
+<ul>
+<li>2025-10-02 PASS 19 seconds</li>
+<li>2025-10-03 PASS 22 seconds</li>
+<li>2025-10-04 PASS 20 seconds</li>
+<li>2025-10-05</li>
+</ul>
+<h3 id="error-2025-10-05t0031260000">Error 2025-10-05T00:31:26+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>2025-10-05T00:31:26.3837838Z === RUN   TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2025-10-05T00:31:26.4135680Z === CONT  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>2025-10-05T00:31:30.7441871Z === NAME  TestAccAdvancedCluster_updateDeleteTimeoutFlex
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2025-10-05T00:31:30.7443165Z     resource_test.go:2896: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>2025-10-05T00:31:30.7443845Z         
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2025-10-05T00:31:30.7479798Z         Error: error creating flex cluster: Cluster name test-acc-tf-3638054612423725528 (project_id=68e1bc02f758b3057a1af960).
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>2025-10-05T00:31:30.7480739Z         
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>2025-10-05T00:31:30.7481328Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>2025-10-05T00:31:30.7482475Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>2025-10-05T00:31:30.7483581Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>2025-10-05T00:31:30.7484621Z         
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>2025-10-05T00:31:30.7485719Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68e1bc02f758b3057a1af960/flexClusters
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>2025-10-05T00:31:30.7486669Z         POST: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>2025-10-05T00:31:30.7487560Z         &quot;ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED&quot;) Detail: Invalid
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>2025-10-05T00:31:30.7488645Z         Configuration. Contains selections that are unavailable due to your
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>2025-10-05T00:31:30.7489683Z         organization&#39;s resource policies. Reason: Forbidden. Params: [],
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>2025-10-05T00:31:30.7490410Z         BadRequestDetail: 
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>2025-10-05T00:31:30.7878368Z    test_name=TestAccAdvancedCluster_moveBasic
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>2025-10-05T00:31:30.9123609Z --- FAIL: TestAccAdvancedCluster_updateDeleteTimeoutFlex (4.52s)
+</code></pre></div>
+<ul>
+<li>2025-10-06 PASS 19 seconds</li>
+<li>2025-10-07 PASS 49 seconds</li>
+<li>2025-10-08 PASS a minute</li>
+<li>2025-10-09 PASS 5 minutes</li>
+<li>2025-10-10 PASS a minute</li>
+<li>2025-10-11 PASS a minute</li>
+<li>2025-10-12 PASS 14 seconds</li>
+<li>2025-10-13 PASS 22 seconds</li>
+<li>2025-10-14 PASS 30 seconds</li>
+<li>2025-10-15 PASS 20 seconds</li>
+<li>2025-10-16 PASS 19 seconds</li>
+<li>2025-10-17 PASS 32 seconds</li>
+<li>2025-10-18 PASS 19 seconds</li>
+<li>2025-10-19 PASS 29 seconds</li>
+<li>2025-10-20</li>
+<li>PASS 28 seconds</li>
+<li>PASS 29 seconds</li>
+<li>2025-10-21 PASS 19 seconds</li>
+<li>2025-10-22</li>
+<li>PASS 32 seconds</li>
+<li>PASS 20 seconds</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

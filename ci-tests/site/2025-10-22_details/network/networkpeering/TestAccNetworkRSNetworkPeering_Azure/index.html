@@ -1,0 +1,1181 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>network/networkpeering/TestAccNetworkRSNetworkPeering_Azure Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#networknetworkpeeringtestaccnetworkrsnetworkpeering_azure-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              network/networkpeering/TestAccNetworkRSNetworkPeering_Azure Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="networknetworkpeeringtestaccnetworkrsnetworkpeering_azure-test-details">network/networkpeering/TestAccNetworkRSNetworkPeering_Azure Test Details</h1>
+<h1 id="found-43-testruns-in-dev-qa-from-2025-09-23-to-2025-10-22-from-master-branch-1-unique-tests-failx-31-passx-12">Found 43 TestRuns in dev, qa from 2025-09-23 to 2025-10-22 from master branch: 1 unique tests, FAIL(x 31) PASS(x 12)</h1>
+<p>Success rate: 27.91%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-09-30t0754340000">2025-09-30 07:54</a></td>
+<td>AZURE_CUSTOMER_NETWORK_UNREACHABLE /api/atlas/v2/groups/68db89c1bb7b8c0d703483ec/peers</td>
+<td>qa</td>
+<td></td>
+<td>125.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-09-30t1519070000">2025-09-30 15:19</a></td>
+<td>AZURE_CUSTOMER_NETWORK_UNREACHABLE /api/atlas/v2/groups/68dbf1f2ce185e38b70f0148/peers</td>
+<td>qa</td>
+<td></td>
+<td>125.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0040370000">2025-10-01 00:40</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>239.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0334370000">2025-10-01 03:34</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>253.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0507160000">2025-10-01 05:07</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>259.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0822380000">2025-10-01 08:22</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>255.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t0921540000">2025-10-01 09:21</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>248.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t1053080000">2025-10-01 10:53</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>247.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t1200480000">2025-10-01 12:00</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>239.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-01t1427050000">2025-10-01 14:27</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>256.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-02t0128350000">2025-10-02 01:28</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>255.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-03t0120270000">2025-10-03 01:20</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>248.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-04t0128000000">2025-10-04 01:28</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>693.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-05t0041500000">2025-10-05 00:41</a></td>
+<td>AZURE_CUSTOMER_NETWORK_UNREACHABLE /api/atlas/v2/groups/68e1bbe6f758b3057a1ac13d/peers</td>
+<td>qa</td>
+<td></td>
+<td>124.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-06t0040510000">2025-10-06 00:40</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>252.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-07t0129370000">2025-10-07 01:29</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>311.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-08t0040200000">2025-10-08 00:40</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>331.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-09t0039280000">2025-10-09 00:39</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>581.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-10t0040120000">2025-10-10 00:40</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>452.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-11t0038050000">2025-10-11 00:38</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>442.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-12t0041110000">2025-10-12 00:41</a></td>
+<td>AZURE_CUSTOMER_NETWORK_UNREACHABLE /api/atlas/v2/groups/68eaf637bae6807c754957c7/peers</td>
+<td>qa</td>
+<td></td>
+<td>125.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-13t0042010000">2025-10-13 00:42</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>260.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-13t1515090000">2025-10-13 15:15</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>260.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-14t0040110000">2025-10-14 00:40</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>243.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-15t0040480000">2025-10-15 00:40</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>251.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-16t0042310000">2025-10-16 00:42</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>242.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-17t0042080000">2025-10-17 00:42</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>255.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-18t0035070000">2025-10-18 00:35</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>249.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-19t0043550000">2025-10-19 00:43</a></td>
+<td>AZURE_CUSTOMER_NETWORK_UNREACHABLE /api/atlas/v2/groups/68f4316321ed692ad0016104/peers</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>125.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-20t0042480000">2025-10-20 00:42</a></td>
+<td></td>
+<td>dev</td>
+<td>dangling_resource</td>
+<td>270.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-22t0840040000">2025-10-22 08:40</a></td>
+<td>AZURE_CUSTOMER_NETWORK_UNREACHABLE /api/atlas/v2/groups/68f8956bab288813b27fd030/peers</td>
+<td>qa</td>
+<td></td>
+<td>125.02s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-09-22: MISSING</li>
+<li>2025-09-23 PASS 4 minutes</li>
+<li>2025-09-24 PASS 4 minutes</li>
+<li>2025-09-25 PASS 4 minutes</li>
+<li>2025-09-26 PASS 4 minutes</li>
+<li>2025-09-27 PASS 4 minutes</li>
+<li>2025-09-28 PASS 4 minutes</li>
+<li>2025-09-29 PASS 4 minutes</li>
+<li>2025-09-30</li>
+<li>PASS 4 minutes</li>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-09-30t0754340000">Error 2025-09-30T07:54:34+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-09-30T07:54:34.9638587Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-09-30T07:54:34.9639747Z     resource_test.go:30: Creating execution project: test-acc-tf-p-7402385264830278746
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-09-30T07:54:34.9648148Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-09-30T07:54:34.9660315Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-09-30T07:54:34.9660822Z     resource_test.go:39: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-09-30T07:54:34.9661204Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-09-30T07:54:34.9662894Z         Error: error creating MongoDB Network Peering Connection: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68db89c1bb7b8c0d703483ec/peers POST: HTTP 404 Not Found (Error code: &quot;AZURE_CUSTOMER_NETWORK_UNREACHABLE&quot;) Detail: External Azure subscription unreachable. Reason: Not Found. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-09-30T07:54:34.9664067Z         
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-09-30T07:54:34.9664411Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-09-30T07:54:34.9665068Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-09-30T07:54:34.9665677Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-09-30T07:54:34.9666005Z         
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-09-30T07:54:34.9707343Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (125.90s)
+</code></pre></div>
+<ul>
+<li>PASS 4 minutes</li>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-09-30t1519070000">Error 2025-09-30T15:19:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-09-30T15:19:07.7381009Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-09-30T15:19:07.7381640Z     resource_test.go:30: Creating execution project: test-acc-tf-p-5351765961959207796
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-09-30T15:19:07.7389664Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-09-30T15:19:07.7403804Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-09-30T15:19:07.7404351Z     resource_test.go:39: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-09-30T15:19:07.7404800Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-09-30T15:19:07.7406833Z         Error: error creating MongoDB Network Peering Connection: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68dbf1f2ce185e38b70f0148/peers POST: HTTP 404 Not Found (Error code: &quot;AZURE_CUSTOMER_NETWORK_UNREACHABLE&quot;) Detail: External Azure subscription unreachable. Reason: Not Found. Params: [], BadRequestDetail: 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-09-30T15:19:07.7408222Z         
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-09-30T15:19:07.7408662Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-09-30T15:19:07.7409363Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-09-30T15:19:07.7410039Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-09-30T15:19:07.7410420Z         
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-09-30T15:19:07.7430845Z    test_step_number=1 test_name=TestAccNetworkRSNetworkPeering_AzureFailedStatus test_terraform_path=/home/runner/work/_temp/ab35b207-4070-4e47-9d2a-8d6e0e9de7de/terraform test_working_directory=/tmp/plugintest3713884189
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-09-30T15:19:07.7449027Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (125.75s)
+</code></pre></div>
+<ul>
+<li>2025-10-01</li>
+<li>FAIL 3 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t0040370000">Error 2025-10-01T00:40:37+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-10-01T00:40:37.7528542Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-10-01T00:40:37.7529125Z     resource_test.go:30: Creating execution project: test-acc-tf-p-6943321105642610896
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-10-01T00:40:37.7535106Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-10-01T00:40:37.7553753Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-10-01T00:40:37.7554270Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-10-01T00:40:37.7554651Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-10-01T00:40:37.7555572Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-10-01T00:40:37.7556252Z         
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-10-01T00:40:37.7556604Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-10-01T00:40:37.7557272Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-10-01T00:40:37.7557889Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-10-01T00:40:37.7558215Z         
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-10-01T00:40:37.7561060Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (239.68s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t0334370000">Error 2025-10-01T03:34:37+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-10-01T03:34:37.8758406Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-10-01T03:34:37.8758982Z     resource_test.go:30: Creating execution project: test-acc-tf-p-4525000003414546795
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-10-01T03:34:37.8764678Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-10-01T03:34:37.8780065Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-10-01T03:34:37.8780578Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-10-01T03:34:37.8780952Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-10-01T03:34:37.8781858Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-10-01T03:34:37.8782519Z         
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-10-01T03:34:37.8782862Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-10-01T03:34:37.8783529Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-10-01T03:34:37.8784145Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-10-01T03:34:37.8784464Z         
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-10-01T03:34:37.8786816Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (253.90s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t0507160000">Error 2025-10-01T05:07:16+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-10-01T05:07:16.6753486Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-10-01T05:07:16.6754165Z     resource_test.go:30: Creating execution project: test-acc-tf-p-8821942161821408724
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-10-01T05:07:16.6760695Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-10-01T05:07:16.6778304Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-10-01T05:07:16.6778820Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-10-01T05:07:16.6779211Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-10-01T05:07:16.6780221Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-10-01T05:07:16.6780889Z         
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-10-01T05:07:16.6781233Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-10-01T05:07:16.6781900Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-10-01T05:07:16.6782757Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-10-01T05:07:16.6783127Z         
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-10-01T05:07:16.6785286Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (259.27s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t0822380000">Error 2025-10-01T08:22:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-10-01T08:22:38.2099202Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-10-01T08:22:38.2101960Z     resource_test.go:30: Creating execution project: test-acc-tf-p-3456935536840868569
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-10-01T08:22:38.2109600Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-10-01T08:22:38.2133790Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-10-01T08:22:38.2134332Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-10-01T08:22:38.2134862Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-10-01T08:22:38.2136234Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-10-01T08:22:38.2136918Z         
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-10-01T08:22:38.2137288Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-10-01T08:22:38.2138532Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-10-01T08:22:38.2139200Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-10-01T08:22:38.2139533Z         
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-10-01T08:22:38.2141934Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (255.21s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t0921540000">Error 2025-10-01T09:21:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-10-01T09:21:54.8700293Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-10-01T09:21:54.8701005Z     resource_test.go:30: Creating execution project: test-acc-tf-p-2274158102132382776
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-10-01T09:21:54.8707716Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-10-01T09:21:54.8728229Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-10-01T09:21:54.8728743Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-10-01T09:21:54.8729126Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-10-01T09:21:54.8730026Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-10-01T09:21:54.8730673Z         
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-10-01T09:21:54.8731017Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-10-01T09:21:54.8731676Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-10-01T09:21:54.8732292Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-10-01T09:21:54.8732621Z         
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-10-01T09:21:54.8735521Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (248.85s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t1053080000">Error 2025-10-01T10:53:08+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-10-01T10:53:08.8550988Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-10-01T10:53:08.8551966Z     resource_test.go:30: Creating execution project: test-acc-tf-p-4864471981990454311
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-10-01T10:53:08.8561011Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-10-01T10:53:08.8594641Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-10-01T10:53:08.8595554Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-10-01T10:53:08.8596221Z         
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-10-01T10:53:08.8597881Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-10-01T10:53:08.8599031Z         
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-10-01T10:53:08.8599645Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-10-01T10:53:08.8601020Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-10-01T10:53:08.8602108Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-10-01T10:53:08.8602658Z         
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-10-01T10:53:08.8607164Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (247.77s)
+</code></pre></div>
+<ul>
+<li>FAIL 3 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t1200480000">Error 2025-10-01T12:00:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-10-01T12:00:48.4176739Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-10-01T12:00:48.4177682Z     resource_test.go:30: Creating execution project: test-acc-tf-p-3282241757448380826
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-10-01T12:00:48.4186285Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-10-01T12:00:48.4208969Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-10-01T12:00:48.4209506Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-10-01T12:00:48.4209910Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-10-01T12:00:48.4210826Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-10-01T12:00:48.4211505Z         
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-10-01T12:00:48.4211871Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-10-01T12:00:48.4212541Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-10-01T12:00:48.4213351Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-10-01T12:00:48.4213705Z         
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-10-01T12:00:48.4216373Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (239.71s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-01t1427050000">Error 2025-10-01T14:27:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-10-01T14:27:05.6134109Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-10-01T14:27:05.6134973Z     resource_test.go:30: Creating execution project: test-acc-tf-p-1459747554048820963
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-10-01T14:27:05.6142313Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-10-01T14:27:05.6161388Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-10-01T14:27:05.6161884Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-10-01T14:27:05.6162261Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-10-01T14:27:05.6163156Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-10-01T14:27:05.6163794Z         
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-10-01T14:27:05.6164131Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-10-01T14:27:05.6164790Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-10-01T14:27:05.6165393Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-10-01T14:27:05.6165708Z         
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-10-01T14:27:05.6168457Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (256.34s)
+</code></pre></div>
+<ul>
+<li>2025-10-02</li>
+</ul>
+<h3 id="error-2025-10-02t0128350000">Error 2025-10-02T01:28:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-10-02T01:28:35.6751915Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-10-02T01:28:35.6753053Z     resource_test.go:30: Creating execution project: test-acc-tf-p-3538230035222781367
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-10-02T01:28:35.6763671Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-10-02T01:28:35.6785436Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-10-02T01:28:35.6786081Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-10-02T01:28:35.6786565Z         
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-10-02T01:28:35.6787592Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-10-02T01:28:35.6788529Z         
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-10-02T01:28:35.6788890Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-10-02T01:28:35.6789820Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-10-02T01:28:35.6790550Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-10-02T01:28:35.6790885Z         
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-10-02T01:28:35.6793085Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (255.06s)
+</code></pre></div>
+<ul>
+<li>2025-10-03</li>
+</ul>
+<h3 id="error-2025-10-03t0120270000">Error 2025-10-03T01:20:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-10-03T01:20:27.2275929Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-10-03T01:20:27.2277010Z     resource_test.go:30: Creating execution project: test-acc-tf-p-6323760074768708668
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-10-03T01:20:27.2288539Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-10-03T01:20:27.2307540Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-10-03T01:20:27.2308183Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-10-03T01:20:27.2308796Z         
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-10-03T01:20:27.2309830Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-10-03T01:20:27.2310608Z         
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-10-03T01:20:27.2311034Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-10-03T01:20:27.2311763Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-10-03T01:20:27.2312472Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-10-03T01:20:27.2312925Z         
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-10-03T01:20:27.2314854Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (248.93s)
+</code></pre></div>
+<ul>
+<li>2025-10-04</li>
+</ul>
+<h3 id="error-2025-10-04t0128000000">Error 2025-10-04T01:28:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-10-04T01:28:00.6643869Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-10-04T01:28:00.6644939Z     resource_test.go:30: Creating execution project: test-acc-tf-p-6137814283233302332
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-10-04T01:28:00.6654413Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-10-04T01:28:00.6688422Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-10-04T01:28:00.6689303Z     resource_test.go:39: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-10-04T01:28:00.6690133Z         
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-10-04T01:28:00.6690818Z         Error: peer networking is in a failed state: RETRYABLE
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-10-04T01:28:00.6691386Z         
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-10-04T01:28:00.6692011Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-10-04T01:28:00.6693182Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-10-04T01:28:00.6694261Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-10-04T01:28:00.6694827Z         
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-10-04T01:28:00.6695504Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (693.32s)
+</code></pre></div>
+<ul>
+<li>2025-10-05</li>
+</ul>
+<h3 id="error-2025-10-05t0041500000">Error 2025-10-05T00:41:50+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2025-10-05T00:41:50.6796176Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2025-10-05T00:41:50.6796755Z     resource_test.go:30: Creating execution project: test-acc-tf-p-1524743430843129758
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2025-10-05T00:41:50.6802343Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2025-10-05T00:41:50.6815910Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2025-10-05T00:41:50.6816576Z     resource_test.go:39: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2025-10-05T00:41:50.6817107Z         
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2025-10-05T00:41:50.6820191Z         Error: error creating MongoDB Network Peering Connection: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68e1bbe6f758b3057a1ac13d/peers POST: HTTP 404 Not Found (Error code: &quot;AZURE_CUSTOMER_NETWORK_UNREACHABLE&quot;) Detail: External Azure subscription unreachable. Reason: Not Found. Params: [], BadRequestDetail: 
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2025-10-05T00:41:50.6821509Z         
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2025-10-05T00:41:50.6821949Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2025-10-05T00:41:50.6822618Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2025-10-05T00:41:50.6823234Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2025-10-05T00:41:50.6823569Z         
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2025-10-05T00:41:50.6862583Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (124.95s)
+</code></pre></div>
+<ul>
+<li>2025-10-06</li>
+</ul>
+<h3 id="error-2025-10-06t0040510000">Error 2025-10-06T00:40:51+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2025-10-06T00:40:51.6147470Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2025-10-06T00:40:51.6148021Z     resource_test.go:30: Creating execution project: test-acc-tf-p-3039991319048048322
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2025-10-06T00:40:51.6154297Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2025-10-06T00:40:51.6171614Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2025-10-06T00:40:51.6172097Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2025-10-06T00:40:51.6172478Z         
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2025-10-06T00:40:51.6173295Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2025-10-06T00:40:51.6173903Z         
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2025-10-06T00:40:51.6174237Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2025-10-06T00:40:51.6174843Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2025-10-06T00:40:51.6175404Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2025-10-06T00:40:51.6175723Z         
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2025-10-06T00:40:51.6178467Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (252.73s)
+</code></pre></div>
+<ul>
+<li>2025-10-07</li>
+</ul>
+<h3 id="error-2025-10-07t0129370000">Error 2025-10-07T01:29:37+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2025-10-07T01:29:37.4374656Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2025-10-07T01:29:37.4375484Z     resource_test.go:30: Creating execution project: test-acc-tf-p-6771349850712442251
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2025-10-07T01:29:37.4383364Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2025-10-07T01:29:37.4405682Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2025-10-07T01:29:37.4406201Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2025-10-07T01:29:37.4406698Z         
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2025-10-07T01:29:37.4407718Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2025-10-07T01:29:37.4408469Z         
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2025-10-07T01:29:37.4408898Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2025-10-07T01:29:37.4409610Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2025-10-07T01:29:37.4410486Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2025-10-07T01:29:37.4410895Z         
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>2025-10-07T01:29:37.4412416Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (311.60s)
+</code></pre></div>
+<ul>
+<li>2025-10-08</li>
+</ul>
+<h3 id="error-2025-10-08t0040200000">Error 2025-10-08T00:40:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2025-10-08T00:40:20.9106735Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2025-10-08T00:40:20.9107329Z     resource_test.go:30: Creating execution project: test-acc-tf-p-2264205579346123624
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2025-10-08T00:40:20.9114172Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2025-10-08T00:40:20.9116665Z   diagnostic_summary=
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2025-10-08T00:40:20.9119256Z    diagnostic_detail=&quot;&quot; tf_proto_version=6.10
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2025-10-08T00:40:20.9132541Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2025-10-08T00:40:20.9133055Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2025-10-08T00:40:20.9133573Z         
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>2025-10-08T00:40:20.9134551Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>2025-10-08T00:40:20.9135210Z         
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>2025-10-08T00:40:20.9135557Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>2025-10-08T00:40:20.9136222Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>2025-10-08T00:40:20.9136979Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>2025-10-08T00:40:20.9137325Z         
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>2025-10-08T00:40:20.9139521Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (331.88s)
+</code></pre></div>
+<ul>
+<li>2025-10-09</li>
+</ul>
+<h3 id="error-2025-10-09t0039280000">Error 2025-10-09T00:39:28+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2025-10-09T00:39:28.7717633Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>2025-10-09T00:39:28.7718223Z     resource_test.go:30: Creating execution project: test-acc-tf-p-655691968050818156
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2025-10-09T00:39:28.7725052Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>2025-10-09T00:39:28.7745056Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>2025-10-09T00:39:28.7745594Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2025-10-09T00:39:28.7745996Z         
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2025-10-09T00:39:28.7746907Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>2025-10-09T00:39:28.7747575Z         
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>2025-10-09T00:39:28.7747939Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>2025-10-09T00:39:28.7748746Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2025-10-09T00:39:28.7749383Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>2025-10-09T00:39:28.7749930Z         
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>2025-10-09T00:39:28.7751332Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (581.43s)
+</code></pre></div>
+<ul>
+<li>2025-10-10</li>
+</ul>
+<h3 id="error-2025-10-10t0040120000">Error 2025-10-10T00:40:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>2025-10-10T00:40:12.8803085Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2025-10-10T00:40:12.8803803Z     resource_test.go:30: Creating execution project: test-acc-tf-p-6964628271802344254
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>2025-10-10T00:40:12.8809764Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2025-10-10T00:40:12.8830526Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>2025-10-10T00:40:12.8831069Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2025-10-10T00:40:12.8831477Z         
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>2025-10-10T00:40:12.8832409Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>2025-10-10T00:40:12.8833073Z         
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>2025-10-10T00:40:12.8833436Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>2025-10-10T00:40:12.8834291Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>2025-10-10T00:40:12.8834942Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>2025-10-10T00:40:12.8835518Z         
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>2025-10-10T00:40:12.8837354Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (452.98s)
+</code></pre></div>
+<ul>
+<li>2025-10-11</li>
+</ul>
+<h3 id="error-2025-10-11t0038050000">Error 2025-10-11T00:38:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>2025-10-11T00:38:05.0199843Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>2025-10-11T00:38:05.0200834Z     resource_test.go:30: Creating execution project: test-acc-tf-p-5128290752981962620
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>2025-10-11T00:38:05.0210284Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>2025-10-11T00:38:05.0246044Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>2025-10-11T00:38:05.0246930Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>2025-10-11T00:38:05.0247579Z         
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>2025-10-11T00:38:05.0249164Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>2025-10-11T00:38:05.0250319Z         
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>2025-10-11T00:38:05.0250921Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>2025-10-11T00:38:05.0252284Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>2025-10-11T00:38:05.0253370Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>2025-10-11T00:38:05.0253941Z         
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>2025-10-11T00:38:05.0256447Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (442.10s)
+</code></pre></div>
+<ul>
+<li>2025-10-12</li>
+</ul>
+<h3 id="error-2025-10-12t0041110000">Error 2025-10-12T00:41:11+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>2025-10-12T00:41:11.0414911Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>2025-10-12T00:41:11.0415506Z     resource_test.go:30: Creating execution project: test-acc-tf-p-3537434970927909157
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>2025-10-12T00:41:11.0421477Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>2025-10-12T00:41:11.0434924Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>2025-10-12T00:41:11.0435442Z     resource_test.go:39: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>2025-10-12T00:41:11.0435861Z         
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>2025-10-12T00:41:11.0437577Z         Error: error creating MongoDB Network Peering Connection: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68eaf637bae6807c754957c7/peers POST: HTTP 404 Not Found (Error code: &quot;AZURE_CUSTOMER_NETWORK_UNREACHABLE&quot;) Detail: External Azure subscription unreachable. Reason: Not Found. Params: [], BadRequestDetail: 
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>2025-10-12T00:41:11.0438922Z         
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>2025-10-12T00:41:11.0439281Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>2025-10-12T00:41:11.0439954Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>2025-10-12T00:41:11.0440581Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>2025-10-12T00:41:11.0440916Z         
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>2025-10-12T00:41:11.0479193Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (125.32s)
+</code></pre></div>
+<ul>
+<li>2025-10-13</li>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-13t0042010000">Error 2025-10-13T00:42:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>2025-10-13T00:42:01.3230780Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>2025-10-13T00:42:01.3231839Z     resource_test.go:30: Creating execution project: test-acc-tf-p-5169569229134705715
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>2025-10-13T00:42:01.3241965Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>2025-10-13T00:42:01.3274403Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>2025-10-13T00:42:01.3275299Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>2025-10-13T00:42:01.3275968Z         
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>2025-10-13T00:42:01.3277555Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>2025-10-13T00:42:01.3278692Z         
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>2025-10-13T00:42:01.3279303Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>2025-10-13T00:42:01.3280452Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>2025-10-13T00:42:01.3281511Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>2025-10-13T00:42:01.3282088Z         
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>2025-10-13T00:42:01.3287145Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (260.40s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-13t1515090000">Error 2025-10-13T15:15:09+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>2025-10-13T15:15:09.4828655Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>2025-10-13T15:15:09.4829780Z     resource_test.go:30: Creating execution project: test-acc-tf-p-9164092169008734731
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>2025-10-13T15:15:09.4832772Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>2025-10-13T15:15:09.4850113Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>2025-10-13T15:15:09.4850742Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>2025-10-13T15:15:09.4851239Z         
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>2025-10-13T15:15:09.4852248Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>2025-10-13T15:15:09.4853005Z         
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>2025-10-13T15:15:09.4853613Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>2025-10-13T15:15:09.4854688Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>2025-10-13T15:15:09.4855458Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>2025-10-13T15:15:09.4855902Z         
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>2025-10-13T15:15:09.4856902Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (260.89s)
+</code></pre></div>
+<ul>
+<li>2025-10-14</li>
+</ul>
+<h3 id="error-2025-10-14t0040110000">Error 2025-10-14T00:40:11+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>2025-10-14T00:40:11.4283029Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>2025-10-14T00:40:11.4283934Z     resource_test.go:30: Creating execution project: test-acc-tf-p-9036917013584610176
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>2025-10-14T00:40:11.4291175Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>2025-10-14T00:40:11.4311774Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>2025-10-14T00:40:11.4312308Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>2025-10-14T00:40:11.4312695Z         
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>2025-10-14T00:40:11.4313621Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>2025-10-14T00:40:11.4314292Z         
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>2025-10-14T00:40:11.4314647Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>2025-10-14T00:40:11.4315330Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>2025-10-14T00:40:11.4315959Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>2025-10-14T00:40:11.4316437Z         
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>2025-10-14T00:40:11.4319415Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (243.63s)
+</code></pre></div>
+<ul>
+<li>2025-10-15</li>
+</ul>
+<h3 id="error-2025-10-15t0040480000">Error 2025-10-15T00:40:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>2025-10-15T00:40:48.5806947Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>2025-10-15T00:40:48.5807665Z     resource_test.go:30: Creating execution project: test-acc-tf-p-8373011056631995563
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>2025-10-15T00:40:48.5813581Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>2025-10-15T00:40:48.5833163Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>2025-10-15T00:40:48.5833898Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>2025-10-15T00:40:48.5834324Z         
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>2025-10-15T00:40:48.5835287Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>2025-10-15T00:40:48.5836101Z         
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>2025-10-15T00:40:48.5836491Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>2025-10-15T00:40:48.5837194Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>2025-10-15T00:40:48.5837843Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>2025-10-15T00:40:48.5838212Z         
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>2025-10-15T00:40:48.5840438Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (251.36s)
+</code></pre></div>
+<ul>
+<li>2025-10-16</li>
+</ul>
+<h3 id="error-2025-10-16t0042310000">Error 2025-10-16T00:42:31+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>2025-10-16T00:42:31.6398034Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>2025-10-16T00:42:31.6398674Z     resource_test.go:30: Creating execution project: test-acc-tf-p-2266131550828915720
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>2025-10-16T00:42:31.6404182Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>2025-10-16T00:42:31.6424645Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>2025-10-16T00:42:31.6425175Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>2025-10-16T00:42:31.6425583Z         
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>2025-10-16T00:42:31.6426525Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>2025-10-16T00:42:31.6427377Z         
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>2025-10-16T00:42:31.6427729Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>2025-10-16T00:42:31.6428416Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>2025-10-16T00:42:31.6429051Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>2025-10-16T00:42:31.6429388Z         
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>2025-10-16T00:42:31.6432116Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (242.72s)
+</code></pre></div>
+<ul>
+<li>2025-10-17</li>
+</ul>
+<h3 id="error-2025-10-17t0042080000">Error 2025-10-17T00:42:08+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>2025-10-17T00:42:08.5105352Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>2025-10-17T00:42:08.5106236Z     resource_test.go:30: Creating execution project: test-acc-tf-p-2590336325275181453
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>2025-10-17T00:42:08.5113846Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>2025-10-17T00:42:08.5129750Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>2025-10-17T00:42:08.5130270Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>2025-10-17T00:42:08.5130656Z         
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>2025-10-17T00:42:08.5131580Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>2025-10-17T00:42:08.5132429Z         
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>2025-10-17T00:42:08.5132955Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>2025-10-17T00:42:08.5133637Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>2025-10-17T00:42:08.5134252Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>2025-10-17T00:42:08.5134586Z         
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>2025-10-17T00:42:08.5136675Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (255.94s)
+</code></pre></div>
+<ul>
+<li>2025-10-18</li>
+</ul>
+<h3 id="error-2025-10-18t0035070000">Error 2025-10-18T00:35:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>2025-10-18T00:35:07.7927299Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>2025-10-18T00:35:07.7928270Z     resource_test.go:30: Creating execution project: test-acc-tf-p-3852498615005479130
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>2025-10-18T00:35:07.7937076Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>2025-10-18T00:35:07.7939160Z   diagnostic_summary=
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>2025-10-18T00:35:07.7941890Z    tf_rpc=ApplyResourceChange tf_req_id=84a66162-40d1-6d42-98fc-0891202e18b6
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>2025-10-18T00:35:07.7951363Z    test_step_number=2
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>2025-10-18T00:35:07.7951841Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>2025-10-18T00:35:07.7952399Z         
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>2025-10-18T00:35:07.7953341Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>2025-10-18T00:35:07.7954016Z         
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>2025-10-18T00:35:07.7954721Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>2025-10-18T00:35:07.7955939Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>2025-10-18T00:35:07.7957006Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>2025-10-18T00:35:07.7957365Z         
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>2025-10-18T00:35:07.7959256Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (249.97s)
+</code></pre></div>
+<ul>
+<li>2025-10-19</li>
+</ul>
+<h3 id="error-2025-10-19t0043550000">Error 2025-10-19T00:43:55+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>2025-10-19T00:43:55.9740375Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>2025-10-19T00:43:55.9740941Z     resource_test.go:30: Creating execution project: test-acc-tf-p-22165087885187369
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>2025-10-19T00:43:55.9747331Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>2025-10-19T00:43:55.9759632Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>2025-10-19T00:43:55.9760140Z     resource_test.go:39: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>2025-10-19T00:43:55.9760527Z         
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>2025-10-19T00:43:55.9762215Z         Error: error creating MongoDB Network Peering Connection: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68f4316321ed692ad0016104/peers POST: HTTP 404 Not Found (Error code: &quot;AZURE_CUSTOMER_NETWORK_UNREACHABLE&quot;) Detail: External Azure subscription unreachable. Reason: Not Found. Params: [], BadRequestDetail: 
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>2025-10-19T00:43:55.9763500Z         
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>2025-10-19T00:43:55.9763849Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>2025-10-19T00:43:55.9764510Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>2025-10-19T00:43:55.9765130Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>2025-10-19T00:43:55.9765649Z         
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>2025-10-19T00:43:55.9771870Z   diagnostic_summary=
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>2025-10-19T00:43:55.9774579Z    tf_resource_type=mongodbatlas_network_peering tf_rpc=ApplyResourceChange
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>2025-10-19T00:43:55.9790807Z    test_name=TestAccNetworkRSNetworkPeering_AzureFailedStatus test_terraform_path=/home/runner/work/_temp/e9fb7c76-9746-4d67-b259-1067b7548318/terraform
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>2025-10-19T00:43:55.9803138Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (125.38s)
+</code></pre></div>
+<ul>
+<li>2025-10-20</li>
+<li>FAIL 4 minutes</li>
+</ul>
+<h3 id="error-2025-10-20t0042480000">Error 2025-10-20T00:42:48+00:00</h3>
+<p>GoTestErrorClassification(error_class='dangling_resource',author='human',run_id='2025-10-20T00:42:48.442000+00:00-TestAccNetworkRSNetworkPeering_Azure',confidence=1.0,ts_when='2 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>2025-10-20T00:42:48.4421172Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>2025-10-20T00:42:48.4421751Z     resource_test.go:30: Creating execution project: test-acc-tf-p-321399276708893456
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>2025-10-20T00:42:48.4427119Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>2025-10-20T00:42:48.4447086Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>2025-10-20T00:42:48.4447832Z     resource_test.go:39: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>2025-10-20T00:42:48.4448236Z         
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>2025-10-20T00:42:48.4449149Z         Error: peer networking is in a failed state: Could not create peering connection in Atlas Azure account because a peer with an overlapping CIDR block already exists.
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>2025-10-20T00:42:48.4449816Z         
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>2025-10-20T00:42:48.4450174Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>2025-10-20T00:42:48.4450844Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>2025-10-20T00:42:48.4451469Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>2025-10-20T00:42:48.4451809Z         
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>2025-10-20T00:42:48.4454048Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (270.42s)
+</code></pre></div>
+<ul>
+<li>PASS 4 minutes</li>
+<li>2025-10-21 PASS 4 minutes</li>
+<li>2025-10-22</li>
+<li>PASS 4 minutes</li>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2025-10-22t0840040000">Error 2025-10-22T08:40:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>2025-10-22T08:40:04.8887444Z === RUN   TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>2025-10-22T08:40:04.8890525Z     resource_test.go:30: Creating execution project: test-acc-tf-p-6362294035350851554
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>2025-10-22T08:40:04.8899766Z === CONT  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>2025-10-22T08:40:04.8912598Z === NAME  TestAccNetworkRSNetworkPeering_Azure
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>2025-10-22T08:40:04.8913180Z     resource_test.go:39: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>2025-10-22T08:40:04.8913670Z         
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>2025-10-22T08:40:04.8915543Z         Error: error creating MongoDB Network Peering Connection: https://cloud-qa.mongodb.com/api/atlas/v2/groups/68f8956bab288813b27fd030/peers POST: HTTP 404 Not Found (Error code: &quot;AZURE_CUSTOMER_NETWORK_UNREACHABLE&quot;) Detail: External Azure subscription unreachable. Reason: Not Found. Params: [], BadRequestDetail: 
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>2025-10-22T08:40:04.8916752Z         
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>2025-10-22T08:40:04.8917108Z           with mongodbatlas_network_peering.test,
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>2025-10-22T08:40:04.8917870Z           on terraform_plugin_test.tf line 19, in resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot;:
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>2025-10-22T08:40:04.8918503Z           19:      resource &quot;mongodbatlas_network_peering&quot; &quot;test&quot; {
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>2025-10-22T08:40:04.8918834Z         
+<a id="__codelineno-30-13" name="__codelineno-30-13" href="#__codelineno-30-13"></a>2025-10-22T08:40:04.8961932Z --- FAIL: TestAccNetworkRSNetworkPeering_Azure (125.16s)
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
