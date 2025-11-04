@@ -1,0 +1,64 @@
+# config/maintenancewindow/TestAccConfigRSMaintenanceWindow_autoDeferActivated Test Details
+# Found 31 TestRuns in dev, qa from 2025-10-06 to 2025-11-04 from master branch: 1 unique tests, PASS(x 30) FAIL
+Success rate: 96.77%
+
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2025-10-30 00:30](#error-2025-10-30t0030580000) | UNEXPECTED_ERROR /api/atlas/v2/groups/6902b13ae2dc7470847c1f0b | dev | flaky_500 | 9.03s
+
+## Timeline
+- 2025-10-05: MISSING
+- 2025-10-06 PASS 11 seconds
+- 2025-10-07 PASS 11 seconds
+- 2025-10-08 PASS 9 seconds
+- 2025-10-09 PASS 11 seconds
+- 2025-10-10 PASS 10 seconds
+- 2025-10-11 PASS 9 seconds
+- 2025-10-12 PASS 9 seconds
+- 2025-10-13 PASS 11 seconds
+- 2025-10-14 PASS 12 seconds
+- 2025-10-15 PASS 12 seconds
+- 2025-10-16 PASS 13 seconds
+- 2025-10-17 PASS 11 seconds
+- 2025-10-18 PASS 8 seconds
+- 2025-10-19 PASS 11 seconds
+- 2025-10-20
+  - PASS 9 seconds
+  - PASS 5 seconds
+- 2025-10-21 PASS 8 seconds
+- 2025-10-22
+  - PASS 12 seconds
+  - PASS 11 seconds
+- 2025-10-23 PASS 8 seconds
+- 2025-10-24 PASS 10 seconds
+- 2025-10-25 PASS 7 seconds
+- 2025-10-26 PASS 11 seconds
+- 2025-10-27 PASS 12 seconds
+- 2025-10-28 PASS 7 seconds
+- 2025-10-29 PASS 8 seconds
+- 2025-10-30
+
+### Error 2025-10-30T00:30:58+00:00
+```
+2025-10-30T00:30:58.3639700Z === RUN   TestAccConfigRSMaintenanceWindow_autoDeferActivated
+2025-10-30T00:30:58.3640892Z === CONT  TestAccConfigRSMaintenanceWindow_autoDeferActivated
+2025-10-30T00:30:58.3652252Z === NAME  TestAccConfigRSMaintenanceWindow_autoDeferActivated
+2025-10-30T00:30:58.3653055Z     resource_maintenance_window_test.go:81: Error running post-test destroy, there may be dangling resources: exit status 1
+2025-10-30T00:30:58.3653568Z         
+2025-10-30T00:30:58.3653874Z         Error: error when destroying resource
+2025-10-30T00:30:58.3654153Z         
+2025-10-30T00:30:58.3654493Z         error deleting project (6902b13ae2dc7470847c1f0b):
+2025-10-30T00:30:58.3655102Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6902b13ae2dc7470847c1f0b
+2025-10-30T00:30:58.3655878Z         DELETE: HTTP 500 Internal Server Error (Error code: "UNEXPECTED_ERROR")
+2025-10-30T00:30:58.3656493Z         Detail: Unexpected error. Reason: Internal Server Error. Params: [],
+2025-10-30T00:30:58.3656904Z         BadRequestDetail: 
+2025-10-30T00:30:58.3657270Z --- FAIL: TestAccConfigRSMaintenanceWindow_autoDeferActivated (9.30s)
+```
+
+- 2025-10-31 PASS 7 seconds
+- 2025-11-01: MISSING
+- 2025-11-02 PASS 12 seconds
+- 2025-11-03 PASS 7 seconds
+- 2025-11-04 PASS 8 seconds

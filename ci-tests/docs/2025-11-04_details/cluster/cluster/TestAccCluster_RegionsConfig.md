@@ -1,0 +1,102 @@
+# cluster/cluster/TestAccCluster_RegionsConfig Test Details
+# Found 31 TestRuns in dev, qa from 2025-10-06 to 2025-11-04 from master branch: 1 unique tests, PASS(x 28) FAIL(x 2) TIMEOUT
+Success rate: 93.33%
+
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2025-10-07 00:27](#error-2025-10-07t0027320000) |  | dev | timeout | 10802.08s
+[2025-10-20 10:26](#error-2025-10-20t1026180000) |  | dev | timeout | 10802.08s
+[2025-10-30 00:28](#error-2025-10-30t0028100000) |  | dev | timeout | 17992.00s
+
+## Timeline
+- 2025-10-05: MISSING
+- 2025-10-06 PASS 43 minutes
+- 2025-10-07
+
+### Error 2025-10-07T00:27:32+00:00
+```
+2025-10-07T00:27:32.1577205Z === RUN   TestAccCluster_RegionsConfig
+2025-10-07T00:27:32.1585711Z === CONT  TestAccCluster_RegionsConfig
+2025-10-07T03:27:34.9259877Z === NAME  TestAccCluster_RegionsConfig
+2025-10-07T03:27:34.9260748Z     resource_cluster_test.go:1208: Step 1/3 error: Error running apply: exit status 1
+2025-10-07T03:27:34.9261414Z         
+2025-10-07T03:27:34.9262618Z         Error: error creating MongoDB Cluster: timeout while waiting for state to become 'IDLE' (last state: 'CREATING', timeout: 3h0m0s)
+2025-10-07T03:27:34.9263174Z         
+2025-10-07T03:27:34.9263464Z           with mongodbatlas_cluster.test,
+2025-10-07T03:27:34.9264045Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_cluster" "test":
+2025-10-07T03:27:34.9264574Z           12: 	resource "mongodbatlas_cluster" "test" {
+2025-10-07T03:27:34.9264851Z         
+2025-10-07T03:27:34.9802572Z --- FAIL: TestAccCluster_RegionsConfig (10802.82s)
+```
+
+- 2025-10-08 PASS an hour
+- 2025-10-09 PASS 3 hours
+- 2025-10-10 PASS 44 minutes
+- 2025-10-11 PASS 51 minutes
+- 2025-10-12 PASS 2 hours
+- 2025-10-13 PASS 45 minutes
+- 2025-10-14 PASS 43 minutes
+- 2025-10-15 PASS 38 minutes
+- 2025-10-16 PASS an hour
+- 2025-10-17 PASS 44 minutes
+- 2025-10-18 PASS 38 minutes
+- 2025-10-19 PASS 40 minutes
+- 2025-10-20
+  - PASS an hour
+  - FAIL 3 hours
+
+### Error 2025-10-20T10:26:18+00:00
+```
+2025-10-20T10:26:18.7980486Z === RUN   TestAccCluster_RegionsConfig
+2025-10-20T10:26:18.8022396Z === CONT  TestAccCluster_RegionsConfig
+2025-10-20T13:26:21.5346464Z === NAME  TestAccCluster_RegionsConfig
+2025-10-20T13:26:21.5347599Z     resource_cluster_test.go:1208: Step 1/3 error: Error running apply: exit status 1
+2025-10-20T13:26:21.5348290Z         
+2025-10-20T13:26:21.5349535Z         Error: error creating MongoDB Cluster: timeout while waiting for state to become 'IDLE' (last state: 'CREATING', timeout: 3h0m0s)
+2025-10-20T13:26:21.5350333Z         
+2025-10-20T13:26:21.5350806Z           with mongodbatlas_cluster.test,
+2025-10-20T13:26:21.5351865Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_cluster" "test":
+2025-10-20T13:26:21.5352774Z           12: 	resource "mongodbatlas_cluster" "test" {
+2025-10-20T13:26:21.5353258Z         
+2025-10-20T13:26:21.5925082Z --- FAIL: TestAccCluster_RegionsConfig (10802.79s)
+```
+
+- 2025-10-21 PASS 37 minutes
+- 2025-10-22
+  - PASS 49 minutes
+  - PASS 38 minutes
+- 2025-10-23 PASS an hour
+- 2025-10-24 PASS an hour
+- 2025-10-25 PASS 38 minutes
+- 2025-10-26 PASS 39 minutes
+- 2025-10-27 PASS an hour
+- 2025-10-28 PASS 38 minutes
+- 2025-10-29 PASS 47 minutes
+- 2025-10-30
+
+### Error 2025-10-30T00:28:10+00:00
+```
+2025-10-30T00:28:10.4925910Z === RUN   TestAccCluster_RegionsConfig
+2025-10-30T00:28:10.5132216Z === CONT  TestAccCluster_RegionsConfig
+2025-10-30T03:41:40.3337201Z === NAME  TestAccCluster_RegionsConfig
+2025-10-30T03:41:40.3337771Z     resource_cluster_test.go:1208: Step 2/3 error: Error running apply: exit status 1
+2025-10-30T03:41:40.3338185Z         
+2025-10-30T03:41:40.3339525Z         Error: error updating MongoDB Cluster (test-acc-tf-c-5283640413556038809): error updating MongoDB Cluster (test-acc-tf-c-5283640413556038809): timeout while waiting for state to become 'IDLE' (last state: 'UPDATING', timeout: 3h0m0s)
+2025-10-30T03:41:40.3340621Z         
+2025-10-30T03:41:40.3340929Z           with mongodbatlas_cluster.test,
+2025-10-30T03:41:40.3341528Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_cluster" "test":
+2025-10-30T03:41:40.3342070Z           12: 	resource "mongodbatlas_cluster" "test" {
+2025-10-30T03:41:40.3342365Z         
+2025-10-30T03:42:27.9567590Z    test_name=TestAccCluster_create_RedactClientLogData
+2025-10-30T05:28:02.7477604Z 		TestAccCluster_MultiRegion (4h59m52s)
+2025-10-30T05:28:02.7478414Z 		TestAccCluster_ProviderRegionName (4h59m52s)
+2025-10-30T05:28:02.7479168Z 		TestAccCluster_RegionsConfig (4h59m52s)
+```
+
+- 2025-10-31 PASS 44 minutes
+- 2025-11-01: MISSING
+- 2025-11-02 PASS 39 minutes
+- 2025-11-03 PASS 41 minutes
+- 2025-11-04 PASS 48 minutes
