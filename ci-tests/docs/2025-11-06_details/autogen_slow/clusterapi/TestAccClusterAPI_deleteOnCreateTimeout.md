@@ -1,0 +1,38 @@
+# autogen_slow/clusterapi/TestAccClusterAPI_deleteOnCreateTimeout Test Details
+# Found 9 TestRuns in dev, qa from 2025-10-29 to 2025-11-06 from master branch: 1 unique tests, PASS(x 9)
+Success rate: 100.00%
+
+## Timeline
+- 2025-10-07: MISSING
+- 2025-10-08: MISSING
+- 2025-10-09: MISSING
+- 2025-10-10: MISSING
+- 2025-10-11: MISSING
+- 2025-10-12: MISSING
+- 2025-10-13: MISSING
+- 2025-10-14: MISSING
+- 2025-10-15: MISSING
+- 2025-10-16: MISSING
+- 2025-10-17: MISSING
+- 2025-10-18: MISSING
+- 2025-10-19: MISSING
+- 2025-10-20: MISSING
+- 2025-10-21: MISSING
+- 2025-10-22: MISSING
+- 2025-10-23: MISSING
+- 2025-10-24: MISSING
+- 2025-10-25: MISSING
+- 2025-10-26: MISSING
+- 2025-10-27: MISSING
+- 2025-10-28: MISSING
+- 2025-10-29 PASS 11 seconds
+- 2025-10-30 PASS 11 seconds
+- 2025-10-31 PASS 11 seconds
+- 2025-11-01: MISSING
+- 2025-11-02 PASS 11 seconds
+- 2025-11-03 PASS 11 seconds
+- 2025-11-04 PASS 11 seconds
+- 2025-11-05
+  - PASS 11 seconds
+  - PASS 11 seconds
+- 2025-11-06 PASS 11 seconds

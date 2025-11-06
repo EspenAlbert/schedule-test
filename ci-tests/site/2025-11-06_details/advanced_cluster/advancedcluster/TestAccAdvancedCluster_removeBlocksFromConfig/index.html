@@ -1,0 +1,659 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccAdvancedCluster_removeBlocksFromConfig Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccadvancedcluster_removeblocksfromconfig-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccAdvancedCluster_removeBlocksFromConfig Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccadvancedcluster_removeblocksfromconfig-test-details">advanced_cluster/advancedcluster/TestAccAdvancedCluster_removeBlocksFromConfig Test Details</h1>
+<h1 id="found-32-testruns-in-dev-qa-from-2025-10-08-to-2025-11-06-from-master-branch-1-unique-tests-passx-25-failx-7">Found 32 TestRuns in dev, qa from 2025-10-08 to 2025-11-06 from master branch: 1 unique tests, PASS(x 25) FAIL(x 7)</h1>
+<p>Success rate: 78.12%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-10-17t0029390000">2025-10-17 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>10804.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-20t1026390000">2025-10-20 10:26</a></td>
+<td>OUT_OF_CAPACITY /api/atlas/v2/groups/68f60e5d5a13b66d7cb6d52b/clusters</td>
+<td>dev</td>
+<td>out_of_capacity</td>
+<td>3.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-25t0028040000">2025-10-25 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>10803.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-26t0030040000">2025-10-26 00:30</a></td>
+<td></td>
+<td>qa</td>
+<td></td>
+<td>10804.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-27t0030460000">2025-10-27 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>10291.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-30t0028240000">2025-10-30 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>10803.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-02t0029520000">2025-11-02 00:29</a></td>
+<td></td>
+<td>qa</td>
+<td></td>
+<td>5.01s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-10-07: MISSING</li>
+<li>2025-10-08 PASS 50 minutes</li>
+<li>2025-10-09 PASS 3 hours</li>
+<li>2025-10-10 PASS 54 minutes</li>
+<li>2025-10-11 PASS 57 minutes</li>
+<li>2025-10-12 PASS 2 hours</li>
+<li>2025-10-13 PASS an hour</li>
+<li>2025-10-14 PASS 49 minutes</li>
+<li>2025-10-15 PASS 52 minutes</li>
+<li>2025-10-16 PASS 58 minutes</li>
+<li>2025-10-17</li>
+</ul>
+<h3 id="error-2025-10-17t0029390000">Error 2025-10-17T00:29:39+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-10-17T00:29:39.7306555Z === RUN   TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-10-17T00:31:20.6764884Z === CONT  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-10-17T03:31:25.2572847Z === NAME  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-10-17T03:31:25.2573500Z     resource_test.go:1084: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-10-17T03:31:25.2573967Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-10-17T03:31:25.2574334Z         Error: Error in create
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-10-17T03:31:25.2574761Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-10-17T03:31:25.2575315Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-10-17T03:31:25.2576484Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-10-17T03:31:25.2577465Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-10-17T03:31:25.2577871Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-10-17T03:31:25.2578417Z         cluster=test-acc-tf-c-4834637793802964273 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-10-17T03:31:25.2579297Z         error: context deadline exceeded
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-10-17T03:31:25.3032998Z --- FAIL: TestAccAdvancedCluster_removeBlocksFromConfig (10804.65s)
+</code></pre></div>
+<ul>
+<li>2025-10-18 PASS 46 minutes</li>
+<li>2025-10-19 PASS 51 minutes</li>
+<li>2025-10-20</li>
+<li>PASS an hour</li>
+<li>FAIL 3 seconds</li>
+</ul>
+<h3 id="error-2025-10-20t1026390000">Error 2025-10-20T10:26:39+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-10-20T10:26:39.5474273Z === RUN   TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-10-20T10:28:27.7307070Z === CONT  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-10-20T10:28:31.3296527Z === NAME  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-10-20T10:28:31.3297107Z     resource_test.go:1074: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-10-20T10:28:31.3297558Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-10-20T10:28:31.3297821Z         Error: Error in create
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-10-20T10:28:31.3298079Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-10-20T10:28:31.3298419Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-10-20T10:28:31.3299075Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-10-20T10:28:31.3299680Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-10-20T10:28:31.3300042Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-10-20T10:28:31.3300485Z         cluster name: test-acc-tf-c-6089595758908078245, API error details:
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-10-20T10:28:31.3301501Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68f60e5d5a13b66d7cb6d52b/clusters
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-10-20T10:28:31.3302376Z         POST: HTTP 409 Conflict (Error code: &quot;OUT_OF_CAPACITY&quot;) Detail: The requested
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-10-20T10:28:31.3303048Z         region is currently out of capacity for the requested instance size. Reason:
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-10-20T10:28:31.3303550Z         Conflict. Params: [], BadRequestDetail: 
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-10-20T10:28:31.3901700Z --- FAIL: TestAccAdvancedCluster_removeBlocksFromConfig (3.66s)
+</code></pre></div>
+<ul>
+<li>2025-10-21 PASS 48 minutes</li>
+<li>2025-10-22</li>
+<li>PASS 53 minutes</li>
+<li>PASS 46 minutes</li>
+<li>2025-10-23 PASS an hour</li>
+<li>2025-10-24 PASS an hour</li>
+<li>2025-10-25</li>
+</ul>
+<h3 id="error-2025-10-25t0028040000">Error 2025-10-25T00:28:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-10-25T00:28:04.7990371Z === RUN   TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-10-25T00:29:40.3496645Z === CONT  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-10-25T03:29:43.9313792Z === NAME  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-10-25T03:29:43.9314526Z     resource_test.go:1074: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-10-25T03:29:43.9315091Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-10-25T03:29:43.9315501Z         Error: Error in create
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-10-25T03:29:43.9315769Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-10-25T03:29:43.9316221Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-10-25T03:29:43.9317004Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-10-25T03:29:43.9317757Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-10-25T03:29:43.9318298Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-10-25T03:29:43.9318849Z         cluster=test-acc-tf-c-6418993383416589674 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-10-25T03:29:43.9319342Z         error: context deadline exceeded
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-10-25T03:29:43.9784810Z --- FAIL: TestAccAdvancedCluster_removeBlocksFromConfig (10803.63s)
+</code></pre></div>
+<ul>
+<li>2025-10-26</li>
+</ul>
+<h3 id="error-2025-10-26t0030040000">Error 2025-10-26T00:30:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-10-26T00:30:04.0380724Z === RUN   TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-10-26T00:31:28.3838219Z === CONT  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-10-26T03:31:32.7919499Z === NAME  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-10-26T03:31:32.7920414Z     resource_test.go:1074: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-10-26T03:31:32.7920863Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-10-26T03:31:32.7921211Z         Error: Error in create
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-10-26T03:31:32.7921453Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-10-26T03:31:32.7922074Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-10-26T03:31:32.7922806Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-10-26T03:31:32.7923481Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-10-26T03:31:32.7923965Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-10-26T03:31:32.7924571Z         cluster=test-acc-tf-c-9007168252166814225 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-10-26T03:31:32.7925047Z         error: context deadline exceeded
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-10-26T03:31:32.8387807Z --- FAIL: TestAccAdvancedCluster_removeBlocksFromConfig (10804.46s)
+</code></pre></div>
+<ul>
+<li>2025-10-27</li>
+</ul>
+<h3 id="error-2025-10-27t0030460000">Error 2025-10-27T00:30:46+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-10-27T00:30:46.9421257Z === RUN   TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-10-27T00:32:21.7383935Z === CONT  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-10-27T03:20:50.7632557Z === NAME  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-10-27T03:20:50.7633117Z     resource_test.go:1074: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-10-27T03:20:50.7633594Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-10-27T03:20:50.7634017Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-10-27T03:20:50.7634501Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-10-27T03:20:50.7634961Z         When applying changes to mongodbatlas_advanced_cluster.test, provider
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-10-27T03:20:50.7635601Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-10-27T03:20:50.7636037Z         unexpected new value:
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-10-27T03:20:50.7636560Z         .replication_specs[0].region_configs[0].electable_specs.instance_size: was
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-10-27T03:20:50.7637102Z         cty.StringVal(&quot;M10&quot;), but now cty.StringVal(&quot;M20&quot;).
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-10-27T03:20:50.7637704Z         
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-10-27T03:20:50.7638475Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-10-27T03:20:50.7638896Z         issue tracker.
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-10-27T03:20:50.7639131Z         
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-10-27T03:20:50.7639514Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-10-27T03:20:50.7639845Z         
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2025-10-27T03:20:50.7640285Z         When applying changes to mongodbatlas_advanced_cluster.test, provider
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2025-10-27T03:20:50.7640933Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2025-10-27T03:20:50.7641378Z         unexpected new value:
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>2025-10-27T03:20:50.7641902Z         .replication_specs[0].region_configs[0].read_only_specs.instance_size: was
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>2025-10-27T03:20:50.7642444Z         cty.StringVal(&quot;M10&quot;), but now cty.StringVal(&quot;M20&quot;).
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>2025-10-27T03:20:50.7642753Z         
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>2025-10-27T03:20:50.7643219Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>2025-10-27T03:20:50.7643636Z         issue tracker.
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>2025-10-27T03:20:50.7643876Z         
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>2025-10-27T03:20:50.7644263Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>2025-10-27T03:20:50.7644597Z         
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>2025-10-27T03:20:50.7645043Z         When applying changes to mongodbatlas_advanced_cluster.test, provider
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>2025-10-27T03:20:50.7645686Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>2025-10-27T03:20:50.7646122Z         unexpected new value:
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>2025-10-27T03:20:50.7646647Z         .replication_specs[1].region_configs[0].analytics_specs.instance_size: was
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>2025-10-27T03:20:50.7647183Z         cty.StringVal(&quot;M10&quot;), but now cty.StringVal(&quot;M20&quot;).
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>2025-10-27T03:20:50.7647671Z         
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>2025-10-27T03:20:50.7648132Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>2025-10-27T03:20:50.7648546Z         issue tracker.
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>2025-10-27T03:20:50.7648771Z         
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>2025-10-27T03:20:50.7649152Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>2025-10-27T03:20:50.7649485Z         
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>2025-10-27T03:20:50.7649924Z         When applying changes to mongodbatlas_advanced_cluster.test, provider
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>2025-10-27T03:20:50.7650561Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>2025-10-27T03:20:50.7650997Z         unexpected new value:
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>2025-10-27T03:20:50.7651507Z         .replication_specs[1].region_configs[0].electable_specs.instance_size: was
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>2025-10-27T03:20:50.7652040Z         cty.StringVal(&quot;M10&quot;), but now cty.StringVal(&quot;M20&quot;).
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>2025-10-27T03:20:50.7652346Z         
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>2025-10-27T03:20:50.7652954Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>2025-10-27T03:20:50.7653363Z         issue tracker.
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>2025-10-27T03:20:50.7653583Z         
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>2025-10-27T03:20:50.7653958Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>2025-10-27T03:20:50.7654283Z         
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>2025-10-27T03:20:50.7654721Z         When applying changes to mongodbatlas_advanced_cluster.test, provider
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>2025-10-27T03:20:50.7655396Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>2025-10-27T03:20:50.7655948Z         unexpected new value:
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>2025-10-27T03:20:50.7656463Z         .replication_specs[1].region_configs[0].read_only_specs.instance_size: was
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>2025-10-27T03:20:50.7656993Z         cty.StringVal(&quot;M10&quot;), but now cty.StringVal(&quot;M20&quot;).
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>2025-10-27T03:20:50.7657484Z         
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>2025-10-27T03:20:50.7658005Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>2025-10-27T03:20:50.7658412Z         issue tracker.
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>2025-10-27T03:20:50.7658634Z         
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>2025-10-27T03:20:50.7659018Z         Error: Provider produced inconsistent result after apply
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>2025-10-27T03:20:50.7660785Z         
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>2025-10-27T03:20:50.7661649Z         When applying changes to mongodbatlas_advanced_cluster.test, provider
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>2025-10-27T03:20:50.7662718Z         &quot;provider[\&quot;registry.terraform.io/hashicorp/mongodbatlas\&quot;]&quot; produced an
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>2025-10-27T03:20:50.7663453Z         unexpected new value:
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>2025-10-27T03:20:50.7664342Z         .replication_specs[1].region_configs[1].read_only_specs.instance_size: was
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>2025-10-27T03:20:50.7665252Z         cty.StringVal(&quot;M10&quot;), but now cty.StringVal(&quot;M20&quot;).
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>2025-10-27T03:20:50.7665745Z         
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>2025-10-27T03:20:50.7666398Z         This is a bug in the provider, which should be reported in the provider&#39;s own
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>2025-10-27T03:20:50.7666840Z         issue tracker.
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>2025-10-27T03:23:53.5007434Z --- FAIL: TestAccAdvancedCluster_removeBlocksFromConfig (10291.78s)
+</code></pre></div>
+<ul>
+<li>2025-10-28 PASS 49 minutes</li>
+<li>2025-10-29 PASS an hour</li>
+<li>2025-10-30</li>
+</ul>
+<h3 id="error-2025-10-30t0028240000">Error 2025-10-30T00:28:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-10-30T00:28:24.3482911Z === RUN   TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-10-30T00:29:52.4637381Z === CONT  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-10-30T03:29:55.9180340Z === NAME  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-10-30T03:29:55.9181231Z     resource_test.go:1074: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-10-30T03:29:55.9182103Z         
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-10-30T03:29:55.9182507Z         Error: Error in create
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-10-30T03:29:55.9182892Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-10-30T03:29:55.9183236Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-10-30T03:29:55.9183880Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-10-30T03:29:55.9184463Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-10-30T03:29:55.9184892Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-10-30T03:29:55.9185347Z         cluster=test-acc-tf-c-7054213157015212896 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-10-30T03:29:55.9185803Z         error: context deadline exceeded
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-10-30T03:29:55.9705283Z --- FAIL: TestAccAdvancedCluster_removeBlocksFromConfig (10803.51s)
+</code></pre></div>
+<ul>
+<li>2025-10-31 PASS an hour</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02</li>
+</ul>
+<h3 id="error-2025-11-02t0029520000">Error 2025-11-02T00:29:52+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-11-02T00:29:52.3261762Z === RUN   TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-11-02T00:31:20.6061445Z === CONT  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-11-02T00:31:25.4356676Z === NAME  TestAccAdvancedCluster_removeBlocksFromConfig
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-11-02T00:31:25.4357818Z     resource_test.go:1074: Step 1/4 error: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-11-02T00:31:25.4358430Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-11-02T00:31:25.4358838Z         Error: Error in create
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-11-02T00:31:25.4359226Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-11-02T00:31:25.4359760Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-11-02T00:31:25.4360851Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-11-02T00:31:25.4361855Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-11-02T00:31:25.4362371Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-11-02T00:31:25.4363053Z         cluster name: test-acc-tf-c-8611415866401370438, API error details:
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-11-02T00:31:25.4364179Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6906a5fd5ace12378d2962e9/clusters
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-11-02T00:31:25.4365038Z         POST: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-11-02T00:31:25.4366074Z         &quot;ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED&quot;) Detail: Invalid
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-11-02T00:31:25.4367079Z         Configuration. Contains selections that are unavailable due to your
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-11-02T00:31:25.4369086Z         organization&#39;s resource policies. Reason: Forbidden. Params: [],
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-11-02T00:31:25.4372599Z         BadRequestDetail: 
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2025-11-02T00:31:25.4869153Z   
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2025-11-02T00:31:25.7222559Z --- FAIL: TestAccAdvancedCluster_removeBlocksFromConfig (5.13s)
+</code></pre></div>
+<ul>
+<li>2025-11-03 PASS an hour</li>
+<li>2025-11-04 PASS 54 minutes</li>
+<li>2025-11-05</li>
+<li>PASS 51 minutes</li>
+<li>PASS 52 minutes</li>
+<li>2025-11-06 PASS an hour</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

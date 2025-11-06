@@ -1,0 +1,564 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>cluster_outage_simulation/clusteroutagesimulation/TestAccClusterOutageSimulation_deleteOnCreateTimeout Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cluster_outage_simulationclusteroutagesimulationtestaccclusteroutagesimulation_deleteoncreatetimeout-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              cluster_outage_simulation/clusteroutagesimulation/TestAccClusterOutageSimulation_deleteOnCreateTimeout Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cluster_outage_simulationclusteroutagesimulationtestaccclusteroutagesimulation_deleteoncreatetimeout-test-details">cluster_outage_simulation/clusteroutagesimulation/TestAccClusterOutageSimulation_deleteOnCreateTimeout Test Details</h1>
+<h1 id="found-32-testruns-in-dev-qa-from-2025-10-08-to-2025-11-06-from-master-branch-1-unique-tests-passx-27-failx-5">Found 32 TestRuns in dev, qa from 2025-10-08 to 2025-11-06 from master branch: 1 unique tests, PASS(x 27) FAIL(x 5)</h1>
+<p>Success rate: 84.38%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-10-09t0027070000">2025-10-09 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td>3657.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-12t0028420000">2025-10-12 00:28</a></td>
+<td></td>
+<td>qa</td>
+<td>2860.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-15t0028130000">2025-10-15 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>1812.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-27t0030200000">2025-10-27 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td>2327.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-30t0028000000">2025-10-30 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>3346.09s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-10-07: MISSING</li>
+<li>2025-10-08 PASS 59 minutes</li>
+<li>2025-10-09</li>
+</ul>
+<h3 id="error-2025-10-09t0027070000">Error 2025-10-09T00:27:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-10-09T00:27:07.7357969Z === RUN   TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-10-09T00:27:07.7363483Z === CONT  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-10-09T00:27:22.7463840Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-10-09T00:27:22.7465527Z     pre_check.go:36: Time before creating cluster: 2025-10-09T00:27:22.746112279Z, ProjectID: 68e70159c2a3cd169303e70d, Cluster name: test-acc-tf-c-4315945260451812120
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-10-09T01:28:05.0932767Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-10-09T01:28:05.0933439Z     resource_test.go:168: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-10-09T01:28:05.0933894Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-10-09T01:28:05.0934141Z         Error: Error in delete
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-10-09T01:28:05.0934373Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-10-09T01:28:05.0935011Z         cluster name: test-acc-tf-c-4315945260451812120, API error details:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-10-09T01:28:05.0935884Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68e70159c2a3cd169303e70d/clusters/test-acc-tf-c-4315945260451812120
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-10-09T01:28:05.0936785Z         DELETE: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-10-09T01:28:05.0937470Z         &quot;CANNOT_TERMINATE_CLUSTER_WITH_UNDERGOING_REGIONAL_OUTAGE_SIMULATION&quot;)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-10-09T01:28:05.0938095Z         Detail: Cannot terminate cluster test-acc-tf-c-4315945260451812120 in project
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-10-09T01:28:05.0938732Z         test-acc-tf-p-1460378166713015499 because it is undergoing a regional outage
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-10-09T01:28:05.0939337Z         simulation. End regional outage simulation and try again. Reason: Bad
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-10-09T01:28:05.0939834Z         Request. Params: [test-acc-tf-c-4315945260451812120
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-10-09T01:28:05.0940298Z         test-acc-tf-p-1460378166713015499], BadRequestDetail: 
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-10-09T01:28:05.0940733Z --- FAIL: TestAccClusterOutageSimulation_deleteOnCreateTimeout (3657.36s)
+</code></pre></div>
+<ul>
+<li>2025-10-10 PASS an hour</li>
+<li>2025-10-11 PASS an hour</li>
+<li>2025-10-12</li>
+</ul>
+<h3 id="error-2025-10-12t0028420000">Error 2025-10-12T00:28:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-10-12T00:28:42.5490348Z === RUN   TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-10-12T00:28:42.5498107Z === CONT  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-10-12T00:29:07.5598334Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-10-12T00:29:07.5602245Z     pre_check.go:36: Time before creating cluster: 2025-10-12T00:29:07.559534991Z, ProjectID: 68eaf639454e3b49aeac0648, Cluster name: test-acc-tf-c-1164869619792581889
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-10-12T01:16:22.2965198Z   diagnostic_summary=
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-10-12T01:16:22.2969733Z    tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas tf_proto_version=6.10 tf_req_id=b13f8503-9290-0171-9f7e-d2bbb7c397d2 tf_rpc=ApplyResourceChange tf_resource_type=mongodbatlas_cluster_outage_simulation diagnostic_detail=&quot;&quot; diagnostic_severity=ERROR
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-10-12T01:16:22.6700979Z    test_terraform_path=/home/runner/work/_temp/4a3f902e-2f65-437b-ab66-c0c026e05d66/terraform test_working_directory=/tmp/plugintest3574554401 test_step_number=1 test_name=TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-10-12T01:16:22.6702191Z     resource_test.go:168: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-10-12T01:16:22.6702657Z         
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-10-12T01:16:22.6702911Z         Error: Error in delete
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-10-12T01:16:22.6703153Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-10-12T01:16:22.6703557Z         cluster name: test-acc-tf-c-1164869619792581889, API error details:
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-10-12T01:16:22.6704622Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/68eaf639454e3b49aeac0648/clusters/test-acc-tf-c-1164869619792581889
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-10-12T01:16:22.6705285Z         DELETE: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-10-12T01:16:22.6705796Z         &quot;CANNOT_TERMINATE_CLUSTER_WITH_UNDERGOING_REGIONAL_OUTAGE_SIMULATION&quot;)
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-10-12T01:16:22.6706422Z         Detail: Cannot terminate cluster test-acc-tf-c-1164869619792581889 in project
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-10-12T01:16:22.6707075Z         test-acc-tf-p-4024986377574999456 because it is undergoing a regional outage
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-10-12T01:16:22.6707700Z         simulation. End regional outage simulation and try again. Reason: Bad
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-10-12T01:16:22.6708206Z         Request. Params: [test-acc-tf-c-1164869619792581889
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-10-12T01:16:22.6708665Z         test-acc-tf-p-4024986377574999456], BadRequestDetail: 
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2025-10-12T01:16:22.6709118Z --- FAIL: TestAccClusterOutageSimulation_deleteOnCreateTimeout (2860.12s)
+</code></pre></div>
+<ul>
+<li>2025-10-13 PASS an hour</li>
+<li>2025-10-14 PASS 58 minutes</li>
+<li>2025-10-15</li>
+</ul>
+<h3 id="error-2025-10-15t0028130000">Error 2025-10-15T00:28:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-10-15T00:28:13.4721947Z === RUN   TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-10-15T00:28:13.4729764Z === CONT  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-10-15T00:28:18.4769676Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-10-15T00:28:18.4773745Z     pre_check.go:36: Time before creating cluster: 2025-10-15T00:28:18.476640511Z, ProjectID: 68eeea99be088e40ea2cb35f, Cluster name: test-acc-tf-c-8870920327933784618
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-10-15T00:58:25.9701854Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-10-15T00:58:25.9702549Z     resource_test.go:168: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-10-15T00:58:25.9703023Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-10-15T00:58:25.9703282Z         Error: Error in delete
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-10-15T00:58:25.9703531Z         
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-10-15T00:58:25.9703952Z         cluster name: test-acc-tf-c-8870920327933784618, API error details:
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-10-15T00:58:25.9704834Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68eeea99be088e40ea2cb35f/clusters/test-acc-tf-c-8870920327933784618
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-10-15T00:58:25.9705495Z         DELETE: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-10-15T00:58:25.9706022Z         &quot;CANNOT_TERMINATE_CLUSTER_WITH_UNDERGOING_REGIONAL_OUTAGE_SIMULATION&quot;)
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-10-15T00:58:25.9706680Z         Detail: Cannot terminate cluster test-acc-tf-c-8870920327933784618 in project
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-10-15T00:58:25.9707348Z         test-acc-tf-p-2961577633976498627 because it is undergoing a regional outage
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-10-15T00:58:25.9707971Z         simulation. End regional outage simulation and try again. Reason: Bad
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-10-15T00:58:25.9708481Z         Request. Params: [test-acc-tf-c-8870920327933784618
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-10-15T00:58:25.9708958Z         test-acc-tf-p-2961577633976498627], BadRequestDetail: 
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-10-15T00:58:25.9709411Z --- FAIL: TestAccClusterOutageSimulation_deleteOnCreateTimeout (1812.50s)
+</code></pre></div>
+<ul>
+<li>2025-10-16 PASS an hour</li>
+<li>2025-10-17 PASS 59 minutes</li>
+<li>2025-10-18 PASS 57 minutes</li>
+<li>2025-10-19 PASS 58 minutes</li>
+<li>2025-10-20</li>
+<li>PASS an hour</li>
+<li>PASS 57 minutes</li>
+<li>2025-10-21 PASS 57 minutes</li>
+<li>2025-10-22</li>
+<li>PASS an hour</li>
+<li>PASS 57 minutes</li>
+<li>2025-10-23 PASS an hour</li>
+<li>2025-10-24 PASS 59 minutes</li>
+<li>2025-10-25 PASS 57 minutes</li>
+<li>2025-10-26 PASS 56 minutes</li>
+<li>2025-10-27</li>
+</ul>
+<h3 id="error-2025-10-27t0030200000">Error 2025-10-27T00:30:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-10-27T00:30:20.4192765Z === RUN   TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-10-27T00:30:20.4198215Z === CONT  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-10-27T00:30:25.4239507Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-10-27T00:30:25.4243634Z     pre_check.go:36: Time before creating cluster: 2025-10-27T00:30:25.423629113Z, ProjectID: 68febd1a5c665f6c63cf15aa, Cluster name: test-acc-tf-c-3198560134310842638
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-10-27T01:09:07.9547848Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-10-27T01:09:07.9548475Z     resource_test.go:168: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-10-27T01:09:07.9548885Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-10-27T01:09:07.9549126Z         Error: Error in delete
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-10-27T01:09:07.9549359Z         
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-10-27T01:09:07.9549743Z         cluster name: test-acc-tf-c-3198560134310842638, API error details:
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-10-27T01:09:07.9550509Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68febd1a5c665f6c63cf15aa/clusters/test-acc-tf-c-3198560134310842638
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-10-27T01:09:07.9551106Z         DELETE: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-10-27T01:09:07.9551586Z         &quot;CANNOT_TERMINATE_CLUSTER_WITH_UNDERGOING_REGIONAL_OUTAGE_SIMULATION&quot;)
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-10-27T01:09:07.9552166Z         Detail: Cannot terminate cluster test-acc-tf-c-3198560134310842638 in project
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-10-27T01:09:07.9552890Z         test-acc-tf-p-5210838568800786101 because it is undergoing a regional outage
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-10-27T01:09:07.9553458Z         simulation. End regional outage simulation and try again. Reason: Bad
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-10-27T01:09:07.9553932Z         Request. Params: [test-acc-tf-c-3198560134310842638
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-10-27T01:09:07.9554361Z         test-acc-tf-p-5210838568800786101], BadRequestDetail: 
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-10-27T01:09:07.9554808Z --- FAIL: TestAccClusterOutageSimulation_deleteOnCreateTimeout (2327.53s)
+</code></pre></div>
+<ul>
+<li>2025-10-28 PASS 57 minutes</li>
+<li>2025-10-29 PASS 59 minutes</li>
+<li>2025-10-30</li>
+</ul>
+<h3 id="error-2025-10-30t0028000000">Error 2025-10-30T00:28:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-10-30T00:28:00.9403758Z === RUN   TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-10-30T00:28:00.9414454Z === CONT  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-10-30T00:28:10.9448097Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-10-30T00:28:10.9452204Z     pre_check.go:46: Time before creating cluster: 2025-10-30T00:28:10.944491276Z, ProjectID: 6902b10fabf4374f32987fb9, Cluster name: test-acc-tf-c-7633725676873461003
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-10-30T01:23:47.8530574Z === NAME  TestAccClusterOutageSimulation_deleteOnCreateTimeout
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-10-30T01:23:47.8531394Z     resource_test.go:168: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-10-30T01:23:47.8531894Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-10-30T01:23:47.8532168Z         Error: Error in delete
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-10-30T01:23:47.8532428Z         
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-10-30T01:23:47.8533089Z         cluster name: test-acc-tf-c-7633725676873461003, API error details:
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-10-30T01:23:47.8533971Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6902b10fabf4374f32987fb9/clusters/test-acc-tf-c-7633725676873461003
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-10-30T01:23:47.8534667Z         DELETE: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-10-30T01:23:47.8535211Z         &quot;CANNOT_TERMINATE_CLUSTER_WITH_UNDERGOING_REGIONAL_OUTAGE_SIMULATION&quot;)
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-10-30T01:23:47.8535859Z         Detail: Cannot terminate cluster test-acc-tf-c-7633725676873461003 in project
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-10-30T01:23:47.8536519Z         test-acc-tf-p-7494954675347226544 because it is undergoing a regional outage
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-10-30T01:23:47.8537159Z         simulation. End regional outage simulation and try again. Reason: Bad
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-10-30T01:23:47.8537889Z         Request. Params: [test-acc-tf-c-7633725676873461003
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-10-30T01:23:47.8538382Z         test-acc-tf-p-7494954675347226544], BadRequestDetail: 
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2025-10-30T01:23:47.8538848Z --- FAIL: TestAccClusterOutageSimulation_deleteOnCreateTimeout (3346.91s)
+</code></pre></div>
+<ul>
+<li>2025-10-31 PASS 57 minutes</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02 PASS 57 minutes</li>
+<li>2025-11-03 PASS 56 minutes</li>
+<li>2025-11-04 PASS 58 minutes</li>
+<li>2025-11-05</li>
+<li>PASS 58 minutes</li>
+<li>PASS 58 minutes</li>
+<li>2025-11-06 PASS an hour</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
