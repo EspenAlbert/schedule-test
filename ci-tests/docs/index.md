@@ -1,5 +1,6 @@
 # Welcome to CI Tests
 
+- [2025-11-13](./2025-11-13.md), [2025-11-13 Error Only](./2025-11-13_error-only.md), [2025-11-13 Daily Errors](./2025-11-13_daily.md)
 - [2025-11-12](./2025-11-12.md), [2025-11-12 Error Only](./2025-11-12_error-only.md), [2025-11-12 Daily Errors](./2025-11-12_daily.md)
 - [2025-11-06](./2025-11-06.md), [2025-11-06 Error Only](./2025-11-06_error-only.md), [2025-11-06 Daily Errors](./2025-11-06_daily.md)
 - [2025-11-04](./2025-11-04.md), [2025-11-04 Error Only](./2025-11-04_error-only.md), [2025-11-04 Daily Errors](./2025-11-04_daily.md)
