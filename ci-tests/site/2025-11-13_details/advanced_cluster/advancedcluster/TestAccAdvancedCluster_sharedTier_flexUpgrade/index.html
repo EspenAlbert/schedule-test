@@ -1,0 +1,700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccAdvancedCluster_sharedTier_flexUpgrade Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccadvancedcluster_sharedtier_flexupgrade-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccAdvancedCluster_sharedTier_flexUpgrade Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccadvancedcluster_sharedtier_flexupgrade-test-details">advanced_cluster/advancedcluster/TestAccAdvancedCluster_sharedTier_flexUpgrade Test Details</h1>
+<h1 id="found-33-testruns-in-dev-qa-from-2025-10-15-to-2025-11-13-from-master-branch-1-unique-tests-passx-20-failx-9-skipx-4">Found 33 TestRuns in dev, qa from 2025-10-15 to 2025-11-13 from master branch: 1 unique tests, PASS(x 20) FAIL(x 9) SKIP(x 4)</h1>
+<p>Success rate: 68.97%</p>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-10-15t0028240000">2025-10-15 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>459.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-16t0029400000">2025-10-16 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>757.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-17t0029260000">2025-10-17 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>387.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-20t1026300000">2025-10-20 10:26</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>372.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-22t0029110000">2025-10-22 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td>unknown</td>
+<td>823.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-10-25t0027510000">2025-10-25 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>432.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-06t0027250000">2025-11-06 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>466.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-07t0028020000">2025-11-07 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>440.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-08t0029010000">2025-11-08 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>414.09s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timeline">Timeline</h2>
+<ul>
+<li>2025-10-14: MISSING</li>
+<li>2025-10-15</li>
+</ul>
+<h3 id="error-2025-10-15t0028240000">Error 2025-10-15T00:28:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-10-15T00:28:24.0603812Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-10-15T00:30:04.3794972Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-10-15T00:30:54.3803912Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-10-15T00:30:54.3805627Z     pre_check.go:36: Time before creating cluster: 2025-10-15T00:30:54.380129725Z, ProjectID: 68eeeaa6be088e40ea2d1b83, Cluster name: test-acc-tf-c-7219813970691121242
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-10-15T00:36:31.7916972Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-10-15T00:36:31.7917589Z     resource_test.go:87: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-10-15T00:36:31.7917964Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-10-15T00:36:31.7918378Z         Error: error reading  advanced cluster list
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-10-15T00:36:31.7918665Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-10-15T00:36:31.7919107Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-10-15T00:36:31.7920068Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-10-15T00:36:31.7920893Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-10-15T00:36:31.7921209Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-10-15T00:36:31.7921527Z         project ID 68eeeaa6be088e40ea2d1b83. Error
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-10-15T00:36:31.7922365Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68eeeaa6be088e40ea2d1b83/clusters
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-10-15T00:36:31.7923084Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-10-15T00:36:31.7923554Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-10-15T00:36:31.7924143Z         test-acc-tf-c-51115352536134118 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-10-15T00:36:31.7924779Z         Bad Request. Params: [test-acc-tf-c-51115352536134118], BadRequestDetail: 
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-10-15T00:37:44.2759425Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (459.90s)
+</code></pre></div>
+<ul>
+<li>2025-10-16</li>
+</ul>
+<h3 id="error-2025-10-16t0029400000">Error 2025-10-16T00:29:40+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-10-16T00:29:40.8062581Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-10-16T00:31:37.5918339Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-10-16T00:32:27.5944871Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-10-16T00:32:27.5946036Z     pre_check.go:36: Time before creating cluster: 2025-10-16T00:32:27.594230217Z, ProjectID: 68f03c723de2446c7e52d38d, Cluster name: test-acc-tf-c-4121847805518513801
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-10-16T00:38:22.1876482Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-10-16T00:38:22.1877517Z     resource_test.go:87: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-10-16T00:38:22.1878104Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-10-16T00:38:22.1878615Z         Error: error reading  advanced cluster list
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-10-16T00:38:22.1879078Z         
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-10-16T00:38:22.1879653Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-10-16T00:38:22.1880727Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-10-16T00:38:22.1881937Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-10-16T00:38:22.1882441Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-10-16T00:38:22.1882944Z         project ID 68f03c723de2446c7e52d38d. Error
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-10-16T00:38:22.1883945Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68f03c723de2446c7e52d38d/clusters
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-10-16T00:38:22.1884803Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2025-10-16T00:38:22.1885556Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2025-10-16T00:38:22.1886538Z         test-acc-tf-c-6481973931740745519 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2025-10-16T00:38:22.1888620Z         Bad Request. Params: [test-acc-tf-c-6481973931740745519], BadRequestDetail: 
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2025-10-16T00:44:15.2605968Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (757.67s)
+</code></pre></div>
+<ul>
+<li>2025-10-17</li>
+</ul>
+<h3 id="error-2025-10-17t0029260000">Error 2025-10-17T00:29:26+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-10-17T00:29:26.7708046Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-10-17T00:31:20.6718828Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-10-17T00:31:35.6460965Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-10-17T00:31:35.6463040Z     pre_check.go:36: Time before creating cluster: 2025-10-17T00:31:35.645825349Z, ProjectID: 68f18de565803f654910f87e, Cluster name: test-acc-tf-c-6686253316346681327
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-10-17T00:36:34.6592970Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-10-17T00:36:34.6593596Z     resource_test.go:87: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-10-17T00:36:34.6593982Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-10-17T00:36:34.6594370Z         Error: error reading  advanced cluster list
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-10-17T00:36:34.6594679Z         
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-10-17T00:36:34.6595053Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-10-17T00:36:34.6595925Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-10-17T00:36:34.6596554Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-10-17T00:36:34.6596858Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-10-17T00:36:34.6597160Z         project ID 68f18de565803f654910f87e. Error
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-10-17T00:36:34.6597771Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68f18de565803f654910f87e/clusters
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-10-17T00:36:34.6598295Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2025-10-17T00:36:34.6598761Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2025-10-17T00:36:34.6599615Z         test-acc-tf-c-8807525846448819383 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2025-10-17T00:36:34.6600257Z         Bad Request. Params: [test-acc-tf-c-8807525846448819383], BadRequestDetail: 
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2025-10-17T00:37:47.7222563Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (387.08s)
+</code></pre></div>
+<ul>
+<li>2025-10-18 PASS 6 minutes</li>
+<li>2025-10-19 PASS 5 minutes</li>
+<li>2025-10-20</li>
+<li>PASS 10 minutes</li>
+<li>FAIL 6 minutes</li>
+</ul>
+<h3 id="error-2025-10-20t1026300000">Error 2025-10-20T10:26:30+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-10-20T10:26:30.0960061Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-10-20T10:28:27.7213577Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-10-20T10:28:42.7224844Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-10-20T10:28:42.7227210Z     pre_check.go:36: Time before creating cluster: 2025-10-20T10:28:42.722183651Z, ProjectID: 68f60e54de46041f5669aa57, Cluster name: test-acc-tf-c-9063663204673975725
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-10-20T10:33:37.8753587Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-10-20T10:33:37.8754398Z     resource_test.go:86: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-10-20T10:33:37.8754780Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-10-20T10:33:37.8755103Z         Error: error reading  advanced cluster list
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-10-20T10:33:37.8755400Z         
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-10-20T10:33:37.8756185Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-10-20T10:33:37.8756860Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-10-20T10:33:37.8757441Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-10-20T10:33:37.8757754Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-10-20T10:33:37.8758068Z         project ID 68f60e54de46041f5669aa57. Error
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-10-20T10:33:37.8758680Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68f60e54de46041f5669aa57/clusters
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-10-20T10:33:37.8759203Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2025-10-20T10:33:37.8759681Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2025-10-20T10:33:37.8760293Z         test-acc-tf-c-2494045699399333875 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2025-10-20T10:33:37.8760933Z         Bad Request. Params: [test-acc-tf-c-2494045699399333875], BadRequestDetail: 
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2025-10-20T10:34:39.8808357Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (372.16s)
+</code></pre></div>
+<ul>
+<li>2025-10-21 PASS 7 minutes</li>
+<li>2025-10-22</li>
+<li>FAIL 13 minutes</li>
+</ul>
+<h3 id="error-2025-10-22t0029110000">Error 2025-10-22T00:29:11+00:00</h3>
+<p>GoTestErrorClassification(error_class='unknown',author='human',run_id='2025-10-22T00:29:11.736000+00:00-TestAccAdvancedCluster_sharedTier_flexUpgrade',confidence=1.0,ts_when='22 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-10-22T00:29:11.7364139Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-10-22T00:31:01.0760361Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-10-22T00:32:01.0052892Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-10-22T00:32:01.0055043Z     pre_check.go:36: Time before creating cluster: 2025-10-22T00:32:01.004992203Z, ProjectID: 68f82555678a6b3d96696f34, Cluster name: test-acc-tf-c-2375599530582791256
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-10-22T00:42:05.9411815Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-10-22T00:42:05.9412526Z     resource_test.go:86: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-10-22T00:42:05.9413067Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-10-22T00:42:05.9413455Z         Error: error reading  advanced cluster list
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-10-22T00:42:05.9413798Z         
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-10-22T00:42:05.9414151Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-10-22T00:42:05.9414800Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-10-22T00:42:05.9415396Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-10-22T00:42:05.9415697Z         
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-10-22T00:42:05.9415999Z         project ID 68f82555678a6b3d96696f34. Error
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-10-22T00:42:05.9416835Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68f82555678a6b3d96696f34/clusters
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-10-22T00:42:05.9417377Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2025-10-22T00:42:05.9417851Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2025-10-22T00:42:05.9418443Z         test-acc-tf-c-783019571787875317 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2025-10-22T00:42:05.9419071Z         Bad Request. Params: [test-acc-tf-c-783019571787875317], BadRequestDetail: 
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2025-10-22T00:44:44.6738266Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (823.69s)
+</code></pre></div>
+<ul>
+<li>PASS 6 minutes</li>
+<li>2025-10-23 PASS 9 minutes</li>
+<li>2025-10-24 PASS 5 minutes</li>
+<li>2025-10-25</li>
+</ul>
+<h3 id="error-2025-10-25t0027510000">Error 2025-10-25T00:27:51+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-10-25T00:27:51.4462110Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-10-25T00:29:40.3702172Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-10-25T00:30:45.3527628Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-10-25T00:30:45.3529062Z     pre_check.go:36: Time before creating cluster: 2025-10-25T00:30:45.352468159Z, ProjectID: 68fc1984a875863bf4d40141, Cluster name: test-acc-tf-c-5795065019351067045
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-10-25T00:35:40.3947055Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-10-25T00:35:40.3947776Z     resource_test.go:86: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-10-25T00:35:40.3948251Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-10-25T00:35:40.3948650Z         Error: error reading  advanced cluster list
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-10-25T00:35:40.3948992Z         
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-10-25T00:35:40.3949457Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-10-25T00:35:40.3950364Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-10-25T00:35:40.3951810Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-10-25T00:35:40.3952214Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-10-25T00:35:40.3952555Z         project ID 68fc1984a875863bf4d40141. Error
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-10-25T00:35:40.3953242Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/68fc1984a875863bf4d40141/clusters
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-10-25T00:35:40.3953827Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2025-10-25T00:35:40.3954359Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2025-10-25T00:35:40.3955240Z         test-acc-tf-c-5234641535563604848 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2025-10-25T00:35:40.3956138Z         Bad Request. Params: [test-acc-tf-c-5234641535563604848], BadRequestDetail: 
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2025-10-25T00:36:52.5224668Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (432.16s)
+</code></pre></div>
+<ul>
+<li>2025-10-26 PASS 6 minutes</li>
+<li>2025-10-27 PASS 29 minutes</li>
+<li>2025-10-28 PASS 6 minutes</li>
+<li>2025-10-29 PASS 11 minutes</li>
+<li>2025-10-30 PASS 7 minutes</li>
+<li>2025-10-31 PASS 7 minutes</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02 PASS 5 minutes</li>
+<li>2025-11-03 PASS 6 minutes</li>
+<li>2025-11-04 PASS 5 minutes</li>
+<li>2025-11-05</li>
+<li>PASS 7 minutes</li>
+<li>PASS 6 minutes</li>
+<li>2025-11-06</li>
+</ul>
+<h3 id="error-2025-11-06t0027250000">Error 2025-11-06T00:27:25+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-11-06T00:27:25.1872923Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-11-06T00:29:11.2684516Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-11-06T00:29:51.2580055Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-11-06T00:29:51.2582683Z     pre_check.go:46: Time before creating cluster: 2025-11-06T00:29:51.257647057Z, ProjectID: 690beb6bb0a5510b327ca4ff, Cluster name: test-acc-tf-c-9117943402257094767
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-11-06T00:35:35.8092958Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-11-06T00:35:35.8093631Z     resource_test.go:86: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-11-06T00:35:35.8094341Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-11-06T00:35:35.8094930Z         Error: error reading  advanced cluster list
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-11-06T00:35:35.8095313Z         
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-11-06T00:35:35.8095782Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-11-06T00:35:35.8096576Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-11-06T00:35:35.8097229Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-11-06T00:35:35.8097570Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-11-06T00:35:35.8097908Z         project ID 690beb6bb0a5510b327ca4ff. Error
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-11-06T00:35:35.8098602Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/690beb6bb0a5510b327ca4ff/clusters
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-11-06T00:35:35.8099187Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2025-11-06T00:35:35.8099735Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2025-11-06T00:35:35.8100446Z         test-acc-tf-c-3741508550106808748 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2025-11-06T00:35:35.8101176Z         Bad Request. Params: [test-acc-tf-c-3741508550106808748], BadRequestDetail: 
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2025-11-06T00:36:58.1628110Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (466.90s)
+</code></pre></div>
+<ul>
+<li>2025-11-07</li>
+</ul>
+<h3 id="error-2025-11-07t0028020000">Error 2025-11-07T00:28:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-11-07T00:28:02.7649187Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-11-07T00:29:39.1165609Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-11-07T00:30:49.1257061Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-11-07T00:30:49.1258956Z     pre_check.go:46: Time before creating cluster: 2025-11-07T00:30:49.125394497Z, ProjectID: 690d3d0fa78815557f58c592, Cluster name: test-acc-tf-c-8915561565920588802
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-11-07T00:35:46.7017211Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-11-07T00:35:46.7017683Z     resource_test.go:86: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-11-07T00:35:46.7018089Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-11-07T00:35:46.7018380Z         Error: error reading  advanced cluster list
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-11-07T00:35:46.7018719Z         
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-11-07T00:35:46.7019058Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-11-07T00:35:46.7019710Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-11-07T00:35:46.7020419Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-11-07T00:35:46.7020701Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-11-07T00:35:46.7020982Z         project ID 690d3d0fa78815557f58c592. Error
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-11-07T00:35:46.7021704Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/690d3d0fa78815557f58c592/clusters
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-11-07T00:35:46.7022254Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2025-11-07T00:35:46.7022687Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2025-11-07T00:35:46.7023231Z         test-acc-tf-c-3211355284320255794 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2025-11-07T00:35:46.7023816Z         Bad Request. Params: [test-acc-tf-c-3211355284320255794], BadRequestDetail: 
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2025-11-07T00:36:59.3072896Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (440.19s)
+</code></pre></div>
+<ul>
+<li>2025-11-08</li>
+</ul>
+<h3 id="error-2025-11-08t0029010000">Error 2025-11-08T00:29:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-11-08T00:29:01.8132348Z === RUN   TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-11-08T00:31:08.7764571Z === CONT  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-11-08T00:31:43.7471657Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-11-08T00:31:43.7473877Z     pre_check.go:46: Time before creating cluster: 2025-11-08T00:31:43.7467928Z, ProjectID: 690e8ecb0887d8385bbd339d, Cluster name: test-acc-tf-c-271108340439751507
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-11-08T00:37:01.5092843Z === NAME  TestAccAdvancedCluster_sharedTier_flexUpgrade
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-11-08T00:37:01.5093590Z     resource_test.go:86: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-11-08T00:37:01.5094291Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-11-08T00:37:01.5094793Z         Error: error reading  advanced cluster list
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-11-08T00:37:01.5095098Z         
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-11-08T00:37:01.5095606Z           with data.mongodbatlas_advanced_clusters.test,
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-11-08T00:37:01.5096430Z           on terraform_plugin_test.tf line 37, in data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot;:
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-11-08T00:37:01.5097000Z           37:  data &quot;mongodbatlas_advanced_clusters&quot; &quot;test&quot; {
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-11-08T00:37:01.5097604Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-11-08T00:37:01.5097988Z         project ID 690e8ecb0887d8385bbd339d. Error
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-11-08T00:37:01.5098592Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/690e8ecb0887d8385bbd339d/clusters
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-11-08T00:37:01.5099101Z         GET: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2025-11-08T00:37:01.5099560Z         &quot;CANNOT_USE_FLEX_CLUSTER_IN_CLUSTER_API&quot;) Detail: Flex cluster
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2025-11-08T00:37:01.5100176Z         test-acc-tf-c-1940384098746198210 cannot be used in the Cluster API. Reason:
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2025-11-08T00:37:01.5100810Z         Bad Request. Params: [test-acc-tf-c-1940384098746198210], BadRequestDetail: 
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>2025-11-08T00:38:03.6450231Z --- FAIL: TestAccAdvancedCluster_sharedTier_flexUpgrade (414.88s)
+</code></pre></div>
+<ul>
+<li>2025-11-09 PASS 5 minutes</li>
+<li>2025-11-10 PASS 6 minutes</li>
+<li>2025-11-11 SKIP unknown</li>
+<li>2025-11-12 SKIP unknown</li>
+<li>2025-11-13</li>
+<li>SKIP unknown</li>
+<li>SKIP unknown</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

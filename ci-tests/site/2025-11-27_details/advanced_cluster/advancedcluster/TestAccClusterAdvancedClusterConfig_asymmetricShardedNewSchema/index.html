@@ -1,0 +1,808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccclusteradvancedclusterconfig_asymmetricshardednewschema-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccclusteradvancedclusterconfig_asymmetricshardednewschema-test-details">advanced_cluster/advancedcluster/TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema Test Details</h1>
+<h1 id="found-33-testruns-in-dev-qa-from-2025-10-29-to-2025-11-27-from-master-branch-1-unique-tests-passx-20-failx-13">Found 33 TestRuns in dev, qa from 2025-10-29 to 2025-11-27 from master branch: 1 unique tests, PASS(x 20) FAIL(x 13)</h1>
+<p>Success rate: 60.61%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-10-30t0028220000">2025-10-30 00:28</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/6902b183e2dc7470847cbcb5</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>1072.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-08t0029120000">2025-11-08 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11003.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-19t0029020000">2025-11-19 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11057.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-19t0930070000">2025-11-19 09:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11168.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-20t0028090000">2025-11-20 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11055.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-20t1002000000">2025-11-20 10:02</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11003.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-21t0028330000">2025-11-21 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11054.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-22t0027020000">2025-11-22 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11003.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-24t0030130000">2025-11-24 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11085.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-25t0027260000">2025-11-25 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11044.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-26t0028440000">2025-11-26 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11043.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-27t0028330000">2025-11-27 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11043.03s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2025-10-28: MISSING</li>
+<li>2025-10-29 PASS 24 minutes</li>
+<li>2025-10-30</li>
+</ul>
+<h3 id="error-2025-10-30t0028220000">Error 2025-10-30T00:28:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-10-30T00:28:22.2614867Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-10-30T00:29:52.4650339Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-10-30T00:47:44.8624991Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-10-30T00:47:44.8625709Z     resource_test.go:716: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-10-30T00:47:44.8626175Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-10-30T00:47:44.8626471Z         Error: error when destroying resource
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-10-30T00:47:44.8626747Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-10-30T00:47:44.8627082Z         error deleting project (6902b183e2dc7470847cbcb5):
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-10-30T00:47:44.8627655Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6902b183e2dc7470847cbcb5
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-10-30T00:47:44.8628268Z         DELETE: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-10-30T00:47:44.8628855Z         Detail: Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-10-30T00:47:44.8629252Z         BadRequestDetail: 
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-10-30T00:47:44.8629665Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (1072.40s)
+</code></pre></div>
+<ul>
+<li>2025-10-31 PASS 20 minutes</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02: MISSING</li>
+<li>2025-11-03 PASS 18 minutes</li>
+<li>2025-11-04 PASS 16 minutes</li>
+<li>2025-11-05</li>
+<li>PASS 18 minutes</li>
+<li>PASS 11 minutes</li>
+<li>2025-11-06 PASS 22 minutes</li>
+<li>2025-11-07 PASS 15 minutes</li>
+<li>2025-11-08</li>
+</ul>
+<h3 id="error-2025-11-08t0029120000">Error 2025-11-08T00:29:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-11-08T00:29:12.0963918Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-11-08T00:31:08.7378423Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-11-08T03:31:16.8525037Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-11-08T03:31:16.8525916Z     resource_test.go:716: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-11-08T03:31:16.8526299Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-11-08T03:31:16.8526552Z         Error: Error in create
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-11-08T03:31:16.8526796Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-11-08T03:31:16.8527117Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-11-08T03:31:16.8528199Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-11-08T03:31:16.8528801Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-11-08T03:31:16.8529110Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-11-08T03:31:16.8529802Z         cluster=test-acc-tf-c-8587692970019470544 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-11-08T03:31:16.8530287Z         error: context deadline exceeded
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-11-08T03:31:18.0020630Z   
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-11-08T03:34:31.9474009Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11003.21s)
+</code></pre></div>
+<ul>
+<li>2025-11-09: MISSING</li>
+<li>2025-11-10 PASS 12 minutes</li>
+<li>2025-11-11 PASS 14 minutes</li>
+<li>2025-11-12 PASS 16 minutes</li>
+<li>2025-11-13 PASS 37 minutes</li>
+<li>2025-11-14 PASS 22 minutes</li>
+<li>2025-11-15 PASS 14 minutes</li>
+<li>2025-11-16: MISSING</li>
+<li>2025-11-17 PASS 16 minutes</li>
+<li>2025-11-18 PASS 15 minutes</li>
+<li>2025-11-19</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-19t0029020000">Error 2025-11-19T00:29:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-11-19T00:29:02.9788963Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-11-19T00:35:20.7405431Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-11-19T03:35:31.4823722Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-11-19T03:35:31.4824802Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-11-19T03:35:31.4825387Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-11-19T03:35:31.4825781Z         Error: Error in create
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-11-19T03:35:31.4826463Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-11-19T03:35:31.4826989Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-11-19T03:35:31.4828069Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-11-19T03:35:31.4829021Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-11-19T03:35:31.4829498Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-11-19T03:35:31.4830224Z         cluster=test-acc-tf-c-3111641968541752879 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-11-19T03:35:31.4830957Z         error: context deadline exceeded
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-11-19T03:35:36.4314698Z    test_working_directory=/tmp/plugintest1623859711 test_step_number=1 test_name=TestAccClusterAdvancedCluster_advancedConfig test_terraform_path=/home/runner/work/_temp/bada4d32-3f9a-423c-bb10-1f3248da402d/terraform
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-11-19T03:39:38.6889662Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11057.95s)
+</code></pre></div>
+<ul>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-19t0930070000">Error 2025-11-19T09:30:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-11-19T09:30:07.9704571Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-11-19T09:31:55.5570946Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-11-19T12:32:05.2532749Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-11-19T12:32:05.2533612Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-11-19T12:32:05.2534000Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-11-19T12:32:05.2534398Z         Error: Error in create
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-11-19T12:32:05.2534669Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-11-19T12:32:05.2535002Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-11-19T12:32:05.2535734Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-11-19T12:32:05.2536429Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-11-19T12:32:05.2536845Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-11-19T12:32:05.2537286Z         cluster=test-acc-tf-c-3638970813798201383 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-11-19T12:32:05.2537836Z         error: context deadline exceeded
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-11-19T12:32:06.1016305Z    test_name=TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-11-19T12:38:03.7322912Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11168.18s)
+</code></pre></div>
+<ul>
+<li>2025-11-20</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-20t0028090000">Error 2025-11-20T00:28:09+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-11-20T00:28:09.4958814Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-11-20T00:29:55.5747366Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-11-20T03:30:03.3932184Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-11-20T03:30:03.3932738Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-11-20T03:30:03.3933485Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-11-20T03:30:03.3933738Z         Error: Error in create
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-11-20T03:30:03.3934096Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-11-20T03:30:03.3934418Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-11-20T03:30:03.3935155Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-11-20T03:30:03.3935696Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-11-20T03:30:03.3935985Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-11-20T03:30:03.3936402Z         cluster=test-acc-tf-c-6249334837579640470 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-11-20T03:30:03.3936823Z         error: context deadline exceeded
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-11-20T03:30:03.4569960Z    test_step_number=1 test_working_directory=/tmp/plugintest1815142402 test_name=TestAccClusterAdvancedCluster_replicaSetMultiCloud test_terraform_path=/home/runner/work/_temp/d0684163-37b0-4e5f-b042-cb4029e74368/terraform
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-11-20T03:34:10.8839293Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11055.31s)
+</code></pre></div>
+<ul>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-20t1002000000">Error 2025-11-20T10:02:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-11-20T10:02:00.7955117Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-11-20T10:03:33.6598595Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-11-20T13:03:41.7549146Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-11-20T13:03:41.7549894Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-11-20T13:03:41.7550385Z         
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-11-20T13:03:41.7550652Z         Error: Error in create
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-11-20T13:03:41.7550971Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-11-20T13:03:41.7551352Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-11-20T13:03:41.7552124Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-11-20T13:03:41.7552849Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-11-20T13:03:41.7553275Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-11-20T13:03:41.7554158Z         cluster=test-acc-tf-c-1244524945956737287 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-11-20T13:03:41.7554662Z         error: context deadline exceeded
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-11-20T13:03:42.1239102Z   
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-11-20T13:06:56.7788286Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11003.12s)
+</code></pre></div>
+<ul>
+<li>2025-11-21</li>
+</ul>
+<h3 id="error-2025-11-21t0028330000">Error 2025-11-21T00:28:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-11-21T00:28:33.9759659Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-11-21T00:30:22.6785511Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-11-21T03:30:31.0431751Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-11-21T03:30:31.0432795Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-11-21T03:30:31.0433431Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-11-21T03:30:31.0433855Z         Error: Error in create
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-11-21T03:30:31.0434284Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-11-21T03:30:31.0434842Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-11-21T03:30:31.0435966Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-11-21T03:30:31.0437213Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-11-21T03:30:31.0437730Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-11-21T03:30:31.0438547Z         cluster=test-acc-tf-c-7230507826104293966 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-11-21T03:30:31.0439378Z         error: context deadline exceeded
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-11-21T03:30:31.7927974Z   
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-11-21T03:34:37.2627408Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11054.60s)
+</code></pre></div>
+<ul>
+<li>2025-11-22</li>
+</ul>
+<h3 id="error-2025-11-22t0027020000">Error 2025-11-22T00:27:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-11-22T00:27:02.1576458Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-11-22T00:28:42.9438205Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-11-22T03:28:51.7863970Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-11-22T03:28:51.7864994Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-11-22T03:28:51.7865486Z         
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-11-22T03:28:51.7865767Z         Error: Error in create
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-11-22T03:28:51.7866023Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-11-22T03:28:51.7866471Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-11-22T03:28:51.7867428Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-11-22T03:28:51.7868134Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-11-22T03:28:51.7868449Z         
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-11-22T03:28:51.7869009Z         cluster=test-acc-tf-c-3969114794576688521 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-11-22T03:28:51.7869666Z         error: context deadline exceeded
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-11-22T03:28:52.0404934Z    test_name=TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData test_terraform_path=/home/runner/work/_temp/9e52c758-fb15-4d20-83d8-d3f78571282a/terraform test_working_directory=/tmp/plugintest3758599030 test_step_number=1
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-11-22T03:32:06.4567946Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11003.52s)
+</code></pre></div>
+<ul>
+<li>2025-11-23: MISSING</li>
+<li>2025-11-24</li>
+</ul>
+<h3 id="error-2025-11-24t0030130000">Error 2025-11-24T00:30:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-11-24T00:30:13.9762263Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-11-24T00:33:24.2033974Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-11-24T03:33:33.8975912Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-11-24T03:33:33.8977017Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-11-24T03:33:33.8977621Z         
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-11-24T03:33:33.8977889Z         Error: Error in create
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-11-24T03:33:33.8978190Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-11-24T03:33:33.8978598Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-11-24T03:33:33.8979503Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-11-24T03:33:33.8980393Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-11-24T03:33:33.8980868Z         
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-11-24T03:33:33.8981326Z         cluster=test-acc-tf-c-3976286117467682731 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-11-24T03:33:33.8981786Z         error: context deadline exceeded
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-11-24T03:33:39.7982814Z    test_name=TestAccClusterAdvancedCluster_replicaSetAWSProvider test_terraform_path=/home/runner/work/_temp/609ccb18-f3a3-412d-a4f5-f3ac64678863/terraform
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-11-24T03:38:10.0024559Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11085.80s)
+</code></pre></div>
+<ul>
+<li>2025-11-25</li>
+</ul>
+<h3 id="error-2025-11-25t0027260000">Error 2025-11-25T00:27:26+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-11-25T00:27:26.7562215Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-11-25T00:31:51.4386678Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-11-25T03:31:59.4585140Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-11-25T03:31:59.4585928Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-11-25T03:31:59.4586443Z         
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-11-25T03:31:59.4586767Z         Error: Error in create
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-11-25T03:31:59.4587031Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-11-25T03:31:59.4587592Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-11-25T03:31:59.4588379Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-11-25T03:31:59.4589072Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-11-25T03:31:59.4589709Z         
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-11-25T03:31:59.4590191Z         cluster=test-acc-tf-c-6402448843422242874 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-11-25T03:31:59.4590731Z         error: context deadline exceeded
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-11-25T03:31:59.5768860Z   
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-11-25T03:35:56.0529686Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11044.64s)
+</code></pre></div>
+<ul>
+<li>2025-11-26</li>
+</ul>
+<h3 id="error-2025-11-26t0028440000">Error 2025-11-26T00:28:44+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-11-26T00:28:44.9762931Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-11-26T00:30:27.5264229Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-11-26T03:30:36.0550865Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-11-26T03:30:36.0551707Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-11-26T03:30:36.0552088Z         
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-11-26T03:30:36.0552338Z         Error: Error in create
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-11-26T03:30:36.0552590Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-11-26T03:30:36.0552904Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-11-26T03:30:36.0553696Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-11-26T03:30:36.0554455Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-11-26T03:30:36.0554787Z         
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-11-26T03:30:36.0555250Z         cluster=test-acc-tf-c-3476631064094002567 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-11-26T03:30:36.0555952Z         error: context deadline exceeded
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-11-26T03:30:48.0609269Z    test_name=TestAccClusterAdvancedClusterConfig_replicationSpecsAnalyticsAutoScaling test_terraform_path=/home/runner/work/_temp/88070532-96c2-4760-b2dd-7952d58b8690/terraform test_working_directory=/tmp/plugintest1630969498 test_step_number=1
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-11-26T03:34:31.0976530Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11043.59s)
+</code></pre></div>
+<ul>
+<li>2025-11-27</li>
+</ul>
+<h3 id="error-2025-11-27t0028330000">Error 2025-11-27T00:28:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2025-11-27T00:28:33.0231419Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2025-11-27T00:30:06.5285482Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2025-11-27T03:30:14.0443580Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2025-11-27T03:30:14.0444614Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2025-11-27T03:30:14.0445231Z         
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2025-11-27T03:30:14.0445640Z         Error: Error in create
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2025-11-27T03:30:14.0446043Z         
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2025-11-27T03:30:14.0446585Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2025-11-27T03:30:14.0447884Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2025-11-27T03:30:14.0448898Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2025-11-27T03:30:14.0449416Z         
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2025-11-27T03:30:14.0450345Z         cluster=test-acc-tf-c-558020468061117072 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2025-11-27T03:30:14.0451132Z         error: context deadline exceeded
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2025-11-27T03:30:14.1526169Z    test_name=TestAccAdvancedCluster_replicaSetScalingStrategyAndRedactClientLogData test_terraform_path=/home/runner/work/_temp/14070def-dacb-49f4-8290-ab4287f196f1/terraform test_working_directory=/tmp/plugintest1086076636 test_step_number=1
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2025-11-27T03:34:09.8648926Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (11043.34s)
+</code></pre></div>
+<h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-11-13t0753210000">2025-11-13 07:53</a></td>
+<td></td>
+<td>qa</td>
+<td>flaky_400</td>
+<td>8.06s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2025-10-28: MISSING</li>
+<li>2025-10-29: MISSING</li>
+<li>2025-10-30: MISSING</li>
+<li>2025-10-31: MISSING</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02 PASS 13 minutes</li>
+<li>2025-11-03: MISSING</li>
+<li>2025-11-04: MISSING</li>
+<li>2025-11-05: MISSING</li>
+<li>2025-11-06: MISSING</li>
+<li>2025-11-07: MISSING</li>
+<li>2025-11-08: MISSING</li>
+<li>2025-11-09 PASS 13 minutes</li>
+<li>2025-11-10: MISSING</li>
+<li>2025-11-11: MISSING</li>
+<li>2025-11-12: MISSING</li>
+<li>2025-11-13</li>
+</ul>
+<h3 id="error-2025-11-13t0753210000">Error 2025-11-13T07:53:21+00:00</h3>
+<p>GoTestErrorClassification(error_class='flaky_400',author='human',run_id='2025-11-13T07:53:21.418000+00:00-TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema',confidence=1.0,ts_when='14 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2025-11-13T07:53:21.4182569Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2025-11-13T07:54:58.4335497Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2025-11-13T07:55:06.3465597Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2025-11-13T07:55:06.3466878Z     resource_test.go:717: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2025-11-13T07:55:06.3467652Z         
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2025-11-13T07:55:06.3468058Z         Error: Error in create
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2025-11-13T07:55:06.3468425Z         
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2025-11-13T07:55:06.3468916Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2025-11-13T07:55:06.3469864Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2025-11-13T07:55:06.3470655Z           17:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2025-11-13T07:55:06.3470961Z         
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2025-11-13T07:55:06.3471465Z         cluster name: test-acc-tf-c-4595888119023728174, API error details:
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2025-11-13T07:55:06.3472359Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/69158ed548f3d02bc50c6c3a/clusters
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>2025-11-13T07:55:06.3473134Z         POST: HTTP 403 Forbidden (Error code:
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>2025-11-13T07:55:06.3473824Z         &quot;ATLAS_RESOURCE_POLICIES_VIOLATION_NOT_AUTHORIZED&quot;) Detail: Invalid
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>2025-11-13T07:55:06.3474388Z         Configuration. Contains selections that are unavailable due to your
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>2025-11-13T07:55:06.3474945Z         organization&#39;s resource policies. Reason: Forbidden. Params: [],
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>2025-11-13T07:55:06.3475356Z         BadRequestDetail: 
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>2025-11-13T07:55:06.3528477Z   
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>2025-11-13T07:55:07.0015482Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (8.57s)
+</code></pre></div>
+<ul>
+<li>2025-11-14: MISSING</li>
+<li>2025-11-15: MISSING</li>
+<li>2025-11-16 PASS 14 minutes</li>
+<li>2025-11-17: MISSING</li>
+<li>2025-11-18: MISSING</li>
+<li>2025-11-19: MISSING</li>
+<li>2025-11-20: MISSING</li>
+<li>2025-11-21: MISSING</li>
+<li>2025-11-22: MISSING</li>
+<li>2025-11-23 PASS 14 minutes</li>
+<li>2025-11-24: MISSING</li>
+<li>2025-11-25: MISSING</li>
+<li>2025-11-26: MISSING</li>
+<li>2025-11-27: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

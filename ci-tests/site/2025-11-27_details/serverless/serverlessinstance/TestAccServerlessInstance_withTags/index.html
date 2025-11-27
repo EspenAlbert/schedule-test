@@ -1,0 +1,485 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>serverless/serverlessinstance/TestAccServerlessInstance_withTags Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#serverlessserverlessinstancetestaccserverlessinstance_withtags-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              serverless/serverlessinstance/TestAccServerlessInstance_withTags Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="serverlessserverlessinstancetestaccserverlessinstance_withtags-test-details">serverless/serverlessinstance/TestAccServerlessInstance_withTags Test Details</h1>
+<h1 id="found-32-testruns-in-dev-qa-from-2025-10-29-to-2025-11-27-from-master-branch-1-unique-tests-passx-30-failx-2">Found 32 TestRuns in dev, qa from 2025-10-29 to 2025-11-27 from master branch: 1 unique tests, PASS(x 30) FAIL(x 2)</h1>
+<p>Success rate: 93.75%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-11-19t0028360000">2025-11-19 00:28</a></td>
+<td>CheckFailure for serverless_instances.test at Step: 2 Checks: 9,10,11</td>
+<td>dev</td>
+<td>457.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-25t0027070000">2025-11-25 00:27</a></td>
+<td>CheckFailure for serverless_instances.test at Step: 2 Checks: 9,10,11</td>
+<td>dev</td>
+<td>541.06s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2025-10-28: MISSING</li>
+<li>2025-10-29 PASS 12 minutes</li>
+<li>2025-10-30 PASS 10 minutes</li>
+<li>2025-10-31 PASS 10 minutes</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02: MISSING</li>
+<li>2025-11-03 PASS 10 minutes</li>
+<li>2025-11-04 PASS 10 minutes</li>
+<li>2025-11-05</li>
+<li>PASS 10 minutes</li>
+<li>PASS 10 minutes</li>
+<li>2025-11-06 PASS 10 minutes</li>
+<li>2025-11-07 PASS 11 minutes</li>
+<li>2025-11-08 PASS 10 minutes</li>
+<li>2025-11-09: MISSING</li>
+<li>2025-11-10 PASS 10 minutes</li>
+<li>2025-11-11 PASS 10 minutes</li>
+<li>2025-11-12 PASS 10 minutes</li>
+<li>2025-11-13 PASS 15 minutes</li>
+<li>2025-11-14 PASS 12 minutes</li>
+<li>2025-11-15 PASS 10 minutes</li>
+<li>2025-11-16: MISSING</li>
+<li>2025-11-17 PASS 12 minutes</li>
+<li>2025-11-18 PASS 10 minutes</li>
+<li>2025-11-19</li>
+<li>FAIL 7 minutes</li>
+</ul>
+<h3 id="error-2025-11-19t0028360000">Error 2025-11-19T00:28:36+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-11-19T00:28:36.2732160Z === RUN   TestAccServerlessInstance_withTags
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-11-19T00:28:36.2735969Z === CONT  TestAccServerlessInstance_withTags
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-11-19T00:34:42.7509975Z === NAME  TestAccServerlessInstance_withTags
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-11-19T00:34:42.7511454Z     resource_serverless_instance_test.go:30: Step 2/3 error: Check failed: Check 9/11 error: data.mongodbatlas_serverless_instances.test: Attribute &#39;results.0.tags.#&#39; expected &quot;2&quot;, got &quot;0&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-11-19T00:34:42.7546311Z         Check 10/11 error: &quot;data.mongodbatlas_serverless_instances.test&quot; no TypeSet element &quot;results.0.tags.*&quot;, with nested attrs map[string]string{&quot;key&quot;:&quot;key 1&quot;, &quot;value&quot;:&quot;value 1&quot;} in state: map[string]string{&quot;%&quot;:&quot;3&quot;, &quot;id&quot;:&quot;terraform-20251119003442608500000011&quot;, &quot;project_id&quot;:&quot;691d0f31a9e010496acf7b15&quot;, &quot;results.#&quot;:&quot;4&quot;, &quot;results.0.%&quot;:&quot;16&quot;, &quot;results.0.auto_indexing&quot;:&quot;true&quot;, &quot;results.0.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.0.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-834019114.dpvnwnw.mongodb-dev.net&quot;, &quot;results.0.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.0.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.0.id&quot;:&quot;691d0f35b03baf562b9682d1&quot;, &quot;results.0.links.#&quot;:&quot;3&quot;, &quot;results.0.links.0.%&quot;:&quot;2&quot;, &quot;results.0.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8340191146445987325&quot;, &quot;results.0.links.0.rel&quot;:&quot;self&quot;, &quot;results.0.links.1.%&quot;:&quot;2&quot;, &quot;results.0.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8340191146445987325/backup/restoreJobs&quot;, &quot;results.0.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.0.links.2.%&quot;:&quot;2&quot;, &quot;results.0.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8340191146445987325/backup/snapshots&quot;, &quot;results.0.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.0.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.0.name&quot;:&quot;test-acc-tf-c-8340191146445987325&quot;, &quot;results.0.project_id&quot;:&quot;&quot;, &quot;results.0.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.0.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.0.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.0.state_name&quot;:&quot;DELETING&quot;, &quot;results.0.tags.#&quot;:&quot;0&quot;, &quot;results.0.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.1.%&quot;:&quot;16&quot;, &quot;results.1.auto_indexing&quot;:&quot;false&quot;, &quot;results.1.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.1.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-227476828.8rrh71l.mongodb-dev.net&quot;, &quot;results.1.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.1.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.1.id&quot;:&quot;691d0f35b03baf562b96882d&quot;, &quot;results.1.links.#&quot;:&quot;3&quot;, &quot;results.1.links.0.%&quot;:&quot;2&quot;, &quot;results.1.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2274768284706768306&quot;, &quot;results.1.links.0.rel&quot;:&quot;self&quot;, &quot;results.1.links.1.%&quot;:&quot;2&quot;, &quot;results.1.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2274768284706768306/backup/restoreJobs&quot;, &quot;results.1.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.1.links.2.%&quot;:&quot;2&quot;, &quot;results.1.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2274768284706768306/backup/snapshots&quot;, &quot;results.1.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.1.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.1.name&quot;:&quot;test-acc-tf-c-2274768284706768306&quot;, &quot;results.1.project_id&quot;:&quot;&quot;, &quot;results.1.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.1.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.1.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.1.state_name&quot;:&quot;DELETING&quot;, &quot;results.1.tags.#&quot;:&quot;0&quot;, &quot;results.1.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.2.%&quot;:&quot;16&quot;, &quot;results.2.auto_indexing&quot;:&quot;false&quot;, &quot;results.2.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.2.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-292802206.bypth9w.mongodb-dev.net&quot;, &quot;results.2.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.2.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.2.id&quot;:&quot;691d0f35b03baf562b9683ea&quot;, &quot;results.2.links.#&quot;:&quot;3&quot;, &quot;results.2.links.0.%&quot;:&quot;2&quot;, &quot;results.2.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2928022063314218752&quot;, &quot;results.2.links.0.rel&quot;:&quot;self&quot;, &quot;results.2.links.1.%&quot;:&quot;2&quot;, &quot;results.2.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2928022063314218752/backup/restoreJobs&quot;, &quot;results.2.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.2.links.2.%&quot;:&quot;2&quot;, &quot;results.2.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2928022063314218752/backup/snapshots&quot;, &quot;results.2.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.2.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.2.name&quot;:&quot;test-acc-tf-c-2928022063314218752&quot;, &quot;results.2.project_id&quot;:&quot;&quot;, &quot;results.2.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.2.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.2.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.2.state_name&quot;:&quot;DELETING&quot;, &quot;results.2.tags.#&quot;:&quot;0&quot;, &quot;results.2.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.3.%&quot;:&quot;16&quot;, &quot;results.3.auto_indexing&quot;:&quot;false&quot;, &quot;results.3.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.3.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-874138185.wjwuyff.mongodb-dev.net&quot;, &quot;results.3.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.3.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.3.id&quot;:&quot;691d0f35b03baf562b9682a3&quot;, &quot;results.3.links.#&quot;:&quot;3&quot;, &quot;results.3.links.0.%&quot;:&quot;2&quot;, &quot;results.3.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8741381851031682830&quot;, &quot;results.3.links.0.rel&quot;:&quot;self&quot;, &quot;results.3.links.1.%&quot;:&quot;2&quot;, &quot;results.3.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8741381851031682830/backup/restoreJobs&quot;, &quot;results.3.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.3.links.2.%&quot;:&quot;2&quot;, &quot;results.3.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8741381851031682830/backup/snapshots&quot;, &quot;results.3.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.3.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.3.name&quot;:&quot;test-acc-tf-c-8741381851031682830&quot;, &quot;results.3.project_id&quot;:&quot;&quot;, &quot;results.3.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.3.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.3.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.3.state_name&quot;:&quot;IDLE&quot;, &quot;results.3.tags.#&quot;:&quot;2&quot;, &quot;results.3.tags.0.%&quot;:&quot;2&quot;, &quot;results.3.tags.0.key&quot;:&quot;key 1&quot;, &quot;results.3.tags.0.value&quot;:&quot;value 1&quot;, &quot;results.3.tags.1.%&quot;:&quot;2&quot;, &quot;results.3.tags.1.key&quot;:&quot;key 2&quot;, &quot;results.3.tags.1.value&quot;:&quot;value 2&quot;, &quot;results.3.termination_protection_enabled&quot;:&quot;false&quot;}
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-11-19T00:34:42.7606123Z         Check 11/11 error: &quot;data.mongodbatlas_serverless_instances.test&quot; no TypeSet element &quot;results.0.tags.*&quot;, with nested attrs map[string]string{&quot;key&quot;:&quot;key 2&quot;, &quot;value&quot;:&quot;value 2&quot;} in state: map[string]string{&quot;%&quot;:&quot;3&quot;, &quot;id&quot;:&quot;terraform-20251119003442608500000011&quot;, &quot;project_id&quot;:&quot;691d0f31a9e010496acf7b15&quot;, &quot;results.#&quot;:&quot;4&quot;, &quot;results.0.%&quot;:&quot;16&quot;, &quot;results.0.auto_indexing&quot;:&quot;true&quot;, &quot;results.0.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.0.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-834019114.dpvnwnw.mongodb-dev.net&quot;, &quot;results.0.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.0.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.0.id&quot;:&quot;691d0f35b03baf562b9682d1&quot;, &quot;results.0.links.#&quot;:&quot;3&quot;, &quot;results.0.links.0.%&quot;:&quot;2&quot;, &quot;results.0.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8340191146445987325&quot;, &quot;results.0.links.0.rel&quot;:&quot;self&quot;, &quot;results.0.links.1.%&quot;:&quot;2&quot;, &quot;results.0.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8340191146445987325/backup/restoreJobs&quot;, &quot;results.0.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.0.links.2.%&quot;:&quot;2&quot;, &quot;results.0.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8340191146445987325/backup/snapshots&quot;, &quot;results.0.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.0.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.0.name&quot;:&quot;test-acc-tf-c-8340191146445987325&quot;, &quot;results.0.project_id&quot;:&quot;&quot;, &quot;results.0.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.0.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.0.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.0.state_name&quot;:&quot;DELETING&quot;, &quot;results.0.tags.#&quot;:&quot;0&quot;, &quot;results.0.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.1.%&quot;:&quot;16&quot;, &quot;results.1.auto_indexing&quot;:&quot;false&quot;, &quot;results.1.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.1.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-227476828.8rrh71l.mongodb-dev.net&quot;, &quot;results.1.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.1.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.1.id&quot;:&quot;691d0f35b03baf562b96882d&quot;, &quot;results.1.links.#&quot;:&quot;3&quot;, &quot;results.1.links.0.%&quot;:&quot;2&quot;, &quot;results.1.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2274768284706768306&quot;, &quot;results.1.links.0.rel&quot;:&quot;self&quot;, &quot;results.1.links.1.%&quot;:&quot;2&quot;, &quot;results.1.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2274768284706768306/backup/restoreJobs&quot;, &quot;results.1.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.1.links.2.%&quot;:&quot;2&quot;, &quot;results.1.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2274768284706768306/backup/snapshots&quot;, &quot;results.1.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.1.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.1.name&quot;:&quot;test-acc-tf-c-2274768284706768306&quot;, &quot;results.1.project_id&quot;:&quot;&quot;, &quot;results.1.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.1.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.1.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.1.state_name&quot;:&quot;DELETING&quot;, &quot;results.1.tags.#&quot;:&quot;0&quot;, &quot;results.1.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.2.%&quot;:&quot;16&quot;, &quot;results.2.auto_indexing&quot;:&quot;false&quot;, &quot;results.2.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.2.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-292802206.bypth9w.mongodb-dev.net&quot;, &quot;results.2.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.2.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.2.id&quot;:&quot;691d0f35b03baf562b9683ea&quot;, &quot;results.2.links.#&quot;:&quot;3&quot;, &quot;results.2.links.0.%&quot;:&quot;2&quot;, &quot;results.2.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2928022063314218752&quot;, &quot;results.2.links.0.rel&quot;:&quot;self&quot;, &quot;results.2.links.1.%&quot;:&quot;2&quot;, &quot;results.2.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2928022063314218752/backup/restoreJobs&quot;, &quot;results.2.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.2.links.2.%&quot;:&quot;2&quot;, &quot;results.2.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-2928022063314218752/backup/snapshots&quot;, &quot;results.2.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.2.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.2.name&quot;:&quot;test-acc-tf-c-2928022063314218752&quot;, &quot;results.2.project_id&quot;:&quot;&quot;, &quot;results.2.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.2.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.2.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.2.state_name&quot;:&quot;DELETING&quot;, &quot;results.2.tags.#&quot;:&quot;0&quot;, &quot;results.2.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.3.%&quot;:&quot;16&quot;, &quot;results.3.auto_indexing&quot;:&quot;false&quot;, &quot;results.3.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.3.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-874138185.wjwuyff.mongodb-dev.net&quot;, &quot;results.3.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.3.create_date&quot;:&quot;2025-11-19T00:28:37Z&quot;, &quot;results.3.id&quot;:&quot;691d0f35b03baf562b9682a3&quot;, &quot;results.3.links.#&quot;:&quot;3&quot;, &quot;results.3.links.0.%&quot;:&quot;2&quot;, &quot;results.3.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8741381851031682830&quot;, &quot;results.3.links.0.rel&quot;:&quot;self&quot;, &quot;results.3.links.1.%&quot;:&quot;2&quot;, &quot;results.3.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8741381851031682830/backup/restoreJobs&quot;, &quot;results.3.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.3.links.2.%&quot;:&quot;2&quot;, &quot;results.3.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/691d0f31a9e010496acf7b15/serverless/test-acc-tf-c-8741381851031682830/backup/snapshots&quot;, &quot;results.3.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.3.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.3.name&quot;:&quot;test-acc-tf-c-8741381851031682830&quot;, &quot;results.3.project_id&quot;:&quot;&quot;, &quot;results.3.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.3.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.3.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.3.state_name&quot;:&quot;IDLE&quot;, &quot;results.3.tags.#&quot;:&quot;2&quot;, &quot;results.3.tags.0.%&quot;:&quot;2&quot;, &quot;results.3.tags.0.key&quot;:&quot;key 1&quot;, &quot;results.3.tags.0.value&quot;:&quot;value 1&quot;, &quot;results.3.tags.1.%&quot;:&quot;2&quot;, &quot;results.3.tags.1.key&quot;:&quot;key 2&quot;, &quot;results.3.tags.1.value&quot;:&quot;value 2&quot;, &quot;results.3.termination_protection_enabled&quot;:&quot;false&quot;}
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-11-19T00:36:13.9897993Z --- FAIL: TestAccServerlessInstance_withTags (457.72s)
+</code></pre></div>
+<ul>
+<li>PASS 10 minutes</li>
+<li>2025-11-20 PASS 11 minutes</li>
+<li>2025-11-21 PASS 10 minutes</li>
+<li>2025-11-22 PASS 10 minutes</li>
+<li>2025-11-23: MISSING</li>
+<li>2025-11-24 PASS 10 minutes</li>
+<li>2025-11-25</li>
+</ul>
+<h3 id="error-2025-11-25t0027070000">Error 2025-11-25T00:27:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-11-25T00:27:07.8752750Z === RUN   TestAccServerlessInstance_withTags
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-11-25T00:27:07.8759432Z === CONT  TestAccServerlessInstance_withTags
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-11-25T00:33:15.9488835Z    test_name=TestAccServerlessInstance_withTags test_terraform_path=/home/runner/work/_temp/db1c5110-8ad1-4836-85e5-60f970da42f1/terraform test_working_directory=/tmp/plugintest900225105 test_step_number=2
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-11-25T00:33:15.9490499Z     resource_serverless_instance_test.go:30: Step 2/3 error: Check failed: Check 9/11 error: data.mongodbatlas_serverless_instances.test: Attribute &#39;results.0.tags.#&#39; expected &quot;2&quot;, got &quot;0&quot;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-11-25T00:33:15.9519960Z         Check 10/11 error: &quot;data.mongodbatlas_serverless_instances.test&quot; no TypeSet element &quot;results.0.tags.*&quot;, with nested attrs map[string]string{&quot;key&quot;:&quot;key 1&quot;, &quot;value&quot;:&quot;value 1&quot;} in state: map[string]string{&quot;%&quot;:&quot;3&quot;, &quot;id&quot;:&quot;terraform-2025112500331572710000000e&quot;, &quot;project_id&quot;:&quot;6924f7d9def656331da0caf1&quot;, &quot;results.#&quot;:&quot;3&quot;, &quot;results.0.%&quot;:&quot;16&quot;, &quot;results.0.auto_indexing&quot;:&quot;true&quot;, &quot;results.0.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.0.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-564035797.liq7h8p.mongodb-dev.net&quot;, &quot;results.0.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.0.create_date&quot;:&quot;2025-11-25T00:27:08Z&quot;, &quot;results.0.id&quot;:&quot;6924f7dc2b3b85618cf87736&quot;, &quot;results.0.links.#&quot;:&quot;3&quot;, &quot;results.0.links.0.%&quot;:&quot;2&quot;, &quot;results.0.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-5640357978330462365&quot;, &quot;results.0.links.0.rel&quot;:&quot;self&quot;, &quot;results.0.links.1.%&quot;:&quot;2&quot;, &quot;results.0.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-5640357978330462365/backup/restoreJobs&quot;, &quot;results.0.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.0.links.2.%&quot;:&quot;2&quot;, &quot;results.0.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-5640357978330462365/backup/snapshots&quot;, &quot;results.0.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.0.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.0.name&quot;:&quot;test-acc-tf-c-5640357978330462365&quot;, &quot;results.0.project_id&quot;:&quot;&quot;, &quot;results.0.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.0.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.0.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.0.state_name&quot;:&quot;DELETING&quot;, &quot;results.0.tags.#&quot;:&quot;0&quot;, &quot;results.0.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.1.%&quot;:&quot;16&quot;, &quot;results.1.auto_indexing&quot;:&quot;false&quot;, &quot;results.1.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.1.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-732184753.lv133ue.mongodb-dev.net&quot;, &quot;results.1.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.1.create_date&quot;:&quot;2025-11-25T00:27:08Z&quot;, &quot;results.1.id&quot;:&quot;6924f7dcdef656331da0e83f&quot;, &quot;results.1.links.#&quot;:&quot;3&quot;, &quot;results.1.links.0.%&quot;:&quot;2&quot;, &quot;results.1.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-732184753183248722&quot;, &quot;results.1.links.0.rel&quot;:&quot;self&quot;, &quot;results.1.links.1.%&quot;:&quot;2&quot;, &quot;results.1.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-732184753183248722/backup/restoreJobs&quot;, &quot;results.1.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.1.links.2.%&quot;:&quot;2&quot;, &quot;results.1.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-732184753183248722/backup/snapshots&quot;, &quot;results.1.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.1.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.1.name&quot;:&quot;test-acc-tf-c-732184753183248722&quot;, &quot;results.1.project_id&quot;:&quot;&quot;, &quot;results.1.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.1.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.1.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.1.state_name&quot;:&quot;DELETING&quot;, &quot;results.1.tags.#&quot;:&quot;0&quot;, &quot;results.1.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.2.%&quot;:&quot;16&quot;, &quot;results.2.auto_indexing&quot;:&quot;false&quot;, &quot;results.2.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.2.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-853483281.9aqyc6b.mongodb-dev.net&quot;, &quot;results.2.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.2.create_date&quot;:&quot;2025-11-25T00:27:08Z&quot;, &quot;results.2.id&quot;:&quot;6924f7dc2b3b85618cf87701&quot;, &quot;results.2.links.#&quot;:&quot;3&quot;, &quot;results.2.links.0.%&quot;:&quot;2&quot;, &quot;results.2.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-8534832810173329169&quot;, &quot;results.2.links.0.rel&quot;:&quot;self&quot;, &quot;results.2.links.1.%&quot;:&quot;2&quot;, &quot;results.2.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-8534832810173329169/backup/restoreJobs&quot;, &quot;results.2.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.2.links.2.%&quot;:&quot;2&quot;, &quot;results.2.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-8534832810173329169/backup/snapshots&quot;, &quot;results.2.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.2.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.2.name&quot;:&quot;test-acc-tf-c-8534832810173329169&quot;, &quot;results.2.project_id&quot;:&quot;&quot;, &quot;results.2.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.2.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.2.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.2.state_name&quot;:&quot;IDLE&quot;, &quot;results.2.tags.#&quot;:&quot;2&quot;, &quot;results.2.tags.0.%&quot;:&quot;2&quot;, &quot;results.2.tags.0.key&quot;:&quot;key 1&quot;, &quot;results.2.tags.0.value&quot;:&quot;value 1&quot;, &quot;results.2.tags.1.%&quot;:&quot;2&quot;, &quot;results.2.tags.1.key&quot;:&quot;key 2&quot;, &quot;results.2.tags.1.value&quot;:&quot;value 2&quot;, &quot;results.2.termination_protection_enabled&quot;:&quot;false&quot;}
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-11-25T00:33:15.9563804Z         Check 11/11 error: &quot;data.mongodbatlas_serverless_instances.test&quot; no TypeSet element &quot;results.0.tags.*&quot;, with nested attrs map[string]string{&quot;key&quot;:&quot;key 2&quot;, &quot;value&quot;:&quot;value 2&quot;} in state: map[string]string{&quot;%&quot;:&quot;3&quot;, &quot;id&quot;:&quot;terraform-2025112500331572710000000e&quot;, &quot;project_id&quot;:&quot;6924f7d9def656331da0caf1&quot;, &quot;results.#&quot;:&quot;3&quot;, &quot;results.0.%&quot;:&quot;16&quot;, &quot;results.0.auto_indexing&quot;:&quot;true&quot;, &quot;results.0.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.0.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-564035797.liq7h8p.mongodb-dev.net&quot;, &quot;results.0.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.0.create_date&quot;:&quot;2025-11-25T00:27:08Z&quot;, &quot;results.0.id&quot;:&quot;6924f7dc2b3b85618cf87736&quot;, &quot;results.0.links.#&quot;:&quot;3&quot;, &quot;results.0.links.0.%&quot;:&quot;2&quot;, &quot;results.0.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-5640357978330462365&quot;, &quot;results.0.links.0.rel&quot;:&quot;self&quot;, &quot;results.0.links.1.%&quot;:&quot;2&quot;, &quot;results.0.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-5640357978330462365/backup/restoreJobs&quot;, &quot;results.0.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.0.links.2.%&quot;:&quot;2&quot;, &quot;results.0.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-5640357978330462365/backup/snapshots&quot;, &quot;results.0.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.0.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.0.name&quot;:&quot;test-acc-tf-c-5640357978330462365&quot;, &quot;results.0.project_id&quot;:&quot;&quot;, &quot;results.0.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.0.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.0.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.0.state_name&quot;:&quot;DELETING&quot;, &quot;results.0.tags.#&quot;:&quot;0&quot;, &quot;results.0.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.1.%&quot;:&quot;16&quot;, &quot;results.1.auto_indexing&quot;:&quot;false&quot;, &quot;results.1.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.1.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-732184753.lv133ue.mongodb-dev.net&quot;, &quot;results.1.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.1.create_date&quot;:&quot;2025-11-25T00:27:08Z&quot;, &quot;results.1.id&quot;:&quot;6924f7dcdef656331da0e83f&quot;, &quot;results.1.links.#&quot;:&quot;3&quot;, &quot;results.1.links.0.%&quot;:&quot;2&quot;, &quot;results.1.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-732184753183248722&quot;, &quot;results.1.links.0.rel&quot;:&quot;self&quot;, &quot;results.1.links.1.%&quot;:&quot;2&quot;, &quot;results.1.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-732184753183248722/backup/restoreJobs&quot;, &quot;results.1.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.1.links.2.%&quot;:&quot;2&quot;, &quot;results.1.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-732184753183248722/backup/snapshots&quot;, &quot;results.1.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.1.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.1.name&quot;:&quot;test-acc-tf-c-732184753183248722&quot;, &quot;results.1.project_id&quot;:&quot;&quot;, &quot;results.1.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.1.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.1.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.1.state_name&quot;:&quot;DELETING&quot;, &quot;results.1.tags.#&quot;:&quot;0&quot;, &quot;results.1.termination_protection_enabled&quot;:&quot;false&quot;, &quot;results.2.%&quot;:&quot;16&quot;, &quot;results.2.auto_indexing&quot;:&quot;false&quot;, &quot;results.2.connection_strings_private_endpoint_srv.#&quot;:&quot;0&quot;, &quot;results.2.connection_strings_standard_srv&quot;:&quot;mongodb+srv://test-acc-tf-c-853483281.9aqyc6b.mongodb-dev.net&quot;, &quot;results.2.continuous_backup_enabled&quot;:&quot;true&quot;, &quot;results.2.create_date&quot;:&quot;2025-11-25T00:27:08Z&quot;, &quot;results.2.id&quot;:&quot;6924f7dc2b3b85618cf87701&quot;, &quot;results.2.links.#&quot;:&quot;3&quot;, &quot;results.2.links.0.%&quot;:&quot;2&quot;, &quot;results.2.links.0.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-8534832810173329169&quot;, &quot;results.2.links.0.rel&quot;:&quot;self&quot;, &quot;results.2.links.1.%&quot;:&quot;2&quot;, &quot;results.2.links.1.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-8534832810173329169/backup/restoreJobs&quot;, &quot;results.2.links.1.rel&quot;:&quot;https://cloud.mongodb.com/restoreJobs&quot;, &quot;results.2.links.2.%&quot;:&quot;2&quot;, &quot;results.2.links.2.href&quot;:&quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6924f7d9def656331da0caf1/serverless/test-acc-tf-c-8534832810173329169/backup/snapshots&quot;, &quot;results.2.links.2.rel&quot;:&quot;https://cloud.mongodb.com/snapshots&quot;, &quot;results.2.mongo_db_version&quot;:&quot;8.0.12&quot;, &quot;results.2.name&quot;:&quot;test-acc-tf-c-8534832810173329169&quot;, &quot;results.2.project_id&quot;:&quot;&quot;, &quot;results.2.provider_settings_backing_provider_name&quot;:&quot;AWS&quot;, &quot;results.2.provider_settings_provider_name&quot;:&quot;SERVERLESS&quot;, &quot;results.2.provider_settings_region_name&quot;:&quot;US_EAST_1&quot;, &quot;results.2.state_name&quot;:&quot;IDLE&quot;, &quot;results.2.tags.#&quot;:&quot;2&quot;, &quot;results.2.tags.0.%&quot;:&quot;2&quot;, &quot;results.2.tags.0.key&quot;:&quot;key 1&quot;, &quot;results.2.tags.0.value&quot;:&quot;value 1&quot;, &quot;results.2.tags.1.%&quot;:&quot;2&quot;, &quot;results.2.tags.1.key&quot;:&quot;key 2&quot;, &quot;results.2.tags.1.value&quot;:&quot;value 2&quot;, &quot;results.2.termination_protection_enabled&quot;:&quot;false&quot;}
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-11-25T00:36:09.4929469Z --- FAIL: TestAccServerlessInstance_withTags (541.62s)
+</code></pre></div>
+<ul>
+<li>2025-11-26 PASS 10 minutes</li>
+<li>2025-11-27 PASS 12 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2025-10-28: MISSING</li>
+<li>2025-10-29: MISSING</li>
+<li>2025-10-30: MISSING</li>
+<li>2025-10-31: MISSING</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02 PASS 10 minutes</li>
+<li>2025-11-03: MISSING</li>
+<li>2025-11-04: MISSING</li>
+<li>2025-11-05: MISSING</li>
+<li>2025-11-06: MISSING</li>
+<li>2025-11-07: MISSING</li>
+<li>2025-11-08: MISSING</li>
+<li>2025-11-09 PASS 10 minutes</li>
+<li>2025-11-10: MISSING</li>
+<li>2025-11-11: MISSING</li>
+<li>2025-11-12: MISSING</li>
+<li>2025-11-13 PASS 10 minutes</li>
+<li>2025-11-14: MISSING</li>
+<li>2025-11-15: MISSING</li>
+<li>2025-11-16 PASS 10 minutes</li>
+<li>2025-11-17: MISSING</li>
+<li>2025-11-18: MISSING</li>
+<li>2025-11-19: MISSING</li>
+<li>2025-11-20: MISSING</li>
+<li>2025-11-21: MISSING</li>
+<li>2025-11-22: MISSING</li>
+<li>2025-11-23 PASS 10 minutes</li>
+<li>2025-11-24: MISSING</li>
+<li>2025-11-25: MISSING</li>
+<li>2025-11-26: MISSING</li>
+<li>2025-11-27: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

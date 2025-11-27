@@ -1,0 +1,758 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccClusterAdvancedCluster_defaultWrite Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccclusteradvancedcluster_defaultwrite-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccClusterAdvancedCluster_defaultWrite Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccclusteradvancedcluster_defaultwrite-test-details">advanced_cluster/advancedcluster/TestAccClusterAdvancedCluster_defaultWrite Test Details</h1>
+<h1 id="found-33-testruns-in-dev-qa-from-2025-10-29-to-2025-11-27-from-master-branch-1-unique-tests-passx-22-failx-11">Found 33 TestRuns in dev, qa from 2025-10-29 to 2025-11-27 from master branch: 1 unique tests, PASS(x 22) FAIL(x 11)</h1>
+<p>Success rate: 66.67%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2025-10-30t0028200000">2025-10-30 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>12764.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-19t0029000000">2025-11-19 00:29</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10805.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-19t0930050000">2025-11-19 09:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10825.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-20t0028040000">2025-11-20 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10825.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-20t1001570000">2025-11-20 10:01</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10825.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-21t0028310000">2025-11-21 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10820.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-22t0026590000">2025-11-22 00:26</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10825.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-24t0030120000">2025-11-24 00:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10830.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-25t0027240000">2025-11-25 00:27</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10825.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-26t0028420000">2025-11-26 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10830.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2025-11-27t0028290000">2025-11-27 00:28</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10850.07s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2025-10-28: MISSING</li>
+<li>2025-10-29 PASS 42 minutes</li>
+<li>2025-10-30</li>
+</ul>
+<h3 id="error-2025-10-30t0028200000">Error 2025-10-30T00:28:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2025-10-30T00:28:20.8257711Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2025-10-30T00:29:52.4844647Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2025-10-30T00:30:17.4648906Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2025-10-30T00:30:17.4650288Z     pre_check.go:46: Time before creating cluster: 2025-10-30T00:30:17.46459483Z, ProjectID: 6902b122abf4374f32996ea1, Cluster name: test-acc-tf-c-9003881928093157054
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2025-10-30T04:02:36.9559099Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2025-10-30T04:02:36.9559704Z     resource_test.go:410: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2025-10-30T04:02:36.9560118Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2025-10-30T04:02:36.9560445Z         Error: Error in delete
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2025-10-30T04:02:36.9560730Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2025-10-30T04:02:36.9561207Z         cluster=test-acc-tf-c-9003881928093157054 didn&#39;t reach desired state:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2025-10-30T04:02:36.9562126Z         DELETED, error: timeout while waiting for state to become &#39;DELETED&#39; (last
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2025-10-30T04:02:36.9562671Z         state: &#39;DELETING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2025-10-30T04:02:37.3250023Z    test_step_number=2 test_working_directory=/tmp/plugintest129278947 test_terraform_path=/home/runner/work/_temp/393c930d-038d-4707-96f8-6a139002a190/terraform
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2025-10-30T04:02:37.3251205Z     panic.go:615: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2025-10-30T04:02:37.3252012Z         
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2025-10-30T04:02:37.3252323Z         Error: Error in delete
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2025-10-30T04:02:37.3252611Z         
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2025-10-30T04:02:37.3253068Z         cluster name: test-acc-tf-c-9003881928093157054, API error details:
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2025-10-30T04:02:37.3254003Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6902b122abf4374f32996ea1/clusters/test-acc-tf-c-9003881928093157054
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2025-10-30T04:02:37.3254707Z         DELETE: HTTP 400 Bad Request (Error code:
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2025-10-30T04:02:37.3255208Z         &quot;CLUSTER_ALREADY_REQUESTED_DELETION&quot;) Detail: The cluster
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2025-10-30T04:02:37.3255836Z         test-acc-tf-c-9003881928093157054 has already been requested for deletion.
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2025-10-30T04:02:37.3256478Z         Reason: Bad Request. Params: [test-acc-tf-c-9003881928093157054],
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2025-10-30T04:02:37.3256928Z         BadRequestDetail: 
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2025-10-30T04:02:37.3257320Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (12764.84s)
+</code></pre></div>
+<ul>
+<li>2025-10-31 PASS 32 minutes</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02: MISSING</li>
+<li>2025-11-03 PASS 34 minutes</li>
+<li>2025-11-04 PASS 32 minutes</li>
+<li>2025-11-05</li>
+<li>PASS 35 minutes</li>
+<li>PASS 30 minutes</li>
+<li>2025-11-06 PASS 39 minutes</li>
+<li>2025-11-07 PASS 36 minutes</li>
+<li>2025-11-08 PASS 56 minutes</li>
+<li>2025-11-09: MISSING</li>
+<li>2025-11-10 PASS 28 minutes</li>
+<li>2025-11-11 PASS 28 minutes</li>
+<li>2025-11-12 PASS 32 minutes</li>
+<li>2025-11-13 PASS an hour</li>
+<li>2025-11-14 PASS 41 minutes</li>
+<li>2025-11-15 PASS 30 minutes</li>
+<li>2025-11-16: MISSING</li>
+<li>2025-11-17 PASS 33 minutes</li>
+<li>2025-11-18 PASS 32 minutes</li>
+<li>2025-11-19</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-19t0029000000">Error 2025-11-19T00:29:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2025-11-19T00:29:00.7344200Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2025-11-19T00:35:20.7296695Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2025-11-19T00:35:25.7288361Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2025-11-19T00:35:25.7295112Z     pre_check.go:46: Time before creating cluster: 2025-11-19T00:35:25.72856282Z, ProjectID: 691d0f4aa9e010496ad06715, Cluster name: test-acc-tf-c-6484205062287442113
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2025-11-19T03:35:26.4446236Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2025-11-19T03:35:26.4446880Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2025-11-19T03:35:26.4447403Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2025-11-19T03:35:26.4447738Z         Error: Error in create
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2025-11-19T03:35:26.4448112Z         
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2025-11-19T03:35:26.4448445Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2025-11-19T03:35:26.4449228Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2025-11-19T03:35:26.4449912Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2025-11-19T03:35:26.4450224Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2025-11-19T03:35:26.4450802Z         cluster=test-acc-tf-c-6484205062287442113 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2025-11-19T03:35:26.4451375Z         error: context deadline exceeded
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2025-11-19T03:35:26.4937516Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10805.77s)
+</code></pre></div>
+<ul>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-19t0930050000">Error 2025-11-19T09:30:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2025-11-19T09:30:05.0239735Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2025-11-19T09:31:55.5689981Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2025-11-19T09:32:20.5600569Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2025-11-19T09:32:20.5602386Z     pre_check.go:46: Time before creating cluster: 2025-11-19T09:32:20.559715929Z, ProjectID: 691d8e1b5ab64e7c5567626e, Cluster name: test-acc-tf-c-354803140689586991
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2025-11-19T12:32:21.1710099Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2025-11-19T12:32:21.1710727Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2025-11-19T12:32:21.1711198Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2025-11-19T12:32:21.1711452Z         Error: Error in create
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2025-11-19T12:32:21.1711830Z         
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2025-11-19T12:32:21.1712305Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2025-11-19T12:32:21.1713050Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2025-11-19T12:32:21.1713863Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2025-11-19T12:32:21.1714270Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2025-11-19T12:32:21.1714712Z         cluster=test-acc-tf-c-354803140689586991 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2025-11-19T12:32:21.1715271Z         error: context deadline exceeded
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2025-11-19T12:32:21.2228650Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10825.66s)
+</code></pre></div>
+<ul>
+<li>2025-11-20</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-20t0028040000">Error 2025-11-20T00:28:04+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2025-11-20T00:28:04.5873226Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2025-11-20T00:29:55.5999754Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2025-11-20T00:30:20.5741236Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2025-11-20T00:30:20.5742400Z     pre_check.go:46: Time before creating cluster: 2025-11-20T00:30:20.573865569Z, ProjectID: 691e6091f41e983fa169881a, Cluster name: test-acc-tf-c-2036378089598861373
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2025-11-20T03:30:21.2399061Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2025-11-20T03:30:21.2399687Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2025-11-20T03:30:21.2400133Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2025-11-20T03:30:21.2400379Z         Error: Error in create
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2025-11-20T03:30:21.2400673Z         
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2025-11-20T03:30:21.2401031Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2025-11-20T03:30:21.2401690Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2025-11-20T03:30:21.2402302Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2025-11-20T03:30:21.2402595Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2025-11-20T03:30:21.2403161Z         cluster=test-acc-tf-c-2036378089598861373 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2025-11-20T03:30:21.2403616Z         error: context deadline exceeded
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2025-11-20T03:30:21.2913830Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10825.71s)
+</code></pre></div>
+<ul>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2025-11-20t1001570000">Error 2025-11-20T10:01:57+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2025-11-20T10:01:57.9361916Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2025-11-20T10:03:33.6955018Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2025-11-20T10:03:58.6619947Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2025-11-20T10:03:58.6621345Z     pre_check.go:46: Time before creating cluster: 2025-11-20T10:03:58.661721824Z, ProjectID: 691ee7142b50f06feba62559, Cluster name: test-acc-tf-c-2955172467243753068
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2025-11-20T13:03:59.2975955Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2025-11-20T13:03:59.2976860Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2025-11-20T13:03:59.2977442Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2025-11-20T13:03:59.2977796Z         Error: Error in create
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2025-11-20T13:03:59.2978243Z         
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2025-11-20T13:03:59.2978749Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2025-11-20T13:03:59.2979383Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2025-11-20T13:03:59.2979970Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2025-11-20T13:03:59.2980288Z         
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2025-11-20T13:03:59.2980733Z         cluster=test-acc-tf-c-2955172467243753068 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2025-11-20T13:03:59.2981194Z         error: context deadline exceeded
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2025-11-20T13:03:59.3432300Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10825.65s)
+</code></pre></div>
+<ul>
+<li>2025-11-21</li>
+</ul>
+<h3 id="error-2025-11-21t0028310000">Error 2025-11-21T00:28:31+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2025-11-21T00:28:31.2198856Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2025-11-21T00:30:22.6550831Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2025-11-21T00:30:42.6491854Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2025-11-21T00:30:42.6493454Z     pre_check.go:46: Time before creating cluster: 2025-11-21T00:30:42.648906277Z, ProjectID: 691fb22c238ce57ddce440c5, Cluster name: test-acc-tf-c-61993749154388021
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2025-11-21T03:30:43.3017409Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2025-11-21T03:30:43.3018275Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2025-11-21T03:30:43.3018884Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2025-11-21T03:30:43.3019289Z         Error: Error in create
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2025-11-21T03:30:43.3019673Z         
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2025-11-21T03:30:43.3020210Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2025-11-21T03:30:43.3021306Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2025-11-21T03:30:43.3022311Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2025-11-21T03:30:43.3022822Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2025-11-21T03:30:43.3023564Z         cluster=test-acc-tf-c-61993749154388021 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2025-11-21T03:30:43.3024334Z         error: context deadline exceeded
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2025-11-21T03:30:43.3481086Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10820.69s)
+</code></pre></div>
+<ul>
+<li>2025-11-22</li>
+</ul>
+<h3 id="error-2025-11-22t0026590000">Error 2025-11-22T00:26:59+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2025-11-22T00:26:59.8541927Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2025-11-22T00:28:42.9643129Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2025-11-22T00:29:07.9406280Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2025-11-22T00:29:07.9407979Z     pre_check.go:46: Time before creating cluster: 2025-11-22T00:29:07.940311817Z, ProjectID: 692103504aaa8d39323282b3, Cluster name: test-acc-tf-c-445515660485670201
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2025-11-22T03:29:08.5095505Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2025-11-22T03:29:08.5096137Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2025-11-22T03:29:08.5096628Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2025-11-22T03:29:08.5096890Z         Error: Error in create
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2025-11-22T03:29:08.5097243Z         
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2025-11-22T03:29:08.5097584Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2025-11-22T03:29:08.5098359Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2025-11-22T03:29:08.5099063Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2025-11-22T03:29:08.5099381Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2025-11-22T03:29:08.5099939Z         cluster=test-acc-tf-c-445515660485670201 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2025-11-22T03:29:08.5100605Z         error: context deadline exceeded
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2025-11-22T03:29:08.5620821Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10825.61s)
+</code></pre></div>
+<ul>
+<li>2025-11-23: MISSING</li>
+<li>2025-11-24</li>
+</ul>
+<h3 id="error-2025-11-24t0030120000">Error 2025-11-24T00:30:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2025-11-24T00:30:12.1837365Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2025-11-24T00:33:24.2026990Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2025-11-24T00:33:54.1860935Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2025-11-24T00:33:54.1862198Z     pre_check.go:46: Time before creating cluster: 2025-11-24T00:33:54.185836921Z, ProjectID: 6923a71121519f56cb85fc10, Cluster name: test-acc-tf-c-8255404646425699206
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2025-11-24T03:33:54.7361362Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2025-11-24T03:33:54.7361899Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2025-11-24T03:33:54.7362633Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2025-11-24T03:33:54.7363025Z         Error: Error in create
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2025-11-24T03:33:54.7363282Z         
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2025-11-24T03:33:54.7363731Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2025-11-24T03:33:54.7364899Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2025-11-24T03:33:54.7365617Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2025-11-24T03:33:54.7365948Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2025-11-24T03:33:54.7366494Z         cluster=test-acc-tf-c-8255404646425699206 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2025-11-24T03:33:54.7367076Z         error: context deadline exceeded
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2025-11-24T03:33:54.7817961Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10830.59s)
+</code></pre></div>
+<ul>
+<li>2025-11-25</li>
+</ul>
+<h3 id="error-2025-11-25t0027240000">Error 2025-11-25T00:27:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2025-11-25T00:27:24.5901091Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2025-11-25T00:31:51.3983597Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2025-11-25T00:32:16.3986334Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2025-11-25T00:32:16.3987690Z     pre_check.go:46: Time before creating cluster: 2025-11-25T00:32:16.398315122Z, ProjectID: 6924f7eadef656331da183f7, Cluster name: test-acc-tf-c-2336861065359102971
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2025-11-25T03:32:17.0190609Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2025-11-25T03:32:17.0191397Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2025-11-25T03:32:17.0191790Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2025-11-25T03:32:17.0192055Z         Error: Error in create
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2025-11-25T03:32:17.0192302Z         
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2025-11-25T03:32:17.0192630Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2025-11-25T03:32:17.0193261Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2025-11-25T03:32:17.0193849Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2025-11-25T03:32:17.0194238Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2025-11-25T03:32:17.0194728Z         cluster=test-acc-tf-c-2336861065359102971 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2025-11-25T03:32:17.0195313Z         error: context deadline exceeded
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2025-11-25T03:32:17.0634996Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10825.67s)
+</code></pre></div>
+<ul>
+<li>2025-11-26</li>
+</ul>
+<h3 id="error-2025-11-26t0028420000">Error 2025-11-26T00:28:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2025-11-26T00:28:42.2344363Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2025-11-26T00:30:27.5277771Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2025-11-26T00:30:57.5028982Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2025-11-26T00:30:57.5030996Z     pre_check.go:46: Time before creating cluster: 2025-11-26T00:30:57.50263751Z, ProjectID: 692649b8131e634a70c6042d, Cluster name: test-acc-tf-c-8407849365836426676
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2025-11-26T03:30:58.0597087Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2025-11-26T03:30:58.0597769Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2025-11-26T03:30:58.0598172Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2025-11-26T03:30:58.0598711Z         Error: Error in create
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2025-11-26T03:30:58.0599059Z         
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2025-11-26T03:30:58.0599522Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2025-11-26T03:30:58.0600270Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2025-11-26T03:30:58.0600973Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2025-11-26T03:30:58.0601279Z         
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2025-11-26T03:30:58.0601836Z         cluster=test-acc-tf-c-8407849365836426676 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2025-11-26T03:30:58.0602375Z         error: context deadline exceeded
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2025-11-26T03:30:58.1051325Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10830.59s)
+</code></pre></div>
+<ul>
+<li>2025-11-27</li>
+</ul>
+<h3 id="error-2025-11-27t0028290000">Error 2025-11-27T00:28:29+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2025-11-27T00:28:29.0753115Z === RUN   TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2025-11-27T00:30:06.5014999Z === CONT  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2025-11-27T00:30:56.4947805Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2025-11-27T00:30:56.4949321Z     pre_check.go:46: Time before creating cluster: 2025-11-27T00:30:56.494510207Z, ProjectID: 69279b2ab358b3221e8cc1c8, Cluster name: test-acc-tf-c-8013356819983999255
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2025-11-27T03:30:57.1334132Z === NAME  TestAccClusterAdvancedCluster_defaultWrite
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2025-11-27T03:30:57.1334883Z     resource_test.go:411: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2025-11-27T03:30:57.1335440Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2025-11-27T03:30:57.1335700Z         Error: Error in create
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2025-11-27T03:30:57.1336072Z         
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2025-11-27T03:30:57.1336486Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2025-11-27T03:30:57.1337584Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2025-11-27T03:30:57.1338559Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2025-11-27T03:30:57.1339025Z         
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2025-11-27T03:30:57.1339771Z         cluster=test-acc-tf-c-8013356819983999255 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2025-11-27T03:30:57.1340783Z         error: context deadline exceeded
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2025-11-27T03:30:57.1815480Z --- FAIL: TestAccClusterAdvancedCluster_defaultWrite (10850.69s)
+</code></pre></div>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2025-10-28: MISSING</li>
+<li>2025-10-29: MISSING</li>
+<li>2025-10-30: MISSING</li>
+<li>2025-10-31: MISSING</li>
+<li>2025-11-01: MISSING</li>
+<li>2025-11-02 PASS 29 minutes</li>
+<li>2025-11-03: MISSING</li>
+<li>2025-11-04: MISSING</li>
+<li>2025-11-05: MISSING</li>
+<li>2025-11-06: MISSING</li>
+<li>2025-11-07: MISSING</li>
+<li>2025-11-08: MISSING</li>
+<li>2025-11-09 PASS 29 minutes</li>
+<li>2025-11-10: MISSING</li>
+<li>2025-11-11: MISSING</li>
+<li>2025-11-12: MISSING</li>
+<li>2025-11-13 PASS 29 minutes</li>
+<li>2025-11-14: MISSING</li>
+<li>2025-11-15: MISSING</li>
+<li>2025-11-16 PASS 32 minutes</li>
+<li>2025-11-17: MISSING</li>
+<li>2025-11-18: MISSING</li>
+<li>2025-11-19: MISSING</li>
+<li>2025-11-20: MISSING</li>
+<li>2025-11-21: MISSING</li>
+<li>2025-11-22: MISSING</li>
+<li>2025-11-23 PASS 33 minutes</li>
+<li>2025-11-24: MISSING</li>
+<li>2025-11-25: MISSING</li>
+<li>2025-11-26: MISSING</li>
+<li>2025-11-27: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
