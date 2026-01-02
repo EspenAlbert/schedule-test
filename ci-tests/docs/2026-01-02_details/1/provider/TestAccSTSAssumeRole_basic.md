@@ -1,0 +1,167 @@
+# 1/provider/TestAccSTSAssumeRole_basic Test Details
+# Found 96 TestRuns in dev, qa from 2025-12-04 to 2026-01-02 from master branch: 1 unique tests, PASS(x 57) SKIP(x 39)
+Success rate: 100.00%
+
+## DEV Environment
+### Timeline
+- 2025-12-03: MISSING
+- 2025-12-04
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-05
+  - PASS 15 seconds
+  - PASS 15 seconds
+  - PASS 16 seconds
+- 2025-12-06
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-07: MISSING
+- 2025-12-08
+  - PASS 8 seconds
+  - PASS 12 seconds
+  - PASS 17 seconds
+  - PASS 13 seconds
+  - PASS 24 seconds
+  - PASS 18 seconds
+- 2025-12-09
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-10
+  - PASS 14 seconds
+  - PASS 11 seconds
+  - PASS 23 seconds
+  - PASS 13 seconds
+  - PASS 25 seconds
+  - PASS 18 seconds
+- 2025-12-11
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-12
+  - PASS 15 seconds
+  - PASS 19 seconds
+  - PASS 15 seconds
+- 2025-12-13
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-14: MISSING
+- 2025-12-15
+  - PASS 9 seconds
+  - PASS 16 seconds
+  - PASS 24 seconds
+- 2025-12-16
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-17
+  - PASS 19 seconds
+  - PASS 19 seconds
+  - PASS 9 seconds
+- 2025-12-18
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-19
+  - PASS 18 seconds
+  - PASS 15 seconds
+  - PASS 19 seconds
+- 2025-12-20
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-21: MISSING
+- 2025-12-22
+  - PASS 8 seconds
+  - PASS 23 seconds
+  - PASS 21 seconds
+- 2025-12-23
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-24
+  - PASS 13 seconds
+  - PASS 16 seconds
+  - PASS 15 seconds
+- 2025-12-25
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-26
+  - PASS 13 seconds
+  - PASS 12 seconds
+  - PASS 11 seconds
+- 2025-12-27
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-28: MISSING
+- 2025-12-29: MISSING
+- 2025-12-30
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2025-12-31
+  - PASS 11 seconds
+  - PASS 18 seconds
+  - PASS 18 seconds
+- 2026-01-01
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-01-02
+  - PASS 12 seconds
+  - PASS 18 seconds
+  - PASS 19 seconds
+
+## QA Environment
+### Timeline
+- 2025-12-03: MISSING
+- 2025-12-04: MISSING
+- 2025-12-05: MISSING
+- 2025-12-06: MISSING
+- 2025-12-07
+  - PASS 12 seconds
+  - PASS 17 seconds
+  - PASS 22 seconds
+- 2025-12-08: MISSING
+- 2025-12-09
+  - PASS 13 seconds
+  - PASS 13 seconds
+  - PASS 17 seconds
+- 2025-12-10: MISSING
+- 2025-12-11: MISSING
+- 2025-12-12: MISSING
+- 2025-12-13: MISSING
+- 2025-12-14
+  - PASS 14 seconds
+  - PASS 13 seconds
+  - PASS 13 seconds
+- 2025-12-15: MISSING
+- 2025-12-16: MISSING
+- 2025-12-17: MISSING
+- 2025-12-18: MISSING
+- 2025-12-19: MISSING
+- 2025-12-20: MISSING
+- 2025-12-21
+  - PASS 7 seconds
+  - PASS 20 seconds
+  - PASS 22 seconds
+- 2025-12-22: MISSING
+- 2025-12-23: MISSING
+- 2025-12-24: MISSING
+- 2025-12-25: MISSING
+- 2025-12-26: MISSING
+- 2025-12-27: MISSING
+- 2025-12-28
+  - PASS 15 seconds
+  - PASS 13 seconds
+  - PASS 20 seconds
+- 2025-12-29: MISSING
+- 2025-12-30: MISSING
+- 2025-12-31: MISSING
+- 2026-01-01: MISSING
+- 2026-01-02: MISSING
