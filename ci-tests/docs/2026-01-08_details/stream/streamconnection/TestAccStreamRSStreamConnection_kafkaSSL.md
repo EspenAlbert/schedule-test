@@ -1,0 +1,106 @@
+# stream/streamconnection/TestAccStreamRSStreamConnection_kafkaSSL Test Details
+# Found 32 TestRuns in dev, qa from 2025-12-10 to 2026-01-08 from master branch: 1 unique tests, PASS(x 31) FAIL
+Success rate: 96.88%
+
+## DEV Environment
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2026-01-02 00:53](#error-2026-01-02t0053150000) | API Error STREAM_CONNECTION_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/{groupId}/streams/{tenantName}/connections/{connectionName} | dev | unknown | 2.04s
+
+### Timeline
+- 2025-12-09: MISSING
+- 2025-12-10
+  - PASS 4 minutes
+  - PASS 4 minutes
+- 2025-12-11 PASS 3 minutes
+- 2025-12-12 PASS 5 minutes
+- 2025-12-13 PASS 3 minutes
+- 2025-12-14: MISSING
+- 2025-12-15 PASS 4 minutes
+- 2025-12-16 PASS 2 minutes
+- 2025-12-17 PASS 3 minutes
+- 2025-12-18 PASS 2 minutes
+- 2025-12-19 PASS 2 minutes
+- 2025-12-20 PASS 2 minutes
+- 2025-12-21: MISSING
+- 2025-12-22 PASS 4 minutes
+- 2025-12-23 PASS 2 minutes
+- 2025-12-24 PASS 2 minutes
+- 2025-12-25 PASS 2 minutes
+- 2025-12-26 PASS 5 minutes
+- 2025-12-27 PASS 2 minutes
+- 2025-12-28: MISSING
+- 2025-12-29: MISSING
+- 2025-12-30 PASS 2 minutes
+- 2025-12-31 PASS 4 minutes
+- 2026-01-01 PASS 3 minutes
+- 2026-01-02
+
+### Error 2026-01-02T00:53:15+00:00
+GoTestErrorClassification(error_class='unknown',author='human',run_id='2026-01-02T00:53:15.987000+00:00-TestAccStreamRSStreamConnection_kafkaSSL',confidence=1.0,ts_when='5 days ago')
+API Error STREAM_CONNECTION_NOT_FOUND_FOR_NAME /api/atlas/v2/groups/{groupId}/streams/{tenantName}/connections/{connectionName}
+```
+2026-01-02T00:53:15.9873390Z === RUN   TestAccStreamRSStreamConnection_kafkaSSL
+2026-01-02T00:53:15.9883247Z === CONT  TestAccStreamRSStreamConnection_kafkaSSL
+2026-01-02T00:53:15.9930098Z === NAME  TestAccStreamRSStreamConnection_kafkaSSL
+2026-01-02T00:53:15.9930731Z     resource_stream_connection_test.go:261: Step 1/3 error: Error running apply: exit status 1
+2026-01-02T00:53:15.9931157Z         
+2026-01-02T00:53:15.9931430Z         Error: error fetching resource
+2026-01-02T00:53:15.9931713Z         
+2026-01-02T00:53:15.9932071Z           with data.mongodbatlas_stream_connection.test,
+2026-01-02T00:53:15.9932710Z           on terraform_plugin_test.tf line 39, in data "mongodbatlas_stream_connection" "test":
+2026-01-02T00:53:15.9933274Z           39: data "mongodbatlas_stream_connection" "test" {
+2026-01-02T00:53:15.9933575Z         
+2026-01-02T00:53:15.9934411Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/695711f7bb847ea0da1935d4/streams/test-acc-tf-s-3730062657613000804/connections/kafka-conn-ssl
+2026-01-02T00:53:15.9935304Z         GET: HTTP 404 Not Found (Error code: "STREAM_CONNECTION_NOT_FOUND_FOR_NAME")
+2026-01-02T00:53:15.9935882Z         Detail: Stream connection with name kafka-conn-ssl for project
+2026-01-02T00:53:15.9936471Z         695711f7bb847ea0da1935d4 and name test-acc-tf-s-3730062657613000804 not
+2026-01-02T00:53:15.9937084Z         found. Reason: Not Found. Params: [kafka-conn-ssl 695711f7bb847ea0da1935d4
+2026-01-02T00:53:15.9937615Z         test-acc-tf-s-3730062657613000804], BadRequestDetail: 
+2026-01-02T00:53:15.9938484Z --- FAIL: TestAccStreamRSStreamConnection_kafkaSSL (2.44s)
+```
+
+- 2026-01-03 PASS 3 minutes
+- 2026-01-04: MISSING
+- 2026-01-05 PASS 4 minutes
+- 2026-01-06 PASS 2 minutes
+- 2026-01-07 PASS 2 minutes
+- 2026-01-08 PASS 3 minutes
+
+## QA Environment
+### Timeline
+- 2025-12-09: MISSING
+- 2025-12-10: MISSING
+- 2025-12-11: MISSING
+- 2025-12-12: MISSING
+- 2025-12-13: MISSING
+- 2025-12-14 PASS 2 minutes
+- 2025-12-15: MISSING
+- 2025-12-16: MISSING
+- 2025-12-17: MISSING
+- 2025-12-18: MISSING
+- 2025-12-19: MISSING
+- 2025-12-20: MISSING
+- 2025-12-21 PASS 2 minutes
+- 2025-12-22: MISSING
+- 2025-12-23: MISSING
+- 2025-12-24: MISSING
+- 2025-12-25: MISSING
+- 2025-12-26: MISSING
+- 2025-12-27: MISSING
+- 2025-12-28 PASS 5 minutes
+- 2025-12-29: MISSING
+- 2025-12-30: MISSING
+- 2025-12-31: MISSING
+- 2026-01-01: MISSING
+- 2026-01-02: MISSING
+- 2026-01-03: MISSING
+- 2026-01-04 PASS 4 minutes
+- 2026-01-05: MISSING
+- 2026-01-06: MISSING
+- 2026-01-07: MISSING
+- 2026-01-08
+  - PASS 5 minutes
+  - PASS 2 minutes

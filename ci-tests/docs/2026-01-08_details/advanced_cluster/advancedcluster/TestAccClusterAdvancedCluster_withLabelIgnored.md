@@ -1,0 +1,99 @@
+# advanced_cluster/advancedcluster/TestAccClusterAdvancedCluster_withLabelIgnored Test Details
+# Found 31 TestRuns in dev, qa from 2025-12-10 to 2026-01-08 from master branch: 1 unique tests, PASS(x 30) FAIL
+Success rate: 96.77%
+
+## DEV Environment
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2026-01-07 00:30](#error-2026-01-07t0030560000) | UNEXPECTED_ERROR /api/atlas/v2/groups | dev | flaky_500 | 9.08s
+
+### Timeline
+- 2025-12-09: MISSING
+- 2025-12-10
+  - PASS 10 seconds
+  - PASS 9 seconds
+- 2025-12-11 PASS 8 seconds
+- 2025-12-12 PASS 11 seconds
+- 2025-12-13 PASS 9 seconds
+- 2025-12-14: MISSING
+- 2025-12-15 PASS 10 seconds
+- 2025-12-16 PASS 9 seconds
+- 2025-12-17 PASS 10 seconds
+- 2025-12-18 PASS 10 seconds
+- 2025-12-19 PASS 12 seconds
+- 2025-12-20 PASS 9 seconds
+- 2025-12-21: MISSING
+- 2025-12-22 PASS 11 seconds
+- 2025-12-23 PASS 11 seconds
+- 2025-12-24 PASS 10 seconds
+- 2025-12-25 PASS 11 seconds
+- 2025-12-26 PASS 9 seconds
+- 2025-12-27 PASS 10 seconds
+- 2025-12-28: MISSING
+- 2025-12-29: MISSING
+- 2025-12-30 PASS 10 seconds
+- 2025-12-31 PASS 11 seconds
+- 2026-01-01 PASS 11 seconds
+- 2026-01-02 PASS 5 seconds
+- 2026-01-03 PASS 9 seconds
+- 2026-01-04: MISSING
+- 2026-01-05 PASS 10 seconds
+- 2026-01-06 PASS 10 seconds
+- 2026-01-07
+
+### Error 2026-01-07T00:30:56+00:00
+```
+2026-01-07T00:30:56.1617134Z === RUN   TestAccClusterAdvancedCluster_withLabelIgnored
+2026-01-07T00:31:16.8864851Z === CONT  TestAccClusterAdvancedCluster_withLabelIgnored
+2026-01-07T00:31:26.6249329Z === NAME  TestAccClusterAdvancedCluster_withLabelIgnored
+2026-01-07T00:31:26.6250394Z     resource_test.go:604: Step 1/1, expected an error with pattern, no match on: Error running apply: exit status 1
+2026-01-07T00:31:26.6251126Z         
+2026-01-07T00:31:26.6251693Z         Error: error creating project: test-acc-tf-p-4597681223592477112
+2026-01-07T00:31:26.6252065Z         
+2026-01-07T00:31:26.6252400Z           with mongodbatlas_project.cluster_project,
+2026-01-07T00:31:26.6253221Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_project" "cluster_project":
+2026-01-07T00:31:26.6253877Z           12: 		resource "mongodbatlas_project" "cluster_project" {
+2026-01-07T00:31:26.6254174Z         
+2026-01-07T00:31:26.6254612Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+2026-01-07T00:31:26.6255443Z         Server Error (Error code: "UNEXPECTED_ERROR") Detail: Unexpected error.
+2026-01-07T00:31:26.6255965Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+2026-01-07T00:31:26.6762678Z --- FAIL: TestAccClusterAdvancedCluster_withLabelIgnored (9.79s)
+```
+
+- 2026-01-08 PASS 9 seconds
+
+## QA Environment
+### Timeline
+- 2025-12-09: MISSING
+- 2025-12-10: MISSING
+- 2025-12-11: MISSING
+- 2025-12-12: MISSING
+- 2025-12-13: MISSING
+- 2025-12-14 PASS 9 seconds
+- 2025-12-15: MISSING
+- 2025-12-16: MISSING
+- 2025-12-17: MISSING
+- 2025-12-18: MISSING
+- 2025-12-19: MISSING
+- 2025-12-20: MISSING
+- 2025-12-21 PASS 9 seconds
+- 2025-12-22: MISSING
+- 2025-12-23: MISSING
+- 2025-12-24: MISSING
+- 2025-12-25: MISSING
+- 2025-12-26: MISSING
+- 2025-12-27: MISSING
+- 2025-12-28 PASS 8 seconds
+- 2025-12-29: MISSING
+- 2025-12-30: MISSING
+- 2025-12-31: MISSING
+- 2026-01-01: MISSING
+- 2026-01-02: MISSING
+- 2026-01-03: MISSING
+- 2026-01-04 PASS 9 seconds
+- 2026-01-05: MISSING
+- 2026-01-06: MISSING
+- 2026-01-07: MISSING
+- 2026-01-08 PASS 8 seconds
