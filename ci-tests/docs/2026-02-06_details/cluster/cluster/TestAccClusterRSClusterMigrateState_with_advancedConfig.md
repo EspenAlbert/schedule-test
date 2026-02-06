@@ -1,0 +1,71 @@
+# cluster/cluster/TestAccClusterRSClusterMigrateState_with_advancedConfig Test Details
+# Found 33 TestRuns in dev, qa from 2026-01-08 to 2026-02-06 from master branch: 1 unique tests, PASS(x 33)
+Success rate: 100.00%
+
+## DEV Environment
+### Timeline
+- 2026-01-07: MISSING
+- 2026-01-08 PASS unknown
+- 2026-01-09 PASS unknown
+- 2026-01-10 PASS unknown
+- 2026-01-11: MISSING
+- 2026-01-12 PASS unknown
+- 2026-01-13 PASS unknown
+- 2026-01-14 PASS unknown
+- 2026-01-15 PASS unknown
+- 2026-01-16 PASS unknown
+- 2026-01-17 PASS unknown
+- 2026-01-18: MISSING
+- 2026-01-19 PASS unknown
+- 2026-01-20 PASS unknown
+- 2026-01-21 PASS unknown
+- 2026-01-22 PASS unknown
+- 2026-01-23 PASS unknown
+- 2026-01-24 PASS unknown
+- 2026-01-25: MISSING
+- 2026-01-26 PASS unknown
+- 2026-01-27 PASS unknown
+- 2026-01-28 PASS unknown
+- 2026-01-29 PASS unknown
+- 2026-01-30 PASS unknown
+- 2026-01-31 PASS unknown
+- 2026-02-01: MISSING
+- 2026-02-02 PASS unknown
+- 2026-02-03 PASS unknown
+- 2026-02-04 PASS unknown
+- 2026-02-05 PASS unknown
+- 2026-02-06 PASS unknown
+
+## QA Environment
+### Timeline
+- 2026-01-07: MISSING
+- 2026-01-08 PASS unknown
+- 2026-01-09: MISSING
+- 2026-01-10: MISSING
+- 2026-01-11 PASS unknown
+- 2026-01-12: MISSING
+- 2026-01-13: MISSING
+- 2026-01-14: MISSING
+- 2026-01-15: MISSING
+- 2026-01-16: MISSING
+- 2026-01-17: MISSING
+- 2026-01-18 PASS unknown
+- 2026-01-19: MISSING
+- 2026-01-20: MISSING
+- 2026-01-21: MISSING
+- 2026-01-22 PASS unknown
+- 2026-01-23: MISSING
+- 2026-01-24: MISSING
+- 2026-01-25 PASS unknown
+- 2026-01-26: MISSING
+- 2026-01-27: MISSING
+- 2026-01-28: MISSING
+- 2026-01-29: MISSING
+- 2026-01-30: MISSING
+- 2026-01-31: MISSING
+- 2026-02-01 PASS unknown
+- 2026-02-02: MISSING
+- 2026-02-03: MISSING
+- 2026-02-04 PASS unknown
+- 2026-02-05: MISSING
+- 2026-02-06: MISSING
