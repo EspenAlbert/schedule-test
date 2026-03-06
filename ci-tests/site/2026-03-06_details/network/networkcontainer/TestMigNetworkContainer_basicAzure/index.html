@@ -1,0 +1,606 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>network/networkcontainer/TestMigNetworkContainer_basicAzure Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#networknetworkcontainertestmignetworkcontainer_basicazure-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              network/networkcontainer/TestMigNetworkContainer_basicAzure Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="networknetworkcontainertestmignetworkcontainer_basicazure-test-details">network/networkcontainer/TestMigNetworkContainer_basicAzure Test Details</h1>
+<h1 id="found-24-testruns-in-dev-qa-from-2026-02-04-to-2026-03-06-from-master-branch-1-unique-tests-passx-17-failx-7">Found 24 TestRuns in dev, qa from 2026-02-04 to 2026-03-06 from master branch: 1 unique tests, PASS(x 17) FAIL(x 7)</h1>
+<p>Success rate: 70.83%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-02-13t0051380000">2026-02-13 00:51</a></td>
+<td>NO_CAPACITY /api/atlas/v2/groups/698e731ee8046ccdbd570c9f/containers</td>
+<td>dev</td>
+<td>1.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-02-16t0049450000">2026-02-16 00:49</a></td>
+<td>NO_CAPACITY /api/atlas/v2/groups/69926735fca6e0756f2b34be/containers</td>
+<td>dev</td>
+<td>1.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-02-17t1419140000">2026-02-17 14:19</a></td>
+<td></td>
+<td>dev</td>
+<td>178.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-02-17t1755250000">2026-02-17 17:55</a></td>
+<td>NO_CAPACITY /api/atlas/v2/groups/6994a9136947a790bd117b11/containers</td>
+<td>dev</td>
+<td>1.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-02-20t0047000000">2026-02-20 00:47</a></td>
+<td>NO_CAPACITY /api/atlas/v2/groups/6997ac8e73841e1a88a5a5ba/containers</td>
+<td>dev</td>
+<td>1.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-02-23t0049340000">2026-02-23 00:49</a></td>
+<td>NO_CAPACITY /api/atlas/v2/groups/699ba1a88decccf9757c61d7/containers</td>
+<td>dev</td>
+<td>1.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-03-04t0048270000">2026-03-04 00:48</a></td>
+<td>NO_CAPACITY /api/atlas/v2/groups/69a77edba0aca1fefeeaee75/containers</td>
+<td>dev</td>
+<td>2.05s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-02-04: MISSING</li>
+<li>2026-02-05: MISSING</li>
+<li>2026-02-06 PASS 2 minutes</li>
+<li>2026-02-07: MISSING</li>
+<li>2026-02-08: MISSING</li>
+<li>2026-02-09 PASS 2 minutes</li>
+<li>2026-02-10: MISSING</li>
+<li>2026-02-11 PASS 2 minutes</li>
+<li>2026-02-12: MISSING</li>
+<li>2026-02-13</li>
+</ul>
+<h3 id="error-2026-02-13t0051380000">Error 2026-02-13T00:51:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-02-13T00:51:38.9329939Z === RUN   TestMigNetworkContainer_basicAzure
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-02-13T00:51:38.9340368Z   
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-02-13T00:51:38.9340933Z     resource_network_container_migration_test.go:46: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-02-13T00:51:38.9341464Z         
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-02-13T00:51:38.9343399Z         Error: error creating MongoDB Network Peering Container: https://cloud-dev.mongodb.com/api/atlas/v2/groups/698e731ee8046ccdbd570c9f/containers POST: HTTP 409 Conflict (Error code: &quot;NO_CAPACITY&quot;) Detail: Cannot find the AZURE capacity for group 698e731ee8046ccdbd570c9f. Reason: Conflict. Params: [AZURE 698e731ee8046ccdbd570c9f], BadRequestDetail: 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-02-13T00:51:38.9344758Z         
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-02-13T00:51:38.9345138Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-02-13T00:51:38.9345853Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-02-13T00:51:38.9346536Z           14:      resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-02-13T00:51:38.9346901Z         
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-02-13T00:51:38.9347414Z --- FAIL: TestMigNetworkContainer_basicAzure (1.85s)
+</code></pre></div>
+<ul>
+<li>2026-02-14: MISSING</li>
+<li>2026-02-15: MISSING</li>
+<li>2026-02-16</li>
+</ul>
+<h3 id="error-2026-02-16t0049450000">Error 2026-02-16T00:49:45+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-02-16T00:49:45.0077546Z === RUN   TestMigNetworkContainer_basicAzure
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-02-16T00:49:45.0085845Z    test_name=TestMigNetworkContainer_basicAzure test_step_number=1 test_terraform_path=/home/runner/work/_temp/04b3bf35-0e20-4513-bcf8-7e4348884893/terraform
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-02-16T00:49:45.0086905Z     resource_network_container_migration_test.go:46: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-02-16T00:49:45.0087418Z         
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-02-16T00:49:45.0089612Z         Error: error creating MongoDB Network Peering Container: https://cloud-dev.mongodb.com/api/atlas/v2/groups/69926735fca6e0756f2b34be/containers POST: HTTP 409 Conflict (Error code: &quot;NO_CAPACITY&quot;) Detail: Cannot find the AZURE capacity for group 69926735fca6e0756f2b34be. Reason: Conflict. Params: [AZURE 69926735fca6e0756f2b34be], BadRequestDetail: 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-02-16T00:49:45.0091029Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-02-16T00:49:45.0091404Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-02-16T00:49:45.0092142Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-02-16T00:49:45.0092837Z           14:      resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-02-16T00:49:45.0093195Z         
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-02-16T00:49:45.0093481Z --- FAIL: TestMigNetworkContainer_basicAzure (1.58s)
+</code></pre></div>
+<ul>
+<li>2026-02-17</li>
+<li>FAIL 2 minutes</li>
+</ul>
+<h3 id="error-2026-02-17t1419140000">Error 2026-02-17T14:19:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-02-17T14:19:14.4423675Z === RUN   TestMigNetworkContainer_basicAzure
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-02-17T14:19:14.4440032Z   
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-02-17T14:19:14.4441009Z     resource_network_container_migration_test.go:46: TestStep 2/2 running init: exit status 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-02-17T14:19:14.4441933Z         
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-02-17T14:19:14.4442659Z         Error: Failed to query available provider packages
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-02-17T14:19:14.4443318Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-02-17T14:19:14.4444155Z         Could not retrieve the list of available versions for provider
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-02-17T14:19:14.4445789Z         mongodb/mongodbatlas: could not connect to registry.terraform.io: failed to
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-02-17T14:19:14.4446775Z         request discovery document: Get
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-02-17T14:19:14.4447938Z         &quot;https://registry.terraform.io/.well-known/terraform.json&quot;: net/http: request
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-02-17T14:19:14.4449736Z         canceled while waiting for connection (Client.Timeout exceeded while awaiting
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-02-17T14:19:14.4450628Z         headers)
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-02-17T14:19:14.4451084Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-02-17T14:19:14.4452140Z         To see which modules are currently depending on mongodb/mongodbatlas and what
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-02-17T14:19:14.4453294Z         versions are specified, run the following command:
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-02-17T14:19:14.4454111Z             terraform providers
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2026-02-17T14:19:14.4454986Z --- FAIL: TestMigNetworkContainer_basicAzure (178.11s)
+</code></pre></div>
+<ul>
+<li>FAIL a second</li>
+</ul>
+<h3 id="error-2026-02-17t1755250000">Error 2026-02-17T17:55:25+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-02-17T17:55:25.1103139Z === RUN   TestMigNetworkContainer_basicAzure
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-02-17T17:55:25.1120694Z   
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-02-17T17:55:25.1121698Z     resource_network_container_migration_test.go:46: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-02-17T17:55:25.1122610Z         
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-02-17T17:55:25.1126089Z         Error: error creating MongoDB Network Peering Container: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6994a9136947a790bd117b11/containers POST: HTTP 409 Conflict (Error code: &quot;NO_CAPACITY&quot;) Detail: Cannot find the AZURE capacity for group 6994a9136947a790bd117b11. Reason: Conflict. Params: [AZURE 6994a9136947a790bd117b11], BadRequestDetail: 
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-02-17T17:55:25.1128514Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-02-17T17:55:25.1129197Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-02-17T17:55:25.1130715Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-02-17T17:55:25.1132129Z           14:      resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-02-17T17:55:25.1132792Z         
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-02-17T17:55:25.1133318Z --- FAIL: TestMigNetworkContainer_basicAzure (1.70s)
+</code></pre></div>
+<ul>
+<li>2026-02-18 PASS 2 minutes</li>
+<li>2026-02-19: MISSING</li>
+<li>2026-02-20</li>
+</ul>
+<h3 id="error-2026-02-20t0047000000">Error 2026-02-20T00:47:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-02-20T00:47:00.6523885Z === RUN   TestMigNetworkContainer_basicAzure
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-02-20T00:47:00.6531380Z    test_working_directory=/tmp/plugintest2727688919 test_name=TestMigNetworkContainer_basicAzure test_terraform_path=/home/runner/work/_temp/32fd9a85-4a87-4c5d-bc90-164a5b5c742f/terraform
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-02-20T00:47:00.6532588Z     resource_network_container_migration_test.go:46: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-02-20T00:47:00.6533618Z         
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-02-20T00:47:00.6535677Z         Error: error creating MongoDB Network Peering Container: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6997ac8e73841e1a88a5a5ba/containers POST: HTTP 409 Conflict (Error code: &quot;NO_CAPACITY&quot;) Detail: Cannot find the AZURE capacity for group 6997ac8e73841e1a88a5a5ba. Reason: Conflict. Params: [AZURE 6997ac8e73841e1a88a5a5ba], BadRequestDetail: 
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-02-20T00:47:00.6537359Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-02-20T00:47:00.6537768Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-02-20T00:47:00.6538574Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-02-20T00:47:00.6539300Z           14:      resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-02-20T00:47:00.6539680Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-02-20T00:47:00.6539993Z --- FAIL: TestMigNetworkContainer_basicAzure (1.38s)
+</code></pre></div>
+<ul>
+<li>2026-02-21: MISSING</li>
+<li>2026-02-22: MISSING</li>
+<li>2026-02-23</li>
+</ul>
+<h3 id="error-2026-02-23t0049340000">Error 2026-02-23T00:49:34+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-02-23T00:49:34.8571520Z === RUN   TestMigNetworkContainer_basicAzure
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-02-23T00:49:34.8582040Z   
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-02-23T00:49:34.8582608Z     resource_network_container_migration_test.go:46: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-02-23T00:49:34.8583131Z         
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-02-23T00:49:34.8585465Z         Error: error creating MongoDB Network Peering Container: https://cloud-dev.mongodb.com/api/atlas/v2/groups/699ba1a88decccf9757c61d7/containers POST: HTTP 409 Conflict (Error code: &quot;NO_CAPACITY&quot;) Detail: Cannot find the AZURE capacity for group 699ba1a88decccf9757c61d7. Reason: Conflict. Params: [AZURE 699ba1a88decccf9757c61d7], BadRequestDetail: 
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-02-23T00:49:34.8587628Z         
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-02-23T00:49:34.8588056Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-02-23T00:49:34.8588785Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-02-23T00:49:34.8589471Z           14:      resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-02-23T00:49:34.8589837Z         
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-02-23T00:49:34.8590139Z --- FAIL: TestMigNetworkContainer_basicAzure (1.51s)
+</code></pre></div>
+<ul>
+<li>2026-02-24: MISSING</li>
+<li>2026-02-25 PASS 2 minutes</li>
+<li>2026-02-26: MISSING</li>
+<li>2026-02-27 PASS 2 minutes</li>
+<li>2026-02-28: MISSING</li>
+<li>2026-03-01: MISSING</li>
+<li>2026-03-02</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2026-03-03: MISSING</li>
+<li>2026-03-04</li>
+</ul>
+<h3 id="error-2026-03-04t0048270000">Error 2026-03-04T00:48:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-03-04T00:48:27.7576942Z === RUN   TestMigNetworkContainer_basicAzure
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-03-04T00:48:27.7591618Z   
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-03-04T00:48:27.7592508Z     resource_network_container_migration_test.go:46: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-03-04T00:48:27.7593032Z         
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-03-04T00:48:27.7595040Z         Error: error creating MongoDB Network Peering Container: https://cloud-dev.mongodb.com/api/atlas/v2/groups/69a77edba0aca1fefeeaee75/containers POST: HTTP 409 Conflict (Error code: &quot;NO_CAPACITY&quot;) Detail: Cannot find the AZURE capacity for group 69a77edba0aca1fefeeaee75. Reason: Conflict. Params: [AZURE 69a77edba0aca1fefeeaee75], BadRequestDetail: 
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-03-04T00:48:27.7596760Z         
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-03-04T00:48:27.7597138Z           with mongodbatlas_network_container.test,
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-03-04T00:48:27.7597853Z           on terraform_plugin_test.tf line 14, in resource &quot;mongodbatlas_network_container&quot; &quot;test&quot;:
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-03-04T00:48:27.7598534Z           14:      resource &quot;mongodbatlas_network_container&quot; &quot;test&quot; {
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-03-04T00:48:27.7598903Z         
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-03-04T00:48:27.7599205Z --- FAIL: TestMigNetworkContainer_basicAzure (2.51s)
+</code></pre></div>
+<ul>
+<li>2026-03-05: MISSING</li>
+<li>2026-03-06 PASS 2 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-02-04 PASS 2 minutes</li>
+<li>2026-02-05: MISSING</li>
+<li>2026-02-06: MISSING</li>
+<li>2026-02-07: MISSING</li>
+<li>2026-02-08 PASS 2 minutes</li>
+<li>2026-02-09: MISSING</li>
+<li>2026-02-10: MISSING</li>
+<li>2026-02-11: MISSING</li>
+<li>2026-02-12: MISSING</li>
+<li>2026-02-13: MISSING</li>
+<li>2026-02-14: MISSING</li>
+<li>2026-02-15 PASS 2 minutes</li>
+<li>2026-02-16: MISSING</li>
+<li>2026-02-17</li>
+<li>PASS 2 minutes</li>
+<li>PASS 2 minutes</li>
+<li>2026-02-18: MISSING</li>
+<li>2026-02-19: MISSING</li>
+<li>2026-02-20: MISSING</li>
+<li>2026-02-21: MISSING</li>
+<li>2026-02-22 PASS 2 minutes</li>
+<li>2026-02-23: MISSING</li>
+<li>2026-02-24: MISSING</li>
+<li>2026-02-25: MISSING</li>
+<li>2026-02-26: MISSING</li>
+<li>2026-02-27: MISSING</li>
+<li>2026-02-28: MISSING</li>
+<li>2026-03-01 PASS 2 minutes</li>
+<li>2026-03-02: MISSING</li>
+<li>2026-03-03 PASS 2 minutes</li>
+<li>2026-03-04: MISSING</li>
+<li>2026-03-05: MISSING</li>
+<li>2026-03-06: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
