@@ -1,0 +1,775 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>autogen_slow/searchindexapi/TestAccSearchIndexAPI_basic Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autogen_slowsearchindexapitestaccsearchindexapi_basic-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              autogen_slow/searchindexapi/TestAccSearchIndexAPI_basic Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="autogen_slowsearchindexapitestaccsearchindexapi_basic-test-details">autogen_slow/searchindexapi/TestAccSearchIndexAPI_basic Test Details</h1>
+<h1 id="found-34-testruns-in-dev-qa-from-2026-04-07-to-2026-05-06-from-master-branch-1-unique-tests-passx-25-failx-9">Found 34 TestRuns in dev, qa from 2026-04-07 to 2026-05-06 from master branch: 1 unique tests, PASS(x 25) FAIL(x 9)</h1>
+<p>Success rate: 73.53%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-04-09t0131160000">2026-04-09 01:31</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>81.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-16t0052020000">2026-04-16 00:52</a></td>
+<td>OUT_OF_CAPACITY /api/atlas/v2/groups/69e0326b1ec945fedc72100e/clusters</td>
+<td>dev</td>
+<td>out_of_capacity</td>
+<td>53.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-18t0131350000">2026-04-18 01:31</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>70.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-23t0135380000">2026-04-23 01:35</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>73.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-25t0136130000">2026-04-25 01:36</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>1104.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-27t0146060000">2026-04-27 01:46</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>1077.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-28t0156500000">2026-04-28 01:56</a></td>
+<td></td>
+<td>dev</td>
+<td>unknown</td>
+<td>1200.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-29t0153260000">2026-04-29 01:53</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>1635.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-30t0150260000">2026-04-30 01:50</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>76.03s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-04-06: MISSING</li>
+<li>2026-04-07 PASS 29 minutes</li>
+<li>2026-04-08 PASS 25 minutes</li>
+<li>2026-04-09</li>
+</ul>
+<h3 id="error-2026-04-09t0131160000">Error 2026-04-09T01:31:16+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-04-09T01:31:16.5510245Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-04-09T01:31:16.5511361Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-4369253609921889078
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-04-09T01:31:16.5512215Z     resource_test.go:22: 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-04-09T01:31:16.5514975Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-04-09T01:31:16.5517133Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-04-09T01:31:16.5519260Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-04-09T01:31:16.5521256Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:185
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-04-09T01:31:16.5523238Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-04-09T01:31:16.5524471Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-04-09T01:31:16.5524977Z            Error:          Received unexpected error:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-04-09T01:31:16.5527179Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-04-09T01:31:16.5528216Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-04-09T01:31:16.5530208Z            Messages:       Project creation failed: test-acc-tf-p-4369253609921889078, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-04-09T01:31:16.5531385Z --- FAIL: TestAccSearchIndexAPI_basic (81.90s)
+</code></pre></div>
+<ul>
+<li>2026-04-10 PASS 22 minutes</li>
+<li>2026-04-11 PASS 21 minutes</li>
+<li>2026-04-12: MISSING</li>
+<li>2026-04-13 PASS 29 minutes</li>
+<li>2026-04-14 PASS 19 minutes</li>
+<li>2026-04-15 PASS 22 minutes</li>
+<li>2026-04-16</li>
+</ul>
+<h3 id="error-2026-04-16t0052020000">Error 2026-04-16T00:52:02+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-04-16T00:52:02.3938725Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-04-16T00:52:02.3939149Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-4622276315003275686
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-04-16T00:52:02.3939648Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-4227645346560078658
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-04-16T00:52:02.3939998Z     resource_test.go:22: 
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-04-16T00:52:02.3940684Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:46
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-04-16T00:52:02.3942032Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:194
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-04-16T00:52:02.3943432Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-04-16T00:52:02.3944371Z            Error:          Received unexpected error:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-04-16T00:52:02.3946280Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups/69e0326b1ec945fedc72100e/clusters POST: HTTP 409 Conflict (Error code: &quot;OUT_OF_CAPACITY&quot;) Detail: The requested region is currently out of capacity for the requested instance size. Reason: Conflict. Params: [], BadRequestDetail: 
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-04-16T00:52:02.3947230Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-04-16T00:52:02.3948811Z            Messages:       Cluster creation failed: test-acc-tf-c-4227645346560078658, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups/69e0326b1ec945fedc72100e/clusters POST: HTTP 409 Conflict (Error code: &quot;OUT_OF_CAPACITY&quot;) Detail: The requested region is currently out of capacity for the requested instance size. Reason: Conflict. Params: [], BadRequestDetail: 
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-04-16T00:52:02.3949834Z --- FAIL: TestAccSearchIndexAPI_basic (53.80s)
+</code></pre></div>
+<ul>
+<li>2026-04-17 PASS 30 minutes</li>
+<li>2026-04-18</li>
+</ul>
+<h3 id="error-2026-04-18t0131350000">Error 2026-04-18T01:31:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-04-18T01:31:35.5568836Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-04-18T01:31:35.5569758Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-228369040807957599
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-04-18T01:31:35.5570437Z     resource_test.go:22: 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-04-18T01:31:35.5571685Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-04-18T01:31:35.5576874Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-04-18T01:31:35.5580342Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-04-18T01:31:35.5582386Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:185
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-04-18T01:31:35.5584850Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-04-18T01:31:35.5586180Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-04-18T01:31:35.5586743Z            Error:          Received unexpected error:
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-04-18T01:31:35.5588845Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-04-18T01:31:35.5589983Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-04-18T01:31:35.5591716Z            Messages:       Project creation failed: test-acc-tf-p-228369040807957599, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-04-18T01:31:35.5593136Z --- FAIL: TestAccSearchIndexAPI_basic (70.53s)
+</code></pre></div>
+<ul>
+<li>2026-04-19: MISSING</li>
+<li>2026-04-20 PASS 19 minutes</li>
+<li>2026-04-21 PASS 20 minutes</li>
+<li>2026-04-22 PASS 49 minutes</li>
+<li>2026-04-23</li>
+</ul>
+<h3 id="error-2026-04-23t0135380000">Error 2026-04-23T01:35:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-04-23T01:35:38.3941546Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-04-23T01:35:38.3942686Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-4578885482780318315
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-04-23T01:35:38.3945452Z     resource_test.go:22: 
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-04-23T01:35:38.3947007Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-04-23T01:35:38.3950076Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-04-23T01:35:38.3954243Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-04-23T01:35:38.3957493Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:185
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-04-23T01:35:38.3960916Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-04-23T01:35:38.3962948Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-04-23T01:35:38.3963786Z            Error:          Received unexpected error:
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-04-23T01:35:38.3967092Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-04-23T01:35:38.3968757Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-04-23T01:35:38.3971962Z            Messages:       Project creation failed: test-acc-tf-p-4578885482780318315, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-04-23T01:35:38.3973868Z --- FAIL: TestAccSearchIndexAPI_basic (73.16s)
+</code></pre></div>
+<ul>
+<li>2026-04-24 PASS 20 minutes</li>
+<li>2026-04-25</li>
+</ul>
+<h3 id="error-2026-04-25t0136130000">Error 2026-04-25T01:36:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-04-25T01:36:13.5521248Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-04-25T01:36:13.5522003Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3092238157550315951
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-04-25T01:36:13.5522854Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1675510221340582844
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-04-25T01:36:13.5523487Z 2026/04/25 00:47:15 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-04-25T01:36:13.5523977Z 2026/04/25 00:50:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-04-25T01:36:13.5524442Z 2026/04/25 00:51:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-04-25T01:36:13.5524889Z 2026/04/25 00:51:26 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-04-25T01:36:13.5525326Z 2026/04/25 00:52:26 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-04-25T01:36:13.5525756Z 2026/04/25 00:52:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-04-25T01:36:13.5526187Z 2026/04/25 00:53:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-04-25T01:36:13.5526624Z 2026/04/25 00:53:47 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-04-25T01:36:13.5527066Z 2026/04/25 00:54:47 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-04-25T01:36:13.5527589Z 2026/04/25 00:54:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-04-25T01:36:13.5528003Z 2026/04/25 00:55:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-04-25T01:36:13.5528752Z 2026/04/25 00:56:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-04-25T01:36:13.5529181Z 2026/04/25 00:57:08 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-04-25T01:36:13.5529588Z 2026/04/25 00:57:18 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-04-25T01:36:13.5529996Z 2026/04/25 00:58:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2026-04-25T01:36:13.5530449Z 2026/04/25 00:58:29 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2026-04-25T01:36:13.5530909Z 2026/04/25 00:59:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2026-04-25T01:36:13.5531321Z 2026/04/25 01:00:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>2026-04-25T01:36:13.5531727Z 2026/04/25 01:00:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>2026-04-25T01:36:13.5532127Z 2026/04/25 01:01:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>2026-04-25T01:36:13.5532540Z 2026/04/25 01:01:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>2026-04-25T01:36:13.5532940Z 2026/04/25 01:02:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>2026-04-25T01:36:13.5533308Z 2026/04/25 01:03:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>2026-04-25T01:36:13.5533651Z 2026/04/25 01:04:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>2026-04-25T01:36:13.5534271Z 2026/04/25 01:04:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>2026-04-25T01:36:13.5534629Z     resource_test.go:22: 
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>2026-04-25T01:36:13.5535605Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:198
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>2026-04-25T01:36:13.5540630Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>2026-04-25T01:36:13.5542162Z            Error:          Received unexpected error:
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>2026-04-25T01:36:13.5543810Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>2026-04-25T01:36:13.5544404Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>2026-04-25T01:36:13.5544778Z --- FAIL: TestAccSearchIndexAPI_basic (1104.64s)
+</code></pre></div>
+<ul>
+<li>2026-04-26: MISSING</li>
+<li>2026-04-27</li>
+</ul>
+<h3 id="error-2026-04-27t0146060000">Error 2026-04-27T01:46:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-04-27T01:46:06.8290862Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-04-27T01:46:06.8291482Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-1240717298391572408
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-04-27T01:46:06.8292164Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-6380147241718966741
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-04-27T01:46:06.8292684Z 2026/04/27 00:51:40 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-04-27T01:46:06.8293099Z 2026/04/27 00:54:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-04-27T01:46:06.8293463Z 2026/04/27 00:55:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-04-27T01:46:06.8294009Z 2026/04/27 00:55:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-04-27T01:46:06.8294366Z 2026/04/27 00:56:51 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-04-27T01:46:06.8294720Z 2026/04/27 00:57:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-04-27T01:46:06.8295076Z 2026/04/27 00:58:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-04-27T01:46:06.8295417Z 2026/04/27 00:58:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-04-27T01:46:06.8295759Z 2026/04/27 00:59:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-04-27T01:46:06.8296093Z 2026/04/27 00:59:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-04-27T01:46:06.8296430Z 2026/04/27 01:00:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-04-27T01:46:06.8296768Z 2026/04/27 01:00:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-04-27T01:46:06.8297317Z 2026/04/27 01:01:32 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-04-27T01:46:06.8297672Z 2026/04/27 01:01:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2026-04-27T01:46:06.8298063Z 2026/04/27 01:02:43 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2026-04-27T01:46:06.8298468Z 2026/04/27 01:03:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2026-04-27T01:46:06.8298810Z 2026/04/27 01:04:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2026-04-27T01:46:06.8299148Z 2026/04/27 01:04:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>2026-04-27T01:46:06.8299483Z 2026/04/27 01:05:53 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>2026-04-27T01:46:06.8299817Z 2026/04/27 01:06:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>2026-04-27T01:46:06.8300149Z 2026/04/27 01:07:04 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>2026-04-27T01:46:06.8300486Z 2026/04/27 01:07:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>2026-04-27T01:46:06.8300818Z 2026/04/27 01:08:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>2026-04-27T01:46:06.8301156Z 2026/04/27 01:08:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>2026-04-27T01:46:06.8301511Z 2026/04/27 01:09:24 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>2026-04-27T01:46:06.8301883Z     resource_test.go:22: 
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>2026-04-27T01:46:06.8303082Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:198
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>2026-04-27T01:46:06.8305012Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>2026-04-27T01:46:06.8305819Z            Error:          Received unexpected error:
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>2026-04-27T01:46:06.8306664Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>2026-04-27T01:46:06.8307407Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>2026-04-27T01:46:06.8307782Z --- FAIL: TestAccSearchIndexAPI_basic (1077.04s)
+</code></pre></div>
+<ul>
+<li>2026-04-28</li>
+</ul>
+<h3 id="error-2026-04-28t0156500000">Error 2026-04-28T01:56:50+00:00</h3>
+<p>GoTestErrorClassification(error_class='unknown',author='human',run_id='2026-04-28T01:56:50.870000+00:00-TestAccSearchIndexAPI_basic',confidence=1.0,ts_when='8 days ago')</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-04-28T01:56:50.8706876Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-04-28T01:56:50.8707887Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-7006510065983054624
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-04-28T01:56:50.8709107Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-4409725585511795801
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-04-28T01:56:50.8709993Z 2026/04/28 00:55:16 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-04-28T01:56:50.8710674Z 2026/04/28 00:58:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-04-28T01:56:50.8711332Z 2026/04/28 00:59:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-04-28T01:56:50.8712217Z 2026/04/28 00:59:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-04-28T01:56:50.8713123Z 2026/04/28 01:00:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-04-28T01:56:50.8713766Z 2026/04/28 01:00:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-04-28T01:56:50.8714392Z 2026/04/28 01:01:38 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-04-28T01:56:50.8715025Z 2026/04/28 01:01:49 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-04-28T01:56:50.8715635Z 2026/04/28 01:02:49 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-04-28T01:56:50.8716248Z 2026/04/28 01:02:59 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-04-28T01:56:50.8716863Z 2026/04/28 01:04:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-04-28T01:56:50.8717479Z 2026/04/28 01:04:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2026-04-28T01:56:50.8718079Z 2026/04/28 01:05:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2026-04-28T01:56:50.8718701Z 2026/04/28 01:05:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2026-04-28T01:56:50.8719399Z 2026/04/28 01:06:22 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2026-04-28T01:56:50.8720121Z 2026/04/28 01:07:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2026-04-28T01:56:50.8720759Z 2026/04/28 01:08:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>2026-04-28T01:56:50.8721369Z 2026/04/28 01:08:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>2026-04-28T01:56:50.8721992Z 2026/04/28 01:09:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>2026-04-28T01:56:50.8722850Z 2026/04/28 01:09:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>2026-04-28T01:56:50.8723477Z 2026/04/28 01:10:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>2026-04-28T01:56:50.8724070Z 2026/04/28 01:10:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>2026-04-28T01:56:50.8724679Z 2026/04/28 01:11:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>2026-04-28T01:56:50.8725303Z 2026/04/28 01:12:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>2026-04-28T01:56:50.8725917Z 2026/04/28 01:13:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>2026-04-28T01:56:50.8726540Z 2026/04/28 01:13:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>2026-04-28T01:56:50.8727163Z     resource_test.go:22: 
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>2026-04-28T01:56:50.8730763Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:198
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>2026-04-28T01:56:50.8734699Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>2026-04-28T01:56:50.8736170Z            Error:          Received unexpected error:
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>2026-04-28T01:56:50.8737790Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>2026-04-28T01:56:50.8738782Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>2026-04-28T01:56:50.8739390Z --- FAIL: TestAccSearchIndexAPI_basic (1200.80s)
+</code></pre></div>
+<ul>
+<li>2026-04-29</li>
+</ul>
+<h3 id="error-2026-04-29t0153260000">Error 2026-04-29T01:53:26+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-04-29T01:53:26.8883762Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-04-29T01:53:26.8884722Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-7506084624375691746
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-04-29T01:53:26.8885869Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-7157062159376751819
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-04-29T01:53:26.8886684Z 2026/04/29 00:55:36 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-04-29T01:53:26.8887335Z 2026/04/29 00:58:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-04-29T01:53:26.8887932Z 2026/04/29 00:59:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-04-29T01:53:26.8888731Z 2026/04/29 00:59:47 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-04-29T01:53:26.8889330Z 2026/04/29 01:00:47 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-04-29T01:53:26.8890086Z 2026/04/29 01:00:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-04-29T01:53:26.8890669Z 2026/04/29 01:01:57 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-04-29T01:53:26.8891233Z 2026/04/29 01:02:07 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-04-29T01:53:26.8891794Z 2026/04/29 01:03:08 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-04-29T01:53:26.8892380Z 2026/04/29 01:03:18 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-04-29T01:53:26.8892954Z 2026/04/29 01:04:18 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2026-04-29T01:53:26.8893519Z 2026/04/29 01:04:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2026-04-29T01:53:26.8894084Z 2026/04/29 01:05:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2026-04-29T01:53:26.8894643Z 2026/04/29 01:05:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2026-04-29T01:53:26.8895207Z 2026/04/29 01:06:39 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2026-04-29T01:53:26.8895779Z 2026/04/29 01:06:49 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2026-04-29T01:53:26.8896429Z 2026/04/29 01:07:50 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>2026-04-29T01:53:26.8897076Z 2026/04/29 01:08:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>2026-04-29T01:53:26.8897641Z 2026/04/29 01:09:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>2026-04-29T01:53:26.8898213Z 2026/04/29 01:10:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>2026-04-29T01:53:26.8898777Z 2026/04/29 01:11:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>2026-04-29T01:53:26.8899337Z 2026/04/29 01:11:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>2026-04-29T01:53:26.8900064Z 2026/04/29 01:12:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>2026-04-29T01:53:26.8900626Z 2026/04/29 01:12:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>2026-04-29T01:53:26.8901198Z 2026/04/29 01:13:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>2026-04-29T01:53:26.8901752Z 2026/04/29 01:13:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>2026-04-29T01:53:26.8902356Z 2026/04/29 01:14:31 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>2026-04-29T01:53:26.8902922Z 2026/04/29 01:14:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>2026-04-29T01:53:26.8903647Z 2026/04/29 01:15:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>2026-04-29T01:53:26.8904216Z 2026/04/29 01:15:52 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>2026-04-29T01:53:26.8904768Z 2026/04/29 01:16:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>2026-04-29T01:53:26.8905353Z 2026/04/29 01:17:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>2026-04-29T01:53:26.8905928Z 2026/04/29 01:18:02 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>2026-04-29T01:53:26.8906494Z 2026/04/29 01:18:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>2026-04-29T01:53:26.8907058Z 2026/04/29 01:19:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>2026-04-29T01:53:26.8907620Z 2026/04/29 01:19:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>2026-04-29T01:53:26.8908216Z 2026/04/29 01:20:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>2026-04-29T01:53:26.8908794Z 2026/04/29 01:20:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>2026-04-29T01:53:26.8909345Z 2026/04/29 01:21:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>2026-04-29T01:53:26.8910054Z 2026/04/29 01:21:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>2026-04-29T01:53:26.8910814Z 2026/04/29 01:22:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>2026-04-29T01:53:26.8911411Z 2026/04/29 01:22:50 [WARN] WaitForState timeout after 15m0s
+<a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>2026-04-29T01:53:26.8912107Z 2026/04/29 01:22:50 [WARN] WaitForState starting 30s refresh grace period
+<a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>2026-04-29T01:53:26.8912774Z     resource_test.go:22: 
+<a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>2026-04-29T01:53:26.8914578Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:198
+<a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>2026-04-29T01:53:26.8917906Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>2026-04-29T01:53:26.8919231Z            Error:          Received unexpected error:
+<a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a>2026-04-29T01:53:26.8921040Z                            timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a>2026-04-29T01:53:26.8922239Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a>2026-04-29T01:53:26.8922839Z --- FAIL: TestAccSearchIndexAPI_basic (1635.89s)
+</code></pre></div>
+<ul>
+<li>2026-04-30</li>
+</ul>
+<h3 id="error-2026-04-30t0150260000">Error 2026-04-30T01:50:26+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-04-30T01:50:26.4984173Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-04-30T01:50:26.4987879Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3227813862813415395
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-04-30T01:50:26.4988489Z     resource_test.go:22: 
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-04-30T01:50:26.4989614Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-04-30T01:50:26.4992039Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-04-30T01:50:26.4994302Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-04-30T01:50:26.4996769Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:185
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-04-30T01:50:26.4998893Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-04-30T01:50:26.5000106Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-04-30T01:50:26.5000616Z            Error:          Received unexpected error:
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-04-30T01:50:26.5002527Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2026-04-30T01:50:26.5003530Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2026-04-30T01:50:26.5005260Z            Messages:       Project creation failed: test-acc-tf-p-3227813862813415395, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2026-04-30T01:50:26.5006887Z --- FAIL: TestAccSearchIndexAPI_basic (76.27s)
+</code></pre></div>
+<ul>
+<li>2026-05-01 PASS 20 minutes</li>
+<li>2026-05-02 PASS 24 minutes</li>
+<li>2026-05-03: MISSING</li>
+<li>2026-05-04 PASS 23 minutes</li>
+<li>2026-05-05 PASS 29 minutes</li>
+<li>2026-05-06 PASS 20 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-04-06: MISSING</li>
+<li>2026-04-07: MISSING</li>
+<li>2026-04-08 PASS 17 minutes</li>
+<li>2026-04-09: MISSING</li>
+<li>2026-04-10: MISSING</li>
+<li>2026-04-11: MISSING</li>
+<li>2026-04-12 PASS 28 minutes</li>
+<li>2026-04-13: MISSING</li>
+<li>2026-04-14: MISSING</li>
+<li>2026-04-15: MISSING</li>
+<li>2026-04-16: MISSING</li>
+<li>2026-04-17: MISSING</li>
+<li>2026-04-18: MISSING</li>
+<li>2026-04-19 PASS 27 minutes</li>
+<li>2026-04-20: MISSING</li>
+<li>2026-04-21: MISSING</li>
+<li>2026-04-22 PASS 21 minutes</li>
+<li>2026-04-23: MISSING</li>
+<li>2026-04-24: MISSING</li>
+<li>2026-04-25: MISSING</li>
+<li>2026-04-26 PASS 31 minutes</li>
+<li>2026-04-27: MISSING</li>
+<li>2026-04-28: MISSING</li>
+<li>2026-04-29: MISSING</li>
+<li>2026-04-30: MISSING</li>
+<li>2026-05-01: MISSING</li>
+<li>2026-05-02: MISSING</li>
+<li>2026-05-03 PASS 38 minutes</li>
+<li>2026-05-04 PASS 35 minutes</li>
+<li>2026-05-05: MISSING</li>
+<li>2026-05-06 PASS 31 minutes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

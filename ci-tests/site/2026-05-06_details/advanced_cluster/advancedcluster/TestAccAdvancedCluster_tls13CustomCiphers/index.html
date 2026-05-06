@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccAdvancedCluster_tls13CustomCiphers Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccadvancedcluster_tls13customciphers-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccAdvancedCluster_tls13CustomCiphers Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccadvancedcluster_tls13customciphers-test-details">advanced_cluster/advancedcluster/TestAccAdvancedCluster_tls13CustomCiphers Test Details</h1>
+<h1 id="found-35-testruns-in-dev-qa-from-2026-04-07-to-2026-05-06-from-master-branch-1-unique-tests-passx-20-failx-15">Found 35 TestRuns in dev, qa from 2026-04-07 to 2026-05-06 from master branch: 1 unique tests, PASS(x 20) FAIL(x 15)</h1>
+<p>Success rate: 57.14%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-04-07t0047150000">2026-04-07 00:47</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d4540fc0b364eb740f63e8/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>5.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-08t0045300000">2026-04-08 00:45</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d5a52774e39a66414a732d/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>6.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-08t0848510000">2026-04-08 08:48</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d6167308daefe17166f286/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>2.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-09t0043400000">2026-04-09 00:43</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d6f63abcd76cc41060901e/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>5.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-10t0044400000">2026-04-10 00:44</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d847f6dd8d8b3ecd3a5b15/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>6.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-11t0048260000">2026-04-11 00:48</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d99a5a92f7ea8dceedbbf8/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>9.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-13t0049180000">2026-04-13 00:49</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69dc3d8c35f1f181a4dd94ad/clusters</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>5.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-14t0052200000">2026-04-14 00:52</a></td>
+<td>INVALID_CLUSTER_CONFIGURATION /api/atlas/v2/groups/69dd8fc07e7703c9cb120dd8/clusters</td>
+<td>dev</td>
+<td></td>
+<td>6.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-15t0049330000">2026-04-15 00:49</a></td>
+<td>INVALID_CLUSTER_CONFIGURATION /api/atlas/v2/groups/69dee09a353adec0633720cd/clusters</td>
+<td>dev</td>
+<td></td>
+<td>5.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-16t0053180000">2026-04-16 00:53</a></td>
+<td>INVALID_CLUSTER_CONFIGURATION /api/atlas/v2/groups/69e032fc1ec945fedc7326a3/clusters</td>
+<td>dev</td>
+<td></td>
+<td>5.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-17t0049010000">2026-04-17 00:49</a></td>
+<td>INVALID_CLUSTER_CONFIGURATION /api/atlas/v2/groups/69e1837b6dfdaa5fce05933d/clusters</td>
+<td>dev</td>
+<td></td>
+<td>5.09s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-04-06: MISSING</li>
+<li>2026-04-07</li>
+</ul>
+<h3 id="error-2026-04-07t0047150000">Error 2026-04-07T00:47:15+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-04-07T00:47:15.5192988Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-04-07T00:48:53.7905856Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-04-07T00:48:59.0354391Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-04-07T00:48:59.0355340Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-04-07T00:48:59.0356032Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-04-07T00:48:59.0356462Z         Error: Error in create
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-04-07T00:48:59.0356906Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-04-07T00:48:59.0357507Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-04-07T00:48:59.0358716Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-04-07T00:48:59.0360105Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-04-07T00:48:59.0360699Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-04-07T00:48:59.0361789Z         cluster name: test-acc-tf-c-5938980821495449652, API error details:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-04-07T00:48:59.0366249Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69d4540fc0b364eb740f63e8/clusters
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-04-07T00:48:59.0367696Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-04-07T00:48:59.0368762Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-04-07T00:48:59.0392243Z         BadRequestDetail: 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-04-07T00:48:59.1044453Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (5.33s)
+</code></pre></div>
+<ul>
+<li>2026-04-08</li>
+<li>FAIL 6 seconds</li>
+</ul>
+<h3 id="error-2026-04-08t0045300000">Error 2026-04-08T00:45:30+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-04-08T00:45:30.7205093Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-04-08T00:46:47.8973259Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-04-08T00:46:53.2804458Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-04-08T00:46:53.2842815Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-04-08T00:46:53.2843832Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-04-08T00:46:53.2844534Z         Error: Error in create
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-04-08T00:46:53.2845222Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-04-08T00:46:53.2846057Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-04-08T00:46:53.2847615Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-04-08T00:46:53.2849280Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-04-08T00:46:53.2850017Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-04-08T00:46:53.2851002Z         cluster name: test-acc-tf-c-3410997220284240574, API error details:
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-04-08T00:46:53.2852641Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69d5a52774e39a66414a732d/clusters
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-04-08T00:46:53.2854273Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-04-08T00:46:53.2855788Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-04-08T00:46:53.2856737Z         BadRequestDetail: 
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2026-04-08T00:46:53.3345653Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (6.12s)
+</code></pre></div>
+<ul>
+<li>FAIL 2 seconds</li>
+</ul>
+<h3 id="error-2026-04-08t0848510000">Error 2026-04-08T08:48:51+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-04-08T08:48:51.4176901Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-04-08T08:48:53.4781495Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-04-08T08:48:54.1036036Z   
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-04-08T08:48:54.1043444Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-04-08T08:48:54.1044084Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-04-08T08:48:54.1044622Z         Error: Error in create
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-04-08T08:48:54.1045327Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-04-08T08:48:54.1049262Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-04-08T08:48:54.1050408Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-04-08T08:48:54.1051762Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-04-08T08:48:54.1052279Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-04-08T08:48:54.1052913Z         cluster name: test-acc-tf-c-2054599434610762595, API error details:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-04-08T08:48:54.1053733Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69d6167308daefe17166f286/clusters
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-04-08T08:48:54.1054571Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-04-08T08:48:54.1055177Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-04-08T08:48:54.1055586Z         BadRequestDetail: 
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2026-04-08T08:48:54.1535804Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (2.74s)
+</code></pre></div>
+<ul>
+<li>2026-04-09</li>
+</ul>
+<h3 id="error-2026-04-09t0043400000">Error 2026-04-09T00:43:40+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-04-09T00:43:40.9729422Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-04-09T00:48:13.5527071Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-04-09T00:48:18.4851988Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-04-09T00:48:18.4852540Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-04-09T00:48:18.4852939Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-04-09T00:48:18.4853190Z         Error: Error in create
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-04-09T00:48:18.4853438Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-04-09T00:48:18.4854023Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-04-09T00:48:18.4855137Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-04-09T00:48:18.4856332Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-04-09T00:48:18.4856833Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-04-09T00:48:18.4857457Z         cluster name: test-acc-tf-c-4274249136163935983, API error details:
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-04-09T00:48:18.4858648Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69d6f63abcd76cc41060901e/clusters
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-04-09T00:48:18.4859878Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2026-04-09T00:48:18.4861111Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2026-04-09T00:48:18.4861825Z         BadRequestDetail: 
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2026-04-09T00:48:18.5452170Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (5.37s)
+</code></pre></div>
+<ul>
+<li>2026-04-10</li>
+</ul>
+<h3 id="error-2026-04-10t0044400000">Error 2026-04-10T00:44:40+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-04-10T00:44:40.3817725Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-04-10T00:46:02.3894110Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-04-10T00:46:08.1527791Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-04-10T00:46:08.1568034Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-04-10T00:46:08.1650772Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-04-10T00:46:08.1689349Z         Error: Error in create
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-04-10T00:46:08.1719316Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-04-10T00:46:08.1768242Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-04-10T00:46:08.1811225Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-04-10T00:46:08.1816717Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-04-10T00:46:08.1817460Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-04-10T00:46:08.1818363Z         cluster name: test-acc-tf-c-7668393451831944226, API error details:
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-04-10T00:46:08.1819853Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69d847f6dd8d8b3ecd3a5b15/clusters
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-04-10T00:46:08.1821168Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-04-10T00:46:08.1822292Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-04-10T00:46:08.1823087Z         BadRequestDetail: 
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-04-10T00:46:08.2680369Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (6.04s)
+</code></pre></div>
+<ul>
+<li>2026-04-11</li>
+</ul>
+<h3 id="error-2026-04-11t0048260000">Error 2026-04-11T00:48:26+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-04-11T00:48:26.1524873Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-04-11T00:49:46.1278268Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-04-11T00:49:50.7501113Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-04-11T00:49:50.7502704Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-04-11T00:49:50.7503431Z         
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-04-11T00:49:50.7503703Z         Error: Error in create
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-04-11T00:49:50.7503966Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-04-11T00:49:50.7504311Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-04-11T00:49:50.7505010Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-04-11T00:49:50.7509704Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-04-11T00:49:50.7510283Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-04-11T00:49:50.7511109Z         cluster name: test-acc-tf-c-1043176051233433674, API error details:
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-04-11T00:49:50.7512569Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69d99a5a92f7ea8dceedbbf8/clusters
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-04-11T00:49:50.7513820Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-04-11T00:49:50.7514861Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-04-11T00:49:50.7515537Z         BadRequestDetail: 
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-04-11T00:49:50.7981776Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (9.53s)
+</code></pre></div>
+<ul>
+<li>2026-04-12: MISSING</li>
+<li>2026-04-13</li>
+</ul>
+<h3 id="error-2026-04-13t0049180000">Error 2026-04-13T00:49:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-04-13T00:49:18.3863461Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-04-13T00:50:31.2785744Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-04-13T00:50:36.5395805Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-04-13T00:50:36.5396793Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-04-13T00:50:36.5397532Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-04-13T00:50:36.5397990Z         Error: Error in create
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-04-13T00:50:36.5398478Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-04-13T00:50:36.5398997Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-04-13T00:50:36.5399897Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-04-13T00:50:36.5400806Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-04-13T00:50:36.5401153Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-04-13T00:50:36.5401592Z         cluster name: test-acc-tf-c-7842865776140559348, API error details:
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-04-13T00:50:36.5402465Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69dc3d8c35f1f181a4dd94ad/clusters
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-04-13T00:50:36.5403739Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-04-13T00:50:36.5404828Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2026-04-13T00:50:36.5405564Z         BadRequestDetail: 
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2026-04-13T00:50:36.6483909Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (5.90s)
+</code></pre></div>
+<ul>
+<li>2026-04-14</li>
+</ul>
+<h3 id="error-2026-04-14t0052200000">Error 2026-04-14T00:52:20+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-04-14T00:52:20.2593431Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-04-14T00:53:47.9928511Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-04-14T00:53:54.0528059Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-04-14T00:53:54.0528571Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-04-14T00:53:54.0528940Z         
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-04-14T00:53:54.0529281Z         Error: Error in create
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-04-14T00:53:54.0529528Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-04-14T00:53:54.0529863Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-04-14T00:53:54.0530575Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-04-14T00:53:54.0531425Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-04-14T00:53:54.0531739Z         
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-04-14T00:53:54.0532215Z         cluster name: test-acc-tf-c-6464216675305347447, API error details:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-04-14T00:53:54.0533061Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69dd8fc07e7703c9cb120dd8/clusters
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-04-14T00:53:54.0533705Z         POST: HTTP 400 Bad Request (Error code: &quot;INVALID_CLUSTER_CONFIGURATION&quot;)
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2026-04-14T00:53:54.0534302Z         Detail: The specified cluster configuration is not valid: TLS 1.3 is not
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2026-04-14T00:53:54.0534903Z         available for new configurations. Please contact support to enable this
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2026-04-14T00:53:54.0535486Z         feature.. Reason: Bad Request. Params: [TLS 1.3 is not available for new
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2026-04-14T00:53:54.0536059Z         configurations. Please contact support to enable this feature.],
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2026-04-14T00:53:54.0536456Z         BadRequestDetail: 
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2026-04-14T00:53:54.1024286Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (6.13s)
+</code></pre></div>
+<ul>
+<li>2026-04-15</li>
+</ul>
+<h3 id="error-2026-04-15t0049330000">Error 2026-04-15T00:49:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-04-15T00:49:33.3096127Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-04-15T00:50:47.1052200Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-04-15T00:50:52.1715791Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-04-15T00:50:52.1716952Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-04-15T00:50:52.1717986Z         
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-04-15T00:50:52.1718543Z         Error: Error in create
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-04-15T00:50:52.1719360Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-04-15T00:50:52.1720126Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-04-15T00:50:52.1721725Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-04-15T00:50:52.1723248Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-04-15T00:50:52.1724053Z         
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2026-04-15T00:50:52.1725045Z         cluster name: test-acc-tf-c-6383159767964626675, API error details:
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2026-04-15T00:50:52.1726867Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69dee09a353adec0633720cd/clusters
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2026-04-15T00:50:52.1728333Z         POST: HTTP 400 Bad Request (Error code: &quot;INVALID_CLUSTER_CONFIGURATION&quot;)
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2026-04-15T00:50:52.1729610Z         Detail: The specified cluster configuration is not valid: TLS 1.3 is not
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2026-04-15T00:50:52.1730756Z         available for new configurations. Please contact support to enable this
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2026-04-15T00:50:52.1732067Z         feature.. Reason: Bad Request. Params: [TLS 1.3 is not available for new
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2026-04-15T00:50:52.1733310Z         configurations. Please contact support to enable this feature.],
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2026-04-15T00:50:52.1734093Z         BadRequestDetail: 
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>2026-04-15T00:50:52.2693468Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (5.70s)
+</code></pre></div>
+<ul>
+<li>2026-04-16</li>
+</ul>
+<h3 id="error-2026-04-16t0053180000">Error 2026-04-16T00:53:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2026-04-16T00:53:18.2002146Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2026-04-16T00:54:53.9851840Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2026-04-16T00:54:59.3650550Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2026-04-16T00:54:59.3651636Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2026-04-16T00:54:59.3652501Z         
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2026-04-16T00:54:59.3653295Z         Error: Error in create
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2026-04-16T00:54:59.3653917Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2026-04-16T00:54:59.3654937Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2026-04-16T00:54:59.3656628Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2026-04-16T00:54:59.3658060Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2026-04-16T00:54:59.3658825Z         
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2026-04-16T00:54:59.3659707Z         cluster name: test-acc-tf-c-3187604270002599545, API error details:
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2026-04-16T00:54:59.3661129Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69e032fc1ec945fedc7326a3/clusters
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2026-04-16T00:54:59.3662609Z         POST: HTTP 400 Bad Request (Error code: &quot;INVALID_CLUSTER_CONFIGURATION&quot;)
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2026-04-16T00:54:59.3663965Z         Detail: The specified cluster configuration is not valid: TLS 1.3 is not
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2026-04-16T00:54:59.3665704Z         available for new configurations. Please contact support to enable this
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2026-04-16T00:54:59.3667073Z         feature.. Reason: Bad Request. Params: [TLS 1.3 is not available for new
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2026-04-16T00:54:59.3668350Z         configurations. Please contact support to enable this feature.],
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2026-04-16T00:54:59.3669274Z         BadRequestDetail: 
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>2026-04-16T00:54:59.6383954Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (5.53s)
+</code></pre></div>
+<ul>
+<li>2026-04-17</li>
+</ul>
+<h3 id="error-2026-04-17t0049010000">Error 2026-04-17T00:49:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2026-04-17T00:49:01.5733627Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2026-04-17T00:50:13.7432113Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2026-04-17T00:50:19.4870405Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2026-04-17T00:50:19.4871596Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2026-04-17T00:50:19.4872397Z         
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2026-04-17T00:50:19.4873638Z         Error: Error in create
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2026-04-17T00:50:19.4874372Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2026-04-17T00:50:19.4875254Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2026-04-17T00:50:19.4876783Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2026-04-17T00:50:19.4878193Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2026-04-17T00:50:19.4879051Z         
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2026-04-17T00:50:19.4879941Z         cluster name: test-acc-tf-c-2283118283240978273, API error details:
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2026-04-17T00:50:19.4881465Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/69e1837b6dfdaa5fce05933d/clusters
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2026-04-17T00:50:19.4883036Z         POST: HTTP 400 Bad Request (Error code: &quot;INVALID_CLUSTER_CONFIGURATION&quot;)
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2026-04-17T00:50:19.4884329Z         Detail: The specified cluster configuration is not valid: TLS 1.3 is not
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2026-04-17T00:50:19.4885866Z         available for new configurations. Please contact support to enable this
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2026-04-17T00:50:19.4887204Z         feature.. Reason: Bad Request. Params: [TLS 1.3 is not available for new
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2026-04-17T00:50:19.4888544Z         configurations. Please contact support to enable this feature.],
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2026-04-17T00:50:19.4918562Z         BadRequestDetail: 
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>2026-04-17T00:50:19.6239583Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (5.88s)
+</code></pre></div>
+<ul>
+<li>2026-04-18 PASS 28 minutes</li>
+<li>2026-04-19: MISSING</li>
+<li>2026-04-20: MISSING</li>
+<li>2026-04-21 PASS 27 minutes</li>
+<li>2026-04-22 PASS 30 minutes</li>
+<li>2026-04-23 PASS 38 minutes</li>
+<li>2026-04-24 PASS 21 minutes</li>
+<li>2026-04-25 PASS 19 minutes</li>
+<li>2026-04-26: MISSING</li>
+<li>2026-04-27 PASS 21 minutes</li>
+<li>2026-04-28 PASS 20 minutes</li>
+<li>2026-04-29 PASS 23 minutes</li>
+<li>2026-04-30 PASS 27 minutes</li>
+<li>2026-05-01 PASS 19 minutes</li>
+<li>2026-05-02 PASS 20 minutes</li>
+<li>2026-05-03: MISSING</li>
+<li>2026-05-04 PASS 18 minutes</li>
+<li>2026-05-05 PASS 35 minutes</li>
+<li>2026-05-06 PASS 31 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-04-08t0601570000">2026-04-08 06:01</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d5ef5253a6e805f2299dbc/clusters</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>6.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-08t0713250000">2026-04-08 07:13</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d600142df056f80ce87ccf/clusters</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>6.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-08t0840190000">2026-04-08 08:40</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69d614734d3f216b8b2fd768/clusters</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>4.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-04-12t0048280000">2026-04-12 00:48</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups/69daebda97e3b71a706670d2/clusters</td>
+<td>qa</td>
+<td>flaky_500</td>
+<td>6.03s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-04-06: MISSING</li>
+<li>2026-04-07: MISSING</li>
+<li>2026-04-08</li>
+<li>FAIL 6 seconds</li>
+</ul>
+<h3 id="error-2026-04-08t0601570000">Error 2026-04-08T06:01:57+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2026-04-08T06:01:57.4521624Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2026-04-08T06:03:58.4610794Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2026-04-08T06:04:04.1431094Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2026-04-08T06:04:04.1432210Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2026-04-08T06:04:04.1433054Z         
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2026-04-08T06:04:04.1433628Z         Error: Error in create
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2026-04-08T06:04:04.1434245Z         
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2026-04-08T06:04:04.1434961Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2026-04-08T06:04:04.1436293Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2026-04-08T06:04:04.1437553Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2026-04-08T06:04:04.1438455Z         
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2026-04-08T06:04:04.1439567Z         cluster name: test-acc-tf-c-893472253568292346, API error details:
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2026-04-08T06:04:04.1440973Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/69d5ef5253a6e805f2299dbc/clusters
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2026-04-08T06:04:04.1442403Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2026-04-08T06:04:04.1443634Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>2026-04-08T06:04:04.1444463Z         BadRequestDetail: 
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>2026-04-08T06:04:04.2154728Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (6.07s)
+</code></pre></div>
+<ul>
+<li>FAIL 6 seconds</li>
+</ul>
+<h3 id="error-2026-04-08t0713250000">Error 2026-04-08T07:13:25+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2026-04-08T07:13:25.8859579Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2026-04-08T07:14:41.5053640Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2026-04-08T07:14:47.3781823Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2026-04-08T07:14:47.3782767Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2026-04-08T07:14:47.3783444Z         
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2026-04-08T07:14:47.3783869Z         Error: Error in create
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2026-04-08T07:14:47.3784275Z         
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2026-04-08T07:14:47.3785014Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2026-04-08T07:14:47.3786180Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2026-04-08T07:14:47.3787256Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2026-04-08T07:14:47.3787796Z         
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2026-04-08T07:14:47.3788494Z         cluster name: test-acc-tf-c-6453756061756488593, API error details:
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2026-04-08T07:14:47.3789649Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/69d600142df056f80ce87ccf/clusters
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>2026-04-08T07:14:47.3790888Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>2026-04-08T07:14:47.3791962Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>2026-04-08T07:14:47.3792624Z         BadRequestDetail: 
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>2026-04-08T07:14:47.6806400Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (6.21s)
+</code></pre></div>
+<ul>
+<li>FAIL 4 seconds</li>
+</ul>
+<h3 id="error-2026-04-08t0840190000">Error 2026-04-08T08:40:19+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2026-04-08T08:40:19.7309048Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2026-04-08T08:40:23.6171870Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2026-04-08T08:40:24.3008087Z   
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2026-04-08T08:40:24.3009044Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2026-04-08T08:40:24.3009697Z         
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2026-04-08T08:40:24.3010144Z         Error: Error in create
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2026-04-08T08:40:24.3010590Z         
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2026-04-08T08:40:24.3011179Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2026-04-08T08:40:24.3012404Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2026-04-08T08:40:24.3013799Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2026-04-08T08:40:24.3014343Z         
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2026-04-08T08:40:24.3015121Z         cluster name: test-acc-tf-c-29908853120551670, API error details:
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2026-04-08T08:40:24.3016544Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/69d614734d3f216b8b2fd768/clusters
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>2026-04-08T08:40:24.3017837Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>2026-04-08T08:40:24.3018936Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>2026-04-08T08:40:24.3019668Z         BadRequestDetail: 
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>2026-04-08T08:40:24.3493637Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (4.62s)
+</code></pre></div>
+<ul>
+<li>2026-04-09: MISSING</li>
+<li>2026-04-10: MISSING</li>
+<li>2026-04-11: MISSING</li>
+<li>2026-04-12</li>
+</ul>
+<h3 id="error-2026-04-12t0048280000">Error 2026-04-12T00:48:28+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2026-04-12T00:48:28.4983031Z === RUN   TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2026-04-12T00:50:48.1158672Z === CONT  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2026-04-12T00:50:53.8694799Z === NAME  TestAccAdvancedCluster_tls13CustomCiphers
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2026-04-12T00:50:53.8695766Z     resource_test.go:2074: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2026-04-12T00:50:53.8696519Z         
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2026-04-12T00:50:53.8697044Z         Error: Error in create
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2026-04-12T00:50:53.8697528Z         
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2026-04-12T00:50:53.8698184Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2026-04-12T00:50:53.8699540Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2026-04-12T00:50:53.8700723Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2026-04-12T00:50:53.8701370Z         
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2026-04-12T00:50:53.8702218Z         cluster name: test-acc-tf-c-3656003737364948110, API error details:
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2026-04-12T00:50:53.8703484Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/69daebda97e3b71a706670d2/clusters
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2026-04-12T00:50:53.8705099Z         POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail:
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>2026-04-12T00:50:53.8706415Z         Unexpected error. Reason: Internal Server Error. Params: [],
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>2026-04-12T00:50:53.8707631Z         BadRequestDetail: 
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>2026-04-12T00:50:53.9705199Z --- FAIL: TestAccAdvancedCluster_tls13CustomCiphers (6.30s)
+</code></pre></div>
+<ul>
+<li>2026-04-13: MISSING</li>
+<li>2026-04-14: MISSING</li>
+<li>2026-04-15: MISSING</li>
+<li>2026-04-16: MISSING</li>
+<li>2026-04-17: MISSING</li>
+<li>2026-04-18: MISSING</li>
+<li>2026-04-19: MISSING</li>
+<li>2026-04-20: MISSING</li>
+<li>2026-04-21: MISSING</li>
+<li>2026-04-22 PASS 18 minutes</li>
+<li>2026-04-23: MISSING</li>
+<li>2026-04-24: MISSING</li>
+<li>2026-04-25: MISSING</li>
+<li>2026-04-26 PASS 24 minutes</li>
+<li>2026-04-27: MISSING</li>
+<li>2026-04-28: MISSING</li>
+<li>2026-04-29: MISSING</li>
+<li>2026-04-30: MISSING</li>
+<li>2026-05-01: MISSING</li>
+<li>2026-05-02: MISSING</li>
+<li>2026-05-03 PASS 20 minutes</li>
+<li>2026-05-04 PASS 15 minutes</li>
+<li>2026-05-05: MISSING</li>
+<li>2026-05-06 PASS 17 minutes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
