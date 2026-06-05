@@ -1,0 +1,114 @@
+# cluster/cluster/TestAccCluster_basicGCPRegionName Test Details
+# Found 14 TestRuns in dev, qa from 2026-05-23 to 2026-06-05 from master branch: 1 unique tests, PASS(x 12) FAIL(x 2)
+Success rate: 85.71%
+
+## DEV Environment
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2026-05-23 01:03](#error-2026-05-23t0103270000) | UNEXPECTED_ERROR /api/atlas/v2/groups | dev | flaky_500 | 102.04s
+[2026-05-28 00:59](#error-2026-05-28t0059440000) | UNEXPECTED_ERROR /api/atlas/v2/groups | dev | flaky_500 | 74.05s
+
+### Timeline
+- 2026-05-06: MISSING
+- 2026-05-07: MISSING
+- 2026-05-08: MISSING
+- 2026-05-09: MISSING
+- 2026-05-10: MISSING
+- 2026-05-11: MISSING
+- 2026-05-12: MISSING
+- 2026-05-13: MISSING
+- 2026-05-14: MISSING
+- 2026-05-15: MISSING
+- 2026-05-16: MISSING
+- 2026-05-17: MISSING
+- 2026-05-18: MISSING
+- 2026-05-19: MISSING
+- 2026-05-20: MISSING
+- 2026-05-21: MISSING
+- 2026-05-22: MISSING
+- 2026-05-23
+
+### Error 2026-05-23T01:03:27+00:00
+```
+2026-05-23T01:03:27.8151762Z === RUN   TestAccCluster_basicGCPRegionName
+2026-05-23T01:05:10.1758718Z     shared_resource.go:160: 
+2026-05-23T01:05:10.1762100Z         	Error Trace:	/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+2026-05-23T01:05:10.1766799Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:160
+2026-05-23T01:05:10.1768911Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:256
+2026-05-23T01:05:10.1770723Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:159
+2026-05-23T01:05:10.1772480Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:170
+2026-05-23T01:05:10.1774354Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/cluster/resource_cluster_test.go:1060
+2026-05-23T01:05:10.1775129Z         	Error:      	Received unexpected error:
+2026-05-23T01:05:10.1777177Z         	            	https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: "UNEXPECTED_ERROR") Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+2026-05-23T01:05:10.1778203Z         	Test:       	TestAccCluster_basicGCPRegionName
+2026-05-23T01:05:10.1780318Z         	Messages:   	Project creation failed: test-acc-tf-p-7389857500575984648, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: "UNEXPECTED_ERROR") Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+2026-05-23T01:05:10.1781461Z --- FAIL: TestAccCluster_basicGCPRegionName (102.36s)
+```
+
+- 2026-05-24: MISSING
+- 2026-05-25 PASS 20 minutes
+- 2026-05-26 PASS 19 minutes
+- 2026-05-27 PASS 53 minutes
+- 2026-05-28
+
+### Error 2026-05-28T00:59:44+00:00
+```
+2026-05-28T00:59:44.9093011Z === RUN   TestAccCluster_basicGCPRegionName
+2026-05-28T01:00:59.3776194Z     shared_resource.go:160: 
+2026-05-28T01:00:59.3777881Z         	Error Trace:	/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+2026-05-28T01:00:59.3779931Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:160
+2026-05-28T01:00:59.3781825Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:256
+2026-05-28T01:00:59.3783567Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:159
+2026-05-28T01:00:59.3785251Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:170
+2026-05-28T01:00:59.3786966Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/cluster/resource_cluster_test.go:1060
+2026-05-28T01:00:59.3787733Z         	Error:      	Received unexpected error:
+2026-05-28T01:00:59.3789463Z         	            	https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: "UNEXPECTED_ERROR") Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+2026-05-28T01:00:59.3790468Z         	Test:       	TestAccCluster_basicGCPRegionName
+2026-05-28T01:00:59.3792139Z         	Messages:   	Project creation failed: test-acc-tf-p-2926895305508124953, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: "UNEXPECTED_ERROR") Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+2026-05-28T01:00:59.3793237Z --- FAIL: TestAccCluster_basicGCPRegionName (74.48s)
+```
+
+- 2026-05-29 PASS 25 minutes
+- 2026-05-30 PASS 19 minutes
+- 2026-05-31: MISSING
+- 2026-06-01 PASS 26 minutes
+- 2026-06-02 PASS 19 minutes
+- 2026-06-03 PASS 40 minutes
+- 2026-06-04 PASS 44 minutes
+- 2026-06-05 PASS 28 minutes
+
+## QA Environment
+### Timeline
+- 2026-05-06: MISSING
+- 2026-05-07: MISSING
+- 2026-05-08: MISSING
+- 2026-05-09: MISSING
+- 2026-05-10: MISSING
+- 2026-05-11: MISSING
+- 2026-05-12: MISSING
+- 2026-05-13: MISSING
+- 2026-05-14: MISSING
+- 2026-05-15: MISSING
+- 2026-05-16: MISSING
+- 2026-05-17: MISSING
+- 2026-05-18: MISSING
+- 2026-05-19: MISSING
+- 2026-05-20: MISSING
+- 2026-05-21: MISSING
+- 2026-05-22: MISSING
+- 2026-05-23: MISSING
+- 2026-05-24 PASS 23 minutes
+- 2026-05-25: MISSING
+- 2026-05-26: MISSING
+- 2026-05-27: MISSING
+- 2026-05-28: MISSING
+- 2026-05-29: MISSING
+- 2026-05-30: MISSING
+- 2026-05-31 PASS 23 minutes
+- 2026-06-01: MISSING
+- 2026-06-02: MISSING
+- 2026-06-03: MISSING
+- 2026-06-04: MISSING
+- 2026-06-05: MISSING

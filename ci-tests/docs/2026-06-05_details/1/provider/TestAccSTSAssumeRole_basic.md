@@ -1,0 +1,164 @@
+# 1/provider/TestAccSTSAssumeRole_basic Test Details
+# Found 93 TestRuns in dev, qa from 2026-05-07 to 2026-06-05 from master branch: 1 unique tests, PASS(x 54) SKIP(x 39)
+Success rate: 100.00%
+
+## DEV Environment
+### Timeline
+- 2026-05-06: MISSING
+- 2026-05-07
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-08
+  - PASS 16 seconds
+  - PASS 23 seconds
+  - PASS 12 seconds
+- 2026-05-09
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-10: MISSING
+- 2026-05-11
+  - PASS 19 seconds
+  - PASS 21 seconds
+  - PASS 17 seconds
+- 2026-05-12
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-13
+  - PASS 18 seconds
+  - PASS 11 seconds
+  - PASS 15 seconds
+- 2026-05-14
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-15
+  - PASS 13 seconds
+  - PASS 22 seconds
+  - PASS 16 seconds
+- 2026-05-16
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-17: MISSING
+- 2026-05-18
+  - PASS 15 seconds
+  - PASS 17 seconds
+  - PASS 19 seconds
+- 2026-05-19
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-20
+  - PASS 16 seconds
+  - PASS 17 seconds
+  - PASS 19 seconds
+- 2026-05-21
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-22
+  - PASS 13 seconds
+  - PASS 18 seconds
+  - PASS 24 seconds
+- 2026-05-23
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-24: MISSING
+- 2026-05-25
+  - PASS 14 seconds
+  - PASS 13 seconds
+  - PASS 16 seconds
+- 2026-05-26
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-27
+  - PASS 10 seconds
+  - PASS 15 seconds
+  - PASS 15 seconds
+- 2026-05-28
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-29
+  - PASS 13 seconds
+  - PASS 19 seconds
+  - PASS 22 seconds
+- 2026-05-30
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-05-31: MISSING
+- 2026-06-01
+  - PASS 10 seconds
+  - PASS 15 seconds
+  - PASS 20 seconds
+- 2026-06-02
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-06-03
+  - PASS 11 seconds
+  - PASS 14 seconds
+  - PASS 13 seconds
+- 2026-06-04
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-06-05
+  - PASS 19 seconds
+  - PASS 14 seconds
+  - PASS 14 seconds
+
+## QA Environment
+### Timeline
+- 2026-05-06: MISSING
+- 2026-05-07: MISSING
+- 2026-05-08: MISSING
+- 2026-05-09: MISSING
+- 2026-05-10
+  - PASS 16 seconds
+  - PASS 11 seconds
+  - PASS 15 seconds
+- 2026-05-11: MISSING
+- 2026-05-12: MISSING
+- 2026-05-13: MISSING
+- 2026-05-14: MISSING
+- 2026-05-15: MISSING
+- 2026-05-16: MISSING
+- 2026-05-17
+  - PASS 14 seconds
+  - PASS 14 seconds
+  - PASS 19 seconds
+- 2026-05-18: MISSING
+- 2026-05-19: MISSING
+- 2026-05-20
+  - PASS 26 seconds
+  - PASS 21 seconds
+  - PASS 10 seconds
+- 2026-05-21: MISSING
+- 2026-05-22: MISSING
+- 2026-05-23: MISSING
+- 2026-05-24
+  - PASS 16 seconds
+  - PASS 11 seconds
+  - PASS 19 seconds
+- 2026-05-25: MISSING
+- 2026-05-26: MISSING
+- 2026-05-27: MISSING
+- 2026-05-28: MISSING
+- 2026-05-29: MISSING
+- 2026-05-30: MISSING
+- 2026-05-31
+  - PASS 10 seconds
+  - PASS 12 seconds
+  - PASS 22 seconds
+- 2026-06-01: MISSING
+- 2026-06-02: MISSING
+- 2026-06-03: MISSING
+- 2026-06-04: MISSING
+- 2026-06-05: MISSING

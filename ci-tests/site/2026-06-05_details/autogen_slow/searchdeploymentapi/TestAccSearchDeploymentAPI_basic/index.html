@@ -1,0 +1,812 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>autogen_slow/searchdeploymentapi/TestAccSearchDeploymentAPI_basic Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autogen_slowsearchdeploymentapitestaccsearchdeploymentapi_basic-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              autogen_slow/searchdeploymentapi/TestAccSearchDeploymentAPI_basic Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="autogen_slowsearchdeploymentapitestaccsearchdeploymentapi_basic-test-details">autogen_slow/searchdeploymentapi/TestAccSearchDeploymentAPI_basic Test Details</h1>
+<h1 id="found-31-testruns-in-dev-qa-from-2026-05-07-to-2026-06-05-from-master-branch-1-unique-tests-passx-18-failx-13">Found 31 TestRuns in dev, qa from 2026-05-07 to 2026-06-05 from master branch: 1 unique tests, PASS(x 18) FAIL(x 13)</h1>
+<p>Success rate: 58.06%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-05-07t0245370000">2026-05-07 02:45</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>6569.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-09t0102470000">2026-05-09 01:02</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>66.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-12t0124120000">2026-05-12 01:24</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>94.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-13t0203520000">2026-05-13 02:03</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>3932.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-14t0149220000">2026-05-14 01:49</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>65.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-15t0115530000">2026-05-15 01:15</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>223.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-19t0106130000">2026-05-19 01:06</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>85.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-21t0127270000">2026-05-21 01:27</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>84.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-22t0231130000">2026-05-22 02:31</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>5399.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-23t0135220000">2026-05-23 01:35</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>69.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-27t0248380000">2026-05-27 02:48</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>6297.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-06-02t0114070000">2026-06-02 01:14</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>74.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-06-03t0244390000">2026-06-03 02:44</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>5344.05s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-05-06: MISSING</li>
+<li>2026-05-07</li>
+<li>FAIL an hour</li>
+</ul>
+<h3 id="error-2026-05-07t0245370000">Error 2026-05-07T02:45:37+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-05-07T02:45:37.2027512Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-05-07T02:45:37.2028902Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-05-07T02:45:37.2038951Z   
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-05-07T02:45:37.2039389Z     resource_test.go:26: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-05-07T02:45:37.2039787Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-05-07T02:45:37.2040112Z         Error: Error waiting for changes in Update
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-05-07T02:45:37.2040654Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-05-07T02:45:37.2041035Z           with mongodbatlas_search_deployment_api.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-05-07T02:45:37.2041779Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-05-07T02:45:37.2042478Z           37:      resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-05-07T02:45:37.2042817Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-05-07T02:45:37.2043262Z         timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-05-07T02:45:37.2043692Z         timeout: 30m0s)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-05-07T02:45:37.2050957Z    test_name=TestAccSearchDeploymentAPI_basic test_terraform_path=/home/runner/work/_temp/60ad72c1-71f0-4eec-9fb6-936e87162a23/terraform test_working_directory=/tmp/plugintest2106511673
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-05-07T02:45:37.2052035Z     panic.go:694: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-05-07T02:45:37.2052493Z         
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-05-07T02:45:37.2052813Z         Error: Error waiting for changes in Delete
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-05-07T02:45:37.2053111Z         
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2026-05-07T02:45:37.2053721Z         timeout while waiting for state to become &#39;DELETED&#39; (last state: &#39;UPDATING&#39;,
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2026-05-07T02:45:37.2054159Z         timeout: 10m0s)
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2026-05-07T02:45:37.2054458Z --- FAIL: TestAccSearchDeploymentAPI_basic (6569.23s)
+</code></pre></div>
+<ul>
+<li>PASS an hour</li>
+<li>2026-05-08 PASS an hour</li>
+<li>2026-05-09</li>
+</ul>
+<h3 id="error-2026-05-09t0102470000">Error 2026-05-09T01:02:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-05-09T01:02:47.9558200Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-05-09T01:02:47.9558837Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-05-09T01:02:47.9569727Z   
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-05-09T01:02:47.9570130Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-05-09T01:02:47.9570508Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-05-09T01:02:47.9570933Z         Error: error creating project: test-acc-tf-p-438548902839699317
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-05-09T01:02:47.9571481Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-05-09T01:02:47.9571793Z           with mongodbatlas_project.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-05-09T01:02:47.9572410Z           on terraform_plugin_test.tf line 13, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-05-09T01:02:47.9572984Z           13:  resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-05-09T01:02:47.9573288Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-05-09T01:02:47.9573757Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-05-09T01:02:47.9574559Z         Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error.
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-05-09T01:02:47.9575160Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-05-09T01:02:47.9575583Z --- FAIL: TestAccSearchDeploymentAPI_basic (66.90s)
+</code></pre></div>
+<ul>
+<li>2026-05-10: MISSING</li>
+<li>2026-05-11 PASS an hour</li>
+<li>2026-05-12</li>
+</ul>
+<h3 id="error-2026-05-12t0124120000">Error 2026-05-12T01:24:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-05-12T01:24:12.2097016Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-05-12T01:24:12.2097679Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-05-12T01:24:12.2108624Z    test_terraform_path=/home/runner/work/_temp/76bd7d0c-0d69-4fad-87bd-5e5a46b1720b/terraform
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-05-12T01:24:12.2109272Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-05-12T01:24:12.2109652Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-05-12T01:24:12.2110076Z         Error: error creating project: test-acc-tf-p-2088536316213637984
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-05-12T01:24:12.2110445Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-05-12T01:24:12.2110751Z           with mongodbatlas_project.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-05-12T01:24:12.2111609Z           on terraform_plugin_test.tf line 13, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-05-12T01:24:12.2112196Z           13:  resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-05-12T01:24:12.2112512Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-05-12T01:24:12.2112987Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-05-12T01:24:12.2113643Z         Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error.
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-05-12T01:24:12.2114248Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-05-12T01:24:12.2114666Z --- FAIL: TestAccSearchDeploymentAPI_basic (94.10s)
+</code></pre></div>
+<ul>
+<li>2026-05-13</li>
+</ul>
+<h3 id="error-2026-05-13t0203520000">Error 2026-05-13T02:03:52+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-05-13T02:03:52.5469219Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-05-13T02:03:52.5470368Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-05-13T02:03:52.5489200Z   
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-05-13T02:03:52.5489916Z     resource_test.go:26: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-05-13T02:03:52.5490434Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-05-13T02:03:52.5490782Z         Error: Error waiting for changes in Delete
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-05-13T02:03:52.5491090Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-05-13T02:03:52.5491566Z         timeout while waiting for state to become &#39;DELETED&#39; (last state: &#39;UPDATING&#39;,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-05-13T02:03:52.5492036Z         timeout: 10m0s)
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-05-13T02:03:52.5492345Z --- FAIL: TestAccSearchDeploymentAPI_basic (3932.24s)
+</code></pre></div>
+<ul>
+<li>2026-05-14</li>
+</ul>
+<h3 id="error-2026-05-14t0149220000">Error 2026-05-14T01:49:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-05-14T01:49:22.3484742Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-05-14T01:49:22.3485372Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-05-14T01:49:22.3496184Z   
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-05-14T01:49:22.3496580Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-05-14T01:49:22.3496953Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-05-14T01:49:22.3497383Z         Error: error creating project: test-acc-tf-p-6212231627069983105
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-05-14T01:49:22.3497741Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-05-14T01:49:22.3498058Z           with mongodbatlas_project.test,
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-05-14T01:49:22.3498666Z           on terraform_plugin_test.tf line 13, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-05-14T01:49:22.3499499Z           13:  resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-05-14T01:49:22.3499970Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-05-14T01:49:22.3500710Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-05-14T01:49:22.3501599Z         Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error.
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-05-14T01:49:22.3502190Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-05-14T01:49:22.3502607Z --- FAIL: TestAccSearchDeploymentAPI_basic (65.76s)
+</code></pre></div>
+<ul>
+<li>2026-05-15</li>
+</ul>
+<h3 id="error-2026-05-15t0115530000">Error 2026-05-15T01:15:53+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-05-15T01:15:53.3643857Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-05-15T01:15:53.3644513Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-05-15T01:15:53.3657015Z    test_working_directory=/tmp/plugintest2552776123
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-05-15T01:15:53.3657545Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-05-15T01:15:53.3657930Z         
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-05-15T01:15:53.3658188Z         Error: Error in create
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-05-15T01:15:53.3658441Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-05-15T01:15:53.3658776Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-05-15T01:15:53.3659468Z           on terraform_plugin_test.tf line 17, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-05-15T01:15:53.3660110Z           17:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-05-15T01:15:53.3660437Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-05-15T01:15:53.3660942Z         cluster=test-acc-tf-c-5928312775519289888 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-05-15T01:15:53.3661367Z         error:
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-05-15T01:15:53.3662109Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a066f76bf5881c97de6b89d/clusters/test-acc-tf-c-5928312775519289888
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-05-15T01:15:53.3662935Z         GET: HTTP 403 Forbidden (Error code: &quot;&quot;) Detail:  Reason: . Params: [],
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-05-15T01:15:53.3663364Z         BadRequestDetail: 
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-05-15T01:15:53.3672976Z    test_name=TestAccSearchDeploymentAPI_basic test_terraform_path=/home/runner/work/_temp/a654072e-e8fd-41fd-bce5-b95806a8701f/terraform test_working_directory=/tmp/plugintest2552776123 test_step_number=1
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2026-05-15T01:15:53.3674132Z     panic.go:694: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2026-05-15T01:15:53.3674594Z         
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2026-05-15T01:15:53.3674906Z         Error: error when destroying resource
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2026-05-15T01:15:53.3675191Z         
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>2026-05-15T01:15:53.3675541Z         error deleting project (6a066f76bf5881c97de6b89d):
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>2026-05-15T01:15:53.3676140Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a066f76bf5881c97de6b89d
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>2026-05-15T01:15:53.3677147Z         DELETE: HTTP 403 Forbidden (Error code: &quot;&quot;) Detail:  Reason: . Params: [],
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>2026-05-15T01:15:53.3677594Z         BadRequestDetail: 
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>2026-05-15T01:15:53.3677902Z --- FAIL: TestAccSearchDeploymentAPI_basic (223.92s)
+</code></pre></div>
+<ul>
+<li>2026-05-16 PASS 43 minutes</li>
+<li>2026-05-17: MISSING</li>
+<li>2026-05-18 PASS an hour</li>
+<li>2026-05-19</li>
+</ul>
+<h3 id="error-2026-05-19t0106130000">Error 2026-05-19T01:06:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-05-19T01:06:13.4589289Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-05-19T01:06:13.4589811Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-05-19T01:06:13.4598300Z    test_terraform_path=/home/runner/work/_temp/9bd9076d-51eb-4e90-b891-c8899924ca32/terraform test_working_directory=/tmp/plugintest3120256558 test_step_number=1 test_name=TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-05-19T01:06:13.4599090Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-05-19T01:06:13.4599395Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-05-19T01:06:13.4599728Z         Error: error creating project: test-acc-tf-p-376729784014644220
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-05-19T01:06:13.4600011Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-05-19T01:06:13.4600254Z           with mongodbatlas_project.test,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-05-19T01:06:13.4600732Z           on terraform_plugin_test.tf line 13, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-05-19T01:06:13.4601307Z           13:  resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-05-19T01:06:13.4601553Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-05-19T01:06:13.4601925Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-05-19T01:06:13.4602439Z         Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error.
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-05-19T01:06:13.4602902Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-05-19T01:06:13.4603234Z --- FAIL: TestAccSearchDeploymentAPI_basic (85.43s)
+</code></pre></div>
+<ul>
+<li>2026-05-20 PASS an hour</li>
+<li>2026-05-21</li>
+</ul>
+<h3 id="error-2026-05-21t0127270000">Error 2026-05-21T01:27:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-05-21T01:27:27.5768403Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-05-21T01:27:27.5769409Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-05-21T01:27:27.5790940Z    test_name=TestAccSearchDeploymentAPI_basic test_terraform_path=/home/runner/work/_temp/c472c22c-b8aa-43e3-b078-a71f4f1aecde/terraform test_working_directory=/tmp/plugintest2896672916 test_step_number=1
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-05-21T01:27:27.5792234Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-05-21T01:27:27.5792635Z         
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-05-21T01:27:27.5793069Z         Error: error creating project: test-acc-tf-p-952695055346099838
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-05-21T01:27:27.5793653Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-05-21T01:27:27.5793966Z           with mongodbatlas_project.test,
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-05-21T01:27:27.5794580Z           on terraform_plugin_test.tf line 13, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-05-21T01:27:27.5795149Z           13:  resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-05-21T01:27:27.5795470Z         
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-05-21T01:27:27.5795949Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-05-21T01:27:27.5796589Z         Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error.
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-05-21T01:27:27.5797177Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2026-05-21T01:27:27.5797596Z --- FAIL: TestAccSearchDeploymentAPI_basic (84.71s)
+</code></pre></div>
+<ul>
+<li>2026-05-22</li>
+</ul>
+<h3 id="error-2026-05-22t0231130000">Error 2026-05-22T02:31:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-05-22T02:31:13.4644363Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-05-22T02:31:13.4645278Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-05-22T02:31:13.4647651Z   diagnostic_detail=
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-05-22T02:31:13.4650506Z    diagnostic_severity=ERROR tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas tf_req_id=eccaf3a8-50e3-b65f-c00b-0ea7577f2d74
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-05-22T02:31:13.4660383Z   
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-05-22T02:31:13.4660906Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-05-22T02:31:13.4661471Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-05-22T02:31:13.4661903Z         Error: Error waiting for changes in Create
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-05-22T02:31:13.4670861Z         
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-05-22T02:31:13.4671497Z           with mongodbatlas_search_deployment_api.test,
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-05-22T02:31:13.4672269Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot;:
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2026-05-22T02:31:13.4672976Z           37:      resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot; {
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2026-05-22T02:31:13.4673338Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2026-05-22T02:31:13.4673823Z         timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;,
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2026-05-22T02:31:13.4674536Z         timeout: 1h0m0s)
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2026-05-22T02:31:13.4675072Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2026-05-22T02:31:13.4675776Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2026-05-22T02:31:13.4676256Z --- FAIL: TestAccSearchDeploymentAPI_basic (5399.27s)
+</code></pre></div>
+<ul>
+<li>2026-05-23</li>
+</ul>
+<h3 id="error-2026-05-23t0135220000">Error 2026-05-23T01:35:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2026-05-23T01:35:22.3046182Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2026-05-23T01:35:22.3046855Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2026-05-23T01:35:22.3057694Z    test_step_number=1 test_name=TestAccSearchDeploymentAPI_basic test_terraform_path=/home/runner/work/_temp/665b5b51-05fb-4419-8ee4-d94514d2cedf/terraform test_working_directory=/tmp/plugintest3527968940
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2026-05-23T01:35:22.3058752Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2026-05-23T01:35:22.3059134Z         
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2026-05-23T01:35:22.3059564Z         Error: error creating project: test-acc-tf-p-1633789213342029187
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2026-05-23T01:35:22.3059935Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2026-05-23T01:35:22.3060246Z           with mongodbatlas_project.test,
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2026-05-23T01:35:22.3060868Z           on terraform_plugin_test.tf line 13, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2026-05-23T01:35:22.3061453Z           13:  resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2026-05-23T01:35:22.3061765Z         
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2026-05-23T01:35:22.3062243Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2026-05-23T01:35:22.3063038Z         Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error.
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2026-05-23T01:35:22.3063651Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2026-05-23T01:35:22.3064071Z --- FAIL: TestAccSearchDeploymentAPI_basic (69.90s)
+</code></pre></div>
+<ul>
+<li>2026-05-24: MISSING</li>
+<li>2026-05-25 PASS an hour</li>
+<li>2026-05-26 PASS 52 minutes</li>
+<li>2026-05-27</li>
+</ul>
+<h3 id="error-2026-05-27t0248380000">Error 2026-05-27T02:48:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2026-05-27T02:48:38.3497953Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2026-05-27T02:48:38.3499215Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2026-05-27T02:48:38.3501780Z   diagnostic_detail=
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2026-05-27T02:48:38.3506401Z    diagnostic_severity=ERROR diagnostic_summary=&quot;Error waiting for changes in Create&quot; tf_req_id=1612eb32-9a10-bae6-5f04-aa71527fa46c tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2026-05-27T02:48:38.3519222Z   
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2026-05-27T02:48:38.3519929Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2026-05-27T02:48:38.3520549Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2026-05-27T02:48:38.3521087Z         Error: Error waiting for changes in Create
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2026-05-27T02:48:38.3521595Z         
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2026-05-27T02:48:38.3522194Z           with mongodbatlas_search_deployment_api.test,
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2026-05-27T02:48:38.3523391Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot;:
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2026-05-27T02:48:38.3524530Z           37:      resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot; {
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2026-05-27T02:48:38.3525085Z         
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2026-05-27T02:48:38.3526032Z         timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;,
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2026-05-27T02:48:38.3526740Z         timeout: 1h0m0s)
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2026-05-27T02:48:38.3527606Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2026-05-27T02:48:38.3528727Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2026-05-27T02:48:38.3529528Z --- FAIL: TestAccSearchDeploymentAPI_basic (6297.89s)
+</code></pre></div>
+<ul>
+<li>2026-05-28 PASS an hour</li>
+<li>2026-05-29 PASS an hour</li>
+<li>2026-05-30 PASS 46 minutes</li>
+<li>2026-05-31: MISSING</li>
+<li>2026-06-01 PASS an hour</li>
+<li>2026-06-02</li>
+</ul>
+<h3 id="error-2026-06-02t0114070000">Error 2026-06-02T01:14:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2026-06-02T01:14:07.1515888Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2026-06-02T01:14:07.1516594Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2026-06-02T01:14:07.1527678Z    test_name=TestAccSearchDeploymentAPI_basic test_terraform_path=/home/runner/work/_temp/6507ee4e-dc7a-4bbe-b101-3e81409e6c03/terraform test_working_directory=/tmp/plugintest2582582255 test_step_number=1
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2026-06-02T01:14:07.1528762Z     resource_test.go:26: Step 1/3 error: Error running apply: exit status 1
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2026-06-02T01:14:07.1529176Z         
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2026-06-02T01:14:07.1529628Z         Error: error creating project: test-acc-tf-p-7291672636251490253
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2026-06-02T01:14:07.1530021Z         
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2026-06-02T01:14:07.1530360Z           with mongodbatlas_project.test,
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2026-06-02T01:14:07.1531003Z           on terraform_plugin_test.tf line 13, in resource &quot;mongodbatlas_project&quot; &quot;test&quot;:
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2026-06-02T01:14:07.1531816Z           13:  resource &quot;mongodbatlas_project&quot; &quot;test&quot; {
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2026-06-02T01:14:07.1532172Z         
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2026-06-02T01:14:07.1532674Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2026-06-02T01:14:07.1533364Z         Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error.
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2026-06-02T01:14:07.1533992Z         Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2026-06-02T01:14:07.1534441Z --- FAIL: TestAccSearchDeploymentAPI_basic (74.83s)
+</code></pre></div>
+<ul>
+<li>2026-06-03</li>
+</ul>
+<h3 id="error-2026-06-03t0244390000">Error 2026-06-03T02:44:39+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2026-06-03T02:44:39.9066359Z === RUN   TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2026-06-03T02:44:39.9068385Z === CONT  TestAccSearchDeploymentAPI_basic
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2026-06-03T02:44:39.9083462Z    test_name=TestAccSearchDeploymentAPI_basic test_terraform_path=/home/runner/work/_temp/8fd49688-0f97-4721-ae98-7e659cd35e2f/terraform test_working_directory=/tmp/plugintest2148818013 test_step_number=2
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2026-06-03T02:44:39.9084655Z     resource_test.go:26: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2026-06-03T02:44:39.9085100Z         
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>2026-06-03T02:44:39.9085471Z         Error: Error waiting for changes in Update
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>2026-06-03T02:44:39.9085821Z         
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2026-06-03T02:44:39.9086234Z           with mongodbatlas_search_deployment_api.test,
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>2026-06-03T02:44:39.9087017Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot;:
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>2026-06-03T02:44:39.9087771Z           37:      resource &quot;mongodbatlas_search_deployment_api&quot; &quot;test&quot; {
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>2026-06-03T02:44:39.9088153Z         
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>2026-06-03T02:44:39.9088659Z         timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;UPDATING&#39;,
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>2026-06-03T02:44:39.9089359Z         timeout: 30m0s)
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>2026-06-03T02:44:39.9097696Z    test_step_number=2
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>2026-06-03T02:44:39.9098270Z     panic.go:694: Error running post-test destroy, there may be dangling resources: exit status 1
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>2026-06-03T02:44:39.9098773Z         
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>2026-06-03T02:44:39.9099495Z         Error: Error waiting for changes in Delete
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>2026-06-03T02:44:39.9100094Z         
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>2026-06-03T02:44:39.9100637Z         timeout while waiting for state to become &#39;DELETED&#39; (last state: &#39;UPDATING&#39;,
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>2026-06-03T02:44:39.9101290Z         timeout: 10m0s)
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>2026-06-03T02:44:39.9101634Z --- FAIL: TestAccSearchDeploymentAPI_basic (5344.49s)
+</code></pre></div>
+<ul>
+<li>2026-06-04 PASS an hour</li>
+<li>2026-06-05 PASS an hour</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-05-06: MISSING</li>
+<li>2026-05-07: MISSING</li>
+<li>2026-05-08: MISSING</li>
+<li>2026-05-09: MISSING</li>
+<li>2026-05-10 PASS 54 minutes</li>
+<li>2026-05-11: MISSING</li>
+<li>2026-05-12: MISSING</li>
+<li>2026-05-13: MISSING</li>
+<li>2026-05-14: MISSING</li>
+<li>2026-05-15: MISSING</li>
+<li>2026-05-16: MISSING</li>
+<li>2026-05-17 PASS 54 minutes</li>
+<li>2026-05-18: MISSING</li>
+<li>2026-05-19: MISSING</li>
+<li>2026-05-20: MISSING</li>
+<li>2026-05-21: MISSING</li>
+<li>2026-05-22: MISSING</li>
+<li>2026-05-23: MISSING</li>
+<li>2026-05-24 PASS 53 minutes</li>
+<li>2026-05-25: MISSING</li>
+<li>2026-05-26: MISSING</li>
+<li>2026-05-27: MISSING</li>
+<li>2026-05-28: MISSING</li>
+<li>2026-05-29: MISSING</li>
+<li>2026-05-30: MISSING</li>
+<li>2026-05-31 PASS 51 minutes</li>
+<li>2026-06-01: MISSING</li>
+<li>2026-06-02: MISSING</li>
+<li>2026-06-03: MISSING</li>
+<li>2026-06-04: MISSING</li>
+<li>2026-06-05: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,630 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>backup/onlinearchive/TestAccBackupRSOnlineArchiveBasic Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#backuponlinearchivetestaccbackuprsonlinearchivebasic-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              backup/onlinearchive/TestAccBackupRSOnlineArchiveBasic Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="backuponlinearchivetestaccbackuprsonlinearchivebasic-test-details">backup/onlinearchive/TestAccBackupRSOnlineArchiveBasic Test Details</h1>
+<h1 id="found-30-testruns-in-dev-qa-from-2026-05-07-to-2026-06-05-from-master-branch-1-unique-tests-passx-23-failx-7">Found 30 TestRuns in dev, qa from 2026-05-07 to 2026-06-05 from master branch: 1 unique tests, PASS(x 23) FAIL(x 7)</h1>
+<p>Success rate: 76.67%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-05-09t0125500000">2026-05-09 01:25</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>81.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-18t0219470000">2026-05-18 02:19</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>2943.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-19t0123590000">2026-05-19 01:23</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>76.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-28t0118420000">2026-05-28 01:18</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>0.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-05-30t0127260000">2026-05-30 01:27</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>92.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-06-02t0130170000">2026-06-02 01:30</a></td>
+<td>ONLINE_ARCHIVE_CONCURRENT_MODIFICATIONS /api/atlas/v2/groups/6a1e2d8233704dfc263ea548/clusters/test-acc-tf-c-1464974862588840043/onlineArchives</td>
+<td>dev</td>
+<td></td>
+<td>1191.04s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-05-06: MISSING</li>
+<li>2026-05-07 PASS an hour</li>
+<li>2026-05-08 PASS 43 minutes</li>
+<li>2026-05-09</li>
+</ul>
+<h3 id="error-2026-05-09t0125500000">Error 2026-05-09T01:25:50+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-05-09T01:25:50.1246686Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-05-09T01:25:50.1247276Z     resource_test.go:123: Creating execution project (1): test-acc-tf-p-3399989249331598756
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-05-09T01:25:50.1247779Z     resource_test.go:123: 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-05-09T01:25:50.1248723Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-05-09T01:25:50.1250588Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-05-09T01:25:50.1252460Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-05-09T01:25:50.1254485Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cluster.go:78
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-05-09T01:25:50.1256413Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/onlinearchive/resource_test.go:123
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-05-09T01:25:50.1257659Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-05-09T01:25:50.1258194Z            Error:          Received unexpected error:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-05-09T01:25:50.1260304Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-05-09T01:25:50.1261395Z            Test:           TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-05-09T01:25:50.1263215Z            Messages:       Project creation failed: test-acc-tf-p-3399989249331598756, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-05-09T01:25:50.1264838Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (81.30s)
+</code></pre></div>
+<ul>
+<li>2026-05-10: MISSING</li>
+<li>2026-05-11 PASS 36 minutes</li>
+<li>2026-05-12 PASS 25 minutes</li>
+<li>2026-05-13 PASS 31 minutes</li>
+<li>2026-05-14 PASS 58 minutes</li>
+<li>2026-05-15 PASS 27 minutes</li>
+<li>2026-05-16 PASS 16 minutes</li>
+<li>2026-05-17: MISSING</li>
+<li>2026-05-18</li>
+</ul>
+<h3 id="error-2026-05-18t0219470000">Error 2026-05-18T02:19:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-05-18T02:19:47.2134897Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-05-18T02:19:47.2139354Z === CONT  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-05-18T02:19:47.2144272Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-05-18T02:19:47.2145148Z     pre_check.go:46: Time before creating cluster: 2026-05-18T01:25:48.108584989Z, ProjectID: 6a0a6a8acc0f7af42b3d9131, Cluster name: test-acc-tf-c-5677155518728549436
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-05-18T02:19:47.2162780Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-05-18T02:19:47.2163554Z     resource_test.go:131: Step 1/3 error: Check failed: unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-05-18T02:19:47.2172506Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (2943.11s)
+</code></pre></div>
+<ul>
+<li>2026-05-19</li>
+</ul>
+<h3 id="error-2026-05-19t0123590000">Error 2026-05-19T01:23:59+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-05-19T01:23:59.3292122Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-05-19T01:23:59.3292721Z     resource_test.go:123: Creating execution project (1): test-acc-tf-p-1891122135354449359
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-05-19T01:23:59.3293225Z     resource_test.go:123: 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-05-19T01:23:59.3294144Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-05-19T01:23:59.3295972Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-05-19T01:23:59.3297828Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-05-19T01:23:59.3299836Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cluster.go:78
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-05-19T01:23:59.3301751Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/onlinearchive/resource_test.go:123
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-05-19T01:23:59.3303242Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-05-19T01:23:59.3303850Z            Error:          Received unexpected error:
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-05-19T01:23:59.3306010Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-05-19T01:23:59.3307231Z            Test:           TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-05-19T01:23:59.3309498Z            Messages:       Project creation failed: test-acc-tf-p-1891122135354449359, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-05-19T01:23:59.3310861Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (76.39s)
+</code></pre></div>
+<ul>
+<li>2026-05-20 PASS 37 minutes</li>
+<li>2026-05-21 PASS 26 minutes</li>
+<li>2026-05-22 PASS an hour</li>
+<li>2026-05-23 PASS 24 minutes</li>
+<li>2026-05-24: MISSING</li>
+<li>2026-05-25 PASS 32 minutes</li>
+<li>2026-05-26 PASS 23 minutes</li>
+<li>2026-05-27 PASS an hour</li>
+<li>2026-05-28</li>
+</ul>
+<h3 id="error-2026-05-28t0118420000">Error 2026-05-28T01:18:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-05-28T01:18:42.4278679Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-05-28T01:18:42.4279423Z     resource_test.go:123: Creating execution project (1): test-acc-tf-p-1389073700299482217
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-05-28T01:18:42.4279954Z     resource_test.go:123: 
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-05-28T01:18:42.4281167Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-05-28T01:18:42.4283081Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-05-28T01:18:42.4284949Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-05-28T01:18:42.4286726Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cluster.go:78
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-05-28T01:18:42.4288642Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/onlinearchive/resource_test.go:123
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-05-28T01:18:42.4289897Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-05-28T01:18:42.4290574Z            Error:          Received unexpected error:
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-05-28T01:18:42.4293755Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-05-28T01:18:42.4295199Z            Test:           TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-05-28T01:18:42.4297629Z            Messages:       Project creation failed: test-acc-tf-p-1389073700299482217, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-05-28T01:18:42.4299214Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (0.61s)
+</code></pre></div>
+<ul>
+<li>2026-05-29 PASS 42 minutes</li>
+<li>2026-05-30</li>
+</ul>
+<h3 id="error-2026-05-30t0127260000">Error 2026-05-30T01:27:26+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-05-30T01:27:26.4160678Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-05-30T01:27:26.4161741Z     resource_test.go:123: Creating execution project (1): test-acc-tf-p-5856819799653550770
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-05-30T01:27:26.4162689Z     resource_test.go:123: 
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-05-30T01:27:26.4164573Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-05-30T01:27:26.4167972Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-05-30T01:27:26.4171338Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-05-30T01:27:26.4174733Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cluster.go:78
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-05-30T01:27:26.4178206Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/onlinearchive/resource_test.go:123
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-05-30T01:27:26.4180446Z                                        /opt/hostedtoolcache/go/1.26.1/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-05-30T01:27:26.4181419Z            Error:          Received unexpected error:
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-05-30T01:27:26.4186469Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-05-30T01:27:26.4188350Z            Test:           TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-05-30T01:27:26.4191595Z            Messages:       Project creation failed: test-acc-tf-p-5856819799653550770, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-05-30T01:27:26.4193895Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (92.40s)
+</code></pre></div>
+<ul>
+<li>2026-05-31: MISSING</li>
+<li>2026-06-01 PASS 54 minutes</li>
+<li>2026-06-02</li>
+</ul>
+<h3 id="error-2026-06-02t0130170000">Error 2026-06-02T01:30:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-06-02T01:30:17.9612020Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-06-02T01:30:17.9612637Z     resource_test.go:123: Creating execution project (1): test-acc-tf-p-8627084349003442672
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-06-02T01:30:17.9616581Z === CONT  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-06-02T01:30:17.9619929Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-06-02T01:30:17.9620841Z     pre_check.go:46: Time before creating cluster: 2026-06-02T01:11:29.922086594Z, ProjectID: 6a1e2d8233704dfc263ea548, Cluster name: test-acc-tf-c-1464974862588840043
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-06-02T01:30:17.9674737Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-06-02T01:30:17.9675422Z     resource_test.go:131: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-06-02T01:30:17.9675841Z         
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-06-02T01:30:17.9678179Z         Error: error creating MongoDB Atlas Online Archive:: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a1e2d8233704dfc263ea548/clusters/test-acc-tf-c-1464974862588840043/onlineArchives POST: HTTP 400 Bad Request (Error code: &quot;ONLINE_ARCHIVE_CONCURRENT_MODIFICATIONS&quot;) Detail: Too many concurrent operations were made to modify Online Archives. Please try again. Reason: Bad Request. Params: [], BadRequestDetail: 
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-06-02T01:30:17.9680046Z         
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-06-02T01:30:17.9680451Z           with mongodbatlas_online_archive.users_archive,
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-06-02T01:30:17.9681235Z           on terraform_plugin_test.tf line 42, in resource &quot;mongodbatlas_online_archive&quot; &quot;users_archive&quot;:
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-06-02T01:30:17.9681970Z           42:  resource &quot;mongodbatlas_online_archive&quot; &quot;users_archive&quot; {
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-06-02T01:30:17.9682511Z         
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-06-02T01:30:17.9706345Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (1191.40s)
+</code></pre></div>
+<ul>
+<li>2026-06-03 PASS 41 minutes</li>
+<li>2026-06-04 PASS 38 minutes</li>
+<li>2026-06-05 PASS 32 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-05-31t0152000000">2026-05-31 01:52</a></td>
+<td>ONLINE_ARCHIVE_CONCURRENT_MODIFICATIONS /api/atlas/v2/groups/6a1b8e694b92bebf8ebc46dc/clusters/test-acc-tf-c-4966607549152191538/onlineArchives</td>
+<td>qa</td>
+<td>1160.05s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-05-06: MISSING</li>
+<li>2026-05-07: MISSING</li>
+<li>2026-05-08: MISSING</li>
+<li>2026-05-09: MISSING</li>
+<li>2026-05-10 PASS 21 minutes</li>
+<li>2026-05-11: MISSING</li>
+<li>2026-05-12: MISSING</li>
+<li>2026-05-13: MISSING</li>
+<li>2026-05-14: MISSING</li>
+<li>2026-05-15: MISSING</li>
+<li>2026-05-16: MISSING</li>
+<li>2026-05-17 PASS 24 minutes</li>
+<li>2026-05-18: MISSING</li>
+<li>2026-05-19: MISSING</li>
+<li>2026-05-20: MISSING</li>
+<li>2026-05-21: MISSING</li>
+<li>2026-05-22: MISSING</li>
+<li>2026-05-23: MISSING</li>
+<li>2026-05-24 PASS 22 minutes</li>
+<li>2026-05-25: MISSING</li>
+<li>2026-05-26: MISSING</li>
+<li>2026-05-27: MISSING</li>
+<li>2026-05-28: MISSING</li>
+<li>2026-05-29: MISSING</li>
+<li>2026-05-30: MISSING</li>
+<li>2026-05-31</li>
+</ul>
+<h3 id="error-2026-05-31t0152000000">Error 2026-05-31T01:52:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-05-31T01:52:00.5151596Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-05-31T01:52:00.5155786Z === CONT  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-05-31T01:52:00.5157677Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-05-31T01:52:00.5158522Z     pre_check.go:46: Time before creating cluster: 2026-05-31T01:27:12.90984303Z, ProjectID: 6a1b8e694b92bebf8ebc46dc, Cluster name: test-acc-tf-c-4966607549152191538
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-05-31T01:52:00.5248447Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-05-31T01:52:00.5248948Z     resource_test.go:131: Step 2/3 error: Error running apply: exit status 1
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-05-31T01:52:00.5249331Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-05-31T01:52:00.5251349Z         Error: error creating MongoDB Atlas Online Archive:: https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a1b8e694b92bebf8ebc46dc/clusters/test-acc-tf-c-4966607549152191538/onlineArchives POST: HTTP 400 Bad Request (Error code: &quot;ONLINE_ARCHIVE_CONCURRENT_MODIFICATIONS&quot;) Detail: Too many concurrent operations were made to modify Online Archives. Please try again. Reason: Bad Request. Params: [], BadRequestDetail: 
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-05-31T01:52:00.5252784Z         
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-05-31T01:52:00.5253157Z           with mongodbatlas_online_archive.users_archive,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-05-31T01:52:00.5253853Z           on terraform_plugin_test.tf line 42, in resource &quot;mongodbatlas_online_archive&quot; &quot;users_archive&quot;:
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-05-31T01:52:00.5254528Z           42:  resource &quot;mongodbatlas_online_archive&quot; &quot;users_archive&quot; {
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-05-31T01:52:00.5254886Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-05-31T01:52:00.5262597Z    test_name=TestMigBackupRSOnlineArchiveWithNoChangeBetweenVersions
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-05-31T01:52:00.5270633Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (1160.50s)
+</code></pre></div>
+<ul>
+<li>2026-06-01: MISSING</li>
+<li>2026-06-02: MISSING</li>
+<li>2026-06-03: MISSING</li>
+<li>2026-06-04: MISSING</li>
+<li>2026-06-05: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

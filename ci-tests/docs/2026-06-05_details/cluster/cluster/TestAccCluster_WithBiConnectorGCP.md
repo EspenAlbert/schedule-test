@@ -1,0 +1,73 @@
+# cluster/cluster/TestAccCluster_WithBiConnectorGCP Test Details
+# Found 31 TestRuns in dev, qa from 2026-05-07 to 2026-06-05 from master branch: 1 unique tests, PASS(x 31)
+Success rate: 100.00%
+
+## DEV Environment
+### Timeline
+- 2026-05-06: MISSING
+- 2026-05-07
+  - PASS 49 minutes
+  - PASS 53 minutes
+- 2026-05-08 PASS 23 minutes
+- 2026-05-09 PASS 26 minutes
+- 2026-05-10: MISSING
+- 2026-05-11 PASS 23 minutes
+- 2026-05-12 PASS 21 minutes
+- 2026-05-13 PASS 20 minutes
+- 2026-05-14 PASS 47 minutes
+- 2026-05-15 PASS 34 minutes
+- 2026-05-16 PASS 24 minutes
+- 2026-05-17: MISSING
+- 2026-05-18 PASS 48 minutes
+- 2026-05-19 PASS 26 minutes
+- 2026-05-20 PASS 31 minutes
+- 2026-05-21 PASS 26 minutes
+- 2026-05-22 PASS an hour
+- 2026-05-23 PASS 37 minutes
+- 2026-05-24: MISSING
+- 2026-05-25 PASS 28 minutes
+- 2026-05-26 PASS 28 minutes
+- 2026-05-27 PASS an hour
+- 2026-05-28 PASS 34 minutes
+- 2026-05-29 PASS 39 minutes
+- 2026-05-30 PASS 24 minutes
+- 2026-05-31: MISSING
+- 2026-06-01 PASS 33 minutes
+- 2026-06-02 PASS 25 minutes
+- 2026-06-03 PASS 46 minutes
+- 2026-06-04 PASS 56 minutes
+- 2026-06-05 PASS 37 minutes
+
+## QA Environment
+### Timeline
+- 2026-05-06: MISSING
+- 2026-05-07: MISSING
+- 2026-05-08: MISSING
+- 2026-05-09: MISSING
+- 2026-05-10 PASS 27 minutes
+- 2026-05-11: MISSING
+- 2026-05-12: MISSING
+- 2026-05-13: MISSING
+- 2026-05-14: MISSING
+- 2026-05-15: MISSING
+- 2026-05-16: MISSING
+- 2026-05-17 PASS 28 minutes
+- 2026-05-18: MISSING
+- 2026-05-19: MISSING
+- 2026-05-20: MISSING
+- 2026-05-21: MISSING
+- 2026-05-22: MISSING
+- 2026-05-23: MISSING
+- 2026-05-24 PASS 29 minutes
+- 2026-05-25: MISSING
+- 2026-05-26: MISSING
+- 2026-05-27: MISSING
+- 2026-05-28: MISSING
+- 2026-05-29: MISSING
+- 2026-05-30: MISSING
+- 2026-05-31 PASS 23 minutes
+- 2026-06-01: MISSING
+- 2026-06-02: MISSING
+- 2026-06-03: MISSING
+- 2026-06-04: MISSING
+- 2026-06-05: MISSING
