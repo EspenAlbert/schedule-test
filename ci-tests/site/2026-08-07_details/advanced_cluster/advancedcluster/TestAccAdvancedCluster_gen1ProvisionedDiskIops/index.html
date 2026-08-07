@@ -1,0 +1,767 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccAdvancedCluster_gen1ProvisionedDiskIops Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccadvancedcluster_gen1provisioneddiskiops-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccAdvancedCluster_gen1ProvisionedDiskIops Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccadvancedcluster_gen1provisioneddiskiops-test-details">advanced_cluster/advancedcluster/TestAccAdvancedCluster_gen1ProvisionedDiskIops Test Details</h1>
+<h1 id="found-35-testruns-in-dev-qa-from-2026-07-09-to-2026-08-07-from-master-branch-1-unique-tests-passx-24-failx-11">Found 35 TestRuns in dev, qa from 2026-07-09 to 2026-08-07 from master branch: 1 unique tests, PASS(x 24) FAIL(x 11)</h1>
+<p>Success rate: 68.57%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-07-09t0058230000">2026-07-09 00:58</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>0.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-11t0056430000">2026-07-11 00:56</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-21t0053230000">2026-07-21 00:53</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>0.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-23t0049490000">2026-07-23 00:49</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>0.03s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-07-08: MISSING</li>
+<li>2026-07-09</li>
+</ul>
+<h3 id="error-2026-07-09t0058230000">Error 2026-07-09T00:58:23+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-07-09T00:58:23.8343567Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-07-09T00:58:24.4603929Z     shared_resource.go:160: 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-07-09T00:58:24.4606505Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-07-09T00:58:24.4610762Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:160
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-07-09T00:58:24.4615527Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:256
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-07-09T00:58:24.4619362Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:159
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-07-09T00:58:24.4622882Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:170
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-07-09T00:58:24.4627379Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/advancedcluster/resource_test.go:3356
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-07-09T00:58:24.4628963Z            Error:          Received unexpected error:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-07-09T00:58:24.4634795Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-07-09T00:58:24.4637783Z            Test:           TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-07-09T00:58:24.4642315Z            Messages:       Project creation failed: test-acc-tf-p-2151288089206436401, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-07-09T00:58:24.4645356Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (0.63s)
+</code></pre></div>
+<ul>
+<li>2026-07-10 PASS 35 minutes</li>
+<li>2026-07-11</li>
+</ul>
+<h3 id="error-2026-07-11t0056430000">Error 2026-07-11T00:56:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-07-11T00:56:43.9792431Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-07-11T00:56:44.3283042Z     shared_resource.go:160: 
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-07-11T00:56:44.3284943Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-07-11T00:56:44.3288075Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:160
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-07-11T00:56:44.3291536Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:256
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-07-11T00:56:44.3295193Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:159
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-07-11T00:56:44.3298553Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:170
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-07-11T00:56:44.3302123Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/advancedcluster/resource_test.go:3356
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-07-11T00:56:44.3303778Z            Error:          Received unexpected error:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-07-11T00:56:44.3308849Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-07-11T00:56:44.3311356Z            Test:           TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-07-11T00:56:44.3315802Z            Messages:       Project creation failed: test-acc-tf-p-3974981852986946140, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-07-11T00:56:44.3318602Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (0.35s)
+</code></pre></div>
+<ul>
+<li>2026-07-12: MISSING</li>
+<li>2026-07-13 PASS 22 minutes</li>
+<li>2026-07-14 PASS 18 minutes</li>
+<li>2026-07-15 PASS 26 minutes</li>
+<li>2026-07-16 PASS an hour</li>
+<li>2026-07-17 PASS 16 minutes</li>
+<li>2026-07-18 PASS 33 minutes</li>
+<li>2026-07-19: MISSING</li>
+<li>2026-07-20: MISSING</li>
+<li>2026-07-21</li>
+</ul>
+<h3 id="error-2026-07-21t0053230000">Error 2026-07-21T00:53:23+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-07-21T00:53:23.0899551Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-07-21T00:53:23.4268887Z     shared_resource.go:160: 
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-07-21T00:53:23.4270750Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-07-21T00:53:23.4273806Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:160
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-07-21T00:53:23.4277326Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:256
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-07-21T00:53:23.4280644Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:159
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-07-21T00:53:23.4284026Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:170
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-07-21T00:53:23.4287441Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/advancedcluster/resource_test.go:3356
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-07-21T00:53:23.4289084Z            Error:          Received unexpected error:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-07-21T00:53:23.4294790Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-07-21T00:53:23.4297941Z            Test:           TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-07-21T00:53:23.4302826Z            Messages:       Project creation failed: test-acc-tf-p-4455133211593977458, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-07-21T00:53:23.4305500Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (0.34s)
+</code></pre></div>
+<ul>
+<li>2026-07-22 PASS 38 minutes</li>
+<li>2026-07-23</li>
+</ul>
+<h3 id="error-2026-07-23t0049490000">Error 2026-07-23T00:49:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-07-23T00:49:49.3897551Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-07-23T00:49:49.7117157Z     shared_resource.go:160: 
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-07-23T00:49:49.7119524Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-07-23T00:49:49.7123230Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:160
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-07-23T00:49:49.7125753Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:256
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-07-23T00:49:49.7129156Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:159
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-07-23T00:49:49.7132792Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:170
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-07-23T00:49:49.7136665Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/advancedcluster/resource_test.go:3356
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-07-23T00:49:49.7138121Z            Error:          Received unexpected error:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-07-23T00:49:49.7196755Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-07-23T00:49:49.7199558Z            Test:           TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-07-23T00:49:49.7204345Z            Messages:       Project creation failed: test-acc-tf-p-854613958914387120, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c], BadRequestDetail: 
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-07-23T00:49:49.7207282Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (0.32s)
+</code></pre></div>
+<ul>
+<li>2026-07-24 PASS 29 minutes</li>
+<li>2026-07-25 PASS 22 minutes</li>
+<li>2026-07-26: MISSING</li>
+<li>2026-07-27 PASS an hour</li>
+<li>2026-07-28 PASS an hour</li>
+<li>2026-07-29 PASS 20 minutes</li>
+<li>2026-07-30 PASS an hour</li>
+<li>2026-07-31</li>
+<li>PASS 15 minutes</li>
+<li>PASS 13 minutes</li>
+<li>2026-08-01 PASS 16 minutes</li>
+<li>2026-08-02: MISSING</li>
+<li>2026-08-03 PASS 14 minutes</li>
+<li>2026-08-04 PASS 18 minutes</li>
+<li>2026-08-05 PASS 15 minutes</li>
+<li>2026-08-06 PASS 14 minutes</li>
+<li>2026-08-07 PASS 17 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-07-12t0050520000">2026-07-12 00:50</a></td>
+<td>HOURLY_BILLING_LIMIT_EXCEEDED /api/atlas/v2/groups/6a52e47054924de0baf51465/clusters/test-acc-tf-c-5132827914665815558</td>
+<td>qa</td>
+<td>1071.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-15t0726090000">2026-07-15 07:26</a></td>
+<td>HOURLY_BILLING_LIMIT_EXCEEDED /api/atlas/v2/groups/6a57359493daee1cb0a00fa9/clusters/test-acc-tf-c-6676157960194536890</td>
+<td>qa</td>
+<td>1186.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-15t0934190000">2026-07-15 09:34</a></td>
+<td>HOURLY_BILLING_LIMIT_EXCEEDED /api/atlas/v2/groups/6a5753d28f62f9b41291d1a0/clusters/test-acc-tf-c-7447162446856025845</td>
+<td>qa</td>
+<td>823.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-19t0048080000">2026-07-19 00:48</a></td>
+<td>HOURLY_BILLING_LIMIT_EXCEEDED /api/atlas/v2/groups/6a5c1e60775af650dc088e0f/clusters/test-acc-tf-c-3135746052083538590</td>
+<td>qa</td>
+<td>1180.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-26t0051360000">2026-07-26 00:51</a></td>
+<td>HOURLY_BILLING_LIMIT_EXCEEDED /api/atlas/v2/groups/6a655990c80b9566cad18225/clusters/test-acc-tf-c-2231798380260951201</td>
+<td>qa</td>
+<td>1044.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-29t1319140000">2026-07-29 13:19</a></td>
+<td>HOURLY_BILLING_LIMIT_EXCEEDED /api/atlas/v2/groups/6a69fd7fd51fea57f48e31f8/clusters/test-acc-tf-c-7025353107330652628</td>
+<td>qa</td>
+<td>931.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-29t1507480000">2026-07-29 15:07</a></td>
+<td>HOURLY_BILLING_LIMIT_EXCEEDED /api/atlas/v2/groups/6a6a16c31b62c83bc2d3de1c/clusters/test-acc-tf-c-6046642614491594462</td>
+<td>qa</td>
+<td>960.06s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-07-08: MISSING</li>
+<li>2026-07-09: MISSING</li>
+<li>2026-07-10: MISSING</li>
+<li>2026-07-11: MISSING</li>
+<li>2026-07-12</li>
+</ul>
+<h3 id="error-2026-07-12t0050520000">Error 2026-07-12T00:50:52+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-07-12T00:50:52.8779374Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-07-12T00:50:52.9839867Z === CONT  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-07-12T00:51:37.7778240Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-07-12T00:51:37.7779921Z     pre_check.go:46: Time before creating cluster: 2026-07-12T00:51:37.777526866Z, ProjectID: 6a52e47054924de0baf51465, Cluster name: test-acc-tf-c-5132827914665815558
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-07-12T01:02:10.8156711Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-07-12T01:02:10.8157613Z     resource_test.go:3359: Step 3/6, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-07-12T01:02:10.8158185Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-07-12T01:02:10.8158568Z         Error: Error in update
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-07-12T01:02:10.8158851Z         
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-07-12T01:02:10.8159299Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-07-12T01:02:10.8160089Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-07-12T01:02:10.8160816Z           12: resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-07-12T01:02:10.8161226Z         
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-07-12T01:02:10.8161668Z         cluster name: test-acc-tf-c-5132827914665815558, API error details:
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-07-12T01:02:10.8162556Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a52e47054924de0baf51465/clusters/test-acc-tf-c-5132827914665815558
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-07-12T01:02:10.8163366Z         PATCH: HTTP 403 Forbidden (Error code: &quot;HOURLY_BILLING_LIMIT_EXCEEDED&quot;)
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-07-12T01:02:10.8163997Z         Detail: The hourly billing limit has been exceeded. Reason: Forbidden.
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-07-12T01:02:10.8164464Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2026-07-12T01:08:44.5443977Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (1071.77s)
+</code></pre></div>
+<ul>
+<li>2026-07-13: MISSING</li>
+<li>2026-07-14: MISSING</li>
+<li>2026-07-15</li>
+<li>FAIL 19 minutes</li>
+</ul>
+<h3 id="error-2026-07-15t0726090000">Error 2026-07-15T07:26:09+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-07-15T07:26:09.9010133Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-07-15T07:26:10.0016360Z === CONT  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-07-15T07:26:54.9073815Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-07-15T07:26:54.9076539Z     pre_check.go:46: Time before creating cluster: 2026-07-15T07:26:54.907090672Z, ProjectID: 6a57359493daee1cb0a00fa9, Cluster name: test-acc-tf-c-6676157960194536890
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-07-15T07:37:52.6527449Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-07-15T07:37:52.6528276Z     resource_test.go:3359: Step 3/6, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-07-15T07:37:52.6528814Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-07-15T07:37:52.6529090Z         Error: Error in update
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-07-15T07:37:52.6529549Z         
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-07-15T07:37:52.6529968Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-07-15T07:37:52.6530689Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-07-15T07:37:52.6531350Z           12: resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-07-15T07:37:52.6531695Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-07-15T07:37:52.6532143Z         cluster name: test-acc-tf-c-6676157960194536890, API error details:
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-07-15T07:37:52.6533049Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a57359493daee1cb0a00fa9/clusters/test-acc-tf-c-6676157960194536890
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-07-15T07:37:52.6533887Z         PATCH: HTTP 403 Forbidden (Error code: &quot;HOURLY_BILLING_LIMIT_EXCEEDED&quot;)
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-07-15T07:37:52.6534777Z         Detail: The hourly billing limit has been exceeded. Reason: Forbidden.
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2026-07-15T07:37:52.6535271Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2026-07-15T07:45:56.2886200Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (1186.38s)
+</code></pre></div>
+<ul>
+<li>FAIL 13 minutes</li>
+</ul>
+<h3 id="error-2026-07-15t0934190000">Error 2026-07-15T09:34:19+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-07-15T09:34:19.6265400Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-07-15T09:34:19.8301064Z === CONT  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-07-15T09:34:34.6038135Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-07-15T09:34:34.6041629Z     pre_check.go:46: Time before creating cluster: 2026-07-15T09:34:34.603396493Z, ProjectID: 6a5753d28f62f9b41291d1a0, Cluster name: test-acc-tf-c-7447162446856025845
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-07-15T09:44:30.9837041Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-07-15T09:44:30.9838049Z     resource_test.go:3359: Step 3/6, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-07-15T09:44:30.9838611Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-07-15T09:44:30.9839020Z         Error: Error in update
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-07-15T09:44:30.9839290Z         
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-07-15T09:44:30.9840008Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-07-15T09:44:30.9840850Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-07-15T09:44:30.9841716Z           12: resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-07-15T09:44:30.9842190Z         
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-07-15T09:44:30.9842796Z         cluster name: test-acc-tf-c-7447162446856025845, API error details:
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-07-15T09:44:30.9844206Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a5753d28f62f9b41291d1a0/clusters/test-acc-tf-c-7447162446856025845
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2026-07-15T09:44:30.9845087Z         PATCH: HTTP 403 Forbidden (Error code: &quot;HOURLY_BILLING_LIMIT_EXCEEDED&quot;)
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2026-07-15T09:44:30.9845771Z         Detail: The hourly billing limit has been exceeded. Reason: Forbidden.
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2026-07-15T09:44:30.9846477Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2026-07-15T09:45:35.8706061Z    test_step_number=3 test_name=TestAccAdvancedCluster_gen2HighPerformanceDiskIops test_terraform_path=/home/runner/work/_temp/a85d4bbf-e6a8-45a0-a34c-46fa99dd2df0/terraform test_working_directory=/tmp/plugintest3510041994
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2026-07-15T09:48:03.4616043Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (823.92s)
+</code></pre></div>
+<ul>
+<li>2026-07-16: MISSING</li>
+<li>2026-07-17: MISSING</li>
+<li>2026-07-18: MISSING</li>
+<li>2026-07-19</li>
+</ul>
+<h3 id="error-2026-07-19t0048080000">Error 2026-07-19T00:48:08+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-07-19T00:48:08.4947006Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-07-19T00:48:08.4986521Z === CONT  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-07-19T00:48:18.5037265Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-07-19T00:48:18.5038342Z     pre_check.go:46: Time before creating cluster: 2026-07-19T00:48:18.503422499Z, ProjectID: 6a5c1e60775af650dc088e0f, Cluster name: test-acc-tf-c-3135746052083538590
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-07-19T01:00:15.1787088Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-07-19T01:00:15.1787998Z     resource_test.go:3359: Step 3/6, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-07-19T01:00:15.1788828Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-07-19T01:00:15.1789114Z         Error: Error in update
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-07-19T01:00:15.1789388Z         
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-07-19T01:00:15.1789896Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-07-19T01:00:15.1790670Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-07-19T01:00:15.1791347Z           12: resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-07-19T01:00:15.1791690Z         
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-07-19T01:00:15.1792144Z         cluster name: test-acc-tf-c-3135746052083538590, API error details:
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2026-07-19T01:00:15.1793059Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a5c1e60775af650dc088e0f/clusters/test-acc-tf-c-3135746052083538590
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2026-07-19T01:00:15.1793891Z         PATCH: HTTP 403 Forbidden (Error code: &quot;HOURLY_BILLING_LIMIT_EXCEEDED&quot;)
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2026-07-19T01:00:15.1794557Z         Detail: The hourly billing limit has been exceeded. Reason: Forbidden.
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2026-07-19T01:00:15.1795066Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2026-07-19T01:07:48.5809937Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (1180.08s)
+</code></pre></div>
+<ul>
+<li>2026-07-20: MISSING</li>
+<li>2026-07-21: MISSING</li>
+<li>2026-07-22: MISSING</li>
+<li>2026-07-23: MISSING</li>
+<li>2026-07-24: MISSING</li>
+<li>2026-07-25: MISSING</li>
+<li>2026-07-26</li>
+</ul>
+<h3 id="error-2026-07-26t0051360000">Error 2026-07-26T00:51:36+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-07-26T00:51:36.9287071Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-07-26T00:51:36.9301655Z === CONT  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-07-26T00:51:46.9506999Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-07-26T00:51:46.9508729Z     pre_check.go:46: Time before creating cluster: 2026-07-26T00:51:46.950423155Z, ProjectID: 6a655990c80b9566cad18225, Cluster name: test-acc-tf-c-2231798380260951201
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-07-26T01:03:57.7882528Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-07-26T01:03:57.7883869Z     resource_test.go:3359: Step 3/6, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-07-26T01:03:57.7884829Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-07-26T01:03:57.7885311Z         Error: Error in update
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-07-26T01:03:57.7885773Z         
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-07-26T01:03:57.7886383Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-07-26T01:03:57.7887668Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2026-07-26T01:03:57.7888852Z           12: resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2026-07-26T01:03:57.7889444Z         
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2026-07-26T01:03:57.7890515Z         cluster name: test-acc-tf-c-2231798380260951201, API error details:
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2026-07-26T01:03:57.7892196Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a655990c80b9566cad18225/clusters/test-acc-tf-c-2231798380260951201
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2026-07-26T01:03:57.7894434Z         PATCH: HTTP 403 Forbidden (Error code: &quot;HOURLY_BILLING_LIMIT_EXCEEDED&quot;)
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2026-07-26T01:03:57.7895648Z         Detail: The hourly billing limit has been exceeded. Reason: Forbidden.
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2026-07-26T01:03:57.7896510Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2026-07-26T01:09:01.3076001Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (1044.38s)
+</code></pre></div>
+<ul>
+<li>2026-07-27: MISSING</li>
+<li>2026-07-28: MISSING</li>
+<li>2026-07-29</li>
+<li>FAIL 15 minutes</li>
+</ul>
+<h3 id="error-2026-07-29t1319140000">Error 2026-07-29T13:19:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2026-07-29T13:19:14.7051338Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2026-07-29T13:19:15.2710985Z === CONT  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2026-07-29T13:20:24.7133240Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2026-07-29T13:20:24.7134368Z     pre_check.go:46: Time before creating cluster: 2026-07-29T13:20:24.712599266Z, ProjectID: 6a69fd7fd51fea57f48e31f8, Cluster name: test-acc-tf-c-7025353107330652628
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2026-07-29T13:30:44.3996927Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2026-07-29T13:30:44.3997679Z     resource_test.go:3359: Step 3/6, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2026-07-29T13:30:44.3998151Z         
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2026-07-29T13:30:44.3998496Z         Error: Error in update
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2026-07-29T13:30:44.3999002Z         
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2026-07-29T13:30:44.3999336Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2026-07-29T13:30:44.4000102Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2026-07-29T13:30:44.4000863Z           12: resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2026-07-29T13:30:44.4001370Z         
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2026-07-29T13:30:44.4001794Z         cluster name: test-acc-tf-c-7025353107330652628, API error details:
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2026-07-29T13:30:44.4002574Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a69fd7fd51fea57f48e31f8/clusters/test-acc-tf-c-7025353107330652628
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2026-07-29T13:30:44.4003278Z         PATCH: HTTP 403 Forbidden (Error code: &quot;HOURLY_BILLING_LIMIT_EXCEEDED&quot;)
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2026-07-29T13:30:44.4003846Z         Detail: The hourly billing limit has been exceeded. Reason: Forbidden.
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2026-07-29T13:30:44.4004282Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2026-07-29T13:34:46.1535987Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (931.45s)
+</code></pre></div>
+<ul>
+<li>FAIL 16 minutes</li>
+</ul>
+<h3 id="error-2026-07-29t1507480000">Error 2026-07-29T15:07:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2026-07-29T15:07:48.6344679Z === RUN   TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2026-07-29T15:07:48.9962460Z === CONT  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2026-07-29T15:08:43.6684040Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2026-07-29T15:08:43.6685950Z     pre_check.go:46: Time before creating cluster: 2026-07-29T15:08:43.668064381Z, ProjectID: 6a6a16c31b62c83bc2d3de1c, Cluster name: test-acc-tf-c-6046642614491594462
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2026-07-29T15:18:46.7647389Z === NAME  TestAccAdvancedCluster_gen1ProvisionedDiskIops
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2026-07-29T15:18:46.7648894Z     resource_test.go:3359: Step 3/6, expected an error with pattern, no match on: Error running apply: exit status 1
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2026-07-29T15:18:46.7649586Z         
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2026-07-29T15:18:46.7649880Z         Error: Error in update
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2026-07-29T15:18:46.7650268Z         
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2026-07-29T15:18:46.7650642Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2026-07-29T15:18:46.7651513Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2026-07-29T15:18:46.7652186Z           12: resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2026-07-29T15:18:46.7652541Z         
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2026-07-29T15:18:46.7653201Z         cluster name: test-acc-tf-c-6046642614491594462, API error details:
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2026-07-29T15:18:46.7654158Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a6a16c31b62c83bc2d3de1c/clusters/test-acc-tf-c-6046642614491594462
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2026-07-29T15:18:46.7654986Z         PATCH: HTTP 403 Forbidden (Error code: &quot;HOURLY_BILLING_LIMIT_EXCEEDED&quot;)
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2026-07-29T15:18:46.7655642Z         Detail: The hourly billing limit has been exceeded. Reason: Forbidden.
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2026-07-29T15:18:46.7656133Z         Params: [], BadRequestDetail: 
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2026-07-29T15:23:49.2133775Z --- FAIL: TestAccAdvancedCluster_gen1ProvisionedDiskIops (960.57s)
+</code></pre></div>
+<ul>
+<li>2026-07-30 PASS 14 minutes</li>
+<li>2026-07-31: MISSING</li>
+<li>2026-08-01: MISSING</li>
+<li>2026-08-02 PASS 14 minutes</li>
+<li>2026-08-03: MISSING</li>
+<li>2026-08-04: MISSING</li>
+<li>2026-08-05: MISSING</li>
+<li>2026-08-06: MISSING</li>
+<li>2026-08-07: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

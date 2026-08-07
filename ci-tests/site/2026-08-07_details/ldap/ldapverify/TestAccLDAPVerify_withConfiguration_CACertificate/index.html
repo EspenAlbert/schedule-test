@@ -1,0 +1,705 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>ldap/ldapverify/TestAccLDAPVerify_withConfiguration_CACertificate Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ldapldapverifytestaccldapverify_withconfiguration_cacertificate-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ldap/ldapverify/TestAccLDAPVerify_withConfiguration_CACertificate Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ldapldapverifytestaccldapverify_withconfiguration_cacertificate-test-details">ldap/ldapverify/TestAccLDAPVerify_withConfiguration_CACertificate Test Details</h1>
+<h1 id="found-33-testruns-in-dev-qa-from-2026-07-09-to-2026-08-07-from-master-branch-1-unique-tests-passx-22-failx-11">Found 33 TestRuns in dev, qa from 2026-07-09 to 2026-08-07 from master branch: 1 unique tests, PASS(x 22) FAIL(x 11)</h1>
+<p>Success rate: 66.67%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-07-09t0051340000">2026-07-09 00:51</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>64.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-10t0124090000">2026-07-10 01:24</a></td>
+<td>LDAP_HOSTNAME_NOT_ALLOWED /api/atlas/v2/groups/6a5041a1e2b992f4d13ada3e/userSecurity/ldap/verify</td>
+<td>dev</td>
+<td></td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-11t0059160000">2026-07-11 00:59</a></td>
+<td>LDAP_HOSTNAME_NOT_ALLOWED /api/atlas/v2/groups/6a51919f8329995c4c765b35/userSecurity/ldap/verify</td>
+<td>dev</td>
+<td></td>
+<td>0.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-13t0103270000">2026-07-13 01:03</a></td>
+<td>LDAP_HOSTNAME_NOT_ALLOWED /api/atlas/v2/groups/6a54356da3b75f3f044928b7/userSecurity/ldap/verify</td>
+<td>dev</td>
+<td></td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-14t0057060000">2026-07-14 00:57</a></td>
+<td>LDAP_HOSTNAME_NOT_ALLOWED /api/atlas/v2/groups/6a5585a***f430f45f9ceeca/userSecurity/ldap/verify</td>
+<td>dev</td>
+<td></td>
+<td>0.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-21t0102510000">2026-07-21 01:02</a></td>
+<td>UNEXPECTED_ERROR /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>64.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-23t0200000000">2026-07-23 02:00</a></td>
+<td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,10,11,12</td>
+<td>dev</td>
+<td></td>
+<td>182.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-30t0203350000">2026-07-30 02:03</a></td>
+<td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,9,10,11,12</td>
+<td>dev</td>
+<td></td>
+<td>451.05s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-07-08: MISSING</li>
+<li>2026-07-09</li>
+</ul>
+<h3 id="error-2026-07-09t0051340000">Error 2026-07-09T00:51:34+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-07-09T00:51:34.2124308Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-07-09T00:51:34.2125248Z     resource_ldap_verify_test.go:32: Creating execution project (1): test-acc-tf-p-2045140227188047232
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-07-09T00:51:34.2126039Z     resource_ldap_verify_test.go:32: 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-07-09T00:51:34.2127192Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-07-09T00:51:34.2129128Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-07-09T00:51:34.2131272Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-07-09T00:51:34.2133223Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:185
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-07-09T00:51:34.2135283Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_test.go:32
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-07-09T00:51:34.2136726Z                                        /opt/hostedtoolcache/go/1.26.4/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-07-09T00:51:34.2137524Z            Error:          Received unexpected error:
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-07-09T00:51:34.2139559Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-07-09T00:51:34.2141127Z            Test:           TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-07-09T00:51:34.2143098Z            Messages:       Project creation failed: test-acc-tf-p-2045140227188047232, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-07-09T00:51:34.2144593Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (64.77s)
+</code></pre></div>
+<ul>
+<li>2026-07-10</li>
+</ul>
+<h3 id="error-2026-07-10t0124090000">Error 2026-07-10T01:24:09+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-07-10T01:24:09.8334721Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-07-10T01:24:09.8350356Z   
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-07-10T01:24:09.8350906Z     resource_ldap_verify_test.go:35: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-07-10T01:24:09.8351434Z         
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-07-10T01:24:09.8354115Z         Error: error creating MongoDB LDAPVerify (6a5041a1e2b992f4d13ada3e): https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a5041a1e2b992f4d13ada3e/userSecurity/ldap/verify POST: HTTP 400 Bad Request (Error code: &quot;LDAP_HOSTNAME_NOT_ALLOWED&quot;) Detail: The LDAP hostname *** is not allowed. Reason: Bad Request. Params: [***], BadRequestDetail: 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-07-10T01:24:09.8355537Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-07-10T01:24:09.8355946Z           with mongodbatlas_ldap_verify.test,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-07-10T01:24:09.8356707Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot;:
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-07-10T01:24:09.8357431Z           12:      resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot; {
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-07-10T01:24:09.8357847Z         
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-07-10T01:24:09.8358262Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (0.44s)
+</code></pre></div>
+<ul>
+<li>2026-07-11</li>
+</ul>
+<h3 id="error-2026-07-11t0059160000">Error 2026-07-11T00:59:16+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-07-11T00:59:16.7378600Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-07-11T00:59:16.7404209Z    test_name=TestAccLDAPVerify_withConfiguration_CACertificate test_terraform_path=/home/runner/work/_temp/ad6a4e16-30a9-4d43-99a2-74097bfe4d4e/terraform test_working_directory=/tmp/plugintest3307036579
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-07-11T00:59:16.7406361Z     resource_ldap_verify_test.go:35: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-07-11T00:59:16.7407271Z         
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-07-11T00:59:16.7411987Z         Error: error creating MongoDB LDAPVerify (6a51919f8329995c4c765b35): https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a51919f8329995c4c765b35/userSecurity/ldap/verify POST: HTTP 400 Bad Request (Error code: &quot;LDAP_HOSTNAME_NOT_ALLOWED&quot;) Detail: The LDAP hostname *** is not allowed. Reason: Bad Request. Params: [***], BadRequestDetail: 
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-07-11T00:59:16.7414846Z         
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-07-11T00:59:16.7415570Z           with mongodbatlas_ldap_verify.test,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-07-11T00:59:16.7416909Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot;:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-07-11T00:59:16.7418159Z           12:      resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot; {
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-07-11T00:59:16.7418899Z         
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-07-11T00:59:16.7419814Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (0.64s)
+</code></pre></div>
+<ul>
+<li>2026-07-12: MISSING</li>
+<li>2026-07-13</li>
+</ul>
+<h3 id="error-2026-07-13t0103270000">Error 2026-07-13T01:03:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-07-13T01:03:27.6333223Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-07-13T01:03:27.6361875Z    test_step_number=1 test_name=TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-07-13T01:03:27.6362842Z     resource_ldap_verify_test.go:35: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-07-13T01:03:27.6363509Z         
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-07-13T01:03:27.6366590Z         Error: error creating MongoDB LDAPVerify (6a54356da3b75f3f044928b7): https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a54356da3b75f3f044928b7/userSecurity/ldap/verify POST: HTTP 400 Bad Request (Error code: &quot;LDAP_HOSTNAME_NOT_ALLOWED&quot;) Detail: The LDAP hostname *** is not allowed. Reason: Bad Request. Params: [***], BadRequestDetail: 
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-07-13T01:03:27.6368606Z         
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-07-13T01:03:27.6369074Z           with mongodbatlas_ldap_verify.test,
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-07-13T01:03:27.6369960Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot;:
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-07-13T01:03:27.6370874Z           12:      resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot; {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-07-13T01:03:27.6371380Z         
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-07-13T01:03:27.6371938Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (0.43s)
+</code></pre></div>
+<ul>
+<li>2026-07-14</li>
+</ul>
+<h3 id="error-2026-07-14t0057060000">Error 2026-07-14T00:57:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-07-14T00:57:06.1617169Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-07-14T00:57:06.1633221Z    test_name=TestAccLDAPVerify_withConfiguration_CACertificate test_terraform_path=/home/runner/work/_temp/eeac5678-1773-4238-883b-9465d7baea9f/terraform test_working_directory=/tmp/plugintest1173078218 test_step_number=1
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-07-14T00:57:06.1634691Z     resource_ldap_verify_test.go:35: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-07-14T00:57:06.1635428Z         
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-07-14T00:57:06.1638068Z         Error: error creating MongoDB LDAPVerify (6a5585a***f430f45f9ceeca): https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a5585a***f430f45f9ceeca/userSecurity/ldap/verify POST: HTTP 400 Bad Request (Error code: &quot;LDAP_HOSTNAME_NOT_ALLOWED&quot;) Detail: The LDAP hostname *** is not allowed. Reason: Bad Request. Params: [***], BadRequestDetail: 
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-07-14T00:57:06.1639499Z         
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-07-14T00:57:06.1639917Z           with mongodbatlas_ldap_verify.test,
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-07-14T00:57:06.1640686Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot;:
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-07-14T00:57:06.1641398Z           12:      resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot; {
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-07-14T00:57:06.1641817Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-07-14T00:57:06.1642226Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (0.50s)
+</code></pre></div>
+<ul>
+<li>2026-07-15 PASS 3 minutes</li>
+<li>2026-07-16 PASS 3 minutes</li>
+<li>2026-07-17 PASS 3 minutes</li>
+<li>2026-07-18 PASS 3 minutes</li>
+<li>2026-07-19: MISSING</li>
+<li>2026-07-20: MISSING</li>
+<li>2026-07-21</li>
+</ul>
+<h3 id="error-2026-07-21t0102510000">Error 2026-07-21T01:02:51+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-07-21T01:02:51.1966091Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-07-21T01:02:51.1967431Z     resource_ldap_verify_test.go:32: Creating execution project (1): test-acc-tf-p-480152161958557036
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-07-21T01:02:51.1968436Z     resource_ldap_verify_test.go:32: 
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-07-21T01:02:51.1970066Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:23
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-07-21T01:02:51.1973144Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:142
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-07-21T01:02:51.1976293Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:98
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-07-21T01:02:51.1979707Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:185
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-07-21T01:02:51.1983022Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/ldapverify/resource_ldap_verify_test.go:32
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-07-21T01:02:51.1985156Z                                        /opt/hostedtoolcache/go/1.26.4/x64/src/runtime/asm_amd64.s:1771
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-07-21T01:02:51.1986095Z            Error:          Received unexpected error:
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-07-21T01:02:51.1989740Z                            https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-07-21T01:02:51.1991708Z            Test:           TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-07-21T01:02:51.1994719Z            Messages:       Project creation failed: test-acc-tf-p-480152161958557036, err: https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 500 Internal Server Error (Error code: &quot;UNEXPECTED_ERROR&quot;) Detail: Unexpected error. Reason: Internal Server Error. Params: [], BadRequestDetail: 
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-07-21T01:02:51.1996997Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (64.08s)
+</code></pre></div>
+<ul>
+<li>2026-07-22 PASS 3 minutes</li>
+<li>2026-07-23</li>
+</ul>
+<h3 id="error-2026-07-23t0200000000">Error 2026-07-23T02:00:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-07-23T02:00:00.5493615Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-07-23T02:00:00.5499861Z   
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-07-23T02:00:00.5500628Z     resource_ldap_verify_test.go:35: Step 1/1 error: Check failed: Check 7/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-07-23T02:00:00.5501494Z         Check 8/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;2&quot;, got &quot;1&quot;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-07-23T02:00:00.5502263Z         Check 10/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-07-23T02:00:00.5503130Z         Check 11/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-07-23T02:00:00.5503865Z         Check 12/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-07-23T02:00:00.5504401Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (182.09s)
+</code></pre></div>
+<ul>
+<li>2026-07-24 PASS 3 minutes</li>
+<li>2026-07-25 PASS 3 minutes</li>
+<li>2026-07-26: MISSING</li>
+<li>2026-07-27 PASS 3 minutes</li>
+<li>2026-07-28 PASS 3 minutes</li>
+<li>2026-07-29 PASS 3 minutes</li>
+<li>2026-07-30</li>
+</ul>
+<h3 id="error-2026-07-30t0203350000">Error 2026-07-30T02:03:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-07-30T02:03:35.6690457Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-07-30T02:03:35.6704123Z    test_name=TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-07-30T02:03:35.6705492Z     resource_ldap_verify_test.go:35: Step 1/1 error: Check failed: Check 7/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-07-30T02:03:35.6706712Z         Check 8/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;2&quot;, got &quot;0&quot;
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-07-30T02:03:35.6707707Z         Check 9/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.validation_type&#39; not found
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-07-30T02:03:35.6708672Z         Check 10/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; not found
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-07-30T02:03:35.6709646Z         Check 11/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-07-30T02:03:35.6710591Z         Check 12/12 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-07-30T02:03:35.6711279Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (451.51s)
+</code></pre></div>
+<ul>
+<li>2026-07-31 PASS 3 minutes</li>
+<li>2026-08-01 PASS 3 minutes</li>
+<li>2026-08-02: MISSING</li>
+<li>2026-08-03 PASS 3 minutes</li>
+<li>2026-08-04 PASS 3 minutes</li>
+<li>2026-08-05 PASS 3 minutes</li>
+<li>2026-08-06 PASS 3 minutes</li>
+<li>2026-08-07 PASS 3 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-07-12t0106030000">2026-07-12 01:06</a></td>
+<td>LDAP_HOSTNAME_NOT_ALLOWED /api/atlas/v2/groups/6a52e45354924de0baf4a912/userSecurity/ldap/verify</td>
+<td>qa</td>
+<td>0.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-15t0740130000">2026-07-15 07:40</a></td>
+<td>LDAP_HOSTNAME_NOT_ALLOWED /api/atlas/v2/groups/6a57358293daee1cb09fd430/userSecurity/ldap/verify</td>
+<td>qa</td>
+<td>0.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-15t0947540000">2026-07-15 09:47</a></td>
+<td>LDAP_HOSTNAME_NOT_ALLOWED /api/atlas/v2/groups/6a5753ae8f62f9b412918db2/userSecurity/ldap/verify</td>
+<td>qa</td>
+<td>0.05s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-07-08: MISSING</li>
+<li>2026-07-09: MISSING</li>
+<li>2026-07-10: MISSING</li>
+<li>2026-07-11: MISSING</li>
+<li>2026-07-12</li>
+</ul>
+<h3 id="error-2026-07-12t0106030000">Error 2026-07-12T01:06:03+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-07-12T01:06:03.5305451Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-07-12T01:06:03.5321941Z    test_name=TestAccLDAPVerify_withConfiguration_CACertificate test_terraform_path=/home/runner/work/_temp/bd127272-4f7b-4cb7-81cc-0d2be467c73e/terraform
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-07-12T01:06:03.5322993Z     resource_ldap_verify_test.go:35: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-07-12T01:06:03.5323811Z         
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-07-12T01:06:03.5326431Z         Error: error creating MongoDB LDAPVerify (6a52e45354924de0baf4a912): https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a52e45354924de0baf4a912/userSecurity/ldap/verify POST: HTTP 400 Bad Request (Error code: &quot;LDAP_HOSTNAME_NOT_ALLOWED&quot;) Detail: The LDAP hostname *** is not allowed. Reason: Bad Request. Params: [***], BadRequestDetail: 
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-07-12T01:06:03.5329259Z         
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-07-12T01:06:03.5329694Z           with mongodbatlas_ldap_verify.test,
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-07-12T01:06:03.5330468Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot;:
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-07-12T01:06:03.5331182Z           12:      resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot; {
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-07-12T01:06:03.5331615Z         
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-07-12T01:06:03.5332080Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (0.40s)
+</code></pre></div>
+<ul>
+<li>2026-07-13: MISSING</li>
+<li>2026-07-14: MISSING</li>
+<li>2026-07-15</li>
+<li>FAIL a moment</li>
+</ul>
+<h3 id="error-2026-07-15t0740130000">Error 2026-07-15T07:40:13+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2026-07-15T07:40:13.7896713Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2026-07-15T07:40:13.7915150Z    test_name=TestAccLDAPVerify_withConfiguration_CACertificate test_terraform_path=/home/runner/work/_temp/a8a2c6c3-6b61-427e-953f-e9cb3f4ce631/terraform
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2026-07-15T07:40:13.7916731Z     resource_ldap_verify_test.go:35: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2026-07-15T07:40:13.7917629Z         
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2026-07-15T07:40:13.7921017Z         Error: error creating MongoDB LDAPVerify (6a57358293daee1cb09fd430): https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a57358293daee1cb09fd430/userSecurity/ldap/verify POST: HTTP 400 Bad Request (Error code: &quot;LDAP_HOSTNAME_NOT_ALLOWED&quot;) Detail: The LDAP hostname *** is not allowed. Reason: Bad Request. Params: [***], BadRequestDetail: 
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2026-07-15T07:40:13.7922912Z         
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2026-07-15T07:40:13.7923502Z           with mongodbatlas_ldap_verify.test,
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2026-07-15T07:40:13.7924491Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot;:
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2026-07-15T07:40:13.7925597Z           12:      resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot; {
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2026-07-15T07:40:13.7926178Z         
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2026-07-15T07:40:13.7926766Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (0.49s)
+</code></pre></div>
+<ul>
+<li>FAIL a moment</li>
+</ul>
+<h3 id="error-2026-07-15t0947540000">Error 2026-07-15T09:47:54+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2026-07-15T09:47:54.5916329Z === RUN   TestAccLDAPVerify_withConfiguration_CACertificate
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2026-07-15T09:47:54.5930914Z   
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2026-07-15T09:47:54.5931475Z     resource_ldap_verify_test.go:35: Step 1/1 error: Error running apply: exit status 1
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2026-07-15T09:47:54.5932011Z         
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2026-07-15T09:47:54.5934483Z         Error: error creating MongoDB LDAPVerify (6a5753ae8f62f9b412918db2): https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a5753ae8f62f9b412918db2/userSecurity/ldap/verify POST: HTTP 400 Bad Request (Error code: &quot;LDAP_HOSTNAME_NOT_ALLOWED&quot;) Detail: The LDAP hostname *** is not allowed. Reason: Bad Request. Params: [***], BadRequestDetail: 
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2026-07-15T09:47:54.5936004Z         
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2026-07-15T09:47:54.5936443Z           with mongodbatlas_ldap_verify.test,
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2026-07-15T09:47:54.5937248Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot;:
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2026-07-15T09:47:54.5937975Z           12:      resource &quot;mongodbatlas_ldap_verify&quot; &quot;test&quot; {
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2026-07-15T09:47:54.5938409Z         
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2026-07-15T09:47:54.5938839Z --- FAIL: TestAccLDAPVerify_withConfiguration_CACertificate (0.46s)
+</code></pre></div>
+<ul>
+<li>2026-07-16: MISSING</li>
+<li>2026-07-17: MISSING</li>
+<li>2026-07-18: MISSING</li>
+<li>2026-07-19 PASS 3 minutes</li>
+<li>2026-07-20: MISSING</li>
+<li>2026-07-21: MISSING</li>
+<li>2026-07-22: MISSING</li>
+<li>2026-07-23: MISSING</li>
+<li>2026-07-24: MISSING</li>
+<li>2026-07-25: MISSING</li>
+<li>2026-07-26 PASS 3 minutes</li>
+<li>2026-07-27: MISSING</li>
+<li>2026-07-28: MISSING</li>
+<li>2026-07-29</li>
+<li>PASS 3 minutes</li>
+<li>PASS 3 minutes</li>
+<li>2026-07-30: MISSING</li>
+<li>2026-07-31: MISSING</li>
+<li>2026-08-01: MISSING</li>
+<li>2026-08-02 PASS 3 minutes</li>
+<li>2026-08-03: MISSING</li>
+<li>2026-08-04: MISSING</li>
+<li>2026-08-05: MISSING</li>
+<li>2026-08-06: MISSING</li>
+<li>2026-08-07: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

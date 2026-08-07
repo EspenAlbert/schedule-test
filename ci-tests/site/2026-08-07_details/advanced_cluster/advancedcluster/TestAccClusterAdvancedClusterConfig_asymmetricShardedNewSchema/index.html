@@ -1,0 +1,795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccclusteradvancedclusterconfig_asymmetricshardednewschema-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccclusteradvancedclusterconfig_asymmetricshardednewschema-test-details">advanced_cluster/advancedcluster/TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema Test Details</h1>
+<h1 id="found-35-testruns-in-dev-qa-from-2026-07-09-to-2026-08-07-from-master-branch-1-unique-tests-passx-24-failx-11">Found 35 TestRuns in dev, qa from 2026-07-09 to 2026-08-07 from master branch: 1 unique tests, PASS(x 24) FAIL(x 11)</h1>
+<p>Success rate: 68.57%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-07-09t0058060000">2026-07-09 00:58</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>2.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-11t0055140000">2026-07-11 00:55</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>3.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-14t0045400000">2026-07-14 00:45</a></td>
+<td>Step 1 2</td>
+<td>dev</td>
+<td></td>
+<td>1042.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-16t0049090000">2026-07-16 00:49</a></td>
+<td>Step 1 2</td>
+<td>dev</td>
+<td></td>
+<td>5279.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-18t0051140000">2026-07-18 00:51</a></td>
+<td>Step 1 2</td>
+<td>dev</td>
+<td></td>
+<td>1537.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-21t0053120000">2026-07-21 00:53</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td>flaky_500</td>
+<td>1.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-23t0049390000">2026-07-23 00:49</a></td>
+<td>MAX_GROUPS_PER_ORG_EXCEEDED /api/atlas/v2/groups</td>
+<td>dev</td>
+<td></td>
+<td>2.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-25t0045270000">2026-07-25 00:45</a></td>
+<td>Step 1 2</td>
+<td>dev</td>
+<td></td>
+<td>1094.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-28t0043310000">2026-07-28 00:43</a></td>
+<td>Step 1 2</td>
+<td>dev</td>
+<td></td>
+<td>4589.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-07-30t0042350000">2026-07-30 00:42</a></td>
+<td>Step 1 2</td>
+<td>dev</td>
+<td></td>
+<td>3931.07s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-07-08: MISSING</li>
+<li>2026-07-09</li>
+</ul>
+<h3 id="error-2026-07-09t0058060000">Error 2026-07-09T00:58:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-07-09T00:58:06.0779881Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-07-09T00:58:24.4649411Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-07-09T00:58:26.9808547Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-07-09T00:58:26.9809709Z     resource_test.go:705: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-07-09T00:58:26.9810404Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-07-09T00:58:26.9811170Z         Error: error creating project: test-acc-tf-p-8385560456491807873
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-07-09T00:58:26.9811840Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-07-09T00:58:26.9812521Z           with mongodbatlas_project.cluster_project,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-07-09T00:58:26.9813853Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-07-09T00:58:26.9815318Z           12:      resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-07-09T00:58:26.9815981Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-07-09T00:58:26.9816901Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-07-09T00:58:26.9818172Z         (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-07-09T00:58:26.9819412Z         per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-07-09T00:58:26.9820620Z         add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c],
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-07-09T00:58:26.9821431Z         BadRequestDetail: 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-07-09T00:58:27.0291251Z    test_name=TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchemaInconsistentDisk
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-07-09T00:58:27.0561062Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (2.60s)
+</code></pre></div>
+<ul>
+<li>2026-07-10 PASS 45 minutes</li>
+<li>2026-07-11</li>
+</ul>
+<h3 id="error-2026-07-11t0055140000">Error 2026-07-11T00:55:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-07-11T00:55:14.7543774Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-07-11T00:56:44.5623786Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-07-11T00:56:47.8478111Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-07-11T00:56:47.8478858Z     resource_test.go:705: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-07-11T00:56:47.8479321Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-07-11T00:56:47.8479885Z         Error: error creating project: test-acc-tf-p-5735772028244883697
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-07-11T00:56:47.8480310Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-07-11T00:56:47.8480804Z           with mongodbatlas_project.cluster_project,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-07-11T00:56:47.8481657Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-07-11T00:56:47.8482552Z           12:      resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-07-11T00:56:47.8482918Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-07-11T00:56:47.8483449Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-07-11T00:56:47.8484331Z         (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-07-11T00:56:47.8485009Z         per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-07-11T00:56:47.8485661Z         add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c],
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-07-11T00:56:47.8486119Z         BadRequestDetail: 
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2026-07-11T00:56:47.8699249Z   
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2026-07-11T00:56:47.9209696Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (3.59s)
+</code></pre></div>
+<ul>
+<li>2026-07-12: MISSING</li>
+<li>2026-07-13 PASS 22 minutes</li>
+<li>2026-07-14</li>
+</ul>
+<h3 id="error-2026-07-14t0045400000">Error 2026-07-14T00:45:40+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-07-14T00:45:40.8890666Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-07-14T00:47:33.3433877Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-07-14T00:59:50.7643246Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-07-14T00:59:50.7644151Z     resource_test.go:705: Step 1/2 error: Check failed: Check 2/2 error: expected independent shard scaling mode to be SHARD, got &lt;html&gt;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-07-14T00:59:50.7645150Z         &lt;head&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-07-14T00:59:50.7645675Z         &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=ISO-8859-1&quot;/&gt;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-07-14T00:59:50.7646186Z         &lt;title&gt;Error 401 Unauthorized&lt;/title&gt;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-07-14T00:59:50.7646514Z         &lt;/head&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-07-14T00:59:50.7646756Z         &lt;body&gt;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-07-14T00:59:50.7647064Z         &lt;h2&gt;HTTP ERROR 401 Unauthorized&lt;/h2&gt;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-07-14T00:59:50.7647375Z         &lt;table&gt;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-07-14T00:59:50.7648450Z         &lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;https://cloud-dev.mongodb.com/test/utils/auth/groups/6a558725281936d9b18d1b04/clusters/test-acc-tf-c-6958296158766796670/independentShardScalingMode&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-07-14T00:59:50.7649330Z         &lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;401&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-07-14T00:59:50.7649771Z         &lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;Unauthorized&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-07-14T00:59:50.7650117Z         &lt;/table&gt;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-07-14T00:59:50.7650341Z         
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2026-07-14T00:59:50.7650566Z         &lt;/body&gt;
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2026-07-14T00:59:50.7650795Z         &lt;/html&gt;
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2026-07-14T01:04:55.3327873Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (1042.00s)
+</code></pre></div>
+<ul>
+<li>2026-07-15 PASS 19 minutes</li>
+<li>2026-07-16</li>
+</ul>
+<h3 id="error-2026-07-16t0049090000">Error 2026-07-16T00:49:09+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-07-16T00:49:09.4362595Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-07-16T01:01:43.0732295Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-07-16T01:01:43.4843841Z   diagnostic_detail=
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-07-16T01:01:43.4847802Z    tf_provider_addr=registry.terraform.io/hashicorp/mongodbatlas tf_proto_version=6.11 tf_rpc=MoveResourceState
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-07-16T02:08:45.3946869Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-07-16T02:08:45.3947856Z     resource_test.go:705: Step 1/2 error: Check failed: Check 2/2 error: expected independent shard scaling mode to be SHARD, got &lt;html&gt;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-07-16T02:08:45.3948378Z         &lt;head&gt;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-07-16T02:08:45.3948935Z         &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=ISO-8859-1&quot;/&gt;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-07-16T02:08:45.3949361Z         &lt;title&gt;Error 401 Unauthorized&lt;/title&gt;
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-07-16T02:08:45.3949650Z         &lt;/head&gt;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-07-16T02:08:45.3949869Z         &lt;body&gt;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-07-16T02:08:45.3950146Z         &lt;h2&gt;HTTP ERROR 401 Unauthorized&lt;/h2&gt;
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-07-16T02:08:45.3950417Z         &lt;table&gt;
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-07-16T02:08:45.3951259Z         &lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;https://cloud-dev.mongodb.com/test/utils/auth/groups/6a582d779bd40d6f4029711c/clusters/test-acc-tf-c-2995017097770284870/independentShardScalingMode&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2026-07-16T02:08:45.3951941Z         &lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;401&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2026-07-16T02:08:45.3952310Z         &lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;Unauthorized&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2026-07-16T02:08:45.3952598Z         &lt;/table&gt;
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2026-07-16T02:08:45.3952806Z         
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2026-07-16T02:08:45.3953013Z         &lt;/body&gt;
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2026-07-16T02:08:45.3953215Z         &lt;/html&gt;
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2026-07-16T02:29:42.9238561Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (5279.85s)
+</code></pre></div>
+<ul>
+<li>2026-07-17 PASS 23 minutes</li>
+<li>2026-07-18</li>
+</ul>
+<h3 id="error-2026-07-18t0051140000">Error 2026-07-18T00:51:14+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-07-18T00:51:14.2477035Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-07-18T00:54:19.3117539Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-07-18T01:13:18.8042308Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-07-18T01:13:18.8043672Z     resource_test.go:705: Step 1/2 error: Check failed: Check 2/2 error: expected independent shard scaling mode to be SHARD, got &lt;html&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-07-18T01:13:18.8044626Z         &lt;head&gt;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-07-18T01:13:18.8045491Z         &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=ISO-8859-1&quot;/&gt;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-07-18T01:13:18.8046443Z         &lt;title&gt;Error 401 Unauthorized&lt;/title&gt;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-07-18T01:13:18.8047025Z         &lt;/head&gt;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-07-18T01:13:18.8047429Z         &lt;body&gt;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-07-18T01:13:18.8047970Z         &lt;h2&gt;HTTP ERROR 401 Unauthorized&lt;/h2&gt;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-07-18T01:13:18.8048716Z         &lt;table&gt;
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-07-18T01:13:18.8050733Z         &lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;https://cloud-dev.mongodb.com/test/utils/auth/groups/6a5acebf0fd53613457a3763/clusters/test-acc-tf-c-4423427288446066332/independentShardScalingMode&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-07-18T01:13:18.8052386Z         &lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;401&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-07-18T01:13:18.8053509Z         &lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;Unauthorized&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-07-18T01:13:18.8054148Z         &lt;/table&gt;
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-07-18T01:13:18.8054536Z         
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-07-18T01:13:18.8054930Z         &lt;/body&gt;
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-07-18T01:13:18.8055333Z         &lt;/html&gt;
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2026-07-18T01:19:55.8974177Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (1537.32s)
+</code></pre></div>
+<ul>
+<li>2026-07-19: MISSING</li>
+<li>2026-07-20: MISSING</li>
+<li>2026-07-21</li>
+</ul>
+<h3 id="error-2026-07-21t0053120000">Error 2026-07-21T00:53:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-07-21T00:53:12.2192946Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-07-21T00:53:23.4309523Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-07-21T00:53:25.2153500Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-07-21T00:53:25.2154353Z     resource_test.go:705: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-07-21T00:53:25.2154993Z         
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-07-21T00:53:25.2155693Z         Error: error creating project: test-acc-tf-p-4795159246205963518
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-07-21T00:53:25.2156299Z         
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-07-21T00:53:25.2156887Z           with mongodbatlas_project.cluster_project,
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-07-21T00:53:25.2157926Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot;:
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-07-21T00:53:25.2158965Z           12:      resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot; {
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-07-21T00:53:25.2159332Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-07-21T00:53:25.2160085Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-07-21T00:53:25.2161200Z         (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-07-21T00:53:25.2161986Z         per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-07-21T00:53:25.2162748Z         add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c],
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-07-21T00:53:25.2163206Z         BadRequestDetail: 
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-07-21T00:53:25.2173002Z    test_working_directory=/tmp/plugintest3153388414 test_terraform_path=/home/runner/work/_temp/a0841b06-cd14-47a5-8260-0a6593748416/terraform
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2026-07-21T00:53:25.2862181Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (1.86s)
+</code></pre></div>
+<ul>
+<li>2026-07-22 PASS 57 minutes</li>
+<li>2026-07-23</li>
+</ul>
+<h3 id="error-2026-07-23t0049390000">Error 2026-07-23T00:49:39+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-07-23T00:49:39.4245324Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-07-23T00:49:49.7210773Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-07-23T00:49:51.6562263Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-07-23T00:49:51.6564076Z     resource_test.go:705: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-07-23T00:49:51.6565479Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-07-23T00:49:51.6566635Z         Error: error creating project: test-acc-tf-p-6368809349949974701
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-07-23T00:49:51.6567799Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-07-23T00:49:51.6568894Z           with mongodbatlas_project.cluster_project,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-07-23T00:49:51.6570942Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-07-23T00:49:51.6572596Z           12:      resource &quot;mongodbatlas_project&quot; &quot;cluster_project&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-07-23T00:49:51.6573885Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-07-23T00:49:51.6575655Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups POST: HTTP 400 Bad Request
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-07-23T00:49:51.6577409Z         (Error code: &quot;MAX_GROUPS_PER_ORG_EXCEEDED&quot;) Detail: Maximum number of groups
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-07-23T00:49:51.6580129Z         per organization (250) in 64808d5f33a0c71e882ef19c exceeded while trying to
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-07-23T00:49:51.6581997Z         add group. Reason: Bad Request. Params: [250 64808d5f33a0c71e882ef19c],
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2026-07-23T00:49:51.6583249Z         BadRequestDetail: 
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2026-07-23T00:49:51.6882700Z    test_terraform_path=/home/runner/work/_temp/57c44fc3-b26f-4c1a-9fbd-d7a3b0d9d62e/terraform
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2026-07-23T00:49:51.7480933Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (2.04s)
+</code></pre></div>
+<ul>
+<li>2026-07-24 PASS an hour</li>
+<li>2026-07-25</li>
+</ul>
+<h3 id="error-2026-07-25t0045270000">Error 2026-07-25T00:45:27+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-07-25T00:45:27.7663853Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-07-25T00:47:06.7898754Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-07-25T00:59:18.2597475Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-07-25T00:59:18.2598077Z     resource_test.go:705: Step 1/2 error: Check failed: Check 2/2 error: expected independent shard scaling mode to be SHARD, got &lt;html&gt;
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-07-25T00:59:18.2598489Z         &lt;head&gt;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-07-25T00:59:18.2598839Z         &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=ISO-8859-1&quot;/&gt;
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-07-25T00:59:18.2599257Z         &lt;title&gt;Error 401 Unauthorized&lt;/title&gt;
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-07-25T00:59:18.2599496Z         &lt;/head&gt;
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-07-25T00:59:18.2599680Z         &lt;body&gt;
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-07-25T00:59:18.2600097Z         &lt;h2&gt;HTTP ERROR 401 Unauthorized&lt;/h2&gt;
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-07-25T00:59:18.2600346Z         &lt;table&gt;
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-07-25T00:59:18.2601138Z         &lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;https://cloud-dev.mongodb.com/test/utils/auth/groups/6a64078d3f1a2569632b8101/clusters/test-acc-tf-c-2172695419334225054/independentShardScalingMode&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-07-25T00:59:18.2601804Z         &lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;401&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-07-25T00:59:18.2602178Z         &lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;Unauthorized&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2026-07-25T00:59:18.2602514Z         &lt;/table&gt;
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2026-07-25T00:59:18.2602686Z         
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2026-07-25T00:59:18.2602860Z         &lt;/body&gt;
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2026-07-25T00:59:18.2603039Z         &lt;/html&gt;
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2026-07-25T01:05:20.9234226Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (1094.80s)
+</code></pre></div>
+<ul>
+<li>2026-07-26: MISSING</li>
+<li>2026-07-27 PASS an hour</li>
+<li>2026-07-28</li>
+</ul>
+<h3 id="error-2026-07-28t0043310000">Error 2026-07-28T00:43:31+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-07-28T00:43:31.6579232Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-07-28T00:47:08.7225277Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-07-28T01:42:00.9556460Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-07-28T01:42:00.9557484Z     resource_test.go:705: Step 1/2 error: Check failed: Check 2/2 error: expected independent shard scaling mode to be SHARD, got &lt;html&gt;
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-07-28T01:42:00.9558196Z         &lt;head&gt;
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-07-28T01:42:00.9558830Z         &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=ISO-8859-1&quot;/&gt;
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-07-28T01:42:00.9559443Z         &lt;title&gt;Error 401 Unauthorized&lt;/title&gt;
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-07-28T01:42:00.9559777Z         &lt;/head&gt;
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-07-28T01:42:00.9560028Z         &lt;body&gt;
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-07-28T01:42:00.9560464Z         &lt;h2&gt;HTTP ERROR 401 Unauthorized&lt;/h2&gt;
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-07-28T01:42:00.9560852Z         &lt;table&gt;
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2026-07-28T01:42:00.9562058Z         &lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;https://cloud-dev.mongodb.com/test/utils/auth/groups/6a67fc10818f7b3154f8b259/clusters/test-acc-tf-c-7980452965021497002/independentShardScalingMode&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2026-07-28T01:42:00.9562941Z         &lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;401&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2026-07-28T01:42:00.9563386Z         &lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;Unauthorized&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2026-07-28T01:42:00.9563734Z         &lt;/table&gt;
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2026-07-28T01:42:00.9563974Z         
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2026-07-28T01:42:00.9564210Z         &lt;/body&gt;
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2026-07-28T01:42:00.9564456Z         &lt;/html&gt;
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2026-07-28T02:03:37.7153738Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (4589.64s)
+</code></pre></div>
+<ul>
+<li>2026-07-29 PASS 20 minutes</li>
+<li>2026-07-30</li>
+</ul>
+<h3 id="error-2026-07-30t0042350000">Error 2026-07-30T00:42:35+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2026-07-30T00:42:35.9162599Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2026-07-30T01:09:35.9280759Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2026-07-30T01:54:59.3094621Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2026-07-30T01:54:59.3096130Z     resource_test.go:705: Step 1/2 error: Check failed: Check 2/2 error: expected independent shard scaling mode to be SHARD, got &lt;html&gt;
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2026-07-30T01:54:59.3097207Z         &lt;head&gt;
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2026-07-30T01:54:59.3098046Z         &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=ISO-8859-1&quot;/&gt;
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2026-07-30T01:54:59.3098878Z         &lt;title&gt;Error 401 Unauthorized&lt;/title&gt;
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2026-07-30T01:54:59.3099482Z         &lt;/head&gt;
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2026-07-30T01:54:59.3100010Z         &lt;body&gt;
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2026-07-30T01:54:59.3100615Z         &lt;h2&gt;HTTP ERROR 401 Unauthorized&lt;/h2&gt;
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2026-07-30T01:54:59.3101788Z         &lt;table&gt;
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2026-07-30T01:54:59.3103431Z         &lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;https://cloud-dev.mongodb.com/test/utils/auth/groups/6a6aa4547e4f6ae89d445746/clusters/test-acc-tf-c-6539543144072296867/independentShardScalingMode&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2026-07-30T01:54:59.3104820Z         &lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;401&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2026-07-30T01:54:59.3105570Z         &lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;Unauthorized&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2026-07-30T01:54:59.3106340Z         &lt;/table&gt;
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2026-07-30T01:54:59.3106868Z         
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2026-07-30T01:54:59.3107315Z         &lt;/body&gt;
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2026-07-30T01:54:59.3107749Z         &lt;/html&gt;
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2026-07-30T02:15:06.9346342Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (3931.69s)
+</code></pre></div>
+<ul>
+<li>2026-07-31</li>
+<li>PASS 14 minutes</li>
+<li>PASS 13 minutes</li>
+<li>2026-08-01 PASS 13 minutes</li>
+<li>2026-08-02: MISSING</li>
+<li>2026-08-03 PASS 12 minutes</li>
+<li>2026-08-04 PASS 15 minutes</li>
+<li>2026-08-05 PASS 14 minutes</li>
+<li>2026-08-06 PASS 12 minutes</li>
+<li>2026-08-07 PASS 12 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-07-29t1317490000">2026-07-29 13:17</a></td>
+<td>Step 1 2</td>
+<td>qa</td>
+<td>854.06s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-07-08: MISSING</li>
+<li>2026-07-09: MISSING</li>
+<li>2026-07-10: MISSING</li>
+<li>2026-07-11: MISSING</li>
+<li>2026-07-12 PASS 20 minutes</li>
+<li>2026-07-13: MISSING</li>
+<li>2026-07-14: MISSING</li>
+<li>2026-07-15</li>
+<li>PASS 18 minutes</li>
+<li>PASS 13 minutes</li>
+<li>2026-07-16: MISSING</li>
+<li>2026-07-17: MISSING</li>
+<li>2026-07-18: MISSING</li>
+<li>2026-07-19 PASS 17 minutes</li>
+<li>2026-07-20: MISSING</li>
+<li>2026-07-21: MISSING</li>
+<li>2026-07-22: MISSING</li>
+<li>2026-07-23: MISSING</li>
+<li>2026-07-24: MISSING</li>
+<li>2026-07-25: MISSING</li>
+<li>2026-07-26 PASS 17 minutes</li>
+<li>2026-07-27: MISSING</li>
+<li>2026-07-28: MISSING</li>
+<li>2026-07-29</li>
+<li>FAIL 14 minutes</li>
+</ul>
+<h3 id="error-2026-07-29t1317490000">Error 2026-07-29T13:17:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2026-07-29T13:17:49.6508343Z === RUN   TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2026-07-29T13:19:15.2551066Z === CONT  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2026-07-29T13:30:27.2335955Z === NAME  TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2026-07-29T13:30:27.2337097Z     resource_test.go:705: Step 1/2 error: Check failed: Check 2/2 error: expected independent shard scaling mode to be SHARD, got &lt;html&gt;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2026-07-29T13:30:27.2337747Z         &lt;head&gt;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2026-07-29T13:30:27.2338188Z         &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=ISO-8859-1&quot;/&gt;
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2026-07-29T13:30:27.2338782Z         &lt;title&gt;Error 401 Unauthorized&lt;/title&gt;
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2026-07-29T13:30:27.2339152Z         &lt;/head&gt;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2026-07-29T13:30:27.2339384Z         &lt;body&gt;
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2026-07-29T13:30:27.2339692Z         &lt;h2&gt;HTTP ERROR 401 Unauthorized&lt;/h2&gt;
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2026-07-29T13:30:27.2339995Z         &lt;table&gt;
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2026-07-29T13:30:27.2340961Z         &lt;tr&gt;&lt;th&gt;URI:&lt;/th&gt;&lt;td&gt;https://cloud-qa.mongodb.com/test/utils/auth/groups/6a69fdd6d51fea57f48e9cee/clusters/test-acc-tf-c-4510238461088724401/independentShardScalingMode&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2026-07-29T13:30:27.2341720Z         &lt;tr&gt;&lt;th&gt;STATUS:&lt;/th&gt;&lt;td&gt;401&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2026-07-29T13:30:27.2342140Z         &lt;tr&gt;&lt;th&gt;MESSAGE:&lt;/th&gt;&lt;td&gt;Unauthorized&lt;/td&gt;&lt;/tr&gt;
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2026-07-29T13:30:27.2342454Z         &lt;/table&gt;
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2026-07-29T13:30:27.2342683Z         
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2026-07-29T13:30:27.2342905Z         &lt;/body&gt;
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2026-07-29T13:30:27.2343132Z         &lt;/html&gt;
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2026-07-29T13:30:44.3995834Z    test_terraform_path=/home/runner/work/_temp/114585ca-7637-4ca9-8d03-a2692bb9704e/terraform test_working_directory=/tmp/plugintest3269975668 test_step_number=3
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>2026-07-29T13:33:29.3421123Z --- FAIL: TestAccClusterAdvancedClusterConfig_asymmetricShardedNewSchema (854.63s)
+</code></pre></div>
+<ul>
+<li>PASS 13 minutes</li>
+<li>2026-07-30 PASS 13 minutes</li>
+<li>2026-07-31: MISSING</li>
+<li>2026-08-01: MISSING</li>
+<li>2026-08-02 PASS 14 minutes</li>
+<li>2026-08-03: MISSING</li>
+<li>2026-08-04: MISSING</li>
+<li>2026-08-05: MISSING</li>
+<li>2026-08-06: MISSING</li>
+<li>2026-08-07: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
