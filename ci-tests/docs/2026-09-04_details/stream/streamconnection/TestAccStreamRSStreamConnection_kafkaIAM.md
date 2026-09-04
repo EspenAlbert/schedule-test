@@ -1,5 +1,5 @@
 # stream/streamconnection/TestAccStreamRSStreamConnection_kafkaIAM Test Details
-# Found 9 TestRuns in dev, qa from 2026-08-28 to 2026-09-04 from master branch: 1 unique tests, SKIP(x 9)
+# Found 13 TestRuns in dev, qa from 2026-08-25 to 2026-09-04 from master branch: 1 unique tests, SKIP(x 13)
 Success rate: 0.00%
 
 ## DEV Environment
@@ -24,9 +24,9 @@ Success rate: 0.00%
 - 2026-08-22: MISSING
 - 2026-08-23: MISSING
 - 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-25 SKIP unknown
+- 2026-08-26 SKIP unknown
+- 2026-08-27 SKIP unknown
 - 2026-08-28
   - SKIP unknown
   - SKIP unknown
@@ -62,7 +62,7 @@ Success rate: 0.00%
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 SKIP unknown
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 SKIP unknown

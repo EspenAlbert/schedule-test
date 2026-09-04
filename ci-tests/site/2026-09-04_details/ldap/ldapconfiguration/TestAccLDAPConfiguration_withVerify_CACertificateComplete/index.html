@@ -292,34 +292,122 @@
 
 
 <h1 id="ldapldapconfigurationtestaccldapconfiguration_withverify_cacertificatecomplete-test-details">ldap/ldapconfiguration/TestAccLDAPConfiguration_withVerify_CACertificateComplete Test Details</h1>
-<h1 id="found-11-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-10-fail">Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 10) FAIL</h1>
-<p>Success rate: 90.91%</p>
+<h1 id="found-34-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-28-failx-6">Found 34 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 28) FAIL(x 6)</h1>
+<p>Success rate: 82.35%</p>
 <h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-10t0048230000">2026-08-10 00:48</a></td>
+<td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,10,11,12,13,14,15,16,17,18</td>
+<td>dev</td>
+<td>1184.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-24t0039480000">2026-08-24 00:39</a></td>
+<td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,10,11,12,13,14,15,16,17,18</td>
+<td>dev</td>
+<td>1098.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-27t1132440000">2026-08-27 11:32</a></td>
+<td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,10,11,12,13,14,15,16,17,18</td>
+<td>dev</td>
+<td>1189.06s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 18 minutes</li>
 <li>2026-08-07 PASS 18 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 19 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10</li>
+</ul>
+<h3 id="error-2026-08-10t0048230000">Error 2026-08-10T00:48:23+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-10T00:48:23.7299869Z === RUN   TestAccLDAPConfiguration_withVerify_CACertificateComplete
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-10T00:48:23.7311864Z    test_step_number=1 test_name=TestAccLDAPConfiguration_withVerify_CACertificateComplete test_terraform_path=/home/runner/work/_temp/9a852ca5-858c-49c7-be85-c03ab553af49/terraform test_working_directory=/tmp/plugintest1216778573
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-10T00:48:23.7313675Z     resource_ldap_configuration_test.go:43: Step 1/1 error: Check failed: Check 7/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-10T00:48:23.7314858Z         Check 8/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;5&quot;, got &quot;1&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-10T00:48:23.7316480Z         Check 10/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-10T00:48:23.7317538Z         Check 11/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-10T00:48:23.7318504Z         Check 12/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-10T00:48:23.7319474Z         Check 13/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.validation_type&#39; not found
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-10T00:48:23.7320421Z         Check 14/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.status&#39; not found
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-10T00:48:23.7321376Z         Check 15/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.validation_type&#39; not found
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-10T00:48:23.7322311Z         Check 16/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.status&#39; not found
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-10T00:48:23.7323266Z         Check 17/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.validation_type&#39; not found
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-10T00:48:23.7324208Z         Check 18/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.status&#39; not found
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-10T00:48:23.7324924Z --- FAIL: TestAccLDAPConfiguration_withVerify_CACertificateComplete (1184.35s)
+</code></pre></div>
+<ul>
+<li>2026-08-11 PASS 19 minutes</li>
+<li>2026-08-12 PASS 19 minutes</li>
+<li>2026-08-13 PASS 18 minutes</li>
+<li>2026-08-14 PASS 18 minutes</li>
+<li>2026-08-15 PASS 17 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 19 minutes</li>
+<li>2026-08-18 PASS 18 minutes</li>
+<li>2026-08-19 PASS 19 minutes</li>
+<li>2026-08-20 PASS 18 minutes</li>
+<li>2026-08-21 PASS 19 minutes</li>
+<li>2026-08-22 PASS 17 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24</li>
+</ul>
+<h3 id="error-2026-08-24t0039480000">Error 2026-08-24T00:39:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-24T00:39:48.9263146Z === RUN   TestAccLDAPConfiguration_withVerify_CACertificateComplete
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-24T00:39:48.9273619Z    test_name=TestAccLDAPConfiguration_withVerify_CACertificateComplete test_terraform_path=/home/runner/work/_temp/70e5ade6-9682-4c59-a862-41d39473f330/terraform test_working_directory=/tmp/plugintest773233082
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-24T00:39:48.9279031Z     resource_ldap_configuration_test.go:43: Step 1/1 error: Check failed: Check 7/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-24T00:39:48.9280763Z         Check 8/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;5&quot;, got &quot;1&quot;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-24T00:39:48.9281673Z         Check 10/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-24T00:39:48.9282554Z         Check 11/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-24T00:39:48.9283408Z         Check 12/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-08-24T00:39:48.9284199Z         Check 13/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.validation_type&#39; not found
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-08-24T00:39:48.9285019Z         Check 14/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.status&#39; not found
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-08-24T00:39:48.9285833Z         Check 15/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.validation_type&#39; not found
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-08-24T00:39:48.9286589Z         Check 16/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.status&#39; not found
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-08-24T00:39:48.9287390Z         Check 17/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.validation_type&#39; not found
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-08-24T00:39:48.9288193Z         Check 18/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.status&#39; not found
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-08-24T00:39:48.9288946Z --- FAIL: TestAccLDAPConfiguration_withVerify_CACertificateComplete (1098.48s)
+</code></pre></div>
+<ul>
+<li>2026-08-25 PASS 18 minutes</li>
+<li>2026-08-26 PASS 18 minutes</li>
+<li>2026-08-27</li>
+<li>PASS 19 minutes</li>
+<li>FAIL 19 minutes</li>
+</ul>
+<h3 id="error-2026-08-27t1132440000">Error 2026-08-27T11:32:44+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-08-27T11:32:44.4009316Z === RUN   TestAccLDAPConfiguration_withVerify_CACertificateComplete
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-08-27T11:32:44.4012508Z     resource_ldap_configuration_test.go:33: Creating execution project (1): test-acc-tf-p-5523295340976954061
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-08-27T11:32:44.4035115Z    test_terraform_path=/home/runner/work/_temp/12c717df-359b-4184-93ec-d535db598dda/terraform test_working_directory=/tmp/plugintest644518173 test_step_number=1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-08-27T11:32:44.4037710Z     resource_ldap_configuration_test.go:43: Step 1/1 error: Check failed: Check 7/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-08-27T11:32:44.4040127Z         Check 8/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;5&quot;, got &quot;1&quot;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-08-27T11:32:44.4041975Z         Check 10/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-08-27T11:32:44.4043819Z         Check 11/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-08-27T11:32:44.4045786Z         Check 12/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-08-27T11:32:44.4047564Z         Check 13/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.validation_type&#39; not found
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-08-27T11:32:44.4049349Z         Check 14/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.status&#39; not found
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-08-27T11:32:44.4051099Z         Check 15/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.validation_type&#39; not found
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-08-27T11:32:44.4052832Z         Check 16/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.status&#39; not found
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-08-27T11:32:44.4055100Z         Check 17/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.validation_type&#39; not found
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-08-27T11:32:44.4056879Z         Check 18/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.status&#39; not found
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-08-27T11:32:44.4058165Z --- FAIL: TestAccLDAPConfiguration_withVerify_CACertificateComplete (1189.55s)
+</code></pre></div>
+<ul>
 <li>2026-08-28 PASS 20 minutes</li>
 <li>2026-08-29 PASS 22 minutes</li>
 <li>2026-08-30: MISSING</li>
@@ -332,7 +420,7 @@
 <li>PASS 19 minutes</li>
 </ul>
 <h2 id="qa-environment">QA Environment</h2>
-<h2 id="error-table">Error Table</h2>
+<h2 id="error-table_1">Error Table</h2>
 <table>
 <thead>
 <tr>
@@ -343,6 +431,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="#error-2026-08-23t0041180000">2026-08-23 00:41</a></td>
+<td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,10,11,12,13,14,15,16,17,18</td>
+<td>qa</td>
+<td>1154.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-27t0848170000">2026-08-27 08:48</a></td>
+<td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,10,11,12,13,14,15,16,17,18</td>
+<td>qa</td>
+<td>1222.01s</td>
+</tr>
 <tr>
 <td><a href="#error-2026-08-30t0106020000">2026-08-30 01:06</a></td>
 <td>CheckFailure for ldap_verify.test at Step: 1 Checks: 7,8,10,11,12,13,14,15,16,17,18</td>
@@ -357,44 +457,80 @@
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 19 minutes</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 18 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 19 minutes</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23</li>
+</ul>
+<h3 id="error-2026-08-23t0041180000">Error 2026-08-23T00:41:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-08-23T00:41:18.3183820Z === RUN   TestAccLDAPConfiguration_withVerify_CACertificateComplete
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-08-23T00:41:18.3200605Z   
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-08-23T00:41:18.3201717Z     resource_ldap_configuration_test.go:43: Step 1/1 error: Check failed: Check 7/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-08-23T00:41:18.3203495Z         Check 8/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;5&quot;, got &quot;1&quot;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-08-23T00:41:18.3204892Z         Check 10/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-08-23T00:41:18.3206101Z         Check 11/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-08-23T00:41:18.3207160Z         Check 12/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-08-23T00:41:18.3208239Z         Check 13/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.validation_type&#39; not found
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-08-23T00:41:18.3209290Z         Check 14/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.status&#39; not found
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-08-23T00:41:18.3210363Z         Check 15/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.validation_type&#39; not found
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-08-23T00:41:18.3211411Z         Check 16/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.status&#39; not found
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-08-23T00:41:18.3212483Z         Check 17/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.validation_type&#39; not found
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-08-23T00:41:18.3213529Z         Check 18/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.status&#39; not found
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-08-23T00:41:18.3214616Z --- FAIL: TestAccLDAPConfiguration_withVerify_CACertificateComplete (1154.97s)
+</code></pre></div>
+<ul>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27</li>
+</ul>
+<h3 id="error-2026-08-27t0848170000">Error 2026-08-27T08:48:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-08-27T08:48:17.5030973Z === RUN   TestAccLDAPConfiguration_withVerify_CACertificateComplete
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-08-27T08:48:17.5046277Z   
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-08-27T08:48:17.5047849Z     resource_ldap_configuration_test.go:43: Step 1/1 error: Check failed: Check 7/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-08-27T08:48:17.5049010Z         Check 8/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;5&quot;, got &quot;1&quot;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-08-27T08:48:17.5050011Z         Check 10/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-08-27T08:48:17.5051354Z         Check 11/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-08-27T08:48:17.5052270Z         Check 12/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-08-27T08:48:17.5053228Z         Check 13/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.validation_type&#39; not found
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-08-27T08:48:17.5054197Z         Check 14/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.status&#39; not found
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-08-27T08:48:17.5055134Z         Check 15/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.validation_type&#39; not found
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-08-27T08:48:17.5056060Z         Check 16/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.status&#39; not found
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-08-27T08:48:17.5056988Z         Check 17/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.validation_type&#39; not found
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-08-27T08:48:17.5057885Z         Check 18/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.status&#39; not found
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-08-27T08:48:17.5058877Z --- FAIL: TestAccLDAPConfiguration_withVerify_CACertificateComplete (1222.10s)
+</code></pre></div>
+<ul>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30</li>
 </ul>
 <h3 id="error-2026-08-30t0106020000">Error 2026-08-30T01:06:02+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-30T01:06:02.6037463Z === RUN   TestAccLDAPConfiguration_withVerify_CACertificateComplete
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-30T01:06:02.6058473Z    test_name=TestAccLDAPConfiguration_withVerify_CACertificateComplete test_terraform_path=/home/runner/work/_temp/a4ab5bfa-4ddf-46b5-95ca-154690f60195/terraform
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-30T01:06:02.6060007Z     resource_ldap_configuration_test.go:43: Step 1/1 error: Check failed: Check 7/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-30T01:06:02.6061577Z         Check 8/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;5&quot;, got &quot;1&quot;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-30T01:06:02.6062935Z         Check 10/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-30T01:06:02.6064026Z         Check 11/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-30T01:06:02.6065011Z         Check 12/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-30T01:06:02.6066014Z         Check 13/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.validation_type&#39; not found
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-30T01:06:02.6066980Z         Check 14/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.status&#39; not found
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-30T01:06:02.6067972Z         Check 15/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.validation_type&#39; not found
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-30T01:06:02.6068951Z         Check 16/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.status&#39; not found
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-30T01:06:02.6069936Z         Check 17/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.validation_type&#39; not found
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-30T01:06:02.6070900Z         Check 18/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.status&#39; not found
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-30T01:06:02.6071799Z --- FAIL: TestAccLDAPConfiguration_withVerify_CACertificateComplete (1186.62s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-08-30T01:06:02.6037463Z === RUN   TestAccLDAPConfiguration_withVerify_CACertificateComplete
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-08-30T01:06:02.6058473Z    test_name=TestAccLDAPConfiguration_withVerify_CACertificateComplete test_terraform_path=/home/runner/work/_temp/a4ab5bfa-4ddf-46b5-95ca-154690f60195/terraform
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-08-30T01:06:02.6060007Z     resource_ldap_configuration_test.go:43: Step 1/1 error: Check failed: Check 7/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;status&#39; expected &quot;SUCCESS&quot;, got &quot;FAILED&quot;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-08-30T01:06:02.6061577Z         Check 8/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.#&#39; expected &quot;5&quot;, got &quot;1&quot;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-08-30T01:06:02.6062935Z         Check 10/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.0.status&#39; expected &quot;OK&quot;, got &quot;FAIL&quot;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-08-30T01:06:02.6064026Z         Check 11/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.validation_type&#39; not found
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-08-30T01:06:02.6065011Z         Check 12/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.1.status&#39; not found
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-08-30T01:06:02.6066014Z         Check 13/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.validation_type&#39; not found
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-08-30T01:06:02.6066980Z         Check 14/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.2.status&#39; not found
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-08-30T01:06:02.6067972Z         Check 15/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.validation_type&#39; not found
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-08-30T01:06:02.6068951Z         Check 16/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.3.status&#39; not found
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-08-30T01:06:02.6069936Z         Check 17/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.validation_type&#39; not found
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-08-30T01:06:02.6070900Z         Check 18/18 error: mongodbatlas_ldap_verify.test: Attribute &#39;validations.4.status&#39; not found
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-08-30T01:06:02.6071799Z --- FAIL: TestAccLDAPConfiguration_withVerify_CACertificateComplete (1186.62s)
 </code></pre></div>
 <ul>
 <li>2026-08-31: MISSING</li>

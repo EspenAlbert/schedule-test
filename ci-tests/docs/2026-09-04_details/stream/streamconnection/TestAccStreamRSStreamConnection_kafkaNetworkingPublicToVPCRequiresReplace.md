@@ -1,5 +1,5 @@
 # stream/streamconnection/TestAccStreamRSStreamConnection_kafkaNetworkingPublicToVPCRequiresReplace Test Details
-# Found 9 TestRuns in dev, qa from 2026-08-28 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9)
+# Found 17 TestRuns in dev, qa from 2026-08-21 to 2026-09-04 from master branch: 1 unique tests, PASS(x 17)
 Success rate: 100.00%
 
 ## DEV Environment
@@ -20,13 +20,13 @@ Success rate: 100.00%
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-21 PASS 29 minutes
+- 2026-08-22 PASS 13 minutes
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24 PASS 11 minutes
+- 2026-08-25 PASS 14 minutes
+- 2026-08-26 PASS 14 minutes
+- 2026-08-27 PASS 30 minutes
 - 2026-08-28
   - PASS 14 minutes
   - PASS 15 minutes
@@ -58,11 +58,11 @@ Success rate: 100.00%
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23 PASS 13 minutes
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 14 minutes
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 14 minutes

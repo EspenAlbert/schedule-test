@@ -292,8 +292,8 @@
 
 
 <h1 id="clusterclustertestacccluster_withbiconnectorgcp-test-details">cluster/cluster/TestAccCluster_WithBiConnectorGCP Test Details</h1>
-<h1 id="found-11-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-10-fail">Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 10) FAIL</h1>
-<p>Success rate: 90.91%</p>
+<h1 id="found-33-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-31-failx-2">Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 31) FAIL(x 2)</h1>
+<p>Success rate: 93.94%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h2 id="error-table">Error Table</h2>
 <table>
@@ -308,6 +308,13 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="#error-2026-08-22t0020180000">2026-08-22 00:20</a></td>
+<td>OUT_OF_CAPACITY /api/atlas/v1.0/groups/6a88eb3fcede693fdd004cc0/clusters</td>
+<td>dev</td>
+<td>out_of_capacity</td>
+<td>2.02s</td>
+</tr>
+<tr>
 <td><a href="#error-2026-09-03t0044010000">2026-09-03 00:44</a></td>
 <td></td>
 <td>dev</td>
@@ -321,26 +328,42 @@
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 25 minutes</li>
 <li>2026-08-07 PASS 24 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 25 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 24 minutes</li>
+<li>2026-08-11 PASS 25 minutes</li>
+<li>2026-08-12 PASS 24 minutes</li>
+<li>2026-08-13 PASS 25 minutes</li>
+<li>2026-08-14 PASS 27 minutes</li>
+<li>2026-08-15 PASS 23 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 23 minutes</li>
+<li>2026-08-18 PASS 33 minutes</li>
+<li>2026-08-19 PASS 25 minutes</li>
+<li>2026-08-20 PASS 23 minutes</li>
+<li>2026-08-21 PASS 22 minutes</li>
+<li>2026-08-22</li>
+</ul>
+<h3 id="error-2026-08-22t0020180000">Error 2026-08-22T00:20:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-22T00:20:18.4860932Z === RUN   TestAccCluster_WithBiConnectorGCP
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-22T00:20:22.4822962Z === CONT  TestAccCluster_WithBiConnectorGCP
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-22T00:20:24.6465374Z === NAME  TestAccCluster_WithBiConnectorGCP
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-22T00:20:24.6466300Z     resource_cluster_test.go:413: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-22T00:20:24.6466998Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-22T00:20:24.6469089Z         Error: error creating MongoDB Cluster: POST https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a88eb3fcede693fdd004cc0/clusters: 409 (request &quot;OUT_OF_CAPACITY&quot;) The requested region is currently out of capacity for the requested instance size.
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-22T00:20:24.6470278Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-22T00:20:24.6470646Z           with mongodbatlas_cluster.basic_gcp,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-22T00:20:24.6471556Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;basic_gcp&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-22T00:20:24.6472214Z           12:      resource &quot;mongodbatlas_cluster&quot; &quot;basic_gcp&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-22T00:20:24.6472558Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-22T00:20:24.6927514Z --- FAIL: TestAccCluster_WithBiConnectorGCP (2.21s)
+</code></pre></div>
+<ul>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 21 minutes</li>
+<li>2026-08-25 PASS 26 minutes</li>
+<li>2026-08-26 PASS 36 minutes</li>
+<li>2026-08-27 PASS 39 minutes</li>
 <li>2026-08-28 PASS an hour</li>
 <li>2026-08-29 PASS an hour</li>
 <li>2026-08-30: MISSING</li>
@@ -351,19 +374,19 @@
 <li>FAIL 2 hours</li>
 </ul>
 <h3 id="error-2026-09-03t0044010000">Error 2026-09-03T00:44:01+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-09-03T00:44:01.3149228Z === RUN   TestAccCluster_WithBiConnectorGCP
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-09-03T00:44:06.4698423Z === CONT  TestAccCluster_WithBiConnectorGCP
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-09-03T03:07:31.7639418Z === NAME  TestAccCluster_WithBiConnectorGCP
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-09-03T03:07:31.7639999Z     resource_cluster_test.go:413: Step 2/2 error: Error running apply: exit status 1
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-09-03T03:07:31.7640453Z         
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-09-03T03:07:31.7642608Z         Error: error updating MongoDB Cluster (test-acc-tf-c-9071846899022505488): error updating MongoDB Cluster (test-acc-tf-c-9071846899022505488): Get &quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a98c2ce8c6ee76bb0d4a130/clusters/test-acc-tf-c-9071846899022505488&quot;: dial tcp: lookup cloud-dev.mongodb.com: i/o timeout
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-09-03T03:07:31.7643935Z         
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-09-03T03:07:31.7644294Z           with mongodbatlas_cluster.basic_gcp,
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-09-03T03:07:31.7644986Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;basic_gcp&quot;:
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-09-03T03:07:31.7645630Z           12:      resource &quot;mongodbatlas_cluster&quot; &quot;basic_gcp&quot; {
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-09-03T03:07:31.7646010Z         
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-09-03T03:07:31.7852257Z    test_working_directory=/tmp/plugintest1343585006 test_step_number=2 test_name=TestAccCluster_RegionsConfig
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-09-03T03:10:24.2026961Z --- FAIL: TestAccCluster_WithBiConnectorGCP (8777.73s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-09-03T00:44:01.3149228Z === RUN   TestAccCluster_WithBiConnectorGCP
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-09-03T00:44:06.4698423Z === CONT  TestAccCluster_WithBiConnectorGCP
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-09-03T03:07:31.7639418Z === NAME  TestAccCluster_WithBiConnectorGCP
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-09-03T03:07:31.7639999Z     resource_cluster_test.go:413: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-09-03T03:07:31.7640453Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-09-03T03:07:31.7642608Z         Error: error updating MongoDB Cluster (test-acc-tf-c-9071846899022505488): error updating MongoDB Cluster (test-acc-tf-c-9071846899022505488): Get &quot;https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a98c2ce8c6ee76bb0d4a130/clusters/test-acc-tf-c-9071846899022505488&quot;: dial tcp: lookup cloud-dev.mongodb.com: i/o timeout
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-09-03T03:07:31.7643935Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-09-03T03:07:31.7644294Z           with mongodbatlas_cluster.basic_gcp,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-09-03T03:07:31.7644986Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;basic_gcp&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-09-03T03:07:31.7645630Z           12:      resource &quot;mongodbatlas_cluster&quot; &quot;basic_gcp&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-09-03T03:07:31.7646010Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-09-03T03:07:31.7852257Z    test_working_directory=/tmp/plugintest1343585006 test_step_number=2 test_name=TestAccCluster_RegionsConfig
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-09-03T03:10:24.2026961Z --- FAIL: TestAccCluster_WithBiConnectorGCP (8777.73s)
 </code></pre></div>
 <ul>
 <li>PASS an hour</li>
@@ -376,25 +399,25 @@
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 24 minutes</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 25 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 23 minutes</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23 PASS 24 minutes</li>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 23 minutes</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 21 minutes</li>

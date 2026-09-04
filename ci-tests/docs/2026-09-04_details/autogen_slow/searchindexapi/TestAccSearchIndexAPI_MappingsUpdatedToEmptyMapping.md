@@ -1,12 +1,15 @@
 # autogen_slow/searchindexapi/TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping Test Details
-# Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, FAIL(x 6) PASS(x 5)
-Success rate: 45.45%
+# Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 22) FAIL(x 11)
+Success rate: 66.67%
 
 ## DEV Environment
 ## Error Table
 
 Date | Details | Env | Error Class | Runtime
 --- | --- | --- | --- | ---
+[2026-08-14 01:22](#error-2026-08-14t0122180000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes | dev |  | 2.08s
+[2026-08-18 05:00](#error-2026-08-18t0500230000) |  | dev | timeout | 14738.06s
+[2026-08-27 03:09](#error-2026-08-27t0309330000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes | dev |  | 4.01s
 [2026-08-28 04:08](#error-2026-08-28t0408520000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a90fbd434dc94e0a78d3a78/clusters/test-acc-tf-c-1159806956717905744/search/indexes | dev |  | 3.03s
 [2026-08-29 04:57](#error-2026-08-29t0457210000) |  | dev | timeout | 14125.05s
 [2026-08-31 05:11](#error-2026-08-31t0511160000) |  | dev | timeout | 11882.04s
@@ -18,26 +21,87 @@ Date | Details | Env | Error Class | Runtime
 - 2026-08-05: MISSING
 - 2026-08-06 PASS an hour
 - 2026-08-07 PASS 59 minutes
-- 2026-08-08: MISSING
+- 2026-08-08 PASS 51 minutes
 - 2026-08-09: MISSING
-- 2026-08-10: MISSING
-- 2026-08-11: MISSING
-- 2026-08-12: MISSING
-- 2026-08-13: MISSING
-- 2026-08-14: MISSING
-- 2026-08-15: MISSING
+- 2026-08-10 PASS 2 hours
+- 2026-08-11 PASS an hour
+- 2026-08-12 PASS an hour
+- 2026-08-13 PASS an hour
+- 2026-08-14
+
+### Error 2026-08-14T01:22:18+00:00
+```
+2026-08-14T01:22:18.1413008Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-14T01:22:18.1419321Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-14T01:22:18.1456367Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-14T01:22:18.1456949Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+2026-08-14T01:22:18.1457349Z         
+2026-08-14T01:22:18.1457669Z         Error: Error calling API in Create
+2026-08-14T01:22:18.1457966Z         
+2026-08-14T01:22:18.1458478Z           with mongodbatlas_search_index_api.test,
+2026-08-14T01:22:18.1459199Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-14T01:22:18.1459886Z           12:         resource "mongodbatlas_search_index_api" "test" {
+2026-08-14T01:22:18.1460247Z         
+2026-08-14T01:22:18.1461066Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes
+2026-08-14T01:22:18.1462058Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-14T01:22:18.1462754Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-14T01:22:18.1463333Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-14T01:22:18.1463803Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (2.83s)
+```
+
+- 2026-08-15 PASS 2 hours
 - 2026-08-16: MISSING
-- 2026-08-17: MISSING
-- 2026-08-18: MISSING
-- 2026-08-19: MISSING
-- 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-17 PASS 2 hours
+- 2026-08-18
+
+### Error 2026-08-18T05:00:23+00:00
+```
+2026-08-18T05:00:23.8722109Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-18T05:00:23.8730305Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-18T05:00:23.8747021Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-18T05:00:23.8747672Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+2026-08-18T05:00:23.8748118Z         
+2026-08-18T05:00:23.8748491Z         Error: Error waiting for changes in Update
+2026-08-18T05:00:23.8748840Z         
+2026-08-18T05:00:23.8749205Z           with mongodbatlas_search_index_api.test,
+2026-08-18T05:00:23.8749929Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-18T05:00:23.8750626Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-18T05:00:23.8750998Z         
+2026-08-18T05:00:23.8751484Z         timeout while waiting for state to become 'READY, STEADY' (last state:
+2026-08-18T05:00:23.8751994Z         'BUILDING', timeout: 3h0m0s)
+2026-08-18T05:00:23.8752453Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (14738.58s)
+```
+
+- 2026-08-19 PASS 52 minutes
+- 2026-08-20 PASS an hour
+- 2026-08-21 PASS an hour
+- 2026-08-22 PASS 29 minutes
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24 PASS an hour
+- 2026-08-25 PASS 57 minutes
+- 2026-08-26 PASS an hour
+- 2026-08-27
+
+### Error 2026-08-27T03:09:33+00:00
+```
+2026-08-27T03:09:33.5352129Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-27T03:09:33.5363090Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-27T03:09:33.5601246Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-27T03:09:33.5601988Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+2026-08-27T03:09:33.5602403Z         
+2026-08-27T03:09:33.5602833Z         Error: Error calling API in Create
+2026-08-27T03:09:33.5603176Z         
+2026-08-27T03:09:33.5603544Z           with mongodbatlas_search_index_api.test,
+2026-08-27T03:09:33.5604407Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-27T03:09:33.5605123Z           12:         resource "mongodbatlas_search_index_api" "test" {
+2026-08-27T03:09:33.5605495Z         
+2026-08-27T03:09:33.5606463Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes
+2026-08-27T03:09:33.5607538Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-27T03:09:33.5608266Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-27T03:09:33.5609084Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-27T03:09:33.5609590Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (4.09s)
+```
+
 - 2026-08-28
 
 ### Error 2026-08-28T04:08:52+00:00
@@ -177,30 +241,77 @@ Date | Details | Env | Error Class | Runtime
 - 2026-09-04 PASS an hour
 
 ## QA Environment
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2026-08-13 11:37](#error-2026-08-13t1137550000) |  | qa | timeout | 11311.05s
+[2026-08-23 01:14](#error-2026-08-23t0114430000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes | qa |  | 2.03s
+
 ### Timeline
 - 2026-08-05: MISSING
 - 2026-08-06: MISSING
 - 2026-08-07: MISSING
 - 2026-08-08: MISSING
-- 2026-08-09: MISSING
+- 2026-08-09 PASS an hour
 - 2026-08-10: MISSING
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
-- 2026-08-13: MISSING
+- 2026-08-13
+
+### Error 2026-08-13T11:37:55+00:00
+```
+2026-08-13T11:37:55.4799518Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-13T11:37:55.4805887Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-13T11:37:55.4824981Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-13T11:37:55.4825585Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+2026-08-13T11:37:55.4825996Z         
+2026-08-13T11:37:55.4826341Z         Error: Error waiting for changes in Update
+2026-08-13T11:37:55.4826658Z         
+2026-08-13T11:37:55.4827004Z           with mongodbatlas_search_index_api.test,
+2026-08-13T11:37:55.4828184Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-13T11:37:55.4828849Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-13T11:37:55.4829247Z         
+2026-08-13T11:37:55.4829724Z         timeout while waiting for state to become 'READY, STEADY' (last state:
+2026-08-13T11:37:55.4830206Z         'BUILDING', timeout: 3h0m0s)
+2026-08-13T11:37:55.4830632Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (11311.53s)
+```
+
 - 2026-08-14: MISSING
 - 2026-08-15: MISSING
-- 2026-08-16: MISSING
+- 2026-08-16 PASS an hour
 - 2026-08-17: MISSING
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23
+
+### Error 2026-08-23T01:14:43+00:00
+```
+2026-08-23T01:14:43.8600070Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-23T01:14:43.8605929Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-23T01:14:43.8620987Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+2026-08-23T01:14:43.8621543Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+2026-08-23T01:14:43.8621978Z         
+2026-08-23T01:14:43.8622327Z         Error: Error calling API in Create
+2026-08-23T01:14:43.8622708Z         
+2026-08-23T01:14:43.8623095Z           with mongodbatlas_search_index_api.test,
+2026-08-23T01:14:43.8623750Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-23T01:14:43.8624360Z           12:         resource "mongodbatlas_search_index_api" "test" {
+2026-08-23T01:14:43.8624779Z         
+2026-08-23T01:14:43.8625526Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes
+2026-08-23T01:14:43.8626346Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-23T01:14:43.8626981Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-23T01:14:43.8627531Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-23T01:14:43.8628000Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (2.26s)
+```
+
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS an hour
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS an hour

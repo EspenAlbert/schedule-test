@@ -292,34 +292,34 @@
 
 
 <h1 id="advanced_clusteradvancedclustertestaccadvancedcluster_effectivebasic-test-details">advanced_cluster/advancedcluster/TestAccAdvancedCluster_effectiveBasic Test Details</h1>
-<h1 id="found-11-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-11">Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 11)</h1>
-<p>Success rate: 100.00%</p>
+<h1 id="found-33-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-32-fail">Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 32) FAIL</h1>
+<p>Success rate: 96.97%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h3 id="timeline">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 15 minutes</li>
 <li>2026-08-07 PASS 20 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 18 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 17 minutes</li>
+<li>2026-08-11 PASS 18 minutes</li>
+<li>2026-08-12 PASS 19 minutes</li>
+<li>2026-08-13 PASS 17 minutes</li>
+<li>2026-08-14 PASS 16 minutes</li>
+<li>2026-08-15 PASS 17 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 15 minutes</li>
+<li>2026-08-18 PASS 24 minutes</li>
+<li>2026-08-19 PASS 19 minutes</li>
+<li>2026-08-20 PASS 15 minutes</li>
+<li>2026-08-21 PASS 18 minutes</li>
+<li>2026-08-22 PASS 17 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 17 minutes</li>
+<li>2026-08-25 PASS 17 minutes</li>
+<li>2026-08-26 PASS 17 minutes</li>
+<li>2026-08-27 PASS 18 minutes</li>
 <li>2026-08-28 PASS 19 minutes</li>
 <li>2026-08-29 PASS 15 minutes</li>
 <li>2026-08-30: MISSING</li>
@@ -332,31 +332,73 @@
 <li>2026-09-04 PASS 38 minutes</li>
 </ul>
 <h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-09t0027220000">2026-08-09 00:27</a></td>
+<td>OUT_OF_CAPACITY /api/atlas/v2/groups/6a77c96acab0cbb77b09241b/clusters</td>
+<td>qa</td>
+<td>out_of_capacity</td>
+<td>8.01s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline_1">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09</li>
+</ul>
+<h3 id="error-2026-08-09t0027220000">Error 2026-08-09T00:27:22+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-09T00:27:22.7679076Z === RUN   TestAccAdvancedCluster_effectiveBasic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-09T00:30:03.9396125Z === CONT  TestAccAdvancedCluster_effectiveBasic
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-09T00:30:09.3883588Z === NAME  TestAccAdvancedCluster_effectiveBasic
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-09T00:30:09.3884653Z     effective_fields_test.go:16: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-09T00:30:09.3885397Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-09T00:30:09.3885915Z         Error: Error in create
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-09T00:30:09.3886411Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-09T00:30:09.3887035Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-09T00:30:09.3888444Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-09T00:30:09.3889634Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-09T00:30:09.3890238Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-09T00:30:09.3891039Z         cluster name: test-acc-tf-c-7468685494419041883, API error details:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-09T00:30:09.3913036Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a77c96acab0cbb77b09241b/clusters
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-09T00:30:09.3914780Z         POST: HTTP 409 Conflict (Error code: &quot;OUT_OF_CAPACITY&quot;) Detail: The requested
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-09T00:30:09.3916100Z         region is currently out of capacity for the requested instance size. Reason:
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-08-09T00:30:09.3917078Z         Conflict. Params: [], BadRequestDetail: 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-08-09T00:30:09.5000099Z --- FAIL: TestAccAdvancedCluster_effectiveBasic (8.13s)
+</code></pre></div>
+<ul>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 18 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 20 minutes</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23 PASS 16 minutes</li>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 16 minutes</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 15 minutes</li>

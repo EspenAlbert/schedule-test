@@ -1,6 +1,6 @@
 # encryption/encryptionatrest/TestAccEncryptionAtRest_basicAzure Test Details
-# Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 10) FAIL
-Success rate: 90.91%
+# Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 32) FAIL
+Success rate: 96.97%
 
 ## DEV Environment
 ## Error Table
@@ -13,26 +13,26 @@ Date | Details | Env | Error Class | Runtime
 - 2026-08-05: MISSING
 - 2026-08-06 PASS 5 seconds
 - 2026-08-07 PASS 6 seconds
-- 2026-08-08: MISSING
+- 2026-08-08 PASS 10 seconds
 - 2026-08-09: MISSING
-- 2026-08-10: MISSING
-- 2026-08-11: MISSING
-- 2026-08-12: MISSING
-- 2026-08-13: MISSING
-- 2026-08-14: MISSING
-- 2026-08-15: MISSING
+- 2026-08-10 PASS 6 seconds
+- 2026-08-11 PASS 7 seconds
+- 2026-08-12 PASS 7 seconds
+- 2026-08-13 PASS 4 seconds
+- 2026-08-14 PASS 5 seconds
+- 2026-08-15 PASS 5 seconds
 - 2026-08-16: MISSING
-- 2026-08-17: MISSING
-- 2026-08-18: MISSING
-- 2026-08-19: MISSING
-- 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-17 PASS 7 seconds
+- 2026-08-18 PASS 5 seconds
+- 2026-08-19 PASS 6 seconds
+- 2026-08-20 PASS 5 seconds
+- 2026-08-21 PASS 7 seconds
+- 2026-08-22 PASS 6 seconds
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24 PASS 6 seconds
+- 2026-08-25 PASS 6 seconds
+- 2026-08-26 PASS 7 seconds
+- 2026-08-27 PASS 5 seconds
 - 2026-08-28 PASS 7 seconds
 - 2026-08-29 PASS 5 seconds
 - 2026-08-30: MISSING
@@ -69,25 +69,25 @@ Date | Details | Env | Error Class | Runtime
 - 2026-08-06: MISSING
 - 2026-08-07: MISSING
 - 2026-08-08: MISSING
-- 2026-08-09: MISSING
+- 2026-08-09 PASS 6 seconds
 - 2026-08-10: MISSING
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
-- 2026-08-13: MISSING
+- 2026-08-13 PASS 4 seconds
 - 2026-08-14: MISSING
 - 2026-08-15: MISSING
-- 2026-08-16: MISSING
+- 2026-08-16 PASS 6 seconds
 - 2026-08-17: MISSING
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23 PASS 6 seconds
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 6 seconds
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 5 seconds

@@ -292,34 +292,71 @@
 
 
 <h1 id="backupcloudbackupsnapshottestaccbackuprscloudbackupsnapshot_basic-test-details">backup/cloudbackupsnapshot/TestAccBackupRSCloudBackupSnapshot_basic Test Details</h1>
-<h1 id="found-10-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-10">Found 10 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 10)</h1>
-<p>Success rate: 100.00%</p>
+<h1 id="found-32-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-31-fail">Found 32 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 31) FAIL</h1>
+<p>Success rate: 96.88%</p>
 <h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-14t0146120000">2026-08-14 01:46</a></td>
+<td></td>
+<td>dev</td>
+<td>2621.03s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 20 minutes</li>
 <li>2026-08-07 PASS 20 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 22 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 21 minutes</li>
+<li>2026-08-11 PASS 22 minutes</li>
+<li>2026-08-12 PASS 22 minutes</li>
+<li>2026-08-13 PASS 21 minutes</li>
+<li>2026-08-14</li>
+</ul>
+<h3 id="error-2026-08-14t0146120000">Error 2026-08-14T01:46:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-14T01:46:12.3312720Z === RUN   TestAccBackupRSCloudBackupSnapshot_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-14T01:46:12.3316109Z === CONT  TestAccBackupRSCloudBackupSnapshot_basic
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-14T01:46:12.3317348Z === NAME  TestAccBackupRSCloudBackupSnapshot_basic
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-14T01:46:12.3318061Z     pre_check.go:46: Time before creating cluster: 2026-08-14T00:33:00.661426915Z, ProjectID: 6a7e623533ce881fa8856c20, Cluster name: test-acc-tf-c-4748173444168261644
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-14T01:46:12.3345109Z === NAME  TestAccBackupRSCloudBackupSnapshot_basic
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-14T01:46:12.3347105Z     resource_test.go:30: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-14T01:46:12.3347545Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-14T01:46:12.3348341Z         Error: error creating a snapshot: error creating MongoDB snapshot(6a7e65e65c1e3c8ecb0cc5ae) status was: failed
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-14T01:46:12.3348848Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-14T01:46:12.3349342Z           with mongodbatlas_cloud_backup_snapshot.test,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-14T01:46:12.3350009Z           on terraform_plugin_test.tf line 37, in resource &quot;mongodbatlas_cloud_backup_snapshot&quot; &quot;test&quot;:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-14T01:46:12.3350699Z           37:      resource &quot;mongodbatlas_cloud_backup_snapshot&quot; &quot;test&quot; {
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-14T01:46:12.3351233Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-14T01:46:12.3351676Z --- FAIL: TestAccBackupRSCloudBackupSnapshot_basic (2621.28s)
+</code></pre></div>
+<ul>
+<li>2026-08-15 PASS 21 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 21 minutes</li>
+<li>2026-08-18 PASS 23 minutes</li>
+<li>2026-08-19 PASS 23 minutes</li>
+<li>2026-08-20 PASS 23 minutes</li>
+<li>2026-08-21 PASS 22 minutes</li>
+<li>2026-08-22 PASS 22 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 20 minutes</li>
+<li>2026-08-25 PASS 22 minutes</li>
+<li>2026-08-26 PASS 20 minutes</li>
+<li>2026-08-27 PASS 46 minutes</li>
 <li>2026-08-28 PASS 40 minutes</li>
 <li>2026-08-29 PASS 22 minutes</li>
 <li>2026-08-30: MISSING</li>
@@ -336,25 +373,25 @@
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 20 minutes</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 21 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 20 minutes</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23 PASS 21 minutes</li>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 21 minutes</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 22 minutes</li>

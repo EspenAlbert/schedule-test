@@ -1,5 +1,5 @@
 # autogen_fast/metricintegration/TestAccMetricIntegration_basic Test Details
-# Found 9 TestRuns in dev, qa from 2026-08-28 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9)
+# Found 25 TestRuns in dev, qa from 2026-08-13 to 2026-09-04 from master branch: 1 unique tests, PASS(x 25)
 Success rate: 100.00%
 
 ## DEV Environment
@@ -13,20 +13,20 @@ Success rate: 100.00%
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
 - 2026-08-13: MISSING
-- 2026-08-14: MISSING
-- 2026-08-15: MISSING
+- 2026-08-14 PASS 10 seconds
+- 2026-08-15 PASS 11 seconds
 - 2026-08-16: MISSING
-- 2026-08-17: MISSING
-- 2026-08-18: MISSING
-- 2026-08-19: MISSING
-- 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-17 PASS 10 seconds
+- 2026-08-18 PASS 9 seconds
+- 2026-08-19 PASS 14 seconds
+- 2026-08-20 PASS 12 seconds
+- 2026-08-21 PASS 10 seconds
+- 2026-08-22 PASS 8 seconds
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24 PASS 10 seconds
+- 2026-08-25 PASS 10 seconds
+- 2026-08-26 PASS 12 seconds
+- 2026-08-27 PASS 9 seconds
 - 2026-08-28 PASS 10 seconds
 - 2026-08-29 PASS 12 seconds
 - 2026-08-30: MISSING
@@ -48,21 +48,21 @@ Success rate: 100.00%
 - 2026-08-10: MISSING
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
-- 2026-08-13: MISSING
+- 2026-08-13 PASS 9 seconds
 - 2026-08-14: MISSING
 - 2026-08-15: MISSING
-- 2026-08-16: MISSING
+- 2026-08-16 PASS 10 seconds
 - 2026-08-17: MISSING
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23 PASS 8 seconds
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 11 seconds
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 10 seconds

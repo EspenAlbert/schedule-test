@@ -1,12 +1,14 @@
 # autogen_slow/searchindexapi/TestAccSearchIndexAPI_withStoredSourceBool Test Details
-# Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 6) FAIL(x 4) TIMEOUT
-Success rate: 54.55%
+# Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 24) FAIL(x 8) TIMEOUT
+Success rate: 72.73%
 
 ## DEV Environment
 ## Error Table
 
 Date | Details | Env | Error Class | Runtime
 --- | --- | --- | --- | ---
+[2026-08-14 01:22](#error-2026-08-14t0122180000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes | dev |  | 2.09s
+[2026-08-27 03:09](#error-2026-08-27t0309330000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes | dev |  | 2.06s
 [2026-08-28 04:08](#error-2026-08-28t0408520000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a90fbd434dc94e0a78d3a78/clusters/test-acc-tf-c-1159806956717905744/search/indexes | dev |  | 3.10s
 [2026-08-29 04:57](#error-2026-08-29t0457210000) |  | dev | timeout | 10803.01s
 [2026-09-02 04:59](#error-2026-09-02t0459000000) |  | dev | timeout | 13602.05s
@@ -17,26 +19,68 @@ Date | Details | Env | Error Class | Runtime
 - 2026-08-05: MISSING
 - 2026-08-06 PASS an hour
 - 2026-08-07 PASS 59 minutes
-- 2026-08-08: MISSING
+- 2026-08-08 PASS 50 minutes
 - 2026-08-09: MISSING
-- 2026-08-10: MISSING
-- 2026-08-11: MISSING
-- 2026-08-12: MISSING
-- 2026-08-13: MISSING
-- 2026-08-14: MISSING
-- 2026-08-15: MISSING
+- 2026-08-10 PASS 3 hours
+- 2026-08-11 PASS an hour
+- 2026-08-12 PASS an hour
+- 2026-08-13 PASS an hour
+- 2026-08-14
+
+### Error 2026-08-14T01:22:18+00:00
+```
+2026-08-14T01:22:18.1415528Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-14T01:22:18.1421174Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-14T01:22:18.1477290Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-14T01:22:18.1477821Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+2026-08-14T01:22:18.1478249Z         
+2026-08-14T01:22:18.1478577Z         Error: Error calling API in Create
+2026-08-14T01:22:18.1478883Z         
+2026-08-14T01:22:18.1479251Z           with mongodbatlas_search_index_api.test,
+2026-08-14T01:22:18.1479963Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-14T01:22:18.1480621Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-14T01:22:18.1480969Z         
+2026-08-14T01:22:18.1481926Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes
+2026-08-14T01:22:18.1482927Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-14T01:22:18.1483626Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-14T01:22:18.1484369Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-14T01:22:18.1484810Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (2.90s)
+```
+
+- 2026-08-15 PASS an hour
 - 2026-08-16: MISSING
-- 2026-08-17: MISSING
-- 2026-08-18: MISSING
-- 2026-08-19: MISSING
-- 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-17 PASS 3 hours
+- 2026-08-18 PASS 2 hours
+- 2026-08-19 PASS 58 minutes
+- 2026-08-20 PASS 57 minutes
+- 2026-08-21 PASS an hour
+- 2026-08-22 PASS an hour
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24 PASS 3 hours
+- 2026-08-25 PASS 57 minutes
+- 2026-08-26 PASS an hour
+- 2026-08-27
+
+### Error 2026-08-27T03:09:33+00:00
+```
+2026-08-27T03:09:33.5356690Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-27T03:09:33.5365370Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-27T03:09:33.5392535Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-27T03:09:33.5393528Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+2026-08-27T03:09:33.5394260Z         
+2026-08-27T03:09:33.5394832Z         Error: Error calling API in Create
+2026-08-27T03:09:33.5395379Z         
+2026-08-27T03:09:33.5396054Z           with mongodbatlas_search_index_api.test,
+2026-08-27T03:09:33.5397338Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-27T03:09:33.5398456Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-27T03:09:33.5399033Z         
+2026-08-27T03:09:33.5400786Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes
+2026-08-27T03:09:33.5402512Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-27T03:09:33.5403820Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-27T03:09:33.5404881Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-27T03:09:33.5405659Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (2.56s)
+```
+
 - 2026-08-28
 
 ### Error 2026-08-28T04:08:52+00:00
@@ -147,30 +191,77 @@ Date | Details | Env | Error Class | Runtime
 - 2026-09-04 PASS an hour
 
 ## QA Environment
+## Error Table
+
+Date | Details | Env | Error Class | Runtime
+--- | --- | --- | --- | ---
+[2026-08-13 11:37](#error-2026-08-13t1137550000) |  | qa | timeout | 12003.05s
+[2026-08-23 01:14](#error-2026-08-23t0114430000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes | qa |  | 2.07s
+
 ### Timeline
 - 2026-08-05: MISSING
 - 2026-08-06: MISSING
 - 2026-08-07: MISSING
 - 2026-08-08: MISSING
-- 2026-08-09: MISSING
+- 2026-08-09 PASS 2 hours
 - 2026-08-10: MISSING
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
-- 2026-08-13: MISSING
+- 2026-08-13
+
+### Error 2026-08-13T11:37:55+00:00
+```
+2026-08-13T11:37:55.4802352Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-13T11:37:55.4807171Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-13T11:37:55.4840925Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-13T11:37:55.4841493Z     resource_test.go:162: Step 2/2 error: Error running apply: exit status 1
+2026-08-13T11:37:55.4841894Z         
+2026-08-13T11:37:55.4842237Z         Error: Error waiting for changes in Update
+2026-08-13T11:37:55.4842551Z         
+2026-08-13T11:37:55.4842896Z           with mongodbatlas_search_index_api.test,
+2026-08-13T11:37:55.4843801Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-13T11:37:55.4844465Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-13T11:37:55.4844808Z         
+2026-08-13T11:37:55.4845272Z         timeout while waiting for state to become 'READY, STEADY' (last state:
+2026-08-13T11:37:55.4845742Z         'BUILDING', timeout: 3h0m0s)
+2026-08-13T11:37:55.4846124Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (12003.46s)
+```
+
 - 2026-08-14: MISSING
 - 2026-08-15: MISSING
-- 2026-08-16: MISSING
+- 2026-08-16 PASS an hour
 - 2026-08-17: MISSING
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23
+
+### Error 2026-08-23T01:14:43+00:00
+```
+2026-08-23T01:14:43.8602591Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-23T01:14:43.8607927Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-23T01:14:43.8678786Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+2026-08-23T01:14:43.8679314Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+2026-08-23T01:14:43.8679883Z         
+2026-08-23T01:14:43.8680249Z         Error: Error calling API in Create
+2026-08-23T01:14:43.8680586Z         
+2026-08-23T01:14:43.8680974Z           with mongodbatlas_search_index_api.test,
+2026-08-23T01:14:43.8681626Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-23T01:14:43.8682242Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-23T01:14:43.8682617Z         
+2026-08-23T01:14:43.8683337Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes
+2026-08-23T01:14:43.8684093Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-23T01:14:43.8684713Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-23T01:14:43.8685241Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-23T01:14:43.8685718Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (2.70s)
+```
+
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS an hour
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS an hour

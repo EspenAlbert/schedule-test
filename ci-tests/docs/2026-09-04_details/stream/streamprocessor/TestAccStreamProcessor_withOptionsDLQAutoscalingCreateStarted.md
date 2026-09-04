@@ -1,5 +1,5 @@
 # stream/streamprocessor/TestAccStreamProcessor_withOptionsDLQAutoscalingCreateStarted Test Details
-# Found 9 TestRuns in dev, qa from 2026-08-28 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9)
+# Found 11 TestRuns in dev, qa from 2026-08-27 to 2026-09-04 from master branch: 1 unique tests, PASS(x 11)
 Success rate: 100.00%
 
 ## DEV Environment
@@ -26,7 +26,7 @@ Success rate: 100.00%
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 8 seconds
 - 2026-08-28
   - PASS 7 seconds
   - PASS 10 seconds
@@ -62,7 +62,7 @@ Success rate: 100.00%
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 9 seconds
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 8 seconds

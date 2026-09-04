@@ -292,8 +292,8 @@
 
 
 <h1 id="autogen_slowsearchindexapitestaccsearchindexapi_withstoredsourcebool-test-details">autogen_slow/searchindexapi/TestAccSearchIndexAPI_withStoredSourceBool Test Details</h1>
-<h1 id="found-11-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-6-failx-4-timeout">Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 6) FAIL(x 4) TIMEOUT</h1>
-<p>Success rate: 54.55%</p>
+<h1 id="found-33-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-24-failx-8-timeout">Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 24) FAIL(x 8) TIMEOUT</h1>
+<p>Success rate: 72.73%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h2 id="error-table">Error Table</h2>
 <table>
@@ -307,6 +307,20 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="#error-2026-08-14t0122180000">2026-08-14 01:22</a></td>
+<td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes</td>
+<td>dev</td>
+<td></td>
+<td>2.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-27t0309330000">2026-08-27 03:09</a></td>
+<td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes</td>
+<td>dev</td>
+<td></td>
+<td>2.06s</td>
+</tr>
 <tr>
 <td><a href="#error-2026-08-28t0408520000">2026-08-28 04:08</a></td>
 <td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a90fbd434dc94e0a78d3a78/clusters/test-acc-tf-c-1159806956717905744/search/indexes</td>
@@ -349,68 +363,108 @@
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS an hour</li>
 <li>2026-08-07 PASS 59 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 50 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 3 hours</li>
+<li>2026-08-11 PASS an hour</li>
+<li>2026-08-12 PASS an hour</li>
+<li>2026-08-13 PASS an hour</li>
+<li>2026-08-14</li>
+</ul>
+<h3 id="error-2026-08-14t0122180000">Error 2026-08-14T01:22:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-14T01:22:18.1415528Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-14T01:22:18.1421174Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-14T01:22:18.1477290Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-14T01:22:18.1477821Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-14T01:22:18.1478249Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-14T01:22:18.1478577Z         Error: Error calling API in Create
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-14T01:22:18.1478883Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-14T01:22:18.1479251Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-14T01:22:18.1479963Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-14T01:22:18.1480621Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-14T01:22:18.1480969Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-14T01:22:18.1481926Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-14T01:22:18.1482927Z         POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-14T01:22:18.1483626Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-14T01:22:18.1484369Z         Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-08-14T01:22:18.1484810Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (2.90s)
+</code></pre></div>
+<ul>
+<li>2026-08-15 PASS an hour</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 3 hours</li>
+<li>2026-08-18 PASS 2 hours</li>
+<li>2026-08-19 PASS 58 minutes</li>
+<li>2026-08-20 PASS 57 minutes</li>
+<li>2026-08-21 PASS an hour</li>
+<li>2026-08-22 PASS an hour</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 3 hours</li>
+<li>2026-08-25 PASS 57 minutes</li>
+<li>2026-08-26 PASS an hour</li>
+<li>2026-08-27</li>
+</ul>
+<h3 id="error-2026-08-27t0309330000">Error 2026-08-27T03:09:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-27T03:09:33.5356690Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-27T03:09:33.5365370Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-27T03:09:33.5392535Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-27T03:09:33.5393528Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-27T03:09:33.5394260Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-27T03:09:33.5394832Z         Error: Error calling API in Create
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-27T03:09:33.5395379Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-08-27T03:09:33.5396054Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-08-27T03:09:33.5397338Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-08-27T03:09:33.5398456Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-08-27T03:09:33.5399033Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-08-27T03:09:33.5400786Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-08-27T03:09:33.5402512Z         POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;)
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-08-27T03:09:33.5403820Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-08-27T03:09:33.5404881Z         Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-08-27T03:09:33.5405659Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (2.56s)
+</code></pre></div>
+<ul>
 <li>2026-08-28</li>
 </ul>
 <h3 id="error-2026-08-28t0408520000">Error 2026-08-28T04:08:52+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-28T04:08:52.7538198Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-28T04:08:52.7547543Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-28T04:08:52.7854123Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-28T04:08:52.7855163Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-28T04:08:52.7856131Z         
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-28T04:08:52.7856720Z         Error: Error calling API in Create
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-28T04:08:52.7857269Z         
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-28T04:08:52.7857944Z           with mongodbatlas_search_index_api.test,
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-28T04:08:52.7859317Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-28T04:08:52.7860814Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-28T04:08:52.7861457Z         
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-28T04:08:52.7863081Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a90fbd434dc94e0a78d3a78/clusters/test-acc-tf-c-1159806956717905744/search/indexes
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-28T04:08:52.7864842Z         POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;)
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-28T04:08:52.7866189Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-28T04:08:52.7867300Z         Params: [listingsAndReviews], BadRequestDetail: 
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-08-28T04:08:52.7868117Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (3.99s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-08-28T04:08:52.7538198Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-08-28T04:08:52.7547543Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-08-28T04:08:52.7854123Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-08-28T04:08:52.7855163Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-08-28T04:08:52.7856131Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-08-28T04:08:52.7856720Z         Error: Error calling API in Create
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-08-28T04:08:52.7857269Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-08-28T04:08:52.7857944Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-08-28T04:08:52.7859317Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-08-28T04:08:52.7860814Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-08-28T04:08:52.7861457Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-08-28T04:08:52.7863081Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a90fbd434dc94e0a78d3a78/clusters/test-acc-tf-c-1159806956717905744/search/indexes
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-08-28T04:08:52.7864842Z         POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;)
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-08-28T04:08:52.7866189Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-08-28T04:08:52.7867300Z         Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-08-28T04:08:52.7868117Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (3.99s)
 </code></pre></div>
 <ul>
 <li>2026-08-29</li>
 </ul>
 <h3 id="error-2026-08-29t0457210000">Error 2026-08-29T04:57:21+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-29T04:57:21.0177616Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-29T04:57:21.0189429Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-29T04:57:21.0215156Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-29T04:57:21.0216058Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-29T04:57:21.0216709Z         
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-29T04:57:21.0217290Z         Error: Error waiting for changes in Create
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-29T04:57:21.0217803Z         
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-08-29T04:57:21.0218383Z           with mongodbatlas_search_index_api.test,
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-08-29T04:57:21.0219524Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-08-29T04:57:21.0220606Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-08-29T04:57:21.0221144Z         
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-08-29T04:57:21.0221658Z         group_id=&quot;6a922a3c197ad1cbd0630515&quot;,
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-08-29T04:57:21.0222381Z         cluster_name=&quot;test-acc-tf-c-5836655662705216729&quot;,
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-08-29T04:57:21.0223493Z         index_id=&quot;6a922eae874d7bc49124ad61&quot;: timeout while waiting for state to
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-08-29T04:57:21.0224516Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-08-29T04:57:21.0225588Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2026-08-29T04:57:21.0227599Z         transient error, wait before retrying to allow resource deletion to finish
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2026-08-29T04:57:21.0228535Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (10803.08s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-08-29T04:57:21.0177616Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-08-29T04:57:21.0189429Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-08-29T04:57:21.0215156Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-08-29T04:57:21.0216058Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-08-29T04:57:21.0216709Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-08-29T04:57:21.0217290Z         Error: Error waiting for changes in Create
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-08-29T04:57:21.0217803Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-08-29T04:57:21.0218383Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-08-29T04:57:21.0219524Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-08-29T04:57:21.0220606Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-08-29T04:57:21.0221144Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-08-29T04:57:21.0221658Z         group_id=&quot;6a922a3c197ad1cbd0630515&quot;,
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-08-29T04:57:21.0222381Z         cluster_name=&quot;test-acc-tf-c-5836655662705216729&quot;,
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-08-29T04:57:21.0223493Z         index_id=&quot;6a922eae874d7bc49124ad61&quot;: timeout while waiting for state to
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2026-08-29T04:57:21.0224516Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2026-08-29T04:57:21.0225588Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2026-08-29T04:57:21.0227599Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2026-08-29T04:57:21.0228535Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (10803.08s)
 </code></pre></div>
 <ul>
 <li>2026-08-30: MISSING</li>
@@ -419,86 +473,152 @@
 <li>2026-09-02</li>
 </ul>
 <h3 id="error-2026-09-02t0459000000">Error 2026-09-02T04:59:00+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-09-02T04:59:00.1913765Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-09-02T04:59:00.1924935Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-09-02T04:59:00.2095378Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-09-02T04:59:00.2095934Z     resource_test.go:162: Step 2/2 error: Error running apply: exit status 1
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-09-02T04:59:00.2096354Z         
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-09-02T04:59:00.2096706Z         Error: Error waiting for changes in Update
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-09-02T04:59:00.2097042Z         
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-09-02T04:59:00.2097417Z           with mongodbatlas_search_index_api.test,
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-09-02T04:59:00.2098137Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-09-02T04:59:00.2098812Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-09-02T04:59:00.2099173Z         
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-09-02T04:59:00.2099495Z         group_id=&quot;6a97712e7f32ed5349f9c310&quot;,
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-09-02T04:59:00.2099959Z         cluster_name=&quot;test-acc-tf-c-3797371471604204812&quot;,
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-09-02T04:59:00.2100867Z         index_id=&quot;6a97767379ec95325857a119&quot;: timeout while waiting for state to
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-09-02T04:59:00.2101523Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-09-02T04:59:00.2102024Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (13602.49s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-09-02T04:59:00.1913765Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-09-02T04:59:00.1924935Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-09-02T04:59:00.2095378Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-09-02T04:59:00.2095934Z     resource_test.go:162: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-09-02T04:59:00.2096354Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-09-02T04:59:00.2096706Z         Error: Error waiting for changes in Update
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-09-02T04:59:00.2097042Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-09-02T04:59:00.2097417Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-09-02T04:59:00.2098137Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-09-02T04:59:00.2098812Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-09-02T04:59:00.2099173Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-09-02T04:59:00.2099495Z         group_id=&quot;6a97712e7f32ed5349f9c310&quot;,
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-09-02T04:59:00.2099959Z         cluster_name=&quot;test-acc-tf-c-3797371471604204812&quot;,
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-09-02T04:59:00.2100867Z         index_id=&quot;6a97767379ec95325857a119&quot;: timeout while waiting for state to
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-09-02T04:59:00.2101523Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-09-02T04:59:00.2102024Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (13602.49s)
 </code></pre></div>
 <ul>
 <li>2026-09-03</li>
 <li>TIMEOUT 4 hours</li>
 </ul>
 <h3 id="error-2026-09-03t0544170000">Error 2026-09-03T05:44:17+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-09-03T05:44:17.7102914Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-09-03T05:44:17.7112320Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-09-03T05:44:17.7247736Z panic: test timed out after 5h0m0s
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-09-03T05:44:17.7248208Z    running tests:
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-09-03T05:44:17.7248761Z        TestAccSearchIndexAPI_withStoredSourceBool (4h40m59s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-09-03T05:44:17.7102914Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-09-03T05:44:17.7112320Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-09-03T05:44:17.7247736Z panic: test timed out after 5h0m0s
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-09-03T05:44:17.7248208Z    running tests:
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-09-03T05:44:17.7248761Z        TestAccSearchIndexAPI_withStoredSourceBool (4h40m59s)
 </code></pre></div>
 <ul>
 <li>FAIL 3 hours</li>
 </ul>
 <h3 id="error-2026-09-03t1002470000">Error 2026-09-03T10:02:47+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-09-03T10:02:47.0690632Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-09-03T10:02:47.0696337Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-09-03T10:02:47.0821418Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-09-03T10:02:47.0822005Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-09-03T10:02:47.0822443Z         
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-09-03T10:02:47.0822825Z         Error: Error waiting for changes in Create
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-09-03T10:02:47.0823190Z         
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-09-03T10:02:47.0823589Z           with mongodbatlas_search_index_api.test,
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-09-03T10:02:47.0824351Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-09-03T10:02:47.0825076Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-09-03T10:02:47.0825477Z         
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-09-03T10:02:47.0825815Z         group_id=&quot;6a99146d72d7295ca98dbca0&quot;,
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-09-03T10:02:47.0826302Z         cluster_name=&quot;test-acc-tf-c-571919649677458254&quot;,
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-09-03T10:02:47.0827074Z         index_id=&quot;6a99189a72d7295ca9908e51&quot;: timeout while waiting for state to
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-09-03T10:02:47.0827738Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-09-03T10:02:47.0828436Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-09-03T10:02:47.0829379Z         transient error, wait before retrying to allow resource deletion to finish
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-09-03T10:02:47.0830413Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (10805.66s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-09-03T10:02:47.0690632Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-09-03T10:02:47.0696337Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-09-03T10:02:47.0821418Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-09-03T10:02:47.0822005Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-09-03T10:02:47.0822443Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-09-03T10:02:47.0822825Z         Error: Error waiting for changes in Create
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-09-03T10:02:47.0823190Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-09-03T10:02:47.0823589Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-09-03T10:02:47.0824351Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-09-03T10:02:47.0825076Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-09-03T10:02:47.0825477Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-09-03T10:02:47.0825815Z         group_id=&quot;6a99146d72d7295ca98dbca0&quot;,
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-09-03T10:02:47.0826302Z         cluster_name=&quot;test-acc-tf-c-571919649677458254&quot;,
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-09-03T10:02:47.0827074Z         index_id=&quot;6a99189a72d7295ca9908e51&quot;: timeout while waiting for state to
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-09-03T10:02:47.0827738Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2026-09-03T10:02:47.0828436Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2026-09-03T10:02:47.0829379Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2026-09-03T10:02:47.0830413Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (10805.66s)
 </code></pre></div>
 <ul>
 <li>2026-09-04 PASS an hour</li>
 </ul>
 <h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-13t1137550000">2026-08-13 11:37</a></td>
+<td></td>
+<td>qa</td>
+<td>timeout</td>
+<td>12003.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-23t0114430000">2026-08-23 01:14</a></td>
+<td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes</td>
+<td>qa</td>
+<td></td>
+<td>2.07s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline_1">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 2 hours</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13</li>
+</ul>
+<h3 id="error-2026-08-13t1137550000">Error 2026-08-13T11:37:55+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-08-13T11:37:55.4802352Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-08-13T11:37:55.4807171Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-08-13T11:37:55.4840925Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-08-13T11:37:55.4841493Z     resource_test.go:162: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-08-13T11:37:55.4841894Z         
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-08-13T11:37:55.4842237Z         Error: Error waiting for changes in Update
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-08-13T11:37:55.4842551Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-08-13T11:37:55.4842896Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-08-13T11:37:55.4843801Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-08-13T11:37:55.4844465Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-08-13T11:37:55.4844808Z         
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-08-13T11:37:55.4845272Z         timeout while waiting for state to become &#39;READY, STEADY&#39; (last state:
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-08-13T11:37:55.4845742Z         &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-08-13T11:37:55.4846124Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (12003.46s)
+</code></pre></div>
+<ul>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS an hour</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23</li>
+</ul>
+<h3 id="error-2026-08-23t0114430000">Error 2026-08-23T01:14:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-08-23T01:14:43.8602591Z === RUN   TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-08-23T01:14:43.8607927Z === CONT  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-08-23T01:14:43.8678786Z === NAME  TestAccSearchIndexAPI_withStoredSourceBool
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-08-23T01:14:43.8679314Z     resource_test.go:162: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-08-23T01:14:43.8679883Z         
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-08-23T01:14:43.8680249Z         Error: Error calling API in Create
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-08-23T01:14:43.8680586Z         
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-08-23T01:14:43.8680974Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-08-23T01:14:43.8681626Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-08-23T01:14:43.8682242Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-08-23T01:14:43.8682617Z         
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2026-08-23T01:14:43.8683337Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2026-08-23T01:14:43.8684093Z         POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;)
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2026-08-23T01:14:43.8684713Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2026-08-23T01:14:43.8685241Z         Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2026-08-23T01:14:43.8685718Z --- FAIL: TestAccSearchIndexAPI_withStoredSourceBool (2.70s)
+</code></pre></div>
+<ul>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS an hour</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS an hour</li>

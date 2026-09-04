@@ -292,8 +292,8 @@
 
 
 <h1 id="search_indexsearchindextestaccsearchindex_basic-test-details">search_index/searchindex/TestAccSearchIndex_basic Test Details</h1>
-<h1 id="found-10-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-9-fail">Found 10 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9) FAIL</h1>
-<p>Success rate: 90.00%</p>
+<h1 id="found-32-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-30-failx-2">Found 32 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 30) FAIL(x 2)</h1>
+<p>Success rate: 93.75%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h2 id="error-table">Error Table</h2>
 <table>
@@ -307,6 +307,12 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="#error-2026-08-27t0146500000">2026-08-27 01:46</a></td>
+<td></td>
+<td>dev</td>
+<td>1018.03s</td>
+</tr>
+<tr>
 <td><a href="#error-2026-08-28t0322580000">2026-08-28 03:22</a></td>
 <td>ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a90fba963fde9550ed152ff/clusters/test-acc-tf-c-3901854463039680436/search/indexes</td>
 <td>dev</td>
@@ -319,43 +325,83 @@
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 15 minutes</li>
 <li>2026-08-07 PASS 14 seconds</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 15 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 14 seconds</li>
+<li>2026-08-11 PASS 15 minutes</li>
+<li>2026-08-12 PASS 12 seconds</li>
+<li>2026-08-13 PASS 16 minutes</li>
+<li>2026-08-14 PASS 12 seconds</li>
+<li>2026-08-15 PASS 15 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 16 seconds</li>
+<li>2026-08-18 PASS 16 minutes</li>
+<li>2026-08-19 PASS 12 seconds</li>
+<li>2026-08-20 PASS 15 minutes</li>
+<li>2026-08-21 PASS 14 seconds</li>
+<li>2026-08-22 PASS 15 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 12 seconds</li>
+<li>2026-08-25 PASS 15 minutes</li>
+<li>2026-08-26 PASS 13 seconds</li>
+<li>2026-08-27</li>
+</ul>
+<h3 id="error-2026-08-27t0146500000">Error 2026-08-27T01:46:50+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-27T01:46:50.6648577Z === RUN   TestAccSearchIndex_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-27T01:46:50.6650245Z     resource_search_index_test.go:17: Creating execution project (1): test-acc-tf-p-8137707421418386857
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-27T01:46:53.0340311Z     resource_search_index_test.go:17: Creating execution cluster: test-acc-tf-c-714542849431786712
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-27T01:46:54.0932862Z 2026/08/27 01:46:54 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-27T01:49:54.4841178Z 2026/08/27 01:49:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-27T01:50:54.7802017Z 2026/08/27 01:50:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-27T01:51:04.9272454Z 2026/08/27 01:51:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-27T01:52:05.1201751Z 2026/08/27 01:52:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-27T01:52:15.2613859Z 2026/08/27 01:52:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-27T01:53:15.4875478Z 2026/08/27 01:53:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-27T01:53:25.6273990Z 2026/08/27 01:53:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-27T01:54:25.9200432Z 2026/08/27 01:54:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-27T01:54:36.0565928Z 2026/08/27 01:54:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-27T01:55:36.2618465Z 2026/08/27 01:55:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-27T01:55:46.3881257Z 2026/08/27 01:55:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-08-27T01:56:46.6354903Z 2026/08/27 01:56:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-08-27T01:56:56.8017841Z 2026/08/27 01:56:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-08-27T01:57:57.0604164Z 2026/08/27 01:57:57 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2026-08-27T01:58:07.2209048Z 2026/08/27 01:58:07 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2026-08-27T01:59:07.5225981Z 2026/08/27 01:59:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2026-08-27T01:59:17.6540885Z 2026/08/27 01:59:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2026-08-27T02:00:17.9699802Z 2026/08/27 02:00:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2026-08-27T02:00:28.1131279Z 2026/08/27 02:00:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2026-08-27T02:01:28.3293002Z 2026/08/27 02:01:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2026-08-27T02:01:38.4602794Z 2026/08/27 02:01:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2026-08-27T02:02:38.6083336Z 2026/08/27 02:02:38 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2026-08-27T02:02:48.8874926Z 2026/08/27 02:02:48 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2026-08-27T02:03:49.0042231Z     resource_search_index_test.go:17: 
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2026-08-27T02:03:49.0043976Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:203
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2026-08-27T02:03:49.0049168Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:178
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2026-08-27T02:03:49.0051654Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/searchindex/resource_search_index_test.go:275
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2026-08-27T02:03:49.0055220Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/service/searchindex/resource_search_index_test.go:17
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>2026-08-27T02:03:49.0056552Z            Error:          Received unexpected error:
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>2026-08-27T02:03:49.0057864Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>2026-08-27T02:03:49.0058482Z            Test:           TestAccSearchIndex_basic
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>2026-08-27T02:03:49.0058841Z --- FAIL: TestAccSearchIndex_basic (1018.34s)
+</code></pre></div>
+<ul>
 <li>2026-08-28</li>
 </ul>
 <h3 id="error-2026-08-28t0322580000">Error 2026-08-28T03:22:58+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-28T03:22:58.3168665Z === RUN   TestAccSearchIndex_basic
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-28T04:04:23.6158320Z === CONT  TestAccSearchIndex_basic
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-28T04:04:26.5473021Z    test_working_directory=/tmp/plugintest1851924255 test_terraform_path=/home/runner/work/_temp/70f82674-c306-4281-b045-24c1673e4a2c/terraform test_name=TestAccSearchIndex_withVectorAutoEmbed test_step_number=1
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-28T04:04:26.7929574Z === NAME  TestAccSearchIndex_basic
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-28T04:04:26.7930125Z     resource_search_index_test.go:17: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-28T04:04:26.7930576Z         
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-28T04:04:26.7932472Z         Error: error creating index: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a90fba963fde9550ed152ff/clusters/test-acc-tf-c-3901854463039680436/search/indexes POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;) Detail: Collection listingsAndReviews was not found. Reason: Bad Request. Params: [listingsAndReviews], BadRequestDetail: 
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-28T04:04:26.7933550Z         
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-28T04:04:26.7933861Z           with mongodbatlas_search_index.test,
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-28T04:04:26.7934403Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index&quot; &quot;test&quot;:
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-28T04:04:26.7934985Z           12:      resource &quot;mongodbatlas_search_index&quot; &quot;test&quot; {
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-28T04:04:26.7935256Z         
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-28T04:04:26.8298399Z    test_name=TestAccSearchIndex_withStoredSourceTrue test_terraform_path=/home/runner/work/_temp/70f82674-c306-4281-b045-24c1673e4a2c/terraform test_working_directory=/tmp/plugintest2232694947 test_step_number=1
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-28T04:04:26.8362433Z --- FAIL: TestAccSearchIndex_basic (3.34s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-28T03:22:58.3168665Z === RUN   TestAccSearchIndex_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-28T04:04:23.6158320Z === CONT  TestAccSearchIndex_basic
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-28T04:04:26.5473021Z    test_working_directory=/tmp/plugintest1851924255 test_terraform_path=/home/runner/work/_temp/70f82674-c306-4281-b045-24c1673e4a2c/terraform test_name=TestAccSearchIndex_withVectorAutoEmbed test_step_number=1
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-28T04:04:26.7929574Z === NAME  TestAccSearchIndex_basic
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-28T04:04:26.7930125Z     resource_search_index_test.go:17: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-28T04:04:26.7930576Z         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-28T04:04:26.7932472Z         Error: error creating index: https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a90fba963fde9550ed152ff/clusters/test-acc-tf-c-3901854463039680436/search/indexes POST: HTTP 400 Bad Request (Error code: &quot;ATLAS_SEARCH_COLLECTION_NOT_FOUND&quot;) Detail: Collection listingsAndReviews was not found. Reason: Bad Request. Params: [listingsAndReviews], BadRequestDetail: 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-08-28T04:04:26.7933550Z         
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-08-28T04:04:26.7933861Z           with mongodbatlas_search_index.test,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-08-28T04:04:26.7934403Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index&quot; &quot;test&quot;:
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-08-28T04:04:26.7934985Z           12:      resource &quot;mongodbatlas_search_index&quot; &quot;test&quot; {
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-08-28T04:04:26.7935256Z         
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-08-28T04:04:26.8298399Z    test_name=TestAccSearchIndex_withStoredSourceTrue test_terraform_path=/home/runner/work/_temp/70f82674-c306-4281-b045-24c1673e4a2c/terraform test_working_directory=/tmp/plugintest2232694947 test_step_number=1
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-08-28T04:04:26.8362433Z --- FAIL: TestAccSearchIndex_basic (3.34s)
 </code></pre></div>
 <ul>
 <li>2026-08-29 PASS 18 minutes</li>
@@ -373,25 +419,25 @@
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 12 seconds</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 13 seconds</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 12 seconds</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23 PASS 13 seconds</li>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 31 seconds</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 18 seconds</li>

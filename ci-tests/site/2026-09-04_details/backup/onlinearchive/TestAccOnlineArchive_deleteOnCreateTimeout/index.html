@@ -292,8 +292,8 @@
 
 
 <h1 id="backuponlinearchivetestacconlinearchive_deleteoncreatetimeout-test-details">backup/onlinearchive/TestAccOnlineArchive_deleteOnCreateTimeout Test Details</h1>
-<h1 id="found-10-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-9-fail">Found 10 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9) FAIL</h1>
-<p>Success rate: 90.00%</p>
+<h1 id="found-32-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-28-failx-4">Found 32 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 28) FAIL(x 4)</h1>
+<p>Success rate: 87.50%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h2 id="error-table">Error Table</h2>
 <table>
@@ -311,6 +311,12 @@
 <td></td>
 <td>dev</td>
 <td>1100.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-14t0146120000">2026-08-14 01:46</a></td>
+<td></td>
+<td>dev</td>
+<td>1069.05s</td>
 </tr>
 </tbody>
 </table>
@@ -330,26 +336,37 @@
 </code></pre></div>
 <ul>
 <li>2026-08-07 PASS 18 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 18 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 18 minutes</li>
+<li>2026-08-11 PASS 17 minutes</li>
+<li>2026-08-12 PASS 18 minutes</li>
+<li>2026-08-13 PASS 17 minutes</li>
+<li>2026-08-14</li>
+</ul>
+<h3 id="error-2026-08-14t0146120000">Error 2026-08-14T01:46:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-14T01:46:12.3409191Z === RUN   TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-14T01:46:12.3411167Z === CONT  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-14T01:46:12.3413590Z === NAME  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-14T01:46:12.3414395Z     pre_check.go:46: Time before creating cluster: 2026-08-14T00:53:03.704822358Z, ProjectID: 6a7e66e35c1e3c8ecb0d0c0d, Cluster name: test-acc-tf-c-5638388944339534559
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-14T01:46:12.3429467Z === NAME  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-14T01:46:12.3430163Z     resource_test.go:536: Step 1/2 error: Check failed: unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-14T01:46:12.3433536Z --- FAIL: TestAccOnlineArchive_deleteOnCreateTimeout (1069.50s)
+</code></pre></div>
+<ul>
+<li>2026-08-15 PASS 19 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 17 minutes</li>
+<li>2026-08-18 PASS 17 minutes</li>
+<li>2026-08-19 PASS 18 minutes</li>
+<li>2026-08-20 PASS 18 minutes</li>
+<li>2026-08-21 PASS 19 minutes</li>
+<li>2026-08-22 PASS 20 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 17 minutes</li>
+<li>2026-08-25 PASS 17 minutes</li>
+<li>2026-08-26 PASS 17 minutes</li>
+<li>2026-08-27 PASS 39 minutes</li>
 <li>2026-08-28 PASS 32 minutes</li>
 <li>2026-08-29 PASS 20 minutes</li>
 <li>2026-08-30: MISSING</li>
@@ -360,31 +377,81 @@
 <li>2026-09-04 PASS 19 minutes</li>
 </ul>
 <h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-16t0112380000">2026-08-16 01:12</a></td>
+<td></td>
+<td>qa</td>
+<td>timeout</td>
+<td>1905.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-23t0111420000">2026-08-23 01:11</a></td>
+<td></td>
+<td>qa</td>
+<td>timeout</td>
+<td>1879.07s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline_1">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 16 minutes</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 18 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16</li>
+</ul>
+<h3 id="error-2026-08-16t0112380000">Error 2026-08-16T01:12:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-08-16T01:12:38.8137988Z === RUN   TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-08-16T01:12:38.8140249Z === CONT  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-08-16T01:12:38.8142877Z === NAME  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-08-16T01:12:38.8143900Z     pre_check.go:46: Time before creating cluster: 2026-08-16T00:40:57.302351535Z, ProjectID: 6a81071150246cd6ebc4b236, Cluster name: test-acc-tf-c-5298725601211156417
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-08-16T01:12:38.8166886Z === NAME  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-08-16T01:12:38.8167829Z     resource_test.go:536: Step 1/2 error: Check failed: timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-08-16T01:12:38.8186967Z --- FAIL: TestAccOnlineArchive_deleteOnCreateTimeout (1905.93s)
+</code></pre></div>
+<ul>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23</li>
+</ul>
+<h3 id="error-2026-08-23t0111420000">Error 2026-08-23T01:11:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-08-23T01:11:42.7193334Z === RUN   TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-08-23T01:11:42.7196251Z === CONT  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-08-23T01:11:42.7198713Z === NAME  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-08-23T01:11:42.7199547Z     pre_check.go:46: Time before creating cluster: 2026-08-23T00:40:32.302394968Z, ProjectID: 6a8a4174852bf2142d1b8c55, Cluster name: test-acc-tf-c-9000159541839541065
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-08-23T01:11:42.7226476Z === NAME  TestAccOnlineArchive_deleteOnCreateTimeout
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-08-23T01:11:42.7227262Z     resource_test.go:536: Step 1/2 error: Check failed: timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-08-23T01:11:42.7228470Z --- FAIL: TestAccOnlineArchive_deleteOnCreateTimeout (1879.69s)
+</code></pre></div>
+<ul>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 16 minutes</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 19 minutes</li>

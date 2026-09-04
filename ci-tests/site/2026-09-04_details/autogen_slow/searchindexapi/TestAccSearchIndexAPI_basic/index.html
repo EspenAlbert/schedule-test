@@ -292,8 +292,8 @@
 
 
 <h1 id="autogen_slowsearchindexapitestaccsearchindexapi_basic-test-details">autogen_slow/searchindexapi/TestAccSearchIndexAPI_basic Test Details</h1>
-<h1 id="found-11-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-9-failx-2">Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9) FAIL(x 2)</h1>
-<p>Success rate: 81.82%</p>
+<h1 id="found-34-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-28-failx-6">Found 34 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 28) FAIL(x 6)</h1>
+<p>Success rate: 82.35%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h2 id="error-table">Error Table</h2>
 <table>
@@ -307,6 +307,20 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="#error-2026-08-14t0122180000">2026-08-14 01:22</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>867.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-27t0309330000">2026-08-27 03:09</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>940.01s</td>
+</tr>
 <tr>
 <td><a href="#error-2026-08-28t0408520000">2026-08-28 04:08</a></td>
 <td></td>
@@ -328,61 +342,132 @@
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS an hour</li>
 <li>2026-08-07 PASS 57 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 34 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 33 minutes</li>
+<li>2026-08-11 PASS 39 minutes</li>
+<li>2026-08-12 PASS 51 minutes</li>
+<li>2026-08-13 PASS 50 minutes</li>
+<li>2026-08-14</li>
+</ul>
+<h3 id="error-2026-08-14t0122180000">Error 2026-08-14T01:22:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-14T01:22:18.1394583Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-14T01:22:18.1395251Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-1420435862004403352
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-14T01:22:18.1395984Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-4366285902860641581
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-14T01:22:18.1396522Z 2026/08/14 00:33:40 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-14T01:22:18.1396956Z 2026/08/14 00:36:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-14T01:22:18.1397371Z 2026/08/14 00:37:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-14T01:22:18.1398029Z 2026/08/14 00:37:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-14T01:22:18.1398426Z 2026/08/14 00:38:51 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-14T01:22:18.1398818Z 2026/08/14 00:39:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-14T01:22:18.1399198Z 2026/08/14 00:40:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-14T01:22:18.1399568Z 2026/08/14 00:40:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-14T01:22:18.1399984Z 2026/08/14 00:41:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-14T01:22:18.1400338Z 2026/08/14 00:41:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-14T01:22:18.1400698Z 2026/08/14 00:42:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-14T01:22:18.1401059Z 2026/08/14 00:42:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-08-14T01:22:18.1401427Z 2026/08/14 00:43:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-08-14T01:22:18.1402025Z 2026/08/14 00:43:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-08-14T01:22:18.1402411Z 2026/08/14 00:44:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2026-08-14T01:22:18.1402780Z 2026/08/14 00:44:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2026-08-14T01:22:18.1403141Z 2026/08/14 00:45:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2026-08-14T01:22:18.1403529Z 2026/08/14 00:46:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2026-08-14T01:22:18.1403959Z 2026/08/14 00:47:04 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2026-08-14T01:22:18.1404389Z     resource_test.go:22: 
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2026-08-14T01:22:18.1405526Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:198
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2026-08-14T01:22:18.1407543Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2026-08-14T01:22:18.1408373Z            Error:          Received unexpected error:
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2026-08-14T01:22:18.1409286Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2026-08-14T01:22:18.1410047Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2026-08-14T01:22:18.1410432Z --- FAIL: TestAccSearchIndexAPI_basic (867.89s)
+</code></pre></div>
+<ul>
+<li>2026-08-15 PASS an hour</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 37 minutes</li>
+<li>2026-08-18 PASS 34 minutes</li>
+<li>2026-08-19 PASS an hour</li>
+<li>2026-08-20 PASS an hour</li>
+<li>2026-08-21 PASS an hour</li>
+<li>2026-08-22 PASS an hour</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 57 minutes</li>
+<li>2026-08-25 PASS 35 minutes</li>
+<li>2026-08-26 PASS 46 minutes</li>
+<li>2026-08-27</li>
+<li>FAIL 15 minutes</li>
+</ul>
+<h3 id="error-2026-08-27t0309330000">Error 2026-08-27T03:09:33+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-27T03:09:33.5306388Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-27T03:09:33.5308315Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-948992123363940925
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-27T03:09:33.5310872Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-3874715849736483179
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-27T03:09:33.5312600Z 2026/08/27 01:47:40 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-27T03:09:33.5313841Z 2026/08/27 01:50:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-27T03:09:33.5314992Z 2026/08/27 01:51:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-27T03:09:33.5315849Z 2026/08/27 01:51:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-08-27T03:09:33.5316704Z 2026/08/27 01:52:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-08-27T03:09:33.5317540Z 2026/08/27 01:53:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-08-27T03:09:33.5318379Z 2026/08/27 01:54:02 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-08-27T03:09:33.5319209Z 2026/08/27 01:54:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-08-27T03:09:33.5320051Z 2026/08/27 01:55:13 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-08-27T03:09:33.5321157Z 2026/08/27 01:55:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-08-27T03:09:33.5322037Z 2026/08/27 01:56:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-08-27T03:09:33.5322881Z 2026/08/27 01:56:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-08-27T03:09:33.5323663Z 2026/08/27 01:57:34 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2026-08-27T03:09:33.5324385Z 2026/08/27 01:57:44 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2026-08-27T03:09:33.5325103Z 2026/08/27 01:58:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2026-08-27T03:09:33.5325806Z 2026/08/27 01:58:55 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2026-08-27T03:09:33.5326533Z 2026/08/27 01:59:55 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2026-08-27T03:09:33.5327277Z 2026/08/27 02:00:05 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2026-08-27T03:09:33.5327978Z 2026/08/27 02:01:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2026-08-27T03:09:33.5328665Z 2026/08/27 02:01:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>2026-08-27T03:09:33.5329434Z 2026/08/27 02:02:17 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>2026-08-27T03:09:33.5330212Z     resource_test.go:22: 
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>2026-08-27T03:09:33.5334214Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:203
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>2026-08-27T03:09:33.5337869Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:178
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>2026-08-27T03:09:33.5342240Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>2026-08-27T03:09:33.5343907Z            Error:          Received unexpected error:
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>2026-08-27T03:09:33.5345613Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>2026-08-27T03:09:33.5346685Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>2026-08-27T03:09:33.5347351Z --- FAIL: TestAccSearchIndexAPI_basic (940.10s)
+</code></pre></div>
+<ul>
+<li>PASS 37 minutes</li>
 <li>2026-08-28</li>
 </ul>
 <h3 id="error-2026-08-28t0408520000">Error 2026-08-28T04:08:52+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-28T04:08:52.7492395Z === RUN   TestAccSearchIndexAPI_basic
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-28T04:08:52.7493526Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3754780286845484878
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-28T04:08:52.7494868Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1159806956717905744
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-28T04:08:52.7495842Z 2026/08/28 03:09:11 [DEBUG] Waiting for state to become: [IDLE]
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-28T04:08:52.7496620Z 2026/08/28 03:12:11 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-28T04:08:52.7497633Z 2026/08/28 03:13:11 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-28T04:08:52.7498468Z 2026/08/28 03:13:21 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-28T04:08:52.7499197Z 2026/08/28 03:14:22 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-28T04:08:52.7499893Z 2026/08/28 03:14:32 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-28T04:08:52.7500846Z 2026/08/28 03:15:32 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-28T04:08:52.7501557Z 2026/08/28 03:15:42 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-28T04:08:52.7502252Z 2026/08/28 03:16:42 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-28T04:08:52.7502945Z 2026/08/28 03:16:53 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-28T04:08:52.7503632Z 2026/08/28 03:17:53 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-28T04:08:52.7504329Z 2026/08/28 03:18:03 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-08-28T04:08:52.7504999Z 2026/08/28 03:19:03 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-08-28T04:08:52.7505662Z 2026/08/28 03:19:14 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-08-28T04:08:52.7506360Z 2026/08/28 03:20:14 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2026-08-28T04:08:52.7507052Z 2026/08/28 03:20:25 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2026-08-28T04:08:52.7507742Z 2026/08/28 03:21:25 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2026-08-28T04:08:52.7508438Z 2026/08/28 03:21:35 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2026-08-28T04:08:52.7509128Z 2026/08/28 03:22:35 [TRACE] Waiting 10s before next try
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2026-08-28T04:08:52.7509815Z 2026/08/28 03:22:45 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2026-08-28T04:08:52.7510897Z 2026/08/28 03:23:46 [DEBUG] Waiting for state to become: [COMPLETED]
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2026-08-28T04:08:52.7511690Z     resource_test.go:22: 
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2026-08-28T04:08:52.7515430Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:203
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2026-08-28T04:08:52.7519228Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:178
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2026-08-28T04:08:52.7523593Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2026-08-28T04:08:52.7525201Z            Error:          Received unexpected error:
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2026-08-28T04:08:52.7526939Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2026-08-28T04:08:52.7528009Z            Test:           TestAccSearchIndexAPI_basic
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2026-08-28T04:08:52.7528668Z --- FAIL: TestAccSearchIndexAPI_basic (938.31s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-08-28T04:08:52.7492395Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-08-28T04:08:52.7493526Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3754780286845484878
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-08-28T04:08:52.7494868Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1159806956717905744
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-08-28T04:08:52.7495842Z 2026/08/28 03:09:11 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-08-28T04:08:52.7496620Z 2026/08/28 03:12:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-08-28T04:08:52.7497633Z 2026/08/28 03:13:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-08-28T04:08:52.7498468Z 2026/08/28 03:13:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-08-28T04:08:52.7499197Z 2026/08/28 03:14:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-08-28T04:08:52.7499893Z 2026/08/28 03:14:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-08-28T04:08:52.7500846Z 2026/08/28 03:15:32 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-08-28T04:08:52.7501557Z 2026/08/28 03:15:42 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-08-28T04:08:52.7502252Z 2026/08/28 03:16:42 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-08-28T04:08:52.7502945Z 2026/08/28 03:16:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-08-28T04:08:52.7503632Z 2026/08/28 03:17:53 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-08-28T04:08:52.7504329Z 2026/08/28 03:18:03 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-08-28T04:08:52.7504999Z 2026/08/28 03:19:03 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2026-08-28T04:08:52.7505662Z 2026/08/28 03:19:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2026-08-28T04:08:52.7506360Z 2026/08/28 03:20:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2026-08-28T04:08:52.7507052Z 2026/08/28 03:20:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2026-08-28T04:08:52.7507742Z 2026/08/28 03:21:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2026-08-28T04:08:52.7508438Z 2026/08/28 03:21:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>2026-08-28T04:08:52.7509128Z 2026/08/28 03:22:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>2026-08-28T04:08:52.7509815Z 2026/08/28 03:22:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>2026-08-28T04:08:52.7510897Z 2026/08/28 03:23:46 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>2026-08-28T04:08:52.7511690Z     resource_test.go:22: 
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>2026-08-28T04:08:52.7515430Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:203
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>2026-08-28T04:08:52.7519228Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:178
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>2026-08-28T04:08:52.7523593Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>2026-08-28T04:08:52.7525201Z            Error:          Received unexpected error:
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>2026-08-28T04:08:52.7526939Z                            unexpected state &#39;FAILED&#39;, wanted target &#39;COMPLETED&#39;. last error: %!s(&lt;nil&gt;)
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>2026-08-28T04:08:52.7528009Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>2026-08-28T04:08:52.7528668Z --- FAIL: TestAccSearchIndexAPI_basic (938.31s)
 </code></pre></div>
 <ul>
 <li>2026-08-29 PASS an hour</li>
@@ -395,80 +480,190 @@
 <li>FAIL 3 hours</li>
 </ul>
 <h3 id="error-2026-09-03t1002470000">Error 2026-09-03T10:02:47+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-09-03T10:02:47.0668173Z === RUN   TestAccSearchIndexAPI_basic
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-09-03T10:02:47.0669747Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3492182154586914006
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-09-03T10:02:47.0670921Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-571919649677458254
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-09-03T10:02:47.0672029Z 2026/09/03 06:32:16 [DEBUG] Waiting for state to become: [IDLE]
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-09-03T10:02:47.0672633Z 2026/09/03 06:35:16 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-09-03T10:02:47.0673451Z 2026/09/03 06:36:16 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-09-03T10:02:47.0673956Z 2026/09/03 06:36:27 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-09-03T10:02:47.0674457Z 2026/09/03 06:37:27 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-09-03T10:02:47.0674943Z 2026/09/03 06:37:37 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-09-03T10:02:47.0675421Z 2026/09/03 06:38:37 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-09-03T10:02:47.0675905Z 2026/09/03 06:38:47 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-09-03T10:02:47.0676391Z 2026/09/03 06:39:47 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-09-03T10:02:47.0676876Z 2026/09/03 06:39:57 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-09-03T10:02:47.0677357Z 2026/09/03 06:40:58 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-09-03T10:02:47.0677847Z 2026/09/03 06:41:08 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-09-03T10:02:47.0678330Z 2026/09/03 06:42:08 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2026-09-03T10:02:47.0678816Z 2026/09/03 06:42:18 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2026-09-03T10:02:47.0679564Z 2026/09/03 06:43:18 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2026-09-03T10:02:47.0680050Z 2026/09/03 06:43:28 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2026-09-03T10:02:47.0680530Z 2026/09/03 06:44:29 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2026-09-03T10:02:47.0681005Z 2026/09/03 06:44:39 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2026-09-03T10:02:47.0681540Z 2026/09/03 06:45:39 [DEBUG] Waiting for state to become: [COMPLETED]
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2026-09-03T10:02:47.0682076Z 2026/09/03 06:46:39 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>2026-09-03T10:02:47.0682555Z 2026/09/03 06:47:40 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>2026-09-03T10:02:47.0683034Z 2026/09/03 06:47:50 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>2026-09-03T10:02:47.0683525Z 2026/09/03 06:48:50 [TRACE] Waiting 10s before next try
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>2026-09-03T10:02:47.0684004Z 2026/09/03 06:49:00 [TRACE] Waiting 1m0s before next try
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>2026-09-03T10:02:47.0693460Z === CONT  TestAccSearchIndexAPI_basic
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>2026-09-03T10:02:47.0748778Z === NAME  TestAccSearchIndexAPI_basic
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>2026-09-03T10:02:47.0749625Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>2026-09-03T10:02:47.0750080Z         
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>2026-09-03T10:02:47.0750467Z         Error: Error waiting for changes in Create
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>2026-09-03T10:02:47.0750820Z         
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>2026-09-03T10:02:47.0751203Z           with mongodbatlas_search_index_api.test,
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>2026-09-03T10:02:47.0751955Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>2026-09-03T10:02:47.0752659Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>2026-09-03T10:02:47.0753045Z         
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>2026-09-03T10:02:47.0753385Z         group_id=&quot;6a99146d72d7295ca98dbca0&quot;,
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>2026-09-03T10:02:47.0753880Z         cluster_name=&quot;test-acc-tf-c-571919649677458254&quot;,
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>2026-09-03T10:02:47.0754510Z         index_id=&quot;6a99189a8f4e31db6818c200&quot;: timeout while waiting for state to
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>2026-09-03T10:02:47.0755181Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>2026-09-03T10:02:47.0755890Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>2026-09-03T10:02:47.0756638Z         transient error, wait before retrying to allow resource deletion to finish
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>2026-09-03T10:02:47.0757223Z --- FAIL: TestAccSearchIndexAPI_basic (11871.18s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-09-03T10:02:47.0668173Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-09-03T10:02:47.0669747Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3492182154586914006
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-09-03T10:02:47.0670921Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-571919649677458254
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-09-03T10:02:47.0672029Z 2026/09/03 06:32:16 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-09-03T10:02:47.0672633Z 2026/09/03 06:35:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-09-03T10:02:47.0673451Z 2026/09/03 06:36:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-09-03T10:02:47.0673956Z 2026/09/03 06:36:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-09-03T10:02:47.0674457Z 2026/09/03 06:37:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-09-03T10:02:47.0674943Z 2026/09/03 06:37:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-09-03T10:02:47.0675421Z 2026/09/03 06:38:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-09-03T10:02:47.0675905Z 2026/09/03 06:38:47 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-09-03T10:02:47.0676391Z 2026/09/03 06:39:47 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-09-03T10:02:47.0676876Z 2026/09/03 06:39:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-09-03T10:02:47.0677357Z 2026/09/03 06:40:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2026-09-03T10:02:47.0677847Z 2026/09/03 06:41:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2026-09-03T10:02:47.0678330Z 2026/09/03 06:42:08 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2026-09-03T10:02:47.0678816Z 2026/09/03 06:42:18 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2026-09-03T10:02:47.0679564Z 2026/09/03 06:43:18 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2026-09-03T10:02:47.0680050Z 2026/09/03 06:43:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2026-09-03T10:02:47.0680530Z 2026/09/03 06:44:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2026-09-03T10:02:47.0681005Z 2026/09/03 06:44:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2026-09-03T10:02:47.0681540Z 2026/09/03 06:45:39 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2026-09-03T10:02:47.0682076Z 2026/09/03 06:46:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2026-09-03T10:02:47.0682555Z 2026/09/03 06:47:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2026-09-03T10:02:47.0683034Z 2026/09/03 06:47:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2026-09-03T10:02:47.0683525Z 2026/09/03 06:48:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2026-09-03T10:02:47.0684004Z 2026/09/03 06:49:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2026-09-03T10:02:47.0693460Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2026-09-03T10:02:47.0748778Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2026-09-03T10:02:47.0749625Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2026-09-03T10:02:47.0750080Z         
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2026-09-03T10:02:47.0750467Z         Error: Error waiting for changes in Create
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>2026-09-03T10:02:47.0750820Z         
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>2026-09-03T10:02:47.0751203Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>2026-09-03T10:02:47.0751955Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>2026-09-03T10:02:47.0752659Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>2026-09-03T10:02:47.0753045Z         
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>2026-09-03T10:02:47.0753385Z         group_id=&quot;6a99146d72d7295ca98dbca0&quot;,
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>2026-09-03T10:02:47.0753880Z         cluster_name=&quot;test-acc-tf-c-571919649677458254&quot;,
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>2026-09-03T10:02:47.0754510Z         index_id=&quot;6a99189a8f4e31db6818c200&quot;: timeout while waiting for state to
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>2026-09-03T10:02:47.0755181Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>2026-09-03T10:02:47.0755890Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>2026-09-03T10:02:47.0756638Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>2026-09-03T10:02:47.0757223Z --- FAIL: TestAccSearchIndexAPI_basic (11871.18s)
 </code></pre></div>
 <ul>
 <li>2026-09-04 PASS 35 minutes</li>
 </ul>
 <h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-23t0114430000">2026-08-23 01:14</a></td>
+<td></td>
+<td>qa</td>
+<td>timeout</td>
+<td>1709.05s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-27t1057010000">2026-08-27 10:57</a></td>
+<td></td>
+<td>qa</td>
+<td>flaky_client</td>
+<td>389.04s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline_1">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS an hour</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS an hour</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 48 minutes</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23</li>
+</ul>
+<h3 id="error-2026-08-23t0114430000">Error 2026-08-23T01:14:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-08-23T01:14:43.8569540Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-08-23T01:14:43.8570253Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-8909096983030194506
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-08-23T01:14:43.8570838Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-5960356520266734261
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-08-23T01:14:43.8571354Z 2026/08/23 00:22:28 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-08-23T01:14:43.8571770Z 2026/08/23 00:25:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-08-23T01:14:43.8572162Z 2026/08/23 00:26:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-08-23T01:14:43.8572884Z 2026/08/23 00:26:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-08-23T01:14:43.8573270Z 2026/08/23 00:27:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-08-23T01:14:43.8573659Z 2026/08/23 00:27:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-08-23T01:14:43.8574038Z 2026/08/23 00:28:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-08-23T01:14:43.8574431Z 2026/08/23 00:29:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-08-23T01:14:43.8574867Z 2026/08/23 00:30:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-08-23T01:14:43.8575240Z 2026/08/23 00:30:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-08-23T01:14:43.8575619Z 2026/08/23 00:31:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-08-23T01:14:43.8576024Z 2026/08/23 00:31:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-08-23T01:14:43.8576411Z 2026/08/23 00:32:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-08-23T01:14:43.8576791Z 2026/08/23 00:32:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-08-23T01:14:43.8577141Z 2026/08/23 00:33:32 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2026-08-23T01:14:43.8577530Z 2026/08/23 00:33:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2026-08-23T01:14:43.8577926Z 2026/08/23 00:34:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2026-08-23T01:14:43.8578286Z 2026/08/23 00:34:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>2026-08-23T01:14:43.8578714Z 2026/08/23 00:35:54 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>2026-08-23T01:14:43.8579125Z 2026/08/23 00:36:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>2026-08-23T01:14:43.8579514Z 2026/08/23 00:37:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>2026-08-23T01:14:43.8580037Z 2026/08/23 00:38:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>2026-08-23T01:14:43.8580451Z 2026/08/23 00:39:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>2026-08-23T01:14:43.8580828Z 2026/08/23 00:39:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>2026-08-23T01:14:43.8581220Z 2026/08/23 00:40:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>2026-08-23T01:14:43.8581575Z 2026/08/23 00:40:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>2026-08-23T01:14:43.8581964Z 2026/08/23 00:41:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>2026-08-23T01:14:43.8582485Z 2026/08/23 00:41:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>2026-08-23T01:14:43.8582902Z 2026/08/23 00:42:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>2026-08-23T01:14:43.8583252Z 2026/08/23 00:42:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>2026-08-23T01:14:43.8583660Z 2026/08/23 00:43:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>2026-08-23T01:14:43.8584003Z 2026/08/23 00:43:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>2026-08-23T01:14:43.8584391Z 2026/08/23 00:44:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>2026-08-23T01:14:43.8584738Z 2026/08/23 00:45:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>2026-08-23T01:14:43.8585144Z 2026/08/23 00:46:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>2026-08-23T01:14:43.8585498Z 2026/08/23 00:46:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>2026-08-23T01:14:43.8585886Z 2026/08/23 00:47:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>2026-08-23T01:14:43.8586231Z 2026/08/23 00:47:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>2026-08-23T01:14:43.8586630Z 2026/08/23 00:48:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>2026-08-23T01:14:43.8587007Z 2026/08/23 00:48:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>2026-08-23T01:14:43.8587391Z 2026/08/23 00:49:38 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>2026-08-23T01:14:43.8587765Z 2026/08/23 00:49:48 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>2026-08-23T01:14:43.8588164Z 2026/08/23 00:50:49 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>2026-08-23T01:14:43.8588588Z 2026/08/23 00:50:54 [WARN] WaitForState timeout after 15m0s
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>2026-08-23T01:14:43.8589036Z 2026/08/23 00:50:54 [WARN] WaitForState starting 30s refresh grace period
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>2026-08-23T01:14:43.8589467Z     resource_test.go:22: 
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>2026-08-23T01:14:43.8592102Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:198
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>2026-08-23T01:14:43.8593791Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>2026-08-23T01:14:43.8594623Z            Error:          Received unexpected error:
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>2026-08-23T01:14:43.8595721Z                            timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>2026-08-23T01:14:43.8596440Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>2026-08-23T01:14:43.8596912Z --- FAIL: TestAccSearchIndexAPI_basic (1709.45s)
+</code></pre></div>
+<ul>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27</li>
+</ul>
+<h3 id="error-2026-08-27t1057010000">Error 2026-08-27T10:57:01+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-08-27T10:57:01.7790212Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-08-27T10:57:01.7791388Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-863616980440053323
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-08-27T10:57:01.7792612Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-2466243170825042105
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-08-27T10:57:01.7793582Z 2026/08/27 08:28:02 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-08-27T10:57:01.7794307Z 2026/08/27 08:31:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-08-27T10:57:01.7795342Z 2026/08/27 08:32:03 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-08-27T10:57:01.7796054Z 2026/08/27 08:32:13 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-08-27T10:57:01.7796763Z 2026/08/27 08:33:13 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-08-27T10:57:01.7797436Z 2026/08/27 08:33:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-08-27T10:57:01.7798113Z     resource_test.go:22: 
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-08-27T10:57:01.7802020Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:49
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-08-27T10:57:01.7805568Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:199
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-08-27T10:57:01.7809452Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:178
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-08-27T10:57:01.7813353Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-08-27T10:57:01.7814894Z            Error:          Received unexpected error:
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-08-27T10:57:01.7818147Z                            Get &quot;https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a8ff50f3c85539dfd68e6ee/clusters/test-acc-tf-c-2466243170825042105&quot;: dial tcp: lookup cloud-qa.mongodb.com: i/o timeout
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-08-27T10:57:01.7820187Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2026-08-27T10:57:01.7823219Z            Messages:       Cluster creation failed: test-acc-tf-c-2466243170825042105, err: Get &quot;https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a8ff50f3c85539dfd68e6ee/clusters/test-acc-tf-c-2466243170825042105&quot;: dial tcp: lookup cloud-qa.mongodb.com: i/o timeout
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2026-08-27T10:57:01.7825233Z --- FAIL: TestAccSearchIndexAPI_basic (389.44s)
+</code></pre></div>
+<ul>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS an hour</li>

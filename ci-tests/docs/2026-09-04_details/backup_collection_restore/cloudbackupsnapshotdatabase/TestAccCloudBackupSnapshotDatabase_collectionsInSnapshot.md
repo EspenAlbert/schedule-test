@@ -1,12 +1,13 @@
 # backup_collection_restore/cloudbackupsnapshotdatabase/TestAccCloudBackupSnapshotDatabase_collectionsInSnapshot Test Details
-# Found 8 TestRuns in dev, qa from 2026-08-28 to 2026-09-04 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 10 TestRuns in dev, qa from 2026-08-27 to 2026-09-04 from master branch: 1 unique tests, PASS(x 8) FAIL(x 2)
+Success rate: 80.00%
 
 ## DEV Environment
 ## Error Table
 
 Date | Details | Env | Runtime
 --- | --- | --- | ---
+[2026-08-27 02:16](#error-2026-08-27t0216590000) |  | dev | 869.06s
 [2026-08-28 03:27](#error-2026-08-28t0327490000) |  | dev | 939.10s
 
 ### Timeline
@@ -32,7 +33,46 @@ Date | Details | Env | Runtime
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27
+
+### Error 2026-08-27T02:16:59+00:00
+```
+2026-08-27T02:16:59.0586400Z === RUN   TestAccCloudBackupSnapshotDatabase_collectionsInSnapshot
+2026-08-27T02:16:59.0588046Z     cloud_backup_collection_restore_fixture.go:82: Creating execution project (1): test-acc-tf-p-5231527714706859168
+2026-08-27T02:16:59.0589630Z     cloud_backup_collection_restore_fixture.go:82: Creating execution cluster: test-acc-tf-c-1862297914928990505
+2026-08-27T02:16:59.0590658Z 2026/08/27 01:47:04 [DEBUG] Waiting for state to become: [IDLE]
+2026-08-27T02:16:59.0591349Z 2026/08/27 01:50:05 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0592004Z 2026/08/27 01:51:05 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0592657Z 2026/08/27 01:51:15 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0593310Z 2026/08/27 01:52:16 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0593938Z 2026/08/27 01:52:26 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0594584Z 2026/08/27 01:53:26 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0595238Z 2026/08/27 01:53:36 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0595888Z 2026/08/27 01:54:37 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0596521Z 2026/08/27 01:54:47 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0597437Z 2026/08/27 01:55:47 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0598087Z 2026/08/27 01:55:58 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0598724Z 2026/08/27 01:56:58 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0599350Z 2026/08/27 01:57:08 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0600004Z 2026/08/27 01:58:09 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0600643Z 2026/08/27 01:58:19 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0601288Z 2026/08/27 01:59:19 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0601917Z 2026/08/27 01:59:29 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0602628Z 2026/08/27 02:00:30 [DEBUG] Waiting for state to become: [COMPLETED]
+2026-08-27T02:16:59.0603950Z     cloud_backup_collection_restore_fixture.go:82: 
+2026-08-27T02:16:59.0605837Z         	Error Trace:	/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:203
+2026-08-27T02:16:59.0609955Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cloud_backup_collection_restore_fixture.go:108
+2026-08-27T02:16:59.0613905Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cloud_backup_collection_restore_fixture.go:82
+2026-08-27T02:16:59.0616131Z         	            				/opt/hostedtoolcache/go/1.26.4/x64/src/sync/once.go:78
+2026-08-27T02:16:59.0617926Z         	            				/opt/hostedtoolcache/go/1.26.4/x64/src/sync/once.go:69
+2026-08-27T02:16:59.0621137Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cloud_backup_collection_restore_fixture.go:81
+2026-08-27T02:16:59.0625088Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/cloudbackupsnapshotdatabase/data_source_test.go:24
+2026-08-27T02:16:59.0626646Z         	Error:      	Received unexpected error:
+2026-08-27T02:16:59.0628491Z         	            	unexpected state 'FAILED', wanted target 'COMPLETED'. last error: %!s(<nil>)
+2026-08-27T02:16:59.0629750Z         	Test:       	TestAccCloudBackupSnapshotDatabase_collectionsInSnapshot
+2026-08-27T02:16:59.0630728Z --- FAIL: TestAccCloudBackupSnapshotDatabase_collectionsInSnapshot (869.61s)
+```
+
 - 2026-08-28
 
 ### Error 2026-08-28T03:27:49+00:00
@@ -107,7 +147,7 @@ Date | Details | Env | Runtime
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 18 minutes
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 20 minutes

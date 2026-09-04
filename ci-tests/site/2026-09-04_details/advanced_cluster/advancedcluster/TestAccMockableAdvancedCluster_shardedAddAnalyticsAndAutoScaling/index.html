@@ -292,34 +292,84 @@
 
 
 <h1 id="advanced_clusteradvancedclustertestaccmockableadvancedcluster_shardedaddanalyticsandautoscaling-test-details">advanced_cluster/advancedcluster/TestAccMockableAdvancedCluster_shardedAddAnalyticsAndAutoScaling Test Details</h1>
-<h1 id="found-11-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-11">Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 11)</h1>
-<p>Success rate: 100.00%</p>
+<h1 id="found-33-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-32-timeout">Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 32) TIMEOUT</h1>
+<p>Success rate: 96.97%</p>
 <h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-14t0033480000">2026-08-14 00:33</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>17899.00s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 23 minutes</li>
 <li>2026-08-07 PASS 23 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 23 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 24 minutes</li>
+<li>2026-08-11 PASS 24 minutes</li>
+<li>2026-08-12 PASS 26 minutes</li>
+<li>2026-08-13 PASS 25 minutes</li>
+<li>2026-08-14</li>
+</ul>
+<h3 id="error-2026-08-14t0033480000">Error 2026-08-14T00:33:48+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-14T00:33:48.0501269Z === RUN   TestAccMockableAdvancedCluster_shardedAddAnalyticsAndAutoScaling
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-14T00:33:48.1328961Z     resource_test.go:1039: Adding variable groupId=6a7e626833ce881fa886ce65
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-14T00:33:48.1330202Z     resource_test.go:1039: Adding variable clusterName=test-acc-tf-c-3074804527707217517
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-14T00:35:08.9847093Z === CONT  TestAccMockableAdvancedCluster_shardedAddAnalyticsAndAutoScaling
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-14T00:44:51.7203119Z === NAME  TestAccMockableAdvancedCluster_shardedAddAnalyticsAndAutoScaling
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-14T00:44:51.7205283Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName2=test-acc-tf-c-6922719596181845672
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-14T00:44:52.1732314Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName3=test-acc-tf-c-6502996347436947324
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-14T00:44:52.7298038Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName4=test-acc-tf-c-8246318004866084018
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-14T03:45:02.2640949Z === NAME  TestAccMockableAdvancedCluster_shardedAddAnalyticsAndAutoScaling
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-14T03:45:02.2641823Z     resource_test.go:1039: Step 2/4 error: Error running apply: exit status 1
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-14T03:45:02.2642376Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-14T03:45:02.2642890Z         Error: Error in update
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-14T03:45:02.2643255Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-14T03:45:02.2643608Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-14T03:45:02.2644480Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-08-14T03:45:02.2645127Z           12:  resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-08-14T03:45:02.2645467Z         
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-08-14T03:45:02.2646238Z         cluster=test-acc-tf-c-3074804527707217517 didn&#39;t reach desired state: IDLE,
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2026-08-14T03:45:02.2646937Z         error: timeout while waiting for state to become &#39;IDLE&#39; (last state:
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2026-08-14T03:45:02.2647405Z         &#39;UPDATING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2026-08-14T05:33:28.0154922Z panic: test timed out after 5h0m0s
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2026-08-14T05:33:28.0155812Z    running tests:
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2026-08-14T05:33:28.0154922Z panic: test timed out after 5h0m0s
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2026-08-14T05:33:28.0155812Z    running tests:
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2026-08-14T05:33:28.0157273Z        TestAccMockableAdvancedCluster_shardedAddAnalyticsAndAutoScaling (4h58m19s)
+</code></pre></div>
+<ul>
+<li>2026-08-15 PASS 28 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 24 minutes</li>
+<li>2026-08-18 PASS 30 minutes</li>
+<li>2026-08-19 PASS 25 minutes</li>
+<li>2026-08-20 PASS 26 minutes</li>
+<li>2026-08-21 PASS 25 minutes</li>
+<li>2026-08-22 PASS 24 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 24 minutes</li>
+<li>2026-08-25 PASS 25 minutes</li>
+<li>2026-08-26 PASS an hour</li>
+<li>2026-08-27 PASS 49 minutes</li>
 <li>2026-08-28 PASS 32 minutes</li>
 <li>2026-08-29 PASS 24 minutes</li>
 <li>2026-08-30: MISSING</li>
@@ -338,25 +388,25 @@
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 24 minutes</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 24 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 24 minutes</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23 PASS 23 minutes</li>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 23 minutes</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 23 minutes</li>

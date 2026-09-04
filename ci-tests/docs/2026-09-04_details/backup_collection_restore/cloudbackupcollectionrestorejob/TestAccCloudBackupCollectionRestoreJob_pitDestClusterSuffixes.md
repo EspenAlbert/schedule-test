@@ -1,12 +1,13 @@
 # backup_collection_restore/cloudbackupcollectionrestorejob/TestAccCloudBackupCollectionRestoreJob_pitDestClusterSuffixes Test Details
-# Found 8 TestRuns in dev, qa from 2026-08-28 to 2026-09-04 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 10 TestRuns in dev, qa from 2026-08-27 to 2026-09-04 from master branch: 1 unique tests, PASS(x 8) FAIL(x 2)
+Success rate: 80.00%
 
 ## DEV Environment
 ## Error Table
 
 Date | Details | Env | Runtime
 --- | --- | --- | ---
+[2026-08-27 02:16](#error-2026-08-27t0216590000) |  | dev | 0.00s
 [2026-08-28 03:24](#error-2026-08-28t0324150000) |  | dev | 0.00s
 
 ### Timeline
@@ -32,7 +33,20 @@ Date | Details | Env | Runtime
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27
+
+### Error 2026-08-27T02:16:59+00:00
+```
+2026-08-27T02:16:59.0535548Z === RUN   TestAccCloudBackupCollectionRestoreJob_pitDestClusterSuffixes
+2026-08-27T02:16:59.0536342Z     resource_test.go:88: 
+2026-08-27T02:16:59.0538586Z         	Error Trace:	/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cloud_backup_collection_restore_fixture.go:84
+2026-08-27T02:16:59.0542753Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/cloudbackupcollectionrestorejob/resource_test.go:88
+2026-08-27T02:16:59.0544344Z         	Error:      	Received unexpected error:
+2026-08-27T02:16:59.0546017Z         	            	wait snapshot 6a8f9afc6af220b06a12263f: snapshot 6a8f9afc6af220b06a12263f failed
+2026-08-27T02:16:59.0547621Z         	Test:       	TestAccCloudBackupCollectionRestoreJob_pitDestClusterSuffixes
+2026-08-27T02:16:59.0548691Z --- FAIL: TestAccCloudBackupCollectionRestoreJob_pitDestClusterSuffixes (0.00s)
+```
+
 - 2026-08-28
 
 ### Error 2026-08-28T03:24:15+00:00
@@ -73,7 +87,7 @@ Date | Details | Env | Runtime
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 28 minutes
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 28 minutes

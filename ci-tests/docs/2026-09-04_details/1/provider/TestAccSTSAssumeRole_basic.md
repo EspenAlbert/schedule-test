@@ -1,5 +1,5 @@
 # 1/provider/TestAccSTSAssumeRole_basic Test Details
-# Found 30 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 18) SKIP(x 12)
+# Found 96 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 57) SKIP(x 39)
 Success rate: 100.00%
 
 ## DEV Environment
@@ -13,26 +13,77 @@ Success rate: 100.00%
   - PASS 8 seconds
   - PASS 17 seconds
   - PASS 17 seconds
-- 2026-08-08: MISSING
+- 2026-08-08
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
 - 2026-08-09: MISSING
-- 2026-08-10: MISSING
-- 2026-08-11: MISSING
-- 2026-08-12: MISSING
-- 2026-08-13: MISSING
-- 2026-08-14: MISSING
-- 2026-08-15: MISSING
+- 2026-08-10
+  - PASS 14 seconds
+  - PASS 20 seconds
+  - PASS 18 seconds
+- 2026-08-11
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-08-12
+  - PASS 16 seconds
+  - PASS 22 seconds
+  - PASS 20 seconds
+- 2026-08-13
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-08-14
+  - PASS 10 seconds
+  - PASS 20 seconds
+  - PASS 20 seconds
+- 2026-08-15
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
 - 2026-08-16: MISSING
-- 2026-08-17: MISSING
-- 2026-08-18: MISSING
-- 2026-08-19: MISSING
-- 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-17
+  - PASS 17 seconds
+  - PASS 22 seconds
+  - PASS 16 seconds
+- 2026-08-18
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-08-19
+  - PASS 13 seconds
+  - PASS 11 seconds
+  - PASS 16 seconds
+- 2026-08-20
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-08-21
+  - PASS 22 seconds
+  - PASS 18 seconds
+  - PASS 12 seconds
+- 2026-08-22
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24
+  - PASS 11 seconds
+  - PASS 22 seconds
+  - PASS 22 seconds
+- 2026-08-25
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
+- 2026-08-26
+  - PASS 20 seconds
+  - PASS 18 seconds
+  - PASS 17 seconds
+- 2026-08-27
+  - SKIP unknown
+  - SKIP unknown
+  - SKIP unknown
 - 2026-08-28
   - PASS 17 seconds
   - PASS 8 seconds
@@ -69,25 +120,40 @@ Success rate: 100.00%
 - 2026-08-06: MISSING
 - 2026-08-07: MISSING
 - 2026-08-08: MISSING
-- 2026-08-09: MISSING
+- 2026-08-09
+  - PASS 16 seconds
+  - PASS 9 seconds
+  - PASS 18 seconds
 - 2026-08-10: MISSING
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
-- 2026-08-13: MISSING
+- 2026-08-13
+  - PASS 8 seconds
+  - PASS 12 seconds
+  - PASS 20 seconds
 - 2026-08-14: MISSING
 - 2026-08-15: MISSING
-- 2026-08-16: MISSING
+- 2026-08-16
+  - PASS 12 seconds
+  - PASS 10 seconds
+  - PASS 14 seconds
 - 2026-08-17: MISSING
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23
+  - PASS 15 seconds
+  - PASS 12 seconds
+  - PASS 14 seconds
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27
+  - PASS 13 seconds
+  - PASS 13 seconds
+  - PASS 9 seconds
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30

@@ -1,12 +1,13 @@
 # backup_collection_restore/cloudbackupcollectionrestorejob/TestAccCloudBackupCollectionRestoreJob_snapshotSameClusterDatabaseRename Test Details
-# Found 8 TestRuns in dev, qa from 2026-08-28 to 2026-09-04 from master branch: 1 unique tests, PASS(x 7) FAIL
-Success rate: 87.50%
+# Found 10 TestRuns in dev, qa from 2026-08-27 to 2026-09-04 from master branch: 1 unique tests, PASS(x 8) FAIL(x 2)
+Success rate: 80.00%
 
 ## DEV Environment
 ## Error Table
 
 Date | Details | Env | Runtime
 --- | --- | --- | ---
+[2026-08-27 02:16](#error-2026-08-27t0216590000) |  | dev | 1624.09s
 [2026-08-28 03:24](#error-2026-08-28t0324150000) |  | dev | 941.00s
 
 ### Timeline
@@ -32,7 +33,61 @@ Date | Details | Env | Runtime
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27
+
+### Error 2026-08-27T02:16:59+00:00
+```
+2026-08-27T02:16:59.0478552Z === RUN   TestAccCloudBackupCollectionRestoreJob_snapshotSameClusterDatabaseRename
+2026-08-27T02:16:59.0480595Z     cloud_backup_collection_restore_fixture.go:82: Creating execution project (1): test-acc-tf-p-2548527571714927107
+2026-08-27T02:16:59.0482259Z     cloud_backup_collection_restore_fixture.go:82: Creating execution cluster: test-acc-tf-c-2226589553303605341
+2026-08-27T02:16:59.0483369Z 2026/08/27 01:47:03 [DEBUG] Waiting for state to become: [IDLE]
+2026-08-27T02:16:59.0484096Z 2026/08/27 01:50:03 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0484782Z 2026/08/27 01:51:04 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0485434Z 2026/08/27 01:51:14 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0486089Z 2026/08/27 01:52:14 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0486740Z 2026/08/27 01:52:24 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0487731Z 2026/08/27 01:53:25 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0488392Z 2026/08/27 01:53:35 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0489045Z 2026/08/27 01:54:35 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0500887Z 2026/08/27 01:54:46 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0501604Z 2026/08/27 01:55:46 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0502254Z 2026/08/27 01:55:56 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0502907Z 2026/08/27 01:56:56 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0503556Z 2026/08/27 01:57:07 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0504180Z 2026/08/27 01:58:07 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0504817Z 2026/08/27 01:58:17 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0505451Z 2026/08/27 01:59:18 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0506096Z 2026/08/27 01:59:28 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0506799Z 2026/08/27 02:00:28 [DEBUG] Waiting for state to become: [COMPLETED]
+2026-08-27T02:16:59.0507814Z 2026/08/27 02:01:29 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0508451Z 2026/08/27 02:02:29 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0509112Z 2026/08/27 02:02:39 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0509823Z 2026/08/27 02:03:40 [DEBUG] Waiting for state to become: [completed]
+2026-08-27T02:16:59.0510551Z 2026/08/27 02:04:40 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0511577Z 2026/08/27 02:05:41 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0512213Z 2026/08/27 02:05:51 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0512936Z 2026/08/27 02:06:51 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0513581Z 2026/08/27 02:07:02 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0514216Z 2026/08/27 02:08:02 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0514855Z 2026/08/27 02:08:12 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0515539Z 2026/08/27 02:09:13 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0516164Z 2026/08/27 02:09:23 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0516800Z 2026/08/27 02:10:23 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0517675Z 2026/08/27 02:10:33 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0518300Z 2026/08/27 02:11:34 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0518931Z 2026/08/27 02:11:44 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0519573Z 2026/08/27 02:12:44 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0520208Z 2026/08/27 02:12:54 [TRACE] Waiting 1m0s before next try
+2026-08-27T02:16:59.0520844Z 2026/08/27 02:13:55 [TRACE] Waiting 10s before next try
+2026-08-27T02:16:59.0521485Z     resource_test.go:33: 
+2026-08-27T02:16:59.0523500Z         	Error Trace:	/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/cloud_backup_collection_restore_fixture.go:84
+2026-08-27T02:16:59.0528179Z         	            				/home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/cloudbackupcollectionrestorejob/resource_test.go:33
+2026-08-27T02:16:59.0530005Z         	Error:      	Received unexpected error:
+2026-08-27T02:16:59.0531694Z         	            	wait snapshot 6a8f9afc6af220b06a12263f: snapshot 6a8f9afc6af220b06a12263f failed
+2026-08-27T02:16:59.0533155Z         	Test:       	TestAccCloudBackupCollectionRestoreJob_snapshotSameClusterDatabaseRename
+2026-08-27T02:16:59.0534400Z --- FAIL: TestAccCloudBackupCollectionRestoreJob_snapshotSameClusterDatabaseRename (1624.93s)
+```
+
 - 2026-08-28
 
 ### Error 2026-08-28T03:24:15+00:00
@@ -107,7 +162,7 @@ Date | Details | Env | Runtime
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 33 minutes
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 33 minutes

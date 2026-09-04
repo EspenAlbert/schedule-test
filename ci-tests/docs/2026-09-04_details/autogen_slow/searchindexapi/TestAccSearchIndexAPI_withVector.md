@@ -1,12 +1,14 @@
 # autogen_slow/searchindexapi/TestAccSearchIndexAPI_withVector Test Details
-# Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 8) FAIL(x 3)
-Success rate: 72.73%
+# Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 27) FAIL(x 6)
+Success rate: 81.82%
 
 ## DEV Environment
 ## Error Table
 
 Date | Details | Env | Error Class | Runtime
 --- | --- | --- | --- | ---
+[2026-08-14 01:22](#error-2026-08-14t0122180000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes | dev |  | 2.08s
+[2026-08-27 03:09](#error-2026-08-27t0309330000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes | dev |  | 2.07s
 [2026-08-28 04:08](#error-2026-08-28t0408520000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a90fbd434dc94e0a78d3a78/clusters/test-acc-tf-c-1159806956717905744/search/indexes | dev |  | 3.03s
 [2026-09-02 04:59](#error-2026-09-02t0459000000) |  | dev | timeout | 10804.07s
 [2026-09-03 10:02](#error-2026-09-03t1002470000) |  | dev | timeout | 10805.06s
@@ -15,26 +17,69 @@ Date | Details | Env | Error Class | Runtime
 - 2026-08-05: MISSING
 - 2026-08-06 PASS 39 minutes
 - 2026-08-07 PASS 40 minutes
-- 2026-08-08: MISSING
+- 2026-08-08 PASS 46 minutes
 - 2026-08-09: MISSING
-- 2026-08-10: MISSING
-- 2026-08-11: MISSING
-- 2026-08-12: MISSING
-- 2026-08-13: MISSING
-- 2026-08-14: MISSING
-- 2026-08-15: MISSING
+- 2026-08-10 PASS 20 minutes
+- 2026-08-11 PASS 49 minutes
+- 2026-08-12 PASS 43 minutes
+- 2026-08-13 PASS 36 minutes
+- 2026-08-14
+
+### Error 2026-08-14T01:22:18+00:00
+```
+2026-08-14T01:22:18.1414814Z === RUN   TestAccSearchIndexAPI_withVector
+2026-08-14T01:22:18.1418475Z === CONT  TestAccSearchIndexAPI_withVector
+2026-08-14T01:22:18.1435589Z === NAME  TestAccSearchIndexAPI_withVector
+2026-08-14T01:22:18.1436124Z     resource_test.go:144: Step 1/1 error: Error running apply: exit status 1
+2026-08-14T01:22:18.1436536Z         
+2026-08-14T01:22:18.1436853Z         Error: Error calling API in Create
+2026-08-14T01:22:18.1437158Z         
+2026-08-14T01:22:18.1437534Z           with mongodbatlas_search_index_api.test,
+2026-08-14T01:22:18.1438257Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-14T01:22:18.1438928Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-14T01:22:18.1439287Z         
+2026-08-14T01:22:18.1440125Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a7e6261ca4d3d34f82a6bd4/clusters/test-acc-tf-c-4366285902860641581/search/indexes
+2026-08-14T01:22:18.1441028Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-14T01:22:18.1441832Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-14T01:22:18.1442548Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-14T01:22:18.1447903Z --- FAIL: TestAccSearchIndexAPI_withVector (2.77s)
+```
+
+- 2026-08-15 PASS 52 minutes
 - 2026-08-16: MISSING
-- 2026-08-17: MISSING
-- 2026-08-18: MISSING
-- 2026-08-19: MISSING
-- 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-17 PASS 23 minutes
+- 2026-08-18 PASS 11 minutes
+- 2026-08-19 PASS 9 minutes
+- 2026-08-20 PASS 43 minutes
+- 2026-08-21 PASS 56 minutes
+- 2026-08-22 PASS an hour
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24 PASS 5 minutes
+- 2026-08-25 PASS 48 minutes
+- 2026-08-26 PASS 31 minutes
+- 2026-08-27
+
+### Error 2026-08-27T03:09:33+00:00
+```
+2026-08-27T03:09:33.5355414Z === RUN   TestAccSearchIndexAPI_withVector
+2026-08-27T03:09:33.5362358Z === CONT  TestAccSearchIndexAPI_withVector
+2026-08-27T03:09:33.5468993Z === NAME  TestAccSearchIndexAPI_withVector
+2026-08-27T03:09:33.5469941Z     resource_test.go:144: Step 1/1 error: Error running apply: exit status 1
+2026-08-27T03:09:33.5470855Z         
+2026-08-27T03:09:33.5471415Z         Error: Error calling API in Create
+2026-08-27T03:09:33.5480807Z         
+2026-08-27T03:09:33.5481453Z           with mongodbatlas_search_index_api.test,
+2026-08-27T03:09:33.5482689Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-27T03:09:33.5484178Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-27T03:09:33.5484805Z         
+2026-08-27T03:09:33.5486322Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6a8f97396af220b06a10ad47/clusters/test-acc-tf-c-3874715849736483179/search/indexes
+2026-08-27T03:09:33.5487998Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-27T03:09:33.5489303Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-27T03:09:33.5490536Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-27T03:09:33.5504496Z   
+2026-08-27T03:09:33.5512283Z --- FAIL: TestAccSearchIndexAPI_withVector (2.73s)
+```
+
 - 2026-08-28
 
 ### Error 2026-08-28T04:08:52+00:00
@@ -117,30 +162,57 @@ Date | Details | Env | Error Class | Runtime
 - 2026-09-04 PASS 5 minutes
 
 ## QA Environment
+## Error Table
+
+Date | Details | Env | Runtime
+--- | --- | --- | ---
+[2026-08-23 01:14](#error-2026-08-23t0114430000) | ATLAS_SEARCH_COLLECTION_NOT_FOUND /api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes | qa | 2.10s
+
 ### Timeline
 - 2026-08-05: MISSING
 - 2026-08-06: MISSING
 - 2026-08-07: MISSING
 - 2026-08-08: MISSING
-- 2026-08-09: MISSING
+- 2026-08-09 PASS 11 minutes
 - 2026-08-10: MISSING
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
-- 2026-08-13: MISSING
+- 2026-08-13 PASS an hour
 - 2026-08-14: MISSING
 - 2026-08-15: MISSING
-- 2026-08-16: MISSING
+- 2026-08-16 PASS 30 minutes
 - 2026-08-17: MISSING
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23
+
+### Error 2026-08-23T01:14:43+00:00
+```
+2026-08-23T01:14:43.8601835Z === RUN   TestAccSearchIndexAPI_withVector
+2026-08-23T01:14:43.8605532Z === CONT  TestAccSearchIndexAPI_withVector
+2026-08-23T01:14:43.8698099Z === NAME  TestAccSearchIndexAPI_withVector
+2026-08-23T01:14:43.8698608Z     resource_test.go:144: Step 1/1 error: Error running apply: exit status 1
+2026-08-23T01:14:43.8698979Z         
+2026-08-23T01:14:43.8699443Z         Error: Error calling API in Create
+2026-08-23T01:14:43.8699921Z         
+2026-08-23T01:14:43.8700332Z           with mongodbatlas_search_index_api.test,
+2026-08-23T01:14:43.8700977Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_search_index_api" "test":
+2026-08-23T01:14:43.8701590Z           12: 		resource "mongodbatlas_search_index_api" "test" {
+2026-08-23T01:14:43.8701940Z         
+2026-08-23T01:14:43.8702652Z         https://cloud-qa.mongodb.com/api/atlas/v2/groups/6a8a3d41852bf2142d1a5af2/clusters/test-acc-tf-c-5960356520266734261/search/indexes
+2026-08-23T01:14:43.8703400Z         POST: HTTP 400 Bad Request (Error code: "ATLAS_SEARCH_COLLECTION_NOT_FOUND")
+2026-08-23T01:14:43.8704032Z         Detail: Collection listingsAndReviews was not found. Reason: Bad Request.
+2026-08-23T01:14:43.8704542Z         Params: [listingsAndReviews], BadRequestDetail: 
+2026-08-23T01:14:43.8704982Z --- FAIL: TestAccSearchIndexAPI_withVector (2.99s)
+```
+
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 8 minutes
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 29 minutes

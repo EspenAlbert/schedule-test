@@ -292,8 +292,8 @@
 
 
 <h1 id="push_based_log_exportpushbasedlogexporttestmigpushbasedlogexport_basic-test-details">push_based_log_export/pushbasedlogexport/TestMigPushBasedLogExport_basic Test Details</h1>
-<h1 id="found-6-testruns-in-dev-qa-from-2026-08-07-to-2026-09-04-from-master-branch-1-unique-tests-passx-6">Found 6 TestRuns in dev, qa from 2026-08-07 to 2026-09-04 from master branch: 1 unique tests, PASS(x 6)</h1>
-<p>Success rate: 100.00%</p>
+<h1 id="found-19-testruns-in-dev-qa-from-2026-08-07-to-2026-09-04-from-master-branch-1-unique-tests-passx-18-fail">Found 19 TestRuns in dev, qa from 2026-08-07 to 2026-09-04 from master branch: 1 unique tests, PASS(x 18) FAIL</h1>
+<p>Success rate: 94.74%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h3 id="timeline">Timeline</h3>
 <ul>
@@ -302,23 +302,23 @@
 <li>2026-08-07 PASS a minute</li>
 <li>2026-08-08: MISSING</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
+<li>2026-08-10 PASS a minute</li>
 <li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
+<li>2026-08-12 PASS a minute</li>
 <li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
+<li>2026-08-14 PASS a minute</li>
 <li>2026-08-15: MISSING</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
+<li>2026-08-17 PASS a minute</li>
 <li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
+<li>2026-08-19 PASS a minute</li>
 <li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
+<li>2026-08-21 PASS a minute</li>
 <li>2026-08-22: MISSING</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
+<li>2026-08-24 PASS a minute</li>
 <li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
+<li>2026-08-26 PASS a minute</li>
 <li>2026-08-27: MISSING</li>
 <li>2026-08-28 PASS a minute</li>
 <li>2026-08-29: MISSING</li>
@@ -330,31 +330,70 @@
 <li>2026-09-04 PASS a minute</li>
 </ul>
 <h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-13t0734490000">2026-08-13 07:34</a></td>
+<td></td>
+<td>qa</td>
+<td>provider_download</td>
+<td>26.04s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline_1">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS a minute</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13</li>
+</ul>
+<h3 id="error-2026-08-13t0734490000">Error 2026-08-13T07:34:49+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-13T07:34:49.3484192Z === RUN   TestMigPushBasedLogExport_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-13T07:34:49.3485452Z     resource_migration_test.go:11: Creating execution project (1): test-acc-tf-p-1702147660831468483
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-13T07:35:15.7357030Z   
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-13T07:35:15.7357952Z     resource_migration_test.go:11: TestStep 1/2 running init: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-13T07:35:15.7358658Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-13T07:35:15.7359184Z         Error: Failed to install provider
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-13T07:35:15.7359685Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-13T07:35:15.7360578Z         Error while installing mongodb/mongodbatlas v2.15.0: could not query provider
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-13T07:35:15.7361829Z         registry for registry.terraform.io/mongodb/mongodbatlas: failed to retrieve
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-13T07:35:15.7363132Z         authentication checksums for provider: the request failed after 2 attempts,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-13T07:35:15.7363994Z         please try again later: Get
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-13T07:35:15.7365669Z         &quot;https://github.com/mongodb/terraform-provider-mongodbatlas/releases/download/v2.15.0/terraform-provider-mongodbatlas_2.15.0_SHA256SUMS&quot;:
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-13T07:35:15.7367200Z         context deadline exceeded
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-13T07:35:15.7790935Z --- FAIL: TestMigPushBasedLogExport_basic (26.43s)
+</code></pre></div>
+<ul>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS a minute</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23 PASS a minute</li>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS a minute</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS a minute</li>

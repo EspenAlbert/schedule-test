@@ -292,8 +292,8 @@
 
 
 <h1 id="clusterclustertestacccluster_basicaws_pausedtounpaused-test-details">cluster/cluster/TestAccCluster_basicAWS_PausedToUnpaused Test Details</h1>
-<h1 id="found-11-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-9-failx-2">Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9) FAIL(x 2)</h1>
-<p>Success rate: 81.82%</p>
+<h1 id="found-33-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-29-failx-4">Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 29) FAIL(x 4)</h1>
+<p>Success rate: 87.88%</p>
 <h2 id="dev-environment">DEV Environment</h2>
 <h2 id="error-table">Error Table</h2>
 <table>
@@ -306,6 +306,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="#error-2026-08-10t0028400000">2026-08-10 00:28</a></td>
+<td>OPERATION_INVALID_SHARDS_NO_PRIMARY /api/atlas/v1.0/groups/6a791b362c88faeba5937f47/clusters/test-acc-tf-c-1632645167771292481</td>
+<td>dev</td>
+<td>709.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-27t0146590000">2026-08-27 01:46</a></td>
+<td>OPERATION_INVALID_SHARDS_NO_PRIMARY /api/atlas/v1.0/groups/6a8f97116af220b06a0f6cb8/clusters/test-acc-tf-c-5658346379789515645</td>
+<td>dev</td>
+<td>959.04s</td>
+</tr>
 <tr>
 <td><a href="#error-2026-08-28t0308380000">2026-08-28 03:08</a></td>
 <td>OPERATION_INVALID_SHARDS_NO_PRIMARY /api/atlas/v1.0/groups/6a90fbb463fde9550ed1b34a/clusters/test-acc-tf-c-4722332762804942442</td>
@@ -325,44 +337,80 @@
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 24 minutes</li>
 <li>2026-08-07 PASS 23 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 24 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10</li>
+</ul>
+<h3 id="error-2026-08-10t0028400000">Error 2026-08-10T00:28:40+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-10T00:28:40.8737244Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-10T00:28:40.9627420Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-10T00:29:25.8901760Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-10T00:29:25.8902833Z     pre_check.go:46: Time before creating cluster: 2026-08-10T00:29:25.889859996Z, ProjectID: 6a791b362c88faeba5937f47, Cluster name: test-acc-tf-c-1632645167771292481
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-10T00:40:30.8238484Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-10T00:40:30.8239890Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-10T00:40:30.8240918Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-10T00:40:30.8244907Z         Error: error updating MongoDB Cluster (test-acc-tf-c-1632645167771292481): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a791b362c88faeba5937f47/clusters/test-acc-tf-c-1632645167771292481: 400 (request &quot;OPERATION_INVALID_SHARDS_NO_PRIMARY&quot;) The operation cannot begin because monitoring indicates these shards have no primary: atlas-qdk57r-shard-0.
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-10T00:40:30.8248124Z         
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-10T00:40:30.8249175Z           with mongodbatlas_cluster.test,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-10T00:40:30.8251111Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-10T00:40:30.8252841Z           12: resource &quot;mongodbatlas_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-10T00:40:30.8253873Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-10T00:40:30.8740761Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (709.99s)
+</code></pre></div>
+<ul>
+<li>2026-08-11 PASS 26 minutes</li>
+<li>2026-08-12 PASS 25 minutes</li>
+<li>2026-08-13 PASS 24 minutes</li>
+<li>2026-08-14 PASS 24 minutes</li>
+<li>2026-08-15 PASS 24 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17 PASS 24 minutes</li>
+<li>2026-08-18 PASS 23 minutes</li>
+<li>2026-08-19 PASS 24 minutes</li>
+<li>2026-08-20 PASS 24 minutes</li>
+<li>2026-08-21 PASS 23 minutes</li>
+<li>2026-08-22 PASS 23 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 22 minutes</li>
+<li>2026-08-25 PASS 24 minutes</li>
+<li>2026-08-26 PASS 25 minutes</li>
+<li>2026-08-27</li>
+</ul>
+<h3 id="error-2026-08-27t0146590000">Error 2026-08-27T01:46:59+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-27T01:46:59.6727887Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-27T01:46:59.6748561Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-27T01:47:14.6766402Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-27T01:47:14.6767927Z     pre_check.go:46: Time before creating cluster: 2026-08-27T01:47:14.676375686Z, ProjectID: 6a8f97116af220b06a0f6cb8, Cluster name: test-acc-tf-c-5658346379789515645
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-27T02:02:59.0737276Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-27T02:02:59.0738105Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-27T02:02:59.0738570Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-08-27T02:02:59.0740647Z         Error: error updating MongoDB Cluster (test-acc-tf-c-5658346379789515645): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a8f97116af220b06a0f6cb8/clusters/test-acc-tf-c-5658346379789515645: 400 (request &quot;OPERATION_INVALID_SHARDS_NO_PRIMARY&quot;) The operation cannot begin because monitoring indicates these shards have no primary: atlas-oxaxbc-shard-0.
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-08-27T02:02:59.0742091Z         
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-08-27T02:02:59.0742595Z           with mongodbatlas_cluster.test,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-08-27T02:02:59.0743264Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-08-27T02:02:59.0743862Z           12: resource &quot;mongodbatlas_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-08-27T02:02:59.0744392Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-08-27T02:02:59.1218910Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (959.45s)
+</code></pre></div>
+<ul>
 <li>2026-08-28</li>
 </ul>
 <h3 id="error-2026-08-28t0308380000">Error 2026-08-28T03:08:38+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-28T03:08:38.1198026Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-28T03:08:38.1209426Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-28T03:09:38.1496881Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-28T03:09:38.1500795Z     pre_check.go:46: Time before creating cluster: 2026-08-28T03:09:38.149357555Z, ProjectID: 6a90fbb463fde9550ed1b34a, Cluster name: test-acc-tf-c-4722332762804942442
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-28T03:20:57.4104646Z   
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-28T03:23:02.3440869Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-28T03:23:02.3441767Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-08-28T03:23:02.3442451Z         
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-08-28T03:23:02.3446882Z         Error: error updating MongoDB Cluster (test-acc-tf-c-4722332762804942442): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a90fbb463fde9550ed1b34a/clusters/test-acc-tf-c-4722332762804942442: 400 (request &quot;OPERATION_INVALID_SHARDS_NO_PRIMARY&quot;) The operation cannot begin because monitoring indicates these shards have no primary: atlas-de2m0b-shard-0.
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-08-28T03:23:02.3448460Z         
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-08-28T03:23:02.3448807Z           with mongodbatlas_cluster.test,
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-08-28T03:23:02.3449453Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;test&quot;:
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-08-28T03:23:02.3450041Z           12: resource &quot;mongodbatlas_cluster&quot; &quot;test&quot; {
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-08-28T03:23:02.3450670Z         
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-08-28T03:23:02.4002353Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (864.28s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-08-28T03:08:38.1198026Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-08-28T03:08:38.1209426Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-08-28T03:09:38.1496881Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-08-28T03:09:38.1500795Z     pre_check.go:46: Time before creating cluster: 2026-08-28T03:09:38.149357555Z, ProjectID: 6a90fbb463fde9550ed1b34a, Cluster name: test-acc-tf-c-4722332762804942442
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-08-28T03:20:57.4104646Z   
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-08-28T03:23:02.3440869Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-08-28T03:23:02.3441767Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-08-28T03:23:02.3442451Z         
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-08-28T03:23:02.3446882Z         Error: error updating MongoDB Cluster (test-acc-tf-c-4722332762804942442): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a90fbb463fde9550ed1b34a/clusters/test-acc-tf-c-4722332762804942442: 400 (request &quot;OPERATION_INVALID_SHARDS_NO_PRIMARY&quot;) The operation cannot begin because monitoring indicates these shards have no primary: atlas-de2m0b-shard-0.
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-08-28T03:23:02.3448460Z         
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-08-28T03:23:02.3448807Z           with mongodbatlas_cluster.test,
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-08-28T03:23:02.3449453Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-08-28T03:23:02.3450041Z           12: resource &quot;mongodbatlas_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-08-28T03:23:02.3450670Z         
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-08-28T03:23:02.4002353Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (864.28s)
 </code></pre></div>
 <ul>
 <li>2026-08-29 PASS 25 minutes</li>
@@ -370,20 +418,20 @@
 <li>2026-08-31</li>
 </ul>
 <h3 id="error-2026-08-31t0047150000">Error 2026-08-31T00:47:15+00:00</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-31T00:47:15.6744506Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-31T00:47:15.6932437Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-31T00:47:55.6852705Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-31T00:47:55.6854564Z     pre_check.go:46: Time before creating cluster: 2026-08-31T00:47:55.685036818Z, ProjectID: 6a94cf11aa75b90f4a280027, Cluster name: test-acc-tf-c-4068242820477147854
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-31T01:13:07.5836367Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-31T01:13:07.5836995Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-31T01:13:07.5837703Z         
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-08-31T01:13:07.5839800Z         Error: error updating MongoDB Cluster (test-acc-tf-c-4068242820477147854): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a94cf11aa75b90f4a280027/clusters/test-acc-tf-c-4068242820477147854: 400 (request &quot;OPERATION_INVALID_MEMBER_REPLICATION_LAG&quot;) The operation cannot begin because monitoring indicates these nodes have too much replication lag: atlas-ca6toq-shard-00-02.ishked.mongodb-dev.net (290sec).
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-08-31T01:13:07.5841507Z         
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-08-31T01:13:07.5841989Z           with mongodbatlas_cluster.test,
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-08-31T01:13:07.5842591Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;test&quot;:
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-08-31T01:13:07.5843157Z           12: resource &quot;mongodbatlas_cluster&quot; &quot;test&quot; {
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-08-31T01:13:07.5843469Z         
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-08-31T01:13:07.6363649Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (1551.95s)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-08-31T00:47:15.6744506Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-08-31T00:47:15.6932437Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-08-31T00:47:55.6852705Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-08-31T00:47:55.6854564Z     pre_check.go:46: Time before creating cluster: 2026-08-31T00:47:55.685036818Z, ProjectID: 6a94cf11aa75b90f4a280027, Cluster name: test-acc-tf-c-4068242820477147854
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-08-31T01:13:07.5836367Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-08-31T01:13:07.5836995Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-08-31T01:13:07.5837703Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-08-31T01:13:07.5839800Z         Error: error updating MongoDB Cluster (test-acc-tf-c-4068242820477147854): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a94cf11aa75b90f4a280027/clusters/test-acc-tf-c-4068242820477147854: 400 (request &quot;OPERATION_INVALID_MEMBER_REPLICATION_LAG&quot;) The operation cannot begin because monitoring indicates these nodes have too much replication lag: atlas-ca6toq-shard-00-02.ishked.mongodb-dev.net (290sec).
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-08-31T01:13:07.5841507Z         
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-08-31T01:13:07.5841989Z           with mongodbatlas_cluster.test,
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-08-31T01:13:07.5842591Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-08-31T01:13:07.5843157Z           12: resource &quot;mongodbatlas_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-08-31T01:13:07.5843469Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-08-31T01:13:07.6363649Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (1551.95s)
 </code></pre></div>
 <ul>
 <li>2026-09-01 PASS 24 minutes</li>
@@ -400,25 +448,25 @@
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 25 minutes</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 25 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16 PASS 24 minutes</li>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23 PASS 23 minutes</li>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 26 minutes</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 23 minutes</li>

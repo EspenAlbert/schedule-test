@@ -292,34 +292,66 @@
 
 
 <h1 id="backuponlinearchivetestaccbackuprsonlinearchivebasic-test-details">backup/onlinearchive/TestAccBackupRSOnlineArchiveBasic Test Details</h1>
-<h1 id="found-10-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-10">Found 10 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 10)</h1>
-<p>Success rate: 100.00%</p>
+<h1 id="found-32-testruns-in-dev-qa-from-2026-08-06-to-2026-09-04-from-master-branch-1-unique-tests-passx-29-failx-3">Found 32 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 29) FAIL(x 3)</h1>
+<p>Success rate: 90.62%</p>
 <h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-17t0113070000">2026-08-17 01:13</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>2009.05s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06 PASS 20 minutes</li>
 <li>2026-08-07 PASS 21 minutes</li>
-<li>2026-08-08: MISSING</li>
+<li>2026-08-08 PASS 20 minutes</li>
 <li>2026-08-09: MISSING</li>
-<li>2026-08-10: MISSING</li>
-<li>2026-08-11: MISSING</li>
-<li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
-<li>2026-08-14: MISSING</li>
-<li>2026-08-15: MISSING</li>
+<li>2026-08-10 PASS 24 minutes</li>
+<li>2026-08-11 PASS 20 minutes</li>
+<li>2026-08-12 PASS 17 minutes</li>
+<li>2026-08-13 PASS 19 minutes</li>
+<li>2026-08-14 PASS 19 minutes</li>
+<li>2026-08-15 PASS 21 minutes</li>
 <li>2026-08-16: MISSING</li>
-<li>2026-08-17: MISSING</li>
-<li>2026-08-18: MISSING</li>
-<li>2026-08-19: MISSING</li>
-<li>2026-08-20: MISSING</li>
-<li>2026-08-21: MISSING</li>
-<li>2026-08-22: MISSING</li>
+<li>2026-08-17</li>
+</ul>
+<h3 id="error-2026-08-17t0113070000">Error 2026-08-17T01:13:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-08-17T01:13:07.0986982Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-08-17T01:13:07.0991831Z === CONT  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-08-17T01:13:07.0997418Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-08-17T01:13:07.0998573Z     pre_check.go:46: Time before creating cluster: 2026-08-17T00:39:51.653615934Z, ProjectID: 6a825846bf57824f43e3c1aa, Cluster name: test-acc-tf-c-3609786809605185998
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-08-17T01:13:07.1028453Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-08-17T01:13:07.1029446Z     resource_test.go:131: Step 1/3 error: Check failed: timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-08-17T01:13:07.1030179Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (2009.45s)
+</code></pre></div>
+<ul>
+<li>2026-08-18 PASS 21 minutes</li>
+<li>2026-08-19 PASS 21 minutes</li>
+<li>2026-08-20 PASS 21 minutes</li>
+<li>2026-08-21 PASS 22 minutes</li>
+<li>2026-08-22 PASS 20 minutes</li>
 <li>2026-08-23: MISSING</li>
-<li>2026-08-24: MISSING</li>
-<li>2026-08-25: MISSING</li>
-<li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-24 PASS 19 minutes</li>
+<li>2026-08-25 PASS 19 minutes</li>
+<li>2026-08-26 PASS 20 minutes</li>
+<li>2026-08-27 PASS an hour</li>
 <li>2026-08-28 PASS 46 minutes</li>
 <li>2026-08-29 PASS 20 minutes</li>
 <li>2026-08-30: MISSING</li>
@@ -330,31 +362,81 @@
 <li>2026-09-04 PASS 27 minutes</li>
 </ul>
 <h2 id="qa-environment">QA Environment</h2>
+<h2 id="error-table_1">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-08-16t0112380000">2026-08-16 01:12</a></td>
+<td></td>
+<td>qa</td>
+<td>timeout</td>
+<td>1850.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-08-23t0111420000">2026-08-23 01:11</a></td>
+<td></td>
+<td>qa</td>
+<td>timeout</td>
+<td>1798.08s</td>
+</tr>
+</tbody>
+</table>
 <h3 id="timeline_1">Timeline</h3>
 <ul>
 <li>2026-08-05: MISSING</li>
 <li>2026-08-06: MISSING</li>
 <li>2026-08-07: MISSING</li>
 <li>2026-08-08: MISSING</li>
-<li>2026-08-09: MISSING</li>
+<li>2026-08-09 PASS 18 minutes</li>
 <li>2026-08-10: MISSING</li>
 <li>2026-08-11: MISSING</li>
 <li>2026-08-12: MISSING</li>
-<li>2026-08-13: MISSING</li>
+<li>2026-08-13 PASS 21 minutes</li>
 <li>2026-08-14: MISSING</li>
 <li>2026-08-15: MISSING</li>
-<li>2026-08-16: MISSING</li>
+<li>2026-08-16</li>
+</ul>
+<h3 id="error-2026-08-16t0112380000">Error 2026-08-16T01:12:38+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-08-16T01:12:38.8133541Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-08-16T01:12:38.8140779Z === CONT  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-08-16T01:12:38.8144723Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-08-16T01:12:38.8145730Z     pre_check.go:46: Time before creating cluster: 2026-08-16T00:41:02.305490328Z, ProjectID: 6a81071150246cd6ebc4b236, Cluster name: test-acc-tf-c-9008171317839624842
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-08-16T01:12:38.8179163Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-08-16T01:12:38.8180146Z     resource_test.go:131: Step 1/3 error: Check failed: timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-08-16T01:12:38.8186398Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (1850.40s)
+</code></pre></div>
+<ul>
 <li>2026-08-17: MISSING</li>
 <li>2026-08-18: MISSING</li>
 <li>2026-08-19: MISSING</li>
 <li>2026-08-20: MISSING</li>
 <li>2026-08-21: MISSING</li>
 <li>2026-08-22: MISSING</li>
-<li>2026-08-23: MISSING</li>
+<li>2026-08-23</li>
+</ul>
+<h3 id="error-2026-08-23t0111420000">Error 2026-08-23T01:11:42+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-08-23T01:11:42.7190930Z === RUN   TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-08-23T01:11:42.7195333Z === CONT  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-08-23T01:11:42.7201750Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-08-23T01:11:42.7202696Z     pre_check.go:46: Time before creating cluster: 2026-08-23T00:40:42.309158593Z, ProjectID: 6a8a4174852bf2142d1b8c55, Cluster name: test-acc-tf-c-1098068038876704457
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-08-23T01:11:42.7222332Z === NAME  TestAccBackupRSOnlineArchiveBasic
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-08-23T01:11:42.7223128Z     resource_test.go:131: Step 1/3 error: Check failed: timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-08-23T01:11:42.7228023Z --- FAIL: TestAccBackupRSOnlineArchiveBasic (1798.84s)
+</code></pre></div>
+<ul>
 <li>2026-08-24: MISSING</li>
 <li>2026-08-25: MISSING</li>
 <li>2026-08-26: MISSING</li>
-<li>2026-08-27: MISSING</li>
+<li>2026-08-27 PASS 19 minutes</li>
 <li>2026-08-28: MISSING</li>
 <li>2026-08-29: MISSING</li>
 <li>2026-08-30 PASS 19 minutes</li>

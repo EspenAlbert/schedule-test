@@ -1,12 +1,14 @@
 # cluster/cluster/TestAccCluster_basicAWS_PausedToUnpaused Test Details
-# Found 11 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 9) FAIL(x 2)
-Success rate: 81.82%
+# Found 33 TestRuns in dev, qa from 2026-08-06 to 2026-09-04 from master branch: 1 unique tests, PASS(x 29) FAIL(x 4)
+Success rate: 87.88%
 
 ## DEV Environment
 ## Error Table
 
 Date | Details | Env | Runtime
 --- | --- | --- | ---
+[2026-08-10 00:28](#error-2026-08-10t0028400000) | OPERATION_INVALID_SHARDS_NO_PRIMARY /api/atlas/v1.0/groups/6a791b362c88faeba5937f47/clusters/test-acc-tf-c-1632645167771292481 | dev | 709.10s
+[2026-08-27 01:46](#error-2026-08-27t0146590000) | OPERATION_INVALID_SHARDS_NO_PRIMARY /api/atlas/v1.0/groups/6a8f97116af220b06a0f6cb8/clusters/test-acc-tf-c-5658346379789515645 | dev | 959.04s
 [2026-08-28 03:08](#error-2026-08-28t0308380000) | OPERATION_INVALID_SHARDS_NO_PRIMARY /api/atlas/v1.0/groups/6a90fbb463fde9550ed1b34a/clusters/test-acc-tf-c-4722332762804942442 | dev | 864.03s
 [2026-08-31 00:47](#error-2026-08-31t0047150000) | OPERATION_INVALID_MEMBER_REPLICATION_LAG /api/atlas/v1.0/groups/6a94cf11aa75b90f4a280027/clusters/test-acc-tf-c-4068242820477147854 | dev | 1551.10s
 
@@ -14,26 +16,64 @@ Date | Details | Env | Runtime
 - 2026-08-05: MISSING
 - 2026-08-06 PASS 24 minutes
 - 2026-08-07 PASS 23 minutes
-- 2026-08-08: MISSING
+- 2026-08-08 PASS 24 minutes
 - 2026-08-09: MISSING
-- 2026-08-10: MISSING
-- 2026-08-11: MISSING
-- 2026-08-12: MISSING
-- 2026-08-13: MISSING
-- 2026-08-14: MISSING
-- 2026-08-15: MISSING
+- 2026-08-10
+
+### Error 2026-08-10T00:28:40+00:00
+```
+2026-08-10T00:28:40.8737244Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-10T00:28:40.9627420Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-10T00:29:25.8901760Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-10T00:29:25.8902833Z     pre_check.go:46: Time before creating cluster: 2026-08-10T00:29:25.889859996Z, ProjectID: 6a791b362c88faeba5937f47, Cluster name: test-acc-tf-c-1632645167771292481
+2026-08-10T00:40:30.8238484Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-10T00:40:30.8239890Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
+2026-08-10T00:40:30.8240918Z         
+2026-08-10T00:40:30.8244907Z         Error: error updating MongoDB Cluster (test-acc-tf-c-1632645167771292481): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a791b362c88faeba5937f47/clusters/test-acc-tf-c-1632645167771292481: 400 (request "OPERATION_INVALID_SHARDS_NO_PRIMARY") The operation cannot begin because monitoring indicates these shards have no primary: atlas-qdk57r-shard-0.
+2026-08-10T00:40:30.8248124Z         
+2026-08-10T00:40:30.8249175Z           with mongodbatlas_cluster.test,
+2026-08-10T00:40:30.8251111Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_cluster" "test":
+2026-08-10T00:40:30.8252841Z           12: resource "mongodbatlas_cluster" "test" {
+2026-08-10T00:40:30.8253873Z         
+2026-08-10T00:40:30.8740761Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (709.99s)
+```
+
+- 2026-08-11 PASS 26 minutes
+- 2026-08-12 PASS 25 minutes
+- 2026-08-13 PASS 24 minutes
+- 2026-08-14 PASS 24 minutes
+- 2026-08-15 PASS 24 minutes
 - 2026-08-16: MISSING
-- 2026-08-17: MISSING
-- 2026-08-18: MISSING
-- 2026-08-19: MISSING
-- 2026-08-20: MISSING
-- 2026-08-21: MISSING
-- 2026-08-22: MISSING
+- 2026-08-17 PASS 24 minutes
+- 2026-08-18 PASS 23 minutes
+- 2026-08-19 PASS 24 minutes
+- 2026-08-20 PASS 24 minutes
+- 2026-08-21 PASS 23 minutes
+- 2026-08-22 PASS 23 minutes
 - 2026-08-23: MISSING
-- 2026-08-24: MISSING
-- 2026-08-25: MISSING
-- 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-24 PASS 22 minutes
+- 2026-08-25 PASS 24 minutes
+- 2026-08-26 PASS 25 minutes
+- 2026-08-27
+
+### Error 2026-08-27T01:46:59+00:00
+```
+2026-08-27T01:46:59.6727887Z === RUN   TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-27T01:46:59.6748561Z === CONT  TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-27T01:47:14.6766402Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-27T01:47:14.6767927Z     pre_check.go:46: Time before creating cluster: 2026-08-27T01:47:14.676375686Z, ProjectID: 6a8f97116af220b06a0f6cb8, Cluster name: test-acc-tf-c-5658346379789515645
+2026-08-27T02:02:59.0737276Z === NAME  TestAccCluster_basicAWS_PausedToUnpaused
+2026-08-27T02:02:59.0738105Z     resource_cluster_test.go:1239: Step 1/2 error: Error running apply: exit status 1
+2026-08-27T02:02:59.0738570Z         
+2026-08-27T02:02:59.0740647Z         Error: error updating MongoDB Cluster (test-acc-tf-c-5658346379789515645): PATCH https://cloud-dev.mongodb.com/api/atlas/v1.0/groups/6a8f97116af220b06a0f6cb8/clusters/test-acc-tf-c-5658346379789515645: 400 (request "OPERATION_INVALID_SHARDS_NO_PRIMARY") The operation cannot begin because monitoring indicates these shards have no primary: atlas-oxaxbc-shard-0.
+2026-08-27T02:02:59.0742091Z         
+2026-08-27T02:02:59.0742595Z           with mongodbatlas_cluster.test,
+2026-08-27T02:02:59.0743264Z           on terraform_plugin_test.tf line 12, in resource "mongodbatlas_cluster" "test":
+2026-08-27T02:02:59.0743862Z           12: resource "mongodbatlas_cluster" "test" {
+2026-08-27T02:02:59.0744392Z         
+2026-08-27T02:02:59.1218910Z --- FAIL: TestAccCluster_basicAWS_PausedToUnpaused (959.45s)
+```
+
 - 2026-08-28
 
 ### Error 2026-08-28T03:08:38+00:00
@@ -90,25 +130,25 @@ Date | Details | Env | Runtime
 - 2026-08-06: MISSING
 - 2026-08-07: MISSING
 - 2026-08-08: MISSING
-- 2026-08-09: MISSING
+- 2026-08-09 PASS 25 minutes
 - 2026-08-10: MISSING
 - 2026-08-11: MISSING
 - 2026-08-12: MISSING
-- 2026-08-13: MISSING
+- 2026-08-13 PASS 25 minutes
 - 2026-08-14: MISSING
 - 2026-08-15: MISSING
-- 2026-08-16: MISSING
+- 2026-08-16 PASS 24 minutes
 - 2026-08-17: MISSING
 - 2026-08-18: MISSING
 - 2026-08-19: MISSING
 - 2026-08-20: MISSING
 - 2026-08-21: MISSING
 - 2026-08-22: MISSING
-- 2026-08-23: MISSING
+- 2026-08-23 PASS 23 minutes
 - 2026-08-24: MISSING
 - 2026-08-25: MISSING
 - 2026-08-26: MISSING
-- 2026-08-27: MISSING
+- 2026-08-27 PASS 26 minutes
 - 2026-08-28: MISSING
 - 2026-08-29: MISSING
 - 2026-08-30 PASS 23 minutes
