@@ -1,5 +1,6 @@
 # Welcome to CI Tests
 
+- [2026-10-02](./2026-10-02.md), [2026-10-02 Error Only](./2026-10-02_error-only.md), [2026-10-02 Daily Errors](./2026-10-02_daily.md)
 - [2026-09-14](./2026-09-14.md), [2026-09-14 Error Only](./2026-09-14_error-only.md), [2026-09-14 Daily Errors](./2026-09-14_daily.md)
 - [2026-09-04](./2026-09-04.md), [2026-09-04 Error Only](./2026-09-04_error-only.md), [2026-09-04 Daily Errors](./2026-09-04_daily.md)
 - [2026-08-07](./2026-08-07.md), [2026-08-07 Error Only](./2026-08-07_error-only.md), [2026-08-07 Daily Errors](./2026-08-07_daily.md)

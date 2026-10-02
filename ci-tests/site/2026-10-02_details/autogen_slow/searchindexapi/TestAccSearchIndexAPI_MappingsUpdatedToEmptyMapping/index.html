@@ -1,0 +1,955 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>autogen_slow/searchindexapi/TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autogen_slowsearchindexapitestaccsearchindexapi_mappingsupdatedtoemptymapping-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              autogen_slow/searchindexapi/TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="autogen_slowsearchindexapitestaccsearchindexapi_mappingsupdatedtoemptymapping-test-details">autogen_slow/searchindexapi/TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping Test Details</h1>
+<h1 id="found-37-testruns-in-dev-qa-from-2026-09-02-to-2026-10-02-from-master-branch-1-unique-tests-failx-18-skipx-11-passx-6-timeoutx-2">Found 37 TestRuns in dev, qa from 2026-09-02 to 2026-10-02 from master branch: 1 unique tests, FAIL(x 18) SKIP(x 11) PASS(x 6) TIMEOUT(x 2)</h1>
+<p>Success rate: 23.08%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-09-02t0459000000">2026-09-02 04:59</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11361.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-03t0544170000">2026-09-03 05:44</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>14164.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-03t1002470000">2026-09-03 10:02</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11272.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-05t0457170000">2026-09-05 04:57</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>13965.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-07t0548170000">2026-09-07 05:48</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10803.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-07t1714300000">2026-09-07 17:14</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>16721.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-08t0500430000">2026-09-08 05:00</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>12838.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-09t0445050000">2026-09-09 04:45</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10804.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-10t0133060000">2026-09-10 01:33</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>0.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-11t0301530000">2026-09-11 03:01</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>0.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-11t0731030000">2026-09-11 07:31</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>0.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-12t0454110000">2026-09-12 04:54</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>13890.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-14t0547030000">2026-09-14 05:47</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>16927.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-15t0543500000">2026-09-15 05:43</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10804.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-16t0543440000">2026-09-16 05:43</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>16299.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-18t0516190000">2026-09-18 05:16</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>14591.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-19t0130400000">2026-09-19 01:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>0.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-21t0548450000">2026-09-21 05:48</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10803.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-22t0506240000">2026-09-22 05:06</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>14129.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-22t1246470000">2026-09-22 12:46</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>10805.04s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-09-01: MISSING</li>
+<li>2026-09-02</li>
+</ul>
+<h3 id="error-2026-09-02t0459000000">Error 2026-09-02T04:59:00+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-09-02T04:59:00.1908807Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-09-02T04:59:00.1920105Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-09-02T04:59:00.2076088Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-09-02T04:59:00.2076689Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-09-02T04:59:00.2077106Z         
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-09-02T04:59:00.2077593Z         Error: Error waiting for changes in Update
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-09-02T04:59:00.2077922Z         
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-09-02T04:59:00.2078287Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-09-02T04:59:00.2079006Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-09-02T04:59:00.2079686Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-09-02T04:59:00.2080043Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-09-02T04:59:00.2080554Z         group_id=&quot;6a97712e7f32ed5349f9c310&quot;,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-09-02T04:59:00.2081117Z         cluster_name=&quot;test-acc-tf-c-3797371471604204812&quot;,
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-09-02T04:59:00.2081733Z         index_id=&quot;6a97767379ec95325857a12b&quot;: timeout while waiting for state to
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-09-02T04:59:00.2082371Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-09-02T04:59:00.2082899Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (11361.89s)
+</code></pre></div>
+<ul>
+<li>2026-09-03</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2026-09-03t0544170000">Error 2026-09-03T05:44:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-09-03T05:44:17.7098649Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-09-03T05:44:17.7108156Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-09-03T05:44:17.7205140Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-09-03T05:44:17.7206088Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-09-03T05:44:17.7206719Z         
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-09-03T05:44:17.7207271Z         Error: Error waiting for changes in Update
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-09-03T05:44:17.7207795Z         
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-09-03T05:44:17.7208348Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-09-03T05:44:17.7209480Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-09-03T05:44:17.7210575Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-09-03T05:44:17.7211318Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-09-03T05:44:17.7211830Z         group_id=&quot;6a98c2e18c6ee76bb0d54be9&quot;,
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-09-03T05:44:17.7212761Z         cluster_name=&quot;test-acc-tf-c-5646429399751727716&quot;,
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-09-03T05:44:17.7213768Z         index_id=&quot;6a98c757c4c2ba86c180a1ec&quot;: timeout while waiting for state to
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-09-03T05:44:17.7214828Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-09-03T05:44:17.7215689Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (14164.31s)
+</code></pre></div>
+<ul>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2026-09-03t1002470000">Error 2026-09-03T10:02:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-09-03T10:02:47.0687405Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-09-03T10:02:47.0694268Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-09-03T10:02:47.0907170Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-09-03T10:02:47.0908258Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-09-03T10:02:47.0908989Z         
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-09-03T10:02:47.0909878Z         Error: Error waiting for changes in Update
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-09-03T10:02:47.0910453Z         
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-09-03T10:02:47.0911072Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-09-03T10:02:47.0912367Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-09-03T10:02:47.0913586Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-09-03T10:02:47.0914230Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-09-03T10:02:47.0914811Z         group_id=&quot;6a99146d72d7295ca98dbca0&quot;,
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-09-03T10:02:47.0915686Z         cluster_name=&quot;test-acc-tf-c-571919649677458254&quot;,
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-09-03T10:02:47.0917014Z         index_id=&quot;6a99189a72d7295ca9908e3e&quot;: timeout while waiting for state to
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-09-03T10:02:47.0918239Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-09-03T10:02:47.0920706Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (11272.30s)
+</code></pre></div>
+<ul>
+<li>2026-09-04 PASS an hour</li>
+<li>2026-09-05</li>
+</ul>
+<h3 id="error-2026-09-05t0457170000">Error 2026-09-05T04:57:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-09-05T04:57:17.6503062Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-09-05T04:57:17.6510656Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-09-05T04:57:17.6609521Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-09-05T04:57:17.6610061Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-09-05T04:57:17.6610533Z         
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-09-05T04:57:17.6610935Z         Error: Error waiting for changes in Update
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-09-05T04:57:17.6611319Z         
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-09-05T04:57:17.6611724Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-09-05T04:57:17.6612432Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-09-05T04:57:17.6613063Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-09-05T04:57:17.6613694Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-09-05T04:57:17.6614073Z         group_id=&quot;6a9b652f1099178350983b6f&quot;,
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-09-05T04:57:17.6614597Z         cluster_name=&quot;test-acc-tf-c-2329868758960774626&quot;,
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-09-05T04:57:17.6615184Z         index_id=&quot;6a9b69e9e6eed86290f4e1f4&quot;: timeout while waiting for state to
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2026-09-05T04:57:17.6615812Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2026-09-05T04:57:17.6616329Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (13965.21s)
+</code></pre></div>
+<ul>
+<li>2026-09-06: MISSING</li>
+<li>2026-09-07</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2026-09-07t0548170000">Error 2026-09-07T05:48:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-09-07T05:48:17.9807966Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-09-07T05:48:17.9814813Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-09-07T05:48:17.9887317Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-09-07T05:48:17.9887925Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-09-07T05:48:17.9888337Z         
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-09-07T05:48:17.9888689Z         Error: Error waiting for changes in Create
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-09-07T05:48:17.9889020Z         
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-09-07T05:48:17.9889382Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-09-07T05:48:17.9890414Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-09-07T05:48:17.9891125Z           12:         resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-09-07T05:48:17.9891494Z         
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-09-07T05:48:17.9891814Z         group_id=&quot;6a9e09d2ce994148d59e6659&quot;,
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-09-07T05:48:17.9892277Z         cluster_name=&quot;test-acc-tf-c-1313053707861581472&quot;,
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-09-07T05:48:17.9892884Z         index_id=&quot;6a9e0e9ae6eed862900fdc20&quot;: timeout while waiting for state to
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-09-07T05:48:17.9893522Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-09-07T05:48:17.9894193Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-09-07T05:48:17.9894900Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-09-07T05:48:17.9895474Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (10803.94s)
+</code></pre></div>
+<ul>
+<li>TIMEOUT 4 hours</li>
+</ul>
+<h3 id="error-2026-09-07t1714300000">Error 2026-09-07T17:14:30+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-09-07T17:14:30.4723599Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-09-07T17:14:30.4734563Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-09-07T17:14:30.4917557Z panic: test timed out after 5h0m0s
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-09-07T17:14:30.4917866Z    running tests:
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-09-07T17:14:30.4918420Z        TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (4h38m41s)
+</code></pre></div>
+<ul>
+<li>2026-09-08</li>
+</ul>
+<h3 id="error-2026-09-08t0500430000">Error 2026-09-08T05:00:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-09-08T05:00:43.6863111Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-09-08T05:00:43.6871452Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-09-08T05:00:43.7035290Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-09-08T05:00:43.7035911Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-09-08T05:00:43.7036386Z         
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-09-08T05:00:43.7036745Z         Error: Error waiting for changes in Update
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-09-08T05:00:43.7037074Z         
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-09-08T05:00:43.7037435Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-09-08T05:00:43.7038143Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-09-08T05:00:43.7038825Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-09-08T05:00:43.7039178Z         
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-09-08T05:00:43.7039494Z         group_id=&quot;6a9f5a9228da0e5fc08e7890&quot;,
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-09-08T05:00:43.7040264Z         cluster_name=&quot;test-acc-tf-c-4534713065942648190&quot;,
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-09-08T05:00:43.7040887Z         index_id=&quot;6a9f5f9228da0e5fc0901b51&quot;: timeout while waiting for state to
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-09-08T05:00:43.7041540Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2026-09-08T05:00:43.7042076Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (12838.92s)
+</code></pre></div>
+<ul>
+<li>2026-09-09</li>
+</ul>
+<h3 id="error-2026-09-09t0445050000">Error 2026-09-09T04:45:05+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-09-09T04:45:05.5391291Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-09-09T04:45:05.5401920Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-09-09T04:45:05.5518359Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-09-09T04:45:05.5519405Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-09-09T04:45:05.5520464Z         
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-09-09T04:45:05.5521132Z         Error: Error waiting for changes in Create
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-09-09T04:45:05.5521713Z         
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-09-09T04:45:05.5523129Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-09-09T04:45:05.5524434Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-09-09T04:45:05.5525676Z           12:         resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-09-09T04:45:05.5526305Z         
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-09-09T04:45:05.5526875Z         group_id=&quot;6aa0abadf33137a6ca4829f0&quot;,
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-09-09T04:45:05.5527700Z         cluster_name=&quot;test-acc-tf-c-1622242972829995596&quot;,
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-09-09T04:45:05.5528729Z         index_id=&quot;6aa0b0f5567d318b5305b3a2&quot;: timeout while waiting for state to
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2026-09-09T04:45:05.5530039Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2026-09-09T04:45:05.5531416Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2026-09-09T04:45:05.5532635Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2026-09-09T04:45:05.5533551Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (10804.93s)
+</code></pre></div>
+<ul>
+<li>2026-09-10</li>
+</ul>
+<h3 id="error-2026-09-10t0133060000">Error 2026-09-10T01:33:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-09-10T01:33:06.1292519Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-09-10T01:33:06.1292949Z     resource_test.go:93: 
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-09-10T01:33:06.1294107Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:180
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-09-10T01:33:06.1296112Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:93
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-09-10T01:33:06.1296948Z            Error:          Received unexpected error:
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-09-10T01:33:06.1298447Z                            sample dataset load 6aa201365b8d9510e89370dd failed for cluster 6aa1fcb04ab31ba34525537f:test-acc-tf-c-1596466085034706675
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-09-10T01:33:06.1299307Z            Test:           TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-09-10T01:33:06.1299842Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (0.00s)
+</code></pre></div>
+<ul>
+<li>2026-09-11</li>
+<li>FAIL unknown</li>
+</ul>
+<h3 id="error-2026-09-11t0301530000">Error 2026-09-11T03:01:53+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2026-09-11T03:01:53.1620653Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2026-09-11T03:01:53.1620986Z     resource_test.go:93: 
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2026-09-11T03:01:53.1621760Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:180
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2026-09-11T03:01:53.1623275Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:93
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2026-09-11T03:01:53.1624026Z            Error:          Received unexpected error:
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2026-09-11T03:01:53.1624845Z                            timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2026-09-11T03:01:53.1625422Z            Test:           TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2026-09-11T03:01:53.1625828Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (0.00s)
+</code></pre></div>
+<ul>
+<li>FAIL unknown</li>
+</ul>
+<h3 id="error-2026-09-11t0731030000">Error 2026-09-11T07:31:03+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2026-09-11T07:31:03.1980873Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2026-09-11T07:31:03.1981612Z     resource_test.go:93: 
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2026-09-11T07:31:03.1983161Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:180
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2026-09-11T07:31:03.1985803Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:93
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2026-09-11T07:31:03.1987184Z            Error:          Received unexpected error:
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2026-09-11T07:31:03.1989103Z                            sample dataset load 6aa3a5fff7fcc4bbebf76935 failed for cluster 6aa3a28df7fcc4bbebf53df1:test-acc-tf-c-1260780199030207545
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2026-09-11T07:31:03.1990589Z            Test:           TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2026-09-11T07:31:03.1991472Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (0.00s)
+</code></pre></div>
+<ul>
+<li>2026-09-12</li>
+</ul>
+<h3 id="error-2026-09-12t0454110000">Error 2026-09-12T04:54:11+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2026-09-12T04:54:11.5067523Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2026-09-12T04:54:11.5074180Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2026-09-12T04:54:11.5155201Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2026-09-12T04:54:11.5155791Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2026-09-12T04:54:11.5156211Z         
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2026-09-12T04:54:11.5156568Z         Error: Error waiting for changes in Update
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2026-09-12T04:54:11.5156905Z         
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2026-09-12T04:54:11.5157268Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2026-09-12T04:54:11.5157979Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2026-09-12T04:54:11.5158658Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2026-09-12T04:54:11.5159282Z         
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2026-09-12T04:54:11.5159614Z         group_id=&quot;6aa49fd27423f4722c01b542&quot;,
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2026-09-12T04:54:11.5160085Z         cluster_name=&quot;test-acc-tf-c-8210674005052258226&quot;,
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2026-09-12T04:54:11.5160688Z         index_id=&quot;6aa4a4047423f4722c038c4c&quot;: timeout while waiting for state to
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2026-09-12T04:54:11.5161331Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>2026-09-12T04:54:11.5162005Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (13890.73s)
+</code></pre></div>
+<ul>
+<li>2026-09-13: MISSING</li>
+<li>2026-09-14</li>
+</ul>
+<h3 id="error-2026-09-14t0547030000">Error 2026-09-14T05:47:03+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>2026-09-14T05:47:03.7435421Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2026-09-14T05:47:03.7447774Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2026-09-14T05:47:03.7622013Z panic: test timed out after 5h0m0s
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>2026-09-14T05:47:03.7622316Z    running tests:
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>2026-09-14T05:47:03.7622705Z        TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (4h42m7s)
+</code></pre></div>
+<ul>
+<li>2026-09-15</li>
+</ul>
+<h3 id="error-2026-09-15t0543500000">Error 2026-09-15T05:43:50+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>2026-09-15T05:43:50.3089688Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>2026-09-15T05:43:50.3098618Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>2026-09-15T05:43:50.3210741Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>2026-09-15T05:43:50.3211351Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2026-09-15T05:43:50.3211775Z         
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>2026-09-15T05:43:50.3212135Z         Error: Error waiting for changes in Create
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>2026-09-15T05:43:50.3212480Z         
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>2026-09-15T05:43:50.3212848Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>2026-09-15T05:43:50.3213929Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>2026-09-15T05:43:50.3214650Z           12:         resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>2026-09-15T05:43:50.3215030Z         
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>2026-09-15T05:43:50.3215356Z         group_id=&quot;6aa894c6f45e19b0d3dcab24&quot;,
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>2026-09-15T05:43:50.3215838Z         cluster_name=&quot;test-acc-tf-c-6477351237734953754&quot;,
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>2026-09-15T05:43:50.3216458Z         index_id=&quot;6aa898f3f45e19b0d3e0ed62&quot;: timeout while waiting for state to
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>2026-09-15T05:43:50.3217139Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>2026-09-15T05:43:50.3217828Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>2026-09-15T05:43:50.3218560Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>2026-09-15T05:43:50.3219688Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (10804.16s)
+</code></pre></div>
+<ul>
+<li>2026-09-16</li>
+</ul>
+<h3 id="error-2026-09-16t0543440000">Error 2026-09-16T05:43:44+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>2026-09-16T05:43:44.8869276Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>2026-09-16T05:43:44.8877844Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>2026-09-16T05:43:44.9001841Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>2026-09-16T05:43:44.9002810Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>2026-09-16T05:43:44.9003472Z         
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>2026-09-16T05:43:44.9004054Z         Error: Error waiting for changes in Update
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>2026-09-16T05:43:44.9004598Z         
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>2026-09-16T05:43:44.9005456Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>2026-09-16T05:43:44.9006678Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>2026-09-16T05:43:44.9007851Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>2026-09-16T05:43:44.9008647Z         
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>2026-09-16T05:43:44.9009192Z         group_id=&quot;6aa9e5e4013d831ec44b342e&quot;,
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>2026-09-16T05:43:44.9009980Z         cluster_name=&quot;test-acc-tf-c-750170190363952492&quot;,
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>2026-09-16T05:43:44.9011040Z         index_id=&quot;6aa9ebbf013d831ec44fe7a3&quot;: timeout while waiting for state to
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>2026-09-16T05:43:44.9012155Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>2026-09-16T05:43:44.9014275Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (16299.18s)
+</code></pre></div>
+<ul>
+<li>2026-09-17 PASS 52 minutes</li>
+<li>2026-09-18</li>
+</ul>
+<h3 id="error-2026-09-18t0516190000">Error 2026-09-18T05:16:19+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2026-09-18T05:16:19.5406254Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>2026-09-18T05:16:19.5411510Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2026-09-18T05:16:19.5547759Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>2026-09-18T05:16:19.5548261Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>2026-09-18T05:16:19.5548605Z         
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>2026-09-18T05:16:19.5548923Z         Error: Error waiting for changes in Update
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>2026-09-18T05:16:19.5549200Z         
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>2026-09-18T05:16:19.5549526Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>2026-09-18T05:16:19.5550155Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>2026-09-18T05:16:19.5550739Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>2026-09-18T05:16:19.5551045Z         
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>2026-09-18T05:16:19.5551333Z         group_id=&quot;6aac88de1bd5f998a1452f76&quot;,
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>2026-09-18T05:16:19.5551743Z         cluster_name=&quot;test-acc-tf-c-3593569086852570367&quot;,
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>2026-09-18T05:16:19.5552275Z         index_id=&quot;6aac8efdacef019a417be1f4&quot;: timeout while waiting for state to
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>2026-09-18T05:16:19.5552829Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>2026-09-18T05:16:19.5553268Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (14591.42s)
+</code></pre></div>
+<ul>
+<li>2026-09-19</li>
+</ul>
+<h3 id="error-2026-09-19t0130400000">Error 2026-09-19T01:30:40+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>2026-09-19T01:30:40.9199481Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>2026-09-19T01:30:40.9199816Z     resource_test.go:93: 
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>2026-09-19T01:30:40.9200561Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:180
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>2026-09-19T01:30:40.9202018Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:93
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>2026-09-19T01:30:40.9202646Z            Error:          Received unexpected error:
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>2026-09-19T01:30:40.9203422Z                            timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>2026-09-19T01:30:40.9203983Z            Test:           TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>2026-09-19T01:30:40.9204539Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (0.00s)
+</code></pre></div>
+<ul>
+<li>2026-09-20: MISSING</li>
+<li>2026-09-21</li>
+</ul>
+<h3 id="error-2026-09-21t0548450000">Error 2026-09-21T05:48:45+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>2026-09-21T05:48:45.1961385Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>2026-09-21T05:48:45.1972237Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2026-09-21T05:48:45.2057579Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>2026-09-21T05:48:45.2058672Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>2026-09-21T05:48:45.2059417Z         
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>2026-09-21T05:48:45.2060047Z         Error: Error waiting for changes in Create
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>2026-09-21T05:48:45.2060608Z         
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>2026-09-21T05:48:45.2061240Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>2026-09-21T05:48:45.2062724Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>2026-09-21T05:48:45.2063960Z           12:         resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2026-09-21T05:48:45.2064607Z         
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>2026-09-21T05:48:45.2065164Z         group_id=&quot;6ab07eed79951ab0058245fb&quot;,
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>2026-09-21T05:48:45.2065986Z         cluster_name=&quot;test-acc-tf-c-6050672708674164813&quot;,
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>2026-09-21T05:48:45.2067082Z         index_id=&quot;6ab082d350f317768c30e8b3&quot;: timeout while waiting for state to
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>2026-09-21T05:48:45.2068239Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>2026-09-21T05:48:45.2069463Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>2026-09-21T05:48:45.2070761Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>2026-09-21T05:48:45.2072970Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (10803.17s)
+</code></pre></div>
+<ul>
+<li>2026-09-22</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2026-09-22t0506240000">Error 2026-09-22T05:06:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>2026-09-22T05:06:24.3121050Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>2026-09-22T05:06:24.3126856Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>2026-09-22T05:06:24.3220472Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>2026-09-22T05:06:24.3220979Z     resource_test.go:96: Step 2/2 error: Error running apply: exit status 1
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>2026-09-22T05:06:24.3221422Z         
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>2026-09-22T05:06:24.3221740Z         Error: Error waiting for changes in Update
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>2026-09-22T05:06:24.3222032Z         
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>2026-09-22T05:06:24.3222349Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>2026-09-22T05:06:24.3222964Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>2026-09-22T05:06:24.3223559Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>2026-09-22T05:06:24.3224024Z         
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>2026-09-22T05:06:24.3224316Z         group_id=&quot;6ab1cf51a17d32e660138f1d&quot;,
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>2026-09-22T05:06:24.3224761Z         cluster_name=&quot;test-acc-tf-c-1242047262187896326&quot;,
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>2026-09-22T05:06:24.3225318Z         index_id=&quot;6ab1d4e9a17d32e66015ce38&quot;: timeout while waiting for state to
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>2026-09-22T05:06:24.3225881Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>2026-09-22T05:06:24.3226385Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (14129.26s)
+</code></pre></div>
+<ul>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2026-09-22t1246470000">Error 2026-09-22T12:46:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>2026-09-22T12:46:47.9743631Z === RUN   TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>2026-09-22T12:46:47.9760468Z === CONT  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>2026-09-22T12:46:47.9801293Z === NAME  TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>2026-09-22T12:46:47.9802607Z     resource_test.go:96: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>2026-09-22T12:46:47.9803351Z         
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>2026-09-22T12:46:47.9803973Z         Error: Error waiting for changes in Create
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>2026-09-22T12:46:47.9804566Z         
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>2026-09-22T12:46:47.9805235Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>2026-09-22T12:46:47.9806598Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>2026-09-22T12:46:47.9807901Z           12:         resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>2026-09-22T12:46:47.9808561Z         
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>2026-09-22T12:46:47.9809147Z         group_id=&quot;6ab23b4fd135efc1a7edf95a&quot;,
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>2026-09-22T12:46:47.9809927Z         cluster_name=&quot;test-acc-tf-c-7202313398832200026&quot;,
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>2026-09-22T12:46:47.9810925Z         index_id=&quot;6ab241216d79e71061b41b14&quot;: timeout while waiting for state to
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>2026-09-22T12:46:47.9812023Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>2026-09-22T12:46:47.9813401Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>2026-09-22T12:46:47.9814667Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>2026-09-22T12:46:47.9829722Z    test_terraform_path=/home/runner/work/_temp/4eee0bea-124c-4326-a033-b65c87cd4a74/terraform test_working_directory=/tmp/plugintest532665745 test_step_number=1
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>2026-09-22T12:46:47.9981364Z --- FAIL: TestAccSearchIndexAPI_MappingsUpdatedToEmptyMapping (10805.37s)
+</code></pre></div>
+<ul>
+<li>2026-09-23 SKIP unknown</li>
+<li>2026-09-24 SKIP unknown</li>
+<li>2026-09-25 SKIP unknown</li>
+<li>2026-09-26 SKIP unknown</li>
+<li>2026-09-27: MISSING</li>
+<li>2026-09-28 SKIP unknown</li>
+<li>2026-09-29 SKIP unknown</li>
+<li>2026-09-30 SKIP unknown</li>
+<li>2026-10-01 SKIP unknown</li>
+<li>2026-10-02 SKIP unknown</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-09-01: MISSING</li>
+<li>2026-09-02: MISSING</li>
+<li>2026-09-03: MISSING</li>
+<li>2026-09-04: MISSING</li>
+<li>2026-09-05: MISSING</li>
+<li>2026-09-06 PASS 52 minutes</li>
+<li>2026-09-07: MISSING</li>
+<li>2026-09-08: MISSING</li>
+<li>2026-09-09: MISSING</li>
+<li>2026-09-10: MISSING</li>
+<li>2026-09-11: MISSING</li>
+<li>2026-09-12: MISSING</li>
+<li>2026-09-13 PASS an hour</li>
+<li>2026-09-14: MISSING</li>
+<li>2026-09-15: MISSING</li>
+<li>2026-09-16 PASS an hour</li>
+<li>2026-09-17: MISSING</li>
+<li>2026-09-18: MISSING</li>
+<li>2026-09-19: MISSING</li>
+<li>2026-09-20 PASS 59 minutes</li>
+<li>2026-09-21: MISSING</li>
+<li>2026-09-22: MISSING</li>
+<li>2026-09-23: MISSING</li>
+<li>2026-09-24: MISSING</li>
+<li>2026-09-25: MISSING</li>
+<li>2026-09-26: MISSING</li>
+<li>2026-09-27 SKIP unknown</li>
+<li>2026-09-28: MISSING</li>
+<li>2026-09-29 SKIP unknown</li>
+<li>2026-09-30: MISSING</li>
+<li>2026-10-01: MISSING</li>
+<li>2026-10-02: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

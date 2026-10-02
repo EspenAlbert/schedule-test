@@ -1,0 +1,670 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>advanced_cluster/advancedcluster/TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#advanced_clusteradvancedclustertestaccmockableadvancedcluster_replicasetadvconfigupdate-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              advanced_cluster/advancedcluster/TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="advanced_clusteradvancedclustertestaccmockableadvancedcluster_replicasetadvconfigupdate-test-details">advanced_cluster/advancedcluster/TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate Test Details</h1>
+<h1 id="found-38-testruns-in-dev-qa-from-2026-09-02-to-2026-10-02-from-master-branch-1-unique-tests-passx-32-failx-6">Found 38 TestRuns in dev, qa from 2026-09-02 to 2026-10-02 from master branch: 1 unique tests, PASS(x 32) FAIL(x 6)</h1>
+<p>Success rate: 84.21%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-09-10t0041070000">2026-09-10 00:41</a></td>
+<td>INVALID_ATTRIBUTE /api/atlas/v2/groups/6aa1fca34ab31ba34524fa9a/clusters/test-acc-tf-c-8319743146083571527</td>
+<td>dev</td>
+<td>1012.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-11t0641230000">2026-09-11 06:41</a></td>
+<td>INVALID_ATTRIBUTE /api/atlas/v2/groups/6aa3a294f7fcc4bbebf56e1c/clusters/test-acc-tf-c-2746427656661432481</td>
+<td>dev</td>
+<td>928.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-12t0041180000">2026-09-12 00:41</a></td>
+<td>INVALID_ATTRIBUTE /api/atlas/v2/groups/6aa49fae7423f4722c00365d/clusters/test-acc-tf-c-5262651143465664520</td>
+<td>dev</td>
+<td>978.08s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-23t0040290000">2026-09-23 00:40</a></td>
+<td>INVALID_ATTRIBUTE /api/atlas/v2/groups/6ab31ffdd27ba93df6422422/clusters/test-acc-tf-c-9080770712707654399</td>
+<td>dev</td>
+<td>926.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-23t0826120000">2026-09-23 08:26</a></td>
+<td>INVALID_ATTRIBUTE /api/atlas/v2/groups/6ab38d24f8a29abe23592472/clusters/test-acc-tf-c-6838851762163606468</td>
+<td>dev</td>
+<td>856.10s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-24t0042510000">2026-09-24 00:42</a></td>
+<td>INVALID_ATTRIBUTE /api/atlas/v2/groups/6ab4720b8381f5e702b6b4f4/clusters/test-acc-tf-c-9045824294347705066</td>
+<td>dev</td>
+<td>983.05s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-09-01: MISSING</li>
+<li>2026-09-02 PASS 28 minutes</li>
+<li>2026-09-03</li>
+<li>PASS 34 minutes</li>
+<li>PASS 39 minutes</li>
+<li>2026-09-04 PASS 36 minutes</li>
+<li>2026-09-05 PASS 28 minutes</li>
+<li>2026-09-06: MISSING</li>
+<li>2026-09-07 PASS 25 minutes</li>
+<li>2026-09-08 PASS 30 minutes</li>
+<li>2026-09-09 PASS 27 minutes</li>
+<li>2026-09-10</li>
+</ul>
+<h3 id="error-2026-09-10t0041070000">Error 2026-09-10T00:41:07+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-09-10T00:41:07.5056989Z === RUN   TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-09-10T00:41:10.9929907Z     resource_test.go:991: Adding variable groupId=6aa1fca34ab31ba34524fa9a
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-09-10T00:41:10.9933099Z     resource_test.go:991: Adding variable clusterName=test-acc-tf-c-8319743146083571527
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-09-10T00:42:25.2615034Z === CONT  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-09-10T00:57:05.8842197Z === NAME  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-09-10T00:57:05.8843501Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName2=test-acc-tf-c-6720785933130212270
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-09-10T00:57:06.3962073Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName3=test-acc-tf-c-5011566046193183997
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-09-10T00:57:06.6736783Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName4=test-acc-tf-c-8859440602002341386
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-09-10T00:57:12.2371548Z    test_terraform_path=/home/runner/work/_temp/2904a11e-a9ae-41b4-90d9-d2f547e686bd/terraform test_working_directory=/tmp/plugintest3278270149 test_name=TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate test_step_number=2
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-09-10T00:57:12.2372935Z     resource_test.go:991: Step 2/4 error: Error running apply: exit status 1
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-09-10T00:57:12.2373484Z         
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-09-10T00:57:12.2373776Z         Error: Error in update
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-09-10T00:57:12.2374060Z         
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-09-10T00:57:12.2374415Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-09-10T00:57:12.2375519Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-09-10T00:57:12.2376381Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-09-10T00:57:12.2376789Z         
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-09-10T00:57:12.2377255Z         cluster name: test-acc-tf-c-8319743146083571527, API error details:
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2026-09-10T00:57:12.2378419Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6aa1fca34ab31ba34524fa9a/clusters/test-acc-tf-c-8319743146083571527
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2026-09-10T00:57:12.2379273Z         PATCH: HTTP 400 Bad Request (Error code: &quot;INVALID_ATTRIBUTE&quot;) Detail: Invalid
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2026-09-10T00:57:12.2379962Z         attribute Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2026-09-10T00:57:12.2380628Z         Please wait a few minutes and try again. specified. Reason: Bad Request.
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2026-09-10T00:57:12.2381461Z         Params: [Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2026-09-10T00:57:12.2382096Z         Please wait a few minutes and try again.], BadRequestDetail: 
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2026-09-10T00:59:13.5896159Z --- FAIL: TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate (1012.09s)
+</code></pre></div>
+<ul>
+<li>2026-09-11</li>
+<li>PASS an hour</li>
+<li>FAIL 15 minutes</li>
+</ul>
+<h3 id="error-2026-09-11t0641230000">Error 2026-09-11T06:41:23+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-09-11T06:41:23.9715602Z === RUN   TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-09-11T06:41:26.4213610Z     resource_test.go:991: Adding variable groupId=6aa3a294f7fcc4bbebf56e1c
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-09-11T06:41:26.4217127Z     resource_test.go:991: Adding variable clusterName=test-acc-tf-c-2746427656661432481
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-09-11T06:42:51.0571600Z === CONT  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-09-11T06:56:05.2300936Z === NAME  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-09-11T06:56:05.2302770Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName2=test-acc-tf-c-197716162976227680
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-09-11T06:56:06.0970626Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName3=test-acc-tf-c-5778542415762535955
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-09-11T06:56:06.5069550Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName4=test-acc-tf-c-2891408384237964403
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-09-11T06:56:14.3030414Z   
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-09-11T06:56:14.3030868Z     resource_test.go:991: Step 2/4 error: Error running apply: exit status 1
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-09-11T06:56:14.3031392Z         
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-09-11T06:56:14.3031705Z         Error: Error in update
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-09-11T06:56:14.3031981Z         
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-09-11T06:56:14.3032333Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-09-11T06:56:14.3033319Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-09-11T06:56:14.3034261Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2026-09-11T06:56:14.3034618Z         
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2026-09-11T06:56:14.3035196Z         cluster name: test-acc-tf-c-2746427656661432481, API error details:
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2026-09-11T06:56:14.3036119Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6aa3a294f7fcc4bbebf56e1c/clusters/test-acc-tf-c-2746427656661432481
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2026-09-11T06:56:14.3036975Z         PATCH: HTTP 400 Bad Request (Error code: &quot;INVALID_ATTRIBUTE&quot;) Detail: Invalid
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2026-09-11T06:56:14.3037674Z         attribute Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2026-09-11T06:56:14.3038348Z         Please wait a few minutes and try again. specified. Reason: Bad Request.
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2026-09-11T06:56:14.3039024Z         Params: [Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>2026-09-11T06:56:14.3039639Z         Please wait a few minutes and try again.], BadRequestDetail: 
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>2026-09-11T06:58:15.9463193Z --- FAIL: TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate (928.31s)
+</code></pre></div>
+<ul>
+<li>2026-09-12</li>
+</ul>
+<h3 id="error-2026-09-12t0041180000">Error 2026-09-12T00:41:18+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-09-12T00:41:18.2946249Z === RUN   TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-09-12T00:41:21.2288621Z     resource_test.go:991: Adding variable groupId=6aa49fae7423f4722c00365d
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-09-12T00:41:21.2289420Z     resource_test.go:991: Adding variable clusterName=test-acc-tf-c-5262651143465664520
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-09-12T00:42:35.2710082Z === CONT  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-09-12T00:56:44.4136555Z === NAME  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-09-12T00:56:44.4138132Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName2=test-acc-tf-c-6266103755631808559
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-09-12T00:56:44.5704475Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName3=test-acc-tf-c-2919980742342164373
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-09-12T00:56:44.7333194Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName4=test-acc-tf-c-6981757362064996289
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-09-12T00:56:49.3012523Z   
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-09-12T00:56:49.3013078Z     resource_test.go:991: Step 2/4 error: Error running apply: exit status 1
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-09-12T00:56:49.3013616Z         
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-09-12T00:56:49.3013969Z         Error: Error in update
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-09-12T00:56:49.3014305Z         
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-09-12T00:56:49.3014783Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-09-12T00:56:49.3015698Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-09-12T00:56:49.3016661Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2026-09-12T00:56:49.3017260Z         
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2026-09-12T00:56:49.3017844Z         cluster name: test-acc-tf-c-5262651143465664520, API error details:
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2026-09-12T00:56:49.3019912Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6aa49fae7423f4722c00365d/clusters/test-acc-tf-c-5262651143465664520
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2026-09-12T00:56:49.3021324Z         PATCH: HTTP 400 Bad Request (Error code: &quot;INVALID_ATTRIBUTE&quot;) Detail: Invalid
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2026-09-12T00:56:49.3022397Z         attribute Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>2026-09-12T00:56:49.3023361Z         Please wait a few minutes and try again. specified. Reason: Bad Request.
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>2026-09-12T00:56:49.3024391Z         Params: [Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>2026-09-12T00:56:49.3025619Z         Please wait a few minutes and try again.], BadRequestDetail: 
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>2026-09-12T00:58:50.5728743Z --- FAIL: TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate (978.83s)
+</code></pre></div>
+<ul>
+<li>2026-09-13: MISSING</li>
+<li>2026-09-14 PASS 30 minutes</li>
+<li>2026-09-15 PASS 33 minutes</li>
+<li>2026-09-16 PASS 30 minutes</li>
+<li>2026-09-17 PASS 29 minutes</li>
+<li>2026-09-18 PASS 32 minutes</li>
+<li>2026-09-19 PASS 34 minutes</li>
+<li>2026-09-20: MISSING</li>
+<li>2026-09-21 PASS 27 minutes</li>
+<li>2026-09-22</li>
+<li>PASS 29 minutes</li>
+<li>PASS 30 minutes</li>
+<li>2026-09-23</li>
+<li>FAIL 15 minutes</li>
+</ul>
+<h3 id="error-2026-09-23t0040290000">Error 2026-09-23T00:40:29+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-09-23T00:40:29.3926897Z === RUN   TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-09-23T00:40:31.5562128Z     resource_test.go:991: Adding variable clusterName=test-acc-tf-c-9080770712707654399
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-09-23T00:40:31.5562741Z     resource_test.go:991: Adding variable groupId=6ab31ffdd27ba93df6422422
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-09-23T00:41:55.1362607Z === CONT  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-09-23T00:55:37.9234129Z === NAME  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-09-23T00:55:37.9234812Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName2=test-acc-tf-c-1028287284818636617
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-09-23T00:55:38.3741657Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName3=test-acc-tf-c-8313883071499322401
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-09-23T00:55:39.2684656Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName4=test-acc-tf-c-6637262705654486059
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-09-23T00:55:47.7588656Z    test_terraform_path=/home/runner/work/_temp/a2eebd27-2b58-42fb-a8db-65eaf8df6161/terraform test_working_directory=/tmp/plugintest1016549729 test_step_number=2 test_name=TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-09-23T00:55:47.7589468Z     resource_test.go:991: Step 2/4 error: Error running apply: exit status 1
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-09-23T00:55:47.7589700Z         
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-09-23T00:55:47.7591231Z         Error: Error in update
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-09-23T00:55:47.7591491Z         
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-09-23T00:55:47.7591816Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2026-09-23T00:55:47.7592407Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2026-09-23T00:55:47.7592969Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2026-09-23T00:55:47.7593508Z         
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2026-09-23T00:55:47.7593905Z         cluster name: test-acc-tf-c-9080770712707654399, API error details:
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2026-09-23T00:55:47.7594686Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6ab31ffdd27ba93df6422422/clusters/test-acc-tf-c-9080770712707654399
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2026-09-23T00:55:47.7595420Z         PATCH: HTTP 400 Bad Request (Error code: &quot;INVALID_ATTRIBUTE&quot;) Detail: Invalid
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2026-09-23T00:55:47.7596198Z         attribute Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2026-09-23T00:55:47.7596795Z         Please wait a few minutes and try again. specified. Reason: Bad Request.
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2026-09-23T00:55:47.7597386Z         Params: [Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2026-09-23T00:55:47.7597909Z         Please wait a few minutes and try again.], BadRequestDetail: 
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2026-09-23T00:57:08.1965846Z    test_step_number=5 test_name=TestAccClusterAdvancedCluster_pinnedFCVWithVersionUpgradeAndDowngrade test_terraform_path=/home/runner/work/_temp/a2eebd27-2b58-42fb-a8db-65eaf8df6161/terraform test_working_directory=/tmp/plugintest2611019424
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2026-09-23T00:57:19.2865337Z --- FAIL: TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate (926.34s)
+</code></pre></div>
+<ul>
+<li>FAIL 14 minutes</li>
+</ul>
+<h3 id="error-2026-09-23t0826120000">Error 2026-09-23T08:26:12+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-09-23T08:26:12.6767401Z === RUN   TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-09-23T08:26:16.4727710Z     resource_test.go:991: Adding variable groupId=6ab38d24f8a29abe23592472
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-09-23T08:26:16.4731128Z     resource_test.go:991: Adding variable clusterName=test-acc-tf-c-6838851762163606468
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-09-23T08:42:52.7264561Z === CONT  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-09-23T08:55:28.8347776Z === NAME  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-09-23T08:55:28.8349378Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName2=test-acc-tf-c-906595139725832175
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-09-23T08:55:30.0196904Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName3=test-acc-tf-c-6632353064590214871
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-09-23T08:55:34.8167666Z   
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-09-23T08:55:34.8169007Z     resource_test.go:991: Step 2/4 error: Error running apply: exit status 1
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-09-23T08:55:34.8169709Z         
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-09-23T08:55:34.8170019Z         Error: Error in update
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-09-23T08:55:34.8170533Z         
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-09-23T08:55:34.8172038Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-09-23T08:55:34.8173440Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-09-23T08:55:34.8174715Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-09-23T08:55:34.8175401Z         
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-09-23T08:55:34.8176245Z         cluster name: test-acc-tf-c-6838851762163606468, API error details:
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-09-23T08:55:34.8177974Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6ab38d24f8a29abe23592472/clusters/test-acc-tf-c-6838851762163606468
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2026-09-23T08:55:34.8179625Z         PATCH: HTTP 400 Bad Request (Error code: &quot;INVALID_ATTRIBUTE&quot;) Detail: Invalid
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2026-09-23T08:55:34.8181229Z         attribute Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2026-09-23T08:55:34.8182585Z         Please wait a few minutes and try again. specified. Reason: Bad Request.
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>2026-09-23T08:55:34.8184172Z         Params: [Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>2026-09-23T08:55:34.8185370Z         Please wait a few minutes and try again.], BadRequestDetail: 
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>2026-09-23T08:57:05.9114113Z --- FAIL: TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate (856.98s)
+</code></pre></div>
+<ul>
+<li>2026-09-24</li>
+</ul>
+<h3 id="error-2026-09-24t0042510000">Error 2026-09-24T00:42:51+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-09-24T00:42:51.8539059Z === RUN   TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-09-24T00:42:54.1017249Z     resource_test.go:991: Adding variable groupId=6ab4720b8381f5e702b6b4f4
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-09-24T00:42:54.1018682Z     resource_test.go:991: Adding variable clusterName=test-acc-tf-c-9045824294347705066
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-09-24T00:44:12.0068298Z === CONT  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-09-24T00:58:24.9694476Z === NAME  TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-09-24T00:58:24.9695824Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName2=test-acc-tf-c-8277266890413936948
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-09-24T00:58:25.2619536Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName3=test-acc-tf-c-417799027711072009
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-09-24T00:58:25.5473357Z     http_mocker_config_capture.go:112: Adding variable clusterName to clusterName4=test-acc-tf-c-3260025474696844914
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-09-24T00:58:31.7664893Z    test_name=TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate test_terraform_path=/home/runner/work/_temp/9a8d92e6-e728-4858-b160-f6e2a494a86a/terraform
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-09-24T00:58:31.7665886Z     resource_test.go:991: Step 2/4 error: Error running apply: exit status 1
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-09-24T00:58:31.7666554Z         
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-09-24T00:58:31.7666867Z         Error: Error in update
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-09-24T00:58:31.7667164Z         
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-09-24T00:58:31.7667545Z           with mongodbatlas_advanced_cluster.test,
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-09-24T00:58:31.7668277Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot;:
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-09-24T00:58:31.7669260Z           12:      resource &quot;mongodbatlas_advanced_cluster&quot; &quot;test&quot; {
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-09-24T00:58:31.7669683Z         
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2026-09-24T00:58:31.7670169Z         cluster name: test-acc-tf-c-9045824294347705066, API error details:
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2026-09-24T00:58:31.7671599Z         https://cloud-dev.mongodb.com/api/atlas/v2/groups/6ab4720b8381f5e702b6b4f4/clusters/test-acc-tf-c-9045824294347705066
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2026-09-24T00:58:31.7672528Z         PATCH: HTTP 400 Bad Request (Error code: &quot;INVALID_ATTRIBUTE&quot;) Detail: Invalid
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2026-09-24T00:58:31.7673269Z         attribute Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>2026-09-24T00:58:31.7673995Z         Please wait a few minutes and try again. specified. Reason: Bad Request.
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>2026-09-24T00:58:31.7674725Z         Params: [Cannot validate cluster compatibility due to stale monitoring data.
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>2026-09-24T00:58:31.7675369Z         Please wait a few minutes and try again.], BadRequestDetail: 
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>2026-09-24T01:00:33.2082026Z --- FAIL: TestAccMockableAdvancedCluster_replicasetAdvConfigUpdate (983.51s)
+</code></pre></div>
+<ul>
+<li>2026-09-25 PASS 28 minutes</li>
+<li>2026-09-26: MISSING</li>
+<li>2026-09-27: MISSING</li>
+<li>2026-09-28 PASS 28 minutes</li>
+<li>2026-09-29</li>
+<li>PASS 24 minutes</li>
+<li>PASS 23 minutes</li>
+<li>PASS 30 minutes</li>
+<li>2026-09-30 PASS 24 minutes</li>
+<li>2026-10-01 PASS 23 minutes</li>
+<li>2026-10-02 PASS 24 minutes</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-09-01: MISSING</li>
+<li>2026-09-02: MISSING</li>
+<li>2026-09-03: MISSING</li>
+<li>2026-09-04: MISSING</li>
+<li>2026-09-05: MISSING</li>
+<li>2026-09-06 PASS 22 minutes</li>
+<li>2026-09-07: MISSING</li>
+<li>2026-09-08: MISSING</li>
+<li>2026-09-09: MISSING</li>
+<li>2026-09-10: MISSING</li>
+<li>2026-09-11: MISSING</li>
+<li>2026-09-12: MISSING</li>
+<li>2026-09-13 PASS 23 minutes</li>
+<li>2026-09-14: MISSING</li>
+<li>2026-09-15: MISSING</li>
+<li>2026-09-16 PASS 23 minutes</li>
+<li>2026-09-17: MISSING</li>
+<li>2026-09-18: MISSING</li>
+<li>2026-09-19: MISSING</li>
+<li>2026-09-20 PASS 24 minutes</li>
+<li>2026-09-21: MISSING</li>
+<li>2026-09-22: MISSING</li>
+<li>2026-09-23: MISSING</li>
+<li>2026-09-24: MISSING</li>
+<li>2026-09-25: MISSING</li>
+<li>2026-09-26: MISSING</li>
+<li>2026-09-27 PASS 25 minutes</li>
+<li>2026-09-28: MISSING</li>
+<li>2026-09-29 PASS 21 minutes</li>
+<li>2026-09-30: MISSING</li>
+<li>2026-10-01: MISSING</li>
+<li>2026-10-02: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>

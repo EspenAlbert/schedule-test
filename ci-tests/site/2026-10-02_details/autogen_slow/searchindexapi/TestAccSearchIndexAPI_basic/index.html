@@ -1,0 +1,1231 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>autogen_slow/searchindexapi/TestAccSearchIndexAPI_basic Test Details - CI Tests</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autogen_slowsearchindexapitestaccsearchindexapi_basic-test-details" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="CI Tests" class="md-header__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CI Tests
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              autogen_slow/searchindexapi/TestAccSearchIndexAPI_basic Test Details
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="CI Tests" class="md-nav__button md-logo" aria-label="CI Tests" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CI Tests
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="autogen_slowsearchindexapitestaccsearchindexapi_basic-test-details">autogen_slow/searchindexapi/TestAccSearchIndexAPI_basic Test Details</h1>
+<h1 id="found-37-testruns-in-dev-qa-from-2026-09-02-to-2026-10-02-from-master-branch-1-unique-tests-passx-14-failx-12-skipx-11">Found 37 TestRuns in dev, qa from 2026-09-02 to 2026-10-02 from master branch: 1 unique tests, PASS(x 14) FAIL(x 12) SKIP(x 11)</h1>
+<p>Success rate: 53.85%</p>
+<h2 id="dev-environment">DEV Environment</h2>
+<h2 id="error-table">Error Table</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Details</th>
+<th>Env</th>
+<th>Error Class</th>
+<th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#error-2026-09-03t1002470000">2026-09-03 10:02</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11871.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-05t0457170000">2026-09-05 04:57</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>12011.09s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-08t0500430000">2026-09-08 05:00</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>12082.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-10t0133060000">2026-09-10 01:33</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>1278.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-11t0301530000">2026-09-11 03:01</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>3606.01s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-11t0731030000">2026-09-11 07:31</a></td>
+<td></td>
+<td>dev</td>
+<td></td>
+<td>942.02s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-14t0547030000">2026-09-14 05:47</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11877.07s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-15t0543500000">2026-09-15 05:43</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>11871.04s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-16t0543440000">2026-09-16 05:43</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>12301.00s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-18t0516190000">2026-09-18 05:16</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>12370.03s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-19t0130400000">2026-09-19 01:30</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>1777.06s</td>
+</tr>
+<tr>
+<td><a href="#error-2026-09-22t0506240000">2026-09-22 05:06</a></td>
+<td></td>
+<td>dev</td>
+<td>timeout</td>
+<td>12234.05s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeline">Timeline</h3>
+<ul>
+<li>2026-09-01: MISSING</li>
+<li>2026-09-02 PASS 2 hours</li>
+<li>2026-09-03</li>
+<li>PASS 2 hours</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2026-09-03t1002470000">Error 2026-09-03T10:02:47+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2026-09-03T10:02:47.0668173Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2026-09-03T10:02:47.0669747Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3492182154586914006
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2026-09-03T10:02:47.0670921Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-571919649677458254
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>2026-09-03T10:02:47.0672029Z 2026/09/03 06:32:16 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>2026-09-03T10:02:47.0672633Z 2026/09/03 06:35:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>2026-09-03T10:02:47.0673451Z 2026/09/03 06:36:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>2026-09-03T10:02:47.0673956Z 2026/09/03 06:36:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>2026-09-03T10:02:47.0674457Z 2026/09/03 06:37:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2026-09-03T10:02:47.0674943Z 2026/09/03 06:37:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>2026-09-03T10:02:47.0675421Z 2026/09/03 06:38:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>2026-09-03T10:02:47.0675905Z 2026/09/03 06:38:47 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>2026-09-03T10:02:47.0676391Z 2026/09/03 06:39:47 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>2026-09-03T10:02:47.0676876Z 2026/09/03 06:39:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>2026-09-03T10:02:47.0677357Z 2026/09/03 06:40:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>2026-09-03T10:02:47.0677847Z 2026/09/03 06:41:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>2026-09-03T10:02:47.0678330Z 2026/09/03 06:42:08 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>2026-09-03T10:02:47.0678816Z 2026/09/03 06:42:18 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>2026-09-03T10:02:47.0679564Z 2026/09/03 06:43:18 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>2026-09-03T10:02:47.0680050Z 2026/09/03 06:43:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>2026-09-03T10:02:47.0680530Z 2026/09/03 06:44:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>2026-09-03T10:02:47.0681005Z 2026/09/03 06:44:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>2026-09-03T10:02:47.0681540Z 2026/09/03 06:45:39 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>2026-09-03T10:02:47.0682076Z 2026/09/03 06:46:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>2026-09-03T10:02:47.0682555Z 2026/09/03 06:47:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>2026-09-03T10:02:47.0683034Z 2026/09/03 06:47:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>2026-09-03T10:02:47.0683525Z 2026/09/03 06:48:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>2026-09-03T10:02:47.0684004Z 2026/09/03 06:49:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>2026-09-03T10:02:47.0693460Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>2026-09-03T10:02:47.0748778Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>2026-09-03T10:02:47.0749625Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>2026-09-03T10:02:47.0750080Z         
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>2026-09-03T10:02:47.0750467Z         Error: Error waiting for changes in Create
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>2026-09-03T10:02:47.0750820Z         
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>2026-09-03T10:02:47.0751203Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>2026-09-03T10:02:47.0751955Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>2026-09-03T10:02:47.0752659Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>2026-09-03T10:02:47.0753045Z         
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>2026-09-03T10:02:47.0753385Z         group_id=&quot;6a99146d72d7295ca98dbca0&quot;,
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>2026-09-03T10:02:47.0753880Z         cluster_name=&quot;test-acc-tf-c-571919649677458254&quot;,
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>2026-09-03T10:02:47.0754510Z         index_id=&quot;6a99189a8f4e31db6818c200&quot;: timeout while waiting for state to
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>2026-09-03T10:02:47.0755181Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>2026-09-03T10:02:47.0755890Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>2026-09-03T10:02:47.0756638Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>2026-09-03T10:02:47.0757223Z --- FAIL: TestAccSearchIndexAPI_basic (11871.18s)
+</code></pre></div>
+<ul>
+<li>2026-09-04 PASS 35 minutes</li>
+<li>2026-09-05</li>
+</ul>
+<h3 id="error-2026-09-05t0457170000">Error 2026-09-05T04:57:17+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2026-09-05T04:57:17.6481988Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2026-09-05T04:57:17.6483388Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-1136770926200973024
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2026-09-05T04:57:17.6484466Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-2329868758960774626
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2026-09-05T04:57:17.6485119Z 2026/09/05 00:41:22 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>2026-09-05T04:57:17.6486767Z 2026/09/05 00:44:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2026-09-05T04:57:17.6487894Z 2026/09/05 00:45:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>2026-09-05T04:57:17.6488486Z 2026/09/05 00:45:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2026-09-05T04:57:17.6489110Z 2026/09/05 00:46:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>2026-09-05T04:57:17.6489648Z 2026/09/05 00:46:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>2026-09-05T04:57:17.6490081Z 2026/09/05 00:47:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>2026-09-05T04:57:17.6490543Z 2026/09/05 00:47:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>2026-09-05T04:57:17.6490989Z 2026/09/05 00:48:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>2026-09-05T04:57:17.6491500Z 2026/09/05 00:49:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>2026-09-05T04:57:17.6491959Z 2026/09/05 00:50:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>2026-09-05T04:57:17.6492416Z 2026/09/05 00:50:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>2026-09-05T04:57:17.6492867Z 2026/09/05 00:51:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>2026-09-05T04:57:17.6493542Z 2026/09/05 00:51:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>2026-09-05T04:57:17.6494098Z 2026/09/05 00:52:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>2026-09-05T04:57:17.6494544Z 2026/09/05 00:52:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>2026-09-05T04:57:17.6495006Z 2026/09/05 00:53:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>2026-09-05T04:57:17.6495489Z 2026/09/05 00:53:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>2026-09-05T04:57:17.6495905Z 2026/09/05 00:54:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>2026-09-05T04:57:17.6496369Z 2026/09/05 00:54:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>2026-09-05T04:57:17.6496862Z 2026/09/05 00:55:57 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>2026-09-05T04:57:17.6497347Z 2026/09/05 00:56:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>2026-09-05T04:57:17.6497775Z 2026/09/05 00:57:57 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>2026-09-05T04:57:17.6498234Z 2026/09/05 00:58:07 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>2026-09-05T04:57:17.6498798Z 2026/09/05 00:59:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>2026-09-05T04:57:17.6499254Z 2026/09/05 00:59:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>2026-09-05T04:57:17.6499659Z 2026/09/05 01:00:18 [TRACE] Waiting 10s before next try
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>2026-09-05T04:57:17.6500110Z 2026/09/05 01:00:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>2026-09-05T04:57:17.6508831Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>2026-09-05T04:57:17.6529659Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>2026-09-05T04:57:17.6530207Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>2026-09-05T04:57:17.6530652Z         
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>2026-09-05T04:57:17.6531063Z         Error: Error waiting for changes in Create
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>2026-09-05T04:57:17.6531439Z         
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>2026-09-05T04:57:17.6531878Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>2026-09-05T04:57:17.6532502Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>2026-09-05T04:57:17.6533328Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>2026-09-05T04:57:17.6533745Z         
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>2026-09-05T04:57:17.6534130Z         group_id=&quot;6a9b652f1099178350983b6f&quot;,
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>2026-09-05T04:57:17.6534644Z         cluster_name=&quot;test-acc-tf-c-2329868758960774626&quot;,
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>2026-09-05T04:57:17.6535231Z         index_id=&quot;6a9b69e910991783509ac048&quot;: timeout while waiting for state to
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>2026-09-05T04:57:17.6535919Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>2026-09-05T04:57:17.6536568Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>2026-09-05T04:57:17.6537241Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>2026-09-05T04:57:17.6537743Z --- FAIL: TestAccSearchIndexAPI_basic (12011.95s)
+</code></pre></div>
+<ul>
+<li>2026-09-06: MISSING</li>
+<li>2026-09-07</li>
+<li>PASS 2 hours</li>
+<li>PASS an hour</li>
+<li>2026-09-08</li>
+</ul>
+<h3 id="error-2026-09-08t0500430000">Error 2026-09-08T05:00:43+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-09-08T05:00:43.6843558Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2026-09-08T05:00:43.6844819Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-5713570924212779653
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2026-09-08T05:00:43.6845845Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-4534713065942648190
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>2026-09-08T05:00:43.6846513Z 2026/09/08 00:45:09 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>2026-09-08T05:00:43.6847040Z 2026/09/08 00:48:09 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>2026-09-08T05:00:43.6847840Z 2026/09/08 00:49:10 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>2026-09-08T05:00:43.6848352Z 2026/09/08 00:49:20 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>2026-09-08T05:00:43.6848836Z 2026/09/08 00:50:20 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>2026-09-08T05:00:43.6849313Z 2026/09/08 00:50:30 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>2026-09-08T05:00:43.6850044Z 2026/09/08 00:51:30 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>2026-09-08T05:00:43.6850536Z 2026/09/08 00:51:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2026-09-08T05:00:43.6851011Z 2026/09/08 00:52:41 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>2026-09-08T05:00:43.6851484Z 2026/09/08 00:52:51 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>2026-09-08T05:00:43.6851962Z 2026/09/08 00:53:51 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>2026-09-08T05:00:43.6852432Z 2026/09/08 00:54:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>2026-09-08T05:00:43.6852901Z 2026/09/08 00:55:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>2026-09-08T05:00:43.6853369Z 2026/09/08 00:55:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>2026-09-08T05:00:43.6853842Z 2026/09/08 00:56:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>2026-09-08T05:00:43.6854270Z 2026/09/08 00:56:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>2026-09-08T05:00:43.6854644Z 2026/09/08 00:57:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>2026-09-08T05:00:43.6855017Z 2026/09/08 00:57:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>2026-09-08T05:00:43.6855390Z 2026/09/08 00:58:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>2026-09-08T05:00:43.6855824Z 2026/09/08 00:58:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>2026-09-08T05:00:43.6856246Z 2026/09/08 00:59:43 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>2026-09-08T05:00:43.6856682Z 2026/09/08 01:00:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>2026-09-08T05:00:43.6857270Z 2026/09/08 01:01:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>2026-09-08T05:00:43.6857657Z 2026/09/08 01:01:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>2026-09-08T05:00:43.6858034Z 2026/09/08 01:02:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>2026-09-08T05:00:43.6858413Z 2026/09/08 01:03:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>2026-09-08T05:00:43.6858811Z 2026/09/08 01:04:04 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>2026-09-08T05:00:43.6859191Z 2026/09/08 01:04:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>2026-09-08T05:00:43.6859564Z 2026/09/08 01:05:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>2026-09-08T05:00:43.6860209Z 2026/09/08 01:05:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>2026-09-08T05:00:43.6868341Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>2026-09-08T05:00:43.6987967Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>2026-09-08T05:00:43.6988481Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>2026-09-08T05:00:43.6988893Z         
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>2026-09-08T05:00:43.6989247Z         Error: Error waiting for changes in Create
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>2026-09-08T05:00:43.6989571Z         
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>2026-09-08T05:00:43.6990176Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>2026-09-08T05:00:43.6990896Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>2026-09-08T05:00:43.6991571Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>2026-09-08T05:00:43.6991925Z         
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>2026-09-08T05:00:43.6992243Z         group_id=&quot;6a9f5a9228da0e5fc08e7890&quot;,
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>2026-09-08T05:00:43.6992703Z         cluster_name=&quot;test-acc-tf-c-4534713065942648190&quot;,
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>2026-09-08T05:00:43.6993310Z         index_id=&quot;6a9f5f929d794e9a744e62e6&quot;: timeout while waiting for state to
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>2026-09-08T05:00:43.6993939Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>2026-09-08T05:00:43.6994599Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>2026-09-08T05:00:43.6995309Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>2026-09-08T05:00:43.6995786Z --- FAIL: TestAccSearchIndexAPI_basic (12082.17s)
+</code></pre></div>
+<ul>
+<li>2026-09-09 PASS 3 hours</li>
+<li>2026-09-10</li>
+</ul>
+<h3 id="error-2026-09-10t0133060000">Error 2026-09-10T01:33:06+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>2026-09-10T01:33:06.1244334Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2026-09-10T01:33:06.1245237Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-7585198387570114371
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>2026-09-10T01:33:06.1246300Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1596466085034706675
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2026-09-10T01:33:06.1247084Z 2026/09/10 00:41:23 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2026-09-10T01:33:06.1248191Z 2026/09/10 00:44:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>2026-09-10T01:33:06.1248809Z 2026/09/10 00:45:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>2026-09-10T01:33:06.1249333Z 2026/09/10 00:45:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2026-09-10T01:33:06.1249842Z 2026/09/10 00:46:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>2026-09-10T01:33:06.1250350Z 2026/09/10 00:46:44 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>2026-09-10T01:33:06.1250848Z 2026/09/10 00:47:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>2026-09-10T01:33:06.1251349Z 2026/09/10 00:47:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>2026-09-10T01:33:06.1251848Z 2026/09/10 00:48:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>2026-09-10T01:33:06.1252346Z 2026/09/10 00:49:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>2026-09-10T01:33:06.1252843Z 2026/09/10 00:50:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>2026-09-10T01:33:06.1253341Z 2026/09/10 00:50:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>2026-09-10T01:33:06.1253839Z 2026/09/10 00:51:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>2026-09-10T01:33:06.1254347Z 2026/09/10 00:51:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2026-09-10T01:33:06.1254843Z 2026/09/10 00:52:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>2026-09-10T01:33:06.1255344Z 2026/09/10 00:52:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>2026-09-10T01:33:06.1255841Z 2026/09/10 00:53:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>2026-09-10T01:33:06.1258482Z 2026/09/10 00:53:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>2026-09-10T01:33:06.1259119Z 2026/09/10 00:54:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>2026-09-10T01:33:06.1259745Z 2026/09/10 00:54:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>2026-09-10T01:33:06.1260372Z 2026/09/10 00:55:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>2026-09-10T01:33:06.1261002Z 2026/09/10 00:56:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>2026-09-10T01:33:06.1261399Z 2026/09/10 00:57:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2026-09-10T01:33:06.1261781Z 2026/09/10 00:57:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>2026-09-10T01:33:06.1262151Z 2026/09/10 00:58:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2026-09-10T01:33:06.1262563Z 2026/09/10 00:58:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>2026-09-10T01:33:06.1262932Z 2026/09/10 00:59:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>2026-09-10T01:33:06.1263320Z 2026/09/10 00:59:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>2026-09-10T01:33:06.1263758Z 2026/09/10 01:00:38 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>2026-09-10T01:33:06.1264197Z 2026/09/10 01:01:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>2026-09-10T01:33:06.1264600Z     resource_test.go:22: 
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>2026-09-10T01:33:06.1266360Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:180
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>2026-09-10T01:33:06.1270455Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>2026-09-10T01:33:06.1271352Z            Error:          Received unexpected error:
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>2026-09-10T01:33:06.1272657Z                            sample dataset load 6aa201365b8d9510e89370dd failed for cluster 6aa1fcb04ab31ba34525537f:test-acc-tf-c-1596466085034706675
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>2026-09-10T01:33:06.1273401Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>2026-09-10T01:33:06.1273780Z --- FAIL: TestAccSearchIndexAPI_basic (1278.25s)
+</code></pre></div>
+<ul>
+<li>2026-09-11</li>
+<li>FAIL an hour</li>
+</ul>
+<h3 id="error-2026-09-11t0301530000">Error 2026-09-11T03:01:53+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>2026-09-11T03:01:53.1552488Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2026-09-11T03:01:53.1552944Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-8279985094718691924
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2026-09-11T03:01:53.1553486Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1245339255870052908
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2026-09-11T03:01:53.1553897Z 2026/09/11 00:41:53 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2026-09-11T03:01:53.1554360Z 2026/09/11 00:44:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>2026-09-11T03:01:53.1554681Z 2026/09/11 00:45:53 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>2026-09-11T03:01:53.1554983Z 2026/09/11 00:46:03 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>2026-09-11T03:01:53.1555382Z 2026/09/11 00:47:04 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>2026-09-11T03:01:53.1555702Z 2026/09/11 00:47:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>2026-09-11T03:01:53.1556029Z 2026/09/11 00:48:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>2026-09-11T03:01:53.1556465Z 2026/09/11 00:48:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>2026-09-11T03:01:53.1556784Z 2026/09/11 00:49:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>2026-09-11T03:01:53.1557091Z 2026/09/11 00:49:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>2026-09-11T03:01:53.1557390Z 2026/09/11 00:50:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>2026-09-11T03:01:53.1557685Z 2026/09/11 00:50:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>2026-09-11T03:01:53.1557980Z 2026/09/11 00:51:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>2026-09-11T03:01:53.1558278Z 2026/09/11 00:51:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>2026-09-11T03:01:53.1558582Z 2026/09/11 00:52:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>2026-09-11T03:01:53.1558905Z 2026/09/11 00:53:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>2026-09-11T03:01:53.1559204Z 2026/09/11 00:54:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>2026-09-11T03:01:53.1559490Z 2026/09/11 00:54:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>2026-09-11T03:01:53.1559915Z 2026/09/11 00:55:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>2026-09-11T03:01:53.1560223Z 2026/09/11 00:55:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>2026-09-11T03:01:53.1560518Z 2026/09/11 00:56:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>2026-09-11T03:01:53.1560810Z 2026/09/11 00:56:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>2026-09-11T03:01:53.1561107Z 2026/09/11 00:57:38 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>2026-09-11T03:01:53.1561400Z 2026/09/11 00:57:48 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>2026-09-11T03:01:53.1561697Z 2026/09/11 00:58:48 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>2026-09-11T03:01:53.1562013Z 2026/09/11 00:58:58 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>2026-09-11T03:01:53.1562316Z 2026/09/11 00:59:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>2026-09-11T03:01:53.1562611Z 2026/09/11 01:00:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>2026-09-11T03:01:53.1562909Z 2026/09/11 01:01:09 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>2026-09-11T03:01:53.1563204Z 2026/09/11 01:01:19 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>2026-09-11T03:01:53.1563502Z 2026/09/11 01:02:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>2026-09-11T03:01:53.1563804Z 2026/09/11 01:02:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>2026-09-11T03:01:53.1564100Z 2026/09/11 01:03:30 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>2026-09-11T03:01:53.1564393Z 2026/09/11 01:03:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>2026-09-11T03:01:53.1564680Z 2026/09/11 01:04:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>2026-09-11T03:01:53.1564973Z 2026/09/11 01:04:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>2026-09-11T03:01:53.1565268Z 2026/09/11 01:05:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>2026-09-11T03:01:53.1565564Z 2026/09/11 01:06:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>2026-09-11T03:01:53.1565893Z 2026/09/11 01:07:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>2026-09-11T03:01:53.1566392Z 2026/09/11 01:07:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>2026-09-11T03:01:53.1566697Z 2026/09/11 01:08:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>2026-09-11T03:01:53.1566992Z 2026/09/11 01:08:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>2026-09-11T03:01:53.1567292Z 2026/09/11 01:09:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>2026-09-11T03:01:53.1567586Z 2026/09/11 01:09:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>2026-09-11T03:01:53.1567879Z 2026/09/11 01:10:32 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>2026-09-11T03:01:53.1568169Z 2026/09/11 01:10:42 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>2026-09-11T03:01:53.1568461Z 2026/09/11 01:11:42 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>2026-09-11T03:01:53.1568755Z 2026/09/11 01:11:52 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>2026-09-11T03:01:53.1569047Z 2026/09/11 01:12:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>2026-09-11T03:01:53.1569461Z 2026/09/11 01:13:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>2026-09-11T03:01:53.1569769Z 2026/09/11 01:14:03 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>2026-09-11T03:01:53.1570064Z 2026/09/11 01:14:13 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>2026-09-11T03:01:53.1570364Z 2026/09/11 01:15:13 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>2026-09-11T03:01:53.1570661Z 2026/09/11 01:15:23 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>2026-09-11T03:01:53.1570961Z 2026/09/11 01:16:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>2026-09-11T03:01:53.1571253Z 2026/09/11 01:16:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>2026-09-11T03:01:53.1571548Z 2026/09/11 01:17:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>2026-09-11T03:01:53.1571844Z 2026/09/11 01:17:44 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>2026-09-11T03:01:53.1572144Z 2026/09/11 01:18:44 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>2026-09-11T03:01:53.1572438Z 2026/09/11 01:18:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>2026-09-11T03:01:53.1572732Z 2026/09/11 01:19:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>2026-09-11T03:01:53.1573030Z 2026/09/11 01:20:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>2026-09-11T03:01:53.1573325Z 2026/09/11 01:21:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>2026-09-11T03:01:53.1573617Z 2026/09/11 01:21:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>2026-09-11T03:01:53.1573910Z 2026/09/11 01:22:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>2026-09-11T03:01:53.1574205Z 2026/09/11 01:22:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>2026-09-11T03:01:53.1574618Z 2026/09/11 01:23:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>2026-09-11T03:01:53.1574946Z 2026/09/11 01:23:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>2026-09-11T03:01:53.1575240Z 2026/09/11 01:24:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>2026-09-11T03:01:53.1575538Z 2026/09/11 01:24:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>2026-09-11T03:01:53.1575834Z 2026/09/11 01:25:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>2026-09-11T03:01:53.1576131Z 2026/09/11 01:25:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>2026-09-11T03:01:53.1576570Z 2026/09/11 01:26:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>2026-09-11T03:01:53.1576872Z 2026/09/11 01:27:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>2026-09-11T03:01:53.1577166Z 2026/09/11 01:28:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>2026-09-11T03:01:53.1577460Z 2026/09/11 01:28:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>2026-09-11T03:01:53.1577751Z 2026/09/11 01:29:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>2026-09-11T03:01:53.1578043Z 2026/09/11 01:29:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a>2026-09-11T03:01:53.1578416Z 2026/09/11 01:30:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>2026-09-11T03:01:53.1578720Z 2026/09/11 01:30:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>2026-09-11T03:01:53.1579013Z 2026/09/11 01:31:38 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a>2026-09-11T03:01:53.1579304Z 2026/09/11 01:31:48 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>2026-09-11T03:01:53.1579602Z 2026/09/11 01:32:48 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>2026-09-11T03:01:53.1579900Z 2026/09/11 01:32:58 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a>2026-09-11T03:01:53.1580192Z 2026/09/11 01:33:58 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a>2026-09-11T03:01:53.1580506Z 2026/09/11 01:34:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>2026-09-11T03:01:53.1580805Z 2026/09/11 01:35:08 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a>2026-09-11T03:01:53.1581100Z 2026/09/11 01:35:19 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a>2026-09-11T03:01:53.1581391Z 2026/09/11 01:36:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a>2026-09-11T03:01:53.1581684Z 2026/09/11 01:36:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a>2026-09-11T03:01:53.1581984Z 2026/09/11 01:37:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a>2026-09-11T03:01:53.1582276Z 2026/09/11 01:37:39 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a>2026-09-11T03:01:53.1582569Z 2026/09/11 01:38:39 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a>2026-09-11T03:01:53.1582859Z 2026/09/11 01:38:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-98" name="__codelineno-4-98" href="#__codelineno-4-98"></a>2026-09-11T03:01:53.1583154Z 2026/09/11 01:39:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-99" name="__codelineno-4-99" href="#__codelineno-4-99"></a>2026-09-11T03:01:53.1583448Z 2026/09/11 01:40:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-100" name="__codelineno-4-100" href="#__codelineno-4-100"></a>2026-09-11T03:01:53.1583744Z 2026/09/11 01:41:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-4-101" name="__codelineno-4-101" href="#__codelineno-4-101"></a>2026-09-11T03:01:53.1584144Z 2026/09/11 01:41:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-4-102" name="__codelineno-4-102" href="#__codelineno-4-102"></a>2026-09-11T03:01:53.1584470Z 2026/09/11 01:41:53 [WARN] WaitForState timeout after 1h0m0s
+<a id="__codelineno-4-103" name="__codelineno-4-103" href="#__codelineno-4-103"></a>2026-09-11T03:01:53.1584841Z 2026/09/11 01:41:53 [WARN] WaitForState starting 30s refresh grace period
+<a id="__codelineno-4-104" name="__codelineno-4-104" href="#__codelineno-4-104"></a>2026-09-11T03:01:53.1585199Z     resource_test.go:22: 
+<a id="__codelineno-4-105" name="__codelineno-4-105" href="#__codelineno-4-105"></a>2026-09-11T03:01:53.1585961Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/atlas.go:68
+<a id="__codelineno-4-106" name="__codelineno-4-106" href="#__codelineno-4-106"></a>2026-09-11T03:01:53.1587561Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:203
+<a id="__codelineno-4-107" name="__codelineno-4-107" href="#__codelineno-4-107"></a>2026-09-11T03:01:53.1588987Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:179
+<a id="__codelineno-4-108" name="__codelineno-4-108" href="#__codelineno-4-108"></a>2026-09-11T03:01:53.1590483Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-4-109" name="__codelineno-4-109" href="#__codelineno-4-109"></a>2026-09-11T03:01:53.1591131Z            Error:          Received unexpected error:
+<a id="__codelineno-4-110" name="__codelineno-4-110" href="#__codelineno-4-110"></a>2026-09-11T03:01:53.1592104Z                            cluster creation failed: timeout while waiting for state to become &#39;IDLE&#39; (last state: &#39;CREATING&#39;, timeout: 1h0m0s)
+<a id="__codelineno-4-111" name="__codelineno-4-111" href="#__codelineno-4-111"></a>2026-09-11T03:01:53.1592652Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-4-112" name="__codelineno-4-112" href="#__codelineno-4-112"></a>2026-09-11T03:01:53.1593239Z            Messages:       Cluster creation failed: test-acc-tf-c-1245339255870052908
+<a id="__codelineno-4-113" name="__codelineno-4-113" href="#__codelineno-4-113"></a>2026-09-11T03:01:53.1593607Z --- FAIL: TestAccSearchIndexAPI_basic (3606.13s)
+</code></pre></div>
+<ul>
+<li>FAIL 15 minutes</li>
+</ul>
+<h3 id="error-2026-09-11t0731030000">Error 2026-09-11T07:31:03+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2026-09-11T07:31:03.1926108Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2026-09-11T07:31:03.1927361Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-428727229642549185
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>2026-09-11T07:31:03.1928514Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1260780199030207545
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2026-09-11T07:31:03.1929450Z 2026/09/11 06:41:21 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>2026-09-11T07:31:03.1931904Z 2026/09/11 06:44:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>2026-09-11T07:31:03.1932653Z 2026/09/11 06:45:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>2026-09-11T07:31:03.1933392Z 2026/09/11 06:45:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-09-11T07:31:03.1933983Z 2026/09/11 06:46:33 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>2026-09-11T07:31:03.1934616Z 2026/09/11 06:46:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>2026-09-11T07:31:03.1935263Z 2026/09/11 06:47:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>2026-09-11T07:31:03.1935900Z 2026/09/11 06:47:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>2026-09-11T07:31:03.1936569Z 2026/09/11 06:48:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>2026-09-11T07:31:03.1937408Z 2026/09/11 06:49:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>2026-09-11T07:31:03.1938090Z 2026/09/11 06:50:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>2026-09-11T07:31:03.1938765Z 2026/09/11 06:50:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>2026-09-11T07:31:03.1939406Z 2026/09/11 06:51:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>2026-09-11T07:31:03.1940112Z 2026/09/11 06:51:26 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>2026-09-11T07:31:03.1940794Z 2026/09/11 06:52:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>2026-09-11T07:31:03.1941632Z 2026/09/11 06:52:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>2026-09-11T07:31:03.1942270Z 2026/09/11 06:53:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>2026-09-11T07:31:03.1942902Z 2026/09/11 06:53:48 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>2026-09-11T07:31:03.1943547Z 2026/09/11 06:54:48 [TRACE] Waiting 10s before next try
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>2026-09-11T07:31:03.1944212Z 2026/09/11 06:54:58 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>2026-09-11T07:31:03.1944968Z 2026/09/11 06:55:59 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>2026-09-11T07:31:03.1945720Z     resource_test.go:22: 
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>2026-09-11T07:31:03.1947423Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:180
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>2026-09-11T07:31:03.1950295Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>2026-09-11T07:31:03.1951570Z            Error:          Received unexpected error:
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>2026-09-11T07:31:03.1953415Z                            sample dataset load 6aa3a5fff7fcc4bbebf76935 failed for cluster 6aa3a28df7fcc4bbebf53df1:test-acc-tf-c-1260780199030207545
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>2026-09-11T07:31:03.1954564Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>2026-09-11T07:31:03.1955312Z --- FAIL: TestAccSearchIndexAPI_basic (942.24s)
+</code></pre></div>
+<ul>
+<li>2026-09-12 PASS 45 minutes</li>
+<li>2026-09-13: MISSING</li>
+<li>2026-09-14</li>
+</ul>
+<h3 id="error-2026-09-14t0547030000">Error 2026-09-14T05:47:03+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2026-09-14T05:47:03.7408390Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>2026-09-14T05:47:03.7409786Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-4014868999765788960
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>2026-09-14T05:47:03.7411309Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1429233515179452221
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2026-09-14T05:47:03.7412384Z 2026/09/14 00:47:07 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>2026-09-14T05:47:03.7413721Z 2026/09/14 00:50:07 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>2026-09-14T05:47:03.7414515Z 2026/09/14 00:51:08 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>2026-09-14T05:47:03.7415314Z 2026/09/14 00:51:18 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>2026-09-14T05:47:03.7416330Z 2026/09/14 00:52:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>2026-09-14T05:47:03.7417157Z 2026/09/14 00:52:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>2026-09-14T05:47:03.7417930Z 2026/09/14 00:53:29 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>2026-09-14T05:47:03.7418678Z 2026/09/14 00:53:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>2026-09-14T05:47:03.7419347Z 2026/09/14 00:54:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>2026-09-14T05:47:03.7419974Z 2026/09/14 00:54:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>2026-09-14T05:47:03.7420629Z 2026/09/14 00:55:51 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>2026-09-14T05:47:03.7421261Z 2026/09/14 00:56:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>2026-09-14T05:47:03.7421920Z 2026/09/14 00:57:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>2026-09-14T05:47:03.7422594Z 2026/09/14 00:57:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>2026-09-14T05:47:03.7423246Z 2026/09/14 00:58:12 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>2026-09-14T05:47:03.7424157Z 2026/09/14 00:58:22 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>2026-09-14T05:47:03.7424852Z 2026/09/14 00:59:23 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>2026-09-14T05:47:03.7425547Z 2026/09/14 00:59:33 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>2026-09-14T05:47:03.7426574Z 2026/09/14 01:00:34 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>2026-09-14T05:47:03.7427269Z 2026/09/14 01:00:44 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>2026-09-14T05:47:03.7428042Z 2026/09/14 01:01:45 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>2026-09-14T05:47:03.7428894Z 2026/09/14 01:02:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>2026-09-14T05:47:03.7429602Z 2026/09/14 01:03:45 [TRACE] Waiting 10s before next try
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>2026-09-14T05:47:03.7430311Z 2026/09/14 01:03:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>2026-09-14T05:47:03.7444728Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>2026-09-14T05:47:03.7569135Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>2026-09-14T05:47:03.7569957Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>2026-09-14T05:47:03.7570629Z         
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>2026-09-14T05:47:03.7571237Z         Error: Error waiting for changes in Create
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>2026-09-14T05:47:03.7571805Z         
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>2026-09-14T05:47:03.7572464Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>2026-09-14T05:47:03.7573837Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>2026-09-14T05:47:03.7575132Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>2026-09-14T05:47:03.7576230Z         
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>2026-09-14T05:47:03.7576761Z         group_id=&quot;6aa74408d4e2b0ecbd5a8aa3&quot;,
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>2026-09-14T05:47:03.7577425Z         cluster_name=&quot;test-acc-tf-c-1429233515179452221&quot;,
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>2026-09-14T05:47:03.7578255Z         index_id=&quot;6aa7483aaf6488f3aa98b791&quot;: timeout while waiting for state to
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>2026-09-14T05:47:03.7579127Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>2026-09-14T05:47:03.7579985Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>2026-09-14T05:47:03.7580871Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>2026-09-14T05:47:03.7581460Z --- FAIL: TestAccSearchIndexAPI_basic (11877.74s)
+</code></pre></div>
+<ul>
+<li>2026-09-15</li>
+</ul>
+<h3 id="error-2026-09-15t0543500000">Error 2026-09-15T05:43:50+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2026-09-15T05:43:50.3071728Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>2026-09-15T05:43:50.3072938Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-7652198892173582949
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>2026-09-15T05:43:50.3074564Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-6477351237734953754
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>2026-09-15T05:43:50.3075201Z 2026/09/15 00:43:53 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>2026-09-15T05:43:50.3075951Z 2026/09/15 00:46:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>2026-09-15T05:43:50.3076413Z 2026/09/15 00:47:54 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>2026-09-15T05:43:50.3076872Z 2026/09/15 00:48:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>2026-09-15T05:43:50.3077312Z 2026/09/15 00:49:04 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2026-09-15T05:43:50.3077756Z 2026/09/15 00:49:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>2026-09-15T05:43:50.3078194Z 2026/09/15 00:50:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>2026-09-15T05:43:50.3078644Z 2026/09/15 00:50:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>2026-09-15T05:43:50.3079083Z 2026/09/15 00:51:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>2026-09-15T05:43:50.3079520Z 2026/09/15 00:51:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>2026-09-15T05:43:50.3079964Z 2026/09/15 00:52:35 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>2026-09-15T05:43:50.3080398Z 2026/09/15 00:52:45 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>2026-09-15T05:43:50.3080836Z 2026/09/15 00:53:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>2026-09-15T05:43:50.3081276Z 2026/09/15 00:53:56 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>2026-09-15T05:43:50.3081713Z 2026/09/15 00:54:56 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>2026-09-15T05:43:50.3082150Z 2026/09/15 00:55:06 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>2026-09-15T05:43:50.3082586Z 2026/09/15 00:56:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>2026-09-15T05:43:50.3083020Z 2026/09/15 00:56:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>2026-09-15T05:43:50.3083735Z 2026/09/15 00:57:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>2026-09-15T05:43:50.3084370Z 2026/09/15 00:57:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>2026-09-15T05:43:50.3085158Z 2026/09/15 00:58:27 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>2026-09-15T05:43:50.3085863Z 2026/09/15 00:59:27 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>2026-09-15T05:43:50.3086277Z 2026/09/15 01:00:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>2026-09-15T05:43:50.3086677Z 2026/09/15 01:00:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>2026-09-15T05:43:50.3095379Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>2026-09-15T05:43:50.3115583Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>2026-09-15T05:43:50.3116138Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>2026-09-15T05:43:50.3116585Z         
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>2026-09-15T05:43:50.3116994Z         Error: Error waiting for changes in Create
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>2026-09-15T05:43:50.3117335Z         
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>2026-09-15T05:43:50.3117711Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>2026-09-15T05:43:50.3118474Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>2026-09-15T05:43:50.3119178Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>2026-09-15T05:43:50.3119542Z         
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>2026-09-15T05:43:50.3119870Z         group_id=&quot;6aa894c6f45e19b0d3dcab24&quot;,
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>2026-09-15T05:43:50.3120356Z         cluster_name=&quot;test-acc-tf-c-6477351237734953754&quot;,
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>2026-09-15T05:43:50.3120989Z         index_id=&quot;6aa898f3f45e19b0d3e0ed5f&quot;: timeout while waiting for state to
+<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>2026-09-15T05:43:50.3121650Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>2026-09-15T05:43:50.3122344Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>2026-09-15T05:43:50.3123082Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>2026-09-15T05:43:50.3123804Z --- FAIL: TestAccSearchIndexAPI_basic (11871.41s)
+</code></pre></div>
+<ul>
+<li>2026-09-16</li>
+</ul>
+<h3 id="error-2026-09-16t0543440000">Error 2026-09-16T05:43:44+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2026-09-16T05:43:44.8849724Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2026-09-16T05:43:44.8850817Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-3498603219519512834
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>2026-09-16T05:43:44.8851571Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-750170190363952492
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2026-09-16T05:43:44.8852138Z 2026/09/16 00:42:17 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2026-09-16T05:43:44.8853077Z 2026/09/16 00:45:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>2026-09-16T05:43:44.8853489Z 2026/09/16 00:46:17 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2026-09-16T05:43:44.8853877Z 2026/09/16 00:46:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>2026-09-16T05:43:44.8854249Z 2026/09/16 00:47:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2026-09-16T05:43:44.8854631Z 2026/09/16 00:47:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>2026-09-16T05:43:44.8854996Z 2026/09/16 00:48:39 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>2026-09-16T05:43:44.8855361Z 2026/09/16 00:48:49 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>2026-09-16T05:43:44.8855778Z 2026/09/16 00:49:50 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2026-09-16T05:43:44.8856143Z 2026/09/16 00:50:00 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>2026-09-16T05:43:44.8856504Z 2026/09/16 00:51:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>2026-09-16T05:43:44.8856867Z 2026/09/16 00:51:11 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>2026-09-16T05:43:44.8857230Z 2026/09/16 00:52:11 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>2026-09-16T05:43:44.8857600Z 2026/09/16 00:52:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>2026-09-16T05:43:44.8857973Z 2026/09/16 00:53:22 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>2026-09-16T05:43:44.8858345Z 2026/09/16 00:53:32 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>2026-09-16T05:43:44.8859060Z 2026/09/16 00:54:32 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>2026-09-16T05:43:44.8859426Z 2026/09/16 00:54:43 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>2026-09-16T05:43:44.8859790Z 2026/09/16 00:55:43 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>2026-09-16T05:43:44.8860155Z 2026/09/16 00:55:54 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>2026-09-16T05:43:44.8860578Z 2026/09/16 00:56:54 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>2026-09-16T05:43:44.8861014Z 2026/09/16 00:57:55 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>2026-09-16T05:43:44.8861389Z 2026/09/16 00:58:55 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>2026-09-16T05:43:44.8861755Z 2026/09/16 00:59:05 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>2026-09-16T05:43:44.8862122Z 2026/09/16 01:00:06 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>2026-09-16T05:43:44.8862490Z 2026/09/16 01:00:16 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>2026-09-16T05:43:44.8862857Z 2026/09/16 01:01:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>2026-09-16T05:43:44.8863222Z 2026/09/16 01:01:26 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>2026-09-16T05:43:44.8863598Z 2026/09/16 01:02:27 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>2026-09-16T05:43:44.8863969Z 2026/09/16 01:02:37 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>2026-09-16T05:43:44.8864335Z 2026/09/16 01:03:37 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>2026-09-16T05:43:44.8864701Z 2026/09/16 01:03:48 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>2026-09-16T05:43:44.8865085Z 2026/09/16 01:04:48 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>2026-09-16T05:43:44.8865485Z 2026/09/16 01:04:58 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>2026-09-16T05:43:44.8865871Z 2026/09/16 01:05:59 [TRACE] Waiting 10s before next try
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>2026-09-16T05:43:44.8866245Z 2026/09/16 01:06:09 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a>2026-09-16T05:43:44.8874411Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>2026-09-16T05:43:44.8894150Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>2026-09-16T05:43:44.8894659Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a>2026-09-16T05:43:44.8895068Z         
+<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>2026-09-16T05:43:44.8895421Z         Error: Error waiting for changes in Create
+<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a>2026-09-16T05:43:44.8895896Z         
+<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>2026-09-16T05:43:44.8896261Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a>2026-09-16T05:43:44.8896949Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>2026-09-16T05:43:44.8897631Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>2026-09-16T05:43:44.8897991Z         
+<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>2026-09-16T05:43:44.8898311Z         group_id=&quot;6aa9e5e4013d831ec44b342e&quot;,
+<a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a>2026-09-16T05:43:44.8898937Z         cluster_name=&quot;test-acc-tf-c-750170190363952492&quot;,
+<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a>2026-09-16T05:43:44.8899532Z         index_id=&quot;6aa9ebbfbb07cf48936362a2&quot;: timeout while waiting for state to
+<a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a>2026-09-16T05:43:44.8900159Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a>2026-09-16T05:43:44.8900817Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a>2026-09-16T05:43:44.8901505Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a>2026-09-16T05:43:44.8901994Z --- FAIL: TestAccSearchIndexAPI_basic (12301.03s)
+</code></pre></div>
+<ul>
+<li>2026-09-17 PASS 49 minutes</li>
+<li>2026-09-18</li>
+</ul>
+<h3 id="error-2026-09-18t0516190000">Error 2026-09-18T05:16:19+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>2026-09-18T05:16:19.5387106Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>2026-09-18T05:16:19.5387761Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-7522077135535964202
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>2026-09-18T05:16:19.5388389Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-3593569086852570367
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>2026-09-18T05:16:19.5388845Z 2026/09/18 00:42:10 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>2026-09-18T05:16:19.5391317Z 2026/09/18 00:45:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>2026-09-18T05:16:19.5391677Z 2026/09/18 00:46:10 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2026-09-18T05:16:19.5392003Z 2026/09/18 00:46:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>2026-09-18T05:16:19.5392314Z 2026/09/18 00:47:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>2026-09-18T05:16:19.5392642Z 2026/09/18 00:47:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>2026-09-18T05:16:19.5392970Z 2026/09/18 00:48:32 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>2026-09-18T05:16:19.5393305Z 2026/09/18 00:48:42 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>2026-09-18T05:16:19.5393809Z 2026/09/18 00:49:42 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>2026-09-18T05:16:19.5394129Z 2026/09/18 00:49:53 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>2026-09-18T05:16:19.5394484Z 2026/09/18 00:50:53 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>2026-09-18T05:16:19.5394810Z 2026/09/18 00:51:03 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>2026-09-18T05:16:19.5395131Z 2026/09/18 00:52:04 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>2026-09-18T05:16:19.5395468Z 2026/09/18 00:52:14 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>2026-09-18T05:16:19.5395793Z 2026/09/18 00:53:14 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>2026-09-18T05:16:19.5396124Z 2026/09/18 00:53:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>2026-09-18T05:16:19.5396452Z 2026/09/18 00:54:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>2026-09-18T05:16:19.5396779Z 2026/09/18 00:54:35 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>2026-09-18T05:16:19.5397109Z 2026/09/18 00:55:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>2026-09-18T05:16:19.5397604Z 2026/09/18 00:55:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>2026-09-18T05:16:19.5397933Z 2026/09/18 00:56:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>2026-09-18T05:16:19.5398262Z 2026/09/18 00:56:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>2026-09-18T05:16:19.5398589Z 2026/09/18 00:57:57 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>2026-09-18T05:16:19.5398921Z 2026/09/18 00:58:07 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>2026-09-18T05:16:19.5399282Z 2026/09/18 00:59:08 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>2026-09-18T05:16:19.5399656Z 2026/09/18 01:00:08 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>2026-09-18T05:16:19.5399989Z 2026/09/18 01:01:09 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>2026-09-18T05:16:19.5400317Z 2026/09/18 01:01:19 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>2026-09-18T05:16:19.5400648Z 2026/09/18 01:02:19 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>2026-09-18T05:16:19.5400970Z 2026/09/18 01:02:29 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>2026-09-18T05:16:19.5401301Z 2026/09/18 01:03:30 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>2026-09-18T05:16:19.5401635Z 2026/09/18 01:03:40 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>2026-09-18T05:16:19.5401965Z 2026/09/18 01:04:40 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>2026-09-18T05:16:19.5402299Z 2026/09/18 01:04:50 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>2026-09-18T05:16:19.5402618Z 2026/09/18 01:05:51 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>2026-09-18T05:16:19.5402942Z 2026/09/18 01:06:01 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>2026-09-18T05:16:19.5403267Z 2026/09/18 01:07:01 [TRACE] Waiting 10s before next try
+<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>2026-09-18T05:16:19.5403741Z 2026/09/18 01:07:12 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a>2026-09-18T05:16:19.5410886Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a>2026-09-18T05:16:19.5483277Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a>2026-09-18T05:16:19.5483870Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a>2026-09-18T05:16:19.5484224Z         
+<a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a>2026-09-18T05:16:19.5484545Z         Error: Error waiting for changes in Create
+<a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a>2026-09-18T05:16:19.5484831Z         
+<a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a>2026-09-18T05:16:19.5485164Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a>2026-09-18T05:16:19.5485801Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a>2026-09-18T05:16:19.5486393Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a>2026-09-18T05:16:19.5486701Z         
+<a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a>2026-09-18T05:16:19.5486989Z         group_id=&quot;6aac88de1bd5f998a1452f76&quot;,
+<a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a>2026-09-18T05:16:19.5487402Z         cluster_name=&quot;test-acc-tf-c-3593569086852570367&quot;,
+<a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a>2026-09-18T05:16:19.5487941Z         index_id=&quot;6aac8efdacef019a417be1f1&quot;: timeout while waiting for state to
+<a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a>2026-09-18T05:16:19.5488505Z         become &#39;READY, STEADY&#39; (last state: &#39;BUILDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a>2026-09-18T05:16:19.5489089Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a>2026-09-18T05:16:19.5489710Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-9-58" name="__codelineno-9-58" href="#__codelineno-9-58"></a>2026-09-18T05:16:19.5497393Z   
+<a id="__codelineno-9-59" name="__codelineno-9-59" href="#__codelineno-9-59"></a>2026-09-18T05:16:19.5504983Z --- FAIL: TestAccSearchIndexAPI_basic (12370.33s)
+</code></pre></div>
+<ul>
+<li>2026-09-19</li>
+</ul>
+<h3 id="error-2026-09-19t0130400000">Error 2026-09-19T01:30:40+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>2026-09-19T01:30:40.9163203Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2026-09-19T01:30:40.9163715Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-6578953671564410125
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2026-09-19T01:30:40.9164528Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-747364010231165921
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>2026-09-19T01:30:40.9164946Z 2026/09/19 00:41:28 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2026-09-19T01:30:40.9165501Z 2026/09/19 00:44:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2026-09-19T01:30:40.9165818Z 2026/09/19 00:45:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>2026-09-19T01:30:40.9166134Z 2026/09/19 00:45:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>2026-09-19T01:30:40.9166441Z 2026/09/19 00:46:39 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>2026-09-19T01:30:40.9166738Z 2026/09/19 00:46:49 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2026-09-19T01:30:40.9167031Z 2026/09/19 00:47:49 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>2026-09-19T01:30:40.9167322Z 2026/09/19 00:47:59 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>2026-09-19T01:30:40.9167627Z 2026/09/19 00:49:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>2026-09-19T01:30:40.9167936Z 2026/09/19 00:49:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>2026-09-19T01:30:40.9168230Z 2026/09/19 00:50:10 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>2026-09-19T01:30:40.9168516Z 2026/09/19 00:50:20 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>2026-09-19T01:30:40.9168806Z 2026/09/19 00:51:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>2026-09-19T01:30:40.9169101Z 2026/09/19 00:51:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>2026-09-19T01:30:40.9169390Z 2026/09/19 00:52:31 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>2026-09-19T01:30:40.9169679Z 2026/09/19 00:52:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>2026-09-19T01:30:40.9169966Z 2026/09/19 00:53:42 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>2026-09-19T01:30:40.9170255Z 2026/09/19 00:53:52 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>2026-09-19T01:30:40.9170544Z 2026/09/19 00:54:52 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>2026-09-19T01:30:40.9170830Z 2026/09/19 00:55:02 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>2026-09-19T01:30:40.9171159Z 2026/09/19 00:56:03 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>2026-09-19T01:30:40.9173123Z 2026/09/19 00:57:03 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>2026-09-19T01:30:40.9173558Z 2026/09/19 00:58:03 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>2026-09-19T01:30:40.9173982Z 2026/09/19 00:58:13 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>2026-09-19T01:30:40.9174589Z 2026/09/19 00:59:13 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>2026-09-19T01:30:40.9175039Z 2026/09/19 00:59:24 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>2026-09-19T01:30:40.9175451Z 2026/09/19 01:00:24 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>2026-09-19T01:30:40.9175851Z 2026/09/19 01:00:34 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>2026-09-19T01:30:40.9176266Z 2026/09/19 01:01:34 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>2026-09-19T01:30:40.9176580Z 2026/09/19 01:01:44 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>2026-09-19T01:30:40.9176883Z 2026/09/19 01:02:45 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>2026-09-19T01:30:40.9177183Z 2026/09/19 01:02:55 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>2026-09-19T01:30:40.9177484Z 2026/09/19 01:03:55 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>2026-09-19T01:30:40.9177774Z 2026/09/19 01:04:05 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>2026-09-19T01:30:40.9178061Z 2026/09/19 01:05:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>2026-09-19T01:30:40.9178350Z 2026/09/19 01:05:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>2026-09-19T01:30:40.9178636Z 2026/09/19 01:06:16 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>2026-09-19T01:30:40.9178930Z 2026/09/19 01:06:26 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a>2026-09-19T01:30:40.9179221Z 2026/09/19 01:07:26 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>2026-09-19T01:30:40.9179512Z 2026/09/19 01:07:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a>2026-09-19T01:30:40.9179819Z 2026/09/19 01:08:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a>2026-09-19T01:30:40.9180121Z 2026/09/19 01:08:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>2026-09-19T01:30:40.9180414Z 2026/09/19 01:09:47 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a>2026-09-19T01:30:40.9180701Z 2026/09/19 01:09:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a>2026-09-19T01:30:40.9180992Z 2026/09/19 01:10:57 [TRACE] Waiting 10s before next try
+<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a>2026-09-19T01:30:40.9181297Z 2026/09/19 01:11:03 [WARN] WaitForState timeout after 15m0s
+<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>2026-09-19T01:30:40.9181654Z 2026/09/19 01:11:03 [WARN] WaitForState starting 30s refresh grace period
+<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a>2026-09-19T01:30:40.9182013Z     resource_test.go:22: 
+<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a>2026-09-19T01:30:40.9183560Z            Error Trace:    /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/testutil/acc/shared_resource.go:180
+<a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a>2026-09-19T01:30:40.9185516Z                                        /home/runner/work/terraform-provider-mongodbatlas/terraform-provider-mongodbatlas/internal/serviceapi/searchindexapi/resource_test.go:22
+<a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a>2026-09-19T01:30:40.9186186Z            Error:          Received unexpected error:
+<a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a>2026-09-19T01:30:40.9186985Z                            timeout while waiting for state to become &#39;COMPLETED&#39; (last state: &#39;WORKING&#39;, timeout: 15m0s)
+<a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a>2026-09-19T01:30:40.9187480Z            Test:           TestAccSearchIndexAPI_basic
+<a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a>2026-09-19T01:30:40.9187779Z --- FAIL: TestAccSearchIndexAPI_basic (1777.58s)
+</code></pre></div>
+<ul>
+<li>2026-09-20: MISSING</li>
+<li>2026-09-21 PASS an hour</li>
+<li>2026-09-22</li>
+<li>FAIL 3 hours</li>
+</ul>
+<h3 id="error-2026-09-22t0506240000">Error 2026-09-22T05:06:24+00:00</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>2026-09-22T05:06:24.3100207Z === RUN   TestAccSearchIndexAPI_basic
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>2026-09-22T05:06:24.3102795Z     resource_test.go:22: Creating execution project (1): test-acc-tf-p-6268219262780341492
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>2026-09-22T05:06:24.3103523Z     resource_test.go:22: Creating execution cluster: test-acc-tf-c-1242047262187896326
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>2026-09-22T05:06:24.3104188Z 2026/09/22 00:44:04 [DEBUG] Waiting for state to become: [IDLE]
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>2026-09-22T05:06:24.3106405Z 2026/09/22 00:47:04 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>2026-09-22T05:06:24.3106841Z 2026/09/22 00:48:05 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>2026-09-22T05:06:24.3107210Z 2026/09/22 00:48:15 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>2026-09-22T05:06:24.3107584Z 2026/09/22 00:49:15 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>2026-09-22T05:06:24.3107955Z 2026/09/22 00:49:25 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>2026-09-22T05:06:24.3108300Z 2026/09/22 00:50:25 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>2026-09-22T05:06:24.3108650Z 2026/09/22 00:50:36 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>2026-09-22T05:06:24.3108989Z 2026/09/22 00:51:36 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>2026-09-22T05:06:24.3109349Z 2026/09/22 00:51:46 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>2026-09-22T05:06:24.3109690Z 2026/09/22 00:52:46 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>2026-09-22T05:06:24.3110031Z 2026/09/22 00:52:57 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>2026-09-22T05:06:24.3110375Z 2026/09/22 00:53:57 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>2026-09-22T05:06:24.3110717Z 2026/09/22 00:54:07 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>2026-09-22T05:06:24.3111058Z 2026/09/22 00:55:07 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>2026-09-22T05:06:24.3111399Z 2026/09/22 00:55:17 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>2026-09-22T05:06:24.3111740Z 2026/09/22 00:56:18 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>2026-09-22T05:06:24.3112086Z 2026/09/22 00:56:28 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>2026-09-22T05:06:24.3112432Z 2026/09/22 00:57:28 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>2026-09-22T05:06:24.3112783Z 2026/09/22 00:57:38 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>2026-09-22T05:06:24.3113141Z 2026/09/22 00:58:39 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>2026-09-22T05:06:24.3113611Z 2026/09/22 00:58:49 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>2026-09-22T05:06:24.3114124Z 2026/09/22 00:59:49 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>2026-09-22T05:06:24.3114456Z 2026/09/22 00:59:59 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>2026-09-22T05:06:24.3114810Z 2026/09/22 01:01:00 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>2026-09-22T05:06:24.3115216Z 2026/09/22 01:01:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>2026-09-22T05:06:24.3115614Z 2026/09/22 01:02:10 [DEBUG] Waiting for state to become: [COMPLETED]
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>2026-09-22T05:06:24.3116024Z 2026/09/22 01:03:10 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>2026-09-22T05:06:24.3116379Z 2026/09/22 01:04:10 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>2026-09-22T05:06:24.3116710Z 2026/09/22 01:04:21 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>2026-09-22T05:06:24.3117061Z 2026/09/22 01:05:21 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>2026-09-22T05:06:24.3117420Z 2026/09/22 01:05:31 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>2026-09-22T05:06:24.3117786Z 2026/09/22 01:06:31 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>2026-09-22T05:06:24.3118107Z 2026/09/22 01:06:41 [TRACE] Waiting 1m0s before next try
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>2026-09-22T05:06:24.3118405Z 2026/09/22 01:07:42 [TRACE] Waiting 10s before next try
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>2026-09-22T05:06:24.3126154Z === CONT  TestAccSearchIndexAPI_basic
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>2026-09-22T05:06:24.3165592Z === NAME  TestAccSearchIndexAPI_basic
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>2026-09-22T05:06:24.3166413Z     resource_test.go:25: Step 1/2 error: Error running apply: exit status 1
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>2026-09-22T05:06:24.3166813Z         
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>2026-09-22T05:06:24.3167154Z         Error: Error waiting for changes in Create
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>2026-09-22T05:06:24.3167468Z         
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>2026-09-22T05:06:24.3167829Z           with mongodbatlas_search_index_api.test,
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>2026-09-22T05:06:24.3168476Z           on terraform_plugin_test.tf line 12, in resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot;:
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>2026-09-22T05:06:24.3169172Z           12:      resource &quot;mongodbatlas_search_index_api&quot; &quot;test&quot; {
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>2026-09-22T05:06:24.3169496Z         
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>2026-09-22T05:06:24.3169790Z         group_id=&quot;6ab1cf51a17d32e660138f1d&quot;,
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a>2026-09-22T05:06:24.3170228Z         cluster_name=&quot;test-acc-tf-c-1242047262187896326&quot;,
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a>2026-09-22T05:06:24.3170774Z         index_id=&quot;6ab1d4e9ce34027299e11845&quot;: timeout while waiting for state to
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a>2026-09-22T05:06:24.3171332Z         become &#39;READY, STEADY&#39; (last state: &#39;PENDING&#39;, timeout: 3h0m0s)
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a>2026-09-22T05:06:24.3171931Z         will run cleanup because delete_on_create_timeout is true. If you suspect a
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a>2026-09-22T05:06:24.3172575Z         transient error, wait before retrying to allow resource deletion to finish
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a>2026-09-22T05:06:24.3173019Z --- FAIL: TestAccSearchIndexAPI_basic (12234.51s)
+</code></pre></div>
+<ul>
+<li>PASS an hour</li>
+<li>2026-09-23 SKIP unknown</li>
+<li>2026-09-24 SKIP unknown</li>
+<li>2026-09-25 SKIP unknown</li>
+<li>2026-09-26 SKIP unknown</li>
+<li>2026-09-27: MISSING</li>
+<li>2026-09-28 SKIP unknown</li>
+<li>2026-09-29 SKIP unknown</li>
+<li>2026-09-30 SKIP unknown</li>
+<li>2026-10-01 SKIP unknown</li>
+<li>2026-10-02 SKIP unknown</li>
+</ul>
+<h2 id="qa-environment">QA Environment</h2>
+<h3 id="timeline_1">Timeline</h3>
+<ul>
+<li>2026-09-01: MISSING</li>
+<li>2026-09-02: MISSING</li>
+<li>2026-09-03: MISSING</li>
+<li>2026-09-04: MISSING</li>
+<li>2026-09-05: MISSING</li>
+<li>2026-09-06 PASS 49 minutes</li>
+<li>2026-09-07: MISSING</li>
+<li>2026-09-08: MISSING</li>
+<li>2026-09-09: MISSING</li>
+<li>2026-09-10: MISSING</li>
+<li>2026-09-11: MISSING</li>
+<li>2026-09-12: MISSING</li>
+<li>2026-09-13 PASS 43 minutes</li>
+<li>2026-09-14: MISSING</li>
+<li>2026-09-15: MISSING</li>
+<li>2026-09-16 PASS 45 minutes</li>
+<li>2026-09-17: MISSING</li>
+<li>2026-09-18: MISSING</li>
+<li>2026-09-19: MISSING</li>
+<li>2026-09-20 PASS 32 minutes</li>
+<li>2026-09-21: MISSING</li>
+<li>2026-09-22: MISSING</li>
+<li>2026-09-23: MISSING</li>
+<li>2026-09-24: MISSING</li>
+<li>2026-09-25: MISSING</li>
+<li>2026-09-26: MISSING</li>
+<li>2026-09-27 SKIP unknown</li>
+<li>2026-09-28: MISSING</li>
+<li>2026-09-29 SKIP unknown</li>
+<li>2026-09-30: MISSING</li>
+<li>2026-10-01: MISSING</li>
+<li>2026-10-02: MISSING</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/tablefilter@0.7.3/dist/tablefilter/tablefilter.js"></script>
+      
+        <script src="../../../../javascript/tablefilter-init.js"></script>
+      
+    
+  </body>
+</html>
